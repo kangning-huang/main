@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+:root {
+  --nyu-violet: #57068c;
+  --nyu-violet-light: #7b2faf;
+  --nyu-violet-bg: #f3e8fa;
+  --background: #ffffff;
+  --background-alt: #f8f8fa;
+  --foreground: #1a1a1a;
+  --foreground-secondary: #4a4a4a;
+  --border: #e5e5e5;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-nyu-violet: var(--nyu-violet);
+  --color-nyu-violet-light: var(--nyu-violet-light);
+  --color-nyu-violet-bg: var(--nyu-violet-bg);
+  --color-foreground-secondary: var(--foreground-secondary);
+  --color-background-alt: var(--background-alt);
+  --color-border: var(--border);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: var(--nyu-violet-bg);
+  color: var(--nyu-violet);
+}
