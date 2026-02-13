@@ -18,30 +18,34 @@ export default async function Home() {
 
   return (
     <>
-      {/* Hero */}
-      <section className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-5xl px-6">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground md:text-5xl">
-            {SITE.name}
-          </h1>
-          <p className="mt-3 text-xl text-nyu-violet font-medium">
-            {SITE.title}
-          </p>
-          <p className="text-lg text-foreground-secondary">
+      {/* ── Hero ── */}
+      <section className="relative overflow-hidden bg-ink topo-grain">
+        <div className="relative mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28 lg:px-8">
+          <p className="animate-fade-up text-sm font-medium uppercase tracking-[0.2em] text-ember">
             {SITE.affiliation}
           </p>
-          <p className="mt-4 max-w-2xl text-foreground-secondary leading-relaxed">
+          <h1 className="animate-fade-up delay-1 mt-4 font-display text-5xl leading-[1.1] text-paper md:text-6xl lg:text-7xl">
+            {SITE.name}
+          </h1>
+          <p className="animate-fade-up delay-2 mt-3 font-display text-xl italic text-paper/60 md:text-2xl">
+            {SITE.title}
+          </p>
+
+          {/* Decorative divider */}
+          <div className="animate-draw-line delay-3 mt-8 h-px w-32 origin-left bg-ember" />
+
+          <p className="animate-fade-up delay-4 mt-6 max-w-xl text-[15px] leading-relaxed text-paper/50">
             {SITE.description}
           </p>
 
-          {/* Social / external links */}
-          <div className="mt-6 flex flex-wrap gap-3">
+          {/* Links row */}
+          <div className="animate-fade-up delay-5 mt-8 flex flex-wrap gap-2.5">
             {[
               { label: "Google Scholar", href: LINKS.googleScholar },
               { label: "GitHub", href: LINKS.github },
               { label: "Substack", href: LINKS.substack },
-              { label: "X / Twitter", href: LINKS.twitter },
-              { label: "NYU Faculty Page", href: LINKS.nyuFaculty },
+              { label: "X", href: LINKS.twitter },
+              { label: "NYU Faculty", href: LINKS.nyuFaculty },
               { label: "Email", href: `mailto:${SITE.email}` },
             ].map((link) => (
               <a
@@ -53,72 +57,80 @@ export default async function Home() {
                     ? undefined
                     : "noopener noreferrer"
                 }
-                className="inline-flex items-center rounded-full border border-border px-4 py-1.5 text-sm font-medium text-foreground-secondary hover:border-nyu-violet hover:text-nyu-violet transition-colors"
+                className="rounded-full border border-paper/15 px-4 py-1.5 text-sm text-paper/60 transition-all duration-300 hover:border-ember hover:text-ember"
               >
                 {link.label}
                 {!link.href.startsWith("mailto:") && (
-                  <span className="ml-1 text-xs">&#8599;</span>
+                  <span className="ml-1 text-[10px] opacity-40">&#8599;</span>
                 )}
               </a>
             ))}
           </div>
         </div>
+
+        {/* Bottom gradient fade */}
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-paper to-transparent" />
       </section>
 
-      {/* About */}
-      <section className="bg-background-alt py-16">
-        <div className="mx-auto max-w-5xl px-6">
-          <h2 className="text-2xl font-bold text-foreground">About</h2>
-          <div className="mt-4 space-y-4 max-w-3xl">
-            {ABOUT_TEXT.map((paragraph, i) => (
-              <p
-                key={i}
-                className="text-foreground-secondary leading-relaxed"
-              >
-                {paragraph}
+      {/* ── About ── */}
+      <section className="py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <h2 className="section-heading animate-fade-up">About</h2>
+
+          <div className="mt-8 grid gap-10 md:grid-cols-[1fr,280px]">
+            <div className="space-y-4 animate-fade-up delay-1">
+              {ABOUT_TEXT.map((paragraph, i) => (
+                <p
+                  key={i}
+                  className="text-[15px] leading-[1.75] text-ink-muted"
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </div>
+
+            <div className="animate-fade-up delay-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
+                Research Areas
               </p>
-            ))}
-          </div>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {RESEARCH_INTERESTS.map((interest) => (
-              <span
-                key={interest}
-                className="rounded-full bg-nyu-violet-bg px-3 py-1 text-sm font-medium text-nyu-violet"
-              >
-                {interest}
-              </span>
-            ))}
+              <div className="mt-3 flex flex-wrap gap-2">
+                {RESEARCH_INTERESTS.map((interest) => (
+                  <span
+                    key={interest}
+                    className="rounded-full border border-ember/20 bg-ember-light px-3 py-1 text-sm font-medium text-ember-dark"
+                  >
+                    {interest}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Featured Publications */}
-      <section className="bg-white py-16">
-        <div className="mx-auto max-w-5xl px-6">
+      {/* ── Publications ── */}
+      <section className="border-t border-rule-faint bg-paper-warm py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-foreground">
-              Selected Publications
-            </h2>
+            <h2 className="section-heading flex-1">Selected Publications</h2>
             <Link
               href="/publications"
-              className="text-sm font-medium text-nyu-violet hover:text-nyu-violet-light transition-colors"
+              className="link-underline ml-4 shrink-0 text-sm font-medium text-ember"
             >
               View all &rarr;
             </Link>
           </div>
-          <div className="mt-6 space-y-4">
+
+          <div className="mt-8 space-y-1">
             {featuredPubs.map((pub, i) => (
-              <article
-                key={i}
-                className="rounded-lg border border-border p-4 hover:border-nyu-violet/30 transition-colors"
-              >
-                <h3 className="font-medium text-foreground leading-snug">
+              <article key={i} className="pub-item group py-4">
+                <h3 className="text-[15px] font-medium leading-snug text-ink">
                   {pub.doi ? (
                     <a
                       href={`https://doi.org/${pub.doi}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-nyu-violet transition-colors"
+                      className="transition-colors group-hover:text-ember"
                     >
                       {pub.title}
                     </a>
@@ -127,7 +139,7 @@ export default async function Home() {
                       href={pub.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="hover:text-nyu-violet transition-colors"
+                      className="transition-colors group-hover:text-ember"
                     >
                       {pub.title}
                     </a>
@@ -135,17 +147,13 @@ export default async function Home() {
                     pub.title
                   )}
                 </h3>
-                <p className="mt-1 text-sm text-foreground-secondary">
-                  {pub.authors}
-                </p>
-                <div className="mt-2 flex items-center gap-3 text-sm text-foreground-secondary">
-                  <span className="font-medium text-nyu-violet">
-                    {pub.venue}
-                  </span>
-                  <span>{pub.year}</span>
+                <p className="mt-1 text-sm text-ink-faint">{pub.authors}</p>
+                <div className="mt-2 flex items-center gap-3 text-sm">
+                  <span className="font-medium text-ember">{pub.venue}</span>
+                  <span className="text-ink-faint">{pub.year}</span>
                   {pub.citationCount > 0 && (
-                    <span className="rounded bg-background-alt px-2 py-0.5 text-xs">
-                      {pub.citationCount} citations
+                    <span className="rounded-full bg-paper-deep px-2.5 py-0.5 text-xs text-ink-muted">
+                      {pub.citationCount} cit.
                     </span>
                   )}
                 </div>
@@ -155,19 +163,20 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Featured Projects */}
-      <section className="bg-background-alt py-16">
-        <div className="mx-auto max-w-5xl px-6">
+      {/* ── Projects ── */}
+      <section className="py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="flex items-center justify-between">
-            <h2 className="text-2xl font-bold text-foreground">Projects</h2>
+            <h2 className="section-heading flex-1">Projects</h2>
             <Link
               href="/projects"
-              className="text-sm font-medium text-nyu-violet hover:text-nyu-violet-light transition-colors"
+              className="link-underline ml-4 shrink-0 text-sm font-medium text-ember"
             >
               View all &rarr;
             </Link>
           </div>
-          <div className="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+
+          <div className="mt-8 grid gap-5 md:grid-cols-3">
             {featuredProjects.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
@@ -175,42 +184,41 @@ export default async function Home() {
         </div>
       </section>
 
-      {/* Latest Blog Posts */}
-      {featuredPosts.length > 0 && (
-        <section className="bg-white py-16">
-          <div className="mx-auto max-w-5xl px-6">
+      {/* ── Blog ── */}
+      {featuredPosts.length > 0 ? (
+        <section className="border-t border-rule-faint bg-paper-warm py-16 md:py-20">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-bold text-foreground">
-                Latest Writing
-              </h2>
+              <h2 className="section-heading flex-1">Latest Writing</h2>
               <Link
                 href="/blog"
-                className="text-sm font-medium text-nyu-violet hover:text-nyu-violet-light transition-colors"
+                className="link-underline ml-4 shrink-0 text-sm font-medium text-ember"
               >
                 View all &rarr;
               </Link>
             </div>
-            <div className="mt-6 grid gap-6 md:grid-cols-3">
+
+            <div className="mt-8 grid gap-5 md:grid-cols-3">
               {featuredPosts.map((post, i) => (
                 <a
                   key={i}
                   href={post.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group rounded-lg border border-border p-5 hover:border-nyu-violet/30 transition-colors"
+                  className="card-hover group rounded-xl border border-rule bg-paper p-5"
                 >
-                  <p className="text-xs font-medium text-foreground-secondary">
+                  <p className="text-xs font-medium uppercase tracking-wider text-ink-faint">
                     {post.date}
                   </p>
-                  <h3 className="mt-2 font-medium text-foreground group-hover:text-nyu-violet transition-colors leading-snug">
+                  <h3 className="mt-2.5 font-display text-lg leading-snug text-ink transition-colors group-hover:text-ember">
                     {post.title}
                   </h3>
                   {post.excerpt && (
-                    <p className="mt-2 text-sm text-foreground-secondary line-clamp-3">
+                    <p className="mt-2 text-sm leading-relaxed text-ink-muted line-clamp-3">
                       {post.excerpt}
                     </p>
                   )}
-                  <p className="mt-3 text-sm font-medium text-nyu-violet">
+                  <p className="mt-4 text-sm font-medium text-ember">
                     Read on Substack &rarr;
                   </p>
                 </a>
@@ -218,14 +226,11 @@ export default async function Home() {
             </div>
           </div>
         </section>
-      )}
-
-      {/* If no blog posts fetched, show a static link section */}
-      {featuredPosts.length === 0 && (
-        <section className="bg-white py-16">
-          <div className="mx-auto max-w-5xl px-6">
-            <h2 className="text-2xl font-bold text-foreground">Writing</h2>
-            <p className="mt-4 text-foreground-secondary">
+      ) : (
+        <section className="border-t border-rule-faint bg-paper-warm py-16 md:py-20">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <h2 className="section-heading">Writing</h2>
+            <p className="mt-6 text-ink-muted">
               I write about cities, climate, autonomous vehicles, and more on
               Substack.
             </p>
@@ -233,7 +238,7 @@ export default async function Home() {
               href={LINKS.substack}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-flex items-center rounded-full bg-nyu-violet px-5 py-2 text-sm font-medium text-white hover:bg-nyu-violet-light transition-colors"
+              className="mt-5 inline-flex items-center rounded-full bg-ember px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ember-dark"
             >
               Read on Substack &rarr;
             </a>
@@ -258,19 +263,19 @@ function ProjectCard({ project }: { project: (typeof PROJECTS)[number] }) {
   return (
     <Wrapper
       {...props}
-      className="group flex flex-col rounded-lg border border-border p-5 hover:border-nyu-violet/30 transition-colors"
+      className="card-hover group flex flex-col rounded-xl border border-rule bg-paper p-5"
     >
-      <h3 className="font-semibold text-foreground group-hover:text-nyu-violet transition-colors">
+      <h3 className="font-display text-lg text-ink transition-colors group-hover:text-ember">
         {project.title}
       </h3>
-      <p className="mt-2 flex-1 text-sm text-foreground-secondary leading-relaxed">
+      <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted">
         {project.description}
       </p>
-      <div className="mt-3 flex flex-wrap gap-1.5">
+      <div className="mt-4 flex flex-wrap gap-1.5">
         {project.tags.map((tag) => (
           <span
             key={tag}
-            className="rounded bg-background-alt px-2 py-0.5 text-xs text-foreground-secondary"
+            className="rounded-full bg-paper-warm px-2.5 py-0.5 text-xs text-ink-faint"
           >
             {tag}
           </span>

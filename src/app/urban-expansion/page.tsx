@@ -11,15 +11,15 @@ const GEE_APP_URL =
 
 export default function UrbanExpansionPage() {
   return (
-    <div className="mx-auto max-w-5xl px-6 py-12">
-      <h1 className="text-3xl font-bold text-foreground">
+    <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
+      <h1 className="font-display text-4xl text-ink">
         Urban Expansion 2050
       </h1>
-      <p className="mt-2 text-foreground-secondary">
+      <p className="mt-2 text-ink-muted">
         Interactive Google Earth Engine web application
       </p>
 
-      <div className="mt-6 max-w-3xl space-y-4 text-foreground-secondary leading-relaxed">
+      <div className="mt-6 max-w-3xl space-y-4 text-[15px] leading-[1.75] text-ink-muted">
         <p>
           This interactive map visualizes projected global urban land expansion
           through 2050. Urban populations are expected to increase by 2&ndash;3
@@ -30,11 +30,11 @@ export default function UrbanExpansionPage() {
         <p>
           The projections are based on the research published in:
         </p>
-        <blockquote className="border-l-4 border-nyu-violet pl-4 italic">
+        <blockquote className="border-l-2 border-ember pl-4 italic text-ink-muted">
           Kangning Huang, Xia Li, Xiaoping Liu, Karen C. Seto (2019).
           &ldquo;Projecting global urban land expansion and heat island
           intensification through 2050.&rdquo;{" "}
-          <span className="font-medium text-nyu-violet">
+          <span className="font-medium text-ember">
             Environmental Research Letters
           </span>
           , 14(11): 114037.
@@ -45,7 +45,7 @@ export default function UrbanExpansionPage() {
             href="https://resourcewatch.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-nyu-violet hover:underline"
+            className="text-ember hover:underline"
           >
             WRI Resource Watch
           </a>
@@ -54,7 +54,7 @@ export default function UrbanExpansionPage() {
       </div>
 
       {/* GEE App Embed */}
-      <div className="mt-8 overflow-hidden rounded-lg border border-border">
+      <div className="mt-8 overflow-hidden rounded-xl border border-rule">
         <div className="relative w-full" style={{ paddingBottom: "65%" }}>
           <iframe
             src={GEE_APP_URL}
@@ -65,12 +65,12 @@ export default function UrbanExpansionPage() {
         </div>
       </div>
 
-      <div className="mt-4 flex flex-wrap gap-3">
+      <div className="mt-5 flex flex-wrap gap-3">
         <a
           href={GEE_APP_URL}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground-secondary hover:border-nyu-violet hover:text-nyu-violet transition-colors"
+          className="inline-flex items-center rounded-full border border-rule px-4 py-2 text-sm font-medium text-ink-muted transition-all hover:border-ember hover:text-ember"
         >
           Open full-screen GEE app &#8599;
         </a>
@@ -78,7 +78,7 @@ export default function UrbanExpansionPage() {
           href="https://doi.org/10.1088/1748-9326/ab4b71"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground-secondary hover:border-nyu-violet hover:text-nyu-violet transition-colors"
+          className="inline-flex items-center rounded-full border border-rule px-4 py-2 text-sm font-medium text-ink-muted transition-all hover:border-ember hover:text-ember"
         >
           Read the paper &#8599;
         </a>

@@ -12,7 +12,6 @@ export const metadata: Metadata = {
 export default async function PublicationsPage() {
   const publications = await fetchPublications();
 
-  // Group by year
   const byYear = publications.reduce<Record<number, Publication[]>>(
     (acc, pub) => {
       if (!acc[pub.year]) acc[pub.year] = [];
@@ -31,11 +30,11 @@ export default async function PublicationsPage() {
   );
 
   return (
-    <div className="mx-auto max-w-5xl px-6 py-12">
+    <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="text-3xl font-bold text-foreground">Publications</h1>
-          <p className="mt-2 text-foreground-secondary">
+          <h1 className="font-display text-4xl text-ink">Publications</h1>
+          <p className="mt-2 text-ink-muted">
             {publications.length} publications &middot; {totalCitations}{" "}
             total citations
           </p>
@@ -44,20 +43,20 @@ export default async function PublicationsPage() {
           href={LINKS.googleScholar}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-full border border-border px-4 py-2 text-sm font-medium text-foreground-secondary hover:border-nyu-violet hover:text-nyu-violet transition-colors"
+          className="inline-flex items-center rounded-full border border-rule px-4 py-2 text-sm font-medium text-ink-muted transition-all hover:border-ember hover:text-ember"
         >
           View on Google Scholar &#8599;
         </a>
       </div>
 
-      <p className="mt-4 text-sm text-foreground-secondary">
+      <p className="mt-4 text-sm text-ink-faint">
         Publication data is automatically fetched from Semantic Scholar. For the
         most complete and up-to-date list, please visit{" "}
         <a
           href={LINKS.googleScholar}
           target="_blank"
           rel="noopener noreferrer"
-          className="text-nyu-violet hover:underline"
+          className="text-ember hover:underline"
         >
           Google Scholar
         </a>
@@ -67,22 +66,22 @@ export default async function PublicationsPage() {
       <div className="mt-10 space-y-10">
         {years.map((year) => (
           <section key={year}>
-            <h2 className="sticky top-[73px] z-10 bg-white py-2 text-lg font-bold text-nyu-violet border-b border-border">
+            <h2 className="sticky top-[65px] z-10 border-b border-rule bg-paper/95 py-2 font-display text-xl text-ember backdrop-blur-sm">
               {year}
             </h2>
-            <div className="mt-4 space-y-4">
+            <div className="mt-4 space-y-1">
               {byYear[year].map((pub, i) => (
                 <article
                   key={i}
-                  className="rounded-lg border border-border p-4 hover:border-nyu-violet/30 transition-colors"
+                  className="pub-item group py-4"
                 >
-                  <h3 className="font-medium text-foreground leading-snug">
+                  <h3 className="text-[15px] font-medium leading-snug text-ink">
                     {pub.doi ? (
                       <a
                         href={`https://doi.org/${pub.doi}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-nyu-violet transition-colors"
+                        className="transition-colors group-hover:text-ember"
                       >
                         {pub.title}
                       </a>
@@ -91,7 +90,7 @@ export default async function PublicationsPage() {
                         href={pub.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-nyu-violet transition-colors"
+                        className="transition-colors group-hover:text-ember"
                       >
                         {pub.title}
                       </a>
@@ -99,17 +98,17 @@ export default async function PublicationsPage() {
                       pub.title
                     )}
                   </h3>
-                  <p className="mt-1 text-sm text-foreground-secondary">
+                  <p className="mt-1 text-sm text-ink-faint">
                     {pub.authors}
                   </p>
                   <div className="mt-2 flex flex-wrap items-center gap-3 text-sm">
                     {pub.venue && (
-                      <span className="font-medium text-nyu-violet">
+                      <span className="font-medium text-ember">
                         {pub.venue}
                       </span>
                     )}
                     {pub.citationCount > 0 && (
-                      <span className="rounded bg-background-alt px-2 py-0.5 text-xs text-foreground-secondary">
+                      <span className="rounded-full bg-paper-deep px-2.5 py-0.5 text-xs text-ink-muted">
                         {pub.citationCount} citations
                       </span>
                     )}
@@ -118,7 +117,7 @@ export default async function PublicationsPage() {
                         href={`https://doi.org/${pub.doi}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs text-foreground-secondary hover:text-nyu-violet"
+                        className="link-underline text-xs text-ink-faint hover:text-ember"
                       >
                         DOI &#8599;
                       </a>
