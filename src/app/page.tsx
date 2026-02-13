@@ -169,13 +169,33 @@ export default async function Home() {
                   )}
                 </h3>
                 <p className="mt-1 text-sm text-ink-faint">{pub.authors}</p>
-                <div className="mt-2 flex items-center gap-3 text-sm">
+                <div className="mt-2 flex flex-wrap items-center gap-3 text-sm">
                   <span className="font-medium text-ember">{pub.venue}</span>
                   <span className="text-ink-faint">{pub.year}</span>
                   {pub.citationCount > 0 && (
                     <span className="rounded-full bg-paper-deep px-2.5 py-0.5 text-xs text-ink-muted">
                       {pub.citationCount} cit.
                     </span>
+                  )}
+                  {pub.preprint && (
+                    <a
+                      href={pub.preprint}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-underline text-xs text-ink-faint hover:text-ember"
+                    >
+                      Preprint &#8599;
+                    </a>
+                  )}
+                  {pub.webUrl && (
+                    <a
+                      href={pub.webUrl}
+                      target={pub.webUrl.startsWith("/") ? undefined : "_blank"}
+                      rel={pub.webUrl.startsWith("/") ? undefined : "noopener noreferrer"}
+                      className="link-underline text-xs text-ink-faint hover:text-ember"
+                    >
+                      Web App &#8599;
+                    </a>
                   )}
                 </div>
               </article>

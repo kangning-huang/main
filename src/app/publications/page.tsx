@@ -122,6 +122,26 @@ export default async function PublicationsPage() {
                         DOI &#8599;
                       </a>
                     )}
+                    {pub.preprint && (
+                      <a
+                        href={pub.preprint}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link-underline text-xs text-ink-faint hover:text-ember"
+                      >
+                        Preprint &#8599;
+                      </a>
+                    )}
+                    {pub.webUrl && (
+                      <a
+                        href={pub.webUrl}
+                        target={pub.webUrl.startsWith("/") ? undefined : "_blank"}
+                        rel={pub.webUrl.startsWith("/") ? undefined : "noopener noreferrer"}
+                        className="link-underline text-xs text-ink-faint hover:text-ember"
+                      >
+                        Web App &#8599;
+                      </a>
+                    )}
                   </div>
                 </article>
               ))}

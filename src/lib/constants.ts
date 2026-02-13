@@ -88,6 +88,10 @@ export interface Publication {
   doi?: string;
   /** true when Kangning Huang is first or last (senior) author */
   isLeadAuthor?: boolean;
+  /** Link to preprint (e.g. arXiv, Research Square) */
+  preprint?: string;
+  /** Link to an interactive web app / visualization for this paper */
+  webUrl?: string;
 }
 
 /**
@@ -106,6 +110,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 466,
     doi: "10.1088/1748-9326/ab4b71",
     isLeadAuthor: true,
+    webUrl: "/urban-expansion",
   },
   {
     title: "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
@@ -158,6 +163,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 0,
     url: "https://arxiv.org/abs/2507.03960",
     isLeadAuthor: true,
+    webUrl: "https://kangning-huang.github.io/nested-scaling-city-mass/",
   },
   // Last author
   {
@@ -184,6 +190,8 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     year: 2025,
     citationCount: 0,
     isLeadAuthor: true,
+    preprint: "https://www.researchsquare.com/article/rs-6900146/v1",
+    webUrl: "https://kangning-huang.github.io/3D-urban-flood-risk/",
   },
   {
     title: "Planning for rhythmized urban parks: Temporal park classification and modes of action",
