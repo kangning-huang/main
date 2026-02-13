@@ -1,13 +1,10 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Urban Expansion 2050 — GEE App",
+  title: "Urban Expansion 2050",
   description:
-    "Interactive Google Earth Engine map visualizing projected global urban land expansion through 2050.",
+    "Global urban land expansion projections through 2050, based on research published in Environmental Research Letters.",
 };
-
-const GEE_APP_URL =
-  "https://kangning.users.earthengine.app/view/urban-expansion-2050";
 
 export default function UrbanExpansionPage() {
   return (
@@ -16,14 +13,14 @@ export default function UrbanExpansionPage() {
         Urban Expansion 2050
       </h1>
       <p className="mt-2 text-ink-muted">
-        Interactive Google Earth Engine web application
+        Global urban land expansion projections
       </p>
 
       <div className="mt-6 max-w-3xl space-y-4 text-[15px] leading-[1.75] text-ink-muted">
         <p>
-          This interactive map visualizes projected global urban land expansion
-          through 2050. Urban populations are expected to increase by 2&ndash;3
-          billion by mid-century, requiring massive expansion of built-up areas.
+          This project visualizes projected global urban land expansion through
+          2050. Urban populations are expected to increase by 2&ndash;3 billion
+          by mid-century, requiring massive expansion of built-up areas.
           Understanding where and how this growth will occur is critical for
           planning climate adaptation strategies.
         </p>
@@ -53,34 +50,32 @@ export default function UrbanExpansionPage() {
         </p>
       </div>
 
-      {/* GEE App Embed */}
-      <div className="mt-8 overflow-hidden rounded-xl border border-rule">
-        <div className="relative w-full" style={{ paddingBottom: "65%" }}>
-          <iframe
-            src={GEE_APP_URL}
-            className="absolute inset-0 h-full w-full"
-            title="Urban Expansion 2050 — Google Earth Engine App"
-            allowFullScreen
-          />
-        </div>
+      <div className="mt-8 rounded-xl border border-rule bg-paper-warm p-8 text-center">
+        <p className="font-display text-lg text-ink">
+          The Google Earth Engine app has been retired.
+        </p>
+        <p className="mt-2 text-sm text-ink-muted">
+          The interactive GEE visualization is no longer available. You can
+          access the data and findings through the links below.
+        </p>
       </div>
 
       <div className="mt-5 flex flex-wrap gap-3">
         <a
-          href={GEE_APP_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center rounded-full border border-rule px-4 py-2 text-sm font-medium text-ink-muted transition-all hover:border-ember hover:text-ember"
-        >
-          Open full-screen GEE app &#8599;
-        </a>
-        <a
           href="https://doi.org/10.1088/1748-9326/ab4b71"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center rounded-full border border-rule px-4 py-2 text-sm font-medium text-ink-muted transition-all hover:border-ember hover:text-ember"
+          className="inline-flex items-center rounded-full bg-ember px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ember-dark"
         >
           Read the paper &#8599;
+        </a>
+        <a
+          href="https://resourcewatch.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center rounded-full border border-rule px-5 py-2.5 text-sm font-medium text-ink-muted transition-all hover:border-ember hover:text-ember"
+        >
+          Data on Resource Watch &#8599;
         </a>
       </div>
     </div>

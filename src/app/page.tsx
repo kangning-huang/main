@@ -198,32 +198,90 @@ export default async function Home() {
               </Link>
             </div>
 
-            <div className="mt-8 grid gap-5 md:grid-cols-3">
-              {featuredPosts.map((post, i) => (
-                <a
-                  key={i}
-                  href={post.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="card-hover group rounded-xl border border-rule bg-paper p-5"
-                >
-                  <p className="text-xs font-medium uppercase tracking-wider text-ink-faint">
-                    {post.date}
-                  </p>
-                  <h3 className="mt-2.5 font-display text-lg leading-snug text-ink transition-colors group-hover:text-ember">
-                    {post.title}
-                  </h3>
-                  {post.excerpt && (
-                    <p className="mt-2 text-sm leading-relaxed text-ink-muted line-clamp-3">
-                      {post.excerpt}
-                    </p>
+            {/* Featured / lead post */}
+            <a
+              href={featuredPosts[0].url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-hover group mt-8 block rounded-xl border border-rule bg-paper"
+            >
+              {featuredPosts[0].coverImage && (
+                <div className="overflow-hidden rounded-t-xl">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={featuredPosts[0].coverImage}
+                    alt=""
+                    className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </div>
+              )}
+              <div className="p-6">
+                <p className="text-xs font-medium uppercase tracking-wider text-ink-faint">
+                  {featuredPosts[0].date}
+                  {featuredPosts[0].wordcount && (
+                    <span className="ml-3 text-ink-faint/60">
+                      {Math.ceil(featuredPosts[0].wordcount / 250)} min read
+                    </span>
                   )}
-                  <p className="mt-4 text-sm font-medium text-ember">
-                    Read on Substack &rarr;
+                </p>
+                <h3 className="mt-2 font-display text-2xl leading-snug text-ink transition-colors group-hover:text-ember md:text-3xl">
+                  {featuredPosts[0].title}
+                </h3>
+                {featuredPosts[0].subtitle && (
+                  <p className="mt-2 font-display text-lg italic text-ink-faint">
+                    {featuredPosts[0].subtitle}
                   </p>
-                </a>
-              ))}
-            </div>
+                )}
+                {featuredPosts[0].excerpt && (
+                  <p className="mt-3 text-[15px] leading-[1.7] text-ink-muted">
+                    {featuredPosts[0].excerpt}...
+                  </p>
+                )}
+                <p className="mt-4 text-sm font-medium text-ember">
+                  Continue reading &rarr;
+                </p>
+              </div>
+            </a>
+
+            {/* Remaining posts */}
+            {featuredPosts.length > 1 && (
+              <div className="mt-5 grid gap-5 md:grid-cols-2">
+                {featuredPosts.slice(1).map((post, i) => (
+                  <a
+                    key={i}
+                    href={post.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="card-hover group rounded-xl border border-rule bg-paper p-5"
+                  >
+                    <p className="text-xs font-medium uppercase tracking-wider text-ink-faint">
+                      {post.date}
+                      {post.wordcount && (
+                        <span className="ml-3 text-ink-faint/60">
+                          {Math.ceil(post.wordcount / 250)} min read
+                        </span>
+                      )}
+                    </p>
+                    <h3 className="mt-2.5 font-display text-lg leading-snug text-ink transition-colors group-hover:text-ember">
+                      {post.title}
+                    </h3>
+                    {post.subtitle && post.subtitle !== post.excerpt?.slice(0, post.subtitle.length) && (
+                      <p className="mt-1.5 text-sm italic text-ink-faint">
+                        {post.subtitle}
+                      </p>
+                    )}
+                    {post.excerpt && (
+                      <p className="mt-2 text-sm leading-relaxed text-ink-muted line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                    )}
+                    <p className="mt-4 text-sm font-medium text-ember">
+                      Read on Substack &rarr;
+                    </p>
+                  </a>
+                ))}
+              </div>
+            )}
           </div>
         </section>
       ) : (

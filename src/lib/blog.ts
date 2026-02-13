@@ -1,16 +1,18 @@
 export interface BlogPost {
   title: string;
   date: string;
+  subtitle: string;
   excerpt: string;
   url: string;
+  coverImage?: string;
+  wordcount?: number;
 }
 
 export async function fetchBlogPosts(): Promise<BlogPost[]> {
   try {
-    // Substack exposes an API endpoint for posts
     const res = await fetch(
       "https://kangninghuang.substack.com/api/v1/posts?limit=10",
-      { next: { revalidate: 86400 } } // cache for 1 day
+      { next: { revalidate: 86400 } }
     );
     if (!res.ok) throw new Error("Failed to fetch");
 
@@ -21,8 +23,11 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
         post_date: string;
         subtitle?: string;
         description?: string;
+        truncated_body_text?: string;
         canonical_url: string;
         slug: string;
+        cover_image?: string;
+        wordcount?: number;
       }) => ({
         title: post.title,
         date: new Date(post.post_date).toLocaleDateString("en-US", {
@@ -30,14 +35,18 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
           month: "long",
           day: "numeric",
         }),
-        excerpt: post.subtitle || post.description || "",
+        subtitle: post.subtitle || post.description || "",
+        excerpt: post.truncated_body_text
+          ? post.truncated_body_text.slice(0, 400)
+          : post.subtitle || post.description || "",
         url:
           post.canonical_url ||
           `https://kangninghuang.substack.com/p/${post.slug}`,
+        coverImage: post.cover_image || undefined,
+        wordcount: post.wordcount || undefined,
       })
     );
   } catch {
-    // Fallback: try RSS feed
     try {
       const res = await fetch("https://kangninghuang.substack.com/feed", {
         next: { revalidate: 86400 },
@@ -64,6 +73,9 @@ function parseRSS(xml: string): BlogPost[] {
     const description = extractTag(itemXml, "description");
 
     if (title && link) {
+      const cleanDesc = description
+        ? decodeHTMLEntities(description).replace(/<[^>]*>/g, "").slice(0, 400)
+        : "";
       items.push({
         title: decodeHTMLEntities(title),
         date: pubDate
@@ -73,9 +85,8 @@ function parseRSS(xml: string): BlogPost[] {
               day: "numeric",
             })
           : "",
-        excerpt: description
-          ? decodeHTMLEntities(description).replace(/<[^>]*>/g, "").slice(0, 200)
-          : "",
+        subtitle: cleanDesc.slice(0, 100),
+        excerpt: cleanDesc,
         url: link,
       });
     }
@@ -84,7 +95,6 @@ function parseRSS(xml: string): BlogPost[] {
 }
 
 function extractTag(xml: string, tag: string): string | null {
-  // Handle CDATA sections
   const cdataRegex = new RegExp(
     `<${tag}[^>]*><!\\[CDATA\\[([\\s\\S]*?)\\]\\]><\\/${tag}>`
   );
