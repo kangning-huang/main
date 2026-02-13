@@ -25,7 +25,7 @@ export async function fetchPublications(): Promise<Publication[]> {
       const doiFilter = batch.map((d) => `https://doi.org/${d}`).join("|");
       const res = await fetch(
         `https://api.openalex.org/works?filter=doi:${encodeURIComponent(doiFilter)}&select=doi,cited_by_count&per_page=50&mailto=kangning.huang@nyu.edu`,
-        { next: { revalidate: 86400 } }
+        { cache: "force-cache" }
       );
       if (!res.ok) continue;
       const data = await res.json();

@@ -12,7 +12,7 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
   try {
     const res = await fetch(
       "https://kangninghuang.substack.com/api/v1/posts?limit=10",
-      { next: { revalidate: 86400 } }
+      { cache: "force-cache" }
     );
     if (!res.ok) throw new Error("Failed to fetch");
 

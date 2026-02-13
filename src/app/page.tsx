@@ -264,7 +264,7 @@ export default async function Home() {
               </div>
             </a>
 
-            {/* Remaining posts */}
+            {/* Remaining posts — compact cards with thumbnails */}
             {featuredPosts.length > 1 && (
               <div className="mt-5 grid gap-5 md:grid-cols-2">
                 {featuredPosts.slice(1).map((post, i) => (
@@ -273,32 +273,34 @@ export default async function Home() {
                     href={post.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="card-hover group rounded-xl border border-rule bg-paper p-5"
+                    className="card-hover group flex overflow-hidden rounded-xl border border-rule bg-paper"
                   >
-                    <p className="text-xs font-medium uppercase tracking-wider text-ink-faint">
-                      {post.date}
-                      {post.wordcount && (
-                        <span className="ml-3 text-ink-faint/60">
-                          {Math.ceil(post.wordcount / 250)} min read
-                        </span>
+                    {post.coverImage && (
+                      <div className="hidden shrink-0 overflow-hidden sm:block sm:w-32 md:w-36">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img
+                          src={post.coverImage}
+                          alt=""
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
+                        />
+                      </div>
+                    )}
+                    <div className="flex flex-1 flex-col p-5">
+                      <p className="text-xs font-medium uppercase tracking-wider text-ink-faint">
+                        {post.date}
+                      </p>
+                      <h3 className="mt-2 font-display text-lg leading-snug text-ink transition-colors group-hover:text-ember">
+                        {post.title}
+                      </h3>
+                      {post.excerpt && (
+                        <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted line-clamp-2">
+                          {post.excerpt}
+                        </p>
                       )}
-                    </p>
-                    <h3 className="mt-2.5 font-display text-lg leading-snug text-ink transition-colors group-hover:text-ember">
-                      {post.title}
-                    </h3>
-                    {post.subtitle && post.subtitle !== post.excerpt?.slice(0, post.subtitle.length) && (
-                      <p className="mt-1.5 text-sm italic text-ink-faint">
-                        {post.subtitle}
+                      <p className="mt-3 text-sm font-medium text-ember">
+                        Read more &rarr;
                       </p>
-                    )}
-                    {post.excerpt && (
-                      <p className="mt-2 text-sm leading-relaxed text-ink-muted line-clamp-3">
-                        {post.excerpt}
-                      </p>
-                    )}
-                    <p className="mt-4 text-sm font-medium text-ember">
-                      Read on Substack &rarr;
-                    </p>
+                    </div>
                   </a>
                 ))}
               </div>
