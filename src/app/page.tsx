@@ -114,7 +114,7 @@ export default async function Home() {
           <div className="mt-8 grid gap-10 md:grid-cols-[1fr,280px]">
             <div className="space-y-4 animate-fade-up delay-1">
               <p className="text-[15px] leading-[1.75] text-ink-muted">
-                I am an Assistant Professor of Environmental Studies at NYU Shanghai, where I lead the CLUEs (Climate, Land Use, and Environmental Sustainability) Lab. I received my PhD from Yale University, <a href="https://environment.yale.edu/" target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">School of the Environment</a> in 2020, and was an <a href="https://edec.ucar.edu/advanced-study-program/postdoctoral-fellowship-program" target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">Advanced Study Program Postdoctoral Fellow</a> at the National Center for Atmospheric Research.
+                I am an Assistant Professor of Environmental Studies at <a href="https://shanghai.nyu.edu" target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">NYU Shanghai</a>, where I lead the CLUEs (Climate, Land Use, and Environmental Sustainability) Lab. I received my PhD from Yale University, <a href="https://environment.yale.edu/" target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">School of the Environment</a> in 2020, and was an <a href="https://edec.ucar.edu/advanced-study-program/postdoctoral-fellowship-program" target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">Advanced Study Program Postdoctoral Fellow</a> at the National Center for Atmospheric Research.
               </p>
               {ABOUT_TEXT.slice(1).map((paragraph, i) => (
                 <p
