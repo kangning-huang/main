@@ -1,5 +1,7 @@
 # Kangning (Ken) Huang — Personal Website
 
+🔗 **https://kangning-huang.github.io/main/**
+
 Personal portfolio site consolidating research, publications, projects, and writing. Built with Next.js and deployed on GitHub Pages.
 
 ## Development
