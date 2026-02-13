@@ -11,7 +11,10 @@ import { fetchBlogPosts } from "@/lib/blog";
 
 export default async function Home() {
   const allPublications = await fetchPublications();
-  const featuredPubs = allPublications.slice(0, 5);
+  const featuredPubs = allPublications
+    .filter((p) => p.isLeadAuthor)
+    .sort((a, b) => b.year - a.year || b.citationCount - a.citationCount)
+    .slice(0, 6);
   const blogPosts = await fetchBlogPosts();
   const featuredPosts = blogPosts.slice(0, 3);
   const featuredProjects = PROJECTS.filter((p) => p.featured);
