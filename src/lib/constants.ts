@@ -110,7 +110,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 466,
     doi: "10.1088/1748-9326/ab4b71",
     isLeadAuthor: true,
-    webUrl: "/urban-expansion",
+    webUrl: "https://kangning-huang.github.io/main/urban-expansion",
   },
   {
     title: "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
