@@ -69,6 +69,14 @@ export const PROJECTS: Project[] = [
     internalPath: "/urban-expansion",
   },
   {
+    title: "3D Urban Flood Risk",
+    description:
+      "Interactive web app for the paper on integrating building height and protection standards in global flood risk assessment. Visualizes 3D urban flood exposure across cities worldwide.",
+    url: "https://kangning-huang.github.io/3D-urban-flood-risk/",
+    tags: ["Flood Risk", "3D Visualization", "Interactive"],
+    featured: true,
+  },
+  {
     title: "URBANMOD-ZIPF",
     description:
       "A global-scale urban land expansion model that preserves Zipf's Law of urban sizes. Open-source tool for simulating realistic patterns of urban growth across different scenarios.",
