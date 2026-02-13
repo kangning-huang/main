@@ -219,24 +219,24 @@ export default async function Home() {
               </Link>
             </div>
 
-            {/* Featured / lead post */}
+            {/* Lead post — compact card with cover image */}
             <a
               href={featuredPosts[0].url}
               target="_blank"
               rel="noopener noreferrer"
-              className="card-hover group mt-8 block rounded-xl border border-rule bg-paper"
+              className="card-hover group mt-8 flex overflow-hidden rounded-xl border border-rule bg-paper"
             >
               {featuredPosts[0].coverImage && (
-                <div className="overflow-hidden rounded-t-xl">
+                <div className="hidden shrink-0 overflow-hidden sm:block sm:w-44 md:w-52">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={featuredPosts[0].coverImage}
                     alt=""
-                    className="h-56 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02]"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
               )}
-              <div className="p-6">
+              <div className="flex flex-1 flex-col p-5">
                 <p className="text-xs font-medium uppercase tracking-wider text-ink-faint">
                   {featuredPosts[0].date}
                   {featuredPosts[0].wordcount && (
@@ -245,62 +245,42 @@ export default async function Home() {
                     </span>
                   )}
                 </p>
-                <h3 className="mt-2 font-display text-2xl leading-snug text-ink transition-colors group-hover:text-ember md:text-3xl">
+                <h3 className="mt-2 font-display text-xl leading-snug text-ink transition-colors group-hover:text-ember">
                   {featuredPosts[0].title}
                 </h3>
                 {featuredPosts[0].subtitle && (
-                  <p className="mt-2 font-display text-lg italic text-ink-faint">
+                  <p className="mt-1 text-sm italic text-ink-faint line-clamp-1">
                     {featuredPosts[0].subtitle}
                   </p>
                 )}
                 {featuredPosts[0].excerpt && (
-                  <p className="mt-3 text-[15px] leading-[1.7] text-ink-muted">
-                    {featuredPosts[0].excerpt}...
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted line-clamp-2">
+                    {featuredPosts[0].excerpt}
                   </p>
                 )}
-                <p className="mt-4 text-sm font-medium text-ember">
+                <p className="mt-3 text-sm font-medium text-ember">
                   Continue reading &rarr;
                 </p>
               </div>
             </a>
 
-            {/* Remaining posts — compact cards with thumbnails */}
+            {/* Remaining posts — compact list with just title + date */}
             {featuredPosts.length > 1 && (
-              <div className="mt-5 grid gap-5 md:grid-cols-2">
+              <div className="mt-4 divide-y divide-rule-faint">
                 {featuredPosts.slice(1).map((post, i) => (
                   <a
                     key={i}
                     href={post.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="card-hover group flex overflow-hidden rounded-xl border border-rule bg-paper"
+                    className="group flex items-baseline justify-between gap-4 py-3"
                   >
-                    {post.coverImage && (
-                      <div className="hidden shrink-0 overflow-hidden sm:block sm:w-32 md:w-36">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={post.coverImage}
-                          alt=""
-                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.05]"
-                        />
-                      </div>
-                    )}
-                    <div className="flex flex-1 flex-col p-5">
-                      <p className="text-xs font-medium uppercase tracking-wider text-ink-faint">
-                        {post.date}
-                      </p>
-                      <h3 className="mt-2 font-display text-lg leading-snug text-ink transition-colors group-hover:text-ember">
-                        {post.title}
-                      </h3>
-                      {post.excerpt && (
-                        <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted line-clamp-2">
-                          {post.excerpt}
-                        </p>
-                      )}
-                      <p className="mt-3 text-sm font-medium text-ember">
-                        Read more &rarr;
-                      </p>
-                    </div>
+                    <h3 className="font-display text-[15px] leading-snug text-ink transition-colors group-hover:text-ember">
+                      {post.title}
+                    </h3>
+                    <span className="shrink-0 text-xs text-ink-faint">
+                      {post.date}
+                    </span>
                   </a>
                 ))}
               </div>

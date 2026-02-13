@@ -37,7 +37,7 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
         }),
         subtitle: post.subtitle || post.description || "",
         excerpt: post.truncated_body_text
-          ? post.truncated_body_text.slice(0, 400)
+          ? post.truncated_body_text.slice(0, 800)
           : post.subtitle || post.description || "",
         url:
           post.canonical_url ||

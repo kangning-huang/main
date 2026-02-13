@@ -68,8 +68,8 @@ export default async function BlogPage() {
                 </p>
               )}
               {posts[0].excerpt && (
-                <p className="mt-4 text-[15px] leading-[1.7] text-ink-muted line-clamp-5">
-                  {posts[0].excerpt}
+                <p className="mt-4 text-[15px] leading-[1.7] text-ink-muted">
+                  {posts[0].excerpt}...
                 </p>
               )}
               <p className="mt-5 text-sm font-medium text-ember">
@@ -118,7 +118,7 @@ export default async function BlogPage() {
                       </p>
                     )}
                     {post.excerpt && (
-                      <p className="mt-3 flex-1 text-sm leading-[1.7] text-ink-muted line-clamp-4">
+                      <p className="mt-3 flex-1 text-sm leading-[1.7] text-ink-muted line-clamp-6">
                         {post.excerpt}
                       </p>
                     )}
