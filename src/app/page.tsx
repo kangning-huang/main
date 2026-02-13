@@ -11,10 +11,28 @@ import { fetchBlogPosts } from "@/lib/blog";
 
 export default async function Home() {
   const allPublications = await fetchPublications();
+  // Hand-picked mix of high-impact classics + recent lead-author work
+  const selectedTitles = [
+    // Classics — highest-impact first-author papers
+    "Projecting global urban land expansion and heat island intensification through 2050",
+    "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
+    "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
+    // Prestige solo — Nature Climate Change
+    "Urban forests facing climate risks",
+    // Recent — current research direction
+    "Declining urban density attenuates rising population exposure to surface heat extremes",
+    "Nested economies of scale in global city mass",
+    "Planning for rhythmized urban parks: Temporal park classification and modes of action",
+  ];
+  const titleSet = new Set(selectedTitles.map((t) => t.toLowerCase()));
   const featuredPubs = allPublications
-    .filter((p) => p.isLeadAuthor)
-    .sort((a, b) => b.year - a.year || b.citationCount - a.citationCount)
-    .slice(0, 6);
+    .filter((p) => titleSet.has(p.title.toLowerCase()))
+    .sort((a, b) => {
+      // Preserve the hand-picked order
+      const ai = selectedTitles.findIndex((t) => t.toLowerCase() === a.title.toLowerCase());
+      const bi = selectedTitles.findIndex((t) => t.toLowerCase() === b.title.toLowerCase());
+      return ai - bi;
+    });
   const blogPosts = await fetchBlogPosts();
   const featuredPosts = blogPosts.slice(0, 3);
   const featuredProjects = PROJECTS.filter((p) => p.featured);

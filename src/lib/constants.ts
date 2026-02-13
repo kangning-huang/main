@@ -200,7 +200,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     venue: "Journal of Community Psychology",
     year: 2025,
     citationCount: 2,
-    isLeadAuthor: true,
+    isLeadAuthor: false,
   },
   {
     title: "Short-Term Effect of Air Pollution on Daily Hospital Visits for Anxiety Disorders in Southern China",
@@ -209,7 +209,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     year: 2025,
     citationCount: 4,
     doi: "10.3390/toxics13010045",
-    isLeadAuthor: true,
+    isLeadAuthor: false,
   },
   {
     title: "Measuring rising heat and flood risk along the belt-and-road initiative",
@@ -225,7 +225,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     venue: "Urban Climate",
     year: 2023,
     citationCount: 21,
-    isLeadAuthor: true,
+    isLeadAuthor: false,
   },
   {
     title: "Investigating future urbanization's impact on local climate under different climate change scenarios in MEGA-urban regions: A case study of the Pearl River Delta, China",
@@ -233,7 +233,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     venue: "Atmosphere",
     year: 2020,
     citationCount: 26,
-    isLeadAuthor: true,
+    isLeadAuthor: false,
   },
   // ── Co-author ──────────────────────────────────────────────
   {
