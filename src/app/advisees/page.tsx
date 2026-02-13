@@ -46,6 +46,7 @@ const ADVISEES: Advisee[] = [
     achievements: [
       "Admitted to University of Pennsylvania (Master of City Planning)",
     ],
+    linkedin: "https://www.linkedin.com/in/zihan-xu-1a548a227/",
   },
   {
     name: "Lihan Feng",
