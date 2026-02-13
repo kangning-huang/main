@@ -1,0 +1,300 @@
+\documentclass[11pt,letterpaper]{article}
+
+% ── Packages ──────────────────────────────────────────────
+\usepackage[margin=0.8in]{geometry}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{tabularx}
+
+% ── Colors ────────────────────────────────────────────────
+\definecolor{accent}{HTML}{8B2500}
+\definecolor{linkblue}{HTML}{1a5276}
+
+% ── Hyperlinks ────────────────────────────────────────────
+\hypersetup{
+  colorlinks=true,
+  linkcolor=linkblue,
+  urlcolor=linkblue,
+  pdfauthor={Kangning Huang},
+  pdftitle={CV -- Kangning Huang},
+}
+
+% ── Section formatting ────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\color{accent}\uppercase}
+  {}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+
+\titleformat{\subsection}
+  {\normalsize\bfseries\itshape}
+  {}{0em}{}
+\titlespacing*{\subsection}{0pt}{8pt}{4pt}
+
+% ── List formatting ───────────────────────────────────────
+\setlist[itemize]{leftmargin=1.5em, itemsep=1pt, parsep=0pt, topsep=2pt}
+\setlist[enumerate]{leftmargin=1.5em, itemsep=2pt, parsep=0pt, topsep=2pt}
+
+% ── Header / Footer ──────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\footnotesize\textcolor{gray}{Kangning Huang --- Curriculum Vitae --- \thepage}}
+
+% ── Custom commands ───────────────────────────────────────
+\newcommand{\cventry}[2]{%
+  \noindent\begin{tabularx}{\textwidth}{@{}l X@{}}
+    \textbf{#1} & #2
+  \end{tabularx}\vspace{2pt}%
+}
+
+% ══════════════════════════════════════════════════════════
+\begin{document}
+
+% ── Title block ───────────────────────────────────────────
+\begin{center}
+  {\LARGE\bfseries Kangning (Ken) Huang}\\[6pt]
+  {\normalsize Assistant Professor of Environmental Studies}\\[2pt]
+  {\normalsize New York University Shanghai}\\[6pt]
+  {\small
+    \href{mailto:kangning.huang@nyu.edu}{kangning.huang@nyu.edu}
+    \enspace$\cdot$\enspace
+    \href{https://scholar.google.com/citations?user=s_domssAAAAJ}{Google Scholar}
+    \enspace$\cdot$\enspace
+    \href{https://github.com/kangning-huang}{GitHub}
+    \enspace$\cdot$\enspace
+    \href{https://kangning-huang.github.io/main/}{Website}
+  }
+\end{center}
+
+\vspace{-4pt}
+
+% ── Employment ────────────────────────────────────────────
+\section{Employment}
+\cventry{2022.9--present}{Assistant Professor of Environmental Studies, NYU Shanghai}
+\cventry{2022.1--2022.8}{Visiting Assistant Professor Faculty Fellow, NYU New York}
+\cventry{2020.1--2021.12}{ASP Postdoctoral Fellow, National Center for Atmospheric Research (NCAR)}
+
+% ── Education ─────────────────────────────────────────────
+\section{Education}
+\cventry{2020}{Ph.D., Forestry and Environmental Studies, Yale University, School of the Environment}
+\cventry{2014}{M.S., Cartography and Geographic Information System, Sun Yat-sen University}
+\cventry{2011}{B.S., Geographic Information System, Sun Yat-sen University}
+
+% ── Research Interests ────────────────────────────────────
+\section{Research Interests}
+Environmental impact from urbanization and climate change; Future urbanization and its interaction with climate change; Urban climate impact assessment and reduction.
+
+% ── Awards ────────────────────────────────────────────────
+\section{Awards}
+\cventry{2020}{NCAR Advanced Study Program Postdoctoral Fellowship}
+\cventry{2017}{NASA Earth and Space Science Fellowship}
+\cventry{2012}{P.~R.\ China National Graduate Scholarship}
+
+% ── Grants ────────────────────────────────────────────────
+\section{Grants}
+
+\subsection{Active / Completed}
+\cventry{2024--2026}{``Mapping the Mismatch: The Urbanization of the Built Environment Versus People in Modern China.'' NYU Arts \& Science Fund for Research on China (\$50,000).}
+\cventry{2022--2025}{``Maximizing Urban Climate Under Resource Constraints: An International, Interdisciplinary Approach.'' Shanghai Leading Talents Program, Distinguished Young Scholars, Shanghai Municipal Government (\textasciitilde\$100,000).}
+\cventry{2022--2023}{``Future Heat Extremes in China's Urban Slums: Projections and Mitigations.'' Google Award for Inclusion Research program (\$60,000).}
+\cventry{2022--2023}{``Climate trade-offs in future urban growth: should cities sprawl or density?'' NYU Climate Change Initiative Seed Grants (\$10,000).}
+\cventry{2017--2019}{``Modeling the water requirement for urban heat island mitigation with multi-sensor and multi-temporal remote sensing data.'' NASA Earth and Space Science Fellowship (NESSF) Program (\$120,000).}
+\cventry{2017--2018}{``The compound heat extreme in China from the urban heat island effect and climate change.'' Yale Tropical Resources Institute Fellowship, \href{https://hixon.yale.edu/research/fellowship/fellows/kangning-ken-huang}{Yale Hixon Fellowship Grant}, and Yale Institute for Biospheric Studies Doctoral Pilot Grant (\$16,400).}
+
+\subsection{Declined}
+\cventry{2025}{``Integrating blue and green infrastructure to promote urban climate resilience in compound drought-heatwave.'' National Science Foundation of China.}
+\cventry{2024}{``Digital intervention for mental health in compact, low-carbon urban environments.'' China Medical Board.}
+\cventry{2023}{``The water limits to climate adaptation by urban greening.'' Amazon Research Award.}
+
+% ── Publications ──────────────────────────────────────────
+\section{Publications}
+
+\subsection{Articles, Under Review / Preprint}
+\begin{enumerate}
+  \item \textbf{Kangning Huang}, Mingzhen Lu. ``Nested economies of scale in global city mass.'' Under review in \textit{Nature Cities}.
+  \item \textbf{Kangning Huang}, Micheal Staudenmaier, Olga Wilhelmi. ``Rising heat risks in the US by the mid-21st century.'' Under review in \textit{Climate}.
+  \item Yujie Sun, Xuyan Gao, Jiayong Liang, \textbf{Kangning Huang}. ``Unveiling Causality: Does Demolishing Informal Settlements Cause Urban Surface Cooling?'' Under review in \textit{npj Environmental Social Science}.
+  \item Jiayong Liang, Imman Hilaly, Xuyan Gao, ChengHe Guan, Ying Li, \textbf{Kangning Huang}. ``Above and beyond: Integrating building height and protection standards in global flood risk assessment.'' Under review in \textit{Scientific Reports}.
+  \item Yupeng Liu, \textbf{Kangning Huang}, Shengping Li, Karen C.\ Seto, Wei-Qiang Chen. ``Material-saving strategies for decarbonizing the global building stock.'' Under review in \textit{Nature Sustainability}.
+\end{enumerate}
+
+\subsection{Peer-Reviewed Articles}
+{\small(\href{https://scholar.google.com/citations?user=s_domssAAAAJ&hl=en}{Google Scholar} citations: 3,867; h-index: 18)}
+
+\begin{enumerate}
+  \item \textbf{Kangning Huang}, ChengHe Guan, Brian Stone Jr., Jiayong Liang. 2025. ``Declining urban density attenuates rising population-weighted exposure to surface heat extremes.'' \href{https://www.nature.com/articles/s41598-025-96045-z}{\textit{Scientific Reports}}. 15(1), 13860.
+
+  \item Jiayong Liang, Desheng Liu, Lihan Feng, \textbf{Kangning Huang}. 2025. ``Rapid Probabilistic Inundation Mapping Using Local Thresholds and Sentinel-1 SAR Data on Google Earth Engine.'' \href{https://www.mdpi.com/2072-4292/17/10/1747}{\textit{Remote Sensing}}. 17(10), 1747.
+
+  \item Ren, Xiyuan, ChengHe Guan, Shengze Chen, Meizi You, Ying Li, and \textbf{Kangning Huang}. 2025. ``Planning for Rhythmized Urban Parks: Temporal Park Classification and Modes of Action.'' \href{https://www.tandfonline.com/doi/full/10.1080/01944363.2025.2523604}{\textit{Journal of the American Planning Association}}. 1--20.
+
+  \item Shasha Wang, Wenfeng Zhan, Bingbing Zhou, Shilu Tong, TC Chakraborty, Zhihua Wang, \textbf{Kangning Huang}, Huilin Du, Ariane Middel, Jiufeng Li, Zihan Liu, Long Li, Fan Huang, and Manchun Li. 2025. ``Dual impact of global urban overheating on mortality.'' \href{https://www.nature.com/articles/s41558-025-02303-3}{\textit{Nature Climate Change}}. 15, 497--504.
+
+  \item Zhaowu Yu, Siheng Li, Wenjun Yang, Jiquan Chen, Mohammad A Rahman, Chenghao Wang, Wenjuan Ma, Xihan Yao, Junqi Xiong, Chi Xu, Yuyu Zhou, Jike Chen, \textbf{Kangning Huang}, Xiaojiang Gao, Rasmus Fensholt, Qihao Weng, Weiqi Zhou. 2025. ``Enhancing Climate-Driven Urban Tree Cooling with Targeted Non-climatic Interventions.'' \href{https://pubs.acs.org/doi/10.1021/acs.est.4c14275}{\textit{Environmental Science \& Technology}}. 59(18), 9082--9092.
+
+  \item Pei, Yaolin, Xiang Qi, Gen Li, Weiming Tang, \textbf{Kangning Huang}, Brian J.\ Hall, and Bei Wu. 2025. ``Unequal Effects of the Lockdown on Mental Health in Shanghai.'' \href{https://onlinelibrary.wiley.com/doi/10.1002/jcop.23177}{\textit{Journal of Community Psychology}}. 53(1): e23177.
+
+  \item Zhong, Xinyuan, Tingting Guo, Jianghui Zhang, Qiong Wang, Rong Yin, Kunpeng Wu, Qing Zou, Meng Zheng, Brian J.\ Hall, Andre M.\ N.\ Renzaho, \textbf{Kangning Huang}, Wen Chen. 2025. ``Short-Term Effect of Air Pollution on Daily Hospital Visits for Anxiety Disorders in Southern China.'' \href{https://www.mdpi.com/2305-6304/13/1/45}{\textit{Toxics}}. 13(1): 45.
+
+  \item Jiayong Liang, Maria Adele Carrai, Ammar A.\ Malik, Xi Gao, Xuyan Gao, Lihan Feng \& \textbf{Kangning Huang}. 2024. ``Measuring rising heat and flood risk along the belt-and-road initiative.'' \href{https://doi.org/10.1007/s44274-024-00148-9}{\textit{Discover Environment}}. 2, 119.
+
+  \item Xu, Wenhao, Gongqin Wang, Shaoda Liu, Junfeng Wang, William H.\ McDowell, \textbf{Kangning Huang}, Peter A.\ Raymond, Zhifeng Yang, and Xinghui Xia. 2024. ``Globally elevated greenhouse gas emissions from polluted urban rivers.'' \href{https://www.nature.com/articles/s41893-024-01358-y}{\textit{Nature Sustainability}}. 7, 938--948.
+
+  \item Huilin Du, Wenfeng Zhan, Bingbing Zhou, Yang Ju, Zihan Liu, Ariane Middel, \textbf{Kangning Huang}, Lei Zhao, TC Chakraborty, Zhihua Wang, Shasha Wang, Jiufeng Li, Long Li, Fan Huang, Yingying Ji, Xuecao Li \& Manchun Li. 2025. ``Exacerbated heat stress induced by urban browning in the Global South.'' \href{https://doi.org/10.1038/s44284-024-00184-9}{\textit{Nature Cities}}. 2, 157--169.
+
+  \item Yangzi Che, Xuecao Li, Xiaoping Liu, Xiaocong Xu, \textbf{Kangning Huang}, Peng Zhu, Qian Shi, Yimin Chen, Qiusheng Wu, Jay H Arehart, Wenping Yuan, Xia Li. 2024. ``Mapping of individual building heights reveals the large gap of urban-rural living spaces in the contiguous US.'' \href{https://www.the-innovation.org/article/doi/10.59717/j.xinn-geo.2024.100069}{\textit{The Innovation Geoscience}}. 2(2): 100069.
+
+  \item Wei, Hong, Bin Chen, \textbf{Kangning Huang}, Meng Gao, Bin Fan, Tao Zhang, Ying Tu, and Bing Xu. 2024. ``Moderating AC Usage Can Reduce Thermal Disparity between Indoor and Outdoor Environments.'' \href{https://pubs.acs.org/doi/full/10.1021/acs.est.4c00424}{\textit{Environmental Science \& Technology}}. 58(24), 10524--10535.
+
+  \item Chenxi Hu, Chi-Yung Tam, Xinwei Li, \textbf{Kangning Huang}, Chao Ren, Kwun Yip Fung, Ziqian Wang. 2023. ``Mega-city development impact on hourly extreme rainfall over the South China Greater Bay Area.'' \href{https://www.sciencedirect.com/science/article/pii/S2212095522003078}{\textit{Urban Climate}}. 48, 101389.
+
+  \item \textbf{Kangning Huang}, Jiye Leng, Yong Xu, Xinwei Li, Meng Cai, Ran Wang, Chao Ren. 2021. ``Facilitating urban climate forecasts in rapidly urbanizing regions with land-use change modeling.'' \href{https://www.sciencedirect.com/science/article/pii/S2212095521000365}{\textit{Urban Climate}}. 36, 100806.
+
+  \item \textbf{Kangning Huang}, Xuhui Lee, Brian Stone Jr., Jason Knievel, Michelle L.\ Bell, Karen C.\ Seto. 2021. ``Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation.'' \href{https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2020JD033831}{\textit{Journal of Geophysical Research: Atmospheres}}. 126(4), e2020JD033831.
+
+  \item Pak Shing Yeung, Jimmy Chi-Hung Fung, Chao Ren, Yong Xu, \textbf{Kangning Huang}, Jiye Leng, Michael Mau-Fong Wong. 2020. ``Investigating future urbanization's impact on local climate under different climate change scenarios in mega-urban regions.'' \href{https://www.mdpi.com/2073-4433/11/7/771}{\textit{Atmosphere}}. 11(7), 771.
+
+  \item Yimin Chen, Xia Li, \textbf{Kangning Huang}, Ming Luo, Minyi Gao. 2020. ``High-Resolution Gridded Population Projections for China Under the Shared Socioeconomic Pathways.'' \href{https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2020EF001491}{\textit{Earth's Future}}. 8(6), e2020EF001491.
+
+  \item Xiaoping Liu, Yinghuai Huang, Xiaocong Xu, Xuecao Li, Xia Li, Philippe Ciais, Peirong Lin, Kai Gong, Alan Ziegler, Anping Chen, Peng Gong, Jun Chen, Guohua Hu, Yimin Chen, Shaojian Wang, Qiusheng Wu, \textbf{Kangning Huang}, Lyndon Estes, Zhenzhong Zeng. 2020. ``High spatiotemporal resolution mapping of global urban change from 1985 to 2015.'' \href{https://www.nature.com/articles/s41893-020-0521-x}{\textit{Nature Sustainability}}. 3, 564--570.
+
+  \item Guangzhao Chen, Xia Li, Xiaoping Liu, Xun Liang, Jiye Leng, Yao Yao, Yue'an Qiu, Qianlian Wu, \textbf{Kangning Huang}. 2020. ``Global projections of future urban land expansion under shared socioeconomic pathways.'' \href{https://dx.doi.org/10.1038/s41467-020-14386-x}{\textit{Nature Communications}}. 11(1): 537.
+
+  \item \textbf{Kangning Huang}, Xia Li, Xiaoping Liu, Karen C.\ Seto. 2019. ``Projecting global urban land expansion and heat island intensification through 2050.'' \href{https://iopscience.iop.org/article/10.1088/1748-9326/ab4b71}{\textit{Environmental Research Letters}}. 14(11): 114037.\\
+  {\footnotesize Media: \href{https://environment.yale.edu/news/article/for-some-urban-areas-warming-climate-is-only-half-the-threat}{Yale News}, \href{https://www.eenews.net/stories/1061604545}{E\&E News}, \href{https://www.scientificamerican.com/article/urban-heat-islands-mean-warming-will-be-worse-in-cities/}{Scientific American}; Data: \href{https://bit.ly/39jW06Q}{WRI Resource Watch}}
+
+  \item Tango Hu, Jiahong Liu, Gang Zheng, Dengrong Zhang, \textbf{Kangning Huang}. 2019. ``Evaluation of historical and future wetland degradation using remote sensing imagery and land-use modeling.'' \href{https://onlinelibrary.wiley.com/doi/abs/10.1002/ldr.3429}{\textit{Land Degradation and Development}}. 31(1): 65--80.
+
+  \item Robert I.\ McDonald, Andressa V.\ Mansur, Fernando Ascens\~{a}o, M'Lisa Colbert, Katie Crossman, Thomas Elmqvist, Andrew Gonzalez, Burak G\"{u}neralp, Dagmar Haase, Maike Hamann, Oliver Hillel, \textbf{Kangning Huang}, Belinda Kahnt, David Maddox, Andrea Pacheco, Henrique Pereira, Karen Seto, Rohan Simkin, Brenna Walsh, Alexandra S Werner, Carly Ziter. 2019. ``Research gaps in knowledge of the impact of urban growth on biodiversity.'' \href{https://www.nature.com/articles/s41893-019-0436-6}{\textit{Nature Sustainability}}. 3: 16--24.
+
+  \item Siyu Chen, Xiaorui Zhang, Jintai Lin, Jianping Huang, Dan Zhao, Tiangang Yuan, \textbf{Kangning Huang}, Yuan Luo, Zhuo Jia, Zhuo Zang, Yue'an Qiu, Li Xie. 2019. ``Fugitive road dust PM\textsubscript{2.5} emission and their potential health impacts.'' \href{https://pubs.acs.org/doi/10.1021/acs.est.9b00666}{\textit{Environmental Science \& Technology}}. 53(14): 8455--8465.
+
+  \item Xiaoping Liu, Shuli Chen, Li Zhuo, Jun Li, \textbf{Kangning Huang}. 2018. ``Multi-sensor image registration by combining local self-similarity matching and mutual information.'' \href{https://link.springer.com/article/10.1007\%2Fs11707-018-0717-9}{\textit{Frontiers of Earth Science}}. 12(4): 779--790.
+
+  \item Siyu Chen, Nanxuan Jiang, Jianping Huang, Xiaoguang Xu, Huiwei Zhang, Zhou Zhang, \textbf{Kangning Huang}, Xiaocong Xu, Yun Wei, Xiaodan Guan, Xiaorui Zhang, Yuan Luo, Zhiyuan Hu, Taichen Feng. 2018. ``Quantifying contributions of natural and anthropogenic dust emission from different climate regions.'' \href{https://badge.dimensions.ai/details/id/pub.1105977845}{\textit{Atmospheric Environment}}. 191: 94--104.
+
+  \item Jiayong Liang, Xiaoping Liu, \textbf{Kangning Huang}, Xia Li, Xun Shi, Yaning Chen. 2015. ``Improved snow depth retrieval by integrating microwave brightness temperature and visible/infrared reflectance.'' \href{https://badge.dimensions.ai/details/doi/10.1016/j.rse.2014.10.016}{\textit{Remote Sensing of Environment}}. 156: 500--509.
+
+  \item Jiayong Liang, Xiaoping Liu, \textbf{Kangning Huang}, Xia Li, Dagang Wang, Xianwei Wang. 2013. ``Automatic registration of multi-sensor images using an integrated spatial and mutual information (SMI) metric.'' \href{https://badge.dimensions.ai/details/doi/10.1109/tgrs.2013.2242895}{\textit{IEEE Transactions on Geoscience and Remote Sensing}}. 52(1): 603--615.
+
+  \item \textbf{Kangning Huang}, Xiaoping Liu, Xia Li, Jiayong Liang, Shenjing He. 2012. ``An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas.'' \href{https://badge.dimensions.ai/details/doi/10.1080/13658816.2012.730147}{\textit{International Journal of Geographical Information Science}}. 27(5): 922--946.
+
+  \item Xiaoping Liu, Xia Li, Xun Shi, \textbf{Kangning Huang}, Yilun Liu. 2012. ``A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas.'' \href{https://badge.dimensions.ai/details/id/pub.1032175137}{\textit{International Journal of Geographical Information Science}}. 26(7): 1325--1343.
+\end{enumerate}
+
+\subsection{Non-Peer-Reviewed Articles}
+\begin{enumerate}
+  \item \textbf{Kangning Huang}. 2022. ``Urban forests face climate risks.'' \href{https://www.nature.com/articles/s41558-022-01481-8}{\textit{Nature Climate Change} $\vert$ News \& Views}. 12(10), 893--894.
+\end{enumerate}
+
+\subsection{Books}
+\begin{enumerate}
+  \item Kelly Aho, Tirthankar Chakraborty, Bowen Fang, \textbf{Kangning Huang}, Ava Liang, Natalie Schultz, Charlotte Stanley, Anna Walsh, Zhongwang Wei, Yichen Yang, Bowen Zhao, Xuhui Lee. 2017. \textit{Fundamentals of Boundary-Layer Meteorology: Solutions Manual}. \href{https://www.springer.com/us/book/9783319608518}{Springer International Publishing}. ISBN: 978-3-319-60853-2.
+\end{enumerate}
+
+\subsection{Reports}
+\begin{enumerate}
+  \item Lead author. \textit{Nature in the Urban Century: A global assessment of where and how to conserve nature for biodiversity and human wellbeing}. 2018. \href{https://www.nature.org/en-us/what-we-do/our-insights/perspectives/nature-in-the-urban-century/}{The Nature Conservancy}.
+\end{enumerate}
+
+% ── Presentations ─────────────────────────────────────────
+\section{Presentations and Conferences}
+
+\subsection{Invited Talks}
+\begin{itemize}
+  \item[2025] ``AI for Urban Sustainability: Understanding, Simulating, and Managing Cities.'' ADIA Lab ``Sustainable AI'' Summer School, Fields Institute, Shanghai.
+  \item[2025] ``AI for Urban Sustainability.'' Urban Science and Sustainability Summer School, CAS Institute of Urban Environment, Xiamen.
+  \item[2024] ``Which Chinese Cities are Overbuilt? Insights from Urban Complexity Science.'' China Crossroads, Shanghai; The Chinese University of Hong Kong.
+  \item[2024] ``From Sources of Prosperity to Potential Challenges: The Influences of Rivers and Seas for Shanghai and New York.'' Conference on Common Ideals and Common Future, Shanghai.
+  \item[2023] ``The applications of spatial analysis in urban and climate health research.'' Chinese Preventive Medicine Association, Qionghai, Hainan.
+  \item[2023] ``Climate trade-offs in urbanization in China and beyond.'' China Crossroads, Shanghai.
+  \item[2019] ``Future global urban land expansion and limits of urban adaptations.'' Hotspot Cities Symposium, University of Pennsylvania.
+  \item[2017] ``Forecasting urban land expansion and heat island intensification globally through 2050.'' Silk Road Innovation Forum, Xi'an, China.
+  \item[2017] ``Urbanization, climate adaptation and resource constraints.'' The Hong Kong Polytechnic University.
+\end{itemize}
+
+\subsection{Sessions Organized}
+\begin{itemize}
+  \item[2018] ``Building resilience to natural hazards by utilizing citizen science and understanding compound hazards.'' AGU Fall Meeting, Washington, DC.
+\end{itemize}
+
+\subsection{Selected Oral Presentations}
+\begin{itemize}
+  \item[2025] ``Sponge Cities After a Decade.'' Asia Oceania Geosciences Society (AOGS), Singapore.
+  \item[2025] ``Declining urban density attenuates rising population exposure to surface heat extremes.'' International Conference of Geoinformatics, Jiaozhuo, China.
+  \item[2024] ``Mapping the mismatch: The urbanization of the built environment versus people in modern China.'' AGU Fall Meeting, Washington, DC.
+  \item[2024] ``The urban mosaic of heat exposure.'' IEEE IGARSS, Athens, Greece.
+  \item[2023] ``Taller or denser buildings? Effects of urban forms on heat island extremes.'' AGU Fall Meeting, San Francisco.
+  \item[2019] ``Urban expansion neutralizes heatwave-risk reduction by socioeconomic development.'' 16th International Conference on Urban Health, Xiamen.
+  \item[2018] ``Escalating heat stress by mid-century from large-scale urban land expansion.'' AGU Fall Meeting, Washington, DC.
+  \item[2018] ``Global forecasts of urban land expansion and heat island intensification by 2050.'' International Conference on Upscaling Urban Solutions, Berlin.
+  \item[2018] ``A spatial lag model for global urban heat island.'' AAG Annual Meeting, New Orleans.
+  \item[2016] ``Contributions to augmented compound urban temperature extreme (ACUTE).'' Urban Transitions Global Summit, Shanghai.
+  \item[2013] ``Improving un-gauged hydrological modeling by assimilating GRACE Terrestrial Water Storage data.'' AGU Fall Meeting, San Francisco.
+  \item[2012] ``An artificial immune system for multi-objective land-use allocation.'' International Conference on GeoInformatics, Hong Kong.
+\end{itemize}
+
+% ── Teaching ──────────────────────────────────────────────
+\section{Teaching Experience}
+\cventry{2022--2025}{\textbf{Instructor}, ``Environmental System Science,'' \href{https://docs.google.com/document/d/e/2PACX-1vSnLH1DcYAtjhmYVq1k46Zb8-aDYIfBsZWCInBYVJuLiYnjSO0hxBMZq8wBz-8n4p8Utt2J9_5mUK03/pub}{SOCS-SHU 204}, NYU Shanghai.}
+\cventry{2022--2025}{\textbf{Instructor}, ``Cities at a Crossroads: Environmental Challenges and Opportunities in Cities,'' \href{https://docs.google.com/document/d/e/2PACX-1vTrhXo9OGMOFASQhge4gDUPwET_PLufDlfaA2kwZhVEZIc9VCMPkc0FkQl9ORC8Z2VgpaxWGg1gcrUW/pub}{SOCS-SHU 208}, NYU Shanghai.}
+\cventry{2022}{\textbf{Guest lecturer}, ``Climate and Life,'' ENVST-UA 385, NYU New York.}
+\cventry{2021}{\textbf{Guest lecturer}, ``Environmental Studies Senior Seminar,'' ENVST-UA 900, NYU New York.}
+\cventry{2020}{\textbf{Guest lecturer}, ``Natural and Socioeconomic Factors Shaping Environmental Health,'' \href{https://animaldialogue.org/education/nature-courses/one-health-training/}{One Health Training}, Animal Dialogue.}
+\cventry{2020}{\textbf{Instructor}, ``Introduction to Google Earth Engine,'' \href{https://ral.ucar.edu/events/2020/ral-seminar-1}{Research Application Laboratory}, NCAR.}
+\cventry{2015--2017}{\textbf{Teaching Assistant}, ``Modeling Geographic Objects,'' Yale School of Forestry and Environmental Studies. Instructor: C.~Dana Tomlin.}
+
+% ── Service ───────────────────────────────────────────────
+\section{Service}
+
+\subsection{Journal Manuscript Review}
+\textit{Environmental Research Letters; Sustainable Cities and Society; International Journal of Geographical Information Science; Nature Geoscience; Nature Climate Change; Nature Cities; Journal of Geophysical Research---Atmospheres; npj Urban Sustainability; npj Environmental Social Science; MDPI: Land; Urban Climate; Frontiers of Earth Science.}
+
+\subsection{Journal Editorship}
+Guest editor, \href{https://www.mdpi.com/journal/atmosphere/special_issues/hazards_urbanization_climate}{\textit{Atmosphere}}, Special Issue ``Hazards, Urbanization, and Climate Change.''
+
+\subsection{Report Review}
+\begin{itemize}
+  \item \textit{Heat Wave Guide for Cities}. 2019. Red Cross Red Crescent Climate Centre.
+  \item \textit{Guide for Urban Integrated Hydro-Meteorological, Climate and Environmental Services}. 2018. World Meteorology Organization.
+\end{itemize}
+
+\subsection{Departmental Service}
+\begin{itemize}
+  \item Faculty Lunchtime Speaker Seminar Organizer, NYU Shanghai.
+  \item Program Assessment Committee, NYU Shanghai, Area of Social Science.
+  \item Faculty Continuous Contract Hiring Committee, NYU Shanghai, Area of Social Science.
+  \item Faculty Continuous Contract Renewal Committee, NYU Shanghai, Area of Social Science.
+  \item Developer of \href{https://gsp.yale.edu/case-studies/cambodian-genocide-program/cambodian-genocide-databases-cgdb/geographic-database-cgeo}{Cambodian Genocide Program Geographic Database}, Yale University Library.
+  \item Member of \href{https://asp.ucar.edu/postdocs/ncarucp-postdoc-committees}{Professional Development Committee}, NCAR Advanced Study Program.
+\end{itemize}
+
+% ── Media Coverage ────────────────────────────────────────
+\section{Media Coverage}
+\begin{itemize}
+  \item ``Study: Swath of Natural Habitat Larger Than the UK Will Be Urbanized By 2030.'' \textit{Texas A\&M Today}, 2020-01-30.
+  \item ``Urban Heat Islands Mean Warming Will Be Worse in Cities.'' \textit{Scientific American / E\&E News}, 2019-11-21.
+  \item ``For Some Urban Areas, Warming Climate is Only Half the Threat.'' \textit{Yale News / Science Daily}, 2019-11-14.
+  \item ``Respite from the Urban Heat Island? Study Eyes Costs of Irrigation as Remedy.'' \textit{Yale News}, 2017-07-20.
+\end{itemize}
+
+% ── Skills ────────────────────────────────────────────────
+\section{Professional Skills}
+Land Use / Cover Change Modeling; Hydrometeorological Modeling; Spatial Data Analysis; Nonlinear Optimization; Data Assimilation; Image Processing.\\
+\textbf{Software:} ArcGIS, QGIS, Google Earth Engine, ENVI, R, MATLAB, NCL, Fortran, Python.
+
+% ── Languages ─────────────────────────────────────────────
+\section{Languages}
+English (fluent); Mandarin (native); Cantonese (native).
+
+% ── Memberships ───────────────────────────────────────────
+\section{Professional Membership}
+American Geophysical Union.
+
+\end{document}

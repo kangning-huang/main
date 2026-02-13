@@ -79,6 +79,7 @@ export default async function Home() {
               { label: "Substack", href: LINKS.substack },
               { label: "X", href: LINKS.twitter },
               { label: "NYU Faculty", href: LINKS.nyuFaculty },
+              { label: "CV (PDF)", href: "/main/CV_Kangning_Huang.pdf" },
               { label: "Email", href: `mailto:${SITE.email}` },
             ].map((link) => (
               <a

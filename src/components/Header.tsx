@@ -7,12 +7,14 @@ import { LINKS } from "@/lib/constants";
 const NAV_ITEMS = [
   { label: "Publications", href: "/publications" },
   { label: "Projects", href: "/projects" },
+  { label: "Advisees", href: "/advisees" },
   { label: "Blog", href: "/blog" },
 ];
 
 const EXTERNAL_LINKS = [
   { label: "Scholar", href: LINKS.googleScholar },
   { label: "GitHub", href: LINKS.github },
+  { label: "CV", href: "/main/CV_Kangning_Huang.pdf" },
 ];
 
 export default function Header() {
