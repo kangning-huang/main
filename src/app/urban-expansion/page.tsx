@@ -50,14 +50,13 @@ export default function UrbanExpansionPage() {
         </p>
       </div>
 
-      <div className="mt-8 rounded-xl border border-rule bg-paper-warm p-8 text-center">
-        <p className="font-display text-lg text-ink">
-          The Google Earth Engine app has been retired.
-        </p>
-        <p className="mt-2 text-sm text-ink-muted">
-          The interactive GEE visualization is no longer available. You can
-          access the data and findings through the links below.
-        </p>
+      <div className="relative mt-8 overflow-hidden rounded-xl border border-rule" style={{ paddingBottom: "75%" }}>
+        <iframe
+          src="https://knhuang.users.earthengine.app/view/urban-land-expansion-2050"
+          className="absolute inset-0 h-full w-full"
+          title="Urban Land Expansion 2050 – Google Earth Engine App"
+          allowFullScreen
+        />
       </div>
 
       <div className="mt-5 flex flex-wrap gap-3">
