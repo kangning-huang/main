@@ -16,7 +16,7 @@ export default async function Home() {
     // Classics — highest-impact first-author papers
     "Projecting global urban land expansion and heat island intensification through 2050",
     "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-    "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
+    "Facilitating urban climate forecasts in rapidly urbanizing regions with land-use change modeling",
     // Prestige solo — Nature Climate Change
     "Urban forests facing climate risks",
     // Recent — current research direction
