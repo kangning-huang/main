@@ -192,7 +192,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     isLeadAuthor: true,
   },
   {
-    title: "Above and Beyond: Integrating Building Height and Protection Standards in Global Flood Risk Assessment",
+    title: "Integrating Building Height and Protection Standards in Global Urban Flood Risk Assessment",
     authors: "J Liang, I Hilaly, X Gao, C Guan, Y Li, K Huang",
     venue: "preprint",
     year: 2025,
