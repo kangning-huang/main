@@ -40,22 +40,34 @@ export default async function Home() {
   return (
     <>
       {/* ── Hero ── */}
-      <section className="relative overflow-hidden bg-ink topo-grain">
-        <div className="relative mx-auto max-w-6xl px-6 pb-16 pt-20 md:pb-24 md:pt-28 lg:px-8">
+      <section className="relative overflow-hidden">
+        {/* Background image */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/main/hero-nyu-shanghai.jpg"
+          alt=""
+          className="absolute inset-0 h-full w-full object-cover"
+        />
+        {/* Dark overlay for text legibility */}
+        <div className="absolute inset-0 bg-ink/70" />
+        {/* Subtle grain texture on top */}
+        <div className="topo-grain absolute inset-0" />
+
+        <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-24 md:pb-28 md:pt-32 lg:px-8">
           <p className="animate-fade-up text-sm font-medium uppercase tracking-[0.2em] text-ember">
             {SITE.affiliation}
           </p>
           <h1 className="animate-fade-up delay-1 mt-4 font-display text-5xl leading-[1.1] text-paper md:text-6xl lg:text-7xl">
             {SITE.name}
           </h1>
-          <p className="animate-fade-up delay-2 mt-3 font-display text-xl italic text-paper/60 md:text-2xl">
+          <p className="animate-fade-up delay-2 mt-3 font-display text-xl italic text-paper/70 md:text-2xl">
             {SITE.title}
           </p>
 
           {/* Decorative divider */}
           <div className="animate-draw-line delay-3 mt-8 h-px w-32 origin-left bg-ember" />
 
-          <p className="animate-fade-up delay-4 mt-6 max-w-xl text-[15px] leading-relaxed text-paper/50">
+          <p className="animate-fade-up delay-4 mt-6 max-w-xl text-[15px] leading-relaxed text-paper/60">
             {SITE.description}
           </p>
 
@@ -78,7 +90,7 @@ export default async function Home() {
                     ? undefined
                     : "noopener noreferrer"
                 }
-                className="rounded-full border border-paper/15 px-4 py-1.5 text-sm text-paper/60 transition-all duration-300 hover:border-ember hover:text-ember"
+                className="rounded-full border border-paper/20 bg-ink/30 px-4 py-1.5 text-sm text-paper/70 backdrop-blur-sm transition-all duration-300 hover:border-ember hover:text-ember"
               >
                 {link.label}
                 {!link.href.startsWith("mailto:") && (
@@ -89,8 +101,8 @@ export default async function Home() {
           </div>
         </div>
 
-        {/* Bottom gradient fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-paper to-transparent" />
+        {/* Bottom gradient fade into page background */}
+        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-paper to-transparent" />
       </section>
 
       {/* ── About ── */}
