@@ -44,7 +44,7 @@ export default async function Home() {
         {/* Background image */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/main/hero-nyu-shanghai.jpg"
+          src="/main/hero-nyc-skyline.jpg"
           alt=""
           className="absolute inset-0 h-full w-full object-cover"
         />
