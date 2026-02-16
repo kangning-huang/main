@@ -2,6 +2,12 @@
 
 This directory contains screenshot images of the external project websites displayed on the projects page.
 
+## Current Status
+
+⚠️ **Screenshots are currently not generated.** The `imagePath` properties in `src/lib/constants.ts` are commented out until screenshots are captured. This prevents broken image placeholders from displaying on the website.
+
+To add project screenshots, follow the instructions below to run the screenshot capture script locally.
+
 ## Capturing Screenshots
 
 To capture or update the project screenshots, run the following command from the project root:
