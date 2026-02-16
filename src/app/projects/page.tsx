@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { PROJECTS } from "@/lib/constants";
 
 export const metadata: Metadata = {
@@ -48,6 +49,17 @@ export default function ProjectsPage() {
 function CardContent({ project }: { project: (typeof PROJECTS)[number] }) {
   return (
     <>
+      {project.imagePath && (
+        <div className="relative -mx-6 -mt-6 mb-4 aspect-video overflow-hidden rounded-t-xl">
+          <Image
+            src={project.imagePath}
+            alt={`Screenshot of ${project.title}`}
+            fill
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+      )}
       <div className="flex items-start justify-between">
         <h2 className="font-display text-xl text-ink transition-colors group-hover:text-ember">
           {project.title}
