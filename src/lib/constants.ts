@@ -190,10 +190,11 @@ export const CURATED_PUBLICATIONS: Publication[] = [
   {
     title: "Unveiling the causal link between informal settlement demolition and urban cooling",
     authors: "Y Sun, X Gao, J Liang, K Huang",
-    venue: "accepted",
+    venue: "npj Environmental Social Science",
     year: 2025,
     citationCount: 0,
     isLeadAuthor: true,
+    preprint: "https://www.researchsquare.com/article/rs-7288639/v1",
   },
   {
     title: "Integrating Building Height and Protection Standards in Global Urban Flood Risk Assessment",
