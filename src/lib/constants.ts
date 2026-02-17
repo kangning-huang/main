@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
     url: "https://robotaxi-safety-tracker.com",
     tags: ["Data Visualization", "Autonomous Vehicles", "Safety Analytics"],
     featured: true,
-    // imagePath: "/projects/robotaxi-safety-tracker.jpg", // Run `npm run screenshots` to generate
+    imagePath: "/projects/robotaxi-safety-tracker.jpg",
   },
   {
     title: "Nested Scaling of City Mass",
@@ -60,7 +60,7 @@ export const PROJECTS: Project[] = [
     url: "https://kangning-huang.github.io/nested-scaling-city-mass/",
     tags: ["Urban Scaling", "Interactive Visualization", "Nature Cities"],
     featured: true,
-    // imagePath: "/projects/nested-scaling-city-mass.jpg", // Run `npm run screenshots` to generate
+    imagePath: "/projects/nested-scaling-city-mass.jpg",
   },
   {
     title: "Urban Expansion 2050",
@@ -78,7 +78,7 @@ export const PROJECTS: Project[] = [
     url: "https://kangning-huang.github.io/3D-urban-flood-risk/",
     tags: ["Flood Risk", "3D Visualization", "Interactive"],
     featured: true,
-    // imagePath: "/projects/3d-urban-flood-risk.jpg", // Run `npm run screenshots` to generate
+    imagePath: "/projects/3d-urban-flood-risk.jpg",
   },
   {
     title: "URBANMOD-ZIPF",
