@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import { LINKS } from "@/lib/constants";
-import { fetchPublications } from "@/lib/publications";
+import { fetchPublications, getScholarData } from "@/lib/publications";
 import type { Publication } from "@/lib/constants";
+import CitationChart from "@/components/CitationChart";
 
 export const metadata: Metadata = {
   title: "Publications",
   description:
-    "Full list of publications by Kangning (Ken) Huang, auto-updated from Semantic Scholar.",
+    "Full list of publications by Kangning (Ken) Huang, auto-updated from Google Scholar.",
 };
 
 export default async function PublicationsPage() {
   const publications = await fetchPublications();
+  const scholarData = getScholarData();
 
   const byYear = publications.reduce<Record<number, Publication[]>>(
     (acc, pub) => {
@@ -24,19 +26,13 @@ export default async function PublicationsPage() {
     .map(Number)
     .sort((a, b) => b - a);
 
-  const totalCitations = publications.reduce(
-    (sum, p) => sum + p.citationCount,
-    0
-  );
-
   return (
     <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h1 className="font-display text-4xl text-ink">Publications</h1>
           <p className="mt-2 text-ink-muted">
-            {publications.length} publications &middot; {totalCitations}{" "}
-            total citations
+            {publications.length} publications
           </p>
         </div>
         <a
@@ -49,19 +45,15 @@ export default async function PublicationsPage() {
         </a>
       </div>
 
-      <p className="mt-4 text-sm text-ink-faint">
-        Publication data is automatically fetched from Semantic Scholar. For the
-        most complete and up-to-date list, please visit{" "}
-        <a
-          href={LINKS.googleScholar}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-ember hover:underline"
-        >
-          Google Scholar
-        </a>
-        .
-      </p>
+      {/* Citation metrics chart */}
+      <div className="mt-8">
+        <CitationChart
+          citedByYears={scholarData.citedByYears}
+          totalCitations={scholarData.totalCitations}
+          hIndex={scholarData.hIndex}
+          i10Index={scholarData.i10Index}
+        />
+      </div>
 
       <div className="mt-10 space-y-10">
         {years.map((year) => (

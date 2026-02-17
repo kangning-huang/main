@@ -1,55 +1,62 @@
 import { Publication, CURATED_PUBLICATIONS } from "./constants";
+import scholarData from "@/data/scholar-citations.json";
+
+// Types for Google Scholar data
+interface ScholarPublication {
+  title: string;
+  citationCount: number;
+  year?: number;
+}
+
+interface ScholarData {
+  totalCitations: number;
+  hIndex: number;
+  i10Index: number;
+  citedByYears: Record<string, number>;
+  publications: ScholarPublication[];
+  lastUpdated: string;
+}
 
 /**
- * Return the curated publication list (sourced from Google Scholar),
- * enriched with live citation counts from OpenAlex where DOIs are available.
- * Falls back to the static counts in constants.ts if the API is unreachable.
+ * Normalize a title for fuzzy matching
+ */
+function normalizeTitle(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^\w\s]/g, "") // Remove punctuation
+    .replace(/\s+/g, " ") // Normalize whitespace
+    .trim()
+    .slice(0, 60); // Use first 60 chars for matching
+}
+
+/**
+ * Get Google Scholar citation data
+ */
+export function getScholarData(): ScholarData {
+  return scholarData as ScholarData;
+}
+
+/**
+ * Return the curated publication list enriched with Google Scholar citation counts.
+ * Uses pre-fetched data from scholar-citations.json (updated weekly by GitHub Actions).
  */
 export async function fetchPublications(): Promise<Publication[]> {
   const pubs = structuredClone(CURATED_PUBLICATIONS);
+  const data = getScholarData();
 
-  // Collect DOIs that we can look up
-  const doisToLookup = pubs
-    .filter((p) => p.doi)
-    .map((p) => p.doi!);
+  // Build a map of normalized titles to citation counts from Google Scholar
+  const citationMap = new Map<string, number>();
+  for (const pub of data.publications) {
+    citationMap.set(normalizeTitle(pub.title), pub.citationCount);
+  }
 
-  if (doisToLookup.length === 0) return pubs;
-
-  try {
-    // OpenAlex supports batch DOI lookup via pipe-separated filter
-    // We'll batch in groups of 25 to stay within URL length limits
-    const citationMap = new Map<string, number>();
-
-    for (let i = 0; i < doisToLookup.length; i += 25) {
-      const batch = doisToLookup.slice(i, i + 25);
-      const doiFilter = batch.map((d) => `https://doi.org/${d}`).join("|");
-      const res = await fetch(
-        `https://api.openalex.org/works?filter=doi:${encodeURIComponent(doiFilter)}&select=doi,cited_by_count&per_page=50&mailto=kangning.huang@nyu.edu`,
-        { cache: "force-cache" }
-      );
-      if (!res.ok) continue;
-      const data = await res.json();
-      for (const work of data.results || []) {
-        if (work.doi && work.cited_by_count != null) {
-          const normalizedDoi = work.doi
-            .replace("https://doi.org/", "")
-            .toLowerCase();
-          citationMap.set(normalizedDoi, work.cited_by_count);
-        }
-      }
+  // Update citation counts for matching publications
+  for (const pub of pubs) {
+    const normalizedTitle = normalizeTitle(pub.title);
+    const count = citationMap.get(normalizedTitle);
+    if (count != null) {
+      pub.citationCount = count;
     }
-
-    // Update citation counts for matching DOIs
-    for (const pub of pubs) {
-      if (pub.doi) {
-        const count = citationMap.get(pub.doi.toLowerCase());
-        if (count != null) {
-          pub.citationCount = count;
-        }
-      }
-    }
-  } catch {
-    // OpenAlex unavailable; keep fallback counts
   }
 
   return pubs;
