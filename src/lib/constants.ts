@@ -188,9 +188,9 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     isLeadAuthor: true,
   },
   {
-    title: "Unveiling Causality: Does Demolishing Informal Settlements Cause Urban Surface Cooling?",
+    title: "Unveiling the causal link between informal settlement demolition and urban cooling",
     authors: "Y Sun, X Gao, J Liang, K Huang",
-    venue: "preprint",
+    venue: "accepted",
     year: 2025,
     citationCount: 0,
     isLeadAuthor: true,

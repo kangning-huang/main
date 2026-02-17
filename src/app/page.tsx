@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import {
   SITE,
@@ -42,11 +43,12 @@ export default async function Home() {
       {/* ── Hero ── */}
       <section className="relative overflow-hidden">
         {/* Background image */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/main/hero-nyc-skyline.jpg"
+        <Image
+          src="/hero-nyc-skyline.jpg"
           alt=""
-          className="absolute inset-0 h-full w-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
         {/* Dark overlay for text legibility */}
         <div className="absolute inset-0 bg-ink/70" />
