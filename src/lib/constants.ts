@@ -81,6 +81,15 @@ export const PROJECTS: Project[] = [
     // imagePath: "/projects/3d-urban-flood-risk.jpg", // Run `npm run screenshots` to generate
   },
   {
+    title: "Urban Renewal Cooling DID",
+    description:
+      "Interactive visualization of key results from the paper on the causal link between informal settlement demolition and urban cooling. Uses a difference-in-differences approach to unveil cooling effects of urban renewal.",
+    url: "https://kangning-huang.github.io/urban-renewal-cooling-DID/",
+    tags: ["Urban Cooling", "Causal Inference", "Interactive Visualization"],
+    featured: true,
+    // imagePath: "/projects/urban-renewal-cooling-did.jpg", // Run `npm run screenshots` to generate
+  },
+  {
     title: "URBANMOD-ZIPF",
     description:
       "A global-scale urban land expansion model that preserves Zipf's Law of urban sizes. Open-source tool for simulating realistic patterns of urban growth across different scenarios.",
@@ -195,6 +204,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 0,
     isLeadAuthor: true,
     preprint: "https://www.researchsquare.com/article/rs-7288639/v1",
+    webUrl: "https://kangning-huang.github.io/urban-renewal-cooling-DID/",
   },
   {
     title: "Integrating Building Height and Protection Standards in Global Urban Flood Risk Assessment",
