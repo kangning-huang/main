@@ -23,6 +23,7 @@ export default async function Home() {
     "Declining urban density attenuates rising population exposure to surface heat extremes",
     "Nested economies of scale in global city mass",
     "Planning for rhythmized urban parks: Temporal park classification and modes of action",
+    "Unveiling the causal link between informal settlement demolition and urban cooling",
   ];
   const titleSet = new Set(selectedTitles.map((t) => t.toLowerCase()));
   const featuredPubs = allPublications
