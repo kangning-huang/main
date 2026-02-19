@@ -382,6 +382,15 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     isLeadAuthor: false,
   },
   {
+    title: "Exacerbated heat stress induced by urban browning in the Global South",
+    authors: "H Du, W Zhan, B Zhou, ... K Huang, ... M Li",
+    venue: "Nature Cities",
+    year: 2025,
+    citationCount: 0,
+    doi: "10.1038/s44284-024-00184-9",
+    isLeadAuthor: false,
+  },
+  {
     title: "Multi-sensor image registration by combining local self-similarity matching and mutual information",
     authors: "X Liu, S Chen, L Zhuo, J Li, K Huang",
     venue: "Frontiers of Earth Science",
