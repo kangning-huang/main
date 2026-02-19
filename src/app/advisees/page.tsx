@@ -17,6 +17,14 @@ interface Advisee {
 
 const ADVISEES: Advisee[] = [
   {
+    name: "John Nabors",
+    classYear: 2024,
+    project:
+      "Capstone replicating and extending the \"Nested economies of scale in global city mass\" analysis across four Chinese mega-cities.",
+    achievements: [],
+    linkedin: "https://www.linkedin.com/in/john-nabors",
+  },
+  {
     name: "Zijie Huanglin",
     classYear: 2023,
     project:
@@ -25,6 +33,14 @@ const ADVISEES: Advisee[] = [
       "Admitted to Erasmus Mundus International Master in Urban Studies (University of Glasgow, Universitat Autònoma de Barcelona, Kyoto University)",
     ],
     linkedin: "https://www.linkedin.com/in/jacky-hwang/",
+  },
+  {
+    name: "Connie Hu",
+    classYear: 2025,
+    project:
+      "Capstone extending urban scaling analysis with machine learning to identify factors explaining deviations from urban scaling patterns.",
+    achievements: [],
+    linkedin: "https://www.linkedin.com/in/conniehu25",
   },
   {
     name: "Ziyun Xu",
