@@ -1,10 +1,18 @@
 #!/usr/bin/env node
 /**
- * Fetch citation data from Google Scholar and save to JSON.
- * Uses direct HTTP requests and cheerio for parsing.
+ * Fetch citation data from Google Scholar using Playwright.
+ * Uses a real headless browser to avoid bot detection that blocks
+ * plain HTTP requests.
+ *
+ * Prerequisites (local):
+ *   npm install -D playwright
+ *   npx playwright install chromium
+ *
+ * Output: src/data/scholar-citations.json
  */
 
-import { writeFileSync, mkdirSync, existsSync } from 'fs';
+import { chromium } from 'playwright';
+import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -12,158 +20,139 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Google Scholar author ID
 const AUTHOR_ID = 's_domssAAAAJ';
-const USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
-
-async function fetchWithRetry(url, retries = 3) {
-  for (let i = 0; i < retries; i++) {
-    try {
-      const response = await fetch(url, {
-        headers: {
-          'User-Agent': USER_AGENT,
-          'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-          'Accept-Language': 'en-US,en;q=0.5',
-        }
-      });
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
-      }
-      return await response.text();
-    } catch (error) {
-      console.error(`Attempt ${i + 1} failed:`, error.message);
-      if (i < retries - 1) {
-        await new Promise(r => setTimeout(r, 2000 * (i + 1)));
-      }
-    }
-  }
-  throw new Error('All retries failed');
-}
 
 function parseNumber(str) {
   if (!str) return 0;
-  return parseInt(str.replace(/,/g, ''), 10) || 0;
+  return parseInt(str.replace(/[^0-9]/g, ''), 10) || 0;
 }
 
-async function fetchScholarData() {
-  console.log(`Fetching data for author ID: ${AUTHOR_ID}`);
-
-  // Fetch the main profile page
-  const profileUrl = `https://scholar.google.com/citations?user=${AUTHOR_ID}&hl=en`;
-  const html = await fetchWithRetry(profileUrl);
-
-  // Parse with regex (simpler than importing cheerio for this)
-  const citationData = {
-    totalCitations: 0,
-    hIndex: 0,
-    i10Index: 0,
-    citedByYears: {},
-    publications: [],
-    lastUpdated: new Date().toISOString(),
-  };
-
-  // Extract citation metrics from the table
-  // The indices table typically contains: Citations, h-index, i10-index
-  const indicesMatch = html.match(/<td class="gsc_rsb_std">(\d[\d,]*)<\/td>/g);
-  if (indicesMatch && indicesMatch.length >= 3) {
-    citationData.totalCitations = parseNumber(indicesMatch[0].match(/>([\d,]+)</)?.[1]);
-    citationData.hIndex = parseNumber(indicesMatch[2].match(/>([\d,]+)</)?.[1]);
-    citationData.i10Index = parseNumber(indicesMatch[4].match(/>([\d,]+)</)?.[1]);
-  }
-
-  // Extract yearly citation data from the chart
-  // The chart data is in the gsc_g_al (year) and gsc_g_a (count) classes
-  const yearMatches = html.match(/<span class="gsc_g_t"[^>]*>(\d{4})<\/span>/g) || [];
-  const countMatches = html.match(/<span class="gsc_g_al">(\d+)<\/span>/g) || [];
-
-  const years = yearMatches.map(m => m.match(/>(\d{4})</)?.[1]);
-  const counts = countMatches.map(m => parseNumber(m.match(/>(\d+)</)?.[1]));
-
-  // Map years to counts
-  for (let i = 0; i < years.length && i < counts.length; i++) {
-    if (years[i]) {
-      citationData.citedByYears[years[i]] = counts[i];
-    }
-  }
-
-  // Extract publication data (title, citations)
-  const pubMatches = html.matchAll(/<tr class="gsc_a_tr"[^>]*>[\s\S]*?<a[^>]*class="gsc_a_at"[^>]*>([^<]+)<\/a>[\s\S]*?<td class="gsc_a_c"[^>]*>[\s\S]*?(?:<a[^>]*>)?(\d*)</g);
-
-  for (const match of pubMatches) {
-    const title = match[1]?.trim();
-    const citations = parseNumber(match[2]);
-    if (title) {
-      citationData.publications.push({ title, citationCount: citations });
-    }
-  }
-
-  return citationData;
+/** Random delay to appear more human-like. */
+function delay(baseMs) {
+  return new Promise(r => setTimeout(r, baseMs + Math.random() * 1000));
 }
 
-async function fetchAllPublications() {
-  console.log('Fetching all publications with pagination...');
-
-  const allPubs = [];
-  let start = 0;
-  const pageSize = 100;
-
-  while (true) {
-    const url = `https://scholar.google.com/citations?user=${AUTHOR_ID}&hl=en&cstart=${start}&pagesize=${pageSize}`;
-    console.log(`Fetching publications from ${start}...`);
-
-    try {
-      const html = await fetchWithRetry(url);
-
-      // Extract publication rows
-      const pubRegex = /<tr class="gsc_a_tr"[^>]*>[\s\S]*?<a[^>]*class="gsc_a_at"[^>]*>([^<]+)<\/a>[\s\S]*?<td class="gsc_a_c"[^>]*>[\s\S]*?(?:<a[^>]*>)?(\d*)[\s\S]*?<td class="gsc_a_y"[^>]*>[\s\S]*?<span[^>]*>(\d*)<\/span>/g;
-
-      let found = 0;
-      for (const match of html.matchAll(pubRegex)) {
-        const title = match[1]?.trim().replace(/&#(\d+);/g, (_, code) => String.fromCharCode(code));
-        const citations = parseNumber(match[2]);
-        const year = parseNumber(match[3]);
-        if (title) {
-          allPubs.push({ title, citationCount: citations, year });
-          found++;
-        }
-      }
-
-      console.log(`Found ${found} publications on this page`);
-
-      // Check if there are more pages
-      if (found < pageSize || !html.includes('gsc_pgn_pnx')) {
-        break;
-      }
-
-      start += pageSize;
-      // Be polite to Google
-      await new Promise(r => setTimeout(r, 1500));
-    } catch (error) {
-      console.error('Failed to fetch page:', error.message);
-      break;
-    }
-  }
-
-  return allPubs;
-}
-
+// ── Main ────────────────────────────────────────────────────
 async function main() {
-  try {
-    // Fetch basic data
-    const citationData = await fetchScholarData();
+  console.log(`Fetching Google Scholar data for author: ${AUTHOR_ID}`);
 
-    // Fetch all publications with pagination
-    const allPubs = await fetchAllPublications();
-    if (allPubs.length > 0) {
-      citationData.publications = allPubs;
+  const browser = await chromium.launch({ headless: true });
+  const context = await browser.newContext({
+    viewport: { width: 1920, height: 1080 },
+    locale: 'en-US',
+  });
+  const page = await context.newPage();
+
+  try {
+    const citationData = {
+      totalCitations: 0,
+      hIndex: 0,
+      i10Index: 0,
+      citedByYears: {},
+      publications: [],
+      lastUpdated: new Date().toISOString(),
+    };
+
+    // ── 1. Main profile page (metrics + chart) ──────────────
+    const profileUrl = `https://scholar.google.com/citations?user=${AUTHOR_ID}&hl=en`;
+    console.log(`Navigating to profile: ${profileUrl}`);
+    await page.goto(profileUrl, { waitUntil: 'networkidle', timeout: 30000 });
+    await delay(2000);
+
+    // Detect CAPTCHA / blocking
+    const html = await page.content();
+    if (html.includes('unusual traffic') || html.includes('CAPTCHA')) {
+      throw new Error('Google Scholar is blocking access (CAPTCHA detected)');
     }
 
-    // Print summary
-    console.log(`\nTotal citations: ${citationData.totalCitations}`);
+    // ── 2. Citation metrics table ───────────────────────────
+    // The table has rows: Citations | h-index | i10-index
+    // Each row has two <td class="gsc_rsb_std">: "All" and "Since ..."
+    const metricsValues = await page.$$eval(
+      'td.gsc_rsb_std',
+      cells => cells.map(c => c.textContent?.trim() || '0')
+    );
+
+    if (metricsValues.length >= 6) {
+      citationData.totalCitations = parseNumber(metricsValues[0]);
+      citationData.hIndex = parseNumber(metricsValues[2]);
+      citationData.i10Index = parseNumber(metricsValues[4]);
+    }
+
+    // ── 3. Yearly citation chart ────────────────────────────
+    // Each bar is an <a class="gsc_g_a"> with a child <span class="gsc_g_al">
+    // The year is encoded in the bar's href as "as_yhi=YYYY"
+    const yearCounts = await page.$$eval('a.gsc_g_a', bars =>
+      bars.map(bar => ({
+        year: bar.getAttribute('href')?.match(/as_yhi=(\d+)/)?.[1] || '',
+        count: bar.querySelector('span.gsc_g_al')?.textContent?.trim() || '0',
+      }))
+    );
+
+    for (const { year, count } of yearCounts) {
+      if (year) {
+        citationData.citedByYears[year] = parseNumber(count);
+      }
+    }
+
+    console.log(`Total citations: ${citationData.totalCitations}`);
     console.log(`h-index: ${citationData.hIndex}`);
     console.log(`i10-index: ${citationData.i10Index}`);
-    console.log(`Publications found: ${citationData.publications.length}`);
-    console.log(`Years with citation data: ${Object.keys(citationData.citedByYears).sort().join(', ')}`);
 
-    // Save to JSON file
+    // ── 4. Publications (paginated) ─────────────────────────
+    console.log('\nFetching publications...');
+    const allPubs = [];
+    let start = 0;
+    const pageSize = 100;
+
+    while (true) {
+      const pubUrl =
+        `https://scholar.google.com/citations?user=${AUTHOR_ID}&hl=en` +
+        `&cstart=${start}&pagesize=${pageSize}&sortby=pubdate`;
+      console.log(`  Fetching page from offset ${start}...`);
+
+      await page.goto(pubUrl, { waitUntil: 'networkidle', timeout: 30000 });
+      await delay(1500);
+
+      const pubs = await page.$$eval('tr.gsc_a_tr', rows =>
+        rows
+          .map(row => {
+            const titleEl = row.querySelector('a.gsc_a_at');
+            const citEl = row.querySelector('td.gsc_a_c');
+            const yearEl = row.querySelector('td.gsc_a_y span');
+            return {
+              title: titleEl?.textContent?.trim() || '',
+              citationCount:
+                parseInt(
+                  (citEl?.textContent?.trim() || '0').replace(/[^0-9]/g, ''),
+                  10
+                ) || 0,
+              year:
+                parseInt(yearEl?.textContent?.trim() || '0', 10) || 0,
+            };
+          })
+          .filter(p => p.title)
+      );
+
+      console.log(`  Found ${pubs.length} publications`);
+      allPubs.push(...pubs);
+
+      if (pubs.length < pageSize) break;
+
+      // Check for a "next" button that is still enabled
+      const hasNext = await page.$('button#gsc_bpf_more:not([disabled])');
+      if (!hasNext) break;
+
+      start += pageSize;
+      await delay(2000);
+    }
+
+    citationData.publications = allPubs;
+    console.log(`\nTotal publications found: ${allPubs.length}`);
+    console.log(
+      `Years with citation data: ${Object.keys(citationData.citedByYears).sort().join(', ')}`
+    );
+
+    // ── 5. Save JSON ────────────────────────────────────────
     const outputDir = join(__dirname, '..', 'src', 'data');
     if (!existsSync(outputDir)) {
       mkdirSync(outputDir, { recursive: true });
@@ -173,11 +162,104 @@ async function main() {
     writeFileSync(outputPath, JSON.stringify(citationData, null, 2));
     console.log(`\nSaved citation data to: ${outputPath}`);
 
+    // ── 6. Missing-publication check ────────────────────────
+    checkMissingPublications(allPubs);
+
     return citationData;
-  } catch (error) {
-    console.error('Error fetching scholar data:', error);
-    process.exit(1);
+  } finally {
+    await browser.close();
   }
 }
 
-main();
+// ── Missing-publication checker ─────────────────────────────
+function normalizeTitle(title) {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9\s]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/** Jaccard-like word-overlap similarity for fuzzy title matching. */
+function titlesSimilar(a, b) {
+  // Prefix match (handles truncated titles)
+  const shorter = a.length < b.length ? a : b;
+  const longer = a.length >= b.length ? a : b;
+  if (longer.startsWith(shorter.substring(0, Math.min(shorter.length, 50)))) {
+    return true;
+  }
+
+  // Word-overlap
+  const aWords = new Set(a.split(' ').filter(w => w.length > 3));
+  const bWords = new Set(b.split(' ').filter(w => w.length > 3));
+  const intersection = [...aWords].filter(w => bWords.has(w));
+  const union = new Set([...aWords, ...bWords]);
+  return union.size > 0 && intersection.length / union.size > 0.7;
+}
+
+function checkMissingPublications(scholarPubs) {
+  console.log('\n── Checking for missing publications ──');
+
+  const constantsPath = join(__dirname, '..', 'src', 'lib', 'constants.ts');
+  if (!existsSync(constantsPath)) {
+    console.log('Could not find constants.ts, skipping check.');
+    return;
+  }
+
+  const source = readFileSync(constantsPath, 'utf-8');
+
+  // Collect all titles from CURATED_PUBLICATIONS
+  const titleRegex = /title:\s*"([^"]+)"/g;
+  const curatedTitles = new Set();
+  let m;
+  while ((m = titleRegex.exec(source)) !== null) {
+    curatedTitles.add(normalizeTitle(m[1]));
+  }
+
+  const missing = [];
+  for (const pub of scholarPubs) {
+    const norm = normalizeTitle(pub.title);
+
+    // Exact match
+    if (curatedTitles.has(norm)) continue;
+
+    // Fuzzy match
+    let fuzzy = false;
+    for (const curated of curatedTitles) {
+      if (titlesSimilar(norm, curated)) {
+        fuzzy = true;
+        break;
+      }
+    }
+    if (fuzzy) continue;
+
+    missing.push(pub);
+  }
+
+  if (missing.length === 0) {
+    console.log(
+      'All Google Scholar publications are accounted for in the website.'
+    );
+  } else {
+    console.log(
+      `\nFound ${missing.length} publication(s) on Google Scholar but NOT on the website:`
+    );
+    for (const pub of missing) {
+      const tag = /poster|abstract/i.test(pub.title)
+        ? ' [likely conference material]'
+        : '';
+      console.log(
+        `  - [${pub.year}] "${pub.title}" (${pub.citationCount} citations)${tag}`
+      );
+    }
+    console.log(
+      '\nReview the list above. Journal articles should be added to'
+    );
+    console.log('CURATED_PUBLICATIONS in src/lib/constants.ts.');
+  }
+}
+
+main().catch(error => {
+  console.error('Error fetching scholar data:', error);
+  process.exit(1);
+});
