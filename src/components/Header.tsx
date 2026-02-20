@@ -3,22 +3,25 @@
 import Link from "next/link";
 import { useState } from "react";
 import { LINKS } from "@/lib/constants";
+import { useLanguage } from "@/lib/language-context";
+import LanguageToggle from "./LanguageToggle";
 
 const NAV_ITEMS = [
-  { label: "Publications", href: "/publications" },
-  { label: "Projects", href: "/projects" },
-  { label: "Advisees", href: "/advisees" },
-  { label: "Blog", href: "/blog" },
+  { en: "Publications", zh: "学术论文", href: "/publications" },
+  { en: "Projects", zh: "研究项目", href: "/projects" },
+  { en: "Advisees", zh: "指导学生", href: "/advisees" },
+  { en: "Blog", zh: "博客", href: "/blog" },
 ];
 
 const EXTERNAL_LINKS = [
-  { label: "Scholar", href: LINKS.googleScholar },
-  { label: "GitHub", href: LINKS.github },
-  { label: "CV", href: "/main/CV_Kangning_Huang.pdf" },
+  { en: "Scholar", zh: "谷歌学术", href: LINKS.googleScholar },
+  { en: "GitHub", zh: "GitHub", href: LINKS.github },
+  { en: "CV", zh: "简历", href: "/main/CV_Kangning_Huang.pdf" },
 ];
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { language } = useLanguage();
 
   return (
     <header className="sticky top-0 z-50 bg-paper/90 backdrop-blur-md border-b border-rule-faint">
@@ -27,7 +30,7 @@ export default function Header() {
           href="/"
           className="font-display text-xl tracking-tight text-ink hover:text-ember transition-colors duration-300"
         >
-          K. Huang
+          {language === "zh" ? "黄康宁" : "K. Huang"}
         </Link>
 
         {/* Desktop nav */}
@@ -38,7 +41,7 @@ export default function Header() {
               href={item.href}
               className="link-underline px-3 py-1.5 text-sm font-medium text-ink-muted hover:text-ink transition-colors"
             >
-              {item.label}
+              {language === "zh" ? item.zh : item.en}
             </Link>
           ))}
           <span className="mx-2 h-4 w-px bg-rule" />
@@ -50,28 +53,33 @@ export default function Header() {
               rel="noopener noreferrer"
               className="link-underline px-3 py-1.5 text-sm font-medium text-ink-faint hover:text-ink transition-colors"
             >
-              {item.label}
+              {language === "zh" ? item.zh : item.en}
               <span className="ml-1 text-[10px] opacity-50">&#8599;</span>
             </a>
           ))}
+          <span className="mx-1 h-4 w-px bg-rule" />
+          <LanguageToggle />
         </nav>
 
         {/* Mobile menu button */}
-        <button
-          className="relative flex h-8 w-8 flex-col items-center justify-center gap-[5px] md:hidden"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Toggle menu"
-        >
-          <span
-            className={`h-[1.5px] w-5 bg-ink transition-all duration-300 ${menuOpen ? "translate-y-[6.5px] rotate-45" : ""}`}
-          />
-          <span
-            className={`h-[1.5px] w-5 bg-ink transition-all duration-300 ${menuOpen ? "opacity-0 scale-x-0" : ""}`}
-          />
-          <span
-            className={`h-[1.5px] w-5 bg-ink transition-all duration-300 ${menuOpen ? "-translate-y-[6.5px] -rotate-45" : ""}`}
-          />
-        </button>
+        <div className="flex items-center gap-3 md:hidden">
+          <LanguageToggle />
+          <button
+            className="relative flex h-8 w-8 flex-col items-center justify-center gap-[5px]"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Toggle menu"
+          >
+            <span
+              className={`h-[1.5px] w-5 bg-ink transition-all duration-300 ${menuOpen ? "translate-y-[6.5px] rotate-45" : ""}`}
+            />
+            <span
+              className={`h-[1.5px] w-5 bg-ink transition-all duration-300 ${menuOpen ? "opacity-0 scale-x-0" : ""}`}
+            />
+            <span
+              className={`h-[1.5px] w-5 bg-ink transition-all duration-300 ${menuOpen ? "-translate-y-[6.5px] -rotate-45" : ""}`}
+            />
+          </button>
+        </div>
       </div>
 
       {/* Mobile menu */}
@@ -89,7 +97,7 @@ export default function Header() {
                 className="rounded-lg px-3 py-2.5 text-sm font-medium text-ink-muted hover:bg-paper-warm hover:text-ink transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
-                {item.label}
+                {language === "zh" ? item.zh : item.en}
               </Link>
             ))}
             <div className="my-2 h-px bg-rule-faint" />
@@ -101,7 +109,7 @@ export default function Header() {
                 rel="noopener noreferrer"
                 className="rounded-lg px-3 py-2.5 text-sm font-medium text-ink-faint hover:bg-paper-warm hover:text-ink transition-colors"
               >
-                {item.label}
+                {language === "zh" ? item.zh : item.en}
                 <span className="ml-1 text-[10px]">&#8599;</span>
               </a>
             ))}

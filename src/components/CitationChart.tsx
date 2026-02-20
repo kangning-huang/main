@@ -1,5 +1,7 @@
 "use client";
 
+import { useLanguage } from "@/lib/language-context";
+
 interface CitationChartProps {
   citedByYears: Record<string, number>;
   totalCitations: number;
@@ -13,6 +15,8 @@ export default function CitationChart({
   hIndex,
   i10Index,
 }: CitationChartProps) {
+  const { language } = useLanguage();
+
   // Sort years and get the data
   const years = Object.keys(citedByYears)
     .map(Number)
@@ -28,7 +32,9 @@ export default function CitationChart({
           <div className="text-2xl font-semibold text-ink tabular-nums">
             {totalCitations.toLocaleString()}
           </div>
-          <div className="text-xs text-ink-muted">Citations</div>
+          <div className="text-xs text-ink-muted">
+            {language === "zh" ? "引用" : "Citations"}
+          </div>
         </div>
         <div className="h-8 w-px bg-rule" />
         <div>
@@ -62,7 +68,7 @@ export default function CitationChart({
               >
                 {/* Tooltip */}
                 <div className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 rounded bg-ink px-2 py-1 text-xs text-paper opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap z-10">
-                  {count.toLocaleString()} citations
+                  {count.toLocaleString()} {language === "zh" ? "次引用" : "citations"}
                 </div>
 
                 {/* Bar */}
@@ -99,7 +105,9 @@ export default function CitationChart({
 
       {/* Source attribution */}
       <div className="mt-4 text-[11px] text-ink-faint">
-        Data from Google Scholar, updated automatically
+        {language === "zh"
+          ? "数据来自谷歌学术，自动更新"
+          : "Data from Google Scholar, updated automatically"}
       </div>
     </div>
   );

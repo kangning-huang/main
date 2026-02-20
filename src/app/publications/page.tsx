@@ -5,6 +5,7 @@ import type { Publication } from "@/lib/constants";
 import CitationChart from "@/components/CitationChart";
 import Script from "next/script";
 import { canonicalUrl, webPageSchema } from "@/lib/seo";
+import T from "@/components/T";
 
 export const metadata: Metadata = {
   title: "Publications",
@@ -53,9 +54,14 @@ export default async function PublicationsPage() {
       <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="font-display text-4xl text-ink">Publications</h1>
+          <h1 className="font-display text-4xl text-ink">
+            <T en="Publications" zh="学术论文" />
+          </h1>
           <p className="mt-2 text-ink-muted">
-            {publications.length} publications
+            <T
+              en={`${publications.length} publications`}
+              zh={`${publications.length} 篇论文`}
+            />
           </p>
         </div>
         <a
@@ -64,7 +70,7 @@ export default async function PublicationsPage() {
           rel="noopener noreferrer"
           className="inline-flex items-center rounded-full border border-rule px-4 py-2 text-sm font-medium text-ink-muted transition-all hover:border-ember hover:text-ember"
         >
-          View on Google Scholar &#8599;
+          <T en="View on Google Scholar" zh="在谷歌学术上查看" /> &#8599;
         </a>
       </div>
 
@@ -124,7 +130,7 @@ export default async function PublicationsPage() {
                     )}
                     {pub.citationCount > 0 && (
                       <span className="rounded-full bg-paper-deep px-2.5 py-0.5 text-xs text-ink-muted">
-                        {pub.citationCount} citations
+                        {pub.citationCount} <T en="citations" zh="引用" />
                       </span>
                     )}
                     {pub.doi && (
@@ -144,7 +150,7 @@ export default async function PublicationsPage() {
                         rel="noopener noreferrer"
                         className="link-underline text-xs text-ink-faint hover:text-ember"
                       >
-                        Preprint &#8599;
+                        <T en="Preprint" zh="预印本" /> &#8599;
                       </a>
                     )}
                     {pub.webUrl && (
@@ -154,7 +160,7 @@ export default async function PublicationsPage() {
                         rel={pub.webUrl.startsWith("/") ? undefined : "noopener noreferrer"}
                         className="link-underline text-xs text-ink-faint hover:text-ember"
                       >
-                        Web App &#8599;
+                        <T en="Web App" zh="网页应用" /> &#8599;
                       </a>
                     )}
                   </div>

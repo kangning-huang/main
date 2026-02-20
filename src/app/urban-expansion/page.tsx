@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { canonicalUrl, webPageSchema } from "@/lib/seo";
+import T from "@/components/T";
 
 export const metadata: Metadata = {
   title: "Urban Expansion 2050",
@@ -34,22 +35,37 @@ export default function UrbanExpansionPage() {
       />
       <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
         <h1 className="font-display text-4xl text-ink">
-          Urban Expansion 2050
+          <T en="Urban Expansion 2050" zh="2050年全球城市扩张" />
         </h1>
         <p className="mt-2 text-ink-muted">
-          Global urban land expansion projections
+          <T
+            en="Global urban land expansion projections"
+            zh="全球城市用地扩张预测"
+          />
         </p>
 
       <div className="mt-6 max-w-3xl space-y-4 text-[15px] leading-[1.75] text-ink-muted">
+        <T
+          en={
+            <p>
+              This project visualizes projected global urban land expansion through
+              2050. Urban populations are expected to increase by 2&ndash;3 billion
+              by mid-century, requiring massive expansion of built-up areas.
+              Understanding where and how this growth will occur is critical for
+              planning climate adaptation strategies.
+            </p>
+          }
+          zh={
+            <p>
+              本项目可视化展示到2050年的全球城市用地扩张预测。预计到本世纪中叶，城市人口将增加20至30亿，需要大规模扩展建成区。了解这种增长将在何处、以何种方式发生，对于规划气候适应策略至关重要。
+            </p>
+          }
+        />
         <p>
-          This project visualizes projected global urban land expansion through
-          2050. Urban populations are expected to increase by 2&ndash;3 billion
-          by mid-century, requiring massive expansion of built-up areas.
-          Understanding where and how this growth will occur is critical for
-          planning climate adaptation strategies.
-        </p>
-        <p>
-          The projections are based on the research published in:
+          <T
+            en="The projections are based on the research published in:"
+            zh="预测基于以下研究成果："
+          />
         </p>
         <blockquote className="border-l-2 border-ember pl-4 italic text-ink-muted">
           Kangning Huang, Xia Li, Xiaoping Liu, Karen C. Seto (2019).
@@ -60,18 +76,36 @@ export default function UrbanExpansionPage() {
           </span>
           , 14(11): 114037.
         </blockquote>
-        <p>
-          The underlying data is available as an open database on{" "}
-          <a
-            href="https://resourcewatch.org"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-ember hover:underline"
-          >
-            WRI Resource Watch
-          </a>
-          .
-        </p>
+        <T
+          en={
+            <p>
+              The underlying data is available as an open database on{" "}
+              <a
+                href="https://resourcewatch.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ember hover:underline"
+              >
+                WRI Resource Watch
+              </a>
+              .
+            </p>
+          }
+          zh={
+            <p>
+              基础数据可在{" "}
+              <a
+                href="https://resourcewatch.org"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-ember hover:underline"
+              >
+                WRI Resource Watch
+              </a>
+              {" "}上作为开放数据库获取。
+            </p>
+          }
+        />
       </div>
 
       <div className="relative mt-8 overflow-hidden rounded-xl border border-rule" style={{ paddingBottom: "75%" }}>
@@ -90,7 +124,7 @@ export default function UrbanExpansionPage() {
           rel="noopener noreferrer"
           className="inline-flex items-center rounded-full bg-ember px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ember-dark"
         >
-          Read the paper &#8599;
+          <T en="Read the paper" zh="阅读论文" /> &#8599;
         </a>
         <a
           href="https://resourcewatch.org"
@@ -98,7 +132,7 @@ export default function UrbanExpansionPage() {
           rel="noopener noreferrer"
           className="inline-flex items-center rounded-full border border-rule px-5 py-2.5 text-sm font-medium text-ink-muted transition-all hover:border-ember hover:text-ember"
         >
-          Data on Resource Watch &#8599;
+          <T en="Data on Resource Watch" zh="Resource Watch 数据" /> &#8599;
         </a>
       </div>
       </div>
