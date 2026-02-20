@@ -162,13 +162,54 @@ async function main() {
     writeFileSync(outputPath, JSON.stringify(citationData, null, 2));
     console.log(`\nSaved citation data to: ${outputPath}`);
 
-    // ── 6. Missing-publication check ────────────────────────
+    // ── 6. Update CV citation metrics ───────────────────────
+    updateCvCitations(citationData);
+
+    // ── 7. Missing-publication check ────────────────────────
     checkMissingPublications(allPubs);
 
     return citationData;
   } finally {
     await browser.close();
   }
+}
+
+// ── CV citation updater ─────────────────────────────────────
+function formatNumber(n) {
+  return n.toLocaleString('en-US');
+}
+
+function updateCvCitations(citationData) {
+  console.log('\n── Updating CV citation metrics ──');
+
+  const cvPath = join(__dirname, '..', 'cv', 'CV_Kangning_Huang.tex');
+  if (!existsSync(cvPath)) {
+    console.log('Could not find CV_Kangning_Huang.tex, skipping CV update.');
+    return;
+  }
+
+  let tex = readFileSync(cvPath, 'utf-8');
+
+  // Match the line: {\small(\href{...}{Google Scholar} citations: X,XXX; h-index: XX)}
+  const pattern = /(citations:\s*)[0-9,]+(;\s*h-index:\s*)[0-9]+/;
+  const match = tex.match(pattern);
+
+  if (!match) {
+    console.log('Could not find citation metrics line in CV, skipping.');
+    return;
+  }
+
+  const oldLine = match[0];
+  const newLine = `${match[1]}${formatNumber(citationData.totalCitations)}${match[2]}${citationData.hIndex}`;
+
+  if (oldLine === newLine) {
+    console.log('CV citation metrics are already up to date.');
+    return;
+  }
+
+  tex = tex.replace(pattern, newLine);
+  writeFileSync(cvPath, tex);
+  console.log(`Updated CV: "${oldLine}" → "${newLine}"`);
 }
 
 // ── Missing-publication checker ─────────────────────────────
