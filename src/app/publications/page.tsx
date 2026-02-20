@@ -51,7 +51,7 @@ export default async function PublicationsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
       <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
-      <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h1 className="font-display text-4xl text-ink">Publications</h1>
           <p className="mt-2 text-ink-muted">
@@ -163,6 +163,7 @@ export default async function PublicationsPage() {
             </div>
           </section>
         ))}
+      </div>
       </div>
     </>
   );

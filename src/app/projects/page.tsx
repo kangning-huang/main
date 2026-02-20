@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { PROJECTS } from "@/lib/constants";
+import type { Metadata } from "next";
 import Script from "next/script";
 import { canonicalUrl, webPageSchema } from "@/lib/seo";
 
@@ -35,10 +36,10 @@ export default function ProjectsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
       <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
-      <h1 className="font-display text-4xl text-ink">Projects</h1>
-      <p className="mt-2 text-ink-muted">
-        Research tools, interactive visualizations, and web applications.
-      </p>
+        <h1 className="font-display text-4xl text-ink">Projects</h1>
+        <p className="mt-2 text-ink-muted">
+          Research tools, interactive visualizations, and web applications.
+        </p>
 
       <div className="mt-10 grid gap-5 md:grid-cols-2">
         {PROJECTS.map((project) => {
@@ -64,6 +65,7 @@ export default function ProjectsPage() {
             </a>
           );
         })}
+      </div>
       </div>
     </>
   );

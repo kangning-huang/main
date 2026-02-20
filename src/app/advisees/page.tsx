@@ -125,59 +125,60 @@ export default function AdviseesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
       <section className="py-16 md:py-20">
-      <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <h1 className="section-heading animate-fade-up">Advisees</h1>
-        <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
-          I mentor undergraduate students at NYU Shanghai through capstones,
-          research projects, and fellowships, with emphasis on research design,
-          methods training, iterative feedback, and professional communication.
-        </p>
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <h1 className="section-heading animate-fade-up">Advisees</h1>
+          <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
+            I mentor undergraduate students at NYU Shanghai through capstones,
+            research projects, and fellowships, with emphasis on research design,
+            methods training, iterative feedback, and professional communication.
+          </p>
 
-        <div className="mt-12 space-y-8">
-          {ADVISEES.map((advisee, i) => (
-            <article
-              key={advisee.name}
-              className="animate-fade-up rounded-xl border border-rule bg-paper p-6 transition-shadow hover:shadow-md"
-              style={{ animationDelay: `${(i + 2) * 100}ms` }}
-            >
-              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                <h2 className="font-display text-xl text-ink">
-                  {advisee.name}
-                </h2>
-                {advisee.linkedin && (
-                  <a
-                    href={advisee.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="link-underline text-sm text-ember hover:text-ember-dark transition-colors"
-                  >
-                    LinkedIn &#8599;
-                  </a>
-                )}
-                <span className="rounded-full bg-paper-warm px-2.5 py-0.5 text-xs text-ink-faint">
-                  Class of {advisee.classYear}
-                </span>
-              </div>
+          <div className="mt-12 space-y-8">
+            {ADVISEES.map((advisee, i) => (
+              <article
+                key={advisee.name}
+                className="animate-fade-up rounded-xl border border-rule bg-paper p-6 transition-shadow hover:shadow-md"
+                style={{ animationDelay: `${(i + 2) * 100}ms` }}
+              >
+                <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                  <h2 className="font-display text-xl text-ink">
+                    {advisee.name}
+                  </h2>
+                  {advisee.linkedin && (
+                    <a
+                      href={advisee.linkedin}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-underline text-sm text-ember hover:text-ember-dark transition-colors"
+                    >
+                      LinkedIn &#8599;
+                    </a>
+                  )}
+                  <span className="rounded-full bg-paper-warm px-2.5 py-0.5 text-xs text-ink-faint">
+                    Class of {advisee.classYear}
+                  </span>
+                </div>
 
-              <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
-                {advisee.project}
-              </p>
+                <p className="mt-3 text-[15px] leading-relaxed text-ink-muted">
+                  {advisee.project}
+                </p>
 
-              <ul className="mt-3 space-y-1.5">
-                {advisee.achievements.map((achievement, j) => (
-                  <li
-                    key={j}
-                    className="flex items-start gap-2 text-sm text-ink-muted"
-                  >
-                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
-                    {achievement}
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
+                <ul className="mt-3 space-y-1.5">
+                  {advisee.achievements.map((achievement, j) => (
+                    <li
+                      key={j}
+                      className="flex items-start gap-2 text-sm text-ink-muted"
+                    >
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
+                      {achievement}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
     </>
   );
 }

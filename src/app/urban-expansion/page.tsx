@@ -33,12 +33,12 @@ export default function UrbanExpansionPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
       <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
-      <h1 className="font-display text-4xl text-ink">
-        Urban Expansion 2050
-      </h1>
-      <p className="mt-2 text-ink-muted">
-        Global urban land expansion projections
-      </p>
+        <h1 className="font-display text-4xl text-ink">
+          Urban Expansion 2050
+        </h1>
+        <p className="mt-2 text-ink-muted">
+          Global urban land expansion projections
+        </p>
 
       <div className="mt-6 max-w-3xl space-y-4 text-[15px] leading-[1.75] text-ink-muted">
         <p>
@@ -100,6 +100,7 @@ export default function UrbanExpansionPage() {
         >
           Data on Resource Watch &#8599;
         </a>
+      </div>
       </div>
     </>
   );
