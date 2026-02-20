@@ -1,17 +1,40 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { PROJECTS } from "@/lib/constants";
+import Script from "next/script";
+import { canonicalUrl, webPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Research tools, interactive visualizations, and web applications by Kangning (Ken) Huang.",
+    "Research tools, interactive visualizations, and web applications developed by Kangning (Ken) Huang.",
+  alternates: {
+    canonical: canonicalUrl("/projects"),
+  },
+  openGraph: {
+    title: "Projects",
+    description:
+      "Research tools, interactive visualizations, and web applications developed by Kangning (Ken) Huang.",
+    url: canonicalUrl("/projects"),
+  },
 };
 
 export default function ProjectsPage() {
+  const pageSchema = webPageSchema({
+    path: "/projects",
+    title: "Projects",
+    description:
+      "Research tools, interactive visualizations, and web applications developed by Kangning (Ken) Huang.",
+  });
+
   return (
-    <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
+    <>
+      <Script
+        id="jsonld-projects"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
       <h1 className="font-display text-4xl text-ink">Projects</h1>
       <p className="mt-2 text-ink-muted">
         Research tools, interactive visualizations, and web applications.
@@ -42,7 +65,7 @@ export default function ProjectsPage() {
           );
         })}
       </div>
-    </div>
+    </>
   );
 }
 

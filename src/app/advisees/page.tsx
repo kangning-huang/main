@@ -1,11 +1,22 @@
 import { SITE } from "@/lib/constants";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
+import Script from "next/script";
+import { canonicalUrl, webPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: `Advisees – ${SITE.name}`,
+  title: "Advisees",
   description:
-    "Students mentored by Kangning Huang at NYU Shanghai, with their research projects, achievements, and graduate school placements.",
+    "Students mentored by Kangning Huang at NYU Shanghai, including capstone projects, research achievements, and graduate placements.",
+  alternates: {
+    canonical: canonicalUrl("/advisees"),
+  },
+  openGraph: {
+    title: "Advisees",
+    description:
+      "Students mentored by Kangning Huang at NYU Shanghai, including capstone projects, research achievements, and graduate placements.",
+    url: canonicalUrl("/advisees"),
+  },
 };
 
 interface Advisee {
@@ -99,8 +110,21 @@ const ADVISEES: Advisee[] = [
 ];
 
 export default function AdviseesPage() {
+  const pageSchema = webPageSchema({
+    path: "/advisees",
+    title: "Advisees",
+    description:
+      "Students mentored by Kangning Huang at NYU Shanghai, including capstone projects, research achievements, and graduate placements.",
+  });
+
   return (
-    <section className="py-16 md:py-20">
+    <>
+      <Script
+        id="jsonld-advisees"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <section className="py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
         <h1 className="section-heading animate-fade-up">Advisees</h1>
         <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
@@ -154,6 +178,6 @@ export default function AdviseesPage() {
           ))}
         </div>
       </div>
-    </section>
+    </>
   );
 }

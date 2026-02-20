@@ -1,14 +1,38 @@
 import type { Metadata } from "next";
+import Script from "next/script";
+import { canonicalUrl, webPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Urban Expansion 2050",
   description:
-    "Global urban land expansion projections through 2050, based on research published in Environmental Research Letters.",
+    "Global urban land expansion and heat island projections through 2050 from research by Kangning (Ken) Huang.",
+  alternates: {
+    canonical: canonicalUrl("/urban-expansion"),
+  },
+  openGraph: {
+    title: "Urban Expansion 2050",
+    description:
+      "Global urban land expansion and heat island projections through 2050 from research by Kangning (Ken) Huang.",
+    url: canonicalUrl("/urban-expansion"),
+  },
 };
 
 export default function UrbanExpansionPage() {
+  const pageSchema = webPageSchema({
+    path: "/urban-expansion",
+    title: "Urban Expansion 2050",
+    description:
+      "Global urban land expansion and heat island projections through 2050 from research by Kangning (Ken) Huang.",
+  });
+
   return (
-    <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
+    <>
+      <Script
+        id="jsonld-urban-expansion"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
       <h1 className="font-display text-4xl text-ink">
         Urban Expansion 2050
       </h1>
@@ -77,6 +101,6 @@ export default function UrbanExpansionPage() {
           Data on Resource Watch &#8599;
         </a>
       </div>
-    </div>
+    </>
   );
 }

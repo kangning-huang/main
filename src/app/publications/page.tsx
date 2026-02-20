@@ -3,16 +3,33 @@ import { LINKS } from "@/lib/constants";
 import { fetchPublications, getScholarData } from "@/lib/publications";
 import type { Publication } from "@/lib/constants";
 import CitationChart from "@/components/CitationChart";
+import Script from "next/script";
+import { canonicalUrl, webPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Publications",
   description:
-    "Full list of publications by Kangning (Ken) Huang, auto-updated from Google Scholar.",
+    "Full list of publications by Kangning (Ken) Huang, updated with citation metrics from Google Scholar.",
+  alternates: {
+    canonical: canonicalUrl("/publications"),
+  },
+  openGraph: {
+    title: "Publications",
+    description:
+      "Full list of publications by Kangning (Ken) Huang, updated with citation metrics from Google Scholar.",
+    url: canonicalUrl("/publications"),
+  },
 };
 
 export default async function PublicationsPage() {
   const publications = await fetchPublications();
   const scholarData = getScholarData();
+  const pageSchema = webPageSchema({
+    path: "/publications",
+    title: "Publications",
+    description:
+      "Full list of publications by Kangning (Ken) Huang, updated with citation metrics from Google Scholar.",
+  });
 
   const byYear = publications.reduce<Record<number, Publication[]>>(
     (acc, pub) => {
@@ -27,7 +44,13 @@ export default async function PublicationsPage() {
     .sort((a, b) => b - a);
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
+    <>
+      <Script
+        id="jsonld-publications"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h1 className="font-display text-4xl text-ink">Publications</h1>
@@ -141,6 +164,6 @@ export default async function PublicationsPage() {
           </section>
         ))}
       </div>
-    </div>
+    </>
   );
 }

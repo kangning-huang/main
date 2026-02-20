@@ -1,4 +1,6 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+import Script from "next/script";
 import {
   SITE,
   LINKS,
@@ -8,6 +10,22 @@ import {
 } from "@/lib/constants";
 import { fetchPublications } from "@/lib/publications";
 import { fetchBlogPosts } from "@/lib/blog";
+import { canonicalUrl, webPageSchema } from "@/lib/seo";
+
+export const metadata: Metadata = {
+  title: "Home",
+  description:
+    "Assistant Professor of Environmental Studies at NYU Shanghai. Research, publications, projects, and teaching updates from Kangning (Ken) Huang.",
+  alternates: {
+    canonical: canonicalUrl("/"),
+  },
+  openGraph: {
+    title: "Kangning (Ken) Huang — NYU Shanghai",
+    description:
+      "Assistant Professor of Environmental Studies at NYU Shanghai. Research, publications, projects, and teaching updates.",
+    url: canonicalUrl("/"),
+  },
+};
 
 export default async function Home() {
   const allPublications = await fetchPublications();
@@ -37,9 +55,20 @@ export default async function Home() {
   const blogPosts = await fetchBlogPosts();
   const featuredPosts = blogPosts.slice(0, 3);
   const featuredProjects = PROJECTS.filter((p) => p.featured);
+  const pageSchema = webPageSchema({
+    path: "/",
+    title: "Home",
+    description:
+      "Assistant Professor of Environmental Studies at NYU Shanghai. Research, publications, and projects by Kangning (Ken) Huang.",
+  });
 
   return (
     <>
+      <Script
+        id="jsonld-homepage"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
       {/* ── Hero ── */}
       <section className="relative overflow-hidden">
         {/* Background image */}

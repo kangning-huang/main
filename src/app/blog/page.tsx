@@ -1,18 +1,41 @@
 import type { Metadata } from "next";
 import { LINKS } from "@/lib/constants";
 import { fetchBlogPosts } from "@/lib/blog";
+import Script from "next/script";
+import { canonicalUrl, webPageSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Blog",
   description:
     "Writing on cities, climate, autonomous vehicles, and more by Kangning (Ken) Huang.",
+  alternates: {
+    canonical: canonicalUrl("/blog"),
+  },
+  openGraph: {
+    title: "Blog",
+    description:
+      "Writing on cities, climate, autonomous vehicles, and more by Kangning (Ken) Huang.",
+    url: canonicalUrl("/blog"),
+  },
 };
 
 export default async function BlogPage() {
   const posts = await fetchBlogPosts();
+  const pageSchema = webPageSchema({
+    path: "/blog",
+    title: "Blog",
+    description:
+      "Writing on cities, climate, autonomous vehicles, and more by Kangning (Ken) Huang.",
+  });
 
   return (
-    <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
+    <>
+      <Script
+        id="jsonld-blog"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h1 className="font-display text-4xl text-ink">Blog</h1>
@@ -146,6 +169,6 @@ export default async function BlogPage() {
           </a>
         </div>
       )}
-    </div>
+    </>
   );
 }

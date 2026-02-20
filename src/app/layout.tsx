@@ -3,10 +3,12 @@ import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+import { personSchema, websiteSchema } from "@/lib/seo";
 
 const GA_ID = "G-M6RRTZHMPZ";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://kangning-huang.github.io/main"),
   title: {
     default: "Kangning (Ken) Huang — NYU Shanghai",
     template: "%s — Kangning (Ken) Huang",
@@ -18,6 +20,9 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "Kangning (Ken) Huang",
   },
+  twitter: {
+    card: "summary_large_image",
+  },
 };
 
 export default function RootLayout({
@@ -25,9 +30,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLdSite = {
+    ...websiteSchema(),
+    publisher: personSchema(),
+  };
+
   return (
     <html lang="en">
       <head>
+        <Script
+          id="site-jsonld"
+          type="application/ld+json"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSite) }}
+        />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
           strategy="afterInteractive"
@@ -35,7 +51,7 @@ export default function RootLayout({
         <Script id="google-analytics" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            function gtag(){dataLayer.push(arguments);}            
             gtag('js', new Date());
             gtag('config', '${GA_ID}');
           `}
