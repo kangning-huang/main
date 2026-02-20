@@ -2,6 +2,12 @@
 
 import { useLanguage } from "@/lib/language-context";
 
+const CAREER_MILESTONES = [
+  { year: 2014, en: "PhD, Yale", zh: "博士，耶鲁", labelRow: 0 },
+  { year: 2020, en: "Postdoc, NCAR", zh: "博士后，NCAR", labelRow: 0 },
+  { year: 2022, en: "Asst Prof, NYU Shanghai", zh: "助理教授，上海纽约大学", labelRow: 1 },
+];
+
 interface CitationChartProps {
   citedByYears: Record<string, number>;
   totalCitations: number;
@@ -53,12 +59,13 @@ export default function CitationChart({
       </div>
 
       {/* Bar chart */}
-      <div className="relative">
+      <div className="relative pt-14">
         <div className="flex items-end justify-between gap-1" style={{ height: "120px" }}>
           {years.map((year, i) => {
             const count = counts[i];
             const heightPercent = maxCount > 0 ? (count / maxCount) * 100 : 0;
             const isCurrentYear = year === new Date().getFullYear();
+            const milestone = CAREER_MILESTONES.find((m) => m.year === year);
 
             return (
               <div
@@ -66,6 +73,27 @@ export default function CitationChart({
                 className="group relative flex flex-1 flex-col items-center"
                 style={{ height: "100%" }}
               >
+                {/* Career milestone marker */}
+                {milestone && (
+                  <>
+                    <div
+                      className="absolute left-1/2 -translate-x-px border-l border-dashed border-ink-faint/60 pointer-events-none"
+                      style={{
+                        top: `${-(milestone.labelRow * 1.25 + 2.5)}rem`,
+                        bottom: 0,
+                      }}
+                    />
+                    <div
+                      className="absolute left-1/2 -translate-x-1/2 text-[9px] font-medium text-ink-muted whitespace-nowrap pointer-events-none"
+                      style={{
+                        top: `${-(milestone.labelRow * 1.25 + 3.25)}rem`,
+                      }}
+                    >
+                      {language === "zh" ? milestone.zh : milestone.en}
+                    </div>
+                  </>
+                )}
+
                 {/* Tooltip */}
                 <div className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 rounded bg-ink px-2 py-1 text-xs text-paper opacity-0 transition-opacity group-hover:opacity-100 whitespace-nowrap z-10">
                   {count.toLocaleString()} {language === "zh" ? "次引用" : "citations"}
