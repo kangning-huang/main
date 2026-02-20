@@ -34,10 +34,21 @@ jobs:
         run: node scripts/fetch-scholar.mjs
         continue-on-error: true
 
+      - name: Recompile CV PDF
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: CV_Kangning_Huang.tex
+          working_directory: cv
+        continue-on-error: true
+
+      - name: Copy CV PDF to public
+        run: cp cv/CV_Kangning_Huang.pdf public/CV_Kangning_Huang.pdf
+        continue-on-error: true
+
       - name: Check for changes
         id: check_changes
         run: |
-          if git diff --quiet src/data/scholar-citations.json; then
+          if git diff --quiet src/data/scholar-citations.json cv/CV_Kangning_Huang.tex public/CV_Kangning_Huang.pdf; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
@@ -48,7 +59,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add src/data/scholar-citations.json
+          git add src/data/scholar-citations.json cv/CV_Kangning_Huang.tex public/CV_Kangning_Huang.pdf
           git commit -m "Update Google Scholar citations [automated]"
           git push
 
