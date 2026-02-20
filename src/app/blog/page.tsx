@@ -3,6 +3,7 @@ import { LINKS } from "@/lib/constants";
 import { fetchBlogPosts } from "@/lib/blog";
 import Script from "next/script";
 import { canonicalUrl, webPageSchema } from "@/lib/seo";
+import T from "@/components/T";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -38,9 +39,14 @@ export default async function BlogPage() {
       <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
-          <h1 className="font-display text-4xl text-ink">Blog</h1>
+          <h1 className="font-display text-4xl text-ink">
+            <T en="Blog" zh="博客" />
+          </h1>
           <p className="mt-2 text-ink-muted">
-            Writing on cities, climate, autonomous vehicles, and more.
+            <T
+              en="Writing on cities, climate, autonomous vehicles, and more."
+              zh="关于城市、气候、自动驾驶等话题的写作。"
+            />
           </p>
         </div>
         <a
@@ -49,7 +55,7 @@ export default async function BlogPage() {
           rel="noopener noreferrer"
           className="inline-flex items-center rounded-full bg-ember px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ember-dark"
         >
-          Subscribe on Substack &#8599;
+          <T en="Subscribe on Substack" zh="订阅 Substack" /> &#8599;
         </a>
       </div>
 
@@ -78,7 +84,7 @@ export default async function BlogPage() {
                 {posts[0].wordcount && (
                   <>
                     <span className="h-0.5 w-0.5 rounded-full bg-ink-faint" />
-                    <span>{Math.ceil(posts[0].wordcount / 250)} min read</span>
+                    <span>{Math.ceil(posts[0].wordcount / 250)} <T en="min read" zh="分钟阅读" /></span>
                   </>
                 )}
               </div>
@@ -96,7 +102,7 @@ export default async function BlogPage() {
                 </p>
               )}
               <p className="mt-5 text-sm font-medium text-ember">
-                Continue reading &rarr;
+                <T en="Continue reading →" zh="继续阅读 →" />
               </p>
             </div>
           </a>
@@ -128,7 +134,7 @@ export default async function BlogPage() {
                       {post.wordcount && (
                         <>
                           <span className="h-0.5 w-0.5 rounded-full bg-ink-faint" />
-                          <span>{Math.ceil(post.wordcount / 250)} min read</span>
+                          <span>{Math.ceil(post.wordcount / 250)} <T en="min read" zh="分钟阅读" /></span>
                         </>
                       )}
                     </div>
@@ -146,7 +152,7 @@ export default async function BlogPage() {
                       </p>
                     )}
                     <p className="mt-4 text-sm font-medium text-ember">
-                      Continue reading &rarr;
+                      <T en="Continue reading →" zh="继续阅读 →" />
                     </p>
                   </div>
                 </a>
@@ -157,7 +163,10 @@ export default async function BlogPage() {
       ) : (
         <div className="mt-10 rounded-xl border border-rule p-8 text-center">
           <p className="text-ink-muted">
-            Posts are loading from Substack. Visit the newsletter directly:
+            <T
+              en="Posts are loading from Substack. Visit the newsletter directly:"
+              zh="文章正在从Substack加载。请直接访问："
+            />
           </p>
           <a
             href={LINKS.substack}

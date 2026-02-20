@@ -1,4 +1,5 @@
 import { SITE, LINKS } from "@/lib/constants";
+import T from "./T";
 
 const FOOTER_LINKS = [
   { label: "Google Scholar", href: LINKS.googleScholar },
@@ -13,9 +14,14 @@ export default function Footer() {
       <div className="relative mx-auto max-w-6xl px-6 py-12 lg:px-8">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
           <div>
-            <p className="font-display text-lg text-ink">{SITE.name}</p>
+            <p className="font-display text-lg text-ink">
+              <T en={SITE.name} zh="黄康宁" />
+            </p>
             <p className="mt-1 text-sm text-ink-muted">
-              {SITE.title}, {SITE.affiliation}
+              <T
+                en={<>{SITE.title}, {SITE.affiliation}</>}
+                zh="环境学助理教授，上海纽约大学"
+              />
             </p>
             <a
               href={`mailto:${SITE.email}`}
@@ -42,7 +48,7 @@ export default function Footer() {
 
         <div className="mt-10 h-px bg-rule-faint" />
         <p className="mt-6 text-xs text-ink-faint">
-          &copy; {new Date().getFullYear()} {SITE.name}
+          &copy; {new Date().getFullYear()} <T en={SITE.name} zh="黄康宁" />
         </p>
       </div>
     </footer>
