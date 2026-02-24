@@ -79,18 +79,20 @@ async function main() {
     }
 
     // ── 3. Yearly citation chart ────────────────────────────
-    // Each bar is an <a class="gsc_g_a"> with a child <span class="gsc_g_al">
-    // The year is encoded in the bar's href as "as_yhi=YYYY"
-    const yearCounts = await page.$$eval('a.gsc_g_a', bars =>
-      bars.map(bar => ({
-        year: bar.getAttribute('href')?.match(/as_yhi=(\d+)/)?.[1] || '',
-        count: bar.querySelector('span.gsc_g_al')?.textContent?.trim() || '0',
-      }))
-    );
+    // The chart bars may not render in headless mode, so parse the
+    // raw HTML for year labels (gsc_g_t) and counts (gsc_g_al)
+    // — the same approach that worked in the original HTTP-based scraper.
+    const pageHtml = await page.content();
 
-    for (const { year, count } of yearCounts) {
-      if (year) {
-        citationData.citedByYears[year] = parseNumber(count);
+    const yearLabelMatches = pageHtml.match(/<span class="gsc_g_t"[^>]*>(\d{4})<\/span>/g) || [];
+    const countLabelMatches = pageHtml.match(/<span class="gsc_g_al">(\d+)<\/span>/g) || [];
+
+    const chartYears = yearLabelMatches.map(m => m.match(/>(\d{4})</)?.[1]);
+    const chartCounts = countLabelMatches.map(m => parseNumber(m.match(/>(\d+)</)?.[1]));
+
+    for (let i = 0; i < chartYears.length && i < chartCounts.length; i++) {
+      if (chartYears[i]) {
+        citationData.citedByYears[chartYears[i]] = chartCounts[i];
       }
     }
 
@@ -152,15 +154,20 @@ async function main() {
       `Years with citation data: ${Object.keys(citationData.citedByYears).sort().join(', ')}`
     );
 
-    // ── 5. Save JSON ────────────────────────────────────────
+    // ── 5. Save JSON (only if we got real data) ────────────
     const outputDir = join(__dirname, '..', 'src', 'data');
     if (!existsSync(outputDir)) {
       mkdirSync(outputDir, { recursive: true });
     }
 
     const outputPath = join(outputDir, 'scholar-citations.json');
-    writeFileSync(outputPath, JSON.stringify(citationData, null, 2));
-    console.log(`\nSaved citation data to: ${outputPath}`);
+
+    if (citationData.totalCitations === 0 && citationData.publications.length === 0) {
+      console.log('\nScraping returned empty data — keeping existing cached file.');
+    } else {
+      writeFileSync(outputPath, JSON.stringify(citationData, null, 2));
+      console.log(`\nSaved citation data to: ${outputPath}`);
+    }
 
     // ── 6. Update CV citation metrics ───────────────────────
     updateCvCitations(citationData);

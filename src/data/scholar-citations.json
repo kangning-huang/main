@@ -1,8 +1,298 @@
 {
-  "totalCitations": 0,
-  "hIndex": 0,
-  "i10Index": 0,
-  "citedByYears": {},
-  "publications": [],
-  "lastUpdated": "2026-02-22T00:36:54.065Z"
+  "totalCitations": 4177,
+  "hIndex": 21,
+  "i10Index": 26,
+  "citedByYears": {
+    "2014": 21,
+    "2015": 34,
+    "2016": 40,
+    "2017": 34,
+    "2018": 45,
+    "2019": 54,
+    "2020": 168,
+    "2021": 458,
+    "2022": 624,
+    "2023": 729,
+    "2024": 791,
+    "2025": 953,
+    "2026": 183
+  },
+  "publications": [
+    {
+      "title": "Planning for rhythmized urban parks: Temporal park classification and modes of action",
+      "citationCount": 2,
+      "year": 2026
+    },
+    {
+      "title": "From Cells to Cities: Extending Kleiber’s Law from Biology to Urban Systems",
+      "citationCount": 0,
+      "year": 2025
+    },
+    {
+      "title": "Unveiling Causality: Does Demolishing Informal Settlements Cause Urban Surface Cooling?",
+      "citationCount": 0,
+      "year": 2025
+    },
+    {
+      "title": "Above and Beyond: Integrating Building Height and Protection Standards in Global Flood Risk Assessment",
+      "citationCount": 0,
+      "year": 2025
+    },
+    {
+      "title": "Nested economies of scale in global city mass",
+      "citationCount": 0,
+      "year": 2025
+    },
+    {
+      "title": "Rapid probabilistic inundation mapping using local thresholds and sentinel-1 sar data on google earth engine",
+      "citationCount": 1,
+      "year": 2025
+    },
+    {
+      "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
+      "citationCount": 31,
+      "year": 2025
+    },
+    {
+      "title": "Dual impact of global urban overheating on mortality",
+      "citationCount": 29,
+      "year": 2025
+    },
+    {
+      "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
+      "citationCount": 4,
+      "year": 2025
+    },
+    {
+      "title": "Exacerbated heat stress induced by urban browning in the Global South",
+      "citationCount": 21,
+      "year": 2025
+    },
+    {
+      "title": "Short-Term Effect of Air Pollution on Daily Hospital Visits for Anxiety Disorders in Southern China with Low Pollution Concentrations",
+      "citationCount": 4,
+      "year": 2025
+    },
+    {
+      "title": "Unequal effects of the lockdown on mental health in Shanghai: the moderating and mediating role of neighborhood environment and online social connections",
+      "citationCount": 2,
+      "year": 2025
+    },
+    {
+      "title": "The Complexity of Greenness: Exploring Trade-Offs and Synergies in Nature-Based Solutions Poster",
+      "citationCount": 0,
+      "year": 2024
+    },
+    {
+      "title": "Public Perception of Heat: Evidence from Tweets Across 398 Global Cities",
+      "citationCount": 0,
+      "year": 2024
+    },
+    {
+      "title": "Mapping the Mismatch: The Urbanization of Built Environment Versus People in Modern China",
+      "citationCount": 0,
+      "year": 2024
+    },
+    {
+      "title": "Measuring rising heat and flood risk along the belt-and-road initiative",
+      "citationCount": 1,
+      "year": 2024
+    },
+    {
+      "title": "The Urban Mosaic of Heat Exposure: The Role of Spatial Heterogeneity in Population and Temperature Distributions",
+      "citationCount": 0,
+      "year": 2024
+    },
+    {
+      "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
+      "citationCount": 72,
+      "year": 2024
+    },
+    {
+      "title": "Moderating AC usage can reduce thermal disparity between indoor and outdoor environments",
+      "citationCount": 6,
+      "year": 2024
+    },
+    {
+      "title": "Mapping of individual building heights reveals the large gap of urban-rural living spaces in the contiguous US",
+      "citationCount": 10,
+      "year": 2024
+    },
+    {
+      "title": "From Spatial Data to Smart Decisions: Leveraging Remote Sensing for Effective Climate Disaster Management Poster",
+      "citationCount": 0,
+      "year": 2023
+    },
+    {
+      "title": "Declining urban density attenuates rising population-weighted exposure to surface heat extremes",
+      "citationCount": 0,
+      "year": 2023
+    },
+    {
+      "title": "The Climate Risks of Global China: Measuring Rising Heat and Flood Risk Along the Belt-and-Road Initiative",
+      "citationCount": 1,
+      "year": 2023
+    },
+    {
+      "title": "Mega-city development impact on hourly extreme rainfall over the South China Greater Bay Area under near-future climate warming",
+      "citationCount": 22,
+      "year": 2023
+    },
+    {
+      "title": "Urban forests facing climate risks",
+      "citationCount": 17,
+      "year": 2022
+    },
+    {
+      "title": "Long‐term monitoring and evaluation of land development in a reclamation area under rapid urbanization: A case‐study in Qiantang New District, China",
+      "citationCount": 12,
+      "year": 2021
+    },
+    {
+      "title": "The importance of future urban development in hourly extreme rainfall projections-comparing global warming and urbanization forcing over the Pearl River Delta region",
+      "citationCount": 1,
+      "year": 2021
+    },
+    {
+      "title": "Facilitating urban climate forecasts in rapidly urbanizing regions with land-use change modeling",
+      "citationCount": 26,
+      "year": 2021
+    },
+    {
+      "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
+      "citationCount": 66,
+      "year": 2021
+    },
+    {
+      "title": "Investigating future urbanization’s impact on local climate under different climate change scenarios in MEGA-urban regions: A case study of the Pearl River Delta, China",
+      "citationCount": 28,
+      "year": 2020
+    },
+    {
+      "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
+      "citationCount": 859,
+      "year": 2020
+    },
+    {
+      "title": "High‐resolution gridded population projections for China under the shared socioeconomic pathways",
+      "citationCount": 78,
+      "year": 2020
+    },
+    {
+      "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
+      "citationCount": 895,
+      "year": 2020
+    },
+    {
+      "title": "Augmented compound urban temperature extreme (ACUTE) from climate change and urban expansion: global risk and adaptation",
+      "citationCount": 2,
+      "year": 2020
+    },
+    {
+      "title": "Research gaps in knowledge of the impact of urban growth on biodiversity. Nat Sustain 3: 16–24",
+      "citationCount": 41,
+      "year": 2020
+    },
+    {
+      "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
+      "citationCount": 645,
+      "year": 2020
+    },
+    {
+      "title": "Projecting global urban land expansion and heat island intensification through 2050",
+      "citationCount": 478,
+      "year": 2019
+    },
+    {
+      "title": "Fugitive Road Dust PM2.5 Emissions and Their Potential Health Impacts",
+      "citationCount": 149,
+      "year": 2019
+    },
+    {
+      "title": "The growing impacts of cities on biodiversity. Research gaps limit global decision-making",
+      "citationCount": 6,
+      "year": 2019
+    },
+    {
+      "title": "Impacts of urban development and climate change on near-future extreme rainfall projections over the PRD megacity.",
+      "citationCount": 0,
+      "year": 2019
+    },
+    {
+      "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
+      "citationCount": 68,
+      "year": 2019
+    },
+    {
+      "title": "Building Resilience to Natural Hazards by Utilizing Citizen Science and Understanding Compound Hazards",
+      "citationCount": 0,
+      "year": 2018
+    },
+    {
+      "title": "Multi-sensor image registration by combining local self-similarity matching and mutual information",
+      "citationCount": 26,
+      "year": 2018
+    },
+    {
+      "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
+      "citationCount": 104,
+      "year": 2018
+    },
+    {
+      "title": "Estimations of anthropogenic dust emissions at global scale from 2007 to 2010",
+      "citationCount": 5,
+      "year": 2017
+    },
+    {
+      "title": "Contributions to Global Augmented Compound Urban Heat Extreme (ACUTE) from Climate Change and the Urban Heat Island Effect",
+      "citationCount": 0,
+      "year": 2017
+    },
+    {
+      "title": "Optimal monitoring network design for a land use regression study in Lanzhou, China",
+      "citationCount": 0,
+      "year": 2016
+    },
+    {
+      "title": "Improved snow depth retrieval by integrating microwave brightness temperature and visible/infrared reflectance",
+      "citationCount": 63,
+      "year": 2015
+    },
+    {
+      "title": "Improving un-gauged hydrological modeling by assimilating GRACE Terrestrial Water Storage data",
+      "citationCount": 0,
+      "year": 2013
+    },
+    {
+      "title": "Improved snow depth retrieval by combining SSM/I and MODIS data with SMO regression",
+      "citationCount": 1,
+      "year": 2013
+    },
+    {
+      "title": "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
+      "citationCount": 107,
+      "year": 2013
+    },
+    {
+      "title": "Automatic registration of multisensor images using an integrated spatial and mutual information (SMI) metric",
+      "citationCount": 110,
+      "year": 2013
+    },
+    {
+      "title": "The Effects of Scale in Assimilation of GRACE Territorial Water Storage Data into Distributed Hydrological Model",
+      "citationCount": 0,
+      "year": 2012
+    },
+    {
+      "title": "A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas",
+      "citationCount": 168,
+      "year": 2012
+    },
+    {
+      "title": "The implementation and application of geographical simulation and optimization systems (GeoSOS)",
+      "citationCount": 16,
+      "year": 2010
+    }
+  ],
+  "lastUpdated": "2026-02-24T05:45:09.304Z"
 }
