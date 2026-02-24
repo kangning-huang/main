@@ -39,20 +39,13 @@ export interface Project {
   url: string;
   tags: string[];
   featured: boolean;
+  category: "academic" | "side";
   internalPath?: string;
   imagePath?: string;
 }
 
 export const PROJECTS: Project[] = [
-  {
-    title: "Robotaxi Safety Tracker",
-    description:
-      "A data-driven dashboard tracking Tesla Cybercab safety performance using NHTSA Standing General Order crash data. Provides transparent, independent analysis of autonomous vehicle safety metrics including miles per incident (MPI) comparisons.",
-    url: "https://robotaxi-safety-tracker.com",
-    tags: ["Data Visualization", "Autonomous Vehicles", "Safety Analytics"],
-    featured: true,
-    // imagePath: "/projects/robotaxi-safety-tracker.jpg", // Run `npm run screenshots` to generate
-  },
+  // ── Academic projects ─────────────────────────────────────────
   {
     title: "Nested Scaling of City Mass",
     description:
@@ -60,6 +53,7 @@ export const PROJECTS: Project[] = [
     url: "https://kangning-huang.github.io/nested-scaling-city-mass/",
     tags: ["Urban Scaling", "Interactive Visualization", "Nature Cities"],
     featured: true,
+    category: "academic",
     // imagePath: "/projects/nested-scaling-city-mass.jpg", // Run `npm run screenshots` to generate
   },
   {
@@ -69,6 +63,7 @@ export const PROJECTS: Project[] = [
     url: "/urban-expansion",
     tags: ["Urban Modeling", "Remote Sensing"],
     featured: true,
+    category: "academic",
     internalPath: "/urban-expansion",
   },
   {
@@ -78,6 +73,7 @@ export const PROJECTS: Project[] = [
     url: "https://kangning-huang.github.io/3D-urban-flood-risk/",
     tags: ["Flood Risk", "3D Visualization", "Interactive"],
     featured: true,
+    category: "academic",
     // imagePath: "/projects/3d-urban-flood-risk.jpg", // Run `npm run screenshots` to generate
   },
   {
@@ -87,6 +83,7 @@ export const PROJECTS: Project[] = [
     url: "https://kangning-huang.github.io/urban-renewal-cooling-DID/",
     tags: ["Urban Cooling", "Causal Inference", "Interactive Visualization"],
     featured: true,
+    category: "academic",
     // imagePath: "/projects/urban-renewal-cooling-did.jpg", // Run `npm run screenshots` to generate
   },
   {
@@ -96,6 +93,36 @@ export const PROJECTS: Project[] = [
     url: "https://github.com/kangning-huang",
     tags: ["Urban Modeling", "Open Source", "Python"],
     featured: false,
+    category: "academic",
+  },
+  // ── Side projects ─────────────────────────────────────────────
+  {
+    title: "RoboTaxi Safety Tracker",
+    description:
+      "A data-driven dashboard tracking Tesla Cybercab safety performance using NHTSA Standing General Order crash data. Provides transparent, independent analysis of autonomous vehicle safety metrics including miles per incident (MPI) comparisons.",
+    url: "https://robotaxi-safety-tracker.com",
+    tags: ["Data Visualization", "Autonomous Vehicles", "Safety Analytics"],
+    featured: true,
+    category: "side",
+    // imagePath: "/projects/robotaxi-safety-tracker.jpg", // Run `npm run screenshots` to generate
+  },
+  {
+    title: "Polybot Arena",
+    description:
+      "Visualizes how elite trading bots compete in Polymarket crypto prediction markets. Tracks the most profitable traders on Polymarket's 'Up or Down' markets for BTC, ETH, SOL, and XRP, showing their exact timing, positions, and P&L.",
+    url: "https://polybot-arena.com",
+    tags: ["Data Visualization", "Crypto", "Prediction Markets"],
+    featured: true,
+    category: "side",
+  },
+  {
+    title: "Capitol Alpha",
+    description:
+      "Congressional trading dashboard — track and analyze stock trades made by members of the U.S. Congress.",
+    url: "https://capitol-alpha.com",
+    tags: ["Data Visualization", "Finance", "Dashboard"],
+    featured: true,
+    category: "side",
   },
 ];
 
