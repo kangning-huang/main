@@ -15,7 +15,13 @@ export const metadata: Metadata = {
     template: "%s — Kangning (Ken) Huang",
   },
   description:
-    "Assistant Professor of Environmental Studies at NYU Shanghai. Research on urbanization, climate change, and environmental hazards.",
+    "Kangning (Ken) Huang is an Assistant Professor of Environmental Studies at NYU Shanghai researching urbanization, urban heat islands, climate adaptation, remote sensing, and urban scaling laws.",
+  keywords: [
+    "Kangning Huang", "Ken Huang", "NYU Shanghai",
+    "urban heat island", "urban expansion", "climate adaptation",
+    "remote sensing", "urban scaling laws", "GIScience",
+    "urbanization and climate change", "urban climate modeling",
+  ],
   openGraph: {
     type: "website",
     locale: "en_US",

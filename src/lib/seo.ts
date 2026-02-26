@@ -1,4 +1,5 @@
 import { LINKS, SITE } from "@/lib/constants";
+import type { Publication } from "@/lib/constants";
 
 const FALLBACK_SITE_URL = "https://kangning-huang.github.io/main";
 
@@ -76,6 +77,45 @@ export function webPageSchema({
     about: {
       "@id": `${canonicalUrl("/")}#person`,
     },
+  };
+}
+
+export function scholarlyArticleSchema(pub: Publication) {
+  const article: Record<string, unknown> = {
+    "@type": "ScholarlyArticle",
+    headline: pub.title,
+    author: pub.authors.split(", ").map((name) => ({
+      "@type": "Person",
+      name: name.trim(),
+    })),
+    datePublished: `${pub.year}`,
+    isPartOf: pub.venue
+      ? { "@type": "Periodical", name: pub.venue }
+      : undefined,
+  };
+  if (pub.doi) article.sameAs = `https://doi.org/${pub.doi}`;
+  if (pub.url) article.url = pub.url;
+  if (pub.keywords && pub.keywords.length > 0) article.keywords = pub.keywords.join(", ");
+  if (pub.highlights && pub.highlights.length > 0) article.abstract = pub.highlights.join(". ");
+  if (pub.citationCount > 0) {
+    article.interactionStatistic = {
+      "@type": "InteractionCounter",
+      interactionType: { "@type": "CiteAction" },
+      userInteractionCount: pub.citationCount,
+    };
+  }
+  return article;
+}
+
+export function scholarlyArticleListSchema(pubs: Publication[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: pubs.map((pub, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: scholarlyArticleSchema(pub),
+    })),
   };
 }
 

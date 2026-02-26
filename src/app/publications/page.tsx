@@ -3,21 +3,22 @@ import { LINKS } from "@/lib/constants";
 import { fetchPublications, getScholarData } from "@/lib/publications";
 import type { Publication } from "@/lib/constants";
 import CitationChart from "@/components/CitationChart";
+import PublicationCard from "@/components/PublicationCard";
 import Script from "next/script";
-import { canonicalUrl, webPageSchema } from "@/lib/seo";
+import { canonicalUrl, webPageSchema, scholarlyArticleListSchema } from "@/lib/seo";
 import T from "@/components/T";
 
 export const metadata: Metadata = {
   title: "Publications",
   description:
-    "Full list of publications by Kangning (Ken) Huang, updated with citation metrics from Google Scholar.",
+    "Publications by Kangning (Ken) Huang on urban heat islands, global urban expansion, climate adaptation, flood risk, urban scaling laws, and remote sensing. Updated with live Google Scholar citation metrics.",
   alternates: {
     canonical: canonicalUrl("/publications"),
   },
   openGraph: {
-    title: "Publications",
+    title: "Publications — Kangning (Ken) Huang",
     description:
-      "Full list of publications by Kangning (Ken) Huang, updated with citation metrics from Google Scholar.",
+      "Publications by Kangning (Ken) Huang on urban heat islands, global urban expansion, climate adaptation, flood risk, urban scaling laws, and remote sensing.",
     url: canonicalUrl("/publications"),
   },
 };
@@ -50,6 +51,11 @@ export default async function PublicationsPage() {
         id="jsonld-publications"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <Script
+        id="jsonld-scholarly-articles"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(scholarlyArticleListSchema(publications)) }}
       />
       <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -92,79 +98,7 @@ export default async function PublicationsPage() {
             </h2>
             <div className="mt-4 space-y-1">
               {byYear[year].map((pub, i) => (
-                <article
-                  key={i}
-                  className="pub-item group py-4"
-                >
-                  <h3 className="text-[15px] font-medium leading-snug text-ink">
-                    {pub.doi ? (
-                      <a
-                        href={`https://doi.org/${pub.doi}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="transition-colors group-hover:text-ember"
-                      >
-                        {pub.title}
-                      </a>
-                    ) : pub.url ? (
-                      <a
-                        href={pub.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="transition-colors group-hover:text-ember"
-                      >
-                        {pub.title}
-                      </a>
-                    ) : (
-                      pub.title
-                    )}
-                  </h3>
-                  <p className="mt-1 text-sm text-ink-faint">
-                    {pub.authors}
-                  </p>
-                  <div className="mt-2 flex flex-wrap items-center gap-3 text-sm">
-                    {pub.venue && (
-                      <span className="font-medium text-ember">
-                        {pub.venue}
-                      </span>
-                    )}
-                    {pub.citationCount > 0 && (
-                      <span className="rounded-full bg-paper-deep px-2.5 py-0.5 text-xs text-ink-muted">
-                        {pub.citationCount} <T en="citations" zh="引用" />
-                      </span>
-                    )}
-                    {pub.doi && (
-                      <a
-                        href={`https://doi.org/${pub.doi}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="link-underline text-xs text-ink-faint hover:text-ember"
-                      >
-                        DOI &#8599;
-                      </a>
-                    )}
-                    {pub.preprint && (
-                      <a
-                        href={pub.preprint}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="link-underline text-xs text-ink-faint hover:text-ember"
-                      >
-                        <T en="Preprint" zh="预印本" /> &#8599;
-                      </a>
-                    )}
-                    {pub.webUrl && (
-                      <a
-                        href={pub.webUrl}
-                        target={pub.webUrl.startsWith("/") ? undefined : "_blank"}
-                        rel={pub.webUrl.startsWith("/") ? undefined : "noopener noreferrer"}
-                        className="link-underline text-xs text-ink-faint hover:text-ember"
-                      >
-                        <T en="Web App" zh="网页应用" /> &#8599;
-                      </a>
-                    )}
-                  </div>
-                </article>
+                <PublicationCard key={i} pub={pub} />
               ))}
             </div>
           </section>
