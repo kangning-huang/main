@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import type { Publication } from "@/lib/constants";
+import { COAUTHOR_LINKS } from "@/lib/constants";
 import T from "@/components/T";
 
 export default function PublicationCard({ pub }: { pub: Publication }) {
@@ -70,7 +71,30 @@ export default function PublicationCard({ pub }: { pub: Publication }) {
             pub.title
           )}
         </h3>
-        <p className="mt-1 text-sm text-ink-faint">{pub.authors}</p>
+        <p className="mt-1 text-sm text-ink-faint">
+          {pub.authors.split(", ").map((name, i, arr) => {
+            const trimmed = name.trim();
+            const url = COAUTHOR_LINKS[trimmed];
+            return (
+              <span key={i}>
+                {url ? (
+                  <a
+                    href={url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="transition-colors hover:text-ember"
+                    onClick={(e) => e.stopPropagation()}
+                  >
+                    {trimmed}
+                  </a>
+                ) : (
+                  trimmed
+                )}
+                {i < arr.length - 1 ? ", " : ""}
+              </span>
+            );
+          })}
+        </p>
         <div className="mt-2 flex flex-wrap items-center gap-3 text-sm">
           {pub.venue && (
             <span className="font-medium text-ember">{pub.venue}</span>
