@@ -1,4 +1,4 @@
-import { LINKS, SITE } from "@/lib/constants";
+import { LINKS, SITE, COAUTHOR_LINKS } from "@/lib/constants";
 import type { Publication } from "@/lib/constants";
 
 const FALLBACK_SITE_URL = "https://kangning-huang.github.io/main";
@@ -84,10 +84,13 @@ export function scholarlyArticleSchema(pub: Publication) {
   const article: Record<string, unknown> = {
     "@type": "ScholarlyArticle",
     headline: pub.title,
-    author: pub.authors.split(", ").map((name) => ({
-      "@type": "Person",
-      name: name.trim(),
-    })),
+    author: pub.authors.split(", ").map((name) => {
+      const trimmed = name.trim();
+      const person: Record<string, string> = { "@type": "Person", name: trimmed };
+      const url = COAUTHOR_LINKS[trimmed];
+      if (url) person.url = url;
+      return person;
+    }),
     datePublished: `${pub.year}`,
     isPartOf: pub.venue
       ? { "@type": "Periodical", name: pub.venue }

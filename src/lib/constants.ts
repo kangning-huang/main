@@ -19,6 +19,23 @@ export const LINKS = {
   lab: "https://knhuang.weebly.com",
 };
 
+/**
+ * Google Scholar profiles for notable co-authors.
+ * Keys must match the full name used in the `authors` field of publications.
+ * Used by PublicationCard (visible links) and seo.ts (JSON-LD Person.url).
+ */
+export const COAUTHOR_LINKS: Record<string, string> = {
+  "Karen C. Seto": "https://scholar.google.com/citations?user=0mjPS-IAAAAJ&hl=en",
+  "Michelle L. Bell": "https://scholar.google.com/citations?user=W4EC7g4AAAAJ&hl=en",
+  "Brian Stone Jr.": "https://scholar.google.com/citations?user=C6lK4ZQAAAAJ&hl=en",
+  "Xuhui Lee": "https://scholar.google.com/citations?user=8L9uh1oAAAAJ&hl=en",
+  "Philippe Ciais": "https://scholar.google.com/citations?user=PJhqfAoAAAAJ&hl=en",
+  "Robert I. McDonald": "https://scholar.google.com/citations?user=qjx1OkwAAAAJ&hl=en",
+  "Wenfeng Zhan": "https://scholar.google.com/citations?user=-VRcMboAAAAJ&hl=en",
+  "Xia Li": "https://scholar.google.com/citations?user=Rxgr5rYAAAAJ&hl=en",
+  "Xiaoping Liu": "https://scholar.google.com/citations?user=rad0T_sAAAAJ&hl=en",
+};
+
 export const RESEARCH_INTERESTS = [
   "Urbanization",
   "Extreme Heat Events",
