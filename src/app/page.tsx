@@ -11,6 +11,7 @@ import { fetchPublications } from "@/lib/publications";
 import { fetchBlogPosts } from "@/lib/blog";
 import { canonicalUrl, webPageSchema } from "@/lib/seo";
 import T from "@/components/T";
+import PublicationCard from "@/components/PublicationCard";
 
 const RESEARCH_INTERESTS_ZH: Record<string, string> = {
   Urbanization: "城市化",
@@ -56,14 +57,14 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "Assistant Professor of Environmental Studies at NYU Shanghai. Research, publications, projects, and teaching updates from Kangning (Ken) Huang.",
+    "Kangning (Ken) Huang — Assistant Professor at NYU Shanghai. Research on urban heat islands, global urban expansion projections, climate adaptation, flood risk, urban scaling laws, and remote sensing.",
   alternates: {
     canonical: canonicalUrl("/"),
   },
   openGraph: {
     title: "Kangning (Ken) Huang — NYU Shanghai",
     description:
-      "Assistant Professor of Environmental Studies at NYU Shanghai. Research, publications, projects, and teaching updates.",
+      "Assistant Professor of Environmental Studies at NYU Shanghai. Research on urbanization, climate change, urban heat islands, and environmental hazards.",
     url: canonicalUrl("/"),
   },
 };
@@ -263,61 +264,7 @@ export default async function Home() {
 
           <div className="mt-8 space-y-1">
             {featuredPubs.map((pub, i) => (
-              <article key={i} className="pub-item group py-4">
-                <h3 className="text-[15px] font-medium leading-snug text-ink">
-                  {pub.doi ? (
-                    <a
-                      href={`https://doi.org/${pub.doi}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="transition-colors group-hover:text-ember"
-                    >
-                      {pub.title}
-                    </a>
-                  ) : pub.url ? (
-                    <a
-                      href={pub.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="transition-colors group-hover:text-ember"
-                    >
-                      {pub.title}
-                    </a>
-                  ) : (
-                    pub.title
-                  )}
-                </h3>
-                <p className="mt-1 text-sm text-ink-faint">{pub.authors}</p>
-                <div className="mt-2 flex flex-wrap items-center gap-3 text-sm">
-                  <span className="font-medium text-ember">{pub.venue}</span>
-                  <span className="text-ink-faint">{pub.year}</span>
-                  {pub.citationCount > 0 && (
-                    <span className="rounded-full bg-paper-deep px-2.5 py-0.5 text-xs text-ink-muted">
-                      {pub.citationCount} <T en="cit." zh="引用" />
-                    </span>
-                  )}
-                  {pub.preprint && (
-                    <a
-                      href={pub.preprint}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="link-underline text-xs text-ink-faint hover:text-ember"
-                    >
-                      <T en="Preprint" zh="预印本" /> &#8599;
-                    </a>
-                  )}
-                  {pub.webUrl && (
-                    <a
-                      href={pub.webUrl}
-                      target={pub.webUrl.startsWith("/") ? undefined : "_blank"}
-                      rel={pub.webUrl.startsWith("/") ? undefined : "noopener noreferrer"}
-                      className="link-underline text-xs text-ink-faint hover:text-ember"
-                    >
-                      <T en="Web App" zh="网页应用" /> &#8599;
-                    </a>
-                  )}
-                </div>
-              </article>
+              <PublicationCard key={i} pub={pub} />
             ))}
           </div>
         </div>

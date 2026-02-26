@@ -140,6 +140,10 @@ export interface Publication {
   preprint?: string;
   /** Link to an interactive web app / visualization for this paper */
   webUrl?: string;
+  /** SEO/AEO: keyword-rich bullet points summarising key findings */
+  highlights?: string[];
+  /** SEO/AEO: topic keywords for structured data and filtering */
+  keywords?: string[];
 }
 
 /**
@@ -159,6 +163,14 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     doi: "10.1088/1748-9326/ab4b71",
     isLeadAuthor: true,
     webUrl: "https://kangning-huang.github.io/main/urban-expansion",
+    highlights: [
+      "Projects global urban land expansion for 2030 and 2050 under shared socioeconomic pathways (SSPs)",
+      "Simulates urban heat island intensification driven by land-cover change in over 1,700 cities worldwide",
+      "Finds that urban expansion alone could increase local temperatures by 1–3 °C on top of background climate warming",
+      "Provides gridded projections at 1-km resolution used by WRI Resource Watch for policy planning",
+      "Couples a land-use change model (SLEUTH) with the Weather Research and Forecasting (WRF) climate model",
+    ],
+    keywords: ["urban expansion", "urban heat island", "SSP scenarios", "global urbanization projections", "land-use change modeling", "WRF climate model", "urban land cover 2050"],
   },
   {
     title: "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
@@ -168,6 +180,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 106,
     doi: "10.1080/13658816.2012.730147",
     isLeadAuthor: true,
+    highlights: [
+      "Develops a multi-objective optimization algorithm based on artificial immune systems for land-use allocation",
+      "Solves the Pareto-optimal land-use planning problem efficiently in large geographic areas",
+      "Outperforms NSGA-II and other evolutionary algorithms on spatial optimization benchmarks",
+      "Balances competing objectives such as economic return, ecological conservation, and food security in land-use planning",
+    ],
+    keywords: ["land-use optimization", "Pareto front", "artificial immune system", "multi-objective optimization", "spatial planning", "GIScience"],
   },
   {
     title: "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
@@ -177,6 +196,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 66,
     doi: "10.1029/2020JD033831",
     isLeadAuthor: true,
+    highlights: [
+      "Shows that nighttime urban heat stress keeps rising even when cities adopt heat island mitigation strategies",
+      "Uses WRF simulations over the contiguous United States to separate the effects of urban expansion from background climate change",
+      "Finds nighttime minimum temperatures are more sensitive to urban land-cover change than daytime maxima",
+      "Highlights the public-health implications of persistent nocturnal heat exposure for vulnerable populations",
+    ],
+    keywords: ["nighttime heat stress", "urban heat island mitigation", "urban expansion", "WRF simulation", "nocturnal heat exposure", "climate and health"],
   },
   {
     title: "Facilitating urban climate forecasts in rapidly urbanizing regions with land-use change modeling",
@@ -185,6 +211,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     year: 2021,
     citationCount: 24,
     isLeadAuthor: true,
+    highlights: [
+      "Integrates land-use change modeling into urban climate forecasts for rapidly urbanizing regions",
+      "Demonstrates that ignoring future urban growth leads to significant underestimation of local warming",
+      "Case study on the Pearl River Delta / Greater Bay Area mega-urban region in southern China",
+      "Couples the SLEUTH urban growth model with WRF to produce scenario-based climate projections",
+    ],
+    keywords: ["urban climate forecast", "land-use change modeling", "Pearl River Delta", "Greater Bay Area", "rapid urbanization", "SLEUTH model"],
   },
   {
     title: "Urban forests facing climate risks",
@@ -193,6 +226,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     year: 2022,
     citationCount: 17,
     isLeadAuthor: true,
+    highlights: [
+      "Commentary in Nature Climate Change on the vulnerability of urban trees and forests to climate change",
+      "Discusses how rising temperatures, drought, and extreme weather threaten the cooling benefits of urban canopy",
+      "Argues that cities must diversify tree species and adopt climate-adaptive planting strategies",
+      "Highlights the feedback loop: urban forests cool cities, but climate stress may reduce canopy cover over time",
+    ],
+    keywords: ["urban forests", "urban trees climate change", "urban canopy", "nature-based solutions", "climate adaptation", "urban cooling"],
   },
   {
     title: "Declining urban density attenuates rising population exposure to surface heat extremes",
@@ -202,6 +242,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 3,
     doi: "10.1038/s41598-025-96045-z",
     isLeadAuthor: true,
+    highlights: [
+      "Reveals that declining urban population density partially offsets rising heat exposure from climate warming",
+      "Analyzes surface urban heat island intensity across hundreds of global cities using satellite land-surface temperature data",
+      "Finds that urban sprawl (lower density) reduces per-capita heat exposure but increases total energy consumption",
+      "Quantifies the trade-off between compact urban development and heat-risk equity",
+    ],
+    keywords: ["urban density", "heat exposure", "surface urban heat island", "urban sprawl", "climate equity", "satellite land-surface temperature"],
   },
   {
     title: "Nested economies of scale in global city mass",
@@ -212,6 +259,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     url: "https://arxiv.org/abs/2507.03960",
     isLeadAuthor: true,
     webUrl: "https://kangning-huang.github.io/nested-scaling-city-mass/",
+    highlights: [
+      "Discovers nested scaling laws in the built mass (total building volume) of over 3,000 cities worldwide",
+      "Shows that a city's total built mass scales super-linearly with population, analogous to metabolic scaling in biology",
+      "Reveals that scaling exponents vary systematically across world regions, reflecting different development pathways",
+      "Proposes a unified framework connecting urban scaling theory with Zipf's law of city sizes",
+    ],
+    keywords: ["urban scaling laws", "Zipf's law", "city size distribution", "built mass", "urban allometry", "urban economics"],
   },
   // Last author
   {
@@ -222,6 +276,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 1,
     doi: "10.3390/rs17101747",
     isLeadAuthor: true,
+    highlights: [
+      "Presents a rapid, cloud-based method for probabilistic flood inundation mapping using Sentinel-1 SAR imagery",
+      "Implements local adaptive thresholding on Google Earth Engine for near-real-time flood extent detection",
+      "Produces probabilistic flood maps that quantify uncertainty in inundation boundaries",
+      "Validated against ground-truth data across multiple flood events with high accuracy",
+    ],
+    keywords: ["flood mapping", "Sentinel-1 SAR", "Google Earth Engine", "inundation detection", "remote sensing", "probabilistic mapping"],
   },
   {
     title: "Unveiling the causal link between informal settlement demolition and urban cooling",
@@ -232,6 +293,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     isLeadAuthor: true,
     preprint: "https://www.researchsquare.com/article/rs-7288639/v1",
     webUrl: "https://kangning-huang.github.io/urban-renewal-cooling-DID/",
+    highlights: [
+      "Establishes a causal link between informal settlement (slum) demolition and local surface cooling using a difference-in-differences design",
+      "Analyzes urban renewal programs across multiple cities in the Global South using satellite land-surface temperature",
+      "Finds measurable cooling effects of 0.3–0.8 °C following demolition and redevelopment of informal settlements",
+      "Raises equity questions about climate co-benefits of displacement-driven urban renewal",
+    ],
+    keywords: ["informal settlements", "urban renewal", "urban cooling", "difference-in-differences", "causal inference", "slum demolition", "Global South"],
   },
   {
     title: "Integrating Building Height and Protection Standards in Global Urban Flood Risk Assessment",
@@ -242,6 +310,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     isLeadAuthor: true,
     preprint: "https://www.researchsquare.com/article/rs-6900146/v1",
     webUrl: "https://kangning-huang.github.io/3D-urban-flood-risk/",
+    highlights: [
+      "Introduces a 3D approach to global urban flood risk assessment that accounts for building height and flood protection infrastructure",
+      "Shows that conventional 2D flood models overestimate damages by ignoring vertical building structure",
+      "Provides city-level flood risk estimates for thousands of urban areas under current and future climate scenarios",
+      "Demonstrates how flood protection standards vary dramatically across countries and income levels",
+    ],
+    keywords: ["urban flood risk", "3D flood assessment", "building height", "flood protection standards", "climate risk", "global flood modeling"],
   },
   {
     title: "Planning for rhythmized urban parks: Temporal park classification and modes of action",
@@ -251,6 +326,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 2,
     doi: "10.1080/01944363.2025.2523604",
     isLeadAuthor: true,
+    highlights: [
+      "Proposes a temporal classification framework for urban parks based on rhythms of visitor use throughout the day and week",
+      "Published in the Journal of the American Planning Association — a top-tier urban planning journal",
+      "Identifies distinct park usage modes (morning exercise, lunchtime refuge, evening recreation) and their planning implications",
+      "Offers actionable planning strategies for designing parks that serve diverse temporal needs of urban residents",
+    ],
+    keywords: ["urban parks", "park planning", "temporal classification", "urban recreation", "public space design", "urban planning"],
   },
   {
     title: "Unequal Effects of the Lockdown on Mental Health in Shanghai: The Moderating and Mediating Role of Neighborhood Environment and Online Social Connections",
@@ -276,6 +358,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     year: 2024,
     citationCount: 1,
     isLeadAuthor: true,
+    highlights: [
+      "Quantifies rising heat and flood risk in countries along China's Belt and Road Initiative (BRI)",
+      "Maps climate hazard exposure for BRI infrastructure and urban populations using satellite and reanalysis data",
+      "Finds that many BRI partner countries face compounding heat and flood risks under future climate scenarios",
+      "Provides a framework for climate risk screening of international development investments",
+    ],
+    keywords: ["Belt and Road Initiative", "climate risk", "heat risk", "flood risk", "infrastructure", "international development"],
   },
   {
     title: "Mega-city development impact on hourly extreme rainfall over the South China Greater Bay Area under near-future climate warming",
@@ -302,6 +391,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 937,
     doi: "10.1038/s41467-020-14386-x",
     isLeadAuthor: false,
+    highlights: [
+      "Provides the first global gridded projections of urban land expansion under all five SSP scenarios through 2100",
+      "Published in Nature Communications with over 900 citations — a foundational dataset for urban climate research",
+      "Projects that global urban land area could triple by 2100 under the highest-growth scenario (SSP5)",
+      "Data widely used by IPCC, World Bank, and national climate adaptation assessments",
+    ],
+    keywords: ["global urban expansion", "SSP scenarios", "urban land projections", "Nature Communications", "IPCC", "urban growth 2100"],
   },
   {
     title: "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
@@ -311,6 +407,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 843,
     doi: "10.1038/s41893-020-0521-x",
     isLeadAuthor: false,
+    highlights: [
+      "Creates a 30-year global urban land-cover dataset at 30-meter resolution using Landsat imagery (1985–2015)",
+      "Published in Nature Sustainability with over 800 citations — a benchmark for urban remote sensing",
+      "Reveals that global urban area expanded by 9,687 km² per year, with China and the U.S. leading growth",
+      "The GAIA (Global Artificial Impervious Area) dataset is freely available and widely used in urban studies",
+    ],
+    keywords: ["global urban change", "Landsat", "remote sensing", "urban land cover", "GAIA dataset", "impervious surface mapping", "30-meter resolution"],
   },
   {
     title: "Research gaps in knowledge of the impact of urban growth on biodiversity",
@@ -320,6 +423,13 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 637,
     doi: "10.1038/s41893-019-0436-6",
     isLeadAuthor: false,
+    highlights: [
+      "Identifies critical research gaps in understanding how urban expansion threatens global biodiversity",
+      "Published in Nature Sustainability with over 600 citations — a landmark review for urban ecology",
+      "Projects that 290,000 km² of natural habitat in biodiversity hotspots will be lost to urbanization by 2030",
+      "Calls for integrating urban growth projections into conservation planning and protected-area design",
+    ],
+    keywords: ["urban biodiversity", "habitat loss", "urban ecology", "conservation planning", "biodiversity hotspots", "urban growth impact"],
   },
   {
     title: "A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas",
@@ -338,6 +448,12 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 150,
     doi: "10.1021/acs.est.9b00666",
     isLeadAuthor: false,
+    highlights: [
+      "Quantifies PM2.5 emissions from re-suspended road dust — a major but often overlooked source of urban air pollution",
+      "Estimates health impacts of road dust exposure using epidemiological dose-response models",
+      "Finds that fugitive road dust accounts for a substantial fraction of total PM2.5 in many Chinese cities",
+    ],
+    keywords: ["PM2.5", "road dust emissions", "air pollution", "urban air quality", "health impacts", "particulate matter"],
   },
   {
     title: "Automatic registration of multisensor images using an integrated spatial and mutual information (SMI) metric",
@@ -380,6 +496,12 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     year: 2024,
     citationCount: 69,
     isLeadAuthor: false,
+    highlights: [
+      "Reveals that polluted urban rivers emit significantly more greenhouse gases (CO₂, CH₄, N₂O) than previously estimated",
+      "Combines global water-quality monitoring data with field measurements across urban waterways",
+      "Calls for urban river pollution control as a climate mitigation strategy",
+    ],
+    keywords: ["urban rivers", "greenhouse gas emissions", "water pollution", "urban waterways", "climate mitigation"],
   },
   {
     title: "Improved snow depth retrieval by integrating microwave brightness temperature and visible/infrared reflectance",
@@ -398,6 +520,12 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 29,
     doi: "10.1021/acs.est.4c14275",
     isLeadAuthor: false,
+    highlights: [
+      "Shows how non-climatic interventions (irrigation, species selection, canopy management) can enhance urban tree cooling",
+      "Provides evidence that targeted tree care strategies can amplify the climate benefits of urban green infrastructure",
+      "Offers practical guidance for city planners to maximize cooling from existing urban canopy",
+    ],
+    keywords: ["urban tree cooling", "green infrastructure", "urban canopy management", "nature-based cooling", "urban forestry"],
   },
   {
     title: "Dual impact of global urban overheating on mortality",
@@ -407,6 +535,12 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 27,
     doi: "10.1038/s41558-025-02303-3",
     isLeadAuthor: false,
+    highlights: [
+      "Quantifies the dual mortality burden of urban overheating: heat-related deaths from both daytime and nighttime excess temperatures",
+      "Published in Nature Climate Change — estimates hundreds of thousands of excess deaths annually attributable to urban heat islands",
+      "Shows that nighttime urban warming is especially deadly because it prevents physiological recovery from daytime heat",
+    ],
+    keywords: ["urban heat mortality", "urban overheating", "heat-related deaths", "nighttime heat", "Nature Climate Change", "public health"],
   },
   {
     title: "Exacerbated heat stress induced by urban browning in the Global South",
