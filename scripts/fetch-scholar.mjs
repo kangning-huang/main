@@ -1,17 +1,14 @@
 #!/usr/bin/env node
 /**
- * Fetch citation data from Google Scholar using Playwright.
- * Uses a real headless browser to avoid bot detection that blocks
- * plain HTTP requests.
+ * Fetch citation data from Google Scholar via SerpAPI.
  *
- * Prerequisites (local):
- *   npm install -D playwright
- *   npx playwright install chromium
+ * Requires a SerpAPI key, provided via:
+ *   - SERP_API_KEY environment variable (GitHub Actions), or
+ *   - config/SerpApi-key.txt file (local development)
  *
  * Output: src/data/scholar-citations.json
  */
 
-import { chromium } from 'playwright';
 import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
@@ -21,164 +18,130 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 // Google Scholar author ID
 const AUTHOR_ID = 's_domssAAAAJ';
 
-function parseNumber(str) {
-  if (!str) return 0;
-  return parseInt(str.replace(/[^0-9]/g, ''), 10) || 0;
+function getApiKey() {
+  if (process.env.SERP_API_KEY) return process.env.SERP_API_KEY;
+
+  const keyFile = join(__dirname, '..', 'config', 'SerpApi-key.txt');
+  if (existsSync(keyFile)) {
+    return readFileSync(keyFile, 'utf-8').trim();
+  }
+
+  throw new Error(
+    'No SerpAPI key found. Set SERP_API_KEY env var or create config/SerpApi-key.txt'
+  );
 }
 
-/** Random delay to appear more human-like. */
-function delay(baseMs) {
-  return new Promise(r => setTimeout(r, baseMs + Math.random() * 1000));
+async function fetchJson(url) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`SerpAPI request failed: ${res.status} ${res.statusText}`);
+  return res.json();
 }
 
 // ── Main ────────────────────────────────────────────────────
 async function main() {
+  const apiKey = getApiKey();
   console.log(`Fetching Google Scholar data for author: ${AUTHOR_ID}`);
 
-  const browser = await chromium.launch({ headless: true });
-  const context = await browser.newContext({
-    viewport: { width: 1920, height: 1080 },
-    locale: 'en-US',
-  });
-  const page = await context.newPage();
+  const citationData = {
+    totalCitations: 0,
+    hIndex: 0,
+    i10Index: 0,
+    citedByYears: {},
+    publications: [],
+    lastUpdated: new Date().toISOString(),
+  };
 
-  try {
-    const citationData = {
-      totalCitations: 0,
-      hIndex: 0,
-      i10Index: 0,
-      citedByYears: {},
-      publications: [],
-      lastUpdated: new Date().toISOString(),
-    };
+  // ── 1. Fetch author profile (metrics + citation graph) ──
+  const profileUrl =
+    `https://serpapi.com/search.json?engine=google_scholar_author` +
+    `&author_id=${AUTHOR_ID}&hl=en&api_key=${apiKey}`;
 
-    // ── 1. Main profile page (metrics + chart) ──────────────
-    const profileUrl = `https://scholar.google.com/citations?user=${AUTHOR_ID}&hl=en`;
-    console.log(`Navigating to profile: ${profileUrl}`);
-    await page.goto(profileUrl, { waitUntil: 'networkidle', timeout: 30000 });
-    await delay(2000);
+  console.log('Fetching author profile...');
+  const profile = await fetchJson(profileUrl);
 
-    // Detect CAPTCHA / blocking
-    const html = await page.content();
-    if (html.includes('unusual traffic') || html.includes('CAPTCHA')) {
-      throw new Error('Google Scholar is blocking access (CAPTCHA detected)');
+  // Citation metrics
+  const table = profile.cited_by?.table;
+  if (table) {
+    // table is an array of objects: [{citations: {all, since_xxxx}}, {h_index: ...}, {i10_index: ...}]
+    for (const row of table) {
+      if (row.citations) citationData.totalCitations = row.citations.all || 0;
+      if (row.h_index) citationData.hIndex = row.h_index.all || 0;
+      if (row.i10_index) citationData.i10Index = row.i10_index.all || 0;
     }
+  }
 
-    // ── 2. Citation metrics table ───────────────────────────
-    // The table has rows: Citations | h-index | i10-index
-    // Each row has two <td class="gsc_rsb_std">: "All" and "Since ..."
-    const metricsValues = await page.$$eval(
-      'td.gsc_rsb_std',
-      cells => cells.map(c => c.textContent?.trim() || '0')
-    );
-
-    if (metricsValues.length >= 6) {
-      citationData.totalCitations = parseNumber(metricsValues[0]);
-      citationData.hIndex = parseNumber(metricsValues[2]);
-      citationData.i10Index = parseNumber(metricsValues[4]);
-    }
-
-    // ── 3. Yearly citation chart ────────────────────────────
-    // The chart bars may not render in headless mode, so parse the
-    // raw HTML for year labels (gsc_g_t) and counts (gsc_g_al)
-    // — the same approach that worked in the original HTTP-based scraper.
-    const pageHtml = await page.content();
-
-    const yearLabelMatches = pageHtml.match(/<span class="gsc_g_t"[^>]*>(\d{4})<\/span>/g) || [];
-    const countLabelMatches = pageHtml.match(/<span class="gsc_g_al">(\d+)<\/span>/g) || [];
-
-    const chartYears = yearLabelMatches.map(m => m.match(/>(\d{4})</)?.[1]);
-    const chartCounts = countLabelMatches.map(m => parseNumber(m.match(/>(\d+)</)?.[1]));
-
-    for (let i = 0; i < chartYears.length && i < chartCounts.length; i++) {
-      if (chartYears[i]) {
-        citationData.citedByYears[chartYears[i]] = chartCounts[i];
+  // Citation graph (yearly)
+  const graph = profile.cited_by?.graph;
+  if (graph) {
+    for (const entry of graph) {
+      if (entry.year && entry.citations != null) {
+        citationData.citedByYears[String(entry.year)] = entry.citations;
       }
     }
-
-    console.log(`Total citations: ${citationData.totalCitations}`);
-    console.log(`h-index: ${citationData.hIndex}`);
-    console.log(`i10-index: ${citationData.i10Index}`);
-
-    // ── 4. Publications (paginated) ─────────────────────────
-    console.log('\nFetching publications...');
-    const allPubs = [];
-    let start = 0;
-    const pageSize = 100;
-
-    while (true) {
-      const pubUrl =
-        `https://scholar.google.com/citations?user=${AUTHOR_ID}&hl=en` +
-        `&cstart=${start}&pagesize=${pageSize}&sortby=pubdate`;
-      console.log(`  Fetching page from offset ${start}...`);
-
-      await page.goto(pubUrl, { waitUntil: 'networkidle', timeout: 30000 });
-      await delay(1500);
-
-      const pubs = await page.$$eval('tr.gsc_a_tr', rows =>
-        rows
-          .map(row => {
-            const titleEl = row.querySelector('a.gsc_a_at');
-            const citEl = row.querySelector('td.gsc_a_c');
-            const yearEl = row.querySelector('td.gsc_a_y span');
-            return {
-              title: titleEl?.textContent?.trim() || '',
-              citationCount:
-                parseInt(
-                  (citEl?.textContent?.trim() || '0').replace(/[^0-9]/g, ''),
-                  10
-                ) || 0,
-              year:
-                parseInt(yearEl?.textContent?.trim() || '0', 10) || 0,
-            };
-          })
-          .filter(p => p.title)
-      );
-
-      console.log(`  Found ${pubs.length} publications`);
-      allPubs.push(...pubs);
-
-      if (pubs.length < pageSize) break;
-
-      // Check for a "next" button that is still enabled
-      const hasNext = await page.$('button#gsc_bpf_more:not([disabled])');
-      if (!hasNext) break;
-
-      start += pageSize;
-      await delay(2000);
-    }
-
-    citationData.publications = allPubs;
-    console.log(`\nTotal publications found: ${allPubs.length}`);
-    console.log(
-      `Years with citation data: ${Object.keys(citationData.citedByYears).sort().join(', ')}`
-    );
-
-    // ── 5. Save JSON (only if we got real data) ────────────
-    const outputDir = join(__dirname, '..', 'src', 'data');
-    if (!existsSync(outputDir)) {
-      mkdirSync(outputDir, { recursive: true });
-    }
-
-    const outputPath = join(outputDir, 'scholar-citations.json');
-
-    if (citationData.totalCitations === 0 && citationData.publications.length === 0) {
-      console.log('\nScraping returned empty data — keeping existing cached file.');
-    } else {
-      writeFileSync(outputPath, JSON.stringify(citationData, null, 2));
-      console.log(`\nSaved citation data to: ${outputPath}`);
-    }
-
-    // ── 6. Update CV citation metrics ───────────────────────
-    updateCvCitations(citationData);
-
-    // ── 7. Missing-publication check ────────────────────────
-    checkMissingPublications(allPubs);
-
-    return citationData;
-  } finally {
-    await browser.close();
   }
+
+  console.log(`Total citations: ${citationData.totalCitations}`);
+  console.log(`h-index: ${citationData.hIndex}`);
+  console.log(`i10-index: ${citationData.i10Index}`);
+
+  // ── 2. Fetch all publications (paginated) ──────────────
+  console.log('\nFetching publications...');
+  const allPubs = [];
+  let start = 0;
+  const pageSize = 100;
+
+  while (true) {
+    const pubUrl =
+      `https://serpapi.com/search.json?engine=google_scholar_author` +
+      `&author_id=${AUTHOR_ID}&hl=en&start=${start}&num=${pageSize}` +
+      `&sortby=pubdate&api_key=${apiKey}`;
+
+    console.log(`  Fetching page from offset ${start}...`);
+    const data = await fetchJson(pubUrl);
+
+    const articles = data.articles || [];
+    for (const art of articles) {
+      allPubs.push({
+        title: art.title || '',
+        citationCount: art.cited_by?.value || 0,
+        year: parseInt(art.year, 10) || 0,
+      });
+    }
+
+    console.log(`  Found ${articles.length} publications`);
+
+    if (articles.length < pageSize) break;
+    start += pageSize;
+  }
+
+  citationData.publications = allPubs;
+  console.log(`\nTotal publications found: ${allPubs.length}`);
+  console.log(
+    `Years with citation data: ${Object.keys(citationData.citedByYears).sort().join(', ')}`
+  );
+
+  // ── 3. Save JSON (only if we got real data) ────────────
+  const outputDir = join(__dirname, '..', 'src', 'data');
+  if (!existsSync(outputDir)) {
+    mkdirSync(outputDir, { recursive: true });
+  }
+
+  const outputPath = join(outputDir, 'scholar-citations.json');
+
+  if (citationData.totalCitations === 0 && citationData.publications.length === 0) {
+    console.log('\nAPI returned empty data — keeping existing cached file.');
+  } else {
+    writeFileSync(outputPath, JSON.stringify(citationData, null, 2));
+    console.log(`\nSaved citation data to: ${outputPath}`);
+  }
+
+  // ── 4. Update CV citation metrics ───────────────────────
+  updateCvCitations(citationData);
+
+  // ── 5. Missing-publication check ────────────────────────
+  checkMissingPublications(allPubs);
+
+  return citationData;
 }
 
 // ── CV citation updater ─────────────────────────────────────
@@ -268,10 +231,8 @@ function checkMissingPublications(scholarPubs) {
   for (const pub of scholarPubs) {
     const norm = normalizeTitle(pub.title);
 
-    // Exact match
     if (curatedTitles.has(norm)) continue;
 
-    // Fuzzy match
     let fuzzy = false;
     for (const curated of curatedTitles) {
       if (titlesSimilar(norm, curated)) {
