@@ -135,20 +135,34 @@ const ADVISEES: Advisee[] = [
   },
   {
     name: "Gabriel Fernandes",
-    classYear: 2027,
+    classYear: 2028,
     project:
       "Research on urban slum heat mitigation in Rio de Janeiro.",
     projectZh:
       "关于里约热内卢城市贫民区高温缓解的研究。",
     achievements: [
       <>Selected as <a href="https://shanghai.nyu.edu/news/students-make-change-millennium-fellowship" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Millennium Fellow</a> (<a href="https://www.un.org/en/academic-impact/millennium-fellowship-class-2025-over-4000-young-leaders-making-sdgs-and-unai" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">United Nations Academic Impact</a>)</>,
-      "Most Popular Project, Undergraduate Symposium, NYU Shanghai (Fall 2025)",
+      <>Most Popular Project, <a href="https://shanghai.nyu.edu/news/putting-research-focus-fall-2025-undergraduate-research-symposium" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Undergraduate Symposium</a>, NYU Shanghai (Fall 2025)</>,
     ],
     achievementsZh: [
       <>入选<a href="https://shanghai.nyu.edu/news/students-make-change-millennium-fellowship" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">千禧年研究员</a>（<a href="https://www.un.org/en/academic-impact/millennium-fellowship-class-2025-over-4000-young-leaders-making-sdgs-and-unai" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">联合国学术影响力</a>）</>,
-      "上海纽约大学本科生研讨会最受欢迎项目奖（2025年秋季）",
+      <><a href="https://shanghai.nyu.edu/news/putting-research-focus-fall-2025-undergraduate-research-symposium" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">上海纽约大学本科生研讨会</a>最受欢迎项目奖（2025年秋季）</>,
     ],
     linkedin: "https://www.linkedin.com/in/gabriel-fernandes-26a1651b4/",
+  },
+  {
+    name: "Xi Bingxin",
+    classYear: 2028,
+    project:
+      "Dean's Undergraduate Research Fund project.",
+    projectZh:
+      "院长本科生研究基金项目。",
+    achievements: [
+      <>Selected as <a href="https://shanghai.nyu.edu/news/students-make-change-millennium-fellowship" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Millennium Fellow</a></>,
+    ],
+    achievementsZh: [
+      <>入选<a href="https://shanghai.nyu.edu/news/students-make-change-millennium-fellowship" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">千禧年研究员</a></>,
+    ],
   },
 ];
 
