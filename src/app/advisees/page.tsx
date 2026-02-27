@@ -135,7 +135,7 @@ const ADVISEES: Advisee[] = [
   },
   {
     name: "Gabriel Fernandes",
-    classYear: 2027,
+    classYear: 2028,
     project:
       "Research on urban slum heat mitigation in Rio de Janeiro.",
     projectZh:
@@ -152,7 +152,7 @@ const ADVISEES: Advisee[] = [
   },
   {
     name: "Xi Bingxin",
-    classYear: 2027,
+    classYear: 2028,
     project:
       "Dean's Undergraduate Research Fund project.",
     projectZh:
