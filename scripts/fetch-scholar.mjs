@@ -120,6 +120,8 @@ async function main() {
     `Years with citation data: ${Object.keys(citationData.citedByYears).sort().join(', ')}`
   );
 
+  const hasValidMetrics = citationData.totalCitations > 0 && citationData.hIndex > 0;
+
   // ── 3. Save JSON (only if we got real data) ────────────
   const outputDir = join(__dirname, '..', 'src', 'data');
   if (!existsSync(outputDir)) {
@@ -128,8 +130,10 @@ async function main() {
 
   const outputPath = join(outputDir, 'scholar-citations.json');
 
-  if (citationData.totalCitations === 0 && citationData.publications.length === 0) {
-    console.log('\nAPI returned empty data — keeping existing cached file.');
+  if (!hasValidMetrics) {
+    console.log('\nCitation metrics are invalid (0) — keeping existing cached file.');
+  } else if (citationData.publications.length === 0) {
+    console.log('\nNo publications returned — keeping existing cached file.');
   } else {
     writeFileSync(outputPath, JSON.stringify(citationData, null, 2));
     console.log(`\nSaved citation data to: ${outputPath}`);
@@ -151,6 +155,11 @@ function formatNumber(n) {
 
 function updateCvCitations(citationData) {
   console.log('\n── Updating CV citation metrics ──');
+
+  if (citationData.totalCitations <= 0 || citationData.hIndex <= 0) {
+    console.log('Fetched citation metrics look invalid (0), skipping CV update to avoid bad overwrite.');
+    return;
+  }
 
   const cvPath = join(__dirname, '..', 'cv', 'CV_Kangning_Huang.tex');
   if (!existsSync(cvPath)) {
