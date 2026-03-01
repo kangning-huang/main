@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4188,
+  "totalCitations": 4195,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -7,15 +7,15 @@
     "2015": 34,
     "2016": 40,
     "2017": 34,
-    "2018": 45,
-    "2019": 54,
+    "2018": 44,
+    "2019": 55,
     "2020": 168,
-    "2021": 459,
-    "2022": 624,
-    "2023": 729,
-    "2024": 791,
-    "2025": 954,
-    "2026": 192
+    "2021": 458,
+    "2022": 625,
+    "2023": 730,
+    "2024": 792,
+    "2025": 953,
+    "2026": 198
   },
   "publications": [
     {
@@ -30,12 +30,12 @@
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 647,
+      "citationCount": 650,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 480,
+      "citationCount": 479,
       "year": 2019
     },
     {
@@ -45,7 +45,7 @@
     },
     {
       "title": "Fugitive Road Dust PM2.5 Emissions and Their Potential Health Impacts",
-      "citationCount": 149,
+      "citationCount": 150,
       "year": 2019
     },
     {
@@ -60,7 +60,7 @@
     },
     {
       "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
-      "citationCount": 104,
+      "citationCount": 105,
       "year": 2018
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
-      "citationCount": 68,
+      "citationCount": 69,
       "year": 2019
     },
     {
@@ -100,7 +100,7 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 29,
+      "citationCount": 31,
       "year": 2025
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 23,
+      "citationCount": 22,
       "year": 2025
     },
     {
@@ -175,7 +175,7 @@
     },
     {
       "title": "Planning for rhythmized urban parks: Temporal park classification and modes of action",
-      "citationCount": 2,
+      "citationCount": 3,
       "year": 2026
     },
     {
@@ -294,5 +294,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-02-27T12:58:34.410Z"
+  "lastUpdated": "2026-03-01T00:39:01.764Z"
 }
