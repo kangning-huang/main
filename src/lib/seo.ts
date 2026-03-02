@@ -3,6 +3,8 @@ import type { Publication } from "@/lib/constants";
 
 const FALLBACK_SITE_URL = "https://kangning-huang.github.io/main";
 
+export const OG_IMAGE_PATH = "/hero-nyc-skyline.jpg";
+
 export function getSiteUrl(): string {
   return (process.env.NEXT_PUBLIC_SITE_URL ?? FALLBACK_SITE_URL).replace(/\/$/, "");
 }
@@ -19,14 +21,44 @@ export function personSchema() {
     "@id": `${canonicalUrl("/")}#person`,
     name: SITE.name,
     givenName: "Kangning",
-    additionalName: "Ken Huang",
+    familyName: "Huang",
+    additionalName: "Ken",
+    description:
+      "Assistant Professor of Environmental Studies at NYU Shanghai researching urbanization, climate change, urban heat islands, and environmental hazards.",
     jobTitle: SITE.title,
     worksFor: {
       "@type": "CollegeOrUniversity",
       name: "NYU Shanghai",
       url: "https://shanghai.nyu.edu",
+      parentOrganization: {
+        "@type": "CollegeOrUniversity",
+        name: "New York University",
+        url: "https://www.nyu.edu",
+      },
     },
+    alumniOf: [
+      {
+        "@type": "CollegeOrUniversity",
+        name: "Yale University",
+        url: "https://www.yale.edu",
+        department: {
+          "@type": "Organization",
+          name: "Yale School of the Environment",
+        },
+      },
+    ],
+    knowsAbout: [
+      "Urban Heat Islands",
+      "Urban Expansion Modeling",
+      "Climate Adaptation",
+      "Remote Sensing",
+      "GIScience",
+      "Urban Scaling Laws",
+      "Environmental Hazards",
+      "Urbanization and Climate Change",
+    ],
     email: `mailto:${SITE.email}`,
+    image: `${canonicalUrl("/")}hero-nyc-skyline.jpg`,
     sameAs: [
       LINKS.googleScholar,
       LINKS.github,
@@ -38,19 +70,56 @@ export function personSchema() {
   };
 }
 
+export function profilePageSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": `${canonicalUrl("/")}#profilepage`,
+    url: canonicalUrl("/"),
+    name: "Kangning (Ken) Huang — Academic Portfolio",
+    dateCreated: "2024-01-01",
+    dateModified: new Date().toISOString().split("T")[0],
+    mainEntity: {
+      "@id": `${canonicalUrl("/")}#person`,
+    },
+  };
+}
+
 export function websiteSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${canonicalUrl("/")}#website`,
     url: canonicalUrl("/"),
-    name: SITE.name,
+    name: "Kangning (Ken) Huang",
+    alternateName: ["Ken Huang", "Kangning Huang", "黄康宁"],
     description:
-      "Portfolio, publications, projects, and teaching information for Kangning (Ken) Huang.",
-    inLanguage: "en-US",
+      "Academic portfolio of Kangning (Ken) Huang — Assistant Professor of Environmental Studies at NYU Shanghai. Publications, research projects, and teaching.",
+    inLanguage: ["en-US", "zh-CN"],
     publisher: {
       "@id": `${canonicalUrl("/")}#person`,
     },
+  };
+}
+
+export function breadcrumbSchema(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: canonicalUrl("/"),
+      },
+      ...items.map((item, i) => ({
+        "@type": "ListItem",
+        position: i + 2,
+        name: item.name,
+        item: canonicalUrl(item.path),
+      })),
+    ],
   };
 }
 
