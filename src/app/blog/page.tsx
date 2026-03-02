@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { LINKS } from "@/lib/constants";
 import { fetchBlogPosts } from "@/lib/blog";
-import Script from "next/script";
-import { canonicalUrl, webPageSchema } from "@/lib/seo";
+import { canonicalUrl, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 import T from "@/components/T";
 
 export const metadata: Metadata = {
@@ -29,12 +28,17 @@ export default async function BlogPage() {
       "Writing on cities, climate, autonomous vehicles, and more by Kangning (Ken) Huang.",
   });
 
+  const breadcrumbs = breadcrumbSchema([{ name: "Blog", path: "/blog" }]);
+
   return (
     <>
-      <Script
-        id="jsonld-blog"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
       <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">

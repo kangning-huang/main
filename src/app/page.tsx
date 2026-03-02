@@ -1,6 +1,5 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import Script from "next/script";
 import {
   SITE,
   LINKS,
@@ -9,7 +8,7 @@ import {
 } from "@/lib/constants";
 import { fetchPublications } from "@/lib/publications";
 import { fetchBlogPosts } from "@/lib/blog";
-import { canonicalUrl, webPageSchema } from "@/lib/seo";
+import { canonicalUrl, webPageSchema, profilePageSchema, OG_IMAGE_PATH } from "@/lib/seo";
 import T from "@/components/T";
 import PublicationCard from "@/components/PublicationCard";
 
@@ -55,17 +54,27 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
 };
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: {
+    absolute: "Kangning (Ken) Huang — Assistant Professor of Environmental Studies, NYU Shanghai",
+  },
   description:
-    "Kangning (Ken) Huang — Assistant Professor at NYU Shanghai. Research on urban heat islands, global urban expansion projections, climate adaptation, flood risk, urban scaling laws, and remote sensing.",
+    "Kangning (Ken) Huang is an Assistant Professor of Environmental Studies at NYU Shanghai. Research on urban heat islands, global urban expansion projections, climate adaptation, flood risk, urban scaling laws, and remote sensing. PhD from Yale University.",
   alternates: {
     canonical: canonicalUrl("/"),
   },
   openGraph: {
-    title: "Kangning (Ken) Huang — NYU Shanghai",
+    title: "Kangning (Ken) Huang — Assistant Professor, NYU Shanghai",
     description:
-      "Assistant Professor of Environmental Studies at NYU Shanghai. Research on urbanization, climate change, urban heat islands, and environmental hazards.",
+      "Assistant Professor of Environmental Studies at NYU Shanghai. Research on urbanization, climate change, urban heat islands, and environmental hazards. Yale PhD.",
     url: canonicalUrl("/"),
+    images: [
+      {
+        url: OG_IMAGE_PATH,
+        width: 1200,
+        height: 630,
+        alt: "Kangning (Ken) Huang — NYU Shanghai",
+      },
+    ],
   },
 };
 
@@ -104,12 +113,17 @@ export default async function Home() {
       "Assistant Professor of Environmental Studies at NYU Shanghai. Research, publications, and projects by Kangning (Ken) Huang.",
   });
 
+  const profileSchema = profilePageSchema();
+
   return (
     <>
-      <Script
-        id="jsonld-homepage"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }}
       />
       {/* ── Hero ── */}
       <section className="relative overflow-hidden">

@@ -4,8 +4,7 @@ import { fetchPublications, getScholarData } from "@/lib/publications";
 import type { Publication } from "@/lib/constants";
 import CitationChart from "@/components/CitationChart";
 import PublicationCard from "@/components/PublicationCard";
-import Script from "next/script";
-import { canonicalUrl, webPageSchema, scholarlyArticleListSchema } from "@/lib/seo";
+import { canonicalUrl, webPageSchema, scholarlyArticleListSchema, breadcrumbSchema } from "@/lib/seo";
 import T from "@/components/T";
 
 export const metadata: Metadata = {
@@ -45,17 +44,21 @@ export default async function PublicationsPage() {
     .map(Number)
     .sort((a, b) => b - a);
 
+  const breadcrumbs = breadcrumbSchema([{ name: "Publications", path: "/publications" }]);
+
   return (
     <>
-      <Script
-        id="jsonld-publications"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
       />
-      <Script
-        id="jsonld-scholarly-articles"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(scholarlyArticleListSchema(publications)) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
       <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">

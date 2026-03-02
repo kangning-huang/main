@@ -1,8 +1,7 @@
 import { SITE } from "@/lib/constants";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import Script from "next/script";
-import { canonicalUrl, webPageSchema } from "@/lib/seo";
+import { canonicalUrl, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 import T from "@/components/T";
 
 export const metadata: Metadata = {
@@ -174,12 +173,17 @@ export default function AdviseesPage() {
       "Students mentored by Kangning Huang at NYU Shanghai, including capstone projects, research achievements, and graduate placements.",
   });
 
+  const breadcrumbs = breadcrumbSchema([{ name: "Advisees", path: "/advisees" }]);
+
   return (
     <>
-      <Script
-        id="jsonld-advisees"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">

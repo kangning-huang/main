@@ -2,8 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { PROJECTS } from "@/lib/constants";
 import type { Metadata } from "next";
-import Script from "next/script";
-import { canonicalUrl, webPageSchema } from "@/lib/seo";
+import { canonicalUrl, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 import T from "@/components/T";
 
 const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
@@ -72,12 +71,17 @@ export default function ProjectsPage() {
       "Research tools, interactive visualizations, and web applications developed by Kangning (Ken) Huang.",
   });
 
+  const breadcrumbs = breadcrumbSchema([{ name: "Projects", path: "/projects" }]);
+
   return (
     <>
-      <Script
-        id="jsonld-projects"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
       <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
         <h1 className="font-display text-4xl text-ink">

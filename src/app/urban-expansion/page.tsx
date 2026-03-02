@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Script from "next/script";
-import { canonicalUrl, webPageSchema } from "@/lib/seo";
+import { canonicalUrl, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 import T from "@/components/T";
 
 export const metadata: Metadata = {
@@ -26,12 +25,20 @@ export default function UrbanExpansionPage() {
       "Global urban land expansion and heat island projections through 2050 from research by Kangning (Ken) Huang.",
   });
 
+  const breadcrumbs = breadcrumbSchema([
+    { name: "Projects", path: "/projects" },
+    { name: "Urban Expansion 2050", path: "/urban-expansion" },
+  ]);
+
   return (
     <>
-      <Script
-        id="jsonld-urban-expansion"
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
       <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
         <h1 className="font-display text-4xl text-ink">
