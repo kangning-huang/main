@@ -179,7 +179,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 466,
     doi: "10.1088/1748-9326/ab4b71",
     isLeadAuthor: true,
-    webUrl: "https://kangning-huang.github.io/main/urban-expansion",
+    webUrl: "https://kangning-huang.cloud/urban-expansion",
     highlights: [
       "Projects global urban land expansion for 2030 and 2050 under shared socioeconomic pathways (SSPs)",
       "Simulates urban heat island intensification driven by land-cover change in over 1,700 cities worldwide",

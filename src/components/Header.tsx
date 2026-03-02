@@ -16,7 +16,7 @@ const NAV_ITEMS = [
 const EXTERNAL_LINKS = [
   { en: "Scholar", zh: "谷歌学术", href: LINKS.googleScholar },
   { en: "GitHub", zh: "GitHub", href: LINKS.github },
-  { en: "CV", zh: "简历", href: "/main/CV_Kangning_Huang.pdf" },
+  { en: "CV", zh: "简历", href: "/CV_Kangning_Huang.pdf" },
 ];
 
 export default function Header() {

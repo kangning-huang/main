@@ -1,7 +1,7 @@
 import { LINKS, SITE, COAUTHOR_LINKS } from "@/lib/constants";
 import type { Publication } from "@/lib/constants";
 
-const FALLBACK_SITE_URL = "https://kangning-huang.github.io/main";
+const FALLBACK_SITE_URL = "https://kangning-huang.cloud";
 
 export const OG_IMAGE_PATH = "/hero-nyc-skyline.jpg";
 

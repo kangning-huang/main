@@ -9,7 +9,7 @@ import { personSchema, websiteSchema, OG_IMAGE_PATH } from "@/lib/seo";
 const GA_ID = "G-M6RRTZHMPZ";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://kangning-huang.github.io/main"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://kangning-huang.cloud"),
   title: {
     default: "Kangning (Ken) Huang — Assistant Professor, NYU Shanghai",
     template: "%s | Kangning (Ken) Huang",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     "urbanization and climate change", "urban climate modeling",
     "Yale PhD", "environmental studies", "NCAR postdoc",
   ],
-  authors: [{ name: "Kangning (Ken) Huang", url: "https://kangning-huang.github.io/main" }],
+  authors: [{ name: "Kangning (Ken) Huang", url: "https://kangning-huang.cloud" }],
   creator: "Kangning (Ken) Huang",
   openGraph: {
     type: "website",
