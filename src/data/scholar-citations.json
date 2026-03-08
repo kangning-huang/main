@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4195,
+  "totalCitations": 4230,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -7,35 +7,35 @@
     "2015": 34,
     "2016": 40,
     "2017": 34,
-    "2018": 44,
-    "2019": 55,
+    "2018": 45,
+    "2019": 54,
     "2020": 168,
     "2021": 458,
     "2022": 625,
     "2023": 730,
     "2024": 792,
-    "2025": 953,
-    "2026": 198
+    "2025": 957,
+    "2026": 229
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 897,
+      "citationCount": 905,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 861,
+      "citationCount": 867,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 650,
+      "citationCount": 654,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 479,
+      "citationCount": 482,
       "year": 2019
     },
     {
@@ -45,7 +45,7 @@
     },
     {
       "title": "Fugitive Road Dust PM2.5 Emissions and Their Potential Health Impacts",
-      "citationCount": 150,
+      "citationCount": 152,
       "year": 2019
     },
     {
@@ -55,12 +55,12 @@
     },
     {
       "title": "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
-      "citationCount": 107,
+      "citationCount": 108,
       "year": 2013
     },
     {
       "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
-      "citationCount": 105,
+      "citationCount": 106,
       "year": 2018
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 72,
+      "citationCount": 74,
       "year": 2024
     },
     {
@@ -94,13 +94,13 @@
       "year": 2020
     },
     {
-      "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 32,
+      "title": "Dual impact of global urban overheating on mortality",
+      "citationCount": 36,
       "year": 2025
     },
     {
-      "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 31,
+      "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
+      "citationCount": 33,
       "year": 2025
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 22,
+      "citationCount": 24,
       "year": 2025
     },
     {
@@ -294,5 +294,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-03-01T00:39:01.764Z"
+  "lastUpdated": "2026-03-08T00:35:16.962Z"
 }
