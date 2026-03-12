@@ -47,6 +47,14 @@ export function personSchema() {
         },
       },
     ],
+    hasCredential: {
+      "@type": "EducationalOccupationalCredential",
+      credentialCategory: "PhD",
+      recognizedBy: {
+        "@type": "CollegeOrUniversity",
+        name: "Yale University",
+      },
+    },
     knowsAbout: [
       "Urban Heat Islands",
       "Urban Expansion Modeling",
@@ -67,6 +75,47 @@ export function personSchema() {
       LINKS.nyuFaculty,
     ],
     url: canonicalUrl("/"),
+  };
+}
+
+export function faqSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: "What does Kangning Huang research?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Kangning (Ken) Huang researches how urbanization and climate change together affect vulnerability to environmental hazards. His work spans urban expansion modeling, urban heat island dynamics, climate adaptation trade-offs, and urban scaling laws. He develops global-scale urbanization scenarios to explore possible urban climate futures.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "Where does Kangning Huang work?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Kangning Huang is an Assistant Professor of Environmental Studies at NYU Shanghai, where he leads the CLUEs (Climate, Land Use, and Environmental Sustainability) Lab. He received his PhD from Yale University's School of the Environment and was a postdoctoral fellow at the National Center for Atmospheric Research (NCAR).",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What is urban heat island research?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Urban heat islands occur when cities become significantly warmer than surrounding rural areas due to built surfaces absorbing and re-emitting heat. Kangning Huang's research shows that global urban expansion could increase heat island intensity by 0.5-2°C by 2050, with nighttime heat stress persisting even when mitigation measures reduce daytime heat islands.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How much will cities expand by 2050?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "According to Kangning Huang's research published in Environmental Research Letters (2019, 480+ citations), global urban land area is projected to increase by 80-180% by 2050 compared to 2015 levels, with significant implications for heat island intensification, biodiversity loss, and food security.",
+        },
+      },
+    ],
   };
 }
 

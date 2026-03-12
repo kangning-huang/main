@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/lib/language-context";
 import "./globals.css";
-import { personSchema, websiteSchema, OG_IMAGE_PATH } from "@/lib/seo";
+import { personSchema, websiteSchema, faqSchema, OG_IMAGE_PATH, canonicalUrl } from "@/lib/seo";
 
 const GA_ID = "G-M6RRTZHMPZ";
 
@@ -51,10 +51,13 @@ export default function RootLayout({
 }>) {
   const jsonLdPerson = personSchema();
   const jsonLdSite = websiteSchema();
+  const jsonLdFaq = faqSchema();
 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* llms.txt discovery for AI crawlers */}
+        <link rel="alternate" type="text/plain" href={`${canonicalUrl("/")}/llms.txt`} title="LLMs.txt" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }}
@@ -62,6 +65,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSite) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdFaq) }}
         />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}

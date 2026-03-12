@@ -196,14 +196,17 @@ export default async function Home() {
       </section>
 
       {/* ── About ── */}
-      <section className="py-16 md:py-20">
+      <section className="py-16 md:py-20" itemScope itemType="https://schema.org/Person" itemID="#person">
+        <meta itemProp="name" content="Kangning (Ken) Huang" />
+        <meta itemProp="jobTitle" content="Assistant Professor of Environmental Studies" />
+        <meta itemProp="affiliation" content="NYU Shanghai" />
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <h2 className="section-heading animate-fade-up">
             <T en="About" zh="关于" />
           </h2>
 
           <div className="mt-8 grid gap-10 md:grid-cols-[1fr,280px]">
-            <div className="space-y-4 animate-fade-up delay-1">
+            <div className="space-y-4 animate-fade-up delay-1" itemProp="description">
               <T
                 en={
                   <p className="text-[15px] leading-[1.75] text-ink-muted">
@@ -257,6 +260,61 @@ export default async function Home() {
                 ))}
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Research Highlights (citable content for AI engines) ── */}
+      <section className="border-t border-rule-faint py-12 md:py-16">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <h2 className="section-heading animate-fade-up">
+            <T en="Research Highlights" zh="研究亮点" />
+          </h2>
+          <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <article className="rounded-xl border border-rule bg-paper p-5">
+              <h3 className="font-display text-lg text-ink">
+                <T en="Global Urban Expansion Projections" zh="全球城市扩张预测" />
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                <T
+                  en="Kangning Huang's research projects that global urban land area will increase by 80–180% by 2050 compared to 2015 levels. This expansion will intensify urban heat islands by 0.5–2°C, affect 1.8 billion additional urban residents, and threaten biodiversity hotspots and agricultural land. Published in Environmental Research Letters (2019), this work has been cited over 480 times."
+                  zh="黄康宁的研究预测，到2050年全球城市用地面积将比2015年增加80–180%。这种扩张将使城市热岛效应增强0.5–2°C，影响额外18亿城市居民，并威胁生物多样性热点地区和农业用地。该研究于2019年发表在Environmental Research Letters上，已被引用超过480次。"
+                />
+              </p>
+            </article>
+            <article className="rounded-xl border border-rule bg-paper p-5">
+              <h3 className="font-display text-lg text-ink">
+                <T en="Urban Heat &amp; Climate Adaptation" zh="城市热环境与气候适应" />
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                <T
+                  en="Research from the CLUEs Lab demonstrates that nighttime heat stress from urban expansion persists even when heat island mitigation measures reduce daytime temperatures. Additionally, declining urban density can partially offset rising population exposure to surface heat extremes caused by climate warming, revealing important trade-offs in urban planning for climate adaptation."
+                  zh="CLUEs实验室的研究表明，即使热岛缓解措施降低了白天温度，城市扩张带来的夜间热应力仍然持续。此外，城市密度下降可以部分抵消气候变暖导致的地表极端热暴露增加，揭示了城市规划应对气候适应的重要权衡。"
+                />
+              </p>
+            </article>
+            <article className="rounded-xl border border-rule bg-paper p-5">
+              <h3 className="font-display text-lg text-ink">
+                <T en="Urban Scaling Laws" zh="城市标度规律" />
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                <T
+                  en="Published in Nature Cities (2025), Kangning Huang's work on nested economies of scale reveals that cities exhibit nonlinear scaling relationships between population and built mass across 3,000+ cities worldwide. These nested scaling patterns provide new insights into how cities grow physically and how urban form relates to resource consumption."
+                  zh="黄康宁2025年发表在Nature Cities上的研究揭示了全球3000多个城市中人口与建成质量之间的非线性标度关系。这些嵌套标度模式为理解城市物理增长方式以及城市形态与资源消耗的关系提供了新见解。"
+                />
+              </p>
+            </article>
+            <article className="rounded-xl border border-rule bg-paper p-5">
+              <h3 className="font-display text-lg text-ink">
+                <T en="Urban Forests &amp; Environmental Risk" zh="城市森林与环境风险" />
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                <T
+                  en="Writing in Nature Climate Change (2022), Kangning Huang analyzed how climate change threatens urban forests — a critical tool for mitigating urban heat islands. His research also addresses 3D urban flood risk by integrating building height and protection standards into global flood risk assessments, revealing how vertical urban development changes flood vulnerability."
+                  zh="黄康宁在2022年Nature Climate Change上的文章分析了气候变化如何威胁城市森林——缓解城市热岛效应的关键工具。他的研究还通过将建筑高度和防护标准纳入全球洪水风险评估，揭示了垂直城市发展如何改变洪水脆弱性。"
+                />
+              </p>
+            </article>
           </div>
         </div>
       </section>
