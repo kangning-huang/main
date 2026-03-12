@@ -1,0 +1,55 @@
+# Kangning (Ken) Huang — Academic Portfolio
+
+> Assistant Professor of Environmental Studies at NYU Shanghai. Research on urbanization, climate change, urban heat islands, and environmental hazards. PhD from Yale University.
+
+## Site Structure
+
+- [Home](https://kangning-huang.github.io/main/): Overview, bio, selected publications, featured projects, and latest writing
+- [Publications](https://kangning-huang.github.io/main/publications): Full list of peer-reviewed publications with citation metrics
+- [Projects](https://kangning-huang.github.io/main/projects): Academic research tools and side projects
+- [Blog](https://kangning-huang.github.io/main/blog): Writing on cities, climate, autonomous vehicles, and more
+- [Advisees](https://kangning-huang.github.io/main/advisees): Current and past students and their research
+- [Urban Expansion 2050](https://kangning-huang.github.io/main/urban-expansion): Interactive visualization of projected global urban land expansion
+
+## About Kangning (Ken) Huang
+
+Kangning (Ken) Huang is an Assistant Professor of Environmental Studies at NYU Shanghai, where he leads the CLUEs (Climate, Land Use, and Environmental Sustainability) Lab. He received his PhD from Yale University, School of the Environment in 2020, and was an Advanced Study Program Postdoctoral Fellow at the National Center for Atmospheric Research (NCAR).
+
+His research focuses on how the combination of urbanization and climate change affects vulnerability and adaptability to environmental hazards. By developing global-scale urbanization scenarios, he explores a broad range of possible urban climate futures and the interventions needed to achieve the more sustainable ones.
+
+His work spans urban expansion modeling, urban heat island dynamics, climate adaptation trade-offs, and the scaling laws governing cities. His research has been funded by NASA, NSF, and other sponsors, and featured in Yale News, Scientific American, and E&E News.
+
+## Research Areas
+
+- Urbanization and global urban expansion modeling
+- Extreme heat events and urban heat island dynamics
+- Climate adaptation and environmental hazard vulnerability
+- Remote sensing for urban and environmental monitoring
+- GIScience and geospatial analysis
+- Urban scaling laws and city growth patterns
+
+## Key Publications
+
+- "Projecting global urban land expansion and heat island intensification through 2050" (Environmental Research Letters, 2019) — 480+ citations. Projects that urban land area will increase by 80–180% by 2050, with significant heat island intensification.
+- "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation" (Environmental Research Letters, 2024) — Shows that urban expansion alone can increase nighttime heat exposure even when heat island intensity is reduced.
+- "Urban forests facing climate risks" (Nature Climate Change, 2022) — Analyzes how climate change threatens urban forests, a key tool for heat mitigation.
+- "Declining urban density attenuates rising population exposure to surface heat extremes" (Environmental Research Letters, 2024) — Demonstrates that decreasing urban density can partially offset rising heat exposure from climate warming.
+- "Nested economies of scale in global city mass" (Nature Cities, 2025) — Reveals nested scaling relationships between urban populations and their built environments across 3,000+ cities.
+
+## Affiliations
+
+- NYU Shanghai — Assistant Professor of Environmental Studies
+- Yale University — PhD, School of the Environment (2020)
+- National Center for Atmospheric Research (NCAR) — Former ASP Postdoctoral Fellow
+
+## Contact
+
+- Email: kangning.huang@nyu.edu
+- Google Scholar: https://scholar.google.com/citations?user=s_domssAAAAJ&hl=en
+- GitHub: https://github.com/kangning-huang
+- Substack: https://kangninghuang.substack.com
+- NYU Faculty Page: https://shanghai.nyu.edu/academics/faculty/directory/kangning-ken-huang
+
+## Optional
+
+- For the full detailed version: https://kangning-huang.github.io/main/llms-full.txt

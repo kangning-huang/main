@@ -35,6 +35,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly" as const,
       priority: 0.8,
     },
+    {
+      path: "/llms.txt",
+      changeFrequency: "monthly" as const,
+      priority: 0.5,
+    },
   ];
 
   return urls.map((entry) => ({
