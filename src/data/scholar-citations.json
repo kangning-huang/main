@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4230,
+  "totalCitations": 4245,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -14,13 +14,13 @@
     "2022": 625,
     "2023": 730,
     "2024": 792,
-    "2025": 957,
-    "2026": 229
+    "2025": 958,
+    "2026": 243
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 905,
+      "citationCount": 910,
       "year": 2020
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 654,
+      "citationCount": 657,
       "year": 2020
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 74,
+      "citationCount": 75,
       "year": 2024
     },
     {
@@ -95,12 +95,12 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 36,
+      "citationCount": 39,
       "year": 2025
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 33,
+      "citationCount": 36,
       "year": 2025
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 24,
+      "citationCount": 23,
       "year": 2025
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "title": "Urban forests facing climate risks",
-      "citationCount": 17,
+      "citationCount": 18,
       "year": 2022
     },
     {
@@ -294,5 +294,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-03-08T00:35:16.962Z"
+  "lastUpdated": "2026-03-15T00:39:46.446Z"
 }
