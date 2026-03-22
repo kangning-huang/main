@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4245,
+  "totalCitations": 4264,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -14,28 +14,28 @@
     "2022": 625,
     "2023": 730,
     "2024": 792,
-    "2025": 958,
-    "2026": 243
+    "2025": 959,
+    "2026": 261
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 910,
+      "citationCount": 911,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 867,
+      "citationCount": 872,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 657,
+      "citationCount": 662,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 482,
+      "citationCount": 485,
       "year": 2019
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 75,
+      "citationCount": 76,
       "year": 2024
     },
     {
@@ -95,12 +95,12 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 39,
+      "citationCount": 40,
       "year": 2025
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 36,
+      "citationCount": 37,
       "year": 2025
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 23,
+      "citationCount": 24,
       "year": 2025
     },
     {
@@ -184,6 +184,11 @@
       "year": 2025
     },
     {
+      "title": "Measuring rising heat and flood risk along the belt-and-road initiative",
+      "citationCount": 2,
+      "year": 2024
+    },
+    {
       "title": "Augmented compound urban temperature extreme (ACUTE) from climate change and urban expansion: global risk and adaptation",
       "citationCount": 2,
       "year": 2020
@@ -192,11 +197,6 @@
       "title": "Rapid probabilistic inundation mapping using local thresholds and sentinel-1 sar data on google earth engine",
       "citationCount": 1,
       "year": 2025
-    },
-    {
-      "title": "Measuring rising heat and flood risk along the belt-and-road initiative",
-      "citationCount": 1,
-      "year": 2024
     },
     {
       "title": "The Climate Risks of Global China: Measuring Rising Heat and Flood Risk Along the Belt-and-Road Initiative",
@@ -212,6 +212,11 @@
       "title": "Improved snow depth retrieval by combining SSM/I and MODIS data with SMO regression",
       "citationCount": 1,
       "year": 2013
+    },
+    {
+      "title": "Social media as a sensor: unraveling nonlinear drivers of perceived thermal comfort in Shanghai",
+      "citationCount": 0,
+      "year": 2026
     },
     {
       "title": "From Cells to Cities: Extending Kleiber’s Law from Biology to Urban Systems",
@@ -294,5 +299,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-03-15T00:39:46.446Z"
+  "lastUpdated": "2026-03-22T00:37:07.460Z"
 }
