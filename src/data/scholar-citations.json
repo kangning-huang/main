@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4264,
+  "totalCitations": 4280,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -11,31 +11,31 @@
     "2019": 54,
     "2020": 168,
     "2021": 458,
-    "2022": 625,
-    "2023": 730,
+    "2022": 626,
+    "2023": 732,
     "2024": 792,
-    "2025": 959,
-    "2026": 261
+    "2025": 957,
+    "2026": 275
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 911,
+      "citationCount": 914,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 872,
+      "citationCount": 877,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 662,
+      "citationCount": 664,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 485,
+      "citationCount": 486,
       "year": 2019
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 76,
+      "citationCount": 77,
       "year": 2024
     },
     {
@@ -89,18 +89,18 @@
       "year": 2015
     },
     {
+      "title": "Dual impact of global urban overheating on mortality",
+      "citationCount": 41,
+      "year": 2025
+    },
+    {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity. Nat Sustain 3: 16–24",
       "citationCount": 41,
       "year": 2020
     },
     {
-      "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 40,
-      "year": 2025
-    },
-    {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 37,
+      "citationCount": 38,
       "year": 2025
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "title": "Urban forests facing climate risks",
-      "citationCount": 18,
+      "citationCount": 19,
       "year": 2022
     },
     {
@@ -159,14 +159,14 @@
       "year": 2019
     },
     {
+      "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
+      "citationCount": 5,
+      "year": 2025
+    },
+    {
       "title": "Estimations of anthropogenic dust emissions at global scale from 2007 to 2010",
       "citationCount": 5,
       "year": 2017
-    },
-    {
-      "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
-      "citationCount": 4,
-      "year": 2025
     },
     {
       "title": "Short-Term Effect of Air Pollution on Daily Hospital Visits for Anxiety Disorders in Southern China with Low Pollution Concentrations",
@@ -299,5 +299,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-03-22T00:37:07.460Z"
+  "lastUpdated": "2026-03-29T00:40:55.807Z"
 }
