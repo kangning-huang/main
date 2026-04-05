@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4280,
+  "totalCitations": 4314,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -10,32 +10,32 @@
     "2018": 45,
     "2019": 54,
     "2020": 168,
-    "2021": 458,
+    "2021": 459,
     "2022": 626,
-    "2023": 732,
-    "2024": 792,
-    "2025": 957,
-    "2026": 275
+    "2023": 731,
+    "2024": 793,
+    "2025": 956,
+    "2026": 309
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 914,
+      "citationCount": 922,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 877,
+      "citationCount": 883,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 664,
+      "citationCount": 667,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 486,
+      "citationCount": 491,
       "year": 2019
     },
     {
@@ -50,7 +50,7 @@
     },
     {
       "title": "Automatic registration of multisensor images using an integrated spatial and mutual information (SMI) metric",
-      "citationCount": 110,
+      "citationCount": 111,
       "year": 2013
     },
     {
@@ -60,18 +60,18 @@
     },
     {
       "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
-      "citationCount": 106,
+      "citationCount": 107,
       "year": 2018
+    },
+    {
+      "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
+      "citationCount": 80,
+      "year": 2024
     },
     {
       "title": "High‐resolution gridded population projections for China under the shared socioeconomic pathways",
       "citationCount": 78,
       "year": 2020
-    },
-    {
-      "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 77,
-      "year": 2024
     },
     {
       "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
@@ -80,7 +80,7 @@
     },
     {
       "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 66,
+      "citationCount": 67,
       "year": 2021
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 41,
+      "citationCount": 42,
       "year": 2025
     },
     {
@@ -100,13 +100,18 @@
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 38,
+      "citationCount": 39,
       "year": 2025
     },
     {
       "title": "Investigating future urbanization’s impact on local climate under different climate change scenarios in MEGA-urban regions: A case study of the Pearl River Delta, China",
       "citationCount": 28,
       "year": 2020
+    },
+    {
+      "title": "Exacerbated heat stress induced by urban browning in the Global South",
+      "citationCount": 27,
+      "year": 2025
     },
     {
       "title": "Facilitating urban climate forecasts in rapidly urbanizing regions with land-use change modeling",
@@ -117,11 +122,6 @@
       "title": "Multi-sensor image registration by combining local self-similarity matching and mutual information",
       "citationCount": 26,
       "year": 2018
-    },
-    {
-      "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 24,
-      "year": 2025
     },
     {
       "title": "Mega-city development impact on hourly extreme rainfall over the South China Greater Bay Area under near-future climate warming",
@@ -194,6 +194,11 @@
       "year": 2020
     },
     {
+      "title": "Social media as a sensor: unraveling nonlinear drivers of perceived thermal comfort in Shanghai",
+      "citationCount": 1,
+      "year": 2026
+    },
+    {
       "title": "Rapid probabilistic inundation mapping using local thresholds and sentinel-1 sar data on google earth engine",
       "citationCount": 1,
       "year": 2025
@@ -212,11 +217,6 @@
       "title": "Improved snow depth retrieval by combining SSM/I and MODIS data with SMO regression",
       "citationCount": 1,
       "year": 2013
-    },
-    {
-      "title": "Social media as a sensor: unraveling nonlinear drivers of perceived thermal comfort in Shanghai",
-      "citationCount": 0,
-      "year": 2026
     },
     {
       "title": "From Cells to Cities: Extending Kleiber’s Law from Biology to Urban Systems",
@@ -299,5 +299,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-03-29T00:40:55.807Z"
+  "lastUpdated": "2026-04-05T00:41:39.207Z"
 }
