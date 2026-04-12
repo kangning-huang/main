@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4314,
+  "totalCitations": 4332,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -11,31 +11,31 @@
     "2019": 54,
     "2020": 168,
     "2021": 459,
-    "2022": 626,
+    "2022": 625,
     "2023": 731,
-    "2024": 793,
-    "2025": 956,
-    "2026": 309
+    "2024": 794,
+    "2025": 955,
+    "2026": 328
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 922,
+      "citationCount": 926,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 883,
+      "citationCount": 886,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 667,
+      "citationCount": 671,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 491,
+      "citationCount": 492,
       "year": 2019
     },
     {
@@ -85,12 +85,12 @@
     },
     {
       "title": "Improved snow depth retrieval by integrating microwave brightness temperature and visible/infrared reflectance",
-      "citationCount": 63,
+      "citationCount": 64,
       "year": 2015
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 42,
+      "citationCount": 47,
       "year": 2025
     },
     {
@@ -299,5 +299,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-04-05T00:41:39.207Z"
+  "lastUpdated": "2026-04-12T00:43:39.201Z"
 }
