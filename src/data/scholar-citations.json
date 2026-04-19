@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4332,
+  "totalCitations": 4347,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -11,36 +11,36 @@
     "2019": 54,
     "2020": 168,
     "2021": 459,
-    "2022": 625,
+    "2022": 626,
     "2023": 731,
-    "2024": 794,
-    "2025": 955,
-    "2026": 328
+    "2024": 795,
+    "2025": 956,
+    "2026": 339
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 926,
+      "citationCount": 928,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 886,
+      "citationCount": 884,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 671,
+      "citationCount": 674,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 492,
+      "citationCount": 496,
       "year": 2019
     },
     {
       "title": "A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas",
-      "citationCount": 168,
+      "citationCount": 169,
       "year": 2012
     },
     {
@@ -65,7 +65,7 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 80,
+      "citationCount": 82,
       "year": 2024
     },
     {
@@ -90,18 +90,18 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 47,
+      "citationCount": 50,
+      "year": 2025
+    },
+    {
+      "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
+      "citationCount": 41,
       "year": 2025
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity. Nat Sustain 3: 16–24",
       "citationCount": 41,
       "year": 2020
-    },
-    {
-      "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 39,
-      "year": 2025
     },
     {
       "title": "Investigating future urbanization’s impact on local climate under different climate change scenarios in MEGA-urban regions: A case study of the Pearl River Delta, China",
@@ -299,5 +299,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-04-12T00:43:39.201Z"
+  "lastUpdated": "2026-04-19T00:44:57.892Z"
 }
