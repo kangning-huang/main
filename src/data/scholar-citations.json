@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4347,
+  "totalCitations": 4382,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -10,42 +10,42 @@
     "2018": 45,
     "2019": 54,
     "2020": 168,
-    "2021": 459,
-    "2022": 626,
-    "2023": 731,
-    "2024": 795,
+    "2021": 460,
+    "2022": 627,
+    "2023": 735,
+    "2024": 798,
     "2025": 956,
-    "2026": 339
+    "2026": 365
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 928,
+      "citationCount": 934,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 884,
+      "citationCount": 890,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 674,
+      "citationCount": 682,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 496,
+      "citationCount": 502,
       "year": 2019
     },
     {
       "title": "A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas",
-      "citationCount": 169,
+      "citationCount": 171,
       "year": 2012
     },
     {
       "title": "Fugitive Road Dust PM2.5 Emissions and Their Potential Health Impacts",
-      "citationCount": 152,
+      "citationCount": 153,
       "year": 2019
     },
     {
@@ -55,7 +55,7 @@
     },
     {
       "title": "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
-      "citationCount": 108,
+      "citationCount": 109,
       "year": 2013
     },
     {
@@ -90,12 +90,12 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 50,
+      "citationCount": 51,
       "year": 2025
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 41,
+      "citationCount": 43,
       "year": 2025
     },
     {
@@ -104,14 +104,14 @@
       "year": 2020
     },
     {
+      "title": "Exacerbated heat stress induced by urban browning in the Global South",
+      "citationCount": 28,
+      "year": 2025
+    },
+    {
       "title": "Investigating future urbanization’s impact on local climate under different climate change scenarios in MEGA-urban regions: A case study of the Pearl River Delta, China",
       "citationCount": 28,
       "year": 2020
-    },
-    {
-      "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 27,
-      "year": 2025
     },
     {
       "title": "Facilitating urban climate forecasts in rapidly urbanizing regions with land-use change modeling",
@@ -150,7 +150,7 @@
     },
     {
       "title": "Moderating AC usage can reduce thermal disparity between indoor and outdoor environments",
-      "citationCount": 6,
+      "citationCount": 7,
       "year": 2024
     },
     {
@@ -299,5 +299,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-04-19T00:44:57.892Z"
+  "lastUpdated": "2026-04-26T00:47:35.566Z"
 }
