@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4382,
+  "totalCitations": 4399,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -9,43 +9,43 @@
     "2017": 34,
     "2018": 45,
     "2019": 54,
-    "2020": 168,
+    "2020": 169,
     "2021": 460,
-    "2022": 627,
-    "2023": 735,
-    "2024": 798,
+    "2022": 626,
+    "2023": 736,
+    "2024": 797,
     "2025": 956,
-    "2026": 365
+    "2026": 382
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 934,
+      "citationCount": 936,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 890,
+      "citationCount": 888,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 682,
+      "citationCount": 685,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 502,
+      "citationCount": 506,
       "year": 2019
     },
     {
       "title": "A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas",
-      "citationCount": 171,
+      "citationCount": 172,
       "year": 2012
     },
     {
       "title": "Fugitive Road Dust PM2.5 Emissions and Their Potential Health Impacts",
-      "citationCount": 153,
+      "citationCount": 155,
       "year": 2019
     },
     {
@@ -65,7 +65,7 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 82,
+      "citationCount": 88,
       "year": 2024
     },
     {
@@ -90,12 +90,12 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 51,
+      "citationCount": 52,
       "year": 2025
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 43,
+      "citationCount": 42,
       "year": 2025
     },
     {
@@ -150,7 +150,7 @@
     },
     {
       "title": "Moderating AC usage can reduce thermal disparity between indoor and outdoor environments",
-      "citationCount": 7,
+      "citationCount": 8,
       "year": 2024
     },
     {
@@ -299,5 +299,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-04-26T00:47:35.566Z"
+  "lastUpdated": "2026-05-03T00:51:58.549Z"
 }
