@@ -1,51 +1,51 @@
 {
-  "totalCitations": 4399,
+  "totalCitations": 4434,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
     "2014": 21,
     "2015": 34,
-    "2016": 40,
+    "2016": 41,
     "2017": 34,
     "2018": 45,
     "2019": 54,
     "2020": 169,
     "2021": 460,
-    "2022": 626,
-    "2023": 736,
-    "2024": 797,
-    "2025": 956,
-    "2026": 382
+    "2022": 628,
+    "2023": 739,
+    "2024": 795,
+    "2025": 958,
+    "2026": 411
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 936,
+      "citationCount": 942,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 888,
+      "citationCount": 898,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 685,
+      "citationCount": 687,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 506,
+      "citationCount": 509,
       "year": 2019
     },
     {
       "title": "A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas",
-      "citationCount": 172,
+      "citationCount": 174,
       "year": 2012
     },
     {
       "title": "Fugitive Road Dust PM2.5 Emissions and Their Potential Health Impacts",
-      "citationCount": 155,
+      "citationCount": 156,
       "year": 2019
     },
     {
@@ -75,12 +75,12 @@
     },
     {
       "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
-      "citationCount": 69,
+      "citationCount": 71,
       "year": 2019
     },
     {
       "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 67,
+      "citationCount": 69,
       "year": 2021
     },
     {
@@ -90,12 +90,12 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 52,
+      "citationCount": 53,
       "year": 2025
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 42,
+      "citationCount": 43,
       "year": 2025
     },
     {
@@ -105,13 +105,18 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 28,
+      "citationCount": 30,
       "year": 2025
     },
     {
       "title": "Investigating future urbanization’s impact on local climate under different climate change scenarios in MEGA-urban regions: A case study of the Pearl River Delta, China",
-      "citationCount": 28,
+      "citationCount": 29,
       "year": 2020
+    },
+    {
+      "title": "Multi-sensor image registration by combining local self-similarity matching and mutual information",
+      "citationCount": 27,
+      "year": 2018
     },
     {
       "title": "Facilitating urban climate forecasts in rapidly urbanizing regions with land-use change modeling",
@@ -119,13 +124,8 @@
       "year": 2021
     },
     {
-      "title": "Multi-sensor image registration by combining local self-similarity matching and mutual information",
-      "citationCount": 26,
-      "year": 2018
-    },
-    {
       "title": "Mega-city development impact on hourly extreme rainfall over the South China Greater Bay Area under near-future climate warming",
-      "citationCount": 22,
+      "citationCount": 23,
       "year": 2023
     },
     {
@@ -299,5 +299,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-05-03T00:51:58.549Z"
+  "lastUpdated": "2026-05-10T00:53:45.051Z"
 }
