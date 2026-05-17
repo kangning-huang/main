@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4434,
+  "totalCitations": 4471,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -10,32 +10,32 @@
     "2018": 45,
     "2019": 54,
     "2020": 169,
-    "2021": 460,
-    "2022": 628,
-    "2023": 739,
-    "2024": 795,
-    "2025": 958,
-    "2026": 411
+    "2021": 461,
+    "2022": 629,
+    "2023": 741,
+    "2024": 797,
+    "2025": 957,
+    "2026": 443
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 942,
+      "citationCount": 949,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 898,
+      "citationCount": 902,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 687,
+      "citationCount": 694,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 509,
+      "citationCount": 513,
       "year": 2019
     },
     {
@@ -45,13 +45,18 @@
     },
     {
       "title": "Fugitive Road Dust PM2.5 Emissions and Their Potential Health Impacts",
-      "citationCount": 156,
+      "citationCount": 157,
       "year": 2019
     },
     {
       "title": "Automatic registration of multisensor images using an integrated spatial and mutual information (SMI) metric",
-      "citationCount": 111,
+      "citationCount": 112,
       "year": 2013
+    },
+    {
+      "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
+      "citationCount": 109,
+      "year": 2018
     },
     {
       "title": "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
@@ -59,13 +64,8 @@
       "year": 2013
     },
     {
-      "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
-      "citationCount": 107,
-      "year": 2018
-    },
-    {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 88,
+      "citationCount": 90,
       "year": 2024
     },
     {
@@ -75,12 +75,12 @@
     },
     {
       "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
-      "citationCount": 71,
+      "citationCount": 72,
       "year": 2019
     },
     {
       "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 69,
+      "citationCount": 70,
       "year": 2021
     },
     {
@@ -90,12 +90,12 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 53,
+      "citationCount": 54,
       "year": 2025
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 43,
+      "citationCount": 45,
       "year": 2025
     },
     {
@@ -105,12 +105,12 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 30,
+      "citationCount": 32,
       "year": 2025
     },
     {
       "title": "Investigating future urbanization’s impact on local climate under different climate change scenarios in MEGA-urban regions: A case study of the Pearl River Delta, China",
-      "citationCount": 29,
+      "citationCount": 30,
       "year": 2020
     },
     {
@@ -169,14 +169,14 @@
       "year": 2017
     },
     {
+      "title": "Planning for rhythmized urban parks: Temporal park classification and modes of action",
+      "citationCount": 4,
+      "year": 2026
+    },
+    {
       "title": "Short-Term Effect of Air Pollution on Daily Hospital Visits for Anxiety Disorders in Southern China with Low Pollution Concentrations",
       "citationCount": 4,
       "year": 2025
-    },
-    {
-      "title": "Planning for rhythmized urban parks: Temporal park classification and modes of action",
-      "citationCount": 3,
-      "year": 2026
     },
     {
       "title": "Unequal effects of the lockdown on mental health in Shanghai: the moderating and mediating role of neighborhood environment and online social connections",
@@ -299,5 +299,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-05-10T00:53:45.051Z"
+  "lastUpdated": "2026-05-17T00:55:29.533Z"
 }
