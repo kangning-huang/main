@@ -172,6 +172,21 @@ export interface Publication {
 export const CURATED_PUBLICATIONS: Publication[] = [
   // ── First / last author ──────────────────────────────────────
   {
+    title: "Stage-dependent scaling of travel distance shaped by 3D urban form",
+    authors: "Yangzi Che, Guangdong Li, Xiaoping Liu, Libang Ma, Kangning Huang",
+    venue: "submitted to PNAS",
+    year: 2026,
+    citationCount: 0,
+    isLeadAuthor: true,
+    highlights: [
+      "Applies a floor-area-weighted 3D mobility-distance metric to 6,582 cities and over 650 million buildings across 173 countries, showing that vertical urban structure can either compress or stretch inferred mobility space",
+      "Finds 3D mobility distances are smaller than 2D estimates in 79% of cities due to vertical intensification, but rapidly urbanizing megacities such as Shanghai and New Delhi exhibit 'volumetric sprawl' where vertical growth exceeds 2D estimates by 9–12%",
+      "Identifies stage-dependent scaling breakpoints at ~2.7 million residents and ~$12,476 per capita, beyond which the mobility-distance scaling exponent declines from 0.52 to 0.36, marking a transition toward more efficient urban organization",
+      "Shows that the mitigation potential of vertical urban form is strongest during early-to-mid development, with marginal gains diminishing in high-income large cities where volumetric distribution and spatial organization become the primary determinants of mobility efficiency",
+    ],
+    keywords: ["3D urban form", "urban scaling", "mobility distance", "transport energy", "sustainable urbanization", "vertical urban growth", "volumetric sprawl"],
+  },
+  {
     title: "Projecting global urban land expansion and heat island intensification through 2050",
     authors: "Kangning Huang, Xia Li, Xiaoping Liu, Karen C. Seto",
     venue: "Environmental Research Letters",
