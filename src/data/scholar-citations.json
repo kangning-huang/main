@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4471,
+  "totalCitations": 4494,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -10,32 +10,32 @@
     "2018": 45,
     "2019": 54,
     "2020": 169,
-    "2021": 461,
+    "2021": 460,
     "2022": 629,
     "2023": 741,
-    "2024": 797,
-    "2025": 957,
-    "2026": 443
+    "2024": 801,
+    "2025": 961,
+    "2026": 457
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 949,
+      "citationCount": 962,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 902,
+      "citationCount": 905,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 694,
+      "citationCount": 696,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 513,
+      "citationCount": 515,
       "year": 2019
     },
     {
@@ -65,7 +65,7 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 90,
+      "citationCount": 92,
       "year": 2024
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 54,
+      "citationCount": 56,
       "year": 2025
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 32,
+      "citationCount": 31,
       "year": 2025
     },
     {
@@ -299,5 +299,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-05-17T00:55:29.533Z"
+  "lastUpdated": "2026-05-24T00:57:24.359Z"
 }
