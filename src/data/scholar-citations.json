@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4494,
+  "totalCitations": 4519,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -8,34 +8,34 @@
     "2016": 41,
     "2017": 34,
     "2018": 45,
-    "2019": 54,
+    "2019": 53,
     "2020": 169,
     "2021": 460,
-    "2022": 629,
-    "2023": 741,
-    "2024": 801,
-    "2025": 961,
-    "2026": 457
+    "2022": 627,
+    "2023": 740,
+    "2024": 800,
+    "2025": 963,
+    "2026": 483
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 962,
+      "citationCount": 966,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 905,
+      "citationCount": 910,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 696,
+      "citationCount": 703,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 515,
+      "citationCount": 516,
       "year": 2019
     },
     {
@@ -55,7 +55,7 @@
     },
     {
       "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
-      "citationCount": 109,
+      "citationCount": 110,
       "year": 2018
     },
     {
@@ -90,12 +90,12 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 56,
+      "citationCount": 57,
       "year": 2025
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 45,
+      "citationCount": 46,
       "year": 2025
     },
     {
@@ -105,12 +105,12 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 31,
+      "citationCount": 35,
       "year": 2025
     },
     {
       "title": "Investigating future urbanization’s impact on local climate under different climate change scenarios in MEGA-urban regions: A case study of the Pearl River Delta, China",
-      "citationCount": 30,
+      "citationCount": 31,
       "year": 2020
     },
     {
@@ -299,5 +299,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-05-24T00:57:24.359Z"
+  "lastUpdated": "2026-05-31T01:01:08.826Z"
 }
