@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4519,
+  "totalCitations": 4529,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -10,32 +10,32 @@
     "2018": 45,
     "2019": 53,
     "2020": 169,
-    "2021": 460,
-    "2022": 627,
-    "2023": 740,
-    "2024": 800,
-    "2025": 963,
-    "2026": 483
+    "2021": 461,
+    "2022": 628,
+    "2023": 739,
+    "2024": 803,
+    "2025": 967,
+    "2026": 486
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 966,
+      "citationCount": 968,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 910,
+      "citationCount": 909,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 703,
+      "citationCount": 706,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 516,
+      "citationCount": 520,
       "year": 2019
     },
     {
@@ -90,22 +90,22 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 57,
+      "citationCount": 58,
       "year": 2025
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 46,
+      "citationCount": 45,
       "year": 2025
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity. Nat Sustain 3: 16–24",
-      "citationCount": 41,
+      "citationCount": 43,
       "year": 2020
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 35,
+      "citationCount": 33,
       "year": 2025
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "title": "Long‐term monitoring and evaluation of land development in a reclamation area under rapid urbanization: A case‐study in Qiantang New District, China",
-      "citationCount": 12,
+      "citationCount": 13,
       "year": 2021
     },
     {
@@ -150,7 +150,7 @@
     },
     {
       "title": "Moderating AC usage can reduce thermal disparity between indoor and outdoor environments",
-      "citationCount": 8,
+      "citationCount": 9,
       "year": 2024
     },
     {
@@ -217,6 +217,11 @@
       "title": "Improved snow depth retrieval by combining SSM/I and MODIS data with SMO regression",
       "citationCount": 1,
       "year": 2013
+    },
+    {
+      "title": "Unveiling the causal link between informal settlement demolition and urban cooling",
+      "citationCount": 0,
+      "year": 2026
     },
     {
       "title": "From Cells to Cities: Extending Kleiber’s Law from Biology to Urban Systems",
@@ -299,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-05-31T01:01:08.826Z"
+  "lastUpdated": "2026-06-07T01:03:33.841Z"
 }
