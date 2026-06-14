@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4529,
+  "totalCitations": 4565,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -11,41 +11,41 @@
     "2019": 53,
     "2020": 169,
     "2021": 461,
-    "2022": 628,
-    "2023": 739,
+    "2022": 629,
+    "2023": 738,
     "2024": 803,
-    "2025": 967,
-    "2026": 486
+    "2025": 962,
+    "2026": 527
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 968,
+      "citationCount": 973,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 909,
+      "citationCount": 920,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 706,
+      "citationCount": 707,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 520,
+      "citationCount": 524,
       "year": 2019
     },
     {
       "title": "A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas",
-      "citationCount": 174,
+      "citationCount": 175,
       "year": 2012
     },
     {
       "title": "Fugitive Road Dust PM2.5 Emissions and Their Potential Health Impacts",
-      "citationCount": 157,
+      "citationCount": 158,
       "year": 2019
     },
     {
@@ -60,27 +60,27 @@
     },
     {
       "title": "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
-      "citationCount": 109,
+      "citationCount": 110,
       "year": 2013
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 92,
+      "citationCount": 93,
       "year": 2024
     },
     {
       "title": "High‐resolution gridded population projections for China under the shared socioeconomic pathways",
-      "citationCount": 78,
+      "citationCount": 79,
       "year": 2020
     },
     {
       "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
-      "citationCount": 72,
+      "citationCount": 73,
       "year": 2019
     },
     {
       "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 70,
+      "citationCount": 71,
       "year": 2021
     },
     {
@@ -90,12 +90,12 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 58,
+      "citationCount": 59,
       "year": 2025
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 45,
+      "citationCount": 47,
       "year": 2025
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 33,
+      "citationCount": 34,
       "year": 2025
     },
     {
@@ -155,12 +155,12 @@
     },
     {
       "title": "The growing impacts of cities on biodiversity. Research gaps limit global decision-making",
-      "citationCount": 6,
+      "citationCount": 7,
       "year": 2019
     },
     {
       "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
-      "citationCount": 5,
+      "citationCount": 6,
       "year": 2025
     },
     {
@@ -180,6 +180,11 @@
     },
     {
       "title": "Unequal effects of the lockdown on mental health in Shanghai: the moderating and mediating role of neighborhood environment and online social connections",
+      "citationCount": 3,
+      "year": 2025
+    },
+    {
+      "title": "Rapid probabilistic inundation mapping using local thresholds and sentinel-1 sar data on google earth engine",
       "citationCount": 2,
       "year": 2025
     },
@@ -197,11 +202,6 @@
       "title": "Social media as a sensor: unraveling nonlinear drivers of perceived thermal comfort in Shanghai",
       "citationCount": 1,
       "year": 2026
-    },
-    {
-      "title": "Rapid probabilistic inundation mapping using local thresholds and sentinel-1 sar data on google earth engine",
-      "citationCount": 1,
-      "year": 2025
     },
     {
       "title": "The Climate Risks of Global China: Measuring Rising Heat and Flood Risk Along the Belt-and-Road Initiative",
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-06-07T01:03:33.841Z"
+  "lastUpdated": "2026-06-14T01:05:32.442Z"
 }
