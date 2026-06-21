@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4565,
+  "totalCitations": 4578,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -11,41 +11,41 @@
     "2019": 53,
     "2020": 169,
     "2021": 461,
-    "2022": 629,
-    "2023": 738,
-    "2024": 803,
-    "2025": 962,
-    "2026": 527
+    "2022": 628,
+    "2023": 739,
+    "2024": 804,
+    "2025": 964,
+    "2026": 538
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 973,
+      "citationCount": 975,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 920,
+      "citationCount": 917,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 707,
+      "citationCount": 708,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 524,
+      "citationCount": 528,
       "year": 2019
     },
     {
       "title": "A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas",
-      "citationCount": 175,
+      "citationCount": 176,
       "year": 2012
     },
     {
       "title": "Fugitive Road Dust PM2.5 Emissions and Their Potential Health Impacts",
-      "citationCount": 158,
+      "citationCount": 159,
       "year": 2019
     },
     {
@@ -55,7 +55,7 @@
     },
     {
       "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
-      "citationCount": 110,
+      "citationCount": 111,
       "year": 2018
     },
     {
@@ -65,7 +65,7 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 93,
+      "citationCount": 94,
       "year": 2024
     },
     {
@@ -80,7 +80,7 @@
     },
     {
       "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 71,
+      "citationCount": 72,
       "year": 2021
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 59,
+      "citationCount": 61,
       "year": 2025
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 34,
+      "citationCount": 33,
       "year": 2025
     },
     {
@@ -149,29 +149,29 @@
       "year": 2024
     },
     {
+      "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
+      "citationCount": 9,
+      "year": 2025
+    },
+    {
       "title": "Moderating AC usage can reduce thermal disparity between indoor and outdoor environments",
       "citationCount": 9,
       "year": 2024
     },
     {
       "title": "The growing impacts of cities on biodiversity. Research gaps limit global decision-making",
-      "citationCount": 7,
+      "citationCount": 6,
       "year": 2019
     },
     {
-      "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
-      "citationCount": 6,
-      "year": 2025
+      "title": "Planning for rhythmized urban parks: Temporal park classification and modes of action",
+      "citationCount": 5,
+      "year": 2026
     },
     {
       "title": "Estimations of anthropogenic dust emissions at global scale from 2007 to 2010",
       "citationCount": 5,
       "year": 2017
-    },
-    {
-      "title": "Planning for rhythmized urban parks: Temporal park classification and modes of action",
-      "citationCount": 4,
-      "year": 2026
     },
     {
       "title": "Short-Term Effect of Air Pollution on Daily Hospital Visits for Anxiety Disorders in Southern China with Low Pollution Concentrations",
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-06-14T01:05:32.442Z"
+  "lastUpdated": "2026-06-21T01:07:11.043Z"
 }
