@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4578,
+  "totalCitations": 4596,
   "hIndex": 22,
   "i10Index": 26,
   "citedByYears": {
@@ -10,37 +10,37 @@
     "2018": 45,
     "2019": 53,
     "2020": 169,
-    "2021": 461,
-    "2022": 628,
-    "2023": 739,
-    "2024": 804,
-    "2025": 964,
-    "2026": 538
+    "2021": 460,
+    "2022": 629,
+    "2023": 740,
+    "2024": 803,
+    "2025": 963,
+    "2026": 557
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 975,
+      "citationCount": 978,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 917,
+      "citationCount": 921,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 708,
+      "citationCount": 711,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 528,
+      "citationCount": 531,
       "year": 2019
     },
     {
       "title": "A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas",
-      "citationCount": 176,
+      "citationCount": 175,
       "year": 2012
     },
     {
@@ -74,14 +74,14 @@
       "year": 2020
     },
     {
-      "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
-      "citationCount": 73,
-      "year": 2019
+      "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
+      "citationCount": 74,
+      "year": 2021
     },
     {
-      "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
+      "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
       "citationCount": 72,
-      "year": 2021
+      "year": 2019
     },
     {
       "title": "Improved snow depth retrieval by integrating microwave brightness temperature and visible/infrared reflectance",
@@ -90,22 +90,22 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 61,
+      "citationCount": 62,
       "year": 2025
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 47,
+      "citationCount": 48,
       "year": 2025
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity. Nat Sustain 3: 16–24",
-      "citationCount": 43,
+      "citationCount": 44,
       "year": 2020
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 33,
+      "citationCount": 34,
       "year": 2025
     },
     {
@@ -145,7 +145,7 @@
     },
     {
       "title": "Mapping of individual building heights reveals the large gap of urban-rural living spaces in the contiguous US",
-      "citationCount": 10,
+      "citationCount": 11,
       "year": 2024
     },
     {
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-06-21T01:07:11.043Z"
+  "lastUpdated": "2026-06-28T01:00:53.921Z"
 }
