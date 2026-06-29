@@ -286,7 +286,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     title: "Nested economies of scale in global city mass",
     authors: "Kangning Huang, Mingzhen Lu",
     venue: "arXiv preprint (in revision at Nature Cities)",
-    year: 2025,
+    year: 2026,
     citationCount: 0,
     url: "https://arxiv.org/abs/2507.03960",
     isLeadAuthor: true,
@@ -455,6 +455,22 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     keywords: ["Pearl River Delta", "urbanization impact", "climate scenarios", "regional climate modeling", "land-use change", "mega-urban region"],
   },
   // ── Co-author ──────────────────────────────────────────────
+  {
+    title: "Global multi-city heat perception: seasonal dynamics and climate–health signals",
+    authors: "Meizi You, ChengHe Guan, Yuming Guo, Bao-Jie He, Steven Jige Quan, John S. Ji, Jianxiang Huang, Rongbin Xu, Zhihu Xu, Tianren Yang, Longxu Yan, Kangning Huang, ... Waishan Qiu",
+    venue: "under review at Nature Communications",
+    year: 2026,
+    citationCount: 0,
+    isLeadAuthor: false,
+    highlights: [
+      "Applies a fine-tuned BERT-based language model to 278 million geotagged social media posts to quantify how people perceive and express heat across 347 cities in 50 countries",
+      "Finds that heat perception extends well beyond summer: 35.4% of cities sustain multi-season perception peaks and 16.1% show counter-seasonal regimes where winter perception surpasses summer",
+      "Shows spatial concentration of heat perception follows continent-specific modes — intensity-driven in Africa and variability-driven in South America",
+      "Demonstrates that co-occurring extreme temperature and elevated perception yields the strongest health associations, especially for adults aged ≥70 (mortality RR = 1.479) and respiratory mortality (RR = 1.826)",
+      "Establishes expressed heat perception as a scalable, season-resolved signal that complements temperature and identifies when heat becomes socially salient",
+    ],
+    keywords: ["heat perception", "urban heat", "climate and health", "social media", "large language model", "BERT", "climate adaptation", "heat mortality"],
+  },
   {
     title: "Global projections of future urban land expansion under shared socioeconomic pathways",
     authors: "Guangzhao Chen, Xia Li, Xiaoping Liu, Yimin Chen, Xun Liang, Jiye Leng, Xiaocong Xu, Wenjie Liao, Yue'an Qiu, Qianlian Wu, Kangning Huang",
