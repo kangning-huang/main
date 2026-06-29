@@ -67,7 +67,7 @@ export const PROJECTS: Project[] = [
     title: "Nested Scaling of City Mass",
     description:
       "Interactive visualization accompanying the paper on nested economies of scale in global city built mass. Explores the nonlinear scaling relationships between urban populations and their built environments across 3,000+ cities.",
-    url: "https://kangning-huang.github.io/nested-scaling-city-mass/",
+    url: "https://city-mass.nested-complexity.net",
     tags: ["Urban Scaling", "Interactive Visualization", "Nature Cities"],
     featured: true,
     category: "academic",
@@ -290,7 +290,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     citationCount: 0,
     url: "https://arxiv.org/abs/2507.03960",
     isLeadAuthor: true,
-    webUrl: "https://kangning-huang.github.io/nested-scaling-city-mass/",
+    webUrl: "https://city-mass.nested-complexity.net",
     highlights: [
       "Analyzes over 3,000 cities globally to reveal universal sub-linear scaling of built mass with population, with a city-level scaling exponent of β ≈ 0.90 meaning larger cities use less built mass per capita",
       "Finds that neighborhood-level scaling exhibits an even smaller exponent (δ ≈ 0.75) than city-level scaling (β ≈ 0.90), demonstrating that economies of scale in built mass intensify at finer spatial resolutions",
@@ -300,6 +300,22 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     keywords: ["urban scaling laws", "Zipf's law", "city size distribution", "built mass", "urban allometry", "urban economics"],
   },
   // Last author
+  {
+    title: "Green AI potential stranded by geopolitical misalignment",
+    authors: "Yimin Chen, Jing Qian, Yijing Wang, Xiaoping Liu, Ming Luo, Yutian Liang, Weilin Liao, Zhu Deng, Kangning Huang",
+    venue: "submitted to Nature",
+    year: 2026,
+    citationCount: 0,
+    isLeadAuthor: true,
+    highlights: [
+      "Maps near-term global opportunities for solar-powered hyperscale data centres by integrating monthly photovoltaic yield, climate-driven cooling efficiency, suitable land, high-voltage infrastructure, and digital-network accessibility",
+      "Identifies 6,290 sites worldwide that meet the year-round monthly energy requirement of a 100-MW IT load, an upper-bound threshold-equivalent load of ~714 GW",
+      "Finds the United States alone holds about 34% of this solar-powered computing potential",
+      "Shows countries with high potential but weak geopolitical alignment toward China hold 46% of the global total, versus 28% for strongly aligned countries — exposing unequal exposure to renewable-hardware procurement constraints given China's dominance in PV and battery manufacturing",
+      "Concludes that climate and infrastructure define the physical geography of green AI, while geopolitics may condition whether the potential is realized",
+    ],
+    keywords: ["green AI", "data centers", "solar power", "photovoltaic energy", "renewable energy", "geopolitics", "hyperscale computing", "energy geography", "AI electricity demand"],
+  },
   {
     title: "Rapid Probabilistic Inundation Mapping Using Local Thresholds and Sentinel-1 SAR Data on Google Earth Engine",
     authors: "Jiayong Liang, Desheng Liu, Lihan Feng, Kangning Huang",
