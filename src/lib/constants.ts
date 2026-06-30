@@ -456,6 +456,20 @@ export const CURATED_PUBLICATIONS: Publication[] = [
   },
   // ── Co-author ──────────────────────────────────────────────
   {
+    title: "Material-saving strategies for decarbonizing the global building stock",
+    authors: "Yupeng Liu, Kangning Huang, Shengping Li, Karen C. Seto, Wei-Qiang Chen",
+    venue: "submitted to Nature Geoscience",
+    year: 2026,
+    citationCount: 0,
+    isLeadAuthor: false,
+    highlights: [
+      "Evaluates material-saving strategies — including material efficiency, lightweighting, and longer building lifetimes — as levers for decarbonizing the global building stock",
+      "Links reductions in construction-material demand to lower embodied carbon emissions across the world's buildings",
+      "Offers a global-scale perspective on how dematerialization can complement energy and fuel measures in building-sector climate mitigation",
+    ],
+    keywords: ["building stock", "material efficiency", "decarbonization", "embodied carbon", "construction materials", "climate mitigation", "dematerialization"],
+  },
+  {
     title: "Global multi-city heat perception: seasonal dynamics and climate–health signals",
     authors: "Meizi You, ChengHe Guan, Yuming Guo, Bao-Jie He, Steven Jige Quan, John S. Ji, Jianxiang Huang, Rongbin Xu, Zhihu Xu, Tianren Yang, Longxu Yan, Kangning Huang, ... Waishan Qiu",
     venue: "under review at Nature Communications",
