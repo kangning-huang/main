@@ -335,11 +335,11 @@ export const CURATED_PUBLICATIONS: Publication[] = [
   {
     title: "Unveiling the causal link between informal settlement demolition and urban cooling",
     authors: "Yujie Sun, Xuyan Gao, Jiayong Liang, Kangning Huang",
-    venue: "npj Environmental Social Science",
-    year: 2025,
+    venue: "npj Environmental Social Sciences",
+    year: 2026,
     citationCount: 0,
+    doi: "10.1038/s44432-026-00009-1",
     isLeadAuthor: true,
-    preprint: "https://www.researchsquare.com/article/rs-7288639/v1",
     webUrl: "https://kangning-huang.github.io/urban-renewal-cooling-DID/",
     highlights: [
       "Applies a difference-in-differences causal framework to 77 demolished informal settlements and 584 control sites across Beijing, Shanghai, and Guangzhou (2002–2022), establishing a clear causal cooling signal of approximately 1.5 K",
