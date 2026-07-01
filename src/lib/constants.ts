@@ -456,6 +456,21 @@ export const CURATED_PUBLICATIONS: Publication[] = [
   },
   // ── Co-author ──────────────────────────────────────────────
   {
+    title: "Toward Cooler Cities by Homogeneous Scale Planning",
+    authors: "Xucai Zhang, Xiaobing Wei, Xiaoping Liu, Honghong Wei, Yue Zheng, Hongkai Gu, Yangzi Che, Yeran Sun, Ming Luo, Weilin Liao, Haosheng Huang, Kangning Huang",
+    venue: "in revision at PNAS",
+    year: 2026,
+    citationCount: 0,
+    isLeadAuthor: false,
+    highlights: [
+      "Introduces the Urban Homogeneous Scale (UHS) metric — the spatial scale of functionally homogeneous building clusters — as a novel urban morphology measure for understanding urban heat island effects",
+      "Analyzes 232,874 observations across 101 global cities using machine learning (XGBoost) building classification and Double Machine Learning causal inference to establish UHS-heat relationships",
+      "Finds that a 100-metre increase in UHS leads to approximately 5% decrease in daytime urban heat island intensity, with daytime cooling more pronounced in inland, humid, and high-income regions",
+      "Proposes homogeneous scale planning as a land-use strategy for mitigating urban heat, with implications for mixed-use zoning and urban design guidelines",
+    ],
+    keywords: ["urban heat island", "Urban Homogeneous Scale", "urban morphology", "climate adaptation", "urban planning", "causal inference", "machine learning"],
+  },
+  {
     title: "Material-saving strategies for decarbonizing the global building stock",
     authors: "Yupeng Liu, Kangning Huang, Shengping Li, Karen C. Seto, Wei-Qiang Chen",
     venue: "submitted to Nature Geoscience",
