@@ -303,7 +303,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
   {
     title: "Green AI potential stranded by geopolitical misalignment",
     authors: "Yimin Chen, Jing Qian, Yijing Wang, Xiaoping Liu, Ming Luo, Yutian Liang, Weilin Liao, Zhu Deng, Kangning Huang",
-    venue: "submitted to Nature",
+    venue: "submitted to Nature Energy",
     year: 2026,
     citationCount: 0,
     isLeadAuthor: true,
@@ -471,9 +471,9 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     keywords: ["urban heat island", "Urban Homogeneous Scale", "urban morphology", "climate adaptation", "urban planning", "causal inference", "machine learning"],
   },
   {
-    title: "Material-saving strategies for decarbonizing the global building stock",
+    title: "Material-saving strategies for decarbonizing the global urban building stock",
     authors: "Yupeng Liu, Kangning Huang, Shengping Li, Karen C. Seto, Wei-Qiang Chen",
-    venue: "submitted to Nature Geoscience",
+    venue: "submitted to Nature Communications",
     year: 2026,
     citationCount: 0,
     isLeadAuthor: false,
@@ -483,6 +483,18 @@ export const CURATED_PUBLICATIONS: Publication[] = [
       "Offers a global-scale perspective on how dematerialization can complement energy and fuel measures in building-sector climate mitigation",
     ],
     keywords: ["building stock", "material efficiency", "decarbonization", "embodied carbon", "construction materials", "climate mitigation", "dematerialization"],
+  },
+  {
+    title: "Infrastructure reach and capacity pressure in sub-Saharan Africa's future urban expansion",
+    authors: "Kangning Huang, Yimin Chen",
+    venue: "submitted to Nature Communications",
+    year: 2026,
+    citationCount: 0,
+    isLeadAuthor: false,
+    highlights: [
+      "Examines the mismatch between infrastructure reach and capacity pressures driven by rapid urban expansion across sub-Saharan Africa",
+    ],
+    keywords: ["sub-Saharan Africa", "urban expansion", "infrastructure", "urban growth", "development", "Nature Communications"],
   },
   {
     title: "Global multi-city heat perception: seasonal dynamics and climate–health signals",
