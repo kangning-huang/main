@@ -1,41 +1,41 @@
 {
-  "totalCitations": 4634,
+  "totalCitations": 4656,
   "hIndex": 22,
-  "i10Index": 26,
+  "i10Index": 27,
   "citedByYears": {
     "2014": 21,
     "2015": 34,
     "2016": 41,
     "2017": 34,
     "2018": 45,
-    "2019": 54,
+    "2019": 53,
     "2020": 169,
     "2021": 460,
     "2022": 632,
     "2023": 740,
-    "2024": 805,
-    "2025": 964,
-    "2026": 588
+    "2024": 807,
+    "2025": 962,
+    "2026": 612
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 985,
+      "citationCount": 989,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 924,
+      "citationCount": 925,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 716,
+      "citationCount": 719,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 534,
+      "citationCount": 536,
       "year": 2019
     },
     {
@@ -49,14 +49,14 @@
       "year": 2019
     },
     {
+      "title": "Automatic registration of multisensor images using an integrated spatial and mutual information (SMI) metric",
+      "citationCount": 113,
+      "year": 2013
+    },
+    {
       "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
       "citationCount": 112,
       "year": 2018
-    },
-    {
-      "title": "Automatic registration of multisensor images using an integrated spatial and mutual information (SMI) metric",
-      "citationCount": 112,
-      "year": 2013
     },
     {
       "title": "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
@@ -65,7 +65,7 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 95,
+      "citationCount": 97,
       "year": 2024
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 76,
+      "citationCount": 77,
       "year": 2021
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 68,
+      "citationCount": 70,
       "year": 2025
     },
     {
@@ -95,7 +95,7 @@
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 50,
+      "citationCount": 52,
       "year": 2025
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "title": "Mega-city development impact on hourly extreme rainfall over the South China Greater Bay Area under near-future climate warming",
-      "citationCount": 23,
+      "citationCount": 24,
       "year": 2023
     },
     {
@@ -135,7 +135,7 @@
     },
     {
       "title": "The implementation and application of geographical simulation and optimization systems (GeoSOS)",
-      "citationCount": 16,
+      "citationCount": 17,
       "year": 2010
     },
     {
@@ -145,12 +145,12 @@
     },
     {
       "title": "Mapping of individual building heights reveals the large gap of urban-rural living spaces in the contiguous US",
-      "citationCount": 11,
+      "citationCount": 12,
       "year": 2024
     },
     {
       "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
-      "citationCount": 9,
+      "citationCount": 10,
       "year": 2025
     },
     {
@@ -229,7 +229,7 @@
       "year": 2026
     },
     {
-      "title": "From Cells to Cities: Extending Kleiber’s Law from Biology to Urban Systems",
+      "title": "From Cells to Cities: Extending Kleiber's Law from Biology to Urban Systems",
       "citationCount": 0,
       "year": 2025
     },
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-07-05T00:49:37.680Z"
+  "lastUpdated": "2026-07-12T02:54:40.816Z"
 }
