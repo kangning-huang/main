@@ -285,7 +285,7 @@ export const CURATED_PUBLICATIONS: Publication[] = [
   {
     title: "Nested economies of scale in global city mass",
     authors: "Kangning Huang, Mingzhen Lu",
-    venue: "arXiv preprint (in revision at Nature Cities)",
+    venue: "arXiv preprint (2nd revision (minor) submitted to Nature Cities)",
     year: 2026,
     citationCount: 0,
     url: "https://arxiv.org/abs/2507.03960",
@@ -350,9 +350,9 @@ export const CURATED_PUBLICATIONS: Publication[] = [
     keywords: ["informal settlements", "urban renewal", "urban cooling", "difference-in-differences", "causal inference", "slum demolition", "Global South"],
   },
   {
-    title: "Integrating Building Height and Protection Standards in Global Urban Flood Risk Assessment",
+    title: "Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution",
     authors: "Jiayong Liang, Imman Hilaly, Xuyan Gao, ChengHe Guan, Ying Li, Kangning Huang",
-    venue: "preprint",
+    venue: "Scientific Reports (in 2nd revision)",
     year: 2025,
     citationCount: 0,
     isLeadAuthor: true,
