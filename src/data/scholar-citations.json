@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4656,
+  "totalCitations": 4689,
   "hIndex": 22,
   "i10Index": 27,
   "citedByYears": {
@@ -11,36 +11,36 @@
     "2019": 53,
     "2020": 169,
     "2021": 460,
-    "2022": 632,
+    "2022": 631,
     "2023": 740,
-    "2024": 807,
-    "2025": 962,
-    "2026": 612
+    "2024": 806,
+    "2025": 963,
+    "2026": 644
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 989,
+      "citationCount": 1001,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 925,
+      "citationCount": 927,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 719,
+      "citationCount": 728,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 536,
+      "citationCount": 537,
       "year": 2019
     },
     {
       "title": "A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas",
-      "citationCount": 176,
+      "citationCount": 177,
       "year": 2012
     },
     {
@@ -55,12 +55,12 @@
     },
     {
       "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
-      "citationCount": 112,
+      "citationCount": 111,
       "year": 2018
     },
     {
       "title": "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
-      "citationCount": 110,
+      "citationCount": 109,
       "year": 2013
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "title": "High‐resolution gridded population projections for China under the shared socioeconomic pathways",
-      "citationCount": 79,
+      "citationCount": 80,
       "year": 2020
     },
     {
@@ -79,14 +79,14 @@
       "year": 2021
     },
     {
+      "title": "Dual impact of global urban overheating on mortality",
+      "citationCount": 73,
+      "year": 2025
+    },
+    {
       "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
       "citationCount": 73,
       "year": 2019
-    },
-    {
-      "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 70,
-      "year": 2025
     },
     {
       "title": "Improved snow depth retrieval by integrating microwave brightness temperature and visible/infrared reflectance",
@@ -105,7 +105,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 34,
+      "citationCount": 36,
       "year": 2025
     },
     {
@@ -125,7 +125,7 @@
     },
     {
       "title": "Mega-city development impact on hourly extreme rainfall over the South China Greater Bay Area under near-future climate warming",
-      "citationCount": 24,
+      "citationCount": 25,
       "year": 2023
     },
     {
@@ -139,6 +139,11 @@
       "year": 2010
     },
     {
+      "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
+      "citationCount": 13,
+      "year": 2025
+    },
+    {
       "title": "Long‐term monitoring and evaluation of land development in a reclamation area under rapid urbanization: A case‐study in Qiantang New District, China",
       "citationCount": 13,
       "year": 2021
@@ -149,24 +154,19 @@
       "year": 2024
     },
     {
-      "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
-      "citationCount": 10,
-      "year": 2025
-    },
-    {
       "title": "Moderating AC usage can reduce thermal disparity between indoor and outdoor environments",
       "citationCount": 9,
       "year": 2024
     },
     {
-      "title": "The growing impacts of cities on biodiversity. Research gaps limit global decision-making",
-      "citationCount": 7,
-      "year": 2019
+      "title": "Planning for rhythmized urban parks: Temporal park classification and modes of action",
+      "citationCount": 6,
+      "year": 2026
     },
     {
-      "title": "Planning for rhythmized urban parks: Temporal park classification and modes of action",
-      "citationCount": 5,
-      "year": 2026
+      "title": "The growing impacts of cities on biodiversity. Research gaps limit global decision-making",
+      "citationCount": 6,
+      "year": 2019
     },
     {
       "title": "Estimations of anthropogenic dust emissions at global scale from 2007 to 2010",
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-07-12T02:54:40.816Z"
+  "lastUpdated": "2026-07-19T02:51:58.276Z"
 }
