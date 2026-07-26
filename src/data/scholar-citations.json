@@ -1,7 +1,7 @@
 {
-  "totalCitations": 4689,
+  "totalCitations": 4711,
   "hIndex": 22,
-  "i10Index": 27,
+  "i10Index": 28,
   "citedByYears": {
     "2014": 21,
     "2015": 34,
@@ -11,31 +11,31 @@
     "2019": 53,
     "2020": 169,
     "2021": 460,
-    "2022": 631,
+    "2022": 633,
     "2023": 740,
-    "2024": 806,
+    "2024": 805,
     "2025": 963,
-    "2026": 644
+    "2026": 665
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 1001,
+      "citationCount": 1006,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 927,
+      "citationCount": 929,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 728,
+      "citationCount": 733,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 537,
+      "citationCount": 536,
       "year": 2019
     },
     {
@@ -49,23 +49,23 @@
       "year": 2019
     },
     {
+      "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
+      "citationCount": 113,
+      "year": 2018
+    },
+    {
       "title": "Automatic registration of multisensor images using an integrated spatial and mutual information (SMI) metric",
       "citationCount": 113,
       "year": 2013
     },
     {
-      "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
-      "citationCount": 111,
-      "year": 2018
-    },
-    {
       "title": "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
-      "citationCount": 109,
+      "citationCount": 110,
       "year": 2013
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 97,
+      "citationCount": 98,
       "year": 2024
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 77,
+      "citationCount": 78,
       "year": 2021
     },
     {
@@ -90,7 +90,7 @@
     },
     {
       "title": "Improved snow depth retrieval by integrating microwave brightness temperature and visible/infrared reflectance",
-      "citationCount": 64,
+      "citationCount": 65,
       "year": 2015
     },
     {
@@ -100,12 +100,12 @@
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity. Nat Sustain 3: 16–24",
-      "citationCount": 45,
+      "citationCount": 47,
       "year": 2020
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 36,
+      "citationCount": 37,
       "year": 2025
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
-      "citationCount": 13,
+      "citationCount": 14,
       "year": 2025
     },
     {
@@ -155,7 +155,7 @@
     },
     {
       "title": "Moderating AC usage can reduce thermal disparity between indoor and outdoor environments",
-      "citationCount": 9,
+      "citationCount": 10,
       "year": 2024
     },
     {
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-07-19T02:51:58.276Z"
+  "lastUpdated": "2026-07-26T02:55:05.128Z"
 }
