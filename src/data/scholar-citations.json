@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4711,
+  "totalCitations": 4715,
   "hIndex": 22,
   "i10Index": 28,
   "citedByYears": {
@@ -8,19 +8,19 @@
     "2016": 41,
     "2017": 34,
     "2018": 45,
-    "2019": 53,
-    "2020": 169,
-    "2021": 460,
-    "2022": 633,
+    "2019": 52,
+    "2020": 171,
+    "2021": 463,
+    "2022": 635,
     "2023": 740,
-    "2024": 805,
-    "2025": 963,
-    "2026": 665
+    "2024": 806,
+    "2025": 956,
+    "2026": 669
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 1006,
+      "citationCount": 1010,
       "year": 2020
     },
     {
@@ -30,7 +30,7 @@
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 733,
+      "citationCount": 734,
       "year": 2020
     },
     {
@@ -45,7 +45,7 @@
     },
     {
       "title": "Fugitive Road Dust PM2.5 Emissions and Their Potential Health Impacts",
-      "citationCount": 161,
+      "citationCount": 160,
       "year": 2019
     },
     {
@@ -54,9 +54,9 @@
       "year": 2018
     },
     {
-      "title": "Automatic registration of multisensor images using an integrated spatial and mutual information (SMI) metric",
+      "title": "Automatic Registration of Multisensor Images Using an Integrated Spatial and Mutual Information (SMI) Metric.",
       "citationCount": 113,
-      "year": 2013
+      "year": 2014
     },
     {
       "title": "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
@@ -65,7 +65,7 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 98,
+      "citationCount": 99,
       "year": 2024
     },
     {
@@ -95,7 +95,7 @@
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 52,
+      "citationCount": 53,
       "year": 2025
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 37,
+      "citationCount": 36,
       "year": 2025
     },
     {
@@ -140,7 +140,7 @@
     },
     {
       "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
-      "citationCount": 14,
+      "citationCount": 13,
       "year": 2025
     },
     {
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-07-26T02:55:05.128Z"
+  "lastUpdated": "2026-08-02T02:54:15.277Z"
 }
