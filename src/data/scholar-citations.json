@@ -1,62 +1,62 @@
 {
-  "totalCitations": 4715,
+  "totalCitations": 4817,
   "hIndex": 22,
   "i10Index": 28,
   "citedByYears": {
     "2014": 21,
     "2015": 34,
     "2016": 41,
-    "2017": 34,
+    "2017": 37,
     "2018": 45,
-    "2019": 52,
-    "2020": 171,
-    "2021": 463,
-    "2022": 635,
+    "2019": 54,
+    "2020": 173,
+    "2021": 479,
+    "2022": 648,
     "2023": 740,
-    "2024": 806,
-    "2025": 956,
-    "2026": 669
+    "2024": 811,
+    "2025": 971,
+    "2026": 713
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 1010,
+      "citationCount": 1090,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 929,
+      "citationCount": 933,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 734,
+      "citationCount": 736,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 536,
+      "citationCount": 535,
       "year": 2019
     },
     {
       "title": "A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas",
-      "citationCount": 177,
+      "citationCount": 179,
       "year": 2012
     },
     {
-      "title": "Fugitive Road Dust PM2.5 Emissions and Their Potential Health Impacts",
-      "citationCount": 160,
+      "title": "Fugitive road dust PM2. 5 emissions and their potential health impacts",
+      "citationCount": 162,
       "year": 2019
     },
     {
-      "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
+      "title": "Automatic registration of multisensor images using an integrated spatial and mutual information (SMI) metric",
       "citationCount": 113,
-      "year": 2018
+      "year": 2013
     },
     {
-      "title": "Automatic Registration of Multisensor Images Using an Integrated Spatial and Mutual Information (SMI) Metric.",
-      "citationCount": 113,
-      "year": 2014
+      "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
+      "citationCount": 112,
+      "year": 2018
     },
     {
       "title": "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
@@ -65,7 +65,7 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 99,
+      "citationCount": 101,
       "year": 2024
     },
     {
@@ -75,27 +75,27 @@
     },
     {
       "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 78,
+      "citationCount": 77,
       "year": 2021
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 73,
+      "citationCount": 76,
       "year": 2025
     },
     {
       "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
-      "citationCount": 73,
+      "citationCount": 75,
       "year": 2019
     },
     {
       "title": "Improved snow depth retrieval by integrating microwave brightness temperature and visible/infrared reflectance",
-      "citationCount": 65,
+      "citationCount": 66,
       "year": 2015
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 53,
+      "citationCount": 54,
       "year": 2025
     },
     {
@@ -105,12 +105,12 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 36,
+      "citationCount": 37,
       "year": 2025
     },
     {
       "title": "Investigating future urbanization’s impact on local climate under different climate change scenarios in MEGA-urban regions: A case study of the Pearl River Delta, China",
-      "citationCount": 31,
+      "citationCount": 32,
       "year": 2020
     },
     {
@@ -119,17 +119,17 @@
       "year": 2018
     },
     {
-      "title": "Facilitating urban climate forecasts in rapidly urbanizing regions with land-use change modeling",
-      "citationCount": 26,
-      "year": 2021
-    },
-    {
       "title": "Mega-city development impact on hourly extreme rainfall over the South China Greater Bay Area under near-future climate warming",
       "citationCount": 25,
       "year": 2023
     },
     {
-      "title": "Urban forests facing climate risks",
+      "title": "Facilitating urban climate forecasts in rapidly urbanizing regions with land-use change modeling",
+      "citationCount": 25,
+      "year": 2021
+    },
+    {
+      "title": "Urban forests facing climate risks: ECOLOGY",
       "citationCount": 19,
       "year": 2022
     },
@@ -140,7 +140,7 @@
     },
     {
       "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
-      "citationCount": 13,
+      "citationCount": 16,
       "year": 2025
     },
     {
@@ -160,7 +160,7 @@
     },
     {
       "title": "Planning for rhythmized urban parks: Temporal park classification and modes of action",
-      "citationCount": 6,
+      "citationCount": 7,
       "year": 2026
     },
     {
@@ -184,6 +184,11 @@
       "year": 2025
     },
     {
+      "title": "Social media as a sensor: unraveling nonlinear drivers of perceived thermal comfort in Shanghai",
+      "citationCount": 2,
+      "year": 2026
+    },
+    {
       "title": "Rapid probabilistic inundation mapping using local thresholds and sentinel-1 sar data on google earth engine",
       "citationCount": 2,
       "year": 2025
@@ -197,11 +202,6 @@
       "title": "Augmented compound urban temperature extreme (ACUTE) from climate change and urban expansion: global risk and adaptation",
       "citationCount": 2,
       "year": 2020
-    },
-    {
-      "title": "Social media as a sensor: unraveling nonlinear drivers of perceived thermal comfort in Shanghai",
-      "citationCount": 1,
-      "year": 2026
     },
     {
       "title": "Nested economies of scale in global city mass",
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-08-02T02:54:15.277Z"
+  "lastUpdated": "2026-08-09T01:49:58.353Z"
 }
