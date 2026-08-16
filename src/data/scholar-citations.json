@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4817,
+  "totalCitations": 4842,
   "hIndex": 22,
   "i10Index": 28,
   "citedByYears": {
@@ -13,29 +13,29 @@
     "2021": 479,
     "2022": 648,
     "2023": 740,
-    "2024": 811,
-    "2025": 971,
-    "2026": 713
+    "2024": 812,
+    "2025": 972,
+    "2026": 734
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 1090,
+      "citationCount": 1091,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 933,
+      "citationCount": 934,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 736,
+      "citationCount": 743,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 535,
+      "citationCount": 537,
       "year": 2019
     },
     {
@@ -45,18 +45,18 @@
     },
     {
       "title": "Fugitive road dust PM2. 5 emissions and their potential health impacts",
-      "citationCount": 162,
+      "citationCount": 163,
       "year": 2019
+    },
+    {
+      "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
+      "citationCount": 113,
+      "year": 2018
     },
     {
       "title": "Automatic registration of multisensor images using an integrated spatial and mutual information (SMI) metric",
       "citationCount": 113,
       "year": 2013
-    },
-    {
-      "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
-      "citationCount": 112,
-      "year": 2018
     },
     {
       "title": "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
@@ -65,22 +65,22 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 101,
+      "citationCount": 102,
       "year": 2024
     },
     {
       "title": "High‐resolution gridded population projections for China under the shared socioeconomic pathways",
-      "citationCount": 80,
+      "citationCount": 81,
       "year": 2020
     },
     {
       "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 77,
+      "citationCount": 78,
       "year": 2021
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 76,
+      "citationCount": 77,
       "year": 2025
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 37,
+      "citationCount": 40,
       "year": 2025
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "title": "Mega-city development impact on hourly extreme rainfall over the South China Greater Bay Area under near-future climate warming",
-      "citationCount": 25,
+      "citationCount": 26,
       "year": 2023
     },
     {
@@ -155,12 +155,12 @@
     },
     {
       "title": "Moderating AC usage can reduce thermal disparity between indoor and outdoor environments",
-      "citationCount": 10,
+      "citationCount": 11,
       "year": 2024
     },
     {
       "title": "Planning for rhythmized urban parks: Temporal park classification and modes of action",
-      "citationCount": 7,
+      "citationCount": 8,
       "year": 2026
     },
     {
@@ -179,6 +179,11 @@
       "year": 2025
     },
     {
+      "title": "Rapid probabilistic inundation mapping using local thresholds and sentinel-1 sar data on google earth engine",
+      "citationCount": 3,
+      "year": 2025
+    },
+    {
       "title": "Unequal effects of the lockdown on mental health in Shanghai: the moderating and mediating role of neighborhood environment and online social connections",
       "citationCount": 3,
       "year": 2025
@@ -189,14 +194,14 @@
       "year": 2026
     },
     {
-      "title": "Rapid probabilistic inundation mapping using local thresholds and sentinel-1 sar data on google earth engine",
-      "citationCount": 2,
-      "year": 2025
-    },
-    {
       "title": "Measuring rising heat and flood risk along the belt-and-road initiative",
       "citationCount": 2,
       "year": 2024
+    },
+    {
+      "title": "The Climate Risks of Global China: Measuring Rising Heat and Flood Risk Along the Belt-and-Road Initiative",
+      "citationCount": 2,
+      "year": 2023
     },
     {
       "title": "Augmented compound urban temperature extreme (ACUTE) from climate change and urban expansion: global risk and adaptation",
@@ -207,11 +212,6 @@
       "title": "Nested economies of scale in global city mass",
       "citationCount": 1,
       "year": 2025
-    },
-    {
-      "title": "The Climate Risks of Global China: Measuring Rising Heat and Flood Risk Along the Belt-and-Road Initiative",
-      "citationCount": 1,
-      "year": 2023
     },
     {
       "title": "The importance of future urban development in hourly extreme rainfall projections-comparing global warming and urbanization forcing over the Pearl River Delta region",
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-08-09T01:49:58.353Z"
+  "lastUpdated": "2026-08-16T01:23:01.771Z"
 }
