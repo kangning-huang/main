@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4871,
+  "totalCitations": 4891,
   "hIndex": 22,
   "i10Index": 28,
   "citedByYears": {
@@ -11,36 +11,36 @@
     "2019": 54,
     "2020": 175,
     "2021": 477,
-    "2022": 649,
+    "2022": 651,
     "2023": 740,
     "2024": 814,
-    "2025": 974,
-    "2026": 755
+    "2025": 975,
+    "2026": 774
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 1096,
+      "citationCount": 1101,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 935,
+      "citationCount": 936,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 752,
+      "citationCount": 758,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 539,
+      "citationCount": 540,
       "year": 2019
     },
     {
       "title": "A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas",
-      "citationCount": 180,
+      "citationCount": 181,
       "year": 2012
     },
     {
@@ -70,7 +70,7 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 81,
+      "citationCount": 84,
       "year": 2025
     },
     {
@@ -95,7 +95,7 @@
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 55,
+      "citationCount": 56,
       "year": 2025
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 40,
+      "citationCount": 41,
       "year": 2025
     },
     {
@@ -120,7 +120,7 @@
     },
     {
       "title": "Mega-city development impact on hourly extreme rainfall over the South China Greater Bay Area under near-future climate warming",
-      "citationCount": 26,
+      "citationCount": 27,
       "year": 2023
     },
     {
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-08-23T01:24:25.633Z"
+  "lastUpdated": "2026-08-30T04:13:02.780Z"
 }
