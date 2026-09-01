@@ -299,8 +299,8 @@ export default async function Home() {
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-muted">
                 <T
-                  en="Published in Nature Cities (2025), Kangning Huang's work on nested economies of scale reveals that cities exhibit nonlinear scaling relationships between population and built mass across 3,000+ cities worldwide. These nested scaling patterns provide new insights into how cities grow physically and how urban form relates to resource consumption."
-                  zh="黄康宁2025年发表在Nature Cities上的研究揭示了全球3000多个城市中人口与建成质量之间的非线性标度关系。这些嵌套标度模式为理解城市物理增长方式以及城市形态与资源消耗的关系提供了新见解。"
+                  en="Accepted at Nature Cities (2026), Kangning Huang's work on nested economies of scale reveals that cities exhibit nonlinear scaling relationships between population and built mass across 3,000+ cities worldwide. These nested scaling patterns provide new insights into how cities grow physically and how urban form relates to resource consumption."
+                  zh="黄康宁2026年被Nature Cities接收的研究揭示了全球3000多个城市中人口与建成质量之间的非线性标度关系。这些嵌套标度模式为理解城市物理增长方式以及城市形态与资源消耗的关系提供了新见解。"
                 />
               </p>
             </article>
