@@ -65,7 +65,7 @@ export interface Project {
 }
 
 export const PROJECTS: Project[] = [
-  // ── Academic projects ─────────────────────────────
+  // ── Academic projects ─────────────────────────────────────────
   {
     title: "Nested Scaling of City Mass",
     description:
@@ -115,7 +115,7 @@ export const PROJECTS: Project[] = [
     featured: false,
     category: "academic",
   },
-  // ── Side projects ─────────────────────────────
+  // ── Side projects ─────────────────────────────────────────────
   {
     title: "RoboTaxi Safety Tracker",
     description:
