@@ -1,51 +1,51 @@
 {
-  "totalCitations": 4891,
+  "totalCitations": 4921,
   "hIndex": 22,
   "i10Index": 28,
   "citedByYears": {
     "2014": 21,
     "2015": 34,
     "2016": 41,
-    "2017": 37,
+    "2017": 38,
     "2018": 45,
-    "2019": 54,
+    "2019": 55,
     "2020": 175,
     "2021": 477,
     "2022": 651,
-    "2023": 740,
-    "2024": 814,
-    "2025": 975,
-    "2026": 774
+    "2023": 741,
+    "2024": 815,
+    "2025": 977,
+    "2026": 791
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 1101,
+      "citationCount": 1107,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 936,
+      "citationCount": 939,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 758,
+      "citationCount": 763,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 540,
+      "citationCount": 545,
       "year": 2019
     },
     {
       "title": "A multi-type ant colony optimization (MACO) method for optimal land use allocation in large areas",
-      "citationCount": 181,
+      "citationCount": 182,
       "year": 2012
     },
     {
       "title": "Fugitive road dust PM2. 5 emissions and their potential health impacts",
-      "citationCount": 164,
+      "citationCount": 166,
       "year": 2019
     },
     {
@@ -55,7 +55,7 @@
     },
     {
       "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
-      "citationCount": 113,
+      "citationCount": 114,
       "year": 2018
     },
     {
@@ -65,12 +65,12 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 103,
+      "citationCount": 105,
       "year": 2024
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 84,
+      "citationCount": 86,
       "year": 2025
     },
     {
@@ -90,12 +90,12 @@
     },
     {
       "title": "Improved snow depth retrieval by integrating microwave brightness temperature and visible/infrared reflectance",
-      "citationCount": 66,
+      "citationCount": 67,
       "year": 2015
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 56,
+      "citationCount": 57,
       "year": 2025
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 41,
+      "citationCount": 42,
       "year": 2025
     },
     {
@@ -211,7 +211,7 @@
     {
       "title": "Nested economies of scale in global city mass",
       "citationCount": 1,
-      "year": 2026
+      "year": 2025
     },
     {
       "title": "The importance of future urban development in hourly extreme rainfall projections-comparing global warming and urbanization forcing over the Pearl River Delta region",
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-08-30T04:13:02.780Z"
+  "lastUpdated": "2026-09-06T03:27:17.497Z"
 }
