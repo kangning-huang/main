@@ -19,7 +19,15 @@ export const metadata: Metadata = {
     description:
       "Publications by Kangning (Ken) Huang on urban heat islands, global urban expansion, climate adaptation, flood risk, urban scaling laws, and remote sensing.",
     url: canonicalUrl("/publications"),
-  },
+    images: [
+      {
+        url: "/hero-nyc-skyline.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kangning (Ken) Huang — NYU Shanghai",
+      },
+    ],
+},
 };
 
 export default async function PublicationsPage() {
