@@ -16,7 +16,15 @@ export const metadata: Metadata = {
     description:
       "Writing on cities, climate, autonomous vehicles, and more by Kangning (Ken) Huang.",
     url: canonicalUrl("/blog"),
-  },
+    images: [
+      {
+        url: "/hero-nyc-skyline.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kangning (Ken) Huang — NYU Shanghai",
+      },
+    ],
+},
 };
 
 export default async function BlogPage() {
@@ -77,7 +85,7 @@ export default async function BlogPage() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={posts[0].coverImage}
-                  alt=""
+                  alt={posts[0].title}
                   className="h-64 w-full object-cover transition-transform duration-500 group-hover:scale-[1.02] md:h-80"
                 />
               </div>
@@ -127,7 +135,7 @@ export default async function BlogPage() {
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       <img
                         src={post.coverImage}
-                        alt=""
+                        alt={post.title}
                         className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                       />
                     </div>
