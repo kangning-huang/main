@@ -60,7 +60,15 @@ export const metadata: Metadata = {
     description:
       "Research tools, interactive visualizations, and web applications developed by Kangning (Ken) Huang.",
     url: canonicalUrl("/projects"),
-  },
+    images: [
+      {
+        url: "/hero-nyc-skyline.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kangning (Ken) Huang — NYU Shanghai",
+      },
+    ],
+},
 };
 
 export default function ProjectsPage() {

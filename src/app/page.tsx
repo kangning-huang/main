@@ -8,7 +8,7 @@ import {
 } from "@/lib/constants";
 import { fetchPublications } from "@/lib/publications";
 import { fetchBlogPosts } from "@/lib/blog";
-import { canonicalUrl, webPageSchema, profilePageSchema, OG_IMAGE_PATH } from "@/lib/seo";
+import { canonicalUrl, webPageSchema, profilePageSchema, faqSchema, OG_IMAGE_PATH } from "@/lib/seo";
 import T from "@/components/T";
 import PublicationCard from "@/components/PublicationCard";
 
@@ -125,13 +125,17 @@ export default async function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(profileSchema) }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema()) }}
+      />
       {/* ── Hero ── */}
       <section className="relative overflow-hidden">
         {/* Background image */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/main/hero-nyc-skyline.jpg"
-          alt=""
+          alt="New York City skyline at dusk"
           className="absolute inset-0 h-full w-full object-cover"
         />
         {/* Dark overlay for text legibility */}
@@ -393,7 +397,7 @@ export default async function Home() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={featuredPosts[0].coverImage}
-                    alt=""
+                    alt={featuredPosts[0].title}
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                 </div>
