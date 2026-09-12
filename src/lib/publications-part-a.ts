@@ -282,9 +282,9 @@ export const PUBLICATIONS_A = [
     keywords: ["Pearl River Delta", "urbanization impact", "climate scenarios", "regional climate modeling", "land-use change", "mega-urban region"],
   },
 {
-    title: "Toward Cooler Cities by Homogeneous Scale Planning",
+    title: "Toward Cooler Cities by Larger Homogeneous Functional Clusters",
     authors: "Xucai Zhang, Xiaobing Wei, Xiaoping Liu, Honghong Wei, Yue Zheng, Hongkai Gu, Yangzi Che, Yeran Sun, Ming Luo, Weilin Liao, Haosheng Huang, Kangning Huang",
-    venue: "in revision at PNAS",
+    venue: "PNAS (accepted)",
     year: 2026,
     citationCount: 0,
     isLeadAuthor: false,
@@ -313,7 +313,7 @@ export const PUBLICATIONS_A = [
 {
     title: "Infrastructure reach and capacity pressure in sub-Saharan Africa's future urban expansion",
     authors: "Kangning Huang, Yimin Chen",
-    venue: "submitted to Nature Communications",
+    venue: "in 1st revision at Nature Communications",
     year: 2026,
     citationCount: 0,
     isLeadAuthor: false,
