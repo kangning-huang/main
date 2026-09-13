@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Redirecting…</title>
+  <script>
+    (function () {
+      var p = location.pathname || "";
+      if (p === "/main" || p.indexOf("/main/") === 0) {
+        var next = p === "/main" ? "/" : p.slice("/main".length) || "/";
+        location.replace(next + location.search + location.hash);
+        return;
+      }
+      document.title = "Not found";
+    })();
+  </script>
+</head>
+<body>
+  <p>Page not found. <a href="/">Home</a></p>
+</body>
+</html>

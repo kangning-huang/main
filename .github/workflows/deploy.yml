@@ -35,6 +35,8 @@ jobs:
 
       - name: Build
         run: npm run build
+        env:
+          NEXT_PUBLIC_SITE_URL: https://kangning-huang.com
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
