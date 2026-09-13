@@ -22,7 +22,7 @@ export const PUBLICATIONS_A = [
     citationCount: 466,
     doi: "10.1088/1748-9326/ab4b71",
     isLeadAuthor: true,
-    webUrl: "https://kangning-huang.github.io/main/urban-expansion",
+    webUrl: "https://kangning-huang.com/urban-expansion",
     highlights: [
       "Projects global urban land areas to expand by 0.6–1.3 million km² (78%–171%) between 2015 and 2050 under shared socioeconomic pathways (SSPs)",
       "Estimates urban heat island intensification of 0.5–0.7 °C on average, with localized warming reaching up to 3 °C due to urban land-cover change",
