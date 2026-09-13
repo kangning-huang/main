@@ -4,12 +4,12 @@
 
 ## Site Structure
 
-- [Home](https://kangning-huang.github.io/main/): Overview, bio, selected publications, featured projects, and latest writing
-- [Publications](https://kangning-huang.github.io/main/publications): Full list of peer-reviewed publications with citation metrics
-- [Projects](https://kangning-huang.github.io/main/projects): Academic research tools and side projects
-- [Blog](https://kangning-huang.github.io/main/blog): Writing on cities, climate, autonomous vehicles, and more
-- [Advisees](https://kangning-huang.github.io/main/advisees): Current and past students and their research
-- [Urban Expansion 2050](https://kangning-huang.github.io/main/urban-expansion): Interactive visualization of projected global urban land expansion
+- [Home](https://kangning-huang.com/): Overview, bio, selected publications, featured projects, and latest writing
+- [Publications](https://kangning-huang.com/publications): Full list of peer-reviewed publications with citation metrics
+- [Projects](https://kangning-huang.com/projects): Academic research tools and side projects
+- [Blog](https://kangning-huang.com/blog): Writing on cities, climate, autonomous vehicles, and more
+- [Advisees](https://kangning-huang.com/advisees): Current and past students and their research
+- [Urban Expansion 2050](https://kangning-huang.com/urban-expansion): Interactive visualization of projected global urban land expansion
 
 ## About Kangning (Ken) Huang
 
