@@ -134,7 +134,7 @@ export default async function Home() {
         {/* Background image */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/main/hero-nyc-skyline.jpg"
+          src="/hero-nyc-skyline.jpg"
           alt="New York City skyline at dusk"
           className="absolute inset-0 h-full w-full object-cover"
         />
@@ -172,7 +172,7 @@ export default async function Home() {
               { en: "Substack", zh: "Substack", href: LINKS.substack },
               { en: "X", zh: "X", href: LINKS.twitter },
               { en: "NYU Faculty", zh: "教师主页", href: LINKS.nyuFaculty },
-              { en: "CV (PDF)", zh: "简历 (PDF)", href: "/main/CV_Kangning_Huang.pdf" },
+              { en: "CV (PDF)", zh: "简历 (PDF)", href: "/CV_Kangning_Huang.pdf" },
               { en: "Email", zh: "邮箱", href: `mailto:${SITE.email}` },
             ].map((link) => (
               <a
