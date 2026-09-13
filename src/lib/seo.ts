@@ -239,3 +239,4 @@ export function scholarlyArticleListSchema(pubs: Publication[]) {
     })),
   };
 }
+
