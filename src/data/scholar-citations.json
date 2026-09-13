@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4921,
+  "totalCitations": 4945,
   "hIndex": 22,
   "i10Index": 28,
   "citedByYears": {
@@ -11,31 +11,31 @@
     "2019": 55,
     "2020": 175,
     "2021": 477,
-    "2022": 651,
-    "2023": 741,
+    "2022": 652,
+    "2023": 742,
     "2024": 815,
-    "2025": 977,
-    "2026": 791
+    "2025": 976,
+    "2026": 815
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 1107,
+      "citationCount": 1111,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 939,
+      "citationCount": 947,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 763,
+      "citationCount": 764,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 545,
+      "citationCount": 546,
       "year": 2019
     },
     {
@@ -45,7 +45,7 @@
     },
     {
       "title": "Fugitive road dust PM2. 5 emissions and their potential health impacts",
-      "citationCount": 166,
+      "citationCount": 168,
       "year": 2019
     },
     {
@@ -65,7 +65,7 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 105,
+      "citationCount": 109,
       "year": 2024
     },
     {
@@ -75,12 +75,12 @@
     },
     {
       "title": "High‐resolution gridded population projections for China under the shared socioeconomic pathways",
-      "citationCount": 81,
+      "citationCount": 82,
       "year": 2020
     },
     {
       "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 78,
+      "citationCount": 79,
       "year": 2021
     },
     {
@@ -95,7 +95,7 @@
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 57,
+      "citationCount": 58,
       "year": 2025
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 42,
+      "citationCount": 43,
       "year": 2025
     },
     {
@@ -234,11 +234,6 @@
       "year": 2025
     },
     {
-      "title": "Unveiling Causality: Does Demolishing Informal Settlements Cause Urban Surface Cooling?",
-      "citationCount": 0,
-      "year": 2025
-    },
-    {
       "title": "Above and Beyond: Integrating Building Height and Protection Standards in Global Flood Risk Assessment",
       "citationCount": 0,
       "year": 2025
@@ -304,5 +299,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-09-06T03:27:17.497Z"
+  "lastUpdated": "2026-09-13T03:44:34.759Z"
 }
