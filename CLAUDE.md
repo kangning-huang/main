@@ -2,13 +2,13 @@
 
 ## Project Overview
 
-This is Kangning (Ken) Huang's personal academic portfolio website, built with Next.js 16, TypeScript, and Tailwind CSS 4. It is deployed to GitHub Pages via static export at `https://kangning-huang.github.io/main/`.
+This is Kangning (Ken) Huang's personal academic portfolio website, built with Next.js 16, TypeScript, and Tailwind CSS 4. It is deployed to GitHub Pages via static export at `https://kangning-huang.com/`.
 
 ## Development
 
 - Install dependencies: `npm install`
 - Build: `npm run build` (output goes to `out/`)
-- Dev server: `npm run dev` (serves at `http://localhost:3000/main/`)
+- Dev server: `npm run dev` (serves at `http://localhost:3000/`)
 
 ## When Adding a New Publication
 
