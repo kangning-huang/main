@@ -3,7 +3,7 @@ import type { Publication } from "@/lib/constants";
 
 const FALLBACK_SITE_URL = "https://kangning-huang.com";
 
-export const OG_IMAGE_PATH = "/hero-nyc-skyline.jpg";
+export const OG_IMAGE_PATH = "/og-default.jpg";
 
 export function getSiteUrl(): string {
   return (process.env.NEXT_PUBLIC_SITE_URL ?? FALLBACK_SITE_URL).replace(/\/$/, "");
@@ -66,7 +66,7 @@ export function personSchema() {
       "Urbanization and Climate Change",
     ],
     email: `mailto:${SITE.email}`,
-    image: `${canonicalUrl("/")}hero-nyc-skyline.jpg`,
+    image: `${getSiteUrl()}${OG_IMAGE_PATH}`,
     sameAs: [
       LINKS.googleScholar,
       LINKS.github,

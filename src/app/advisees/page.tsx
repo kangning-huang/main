@@ -16,6 +16,14 @@ export const metadata: Metadata = {
     description:
       "Students mentored by Kangning Huang at NYU Shanghai, including capstone projects, research achievements, and graduate placements.",
     url: canonicalUrl("/advisees"),
+    images: [
+      {
+        url: "/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kangning (Ken) Huang — NYU Shanghai",
+      },
+    ],
   },
 };
 
