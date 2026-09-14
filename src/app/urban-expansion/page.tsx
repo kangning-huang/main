@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     description:
       "Global urban land expansion and heat island projections through 2050 from research by Kangning (Ken) Huang.",
     url: canonicalUrl("/urban-expansion"),
+    images: [
+      {
+        url: "/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kangning (Ken) Huang — Urban Expansion 2050",
+      },
+    ],
   },
 };
 
