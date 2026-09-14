@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: canonicalUrl("/blog"),
     images: [
       {
-        url: "/hero-nyc-skyline.jpg",
+        url: "/og-default.jpg",
         width: 1200,
         height: 630,
         alt: "Kangning (Ken) Huang — NYU Shanghai",
