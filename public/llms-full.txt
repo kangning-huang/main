@@ -63,7 +63,7 @@ Research from the CLUEs Lab demonstrates that nighttime heat stress from urban e
 Accepted at Nature Cities (2026), work on nested economies of scale reveals nonlinear scaling between population and built mass across 3,000+ cities worldwide.
 
 ### Urban Forests and Environmental Risk
-Writing in Nature Climate Change (2022), Kangning Huang analyzed climate risks to urban forests. Related work integrates building height and protection standards into global urban flood risk assessment (Scientific Reports, accepted 2026).
+Writing in Nature Climate Change (2022), Kangning Huang analyzed climate risks to urban forests. Related work integrates building height and protection standards into global urban flood risk assessment (Scientific Reports, 2026; DOI 10.1038/s41598-026-70981-w).
 
 ## Selected Lead-Author Publications
 - Projecting global urban land expansion and heat island intensification through 2050 (Environmental Research Letters, 2019)
@@ -71,7 +71,7 @@ Writing in Nature Climate Change (2022), Kangning Huang analyzed climate risks t
 - Urban forests facing climate risks (Nature Climate Change, 2022)
 - Declining urban density attenuates rising population exposure to surface heat extremes (Scientific Reports, 2025)
 - Nested economies of scale in global city mass (Nature Cities, accepted 2026)
-- Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution (Scientific Reports, accepted 2026)
+- Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution (Scientific Reports, 2026; DOI 10.1038/s41598-026-70981-w)
 
 ## Lab
 CLUEs (Climate, Land Use, and Environmental Sustainability) Lab at NYU Shanghai.

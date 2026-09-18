@@ -179,11 +179,11 @@ export const PUBLICATIONS_A = [
 {
     title: "Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution",
     authors: "Jiayong Liang, Imman Hilaly, Xuyan Gao, ChengHe Guan, Ying Li, Kangning Huang",
-    venue: "Scientific Reports (accepted)",
+    venue: "Scientific Reports",
     year: 2026,
     citationCount: 0,
+    doi: "10.1038/s41598-026-70981-w",
     isLeadAuthor: true,
-    preprint: "https://www.researchsquare.com/article/rs-6900146/v1",
     webUrl: "https://kangning-huang.github.io/3D-urban-flood-risk/",
     highlights: [
       "Integrating building height and protection standards shifts the global flood damage distribution: Southeast Asia accounts for 42% of damages versus only 15% under conventional flood-depth-only assessments",
