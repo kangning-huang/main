@@ -284,7 +284,7 @@ export const PUBLICATIONS_A = [
 {
     title: "Toward Cooler Cities by Larger Homogeneous Functional Clusters",
     authors: "Xucai Zhang, Xiaobing Wei, Xiaoping Liu, Honghong Wei, Yue Zheng, Hongkai Gu, Yangzi Che, Yeran Sun, Ming Luo, Weilin Liao, Haosheng Huang, Kangning Huang",
-    venue: "PNAS (accepted)",
+    venue: "PNAS (in press)",
     year: 2026,
     citationCount: 0,
     isLeadAuthor: false,
