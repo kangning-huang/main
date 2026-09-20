@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4945,
+  "totalCitations": 4963,
   "hIndex": 22,
   "i10Index": 28,
   "citedByYears": {
@@ -7,30 +7,30 @@
     "2015": 34,
     "2016": 41,
     "2017": 38,
-    "2018": 45,
+    "2018": 46,
     "2019": 55,
     "2020": 175,
-    "2021": 477,
-    "2022": 652,
+    "2021": 478,
+    "2022": 650,
     "2023": 742,
     "2024": 815,
     "2025": 976,
-    "2026": 815
+    "2026": 831
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 1111,
+      "citationCount": 1113,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 947,
+      "citationCount": 949,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 764,
+      "citationCount": 768,
       "year": 2020
     },
     {
@@ -65,12 +65,12 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 109,
+      "citationCount": 110,
       "year": 2024
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 86,
+      "citationCount": 89,
       "year": 2025
     },
     {
@@ -80,12 +80,12 @@
     },
     {
       "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 79,
+      "citationCount": 80,
       "year": 2021
     },
     {
       "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
-      "citationCount": 75,
+      "citationCount": 76,
       "year": 2019
     },
     {
@@ -95,7 +95,7 @@
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 58,
+      "citationCount": 61,
       "year": 2025
     },
     {
@@ -105,7 +105,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 43,
+      "citationCount": 44,
       "year": 2025
     },
     {
@@ -299,5 +299,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-09-13T03:44:34.759Z"
+  "lastUpdated": "2026-09-20T03:54:51.968Z"
 }
