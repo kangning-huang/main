@@ -297,9 +297,9 @@ export const PUBLICATIONS_A = [
     keywords: ["urban heat island", "Urban Homogeneous Scale", "urban morphology", "climate adaptation", "urban planning", "causal inference", "machine learning"],
   },
 {
-    title: "Material-saving strategies for decarbonizing the global urban building stock",
+    title: "Material-saving strategies for decarbonizing the global building stock",
     authors: "Yupeng Liu, Kangning Huang, Shengping Li, Karen C. Seto, Wei-Qiang Chen",
-    venue: "submitted to Nature Communications",
+    venue: "submitted to Engineering",
     year: 2026,
     citationCount: 0,
     isLeadAuthor: false,
