@@ -297,6 +297,20 @@ export const PUBLICATIONS_A = [
     keywords: ["urban heat island", "Urban Homogeneous Scale", "urban morphology", "climate adaptation", "urban planning", "causal inference", "machine learning"],
   },
 {
+    title: "Assessing how sea-level rise and vertical land motion reshape coastal built-environment exposure patterns: A case study in Tianjin",
+    authors: "Yupeng Liu, Lin Feng, Zhiqiang Wen, Kangning Huang, Song Xu, Yongze Song, Faith Ka Shun Chan, Wei-Qiang Chen",
+    venue: "submitted to Applied Geography",
+    year: 2026,
+    citationCount: 0,
+    isLeadAuthor: false,
+    highlights: [
+      "Assesses how sea-level rise and vertical land motion jointly reshape coastal built-environment exposure patterns, using Tianjin as a case study",
+      "Integrates land subsidence and relative sea-level change to map shifting exposure of coastal buildings and infrastructure",
+      "Highlights implications for coastal adaptation planning where vertical land motion amplifies or redistributes flood and inundation risk",
+    ],
+    keywords: ["sea-level rise", "vertical land motion", "coastal exposure", "built environment", "Tianjin", "land subsidence", "climate adaptation"],
+  },
+{
     title: "Material-saving strategies for decarbonizing the global building stock",
     authors: "Yupeng Liu, Kangning Huang, Shengping Li, Karen C. Seto, Wei-Qiang Chen",
     venue: "submitted to Engineering",
