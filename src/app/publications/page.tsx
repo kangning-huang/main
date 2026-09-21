@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl("/publications"),
   },
   openGraph: {
+    type: "website",
     title: "Publications — Kangning (Ken) Huang",
     description:
       "Publications by Kangning (Ken) Huang on urban heat islands, global urban expansion, climate adaptation, flood risk, urban scaling laws, and remote sensing.",
