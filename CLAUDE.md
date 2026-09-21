@@ -10,6 +10,20 @@ This is Kangning (Ken) Huang's personal academic portfolio website, built with N
 - Build: `npm run build` (output goes to `out/`)
 - Dev server: `npm run dev` (serves at `http://localhost:3000/`)
 
+## Blog SEO (Substack-first)
+
+**Standing decision:** Full articles live on Substack (`https://kangninghuang.substack.com`). The personal-site `/blog` route is a listing/teaser only.
+
+Rules for anyone editing this repo:
+
+1. **Do not** add first-party article routes such as `/blog/[slug]` that duplicate Substack content.
+2. Blog cards must continue to link out to Substack post URLs (`target="_blank"`). Do not invent on-domain article URLs.
+3. `src/app/sitemap.ts` must list only the `/blog` **index**, never fake `/blog/<slug>` URLs.
+4. Canonicals for full articles belong on Substack. The site may canonicalize `https://kangning-huang.com/blog` for the listing page only.
+5. Posts are fetched into `src/data/blog-posts.json` via `scripts/fetch-blog.mjs` at build time; keep that pipeline rather than migrating content into the repo.
+
+See `docs/notes/blog-seo.md` for the rationale and evidence.
+
 ## When Adding a New Publication
 
 Every time a new publication is added, **both the website and the CV must be updated**:
@@ -33,7 +47,7 @@ Add or update the entry in the `CURATED_PUBLICATIONS` array. Each publication en
 ```
 
 - First/last author papers go under the `// ── First / last author ──` section.
-- Co-authored papers go under `// ── Co-author ──`.
+- Co-authored papers go under the `// ── Co-author ──` section.
 - Publications are roughly ordered by year (newest first) within each section.
 - When a paper transitions from "preprint" to published, update the `venue` to the journal name and add the `doi`.
 
