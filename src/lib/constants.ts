@@ -90,7 +90,7 @@ export const PROJECTS: Project[] = [
     title: "3D Urban Flood Risk",
     description:
       "Interactive web app for the paper on integrating building height and protection standards in global flood risk assessment. Visualizes 3D urban flood exposure across cities worldwide.",
-    url: "https://kangning-huang.com/3D-urban-flood-risk/",
+    url: "https://flood.kangning-huang.com/",
     tags: ["Flood Risk", "3D Visualization", "Interactive"],
     featured: true,
     category: "academic",
@@ -100,7 +100,7 @@ export const PROJECTS: Project[] = [
     title: "Urban Renewal Cooling DID",
     description:
       "Interactive visualization of key results from the paper on the causal link between informal settlement demolition and urban cooling. Uses a difference-in-differences approach to unveil cooling effects of urban renewal.",
-    url: "https://kangning-huang.com/urban-renewal-cooling-DID/",
+    url: "https://cooling.kangning-huang.com/",
     tags: ["Urban Cooling", "Causal Inference", "Interactive Visualization"],
     featured: true,
     category: "academic",
