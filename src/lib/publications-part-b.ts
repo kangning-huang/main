@@ -2,7 +2,7 @@ export const PUBLICATIONS_B = [
 {
     title: "Global multi-city heat perception: seasonal dynamics and climate–health signals",
     authors: "Meizi You, ChengHe Guan, Yuming Guo, Bao-Jie He, Steven Jige Quan, John S. Ji, Jianxiang Huang, Rongbin Xu, Zhihu Xu, Tianren Yang, Longxu Yan, Kangning Huang, ... Waishan Qiu",
-    venue: "under review at Nature Communications",
+    venue: "Nature Communications (accepted in principle)",
     year: 2026,
     citationCount: 0,
     isLeadAuthor: false,
