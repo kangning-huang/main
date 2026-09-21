@@ -167,7 +167,7 @@ export const PUBLICATIONS_A = [
     citationCount: 0,
     doi: "10.1038/s44432-026-00009-1",
     isLeadAuthor: true,
-    webUrl: "https://kangning-huang.com/urban-renewal-cooling-DID/",
+    webUrl: "https://cooling.kangning-huang.com/",
     highlights: [
       "Applies a difference-in-differences causal framework to 77 demolished informal settlements and 584 control sites across Beijing, Shanghai, and Guangzhou (2002–2022), establishing a clear causal cooling signal of approximately 1.5 K",
       "Shows that post-demolition cooling depends on subsequent land use, with greening standards and lower floor-area ratios reinforcing temperature reduction",
@@ -184,7 +184,7 @@ export const PUBLICATIONS_A = [
     citationCount: 0,
     doi: "10.1038/s41598-026-70981-w",
     isLeadAuthor: true,
-    webUrl: "https://kangning-huang.com/3D-urban-flood-risk/",
+    webUrl: "https://flood.kangning-huang.com/",
     highlights: [
       "Integrating building height and protection standards shifts the global flood damage distribution: Southeast Asia accounts for 42% of damages versus only 15% under conventional flood-depth-only assessments",
       "Sole reliance on flood depth overestimates risk in regions with resilient vertical urban forms and robust protection (e.g., Europe, East Asia) while underestimating it in areas with low-rise, unprotected development",
