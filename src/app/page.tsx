@@ -63,6 +63,9 @@ export const metadata: Metadata = {
     canonical: canonicalUrl("/"),
   },
   openGraph: {
+    type: "profile",
+    firstName: "Kangning",
+    lastName: "Huang",
     title: "Kangning (Ken) Huang — Assistant Professor, NYU Shanghai",
     description:
       "Assistant Professor of Environmental Studies at NYU Shanghai. Research on urbanization, climate change, urban heat islands, and environmental hazards. Yale PhD.",

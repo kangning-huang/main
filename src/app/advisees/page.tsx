@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl("/advisees"),
   },
   openGraph: {
+    type: "website",
     title: "Advisees",
     description:
       "Students mentored by Kangning Huang at NYU Shanghai, including capstone projects, research achievements, and graduate placements.",

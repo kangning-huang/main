@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl("/blog"),
   },
   openGraph: {
+    type: "website",
     title: "Blog",
     description:
       "Writing on cities, climate, autonomous vehicles, and more by Kangning (Ken) Huang.",

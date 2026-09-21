@@ -56,6 +56,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl("/projects"),
   },
   openGraph: {
+    type: "website",
     title: "Projects",
     description:
       "Research tools, interactive visualizations, and web applications developed by Kangning (Ken) Huang.",

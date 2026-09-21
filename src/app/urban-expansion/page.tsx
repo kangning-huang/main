@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     canonical: canonicalUrl("/urban-expansion"),
   },
   openGraph: {
+    type: "website",
     title: "Urban Expansion 2050",
     description:
       "Global urban land expansion and heat island projections through 2050 from research by Kangning (Ken) Huang.",
