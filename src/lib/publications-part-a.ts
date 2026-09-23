@@ -128,22 +128,6 @@ export const PUBLICATIONS_A = [
     keywords: ["urban scaling laws", "Zipf's law", "city size distribution", "built mass", "urban allometry", "urban economics"],
   },
 {
-    title: "Spatially resolved global potential for year-round solar-powered artificial intelligence computing",
-    authors: "Yimin Chen, Jing Qian, Yijing Wang, Xiaoping Liu, Ming Luo, Yutian Liang, Weilin Liao, Zhu Deng, Kangning Huang",
-    venue: "submitted to PNAS",
-    year: 2026,
-    citationCount: 0,
-    isLeadAuthor: true,
-    highlights: [
-      "Maps near-term global opportunities for solar-powered hyperscale data centres by integrating monthly photovoltaic yield, climate-driven cooling efficiency, suitable land, high-voltage infrastructure, and digital-network accessibility",
-      "Identifies 6,290 sites worldwide that meet the year-round monthly energy requirement of a 100-MW IT load, an upper-bound threshold-equivalent load of ~714 GW",
-      "Finds the United States alone holds about 34% of this solar-powered computing potential",
-      "Shows countries with high potential but weak geopolitical alignment toward China hold 46% of the global total, versus 28% for strongly aligned countries — exposing unequal exposure to renewable-hardware procurement constraints given China's dominance in PV and battery manufacturing",
-      "Concludes that climate and infrastructure define the physical geography of green AI, while geopolitics may condition whether the potential is realized",
-    ],
-    keywords: ["green AI", "data centers", "solar power", "photovoltaic energy", "renewable energy", "geopolitics", "hyperscale computing", "energy geography", "AI electricity demand"],
-  },
-{
     title: "Rapid Probabilistic Inundation Mapping Using Local Thresholds and Sentinel-1 SAR Data on Google Earth Engine",
     authors: "Jiayong Liang, Desheng Liu, Lihan Feng, Kangning Huang",
     venue: "Remote Sensing",
