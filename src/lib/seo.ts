@@ -96,7 +96,7 @@ export function faqSchema() {
         name: "Where does Kangning Huang work?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Kangning Huang is an Assistant Professor of Environmental Studies at NYU Shanghai, where he leads the CLUEs (Climate, Land Use, and Environmental Sustainability) Lab. He received his PhD from Yale University's School of the Environment and was a postdoctoral fellow at the National Center for Atmospheric Research (NCAR).",
+          text: "Kangning Huang is an Assistant Professor of Environmental Studies at NYU Shanghai, where he leads the CLUEs (CLimate and Urban Environments) Lab. He received his PhD from Yale University's School of the Environment and was a postdoctoral fellow at the National Center for Atmospheric Research (NCAR).",
         },
       },
       {
