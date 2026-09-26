@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "node scripts/fetch-blog.mjs",
-    "build": "next build",
+    "build": "next build && node scripts/preserve-404-redirect.mjs",
     "start": "next start",
     "lint": "eslint",
     "screenshots": "node scripts/capture-screenshots.mjs"
