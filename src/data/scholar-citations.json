@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4963,
+  "totalCitations": 4981,
   "hIndex": 22,
   "i10Index": 28,
   "citedByYears": {
@@ -11,21 +11,21 @@
     "2019": 55,
     "2020": 175,
     "2021": 478,
-    "2022": 650,
+    "2022": 649,
     "2023": 742,
-    "2024": 815,
+    "2024": 817,
     "2025": 976,
-    "2026": 831
+    "2026": 846
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 1113,
+      "citationCount": 1118,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 949,
+      "citationCount": 953,
       "year": 2020
     },
     {
@@ -35,7 +35,7 @@
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 546,
+      "citationCount": 548,
       "year": 2019
     },
     {
@@ -49,14 +49,19 @@
       "year": 2019
     },
     {
+      "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
+      "citationCount": 115,
+      "year": 2018
+    },
+    {
       "title": "Automatic registration of multisensor images using an integrated spatial and mutual information (SMI) metric",
       "citationCount": 115,
       "year": 2013
     },
     {
-      "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
-      "citationCount": 114,
-      "year": 2018
+      "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
+      "citationCount": 113,
+      "year": 2024
     },
     {
       "title": "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
@@ -64,18 +69,13 @@
       "year": 2013
     },
     {
-      "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 110,
-      "year": 2024
-    },
-    {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 89,
+      "citationCount": 90,
       "year": 2025
     },
     {
       "title": "High‐resolution gridded population projections for China under the shared socioeconomic pathways",
-      "citationCount": 82,
+      "citationCount": 83,
       "year": 2020
     },
     {
@@ -85,7 +85,7 @@
     },
     {
       "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
-      "citationCount": 76,
+      "citationCount": 77,
       "year": 2019
     },
     {
@@ -224,6 +224,11 @@
       "year": 2013
     },
     {
+      "title": "Height-aware and protection-informed flood assessment shifts global urban risk distribution",
+      "citationCount": 0,
+      "year": 2026
+    },
+    {
       "title": "Unveiling the causal link between informal settlement demolition and urban cooling",
       "citationCount": 0,
       "year": 2026
@@ -299,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-09-20T03:54:51.968Z"
+  "lastUpdated": "2026-09-27T04:13:09.096Z"
 }
