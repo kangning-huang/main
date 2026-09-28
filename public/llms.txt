@@ -34,7 +34,7 @@ His work spans urban expansion modeling, urban heat island dynamics, climate ada
 - "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation" (Environmental Research Letters, 2024) — Shows that urban expansion alone can increase nighttime heat exposure even when heat island intensity is reduced.
 - "Urban forests facing climate risks" (Nature Climate Change, 2022) — Analyzes how climate change threatens urban forests, a key tool for heat mitigation.
 - "Declining urban density attenuates rising population exposure to surface heat extremes" (Scientific Reports, 2025) — Demonstrates that decreasing urban density can partially offset rising heat exposure from climate warming.
-- "Nested economies of scale in global city mass" (Nature Cities, accepted 2026) — Reveals nested scaling relationships between urban populations and their built environments across 3,000+ cities.
+- "Nested economies of scale in global city mass" (Nature Cities, in press 2026; DOI 10.1038/s44284-026-00532-x) — Reveals nested scaling relationships between urban populations and their built environments across 3,000+ cities.
 
 ## Affiliations
 
