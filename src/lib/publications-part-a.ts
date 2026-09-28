@@ -281,6 +281,20 @@ export const PUBLICATIONS_A = [
     keywords: ["urban heat island", "Urban Homogeneous Scale", "urban morphology", "climate adaptation", "urban planning", "causal inference", "machine learning"],
   },
 {
+    title: "Beyond land exposure: multidimensional assessment of future built-environment and material-stock impacts under coastal inundation",
+    authors: "Yupeng Liu, Lin Feng, Zhiqiang Wen, Kangning Huang, Song Xu, Yongze Song, Faith Ka Shun Chan, Wei-Qiang Chen",
+    venue: "submitted to Ecological Indicators",
+    year: 2026,
+    citationCount: 0,
+    isLeadAuthor: false,
+    highlights: [
+      "Moves beyond land-area exposure to a multidimensional assessment of how future coastal inundation affects the built environment",
+      "Evaluates future impacts on both built-environment exposure and the material stock embedded in buildings and infrastructure",
+      "Informs coastal adaptation by indicating what is at stake in built assets and materials, not just inundated land",
+    ],
+    keywords: ["coastal inundation", "sea-level rise", "material stock", "built environment", "coastal exposure", "climate adaptation", "multidimensional assessment"],
+  },
+{
     title: "Assessing how sea-level rise and vertical land motion reshape coastal built-environment exposure patterns: A case study in Tianjin",
     authors: "Yupeng Liu, Lin Feng, Zhiqiang Wen, Kangning Huang, Song Xu, Yongze Song, Faith Ka Shun Chan, Wei-Qiang Chen",
     venue: "submitted to Applied Geography",
