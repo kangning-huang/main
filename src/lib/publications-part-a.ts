@@ -116,7 +116,6 @@ export const PUBLICATIONS_A = [
     venue: "Nature Cities (in press)",
     year: 2026,
     citationCount: 0,
-    doi: "10.1038/s44284-026-00532-x",
     url: "https://arxiv.org/abs/2507.03960",
     isLeadAuthor: true,
     webUrl: "https://city-mass.nested-complexity.net",
