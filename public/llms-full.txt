@@ -34,7 +34,7 @@ His work spans urban expansion modeling, urban heat island dynamics, climate ada
 - "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation" (Environmental Research Letters, 2024) — Shows that urban expansion alone can increase nighttime heat exposure even when heat island intensity is reduced.
 - "Urban forests facing climate risks" (Nature Climate Change, 2022) — Analyzes how climate change threatens urban forests, a key tool for heat mitigation.
 - "Declining urban density attenuates rising population exposure to surface heat extremes" (Scientific Reports, 2025) — Demonstrates that decreasing urban density can partially offset rising heat exposure from climate warming.
-- "Nested economies of scale in global city mass" (Nature Cities, in press 2026; DOI 10.1038/s44284-026-00532-x) — Reveals nested scaling relationships between urban populations and their built environments across 3,000+ cities.
+- "Nested economies of scale in global city mass" (Nature Cities, in press 2026) — Reveals nested scaling relationships between urban populations and their built environments across 3,000+ cities.
 
 ## Affiliations
 
@@ -60,7 +60,7 @@ Kangning Huang's research projects that global urban land area will increase by 
 Research from the CLUEs Lab demonstrates that nighttime heat stress from urban expansion persists even when heat island mitigation measures reduce daytime temperatures. Declining urban density can partially offset rising population exposure to surface heat extremes caused by climate warming.
 
 ### Urban Scaling Laws
-In press at Nature Cities (2026; DOI 10.1038/s44284-026-00532-x), work on nested economies of scale reveals nonlinear scaling between population and built mass across 3,000+ cities worldwide.
+In press at Nature Cities (2026), work on nested economies of scale reveals nonlinear scaling between population and built mass across 3,000+ cities worldwide.
 
 ### Urban Forests and Environmental Risk
 Writing in Nature Climate Change (2022), Kangning Huang analyzed climate risks to urban forests. Related work integrates building height and protection standards into global urban flood risk assessment (Scientific Reports, 2026; DOI 10.1038/s41598-026-70981-w).
@@ -70,7 +70,7 @@ Writing in Nature Climate Change (2022), Kangning Huang analyzed climate risks t
 - Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation (Journal of Geophysical Research: Atmospheres, 2021)
 - Urban forests facing climate risks (Nature Climate Change, 2022)
 - Declining urban density attenuates rising population exposure to surface heat extremes (Scientific Reports, 2025)
-- Nested economies of scale in global city mass (Nature Cities, in press 2026; DOI 10.1038/s44284-026-00532-x)
+- Nested economies of scale in global city mass (Nature Cities, in press 2026)
 - Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution (Scientific Reports, 2026; DOI 10.1038/s41598-026-70981-w)
 
 ## Lab
