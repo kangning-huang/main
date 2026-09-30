@@ -325,7 +325,7 @@ export const PUBLICATIONS_A = [
 {
     title: "Infrastructure reach and capacity pressure in sub-Saharan Africa's future urban expansion",
     authors: "Kangning Huang, Yimin Chen",
-    venue: "in 1st revision at Nature Communications",
+    venue: "1st revision under review at Nature Communications",
     year: 2026,
     citationCount: 0,
     isLeadAuthor: false,
