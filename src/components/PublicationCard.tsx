@@ -6,16 +6,23 @@ import { COAUTHOR_LINKS } from "@/lib/constants";
 import T from "@/components/T";
 
 export default function PublicationCard({ pub }: { pub: Publication }) {
-  const hasExtra = (pub.highlights && pub.highlights.length > 0) || (pub.keywords && pub.keywords.length > 0);
+  const hasExtra =
+    (pub.highlights && pub.highlights.length > 0) ||
+    (pub.keywords && pub.keywords.length > 0) ||
+    Boolean(pub.highlightVideo);
   const [open, setOpen] = useState(false);
   const bodyRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState(0);
 
-  useEffect(() => {
+  const remeasure = () => {
     if (bodyRef.current) {
       setHeight(bodyRef.current.scrollHeight);
     }
-  }, [open]);
+  };
+
+  useEffect(() => {
+    remeasure();
+  }, [open, pub.highlightVideo]);
 
   return (
     <article className="pub-item group py-4">
@@ -158,6 +165,23 @@ export default function PublicationCard({ pub }: { pub: Publication }) {
                   </li>
                 ))}
               </ul>
+            )}
+            {pub.highlightVideo && (
+              <div
+                className="mt-3 max-w-md overflow-hidden rounded-lg border border-teal/15 bg-paper-deep/40"
+                onClick={(e) => e.stopPropagation()}
+                onKeyDown={(e) => e.stopPropagation()}
+              >
+                <video
+                  className="aspect-square w-full bg-ink/5"
+                  controls
+                  preload="metadata"
+                  playsInline
+                  src={pub.highlightVideo}
+                  onLoadedMetadata={remeasure}
+                  onLoadedData={remeasure}
+                />
+              </div>
             )}
             {pub.keywords && pub.keywords.length > 0 && (
               <div className="mt-3 flex flex-wrap gap-1.5">
