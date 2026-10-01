@@ -162,6 +162,8 @@ export interface Publication {
   webUrl?: string;
   /** SEO/AEO: keyword-rich bullet points summarising key findings */
   highlights?: string[];
+  /** Optional demo/highlight video (site-hosted path under public/), shown when expanded */
+  highlightVideo?: string;
   /** SEO/AEO: topic keywords for structured data and filtering */
   keywords?: string[];
 }
