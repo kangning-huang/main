@@ -1,5 +1,5 @@
 {
-  "totalCitations": 4981,
+  "totalCitations": 5003,
   "hIndex": 22,
   "i10Index": 28,
   "citedByYears": {
@@ -11,26 +11,26 @@
     "2019": 55,
     "2020": 175,
     "2021": 478,
-    "2022": 649,
+    "2022": 650,
     "2023": 742,
     "2024": 817,
-    "2025": 976,
-    "2026": 846
+    "2025": 977,
+    "2026": 866
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 1118,
+      "citationCount": 1121,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 953,
+      "citationCount": 957,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 768,
+      "citationCount": 772,
       "year": 2020
     },
     {
@@ -49,6 +49,11 @@
       "year": 2019
     },
     {
+      "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
+      "citationCount": 116,
+      "year": 2024
+    },
+    {
       "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
       "citationCount": 115,
       "year": 2018
@@ -59,28 +64,23 @@
       "year": 2013
     },
     {
-      "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 113,
-      "year": 2024
-    },
-    {
       "title": "An improved artificial immune system for seeking the Pareto front of land-use allocation problem in large areas",
       "citationCount": 111,
       "year": 2013
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 90,
+      "citationCount": 91,
       "year": 2025
     },
     {
       "title": "High‐resolution gridded population projections for China under the shared socioeconomic pathways",
-      "citationCount": 83,
+      "citationCount": 84,
       "year": 2020
     },
     {
       "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 80,
+      "citationCount": 82,
       "year": 2021
     },
     {
@@ -95,7 +95,7 @@
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 61,
+      "citationCount": 64,
       "year": 2025
     },
     {
@@ -165,7 +165,7 @@
     },
     {
       "title": "The growing impacts of cities on biodiversity. Research gaps limit global decision-making",
-      "citationCount": 6,
+      "citationCount": 7,
       "year": 2019
     },
     {
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-09-27T04:13:09.096Z"
+  "lastUpdated": "2026-10-04T04:48:29.163Z"
 }
