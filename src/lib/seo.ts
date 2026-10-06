@@ -146,7 +146,7 @@ export function faqSchema() {
         name: "What is urban heat island research?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Urban heat islands occur when cities become significantly warmer than surrounding rural areas due to built surfaces absorbing and re-emitting heat. Kangning Huang's research shows that global urban expansion could increase heat island intensity by 0.5-2°C by 2050, with nighttime heat stress persisting even when mitigation measures reduce daytime heat islands.",
+          text: "Urban heat islands occur when cities become significantly warmer than surrounding rural areas due to built surfaces absorbing and re-emitting heat. Kangning Huang's research shows that global urban expansion through 2050 could intensify urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally), with nighttime heat stress persisting even when mitigation measures reduce daytime heat islands.",
         },
       },
       {
@@ -154,7 +154,7 @@ export function faqSchema() {
         name: "How much will cities expand by 2050?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "According to Kangning Huang's research published in Environmental Research Letters (2019, 480+ citations), global urban land area is projected to increase by 80-180% by 2050 compared to 2015 levels, with significant implications for heat island intensification, biodiversity loss, and food security.",
+          text: "According to Kangning Huang's research published in Environmental Research Letters (2019, 480+ citations), global urban land area is projected to increase by 78%–171% (0.6–1.3 million km²) between 2015 and 2050, intensifying urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally) and increasing extreme heat risk for about half of the future urban population.",
         },
       },
     ],

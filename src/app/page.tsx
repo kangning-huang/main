@@ -284,8 +284,8 @@ export default async function Home() {
               </h3>
               <p className="mt-2 text-sm leading-relaxed text-ink-muted">
                 <T
-                  en="Kangning Huang's research projects that global urban land area will increase by 80–180% by 2050 compared to 2015 levels. This expansion will intensify urban heat islands by 0.5–2°C, affect 1.8 billion additional urban residents, and threaten biodiversity hotspots and agricultural land. Published in Environmental Research Letters (2019), this work has been cited over 480 times."
-                  zh="黄康宁的研究预测，到2050年全球城市用地面积将比2015年增加80–180%。这种扩张将使城市热岛效应增强0.5–2°C，影响额外18亿城市居民，并威胁生物多样性热点地区和农业用地。该研究于2019年发表在Environmental Research Letters上，已被引用超过480次。"
+                  en="Kangning Huang's research projects that global urban land area will expand by 0.6–1.3 million km² (78%–171%) between 2015 and 2050. This expansion will intensify urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally) and increase extreme heat risk for about half of the future urban population, primarily in the tropical Global South. Published in Environmental Research Letters (2019), this work has been cited over 480 times."
+                  zh="黄康宁的研究预测，2015至2050年间全球城市用地面积将增加60万至130万平方公里（78%–171%）。这种扩张将使城市热岛效应平均增强0.5–0.7 °C（局部最高约3 °C），并使约一半的未来城市人口面临更高的极端高温风险，主要集中在热带全球南方地区。该研究于2019年发表在Environmental Research Letters上，已被引用超过480次。"
                 />
               </p>
             </article>
