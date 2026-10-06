@@ -1,4 +1,3 @@
-import { SITE } from "@/lib/constants";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcrumbSchema } from "@/lib/seo";

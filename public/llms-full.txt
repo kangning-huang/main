@@ -30,8 +30,8 @@ His work spans urban expansion modeling, urban heat island dynamics, climate ada
 
 ## Key Publications
 
-- "Projecting global urban land expansion and heat island intensification through 2050" (Environmental Research Letters, 2019) — 480+ citations. Projects that urban land area will increase by 80–180% by 2050, with significant heat island intensification.
-- "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation" (Environmental Research Letters, 2024) — Shows that urban expansion alone can increase nighttime heat exposure even when heat island intensity is reduced.
+- "Projecting global urban land expansion and heat island intensification through 2050" (Environmental Research Letters, 2019) — 480+ citations. Projects that global urban land area will expand by 78%–171% between 2015 and 2050, intensifying urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally).
+- "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation" (Journal of Geophysical Research: Atmospheres, 2021) — Shows that urban expansion alone can increase nighttime heat exposure even when heat island intensity is reduced.
 - "Urban forests facing climate risks" (Nature Climate Change, 2022) — Analyzes how climate change threatens urban forests, a key tool for heat mitigation.
 - "Declining urban density attenuates rising population exposure to surface heat extremes" (Scientific Reports, 2025) — Demonstrates that decreasing urban density can partially offset rising heat exposure from climate warming.
 - "Nested economies of scale in global city mass" (Nature Cities, in press 2026) — Reveals nested scaling relationships between urban populations and their built environments across 3,000+ cities.
@@ -54,7 +54,7 @@ His work spans urban expansion modeling, urban heat island dynamics, climate ada
 ## Research Highlights (detail)
 
 ### Global Urban Expansion Projections
-Kangning Huang's research projects that global urban land area will increase by 80–180% by 2050 compared to 2015 levels. This expansion will intensify urban heat islands by 0.5–2°C, affect additional urban residents, and threaten biodiversity hotspots and agricultural land. Published in Environmental Research Letters (2019).
+Kangning Huang's research projects that global urban land area will expand by 0.6–1.3 million km² (78%–171%) between 2015 and 2050. This expansion will intensify urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally) and increase extreme heat risk for about half of the future urban population, primarily in the tropical Global South. Published in Environmental Research Letters (2019).
 
 ### Urban Heat and Climate Adaptation
 Research from the CLUEs Lab demonstrates that nighttime heat stress from urban expansion persists even when heat island mitigation measures reduce daytime temperatures. Declining urban density can partially offset rising population exposure to surface heat extremes caused by climate warming.
