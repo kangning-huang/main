@@ -4,7 +4,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/lib/language-context";
 import "./globals.css";
-import { personSchema, websiteSchema, OG_IMAGE_PATH, canonicalUrl } from "@/lib/seo";
+import { personSchema, websiteSchema, OG_IMAGE_PATH, canonicalUrl, withOpenGraphDefaults } from "@/lib/seo";
 
 const GA_ID = "G-M6RRTZHMPZ";
 
@@ -25,10 +25,8 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Kangning (Ken) Huang", url: "https://kangning-huang.com" }],
   creator: "Kangning (Ken) Huang",
-  openGraph: {
+  openGraph: withOpenGraphDefaults({
     type: "website",
-    locale: "en_US",
-    siteName: "Kangning (Ken) Huang",
     images: [
       {
         url: OG_IMAGE_PATH,
@@ -37,7 +35,7 @@ export const metadata: Metadata = {
         alt: "Kangning (Ken) Huang — NYU Shanghai",
       },
     ],
-  },
+  }),
   twitter: {
     card: "summary_large_image",
     images: [OG_IMAGE_PATH],

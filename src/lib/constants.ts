@@ -164,6 +164,14 @@ export interface Publication {
   highlights?: string[];
   /** Optional demo/highlight video (site-hosted path under public/), shown when expanded */
   highlightVideo?: string;
+  /** Poster image for the highlight video (site-hosted path under public/) */
+  highlightVideoPoster?: string;
+  /** Short accessible caption for the highlight video (used for aria-label + visible caption) */
+  highlightVideoCaption?: string;
+  /** Upload date of the highlight video (YYYY-MM-DD), used in VideoObject JSON-LD */
+  highlightVideoUploadDate?: string;
+  /** ISO 8601 duration of the highlight video (e.g. "PT1M13S"), used in VideoObject JSON-LD */
+  highlightVideoDuration?: string;
   /** SEO/AEO: topic keywords for structured data and filtering */
   keywords?: string[];
 }

@@ -4,7 +4,7 @@ import { fetchPublications, getScholarData } from "@/lib/publications";
 import type { Publication } from "@/lib/constants";
 import CitationChart from "@/components/CitationChart";
 import PublicationCard from "@/components/PublicationCard";
-import { canonicalUrl, webPageSchema, scholarlyArticleListSchema, breadcrumbSchema } from "@/lib/seo";
+import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, scholarlyArticleListSchema, breadcrumbSchema, highlightVideoSchemas } from "@/lib/seo";
 import T from "@/components/T";
 
 export const metadata: Metadata = {
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl("/publications"),
   },
-  openGraph: {
+  openGraph: withOpenGraphDefaults({
     type: "website",
-    title: "Publications — Kangning (Ken) Huang",
+    title: pageTitle("Publications"),
     description:
       "Publications by Kangning (Ken) Huang on urban heat islands, global urban expansion, climate adaptation, flood risk, urban scaling laws, and remote sensing.",
     url: canonicalUrl("/publications"),
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         alt: "Kangning (Ken) Huang — NYU Shanghai",
       },
     ],
-},
+  }),
 };
 
 export default async function PublicationsPage() {
@@ -54,6 +54,7 @@ export default async function PublicationsPage() {
     .sort((a, b) => b - a);
 
   const breadcrumbs = breadcrumbSchema([{ name: "Publications", path: "/publications" }]);
+  const videoSchemas = highlightVideoSchemas(publications);
 
   return (
     <>
@@ -69,6 +70,13 @@ export default async function PublicationsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
+      {videoSchemas.map((schema, i) => (
+        <script
+          key={`video-ld-${i}`}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <div className="mx-auto max-w-6xl px-6 py-12 lg:px-8">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>

@@ -120,6 +120,10 @@ export const PUBLICATIONS_A = [
     isLeadAuthor: true,
     webUrl: "https://city-mass.nested-complexity.net",
     highlightVideo: "/videos/nested-economies-demo.mp4",
+    highlightVideoPoster: "/videos/nested-economies-demo-poster.jpg",
+    highlightVideoCaption: "Animation: nested economies of scale in global city mass",
+    highlightVideoUploadDate: "2026-10-02",
+    highlightVideoDuration: "PT1M13S",
     highlights: [
       "Analyzes over 3,000 cities globally to reveal universal sub-linear scaling of built mass with population, with a city-level scaling exponent of β ≈ 0.90 meaning larger cities use less built mass per capita",
       "Finds that neighborhood-level scaling exhibits an even smaller exponent (δ ≈ 0.75) than city-level scaling (β ≈ 0.90), demonstrating that economies of scale in built mass intensify at finer spatial resolutions",

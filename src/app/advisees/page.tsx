@@ -1,7 +1,7 @@
 import { SITE } from "@/lib/constants";
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { canonicalUrl, webPageSchema, breadcrumbSchema } from "@/lib/seo";
+import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 import T from "@/components/T";
 
 export const metadata: Metadata = {
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl("/advisees"),
   },
-  openGraph: {
+  openGraph: withOpenGraphDefaults({
     type: "website",
-    title: "Advisees",
+    title: pageTitle("Advisees"),
     description:
       "Students mentored by Kangning Huang at NYU Shanghai, including capstone projects, research achievements, and graduate placements.",
     url: canonicalUrl("/advisees"),
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         alt: "Kangning (Ken) Huang — NYU Shanghai",
       },
     ],
-  },
+  }),
 };
 
 interface Advisee {

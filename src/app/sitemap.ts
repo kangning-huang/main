@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { canonicalUrl } from "@/lib/seo";
+import { canonicalPageUrl } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
@@ -43,7 +43,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ];
 
   return urls.map((entry) => ({
-    url: canonicalUrl(entry.path),
+    url: canonicalPageUrl(entry.path),
     lastModified: new Date(),
     changeFrequency: entry.changeFrequency,
     priority: entry.priority,

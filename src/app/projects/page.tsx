@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { PROJECTS } from "@/lib/constants";
 import type { Metadata } from "next";
-import { canonicalUrl, webPageSchema, breadcrumbSchema } from "@/lib/seo";
+import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 import T from "@/components/T";
 
 const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
@@ -55,9 +55,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl("/projects"),
   },
-  openGraph: {
+  openGraph: withOpenGraphDefaults({
     type: "website",
-    title: "Projects",
+    title: pageTitle("Projects"),
     description:
       "Research tools, interactive visualizations, and web applications developed by Kangning (Ken) Huang.",
     url: canonicalUrl("/projects"),
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
         alt: "Kangning (Ken) Huang — NYU Shanghai",
       },
     ],
-},
+  }),
 };
 
 export default function ProjectsPage() {
