@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { LINKS } from "@/lib/constants";
 import { fetchBlogPosts } from "@/lib/blog";
-import { canonicalUrl, webPageSchema, breadcrumbSchema } from "@/lib/seo";
+import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 import T from "@/components/T";
 
 export const metadata: Metadata = {
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: canonicalUrl("/blog"),
   },
-  openGraph: {
+  openGraph: withOpenGraphDefaults({
     type: "website",
-    title: "Blog",
+    title: pageTitle("Blog"),
     description:
       "Writing on cities, climate, autonomous vehicles, and more by Kangning (Ken) Huang.",
     url: canonicalUrl("/blog"),
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
         alt: "Kangning (Ken) Huang — NYU Shanghai",
       },
     ],
-},
+  }),
 };
 
 export default async function BlogPage() {

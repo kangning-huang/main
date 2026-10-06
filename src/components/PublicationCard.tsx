@@ -172,15 +172,24 @@ export default function PublicationCard({ pub }: { pub: Publication }) {
                 onClick={(e) => e.stopPropagation()}
                 onKeyDown={(e) => e.stopPropagation()}
               >
-                <video
-                  className="aspect-square w-full bg-ink/5"
-                  controls
-                  preload="metadata"
-                  playsInline
-                  src={pub.highlightVideo}
-                  onLoadedMetadata={remeasure}
-                  onLoadedData={remeasure}
-                />
+                <figure className="m-0">
+                  <video
+                    className="aspect-square w-full bg-ink/5"
+                    controls
+                    preload="metadata"
+                    playsInline
+                    src={pub.highlightVideo}
+                    poster={pub.highlightVideoPoster}
+                    aria-label={pub.highlightVideoCaption ?? `Video: ${pub.title}`}
+                    onLoadedMetadata={remeasure}
+                    onLoadedData={remeasure}
+                  />
+                  {pub.highlightVideoCaption && (
+                    <figcaption className="px-3 py-2 text-xs text-ink-faint">
+                      {pub.highlightVideoCaption}
+                    </figcaption>
+                  )}
+                </figure>
               </div>
             )}
             {pub.keywords && pub.keywords.length > 0 && (

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { LINKS, SITE, COAUTHOR_LINKS } from "@/lib/constants";
 import type { Publication } from "@/lib/constants";
 
@@ -12,6 +13,47 @@ export function getSiteUrl(): string {
 export function canonicalUrl(path = "/"): string {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
   return `${getSiteUrl()}${normalizedPath}`;
+}
+
+/**
+ * Canonical URL for an HTML route, in exactly the form Next.js emits for
+ * `<link rel="canonical">` / og:url. Next.js normalizes the site root to the
+ * bare origin (no trailing slash), so the sitemap and page metadata both use
+ * this helper to keep the home URL byte-identical everywhere.
+ */
+export function canonicalPageUrl(path = "/"): string {
+  const url = canonicalUrl(path);
+  return path === "/" || path === "" ? getSiteUrl() : url;
+}
+
+/** Absolute URL for a site-hosted asset (e.g. "/videos/foo.mp4"). */
+export function absoluteUrl(path: string): string {
+  if (/^https?:\/\//.test(path)) return path;
+  return canonicalUrl(path);
+}
+
+/* ── Open Graph defaults ──────────────────────────────────────────────
+ * Next.js metadata merging is shallow: a page-level `openGraph` object
+ * fully replaces the root layout's `openGraph`, so site-wide fields such
+ * as og:site_name and og:locale were silently dropped on every page.
+ * Every page should wrap its openGraph in `withOpenGraphDefaults()`.
+ */
+export const OG_LOCALE = "en_US";
+
+export const OPEN_GRAPH_DEFAULTS = {
+  siteName: SITE.name,
+  locale: OG_LOCALE,
+} as const;
+
+type OpenGraph = NonNullable<Metadata["openGraph"]>;
+
+export function withOpenGraphDefaults<T extends OpenGraph>(openGraph: T): T {
+  return { ...OPEN_GRAPH_DEFAULTS, ...openGraph };
+}
+
+/** Matches the root layout's `<title>` template: "%s | Kangning (Ken) Huang". */
+export function pageTitle(title: string): string {
+  return `${title} | ${SITE.name}`;
 }
 
 export function personSchema() {
@@ -240,3 +282,35 @@ export function scholarlyArticleListSchema(pubs: Publication[]) {
   };
 }
 
+
+/**
+ * VideoObject JSON-LD for publications that carry a site-hosted highlight video.
+ * Returns one VideoObject per publication (empty array when none).
+ */
+export function highlightVideoSchemas(pubs: Publication[]) {
+  return pubs
+    .filter((pub) => Boolean(pub.highlightVideo))
+    .map((pub) => {
+      const video: Record<string, unknown> = {
+        "@context": "https://schema.org",
+        "@type": "VideoObject",
+        name: pub.highlightVideoCaption ?? pub.title,
+        description: `Animated summary of the paper \u201c${pub.title}\u201d (${pub.authors}${
+          pub.venue ? `, ${pub.venue}` : ""
+        }).${pub.highlights && pub.highlights.length > 0 ? ` ${pub.highlights[0]}.` : ""}`,
+        contentUrl: absoluteUrl(pub.highlightVideo as string),
+        inLanguage: "en",
+        author: { "@id": `${canonicalUrl("/")}#person` },
+        about: {
+          "@type": "ScholarlyArticle",
+          headline: pub.title,
+          ...(pub.url ? { url: pub.url } : {}),
+          ...(pub.doi ? { sameAs: `https://doi.org/${pub.doi}` } : {}),
+        },
+      };
+      if (pub.highlightVideoPoster) video.thumbnailUrl = absoluteUrl(pub.highlightVideoPoster);
+      if (pub.highlightVideoUploadDate) video.uploadDate = pub.highlightVideoUploadDate;
+      if (pub.highlightVideoDuration) video.duration = pub.highlightVideoDuration;
+      return video;
+    });
+}

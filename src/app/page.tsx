@@ -8,7 +8,7 @@ import {
 } from "@/lib/constants";
 import { fetchPublications } from "@/lib/publications";
 import { fetchBlogPosts } from "@/lib/blog";
-import { canonicalUrl, webPageSchema, profilePageSchema, faqSchema, OG_IMAGE_PATH } from "@/lib/seo";
+import { webPageSchema, profilePageSchema, faqSchema, OG_IMAGE_PATH, withOpenGraphDefaults, canonicalPageUrl } from "@/lib/seo";
 import T from "@/components/T";
 import PublicationCard from "@/components/PublicationCard";
 
@@ -58,18 +58,18 @@ export const metadata: Metadata = {
     absolute: "Kangning (Ken) Huang — Assistant Professor of Environmental Studies, NYU Shanghai",
   },
   description:
-    "Kangning (Ken) Huang is an Assistant Professor of Environmental Studies at NYU Shanghai. Research on urban heat islands, global urban expansion projections, climate adaptation, flood risk, urban scaling laws, and remote sensing. PhD from Yale University.",
+    "Kangning (Ken) Huang is an Assistant Professor at NYU Shanghai researching urban heat islands, global urban expansion, climate adaptation, and flood risk.",
   alternates: {
-    canonical: canonicalUrl("/"),
+    canonical: canonicalPageUrl("/"),
   },
-  openGraph: {
+  openGraph: withOpenGraphDefaults({
     type: "profile",
     firstName: "Kangning",
     lastName: "Huang",
     title: "Kangning (Ken) Huang — Assistant Professor, NYU Shanghai",
     description:
-      "Assistant Professor of Environmental Studies at NYU Shanghai. Research on urbanization, climate change, urban heat islands, and environmental hazards. Yale PhD.",
-    url: canonicalUrl("/"),
+      "Assistant Professor of Environmental Studies at NYU Shanghai and lead of the CLUEs (CLimate and Urban Environments) Lab, studying how urbanization and climate change affect vulnerability to hazards.",
+    url: canonicalPageUrl("/"),
     images: [
       {
         url: OG_IMAGE_PATH,
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
         alt: "Kangning (Ken) Huang — NYU Shanghai",
       },
     ],
-  },
+  }),
 };
 
 export default async function Home() {
