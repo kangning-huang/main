@@ -34,7 +34,7 @@ const TOP_N = 10;
 const ADAPTIVE_MAX_SHARE = 0.3;
 const OTHER_MIN_SHARE = 0.02;
 const TOPIC_SCORE_MIN = 0.5;
-const AUTO_FLIP_COAUTHOR_SHARE = 0.5;
+const AUTO_FLIP_COAUTHOR_SHARE = 0.5; // reported only; default is always All
 const CITING_SELECT = [
   "id", "doi", "title", "publication_year", "cited_by_count", "type",
   "primary_topic", "topics", "keywords", "authorships", "primary_location",
@@ -741,8 +741,9 @@ async function main() {
   const coauthorShare = viewAll.totals.uniqueCitingWorks
     ? citingOnlyViaCoauthor / viewAll.totals.uniqueCitingWorks
     : 0;
-  const autoFlipped = coauthorShare > AUTO_FLIP_COAUTHOR_SHARE;
-  const defaultView = autoFlipped ? "lead" : "all";
+  // Auto-flip disabled per Ken (2026-10-09): always default to All. Share still reported.
+  const autoFlipped = false;
+  const defaultView = "all";
 
   console.log(
     `\nCoauthor-only citing share: ${(coauthorShare * 100).toFixed(1)}% → defaultView=${defaultView}${autoFlipped ? " (auto-flipped)" : ""}`

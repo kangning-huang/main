@@ -6,8 +6,8 @@
     "asOf": "2026-10-09",
     "generatedAt": "2026-10-09T19:26:36.836Z",
     "schema": "reach-v2-c2-f5-h2",
-    "defaultView": "lead",
-    "autoFlippedToLead": true,
+    "defaultView": "all",
+    "autoFlippedToLead": false,
     "coauthorOnlyCitingShare": 81.5,
     "lens": "views.all = all pinned DOIs; views.lead = first/last/corresponding (hand-pinned lens). Corresponding is never taken from OpenAlex alone.",
     "doisFileSha256": "461e9e37267e331b",
@@ -53,24 +53,24 @@
     }
   },
   "totals": {
-    "papers": 11,
+    "papers": 24,
     "leadPapers": 11,
-    "coauthorPapers": 0,
-    "openalexCitedByCountSum": 624,
-    "citingLinksFetched": 623,
-    "selfCitationsRemoved": 44,
+    "coauthorPapers": 13,
+    "openalexCitedByCountSum": 3670,
+    "citingLinksFetched": 3655,
+    "selfCitationsRemoved": 322,
     "selfCitationsRemovedBy": {
-      "author-id": 43,
-      "orcid": 0,
-      "name": 1
+      "author-id": 262,
+      "orcid": 16,
+      "name": 44
     },
-    "citingLinksNonSelf": 579,
-    "uniqueCitingWorks": 573,
-    "citingWorksOutsideOwnField": 178,
-    "citingWorksOutsideOwnTopics": 167,
-    "fieldsCount": 16,
-    "countriesCount": 79,
-    "leadCitingShare": 100
+    "citingLinksNonSelf": 3333,
+    "uniqueCitingWorks": 3102,
+    "citingWorksOutsideOwnField": 996,
+    "citingWorksOutsideOwnTopics": 1064,
+    "fieldsCount": 20,
+    "countriesCount": 116,
+    "leadCitingShare": 18.5
   },
   "papers": [
     {
