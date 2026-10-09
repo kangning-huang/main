@@ -49,7 +49,7 @@ export default function ReachPage() {
       )}
 
       <div className="border-b border-ember/40 bg-ember-light/40 px-6 py-2 text-center text-xs text-ember-dark">
-        <T en="PREVIEW — flow-first redesign; not merged to live." zh="预览——流程图优先改版；尚未合并上线。" />
+        <T en="PREVIEW L4+R1 — cites/year default, adaptive subfields; not merged." zh="预览 L4+R1——默认年化引用、自适应子领域；尚未合并。" />
       </div>
 
       <ReachLensProvider>

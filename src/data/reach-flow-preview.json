@@ -6,7 +6,10 @@
     "weightingNote": "absolute = non-self citing works; citesPerYear = each citing work weighted by 1/yearsSince(cited paper), floor 1 year.",
     "fineThemeNote": "Hand remap for preview: dust→air-dust; forests/tree/AC/demolition→cooling; expansion megahits stay expansion. Ken to confirm.",
     "fieldNodesFoldedIntoOther": true,
-    "source": "OpenAlex"
+    "source": "OpenAlex",
+    "fineThemesConfig": "data/influence/fine-themes.json",
+    "defaultWeighting": "citesPerYear",
+    "combo": "L4+R1"
   },
   "left": [
     {

@@ -40,7 +40,7 @@ function layout(nodes: Omit<LayoutNode, "y" | "h" | "labelY">[], scale: number):
 }
 
 export default function ReachFlowChart() {
-  const [mode, setMode] = useState<Mode>("absolute");
+  const [mode, setMode] = useState<Mode>("citesPerYear");
   const valueKey = mode === "absolute" ? "absolute" : "citesPerYear";
 
   const { leftRaw, rightRaw, merged, total, shares } = useMemo(() => {
@@ -147,19 +147,19 @@ export default function ReachFlowChart() {
         <div className="flex rounded-full border border-rule p-0.5 text-sm" role="group" aria-label="Weighting">
           <button
             type="button"
-            aria-pressed={mode === "absolute"}
-            onClick={() => setMode("absolute")}
-            className={`rounded-full px-3 py-1 ${mode === "absolute" ? "bg-ember-light text-ember-dark" : "text-ink-muted hover:text-ink"}`}
-          >
-            <T en="Absolute cites" zh="绝对引用" />
-          </button>
-          <button
-            type="button"
             aria-pressed={mode === "citesPerYear"}
             onClick={() => setMode("citesPerYear")}
             className={`rounded-full px-3 py-1 ${mode === "citesPerYear" ? "bg-ember-light text-ember-dark" : "text-ink-muted hover:text-ink"}`}
           >
             <T en="Cites / year" zh="年化引用" />
+          </button>
+          <button
+            type="button"
+            aria-pressed={mode === "absolute"}
+            onClick={() => setMode("absolute")}
+            className={`rounded-full px-3 py-1 ${mode === "absolute" ? "bg-ember-light text-ember-dark" : "text-ink-muted hover:text-ink"}`}
+          >
+            <T en="Absolute cites" zh="绝对引用" />
           </button>
         </div>
       </div>
@@ -210,8 +210,8 @@ export default function ReachFlowChart() {
         </svg>
         <figcaption className="mt-2 text-xs text-ink-faint">
           <T
-            en={`Preview · OpenAlex ${flowData.meta.asOf} · ${mode === "absolute" ? "absolute citing works" : "cites per year since publication"} · self-citations removed · broad fields folded into Other · keywords on hover links. Not live.`}
-            zh={`预览 · OpenAlex ${flowData.meta.asOf} · ${mode === "absolute" ? "绝对施引" : "发表后年化施引"} · 已剔除自引 · 宽领域并入 Other · 链路上可悬停看关键词。尚未上线。`}
+            en={`Preview L4+R1 · OpenAlex ${flowData.meta.asOf} · default = cites/year (toggle Absolute) · self-citations removed · adaptive subfields/topics on right · keywords on hover only. Not live. Theme map: data/influence/fine-themes.json.`}
+            zh={`预览 L4+R1 · OpenAlex ${flowData.meta.asOf} · 默认年化引用（可切绝对）· 已剔除自引 · 右侧自适应子领域/主题 · 关键词仅悬停。尚未上线。主题映射：data/influence/fine-themes.json。`}
           />
         </figcaption>
       </figure>

@@ -16,50 +16,16 @@ const API = "https://api.openalex.org";
 const CITING_SELECT = "id,publication_year,primary_topic,topics,keywords,authorships";
 const AS_OF = influence.meta.asOf;
 
-const FINE = {
-  "10.1088/1748-9326/ab4b71": "expansion",
-  "10.1080/13658816.2012.730147": "expansion",
-  "10.1038/s41467-020-14386-x": "expansion",
-  "10.1038/s41893-020-0521-x": "expansion",
-  "10.1038/s41893-019-0436-6": "expansion",
-  "10.1080/13658816.2011.635594": "methods",
-  "10.1029/2020JD033831": "heat-health",
-  "10.1016/j.uclim.2021.100806": "heat-health",
-  "10.1038/s41558-022-01481-8": "cooling",
-  "10.1038/s41598-025-96045-z": "heat-health",
-  "10.1038/s41558-025-02303-3": "heat-health",
-  "10.1038/s44284-024-00184-9": "heat-health",
-  "10.1021/acs.est.4c14275": "cooling",
-  "10.1021/acs.est.4c00424": "cooling",
-  "10.1038/s44432-026-00009-1": "cooling",
-  "10.1021/acs.est.9b00666": "air-dust",
-  "10.1016/j.atmosenv.2018.07.043": "air-dust",
-  "10.3390/toxics13010045": "air-dust",
-  "10.1007/s44274-024-00148-9": "flood",
-  "10.3390/rs17101747": "flood",
-  "10.1038/s41598-026-70981-w": "flood",
-  "10.1016/j.rse.2015.06.016": "flood",
-  "10.1109/tgrs.2013.2242895": "methods",
-  "10.1080/01944363.2025.2523604": "methods",
-};
-
-const LABELS = {
-  expansion: { en: "Urban expansion & futures", zh: "城市扩张与未来" },
-  "heat-health": { en: "Heat exposure & health", zh: "高温暴露与健康" },
-  cooling: { en: "Cooling & greening", zh: "降温与绿化" },
-  "air-dust": { en: "Air quality / dust", zh: "空气质量 / 扬尘" },
-  flood: { en: "Flood & coasts", zh: "洪水与海岸" },
-  methods: { en: "Scaling, form & methods", zh: "标度、形态与方法" },
-};
-
-const COLORS = {
-  expansion: "#00909a",
-  "heat-health": "#c74b16",
-  cooling: "#2a9d6e",
-  "air-dust": "#8b5a2b",
-  flood: "#5b4b9a",
-  methods: "#94700f",
-};
+const themeConfig = JSON.parse(
+  readFileSync(join(ROOT, "data", "influence", "fine-themes.json"), "utf8")
+);
+const FINE = Object.fromEntries(themeConfig.papers.map((p) => [p.doi, p.theme]));
+const LABELS = Object.fromEntries(
+  themeConfig.themes.map((t) => [t.id, { en: t.en, zh: t.zh }])
+);
+const COLORS = Object.fromEntries(themeConfig.themes.map((t) => [t.id, t.color]));
+const leftOrder = themeConfig.themes.map((t) => t.id);
+const DEFAULT_THEME = themeConfig.defaultThemeId || themeConfig.themes[0]?.id;
 
 const shortId = (id) => (id ? id.replace("https://openalex.org/", "") : null);
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -214,7 +180,7 @@ async function main() {
   console.log(`Flow preview builder — lens=${lens}, papers=${papers.length}`);
 
   for (const p of papers) {
-    const fine = FINE[p.doi] || "expansion";
+    const fine = FINE[p.doi] || DEFAULT_THEME;
     const y = yearsSince(p.year);
     console.log(`\n${p.doi} → ${fine} (${p.short})`);
     let work;
@@ -260,7 +226,7 @@ async function main() {
     console.log(`  kept=${kept}`);
   }
 
-  const leftOrder = ["expansion", "heat-health", "cooling", "air-dust", "methods", "flood"];
+  // leftOrder from fine-themes.json
   const buildSide = (weights, labels) =>
     leftOrder
       .filter((id) => weights[id])
@@ -314,6 +280,8 @@ async function main() {
       fineThemeNote:
         "Hand remap for preview: dust→air-dust; forests/tree/AC/demolition→cooling; expansion megahits stay expansion. Ken to confirm.",
       fieldNodesFoldedIntoOther: true,
+      fineThemesConfig: "data/influence/fine-themes.json",
+      defaultWeighting: "citesPerYear",
       source: "OpenAlex",
     },
     left: buildSide(leftAbs, LABELS),

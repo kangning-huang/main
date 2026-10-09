@@ -156,3 +156,7 @@ Optional confirms:
 1. OK to move ES&T road-dust / Atmos Environ dust / Toxics out of “heat” into **Air quality / dust**?  
 2. OK **Cooling & greening** = Nat Clim Change forests + ES&T tree cooling + AC + demolition?  
 3. Merge preview after you pick, or iterate first?
+
+
+## Update 2026-10-09 evening
+Ken chose **Try L4 + R1**. Preview defaults to cites/year; theme map at `data/influence/fine-themes.json`. Draft PR #71 only.

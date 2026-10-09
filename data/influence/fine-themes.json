@@ -1,0 +1,38 @@
+{
+  "$comment": "Editable Reach Sankey left-side themes (L3/L4 preview). Change labels, colors, order, or paper→theme doi map; then re-run: node scripts/influence/build-flow-preview.mjs",
+  "themes": [
+    { "id": "expansion", "en": "Urban expansion & futures", "zh": "城市扩张与未来", "color": "#00909a" },
+    { "id": "heat-health", "en": "Heat exposure & health", "zh": "高温暴露与健康", "color": "#c74b16" },
+    { "id": "cooling", "en": "Cooling & greening", "zh": "降温与绿化", "color": "#2a9d6e" },
+    { "id": "air-dust", "en": "Air quality / dust", "zh": "空气质量 / 扬尘", "color": "#8b5a2b" },
+    { "id": "methods", "en": "Scaling, form & methods", "zh": "标度、形态与方法", "color": "#94700f" },
+    { "id": "flood", "en": "Flood & coasts", "zh": "洪水与海岸", "color": "#5b4b9a" }
+  ],
+  "defaultThemeId": "expansion",
+  "papers": [
+    { "doi": "10.1088/1748-9326/ab4b71", "theme": "expansion", "short": "ERL 2019 · urban expansion to 2050", "note": "lead" },
+    { "doi": "10.1080/13658816.2012.730147", "theme": "expansion", "short": "IJGIS 2013 · land-use allocation", "note": "lead" },
+    { "doi": "10.1038/s41467-020-14386-x", "theme": "expansion", "short": "Nat Commun 2020 · SSP urban land projections", "note": "coauthor" },
+    { "doi": "10.1038/s41893-020-0521-x", "theme": "expansion", "short": "Nat Sustain 2020 · global urban change 1985–2015", "note": "coauthor" },
+    { "doi": "10.1038/s41893-019-0436-6", "theme": "expansion", "short": "Nat Sustain 2020 · urban growth & biodiversity", "note": "coauthor" },
+    { "doi": "10.1080/13658816.2011.635594", "theme": "methods", "short": "IJGIS 2012 · MACO land-use allocation", "note": "coauthor" },
+    { "doi": "10.1029/2020JD033831", "theme": "heat-health", "short": "JGR-A 2021 · nighttime heat stress", "note": "lead" },
+    { "doi": "10.1016/j.uclim.2021.100806", "theme": "heat-health", "short": "Urban Climate 2021 · urban climate forecasts", "note": "lead" },
+    { "doi": "10.1038/s41558-022-01481-8", "theme": "cooling", "short": "Nat Clim Change 2022 · urban forests", "note": "lead" },
+    { "doi": "10.1038/s41598-025-96045-z", "theme": "heat-health", "short": "Sci Rep 2025 · urban density & heat", "note": "lead" },
+    { "doi": "10.1038/s41558-025-02303-3", "theme": "heat-health", "short": "Nat Clim Change 2025 · urban overheating mortality", "note": "coauthor" },
+    { "doi": "10.1038/s44284-024-00184-9", "theme": "heat-health", "short": "Nature Cities 2025 · urban browning heat stress", "note": "coauthor" },
+    { "doi": "10.1021/acs.est.4c14275", "theme": "cooling", "short": "ES&T 2025 · urban tree cooling", "note": "coauthor" },
+    { "doi": "10.1021/acs.est.4c00424", "theme": "cooling", "short": "ES&T 2024 · AC usage & indoor–outdoor heat", "note": "coauthor; DOI corrected from publications typo" },
+    { "doi": "10.1038/s44432-026-00009-1", "theme": "cooling", "short": "npj ESS 2026 · demolition & cooling", "note": "lead; early" },
+    { "doi": "10.1021/acs.est.9b00666", "theme": "air-dust", "short": "ES&T 2019 · road dust PM2.5", "note": "coauthor; moved out of heat" },
+    { "doi": "10.1016/j.atmosenv.2018.07.043", "theme": "air-dust", "short": "Atmos Environ 2018 · dust emissions", "note": "coauthor; moved out of heat" },
+    { "doi": "10.3390/toxics13010045", "theme": "air-dust", "short": "Toxics 2025 · air pollution & anxiety visits", "note": "coauthor; moved out of heat" },
+    { "doi": "10.1007/s44274-024-00148-9", "theme": "flood", "short": "Discover Env 2024 · Belt and Road heat/flood", "note": "lead" },
+    { "doi": "10.3390/rs17101747", "theme": "flood", "short": "Remote Sensing 2025 · inundation mapping", "note": "lead" },
+    { "doi": "10.1038/s41598-026-70981-w", "theme": "flood", "short": "Sci Rep 2026 · height-aware flood risk", "note": "lead; early" },
+    { "doi": "10.1016/j.rse.2015.06.016", "theme": "flood", "short": "RSE 2015 · snow depth retrieval", "note": "coauthor" },
+    { "doi": "10.1109/tgrs.2013.2242895", "theme": "methods", "short": "IEEE TGRS 2013 · multisensor registration", "note": "coauthor" },
+    { "doi": "10.1080/01944363.2025.2523604", "theme": "methods", "short": "JAPA 2026 · rhythmized urban parks", "note": "lead" }
+  ]
+}
