@@ -1,10 +1,14 @@
+"use client";
+
 import T from "@/components/T";
-import { influence, INSTITUTION_TYPE_LABELS, countryName } from "@/lib/influence";
+import { INSTITUTION_TYPE_LABELS, countryName } from "@/lib/influence";
+import { useReachLens } from "./ReachLens";
 
 export default function WhoUses() {
-  const { institutionTypes, topNonAcademicInstitutions, totals } = influence;
+  const { view } = useReachLens();
+  const { institutionTypes, topNonAcademicInstitutions, totals } = view;
   const rows = institutionTypes.filter((t) => t.citingWorks > 0);
-  const max = Math.max(...rows.map((r) => r.citingWorks));
+  const max = Math.max(1, ...rows.map((r) => r.citingWorks));
   const label = (type: string) => INSTITUTION_TYPE_LABELS[type] ?? { en: type, zh: type };
 
   return (
@@ -12,8 +16,8 @@ export default function WhoUses() {
       <figure>
         <figcaption className="mb-3 text-sm text-ink-muted">
           <T
-            en={`Citing works with at least one author at each type of institution (of ${totals.uniqueCitingWorks}; a work can count in several rows)`}
-            zh={`至少有一位作者来自该类机构的施引文献数（共 ${totals.uniqueCitingWorks} 篇；一篇文献可计入多行）`}
+            en={`Citing works with at least one author at each type of institution (of ${totals.uniqueCitingWorks.toLocaleString()}; a work can count in several rows)`}
+            zh={`至少有一位作者来自该类机构的施引文献数（共 ${totals.uniqueCitingWorks.toLocaleString()} 篇；一篇文献可计入多行）`}
           />
         </figcaption>
         <ul className="space-y-2">
@@ -39,45 +43,36 @@ export default function WhoUses() {
             );
           })}
         </ul>
-        <p className="mt-4 text-xs leading-relaxed text-ink-faint">
-          <T
-            en="Institution types are OpenAlex/ROR labels, not ours. Note that OpenAlex types some public research academies (e.g. the Chinese Academy of Sciences) as “government”, so this row is not purely policy bodies — see the named list."
-            zh="机构类型采用 OpenAlex/ROR 的标注。注意 OpenAlex 将部分公立科研院所（如中国科学院）标为“政府机构”，因此该行并非全部是政策部门——请参见右侧具体名单。"
-          />
+        <p className="mt-3 text-xs text-ink-faint">
+          <T en="Government and nonprofit rows (ember) are a policy-relevance signal." zh="政府与非营利（赭色）反映政策相关引用。" />
         </p>
       </figure>
 
       <div>
-        <h3 className="mb-3 text-sm text-ink-muted">
-          <T en="Most frequent non-university institutions" zh="出现最多的非高校机构" />
+        <h3 className="text-sm font-medium text-ink">
+          <T en="Most-cited non-university institutions" zh="被引最多的非高校机构" />
         </h3>
-        <table className="w-full text-left text-sm">
-          <thead className="text-xs text-ink-faint">
-            <tr>
-              <th className="py-1 pr-3 font-normal"><T en="Institution" zh="机构" /></th>
-              <th className="py-1 pr-3 font-normal"><T en="Type" zh="类型" /></th>
-              <th className="py-1 text-right font-normal"><T en="Works" zh="文献" /></th>
-            </tr>
-          </thead>
-          <tbody>
-            {topNonAcademicInstitutions.map((i) => {
-              const c = countryName(i.country);
-              const l = label(i.type);
-              return (
-                <tr key={i.id} className="border-t border-rule-faint align-top">
-                  <td className="py-1.5 pr-3">
-                    <a href={`https://openalex.org/${i.id}`} target="_blank" rel="noopener noreferrer" className="text-ink hover:text-ember">
-                      {i.name}
-                    </a>
-                    <span className="text-xs text-ink-faint"> · <T en={c.en} zh={c.zh} /></span>
-                  </td>
-                  <td className="py-1.5 pr-3 text-ink-muted"><T en={l.en} zh={l.zh} /></td>
-                  <td className="py-1.5 text-right tabular-nums">{i.citingWorks}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+        <ol className="mt-3 space-y-2 text-sm">
+          {topNonAcademicInstitutions.slice(0, 10).map((i, idx) => {
+            const cn = countryName(i.country);
+            const tl = label(i.type);
+            return (
+              <li key={i.id} className="flex gap-2">
+                <span className="w-5 shrink-0 text-right text-ink-faint tabular-nums">{idx + 1}</span>
+                <span>
+                  <span className="text-ink">{i.name}</span>
+                  <span className="text-ink-muted">
+                    {" "}
+                    · <T en={tl.en} zh={tl.zh} />
+                    {i.country ? <> · <T en={cn.en} zh={cn.zh} /></> : null}
+                    {" · "}
+                    {i.citingWorks}
+                  </span>
+                </span>
+              </li>
+            );
+          })}
+        </ol>
       </div>
     </div>
   );

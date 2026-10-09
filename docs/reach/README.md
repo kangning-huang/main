@@ -82,3 +82,12 @@ All aggregation runs on the filtered set of citing works. OpenAlex `group_by` on
 
 1. Add `{ doi, short, year, theme, themeSource, lens, doiSource }` to `data/influence/dois.json`.
 2. Run the script, or wait for the monthly run.
+
+## v2 (C2 + F5 + H2) — 2026-10-09
+
+- Dual precomputed views: `views.all` / `views.lead` in `src/data/influence.json`.
+- UI filter defaults to **All**, but **auto-flips to Lead** when co-author-only citers exceed ~50% of unique citing works (live snapshot: 81.5% → default Lead).
+- Adaptive 30% taxonomy (field → subfield → topic) powers the main cards; theme→field Sankey is secondary.
+- Homepage: `Cited in M countries — from A to B` using the **All** view distant subfields outside Ken’s home OpenAlex subfields.
+- Nature Cities Nested economies DOI deliberately omitted; AC usage DOI corrected to `10.1021/acs.est.4c00424` (publications list had a 404 DOI).
+- Regenerate: `OPENALEX_MAILTO=kh3657@nyu.edu node scripts/influence/fetch-influence.mjs`

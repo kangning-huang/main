@@ -1,6 +1,9 @@
+"use client";
+
 import T from "@/components/T";
 import worldMap from "@/data/world-map.json";
 import { influence, countryName } from "@/lib/influence";
+import { useReachLens } from "./ReachLens";
 
 const MIN_WORKS = 5; // below this the ratio is too noisy to colour
 
@@ -14,7 +17,9 @@ const BINS: { min: number; color: string; en: string; zh: string }[] = [
 const binFor = (ratio: number) => BINS.find((b) => ratio >= b.min) ?? BINS[BINS.length - 1];
 
 export default function WhereMap() {
-  const { countries, totals, meta } = influence;
+  const { view } = useReachLens();
+  const { countries, totals } = view;
+  const { meta } = influence;
   const byCode = new Map(countries.map((c) => [c.code, c]));
   const drawn = new Set(worldMap.countries.map((c) => c.iso2));
   const notDrawn = countries.filter((c) => !drawn.has(c.code));

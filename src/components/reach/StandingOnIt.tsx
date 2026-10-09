@@ -1,16 +1,21 @@
+"use client";
+
 import T from "@/components/T";
 import curated from "../../../data/influence/curated-uses.json";
 import { influence } from "@/lib/influence";
+import { useReachLens } from "./ReachLens";
 
 export default function StandingOnIt() {
-  const { topCitingWorks, meta } = influence;
+  const { view, lens } = useReachLens();
+  const { topCitingWorks } = view;
+  const { meta } = influence;
   return (
     <div className="grid gap-10 lg:grid-cols-[1.6fr_1fr]">
       <div>
         <p className="mb-4 text-sm text-ink-muted">
           <T
-            en="The ten most-cited works (by their own OpenAlex citation count) that cite one of the lead-author papers, self-citations removed."
-            zh="引用了上述第一/通讯作者论文、且自身 OpenAlex 被引次数最高的十篇文献（已剔除自引）。"
+            en={`The ten most-cited works (by their own OpenAlex citation count) that cite at least one paper in the ${lens === "lead" ? "first / last / corresponding" : "All"} view, self-citations removed.`}
+            zh="引用了当前视角论文、且自身 OpenAlex 被引次数最高的十篇文献（已剔除自引）。"
           />
         </p>
         <ol className="space-y-4">
