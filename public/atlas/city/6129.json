@@ -1,1 +1,1 @@
-{"id":6129,"slug":"osh","name":"Osh","country":"Kyrgyzstan","iso":"KGZ","region":"Asia","lat":40.5237,"lon":72.803,"ucdb":{"pop15":401135.0,"areaKm2":73.0},"layers":{"mass":null}}
+{"id":6129,"slug":"osh","name":"Osh","country":"Kyrgyzstan","iso":"KGZ","region":"Asia","lat":40.5237,"lon":72.803,"ucdb":{"pop15":401135.0,"areaKm2":73.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":999,"ssp1Km2":326.0,"ssp3Km2":302.5,"ssp5Km2":304.1,"loKm2":302.5,"hiKm2":326.0}}}

@@ -1,1 +1,1 @@
-{"id":5337,"slug":"at-tarimiyah","name":"At Tarimiyah","country":"Iraq","iso":"IRQ","region":"Asia","lat":33.6408,"lon":44.3841,"ucdb":{"pop15":542358.0,"areaKm2":60.0},"layers":{"mass":null}}
+{"id":5337,"slug":"at-tarimiyah","name":"At Tarimiyah","country":"Iraq","iso":"IRQ","region":"Asia","lat":33.6408,"lon":44.3841,"ucdb":{"pop15":542358.0,"areaKm2":60.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":1978,"ssp1Km2":3439.7,"ssp3Km2":3010.8,"ssp5Km2":3412.5,"loKm2":3010.8,"hiKm2":3439.7}}}

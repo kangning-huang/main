@@ -1,1 +1,1 @@
-{"id":9523,"slug":"thakurgaon","name":"Thakurgaon","country":"Bangladesh","iso":"BGD","region":"Asia","lat":26.0349,"lon":88.446,"ucdb":{"pop15":424794.0,"areaKm2":31.0},"layers":{"mass":null}}
+{"id":9523,"slug":"thakurgaon","name":"Thakurgaon","country":"Bangladesh","iso":"BGD","region":"Asia","lat":26.0349,"lon":88.446,"ucdb":{"pop15":424794.0,"areaKm2":31.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3314,"ssp1Km2":51.0,"ssp3Km2":50.0,"ssp5Km2":50.2,"loKm2":50.0,"hiKm2":51.0}}}

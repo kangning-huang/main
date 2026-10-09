@@ -1,1 +1,1 @@
-{"id":8565,"slug":"thanjavur","name":"Thanjavur","country":"India","iso":"IND","region":"Asia","lat":10.773,"lon":79.1329,"ucdb":{"pop15":385723.0,"areaKm2":43.0},"layers":{"mass":null}}
+{"id":8565,"slug":"thanjavur","name":"Thanjavur","country":"India","iso":"IND","region":"Asia","lat":10.773,"lon":79.1329,"ucdb":{"pop15":385723.0,"areaKm2":43.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5323,"ssp1Km2":73.0,"ssp3Km2":26.5,"ssp5Km2":99.0,"loKm2":26.5,"hiKm2":99.0},"jgr":{"quality":"exact","dNightC":-0.28,"dNightCoolRoofC":-0.42}}}

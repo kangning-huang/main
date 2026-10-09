@@ -1,1 +1,1 @@
-{"id":9383,"slug":"purnia","name":"Purnia","country":"India","iso":"IND","region":"Asia","lat":25.7724,"lon":87.4741,"ucdb":{"pop15":347177.0,"areaKm2":23.0},"layers":{"mass":null}}
+{"id":9383,"slug":"purnia","name":"Purnia","country":"India","iso":"IND","region":"Asia","lat":25.7724,"lon":87.4741,"ucdb":{"pop15":347177.0,"areaKm2":23.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3374,"ssp1Km2":116.0,"ssp3Km2":52.2,"ssp5Km2":147.0,"loKm2":52.2,"hiKm2":147.0},"jgr":{"quality":"exact","dNightC":-0.11,"dNightCoolRoofC":-0.67}}}

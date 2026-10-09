@@ -1,1 +1,1 @@
-{"id":9790,"slug":"canning","name":"Canning","country":"India","iso":"IND","region":"Asia","lat":22.3316,"lon":88.703,"ucdb":{"pop15":409921.0,"areaKm2":129.0},"layers":{"mass":null}}
+{"id":9790,"slug":"canning","name":"Canning","country":"India","iso":"IND","region":"Asia","lat":22.3316,"lon":88.703,"ucdb":{"pop15":409921.0,"areaKm2":129.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3961,"ssp1Km2":226.7,"ssp3Km2":130.0,"ssp5Km2":227.3,"loKm2":130.0,"hiKm2":227.3},"jgr":{"quality":"exact","dNightC":0.4,"dNightCoolRoofC":-0.0}}}

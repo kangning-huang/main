@@ -1,1 +1,1 @@
-{"id":6280,"slug":"kamra","name":"Kamra","country":"Pakistan","iso":"PAK","region":"Asia","lat":33.9182,"lon":72.5054,"ucdb":{"pop15":325085.0,"areaKm2":97.0},"layers":{"mass":null}}
+{"id":6280,"slug":"kamra","name":"Kamra","country":"Pakistan","iso":"PAK","region":"Asia","lat":33.9182,"lon":72.5054,"ucdb":{"pop15":325085.0,"areaKm2":97.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":1783,"ssp1Km2":7445.7,"ssp3Km2":3175.0,"ssp5Km2":7520.7,"loKm2":3175.0,"hiKm2":7520.7}}}

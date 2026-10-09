@@ -1,1 +1,1 @@
-{"id":4702,"slug":"port-sudan","name":"Port Sudan","country":"Sudan","iso":"SDN","region":"Africa","lat":19.6145,"lon":37.2051,"ucdb":{"pop15":551714.0,"areaKm2":61.0},"layers":{"mass":null}}
+{"id":4702,"slug":"port-sudan","name":"Port Sudan","country":"Sudan","iso":"SDN","region":"Africa","lat":19.6145,"lon":37.2051,"ucdb":{"pop15":551714.0,"areaKm2":61.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4493,"ssp1Km2":61.8,"ssp3Km2":58.0,"ssp5Km2":55.0,"loKm2":55.0,"hiKm2":61.8}}}

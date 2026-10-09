@@ -1,1 +1,1 @@
-{"id":9528,"slug":"n-a-ind-9528","name":"N/A","country":"India","iso":"IND","region":"Asia","lat":25.031,"lon":87.9968,"ucdb":{"pop15":312800.0,"areaKm2":31.0},"layers":{"mass":null}}
+{"id":9528,"slug":"n-a-ind-9528","name":"N/A","country":"India","iso":"IND","region":"Asia","lat":25.031,"lon":87.9968,"ucdb":{"pop15":312800.0,"areaKm2":31.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3566,"ssp1Km2":90.5,"ssp3Km2":29.8,"ssp5Km2":97.0,"loKm2":29.8,"hiKm2":97.0},"jgr":{"quality":"exact","dNightC":-0.1,"dNightCoolRoofC":-0.35}}}

@@ -1,1 +1,1 @@
-{"id":6780,"slug":"navsari","name":"Navsari","country":"India","iso":"IND","region":"Asia","lat":20.9397,"lon":72.9371,"ucdb":{"pop15":341014.0,"areaKm2":43.0},"layers":{"mass":null}}
+{"id":6780,"slug":"navsari","name":"Navsari","country":"India","iso":"IND","region":"Asia","lat":20.9397,"lon":72.9371,"ucdb":{"pop15":341014.0,"areaKm2":43.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4346,"ssp1Km2":43.0,"ssp3Km2":26.7,"ssp5Km2":53.0,"loKm2":26.7,"hiKm2":53.0},"jgr":{"quality":"exact","dNightC":-0.08,"dNightCoolRoofC":-0.15}}}

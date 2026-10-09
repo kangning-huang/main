@@ -1,1 +1,1 @@
-{"id":7540,"slug":"tilhar","name":"Tilhar","country":"India","iso":"IND","region":"Asia","lat":27.9629,"lon":79.7419,"ucdb":{"pop15":368070.0,"areaKm2":9.0},"layers":{"mass":null}}
+{"id":7540,"slug":"tilhar","name":"Tilhar","country":"India","iso":"IND","region":"Asia","lat":27.9629,"lon":79.7419,"ucdb":{"pop15":368070.0,"areaKm2":9.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2922,"ssp1Km2":265.5,"ssp3Km2":137.0,"ssp5Km2":278.0,"loKm2":137.0,"hiKm2":278.0},"jgr":{"quality":"exact","dNightC":-0.1,"dNightCoolRoofC":-0.43}}}

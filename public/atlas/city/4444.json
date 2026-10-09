@@ -1,1 +1,1 @@
-{"id":4444,"slug":"al-hasahisa","name":"Al Hasahisa","country":"Sudan","iso":"SDN","region":"Africa","lat":14.7466,"lon":33.3173,"ucdb":{"pop15":370733.0,"areaKm2":45.0},"layers":{"mass":null}}
+{"id":4444,"slug":"al-hasahisa","name":"Al Hasahisa","country":"Sudan","iso":"SDN","region":"Africa","lat":14.7466,"lon":33.3173,"ucdb":{"pop15":370733.0,"areaKm2":45.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4876,"ssp1Km2":1778.2,"ssp3Km2":1311.3,"ssp5Km2":1708.0,"loKm2":1311.3,"hiKm2":1778.2}}}

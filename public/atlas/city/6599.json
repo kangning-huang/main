@@ -1,1 +1,1 @@
-{"id":6599,"slug":"patan","name":"Patan","country":"India","iso":"IND","region":"Asia","lat":23.85,"lon":72.1324,"ucdb":{"pop15":341758.0,"areaKm2":19.0},"layers":{"mass":null}}
+{"id":6599,"slug":"patan","name":"Patan","country":"India","iso":"IND","region":"Asia","lat":23.85,"lon":72.1324,"ucdb":{"pop15":341758.0,"areaKm2":19.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3888,"ssp1Km2":96.0,"ssp3Km2":59.2,"ssp5Km2":101.5,"loKm2":59.2,"hiKm2":101.5},"jgr":{"quality":"exact","dNightC":0.1,"dNightCoolRoofC":0.08}}}

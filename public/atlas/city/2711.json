@@ -1,1 +1,1 @@
-{"id":2711,"slug":"oron","name":"Oron","country":"Nigeria","iso":"NGA","region":"Africa","lat":4.8022,"lon":8.2287,"ucdb":{"pop15":330426.0,"areaKm2":24.0},"layers":{"mass":null}}
+{"id":2711,"slug":"oron","name":"Oron","country":"Nigeria","iso":"NGA","region":"Africa","lat":4.8022,"lon":8.2287,"ucdb":{"pop15":330426.0,"areaKm2":24.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5727,"ssp1Km2":24431.9,"ssp3Km2":20048.0,"ssp5Km2":24864.1,"loKm2":20048.0,"hiKm2":24864.1},"jgr":{"quality":"exact","dNightC":0.48,"dNightCoolRoofC":0.28}}}

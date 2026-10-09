@@ -1,1 +1,1 @@
-{"id":3214,"slug":"ondjiva","name":"Ondjiva","country":"Angola","iso":"AGO","region":"Africa","lat":-17.0672,"lon":15.7208,"ucdb":{"pop15":312319.0,"areaKm2":14.0},"layers":{"mass":null}}
+{"id":3214,"slug":"ondjiva","name":"Ondjiva","country":"Angola","iso":"AGO","region":"Africa","lat":-17.0672,"lon":15.7208,"ucdb":{"pop15":312319.0,"areaKm2":14.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6478,"ssp1Km2":44.2,"ssp3Km2":25.0,"ssp5Km2":44.5,"loKm2":25.0,"hiKm2":44.5}}}

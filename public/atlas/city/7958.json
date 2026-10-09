@@ -1,1 +1,1 @@
-{"id":7958,"slug":"palakkad","name":"Palakkad","country":"India","iso":"IND","region":"Asia","lat":10.779,"lon":76.659,"ucdb":{"pop15":387344.0,"areaKm2":64.0},"layers":{"mass":null}}
+{"id":7958,"slug":"palakkad","name":"Palakkad","country":"India","iso":"IND","region":"Asia","lat":10.779,"lon":76.659,"ucdb":{"pop15":387344.0,"areaKm2":64.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5314,"ssp1Km2":100.0,"ssp3Km2":60.3,"ssp5Km2":118.3,"loKm2":60.3,"hiKm2":118.3},"jgr":{"quality":"exact","dNightC":0.02,"dNightCoolRoofC":-0.07}}}

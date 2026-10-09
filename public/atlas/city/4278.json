@@ -1,1 +1,1 @@
-{"id":4278,"slug":"mahagi","name":"Mahagi","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":2.2992,"lon":30.9939,"ucdb":{"pop15":564103.0,"areaKm2":8.0},"layers":{"mass":null}}
+{"id":4278,"slug":"mahagi","name":"Mahagi","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":2.2992,"lon":30.9939,"ucdb":{"pop15":564103.0,"areaKm2":8.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":5932,"ssp1Km2":621.0,"ssp3Km2":441.5,"ssp5Km2":618.8,"loKm2":441.5,"hiKm2":621.0}}}

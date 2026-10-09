@@ -1,1 +1,1 @@
-{"id":12653,"slug":"pamekasan","name":"Pamekasan","country":"Indonesia","iso":"IDN","region":"Asia","lat":-7.1652,"lon":113.4917,"ucdb":{"pop15":490842.0,"areaKm2":94.0},"layers":{"mass":null}}
+{"id":12653,"slug":"pamekasan","name":"Pamekasan","country":"Indonesia","iso":"IDN","region":"Asia","lat":-7.1652,"lon":113.4917,"ucdb":{"pop15":490842.0,"areaKm2":94.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6265,"ssp1Km2":206.8,"ssp3Km2":143.3,"ssp5Km2":227.0,"loKm2":143.3,"hiKm2":227.0}}}

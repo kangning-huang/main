@@ -1,1 +1,1 @@
-{"id":7476,"slug":"nawabganj","name":"Nawabganj","country":"India","iso":"IND","region":"Asia","lat":28.5387,"lon":79.6351,"ucdb":{"pop15":312359.0,"areaKm2":6.0},"layers":{"mass":null}}
+{"id":7476,"slug":"nawabganj","name":"Nawabganj","country":"India","iso":"IND","region":"Asia","lat":28.5387,"lon":79.6351,"ucdb":{"pop15":312359.0,"areaKm2":6.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":2838,"ssp1Km2":325.3,"ssp3Km2":167.3,"ssp5Km2":352.5,"loKm2":167.3,"hiKm2":352.5},"jgr":{"quality":"exact","dNightC":-0.05,"dNightCoolRoofC":-0.33}}}

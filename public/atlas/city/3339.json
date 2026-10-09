@@ -1,1 +1,1 @@
-{"id":3339,"slug":"vilnius","name":"Vilnius","country":"Lithuania","iso":"LTU","region":"Europe","lat":54.6917,"lon":25.2585,"ucdb":{"pop15":355430.0,"areaKm2":101.0},"layers":{"mass":null}}
+{"id":3339,"slug":"vilnius","name":"Vilnius","country":"Lithuania","iso":"LTU","region":"Europe","lat":54.6917,"lon":25.2585,"ucdb":{"pop15":355430.0,"areaKm2":101.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":122,"ssp1Km2":688.5,"ssp3Km2":584.3,"ssp5Km2":856.3,"loKm2":584.3,"hiKm2":856.3}}}

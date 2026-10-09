@@ -1,1 +1,1 @@
-{"id":5277,"slug":"dessie","name":"Dessie","country":"Ethiopia","iso":"ETH","region":"Africa","lat":11.1437,"lon":39.6334,"ucdb":{"pop15":361503.0,"areaKm2":29.0},"layers":{"mass":null}}
+{"id":5277,"slug":"dessie","name":"Dessie","country":"Ethiopia","iso":"ETH","region":"Africa","lat":11.1437,"lon":39.6334,"ucdb":{"pop15":361503.0,"areaKm2":29.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5262,"ssp1Km2":135.0,"ssp3Km2":89.5,"ssp5Km2":145.5,"loKm2":89.5,"hiKm2":145.5}}}

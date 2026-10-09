@@ -1,1 +1,1 @@
-{"id":5498,"slug":"dire-dawa","name":"Dire Dawa","country":"Ethiopia","iso":"ETH","region":"Africa","lat":9.6027,"lon":41.857,"ucdb":{"pop15":432120.0,"areaKm2":33.0},"layers":{"mass":null}}
+{"id":5498,"slug":"dire-dawa","name":"Dire Dawa","country":"Ethiopia","iso":"ETH","region":"Africa","lat":9.6027,"lon":41.857,"ucdb":{"pop15":432120.0,"areaKm2":33.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5446,"ssp1Km2":150.8,"ssp3Km2":119.0,"ssp5Km2":166.0,"loKm2":119.0,"hiKm2":166.0}}}

@@ -1,1 +1,1 @@
-{"id":9937,"slug":"kharupetia","name":"Kharupetia","country":"India","iso":"IND","region":"Asia","lat":26.5771,"lon":92.1407,"ucdb":{"pop15":355657.0,"areaKm2":157.0},"layers":{"mass":null}}
+{"id":9937,"slug":"kharupetia","name":"Kharupetia","country":"India","iso":"IND","region":"Asia","lat":26.5771,"lon":92.1407,"ucdb":{"pop15":355657.0,"areaKm2":157.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3281,"ssp1Km2":300.7,"ssp3Km2":225.3,"ssp5Km2":308.8,"loKm2":225.3,"hiKm2":308.8},"jgr":{"quality":"exact","dNightC":-0.16,"dNightCoolRoofC":-0.44}}}

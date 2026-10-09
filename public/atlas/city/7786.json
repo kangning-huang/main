@@ -1,1 +1,1 @@
-{"id":7786,"slug":"laharpur","name":"Laharpur","country":"India","iso":"IND","region":"Asia","lat":27.7111,"lon":80.9054,"ucdb":{"pop15":320809.0,"areaKm2":7.0},"layers":{"mass":null}}
+{"id":7786,"slug":"laharpur","name":"Laharpur","country":"India","iso":"IND","region":"Asia","lat":27.7111,"lon":80.9054,"ucdb":{"pop15":320809.0,"areaKm2":7.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2912,"ssp1Km2":360.5,"ssp3Km2":245.5,"ssp5Km2":418.8,"loKm2":245.5,"hiKm2":418.8},"jgr":{"quality":"exact","dNightC":-0.07,"dNightCoolRoofC":-0.42}}}

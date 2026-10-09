@@ -1,1 +1,1 @@
-{"id":8024,"slug":"chitrakoot-dham","name":"Chitrakoot Dham","country":"India","iso":"IND","region":"Asia","lat":25.2115,"lon":80.9109,"ucdb":{"pop15":486649.0,"areaKm2":21.0},"layers":{"mass":null}}
+{"id":8024,"slug":"chitrakoot-dham","name":"Chitrakoot Dham","country":"India","iso":"IND","region":"Asia","lat":25.2115,"lon":80.9109,"ucdb":{"pop15":486649.0,"areaKm2":21.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3516,"ssp1Km2":38.2,"ssp3Km2":29.5,"ssp5Km2":46.0,"loKm2":29.5,"hiKm2":46.0},"jgr":{"quality":"exact","dNightC":-0.11,"dNightCoolRoofC":-0.17}}}

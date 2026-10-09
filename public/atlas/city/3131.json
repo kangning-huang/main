@@ -1,1 +1,1 @@
-{"id":3131,"slug":"gamboru","name":"Gamboru","country":"Cameroon","iso":"CMR","region":"Africa","lat":12.374,"lon":14.2118,"ucdb":{"pop15":320610.0,"areaKm2":12.0},"layers":{"mass":null}}
+{"id":3131,"slug":"gamboru","name":"Gamboru","country":"Cameroon","iso":"CMR","region":"Africa","lat":12.374,"lon":14.2118,"ucdb":{"pop15":320610.0,"areaKm2":12.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5131,"ssp1Km2":47.1,"ssp3Km2":34.8,"ssp5Km2":44.6,"loKm2":34.8,"hiKm2":47.1}}}

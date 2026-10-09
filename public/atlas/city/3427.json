@@ -1,1 +1,1 @@
-{"id":3427,"slug":"plovdiv","name":"Plovdiv","country":"Bulgaria","iso":"BGR","region":"Europe","lat":42.14,"lon":24.7528,"ucdb":{"pop15":309004.0,"areaKm2":54.0},"layers":{"mass":null}}
+{"id":3427,"slug":"plovdiv","name":"Plovdiv","country":"Bulgaria","iso":"BGR","region":"Europe","lat":42.14,"lon":24.7528,"ucdb":{"pop15":309004.0,"areaKm2":54.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":848,"ssp1Km2":158.2,"ssp3Km2":156.0,"ssp5Km2":198.2,"loKm2":156.0,"hiKm2":198.2}}}

@@ -1,1 +1,1 @@
-{"id":4618,"slug":"milange","name":"Milange","country":"Mozambique","iso":"MOZ","region":"Africa","lat":-16.1006,"lon":35.7703,"ucdb":{"pop15":379415.0,"areaKm2":10.0},"layers":{"mass":null}}
+{"id":4618,"slug":"milange","name":"Milange","country":"Mozambique","iso":"MOZ","region":"Africa","lat":-16.1006,"lon":35.7703,"ucdb":{"pop15":379415.0,"areaKm2":10.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6462,"ssp1Km2":71.9,"ssp3Km2":62.4,"ssp5Km2":90.0,"loKm2":62.4,"hiKm2":90.0}}}

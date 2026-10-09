@@ -1,1 +1,1 @@
-{"id":9323,"slug":"bhagalpur","name":"Bhagalpur","country":"India","iso":"IND","region":"Asia","lat":25.2449,"lon":86.9825,"ucdb":{"pop15":324050.0,"areaKm2":48.0},"layers":{"mass":null}}
+{"id":9323,"slug":"bhagalpur","name":"Bhagalpur","country":"India","iso":"IND","region":"Asia","lat":25.2449,"lon":86.9825,"ucdb":{"pop15":324050.0,"areaKm2":48.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3510,"ssp1Km2":155.8,"ssp3Km2":86.8,"ssp5Km2":173.7,"loKm2":86.8,"hiKm2":173.7},"jgr":{"quality":"exact","dNightC":-0.04,"dNightCoolRoofC":-0.57}}}

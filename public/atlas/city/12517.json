@@ -1,1 +1,1 @@
-{"id":12517,"slug":"trenggalek","name":"Trenggalek","country":"Indonesia","iso":"IDN","region":"Asia","lat":-8.0845,"lon":111.7199,"ucdb":{"pop15":339541.0,"areaKm2":126.0},"layers":{"mass":null}}
+{"id":12517,"slug":"trenggalek","name":"Trenggalek","country":"Indonesia","iso":"IDN","region":"Asia","lat":-8.0845,"lon":111.7199,"ucdb":{"pop15":339541.0,"areaKm2":126.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6251,"ssp1Km2":12713.1,"ssp3Km2":8566.2,"ssp5Km2":13268.8,"loKm2":8566.2,"hiKm2":13268.8}}}

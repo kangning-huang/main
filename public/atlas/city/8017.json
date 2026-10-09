@@ -1,1 +1,1 @@
-{"id":8017,"slug":"colonelganj","name":"Colonelganj","country":"India","iso":"IND","region":"Asia","lat":27.1279,"lon":81.6926,"ucdb":{"pop15":471781.0,"areaKm2":8.0},"layers":{"mass":null}}
+{"id":8017,"slug":"colonelganj","name":"Colonelganj","country":"India","iso":"IND","region":"Asia","lat":27.1279,"lon":81.6926,"ucdb":{"pop15":471781.0,"areaKm2":8.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3066,"ssp1Km2":63.0,"ssp3Km2":28.2,"ssp5Km2":74.3,"loKm2":28.2,"hiKm2":74.3},"jgr":{"quality":"exact","dNightC":-0.03,"dNightCoolRoofC":-0.22}}}

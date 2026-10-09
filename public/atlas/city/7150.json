@@ -1,1 +1,1 @@
-{"id":7150,"slug":"karauli","name":"Karauli","country":"India","iso":"IND","region":"Asia","lat":26.4972,"lon":77.0224,"ucdb":{"pop15":314754.0,"areaKm2":10.0},"layers":{"mass":null}}
+{"id":7150,"slug":"karauli","name":"Karauli","country":"India","iso":"IND","region":"Asia","lat":26.4972,"lon":77.0224,"ucdb":{"pop15":314754.0,"areaKm2":10.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3309,"ssp1Km2":66.0,"ssp3Km2":54.5,"ssp5Km2":74.5,"loKm2":54.5,"hiKm2":74.5},"jgr":{"quality":"exact","dNightC":-0.03,"dNightCoolRoofC":-0.2}}}

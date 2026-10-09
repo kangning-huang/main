@@ -1,1 +1,1 @@
-{"id":8900,"slug":"rafiganj","name":"Rafiganj","country":"India","iso":"IND","region":"Asia","lat":24.8203,"lon":84.6397,"ucdb":{"pop15":341898.0,"areaKm2":12.0},"layers":{"mass":null}}
+{"id":8900,"slug":"rafiganj","name":"Rafiganj","country":"India","iso":"IND","region":"Asia","lat":24.8203,"lon":84.6397,"ucdb":{"pop15":341898.0,"areaKm2":12.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3619,"ssp1Km2":54.0,"ssp3Km2":25.7,"ssp5Km2":58.5,"loKm2":25.7,"hiKm2":58.5},"jgr":{"quality":"exact","dNightC":0.01,"dNightCoolRoofC":-0.31}}}

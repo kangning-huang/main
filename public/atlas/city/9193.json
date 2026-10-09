@@ -1,1 +1,1 @@
-{"id":9193,"slug":"saharsa","name":"Saharsa","country":"India","iso":"IND","region":"Asia","lat":25.8792,"lon":86.586,"ucdb":{"pop15":487021.0,"areaKm2":31.0},"layers":{"mass":null}}
+{"id":9193,"slug":"saharsa","name":"Saharsa","country":"India","iso":"IND","region":"Asia","lat":25.8792,"lon":86.586,"ucdb":{"pop15":487021.0,"areaKm2":31.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3342,"ssp1Km2":420.2,"ssp3Km2":222.0,"ssp5Km2":468.8,"loKm2":222.0,"hiKm2":468.8},"jgr":{"quality":"exact","dNightC":-0.04,"dNightCoolRoofC":-0.5}}}

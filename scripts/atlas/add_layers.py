@@ -17,6 +17,15 @@ and adds, without estimating or imputing anything:
          WSF3D_*_FloodRisk_NEW_FINAL regional CSVs (~614 FUA rows with UC_IDs).
          Height-aware building damage share with/without FLOPROS protection,
          attached to every Atlas urban centre listed in UC_IDs.
+  expansion Huang, Li, Liu, Seto 2019, Environmental Research Letters
+         (doi 10.1088/1748-9326/ab4b71)
+         Precomputed UCDB↔Huang_2019 clump join JSON (spatial join of
+         urb_cluster.gpkg + urban_areas.csv SSP1/3/5). Scenario range of
+         projected urban land area (km²) in the urban cluster by 2050.
+  jgr    Huang et al. 2021, JGR Atmospheres (doi 10.1029/2020JD033831)
+         Precomputed samples of published nighttime ΔWBGT rasters
+         (figshare Data Availability / del_wbgt_ssp5_night*.tif) at UCDB
+         centroids for CHN/IND/NGA. SI tables are regional only.
 
 Usage:
   python3 -I scripts/atlas/add_layers.py \
@@ -163,6 +172,10 @@ def main() -> int:
     ap.add_argument("--fua", type=Path, required=True)
     ap.add_argument("--cooling-dir", type=Path, required=True)
     ap.add_argument("--flood-dir", type=Path, required=True)
+    ap.add_argument("--expansion-join", type=Path, required=True,
+                    help="JSON {ucdbId: {clump,quality,ssp1Km2,ssp3Km2,ssp5Km2,loKm2,hiKm2}}")
+    ap.add_argument("--jgr-join", type=Path, required=True,
+                    help="JSON {ucdbId: {quality,dNightC,dNightCoolRoofC?}}")
     ap.add_argument("--out", type=Path, default=Path("public/atlas"))
     a = ap.parse_args()
 
@@ -260,36 +273,86 @@ def main() -> int:
         uid = max(hits, key=lambda i: atlas[i]["pop15"])
         log["flood"]["examples"][name] = flood.get(uid)
 
+    # ── expansion: ERL 2019 Huang_2019 clump SSP urban land ───────────
+    expansion_raw = json.loads(a.expansion_join.read_text())
+    expansion: dict[int, dict] = {}
+    for k, v in expansion_raw.items():
+        uid = int(k)
+        if uid not in atlas:
+            continue
+        expansion[uid] = {
+            "quality": v["quality"],
+            "clump": int(v["clump"]),
+            "ssp1Km2": v["ssp1Km2"],
+            "ssp3Km2": v["ssp3Km2"],
+            "ssp5Km2": v["ssp5Km2"],
+            "loKm2": v["loKm2"],
+            "hiKm2": v["hiKm2"],
+        }
+    log["expansion"] = {
+        "centres": len(expansion),
+        "exact": sum(1 for v in expansion.values() if v["quality"] == "exact"),
+        "flagged": sum(1 for v in expansion.values() if v["quality"] == "flagged"),
+        "source": "Huang_2019 urban_areas.csv + urb_cluster.gpkg spatial join",
+    }
+
+    # ── jgr: nighttime ΔWBGT from published rasters (CHN/IND/NGA) ─────
+    jgr_raw = json.loads(a.jgr_join.read_text())
+    jgr: dict[int, dict] = {}
+    for k, v in jgr_raw.items():
+        uid = int(k)
+        if uid not in atlas:
+            continue
+        rec = {"quality": v.get("quality", "exact"), "dNightC": v["dNightC"]}
+        if "dNightCoolRoofC" in v:
+            rec["dNightCoolRoofC"] = v["dNightCoolRoofC"]
+        jgr[uid] = rec
+    log["jgr"] = {
+        "centres": len(jgr),
+        "source": "del_wbgt_ssp5_night_proj.tif (+ cool-roof) sampled at UCDB centroids; paper Data Availability figshare",
+        "examples": {
+            name: jgr.get(uid)
+            for name, uid in (("Shanghai", 12400), ("Beijing", 10687), ("Lagos", 2125), ("Port Harcourt", 2511))
+        },
+    }
+
     # ── write ────────────────────────────────────────────────────────
-    fields = base_fields + ["heatDayP", "cool", "flood"]
+    fields = base_fields + ["heatDayP", "cool", "flood", "expansion", "jgr"]
     new_rows = []
     for r in rows:
         uid = r[0]
         h = heat.get(uid)
         f = flood.get(uid)
+        e = expansion.get(uid)
+        j = jgr.get(uid)
         new_rows.append(
             r
             + [
                 h["dayP"] if h else None,
                 1 if uid in cooling else 0,
                 1 if f else 0,
+                1 if e else 0,
+                1 if j else 0,
             ]
         )
         cp = a.out / "city" / f"{uid}.json"
         d = json.loads(cp.read_text())
-        d["layers"].pop("heat", None)
-        d["layers"].pop("cooling", None)
-        d["layers"].pop("flood", None)
+        for key in ("heat", "cooling", "flood", "expansion", "jgr"):
+            d["layers"].pop(key, None)
         if h:
             d["layers"]["heat"] = h
         if uid in cooling:
             d["layers"]["cooling"] = cooling[uid]
         if f:
             d["layers"]["flood"] = f
+        if e:
+            d["layers"]["expansion"] = e
+        if j:
+            d["layers"]["jgr"] = j
         cp.write_text(json.dumps(d, ensure_ascii=False, separators=(",", ":")))
     pts["fields"] = fields
     pts["rows"] = new_rows
-    pts["version"] = 3
+    pts["version"] = 4
     pts["sources"]["heat"] = {
         "paper": "10.1038/s41598-025-96045-z",
         "file": "SUHI_trends_1000_cities.csv",
@@ -305,11 +368,24 @@ def main() -> int:
         "key": "UC_IDs -> GHSL UCDB ID_HDC_G0 (exact)",
         "fields": ["exDmg_mean", "exDmg_pros_mean", "flopros_merge_mean", "height_mean"],
     }
+    pts["sources"]["expansion"] = {
+        "paper": "10.1088/1748-9326/ab4b71",
+        "files": "urban_areas.csv (Huang_2019) + urb_cluster.gpkg",
+        "key": "UCDB centroid -> Mollweide clump polygon; SSP1/3/5 urb_area km2",
+    }
+    pts["sources"]["jgr"] = {
+        "paper": "10.1029/2020JD033831",
+        "files": "del_wbgt_ssp5_night_proj.tif + del_wbgt_ssp5_night_cr_proj.tif",
+        "key": "sample at UCDB lon/lat in ESRI:54009; CHN/IND/NGA only",
+        "note": "SI tables are climate-zone / MUR aggregates only; city values from published figshare rasters",
+    }
     pts["counts"]["layers"] = {
         "mass": sum(1 for r in rows if r[6]),
         "heat": len(heat),
         "cooling": len(cooling),
         "flood": len(flood),
+        "expansion": len(expansion),
+        "jgr": len(jgr),
     }
     pts_path.write_text(json.dumps(pts, ensure_ascii=False, separators=(",", ":")))
     (a.out / "layers-log.json").write_text(json.dumps(log, ensure_ascii=False, indent=1))

@@ -1,1 +1,1 @@
-{"id":7498,"slug":"bhongaon","name":"Bhongaon","country":"India","iso":"IND","region":"Asia","lat":27.2558,"lon":79.1779,"ucdb":{"pop15":306829.0,"areaKm2":6.0},"layers":{"mass":null}}
+{"id":7498,"slug":"bhongaon","name":"Bhongaon","country":"India","iso":"IND","region":"Asia","lat":27.2558,"lon":79.1779,"ucdb":{"pop15":306829.0,"areaKm2":6.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3036,"ssp1Km2":90.2,"ssp3Km2":59.5,"ssp5Km2":106.2,"loKm2":59.5,"hiKm2":106.2},"jgr":{"quality":"exact","dNightC":-0.26,"dNightCoolRoofC":-0.69}}}

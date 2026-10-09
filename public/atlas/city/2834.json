@@ -1,1 +1,1 @@
-{"id":2834,"slug":"libreville","name":"Libreville","country":"Gabon","iso":"GAB","region":"Africa","lat":0.3926,"lon":9.4641,"ucdb":{"pop15":536506.0,"areaKm2":115.0},"layers":{"mass":null}}
+{"id":2834,"slug":"libreville","name":"Libreville","country":"Gabon","iso":"GAB","region":"Africa","lat":0.3926,"lon":9.4641,"ucdb":{"pop15":536506.0,"areaKm2":115.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5985,"ssp1Km2":222.4,"ssp3Km2":124.9,"ssp5Km2":222.0,"loKm2":124.9,"hiKm2":222.4}}}

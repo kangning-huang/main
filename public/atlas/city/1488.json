@@ -1,1 +1,1 @@
-{"id":1488,"slug":"santa-cruz-de-tenerife","name":"Santa Cruz de Tenerife","country":"Spain","iso":"ESP","region":"Europe","lat":28.458,"lon":-16.2834,"ucdb":{"pop15":324645.0,"areaKm2":58.0},"layers":{"mass":null}}
+{"id":1488,"slug":"santa-cruz-de-tenerife","name":"Santa Cruz de Tenerife","country":"Spain","iso":"ESP","region":"Europe","lat":28.458,"lon":-16.2834,"ucdb":{"pop15":324645.0,"areaKm2":58.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2819,"ssp1Km2":85.9,"ssp3Km2":71.0,"ssp5Km2":89.8,"loKm2":71.0,"hiKm2":89.8}}}

@@ -1,1 +1,1 @@
-{"id":3566,"slug":"ed-al-fursan","name":"Ed Al Fursan","country":"Sudan","iso":"SDN","region":"Africa","lat":11.5088,"lon":24.3161,"ucdb":{"pop15":303882.0,"areaKm2":6.0},"layers":{"mass":null}}
+{"id":3566,"slug":"ed-al-fursan","name":"Ed Al Fursan","country":"Sudan","iso":"SDN","region":"Africa","lat":11.5088,"lon":24.3161,"ucdb":{"pop15":303882.0,"areaKm2":6.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":5157,"ssp1Km2":643.0,"ssp3Km2":410.0,"ssp5Km2":661.0,"loKm2":410.0,"hiKm2":661.0}}}

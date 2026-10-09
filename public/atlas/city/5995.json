@@ -1,1 +1,1 @@
-{"id":5995,"slug":"shahrisabz","name":"Shahrisabz","country":"Uzbekistan","iso":"UZB","region":"Asia","lat":39.0794,"lon":66.8474,"ucdb":{"pop15":334628.0,"areaKm2":82.0},"layers":{"mass":null}}
+{"id":5995,"slug":"shahrisabz","name":"Shahrisabz","country":"Uzbekistan","iso":"UZB","region":"Asia","lat":39.0794,"lon":66.8474,"ucdb":{"pop15":334628.0,"areaKm2":82.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":1147,"ssp1Km2":500.3,"ssp3Km2":394.3,"ssp5Km2":431.5,"loKm2":394.3,"hiKm2":500.3}}}

@@ -1,1 +1,1 @@
-{"id":5836,"slug":"manama","name":"Manama","country":"Bahrain","iso":"BHR","region":"Asia","lat":26.1821,"lon":50.5673,"ucdb":{"pop15":1247787.0,"areaKm2":345.0},"layers":{"mass":null}}
+{"id":5836,"slug":"manama","name":"Manama","country":"Bahrain","iso":"BHR","region":"Asia","lat":26.1821,"lon":50.5673,"ucdb":{"pop15":1247787.0,"areaKm2":345.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3246,"ssp1Km2":271.5,"ssp3Km2":269.8,"ssp5Km2":276.8,"loKm2":269.8,"hiKm2":276.8}}}

@@ -1,1 +1,1 @@
-{"id":2883,"slug":"bamenda","name":"Bamenda","country":"Cameroon","iso":"CMR","region":"Africa","lat":5.9702,"lon":10.1543,"ucdb":{"pop15":411203.0,"areaKm2":64.0},"layers":{"mass":null}}
+{"id":2883,"slug":"bamenda","name":"Bamenda","country":"Cameroon","iso":"CMR","region":"Africa","lat":5.9702,"lon":10.1543,"ucdb":{"pop15":411203.0,"areaKm2":64.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5769,"ssp1Km2":647.0,"ssp3Km2":664.0,"ssp5Km2":671.5,"loKm2":647.0,"hiKm2":671.5}}}

@@ -1,1 +1,1 @@
-{"id":5921,"slug":"bandar-abbas","name":"Bandar Abbas","country":"Iran","iso":"IRN","region":"Asia","lat":27.1932,"lon":56.2955,"ucdb":{"pop15":484670.0,"areaKm2":78.0},"layers":{"mass":null}}
+{"id":5921,"slug":"bandar-abbas","name":"Bandar Abbas","country":"Iran","iso":"IRN","region":"Asia","lat":27.1932,"lon":56.2955,"ucdb":{"pop15":484670.0,"areaKm2":78.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3032,"ssp1Km2":69.0,"ssp3Km2":63.5,"ssp5Km2":68.5,"loKm2":63.5,"hiKm2":69.0}}}

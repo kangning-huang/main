@@ -1,1 +1,1 @@
-{"id":5910,"slug":"neyshabur","name":"Neyshabur","country":"Iran","iso":"IRN","region":"Asia","lat":36.2095,"lon":58.7949,"ucdb":{"pop15":320941.0,"areaKm2":34.0},"layers":{"mass":null}}
+{"id":5910,"slug":"neyshabur","name":"Neyshabur","country":"Iran","iso":"IRN","region":"Asia","lat":36.2095,"lon":58.7949,"ucdb":{"pop15":320941.0,"areaKm2":34.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":1542,"ssp1Km2":104.8,"ssp3Km2":81.5,"ssp5Km2":107.0,"loKm2":81.5,"hiKm2":107.0}}}

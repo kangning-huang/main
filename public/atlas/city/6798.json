@@ -1,1 +1,1 @@
-{"id":6798,"slug":"valsad","name":"Valsad","country":"India","iso":"IND","region":"Asia","lat":20.6068,"lon":72.9324,"ucdb":{"pop15":309040.0,"areaKm2":37.0},"layers":{"mass":null}}
+{"id":6798,"slug":"valsad","name":"Valsad","country":"India","iso":"IND","region":"Asia","lat":20.6068,"lon":72.9324,"ucdb":{"pop15":309040.0,"areaKm2":37.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4386,"ssp1Km2":123.9,"ssp3Km2":67.9,"ssp5Km2":131.1,"loKm2":67.9,"hiKm2":131.1},"jgr":{"quality":"exact","dNightC":-0.2,"dNightCoolRoofC":-0.26}}}

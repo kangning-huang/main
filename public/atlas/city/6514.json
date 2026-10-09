@@ -1,1 +1,1 @@
-{"id":6514,"slug":"phalodi","name":"Phalodi","country":"India","iso":"IND","region":"Asia","lat":27.1283,"lon":72.3671,"ucdb":{"pop15":406380.0,"areaKm2":14.0},"layers":{"mass":null}}
+{"id":6514,"slug":"phalodi","name":"Phalodi","country":"India","iso":"IND","region":"Asia","lat":27.1283,"lon":72.3671,"ucdb":{"pop15":406380.0,"areaKm2":14.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3052,"ssp1Km2":41.2,"ssp3Km2":35.5,"ssp5Km2":45.5,"loKm2":35.5,"hiKm2":45.5},"jgr":{"quality":"exact","dNightC":0.26,"dNightCoolRoofC":0.04}}}

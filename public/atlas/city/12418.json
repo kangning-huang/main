@@ -1,1 +1,1 @@
-{"id":12418,"slug":"ketapang","name":"Ketapang","country":"Indonesia","iso":"IDN","region":"Asia","lat":-1.8308,"lon":109.9693,"ucdb":{"pop15":319431.0,"areaKm2":33.0},"layers":{"mass":null}}
+{"id":12418,"slug":"ketapang","name":"Ketapang","country":"Indonesia","iso":"IDN","region":"Asia","lat":-1.8308,"lon":109.9693,"ucdb":{"pop15":319431.0,"areaKm2":33.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6058,"ssp1Km2":58.0,"ssp3Km2":55.3,"ssp5Km2":54.7,"loKm2":54.7,"hiKm2":58.0}}}

@@ -1,1 +1,1 @@
-{"id":6957,"slug":"alirajpur","name":"Alirajpur","country":"India","iso":"IND","region":"Asia","lat":22.3015,"lon":74.3545,"ucdb":{"pop15":315241.0,"areaKm2":6.0},"layers":{"mass":null}}
+{"id":6957,"slug":"alirajpur","name":"Alirajpur","country":"India","iso":"IND","region":"Asia","lat":22.3015,"lon":74.3545,"ucdb":{"pop15":315241.0,"areaKm2":6.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":4046,"ssp1Km2":101.8,"ssp3Km2":55.5,"ssp5Km2":104.3,"loKm2":55.5,"hiKm2":104.3},"jgr":{"quality":"exact","dNightC":-0.01,"dNightCoolRoofC":-0.01}}}

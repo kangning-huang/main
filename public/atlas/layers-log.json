@@ -75,5 +75,37 @@
    },
    "Wuhan": null
   }
+ },
+ "expansion": {
+  "centres": 3947,
+  "exact": 3482,
+  "flagged": 465,
+  "source": "Huang_2019 urban_areas.csv + urb_cluster.gpkg spatial join"
+ },
+ "jgr": {
+  "centres": 1527,
+  "source": "del_wbgt_ssp5_night_proj.tif (+ cool-roof) sampled at UCDB centroids; paper Data Availability figshare",
+  "examples": {
+   "Shanghai": {
+    "quality": "exact",
+    "dNightC": 0.7,
+    "dNightCoolRoofC": -0.01
+   },
+   "Beijing": {
+    "quality": "exact",
+    "dNightC": 2.08,
+    "dNightCoolRoofC": 0.94
+   },
+   "Lagos": {
+    "quality": "exact",
+    "dNightC": 0.5,
+    "dNightCoolRoofC": 0.15
+   },
+   "Port Harcourt": {
+    "quality": "exact",
+    "dNightC": 0.81,
+    "dNightCoolRoofC": 0.47
+   }
+  }
  }
 }

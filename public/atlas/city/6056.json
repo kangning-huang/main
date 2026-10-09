@@ -1,1 +1,1 @@
-{"id":6056,"slug":"kandahar","name":"Kandahar","country":"Afghanistan","iso":"AFG","region":"Asia","lat":31.6142,"lon":65.725,"ucdb":{"pop15":605626.0,"areaKm2":67.0},"layers":{"mass":null}}
+{"id":6056,"slug":"kandahar","name":"Kandahar","country":"Afghanistan","iso":"AFG","region":"Asia","lat":31.6142,"lon":65.725,"ucdb":{"pop15":605626.0,"areaKm2":67.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2293,"ssp1Km2":108.5,"ssp3Km2":50.0,"ssp5Km2":98.0,"loKm2":50.0,"hiKm2":108.5}}}

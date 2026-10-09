@@ -1,1 +1,1 @@
-{"id":8297,"slug":"tanda","name":"Tanda","country":"India","iso":"IND","region":"Asia","lat":26.5472,"lon":82.6636,"ucdb":{"pop15":402367.0,"areaKm2":19.0},"layers":{"mass":null}}
+{"id":8297,"slug":"tanda","name":"Tanda","country":"India","iso":"IND","region":"Asia","lat":26.5472,"lon":82.6636,"ucdb":{"pop15":402367.0,"areaKm2":19.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3169,"ssp1Km2":86.8,"ssp3Km2":54.8,"ssp5Km2":103.5,"loKm2":54.8,"hiKm2":103.5},"jgr":{"quality":"exact","dNightC":-0.13,"dNightCoolRoofC":-0.13}}}

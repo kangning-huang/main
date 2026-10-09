@@ -1,1 +1,1 @@
-{"id":2512,"slug":"maradi","name":"Maradi","country":"Niger","iso":"NER","region":"Africa","lat":13.506,"lon":7.1103,"ucdb":{"pop15":461934.0,"areaKm2":43.0},"layers":{"mass":null}}
+{"id":2512,"slug":"maradi","name":"Maradi","country":"Niger","iso":"NER","region":"Africa","lat":13.506,"lon":7.1103,"ucdb":{"pop15":461934.0,"areaKm2":43.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5006,"ssp1Km2":426.0,"ssp3Km2":277.3,"ssp5Km2":458.8,"loKm2":277.3,"hiKm2":458.8}}}

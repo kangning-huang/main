@@ -1,1 +1,1 @@
-{"id":5501,"slug":"ardabil","name":"Ardabil","country":"Iran","iso":"IRN","region":"Asia","lat":38.2467,"lon":48.2901,"ucdb":{"pop15":514458.0,"areaKm2":67.0},"layers":{"mass":null}}
+{"id":5501,"slug":"ardabil","name":"Ardabil","country":"Iran","iso":"IRN","region":"Asia","lat":38.2467,"lon":48.2901,"ucdb":{"pop15":514458.0,"areaKm2":67.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":1229,"ssp1Km2":256.0,"ssp3Km2":198.7,"ssp5Km2":227.0,"loKm2":198.7,"hiKm2":256.0}}}

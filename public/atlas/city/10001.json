@@ -1,1 +1,1 @@
-{"id":10001,"slug":"samaguri","name":"Samaguri","country":"India","iso":"IND","region":"Asia","lat":26.4333,"lon":92.8338,"ucdb":{"pop15":309984.0,"areaKm2":131.0},"layers":{"mass":null}}
+{"id":10001,"slug":"samaguri","name":"Samaguri","country":"India","iso":"IND","region":"Asia","lat":26.4333,"lon":92.8338,"ucdb":{"pop15":309984.0,"areaKm2":131.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3222,"ssp1Km2":97.0,"ssp3Km2":53.3,"ssp5Km2":98.5,"loKm2":53.3,"hiKm2":98.5},"jgr":{"quality":"exact","dNightC":-0.1,"dNightCoolRoofC":-0.33}}}

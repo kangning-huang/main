@@ -1,1 +1,1 @@
-{"id":8957,"slug":"dobhi","name":"Dobhi","country":"India","iso":"IND","region":"Asia","lat":24.5544,"lon":84.8365,"ucdb":{"pop15":348748.0,"areaKm2":28.0},"layers":{"mass":null}}
+{"id":8957,"slug":"dobhi","name":"Dobhi","country":"India","iso":"IND","region":"Asia","lat":24.5544,"lon":84.8365,"ucdb":{"pop15":348748.0,"areaKm2":28.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3674,"ssp1Km2":75.0,"ssp3Km2":27.0,"ssp5Km2":97.8,"loKm2":27.0,"hiKm2":97.8},"jgr":{"quality":"exact","dNightC":-0.03,"dNightCoolRoofC":-0.46}}}

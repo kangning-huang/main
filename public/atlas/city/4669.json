@@ -1,1 +1,1 @@
-{"id":4669,"slug":"kassala","name":"Kassala","country":"Sudan","iso":"SDN","region":"Africa","lat":15.4523,"lon":36.3933,"ucdb":{"pop15":335979.0,"areaKm2":39.0},"layers":{"mass":null}}
+{"id":4669,"slug":"kassala","name":"Kassala","country":"Sudan","iso":"SDN","region":"Africa","lat":15.4523,"lon":36.3933,"ucdb":{"pop15":335979.0,"areaKm2":39.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":4855,"ssp1Km2":183.0,"ssp3Km2":105.5,"ssp5Km2":173.7,"loKm2":105.5,"hiKm2":183.0}}}

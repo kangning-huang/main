@@ -1,1 +1,1 @@
-{"id":9550,"slug":"dhulian","name":"Dhulian","country":"India","iso":"IND","region":"Asia","lat":24.652,"lon":87.9237,"ucdb":{"pop15":307499.0,"areaKm2":53.0},"layers":{"mass":null}}
+{"id":9550,"slug":"dhulian","name":"Dhulian","country":"India","iso":"IND","region":"Asia","lat":24.652,"lon":87.9237,"ucdb":{"pop15":307499.0,"areaKm2":53.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3613,"ssp1Km2":206.2,"ssp3Km2":135.2,"ssp5Km2":212.0,"loKm2":135.2,"hiKm2":212.0},"jgr":{"quality":"exact","dNightC":-0.15,"dNightCoolRoofC":-0.55}}}

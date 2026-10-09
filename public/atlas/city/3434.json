@@ -1,1 +1,1 @@
-{"id":3434,"slug":"tshikapa","name":"Tshikapa","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":-6.4253,"lon":20.7849,"ucdb":{"pop15":546808.0,"areaKm2":48.0},"layers":{"mass":null}}
+{"id":3434,"slug":"tshikapa","name":"Tshikapa","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":-6.4253,"lon":20.7849,"ucdb":{"pop15":546808.0,"areaKm2":48.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6228,"ssp1Km2":179.3,"ssp3Km2":124.5,"ssp5Km2":196.5,"loKm2":124.5,"hiKm2":196.5}}}

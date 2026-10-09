@@ -1,1 +1,1 @@
-{"id":3583,"slug":"um-danga","name":"Um Danga","country":"Sudan","iso":"SDN","region":"Africa","lat":10.948,"lon":24.5779,"ucdb":{"pop15":332278.0,"areaKm2":1.0},"layers":{"mass":null}}
+{"id":3583,"slug":"um-danga","name":"Um Danga","country":"Sudan","iso":"SDN","region":"Africa","lat":10.948,"lon":24.5779,"ucdb":{"pop15":332278.0,"areaKm2":1.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":5157,"ssp1Km2":643.0,"ssp3Km2":410.0,"ssp5Km2":661.0,"loKm2":410.0,"hiKm2":661.0}}}

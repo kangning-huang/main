@@ -1,1 +1,1 @@
-{"id":3282,"slug":"kuito","name":"Kuito","country":"Angola","iso":"AGO","region":"Africa","lat":-12.3869,"lon":16.9363,"ucdb":{"pop15":372376.0,"areaKm2":50.0},"layers":{"mass":null}}
+{"id":3282,"slug":"kuito","name":"Kuito","country":"Angola","iso":"AGO","region":"Africa","lat":-12.3869,"lon":16.9363,"ucdb":{"pop15":372376.0,"areaKm2":50.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6398,"ssp1Km2":254.5,"ssp3Km2":75.0,"ssp5Km2":267.0,"loKm2":75.0,"hiKm2":267.0}}}

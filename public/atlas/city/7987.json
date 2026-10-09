@@ -1,1 +1,1 @@
-{"id":7987,"slug":"sivani","name":"Sivani","country":"India","iso":"IND","region":"Asia","lat":22.0933,"lon":79.5503,"ucdb":{"pop15":315625.0,"areaKm2":18.0},"layers":{"mass":null}}
+{"id":7987,"slug":"sivani","name":"Sivani","country":"India","iso":"IND","region":"Asia","lat":22.0933,"lon":79.5503,"ucdb":{"pop15":315625.0,"areaKm2":18.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":4217,"ssp1Km2":54.3,"ssp3Km2":26.8,"ssp5Km2":75.0,"loKm2":26.8,"hiKm2":75.0},"jgr":{"quality":"exact","dNightC":-0.03,"dNightCoolRoofC":-0.32}}}

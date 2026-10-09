@@ -1,1 +1,1 @@
-{"id":9573,"slug":"dhupguri","name":"Dhupguri","country":"India","iso":"IND","region":"Asia","lat":26.5693,"lon":89.0065,"ucdb":{"pop15":367050.0,"areaKm2":91.0},"layers":{"mass":null}}
+{"id":9573,"slug":"dhupguri","name":"Dhupguri","country":"India","iso":"IND","region":"Asia","lat":26.5693,"lon":89.0065,"ucdb":{"pop15":367050.0,"areaKm2":91.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3188,"ssp1Km2":112.5,"ssp3Km2":53.8,"ssp5Km2":128.3,"loKm2":53.8,"hiKm2":128.3},"jgr":{"quality":"exact","dNightC":-0.23,"dNightCoolRoofC":-0.64}}}

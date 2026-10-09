@@ -1,1 +1,1 @@
-{"id":2982,"slug":"pointe-noire","name":"Pointe-Noire","country":"Republic of Congo","iso":"COG","region":"Africa","lat":-4.7977,"lon":11.8714,"ucdb":{"pop15":515889.0,"areaKm2":79.0},"layers":{"mass":null}}
+{"id":2982,"slug":"pointe-noire","name":"Pointe-Noire","country":"Republic of Congo","iso":"COG","region":"Africa","lat":-4.7977,"lon":11.8714,"ucdb":{"pop15":515889.0,"areaKm2":79.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6172,"ssp1Km2":164.0,"ssp3Km2":136.8,"ssp5Km2":170.9,"loKm2":136.8,"hiKm2":170.9}}}

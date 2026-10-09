@@ -1,1 +1,1 @@
-{"id":3415,"slug":"saurimo","name":"Saurimo","country":"Angola","iso":"AGO","region":"Africa","lat":-9.6672,"lon":20.3945,"ucdb":{"pop15":357697.0,"areaKm2":45.0},"layers":{"mass":null}}
+{"id":3415,"slug":"saurimo","name":"Saurimo","country":"Angola","iso":"AGO","region":"Africa","lat":-9.6672,"lon":20.3945,"ucdb":{"pop15":357697.0,"areaKm2":45.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6355,"ssp1Km2":167.0,"ssp3Km2":50.0,"ssp5Km2":172.7,"loKm2":50.0,"hiKm2":172.7}}}

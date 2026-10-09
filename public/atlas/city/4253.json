@@ -1,1 +1,1 @@
-{"id":4253,"slug":"umm-ruwaba","name":"Umm Ruwaba","country":"Sudan","iso":"SDN","region":"Africa","lat":12.9084,"lon":31.2184,"ucdb":{"pop15":470698.0,"areaKm2":16.0},"layers":{"mass":null}}
+{"id":4253,"slug":"umm-ruwaba","name":"Umm Ruwaba","country":"Sudan","iso":"SDN","region":"Africa","lat":12.9084,"lon":31.2184,"ucdb":{"pop15":470698.0,"areaKm2":16.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":5031,"ssp1Km2":553.2,"ssp3Km2":336.8,"ssp5Km2":555.0,"loKm2":336.8,"hiKm2":555.0}}}

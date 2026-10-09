@@ -1,1 +1,1 @@
-{"id":3352,"slug":"sarh","name":"Sarh","country":"Chad","iso":"TCD","region":"Africa","lat":9.1471,"lon":18.3801,"ucdb":{"pop15":329482.0,"areaKm2":26.0},"layers":{"mass":null}}
+{"id":3352,"slug":"sarh","name":"Sarh","country":"Chad","iso":"TCD","region":"Africa","lat":9.1471,"lon":18.3801,"ucdb":{"pop15":329482.0,"areaKm2":26.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5499,"ssp1Km2":80.0,"ssp3Km2":58.0,"ssp5Km2":80.0,"loKm2":58.0,"hiKm2":80.0}}}

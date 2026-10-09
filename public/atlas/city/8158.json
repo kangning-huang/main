@@ -1,1 +1,1 @@
-{"id":8158,"slug":"utraula","name":"Utraula","country":"India","iso":"IND","region":"Asia","lat":27.3192,"lon":82.4105,"ucdb":{"pop15":434063.0,"areaKm2":7.0},"layers":{"mass":null}}
+{"id":8158,"slug":"utraula","name":"Utraula","country":"India","iso":"IND","region":"Asia","lat":27.3192,"lon":82.4105,"ucdb":{"pop15":434063.0,"areaKm2":7.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3026,"ssp1Km2":65.8,"ssp3Km2":26.2,"ssp5Km2":61.0,"loKm2":26.2,"hiKm2":65.8},"jgr":{"quality":"exact","dNightC":-0.02,"dNightCoolRoofC":-0.09}}}

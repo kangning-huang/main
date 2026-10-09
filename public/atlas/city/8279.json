@@ -1,1 +1,1 @@
-{"id":8279,"slug":"akbarpur","name":"Akbarpur","country":"India","iso":"IND","region":"Asia","lat":26.4388,"lon":82.5502,"ucdb":{"pop15":461742.0,"areaKm2":32.0},"layers":{"mass":null}}
+{"id":8279,"slug":"akbarpur","name":"Akbarpur","country":"India","iso":"IND","region":"Asia","lat":26.4388,"lon":82.5502,"ucdb":{"pop15":461742.0,"areaKm2":32.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3169,"ssp1Km2":86.8,"ssp3Km2":54.8,"ssp5Km2":103.5,"loKm2":54.8,"hiKm2":103.5},"jgr":{"quality":"exact","dNightC":-0.06,"dNightCoolRoofC":-0.17}}}

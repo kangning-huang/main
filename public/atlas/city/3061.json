@@ -1,1 +1,1 @@
-{"id":3061,"slug":"mubi","name":"Mubi","country":"Nigeria","iso":"NGA","region":"Africa","lat":10.2671,"lon":13.2702,"ucdb":{"pop15":334828.0,"areaKm2":27.0},"layers":{"mass":null}}
+{"id":3061,"slug":"mubi","name":"Mubi","country":"Nigeria","iso":"NGA","region":"Africa","lat":10.2671,"lon":13.2702,"ucdb":{"pop15":334828.0,"areaKm2":27.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":5428,"ssp1Km2":97.5,"ssp3Km2":78.5,"ssp5Km2":114.0,"loKm2":78.5,"hiKm2":114.0},"jgr":{"quality":"exact","dNightC":0.17,"dNightCoolRoofC":0.12}}}

@@ -1,1 +1,1 @@
-{"id":9586,"slug":"jangipur","name":"Jangipur","country":"India","iso":"IND","region":"Asia","lat":24.466,"lon":88.0882,"ucdb":{"pop15":304667.0,"areaKm2":51.0},"layers":{"mass":null}}
+{"id":9586,"slug":"jangipur","name":"Jangipur","country":"India","iso":"IND","region":"Asia","lat":24.466,"lon":88.0882,"ucdb":{"pop15":304667.0,"areaKm2":51.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3613,"ssp1Km2":206.2,"ssp3Km2":135.2,"ssp5Km2":212.0,"loKm2":135.2,"hiKm2":212.0},"jgr":{"quality":"exact","dNightC":-0.08,"dNightCoolRoofC":-0.31}}}

@@ -1,1 +1,1 @@
-{"id":6996,"slug":"dausa","name":"Dausa","country":"India","iso":"IND","region":"Asia","lat":26.8985,"lon":76.3389,"ucdb":{"pop15":354206.0,"areaKm2":21.0},"layers":{"mass":null}}
+{"id":6996,"slug":"dausa","name":"Dausa","country":"India","iso":"IND","region":"Asia","lat":26.8985,"lon":76.3389,"ucdb":{"pop15":354206.0,"areaKm2":21.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3108,"ssp1Km2":46.3,"ssp3Km2":28.5,"ssp5Km2":52.0,"loKm2":28.5,"hiKm2":52.0},"jgr":{"quality":"exact","dNightC":0.14,"dNightCoolRoofC":0.01}}}

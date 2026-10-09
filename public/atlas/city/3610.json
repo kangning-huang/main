@@ -1,1 +1,1 @@
-{"id":3610,"slug":"kamina","name":"Kamina","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":-8.7382,"lon":25.0013,"ucdb":{"pop15":401809.0,"areaKm2":24.0},"layers":{"mass":null}}
+{"id":3610,"slug":"kamina","name":"Kamina","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":-8.7382,"lon":25.0013,"ucdb":{"pop15":401809.0,"areaKm2":24.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6342,"ssp1Km2":87.7,"ssp3Km2":55.8,"ssp5Km2":92.0,"loKm2":55.8,"hiKm2":92.0}}}

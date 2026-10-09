@@ -1,1 +1,1 @@
-{"id":5680,"slug":"baidoa","name":"Baidoa","country":"Somalia","iso":"SOM","region":"Africa","lat":3.1164,"lon":43.6543,"ucdb":{"pop15":415899.0,"areaKm2":12.0},"layers":{"mass":null}}
+{"id":5680,"slug":"baidoa","name":"Baidoa","country":"Somalia","iso":"SOM","region":"Africa","lat":3.1164,"lon":43.6543,"ucdb":{"pop15":415899.0,"areaKm2":12.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":5904,"ssp1Km2":64.2,"ssp3Km2":50.7,"ssp5Km2":65.0,"loKm2":50.7,"hiKm2":65.0}}}

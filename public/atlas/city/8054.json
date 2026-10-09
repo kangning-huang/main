@@ -1,1 +1,1 @@
-{"id":8054,"slug":"rudauli","name":"Rudauli","country":"India","iso":"IND","region":"Asia","lat":26.7909,"lon":81.7005,"ucdb":{"pop15":308617.0,"areaKm2":27.0},"layers":{"mass":null}}
+{"id":8054,"slug":"rudauli","name":"Rudauli","country":"India","iso":"IND","region":"Asia","lat":26.7909,"lon":81.7005,"ucdb":{"pop15":308617.0,"areaKm2":27.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3126,"ssp1Km2":442.5,"ssp3Km2":221.3,"ssp5Km2":524.2,"loKm2":221.3,"hiKm2":524.2},"jgr":{"quality":"exact","dNightC":-0.07,"dNightCoolRoofC":-0.33}}}

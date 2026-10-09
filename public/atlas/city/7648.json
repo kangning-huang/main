@@ -1,1 +1,1 @@
-{"id":7648,"slug":"kannauj","name":"Kannauj","country":"India","iso":"IND","region":"Asia","lat":27.0417,"lon":79.9214,"ucdb":{"pop15":311338.0,"areaKm2":17.0},"layers":{"mass":null}}
+{"id":7648,"slug":"kannauj","name":"Kannauj","country":"India","iso":"IND","region":"Asia","lat":27.0417,"lon":79.9214,"ucdb":{"pop15":311338.0,"areaKm2":17.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3064,"ssp1Km2":239.8,"ssp3Km2":136.7,"ssp5Km2":262.5,"loKm2":136.7,"hiKm2":262.5},"jgr":{"quality":"exact","dNightC":-0.01,"dNightCoolRoofC":-0.41}}}

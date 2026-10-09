@@ -1,1 +1,1 @@
-{"id":7310,"slug":"bilari","name":"Bilari","country":"India","iso":"IND","region":"Asia","lat":28.623,"lon":78.7955,"ucdb":{"pop15":306941.0,"areaKm2":16.0},"layers":{"mass":null}}
+{"id":7310,"slug":"bilari","name":"Bilari","country":"India","iso":"IND","region":"Asia","lat":28.623,"lon":78.7955,"ucdb":{"pop15":306941.0,"areaKm2":16.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2806,"ssp1Km2":48.5,"ssp3Km2":26.2,"ssp5Km2":63.5,"loKm2":26.2,"hiKm2":63.5},"jgr":{"quality":"exact","dNightC":0.0,"dNightCoolRoofC":-0.43}}}

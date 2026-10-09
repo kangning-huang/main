@@ -1,1 +1,1 @@
-{"id":7354,"slug":"kasganj","name":"Kasganj","country":"India","iso":"IND","region":"Asia","lat":27.8059,"lon":78.6418,"ucdb":{"pop15":302375.0,"areaKm2":21.0},"layers":{"mass":null}}
+{"id":7354,"slug":"kasganj","name":"Kasganj","country":"India","iso":"IND","region":"Asia","lat":27.8059,"lon":78.6418,"ucdb":{"pop15":302375.0,"areaKm2":21.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2910,"ssp1Km2":50.7,"ssp3Km2":35.2,"ssp5Km2":68.5,"loKm2":35.2,"hiKm2":68.5},"jgr":{"quality":"exact","dNightC":-0.13,"dNightCoolRoofC":-0.41}}}

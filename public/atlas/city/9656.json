@@ -1,1 +1,1 @@
-{"id":9656,"slug":"notun-digha","name":"Notun Digha","country":"India","iso":"IND","region":"Asia","lat":21.6415,"lon":87.4765,"ucdb":{"pop15":302286.0,"areaKm2":63.0},"layers":{"mass":null}}
+{"id":9656,"slug":"notun-digha","name":"Notun Digha","country":"India","iso":"IND","region":"Asia","lat":21.6415,"lon":87.4765,"ucdb":{"pop15":302286.0,"areaKm2":63.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4245,"ssp1Km2":43.5,"ssp3Km2":29.5,"ssp5Km2":46.8,"loKm2":29.5,"hiKm2":46.8},"jgr":{"quality":"exact","dNightC":-0.09,"dNightCoolRoofC":-0.22}}}

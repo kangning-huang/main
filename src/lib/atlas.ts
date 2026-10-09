@@ -18,9 +18,13 @@ export type AtlasPoint = {
   cool: 0 | 1;
   /** 1 if covered by the height-aware flood study (Sci Rep 2026). */
   flood: 0 | 1;
+  /** 1 if covered by ERL 2019 urban expansion (Huang_2019 clump). */
+  expansion: 0 | 1;
+  /** 1 if covered by JGR 2021 nighttime ΔWBGT sample. */
+  jgr: 0 | 1;
 };
 
-export type LayerKey = "mass" | "heat" | "cooling" | "flood";
+export type LayerKey = "mass" | "heat" | "cooling" | "flood" | "expansion" | "jgr";
 
 /** How many mapped studies have a result for this city. */
 export function paperCount(p: AtlasPoint): number {
@@ -29,6 +33,8 @@ export function paperCount(p: AtlasPoint): number {
   if (p.heatDayP != null) n += 1;
   if (p.cool === 1) n += 1;
   if (p.flood === 1) n += 1;
+  if (p.expansion === 1) n += 1;
+  if (p.jgr === 1) n += 1;
   return n;
 }
 
@@ -36,7 +42,9 @@ export function hasLayer(p: AtlasPoint, layer: LayerKey): boolean {
   if (layer === "mass") return p.coverage !== 0 && p.massPerCapT != null;
   if (layer === "heat") return p.heatDayP != null;
   if (layer === "cooling") return p.cool === 1;
-  return p.flood === 1;
+  if (layer === "flood") return p.flood === 1;
+  if (layer === "expansion") return p.expansion === 1;
+  return p.jgr === 1;
 }
 
 export type AtlasPointsFile = {
@@ -123,6 +131,25 @@ export type CityFloodLayer = {
   heightM?: number;
 };
 
+export type CityExpansionLayer = {
+  quality: "exact" | "flagged";
+  clump: number;
+  /** Projected urban land in the Huang_2019 urban cluster by 2050 (km²). */
+  ssp1Km2: number;
+  ssp3Km2: number;
+  ssp5Km2: number;
+  loKm2: number;
+  hiKm2: number;
+};
+
+export type CityJgrLayer = {
+  quality: "exact" | "flagged";
+  /** Nighttime ΔWBGT (°C) from urban expansion to 2050 (SSP5 land, published raster). */
+  dNightC: number;
+  /** Same with cool roofs installed (°C); omitted if raster nodata. */
+  dNightCoolRoofC?: number;
+};
+
 export type CityDetail = {
   id: number;
   slug: string;
@@ -138,6 +165,8 @@ export type CityDetail = {
     heat?: CityHeatLayer;
     cooling?: CityCoolingLayer;
     flood?: CityFloodLayer;
+    expansion?: CityExpansionLayer;
+    jgr?: CityJgrLayer;
   };
 };
 
@@ -176,6 +205,8 @@ export function parsePoints(file: AtlasPointsFile): AtlasPoint[] {
         obj.heatDayP === null || obj.heatDayP === undefined ? null : Number(obj.heatDayP),
       cool: Number(obj.cool ?? 0) === 1 ? 1 : 0,
       flood: Number(obj.flood ?? 0) === 1 ? 1 : 0,
+      expansion: Number(obj.expansion ?? 0) === 1 ? 1 : 0,
+      jgr: Number(obj.jgr ?? 0) === 1 ? 1 : 0,
     };
   });
 }
@@ -211,6 +242,22 @@ export const FLOOD_PAPER = {
   year: 2026,
   doiUrl: "https://doi.org/10.1038/s41598-026-70981-w",
   appUrl: "https://flood.kangning-huang.com/",
+} as const;
+
+export const EXPANSION_PAPER = {
+  title: "Projecting global urban land expansion and heat island intensification through 2050",
+  venue: "Environmental Research Letters",
+  year: 2019,
+  doiUrl: "https://doi.org/10.1088/1748-9326/ab4b71",
+  appUrl: "https://kangning-huang.com/urban-expansion",
+} as const;
+
+export const JGR_PAPER = {
+  title:
+    "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
+  venue: "JGR Atmospheres",
+  year: 2021,
+  doiUrl: "https://doi.org/10.1029/2020JD033831",
 } as const;
 
 export const GLOBAL_SLOPE = 0.8995; // from points.json sources.cityMass.globalCitySlope

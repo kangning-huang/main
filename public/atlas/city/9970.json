@@ -1,1 +1,1 @@
-{"id":9970,"slug":"madhabpur","name":"Madhabpur","country":"Bangladesh","iso":"BGD","region":"Asia","lat":24.0767,"lon":91.2939,"ucdb":{"pop15":359113.0,"areaKm2":116.0},"layers":{"mass":null}}
+{"id":9970,"slug":"madhabpur","name":"Madhabpur","country":"Bangladesh","iso":"BGD","region":"Asia","lat":24.0767,"lon":91.2939,"ucdb":{"pop15":359113.0,"areaKm2":116.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3810,"ssp1Km2":50.9,"ssp3Km2":25.0,"ssp5Km2":54.0,"loKm2":25.0,"hiKm2":54.0}}}

@@ -1,1 +1,1 @@
-{"id":497,"slug":"el-esfuerzo","name":"El esfuerzo","country":"Colombia","iso":"COL","region":"Latin America and the Caribbean","lat":3.8735,"lon":-76.9993,"ucdb":{"pop15":375393.0,"areaKm2":10.0},"layers":{"mass":null}}
+{"id":497,"slug":"el-esfuerzo","name":"El esfuerzo","country":"Colombia","iso":"COL","region":"Latin America and the Caribbean","lat":3.8735,"lon":-76.9993,"ucdb":{"pop15":375393.0,"areaKm2":10.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5874,"ssp1Km2":39.1,"ssp3Km2":39.1,"ssp5Km2":48.9,"loKm2":39.1,"hiKm2":48.9}}}

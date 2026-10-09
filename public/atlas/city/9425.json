@@ -1,1 +1,1 @@
-{"id":9425,"slug":"darjeeling","name":"Darjeeling","country":"India","iso":"IND","region":"Asia","lat":27.0425,"lon":88.2561,"ucdb":{"pop15":579528.0,"areaKm2":11.0},"layers":{"mass":null}}
+{"id":9425,"slug":"darjeeling","name":"Darjeeling","country":"India","iso":"IND","region":"Asia","lat":27.0425,"lon":88.2561,"ucdb":{"pop15":579528.0,"areaKm2":11.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3111,"ssp1Km2":37.5,"ssp3Km2":28.0,"ssp5Km2":36.3,"loKm2":28.0,"hiKm2":37.5},"jgr":{"quality":"exact","dNightC":0.71,"dNightCoolRoofC":0.34}}}

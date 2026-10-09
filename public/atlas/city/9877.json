@@ -1,1 +1,1 @@
-{"id":9877,"slug":"gouripur","name":"Gouripur","country":"Bangladesh","iso":"BGD","region":"Asia","lat":24.7028,"lon":90.5414,"ucdb":{"pop15":339401.0,"areaKm2":137.0},"layers":{"mass":null}}
+{"id":9877,"slug":"gouripur","name":"Gouripur","country":"Bangladesh","iso":"BGD","region":"Asia","lat":24.7028,"lon":90.5414,"ucdb":{"pop15":339401.0,"areaKm2":137.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3702,"ssp1Km2":207.8,"ssp3Km2":150.0,"ssp5Km2":205.7,"loKm2":150.0,"hiKm2":207.8}}}

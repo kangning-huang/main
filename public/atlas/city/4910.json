@@ -1,1 +1,1 @@
-{"id":4910,"slug":"duhok","name":"Duhok","country":"Iraq","iso":"IRQ","region":"Asia","lat":36.8577,"lon":42.9378,"ucdb":{"pop15":589946.0,"areaKm2":78.0},"layers":{"mass":null}}
+{"id":4910,"slug":"duhok","name":"Duhok","country":"Iraq","iso":"IRQ","region":"Asia","lat":36.8577,"lon":42.9378,"ucdb":{"pop15":589946.0,"areaKm2":78.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":1426,"ssp1Km2":219.5,"ssp3Km2":197.0,"ssp5Km2":244.3,"loKm2":197.0,"hiKm2":244.3}}}

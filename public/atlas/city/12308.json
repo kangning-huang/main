@@ -1,1 +1,1 @@
-{"id":12308,"slug":"wonsan","name":"Wonsan","country":"North Korea","iso":"PRK","region":"Asia","lat":39.156,"lon":127.441,"ucdb":{"pop15":326575.0,"areaKm2":29.0},"layers":{"mass":null}}
+{"id":12308,"slug":"wonsan","name":"Wonsan","country":"North Korea","iso":"PRK","region":"Asia","lat":39.156,"lon":127.441,"ucdb":{"pop15":326575.0,"areaKm2":29.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":1149,"ssp1Km2":105.5,"ssp3Km2":72.8,"ssp5Km2":97.0,"loKm2":72.8,"hiKm2":105.5}}}

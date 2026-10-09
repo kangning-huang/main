@@ -1,1 +1,1 @@
-{"id":6028,"slug":"mazar-i-sharif","name":"Mazar i sharif","country":"Afghanistan","iso":"AFG","region":"Asia","lat":36.7103,"lon":67.1104,"ucdb":{"pop15":465528.0,"areaKm2":46.0},"layers":{"mass":null}}
+{"id":6028,"slug":"mazar-i-sharif","name":"Mazar i sharif","country":"Afghanistan","iso":"AFG","region":"Asia","lat":36.7103,"lon":67.1104,"ucdb":{"pop15":465528.0,"areaKm2":46.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":1462,"ssp1Km2":106.7,"ssp3Km2":50.0,"ssp5Km2":112.5,"loKm2":50.0,"hiKm2":112.5}}}

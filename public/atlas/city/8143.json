@@ -1,1 +1,1 @@
-{"id":8143,"slug":"amethi","name":"Amethi","country":"India","iso":"IND","region":"Asia","lat":26.1577,"lon":81.8079,"ucdb":{"pop15":324941.0,"areaKm2":9.0},"layers":{"mass":null}}
+{"id":8143,"slug":"amethi","name":"Amethi","country":"India","iso":"IND","region":"Asia","lat":26.1577,"lon":81.8079,"ucdb":{"pop15":324941.0,"areaKm2":9.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3267,"ssp1Km2":113.5,"ssp3Km2":58.5,"ssp5Km2":112.0,"loKm2":58.5,"hiKm2":113.5},"jgr":{"quality":"exact","dNightC":-0.32,"dNightCoolRoofC":-0.67}}}

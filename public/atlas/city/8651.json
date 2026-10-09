@@ -1,1 +1,1 @@
-{"id":8651,"slug":"narkatiaganj","name":"Narkatiaganj","country":"India","iso":"IND","region":"Asia","lat":27.1068,"lon":84.4647,"ucdb":{"pop15":340088.0,"areaKm2":9.0},"layers":{"mass":null}}
+{"id":8651,"slug":"narkatiaganj","name":"Narkatiaganj","country":"India","iso":"IND","region":"Asia","lat":27.1068,"lon":84.4647,"ucdb":{"pop15":340088.0,"areaKm2":9.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3068,"ssp1Km2":50.2,"ssp3Km2":29.0,"ssp5Km2":53.3,"loKm2":29.0,"hiKm2":53.3},"jgr":{"quality":"exact","dNightC":-0.04,"dNightCoolRoofC":-0.29}}}

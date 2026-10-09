@@ -1,1 +1,1 @@
-{"id":3767,"slug":"manono","name":"Manono","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":-7.3074,"lon":27.3918,"ucdb":{"pop15":337086.0,"areaKm2":23.0},"layers":{"mass":null}}
+{"id":3767,"slug":"manono","name":"Manono","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":-7.3074,"lon":27.3918,"ucdb":{"pop15":337086.0,"areaKm2":23.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6275,"ssp1Km2":145.2,"ssp3Km2":100.0,"ssp5Km2":145.2,"loKm2":100.0,"hiKm2":145.2}}}

@@ -1,1 +1,1 @@
-{"id":3615,"slug":"al-fashir","name":"Al-Fashir","country":"Sudan","iso":"SDN","region":"Africa","lat":13.6211,"lon":25.353,"ucdb":{"pop15":632597.0,"areaKm2":46.0},"layers":{"mass":null}}
+{"id":3615,"slug":"al-fashir","name":"Al-Fashir","country":"Sudan","iso":"SDN","region":"Africa","lat":13.6211,"lon":25.353,"ucdb":{"pop15":632597.0,"areaKm2":46.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5001,"ssp1Km2":121.2,"ssp3Km2":94.2,"ssp5Km2":121.7,"loKm2":94.2,"hiKm2":121.7}}}

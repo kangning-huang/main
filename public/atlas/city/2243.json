@@ -1,1 +1,1 @@
-{"id":2243,"slug":"ife","name":"Ife","country":"Nigeria","iso":"NGA","region":"Africa","lat":7.4864,"lon":4.5637,"ucdb":{"pop15":382423.0,"areaKm2":73.0},"layers":{"mass":null}}
+{"id":2243,"slug":"ife","name":"Ife","country":"Nigeria","iso":"NGA","region":"Africa","lat":7.4864,"lon":4.5637,"ucdb":{"pop15":382423.0,"areaKm2":73.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5605,"ssp1Km2":4568.8,"ssp3Km2":3390.0,"ssp5Km2":4728.0,"loKm2":3390.0,"hiKm2":4728.0},"jgr":{"quality":"exact","dNightC":0.48,"dNightCoolRoofC":0.34}}}

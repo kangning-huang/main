@@ -1,1 +1,1 @@
-{"id":5169,"slug":"massawa","name":"Massawa","country":"Eritrea","iso":"ERI","region":"Africa","lat":15.6199,"lon":39.4634,"ucdb":{"pop15":1014460.0,"areaKm2":19.0},"layers":{"mass":null}}
+{"id":5169,"slug":"massawa","name":"Massawa","country":"Eritrea","iso":"ERI","region":"Africa","lat":15.6199,"lon":39.4634,"ucdb":{"pop15":1014460.0,"areaKm2":19.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":4856,"ssp1Km2":1286.5,"ssp3Km2":889.0,"ssp5Km2":1277.5,"loKm2":889.0,"hiKm2":1286.5}}}

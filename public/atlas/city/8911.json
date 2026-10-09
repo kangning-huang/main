@@ -1,1 +1,1 @@
-{"id":8911,"slug":"sitamarhi","name":"Sitamarhi","country":"India","iso":"IND","region":"Asia","lat":26.5825,"lon":85.5109,"ucdb":{"pop15":534900.0,"areaKm2":58.0},"layers":{"mass":null}}
+{"id":8911,"slug":"sitamarhi","name":"Sitamarhi","country":"India","iso":"IND","region":"Asia","lat":26.5825,"lon":85.5109,"ucdb":{"pop15":534900.0,"areaKm2":58.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3170,"ssp1Km2":68.0,"ssp3Km2":26.5,"ssp5Km2":78.0,"loKm2":26.5,"hiKm2":78.0},"jgr":{"quality":"exact","dNightC":0.33,"dNightCoolRoofC":0.05}}}

@@ -1,1 +1,1 @@
-{"id":3399,"slug":"luena","name":"Luena","country":"Angola","iso":"AGO","region":"Africa","lat":-11.7815,"lon":19.906,"ucdb":{"pop15":341566.0,"areaKm2":45.0},"layers":{"mass":null}}
+{"id":3399,"slug":"luena","name":"Luena","country":"Angola","iso":"AGO","region":"Africa","lat":-11.7815,"lon":19.906,"ucdb":{"pop15":341566.0,"areaKm2":45.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6386,"ssp1Km2":66.3,"ssp3Km2":25.0,"ssp5Km2":58.5,"loKm2":25.0,"hiKm2":66.3}}}

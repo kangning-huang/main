@@ -1,1 +1,1 @@
-{"id":10263,"slug":"bago","name":"Bago","country":"Myanmar","iso":"MMR","region":"Asia","lat":17.3282,"lon":96.4784,"ucdb":{"pop15":360017.0,"areaKm2":40.0},"layers":{"mass":null}}
+{"id":10263,"slug":"bago","name":"Bago","country":"Myanmar","iso":"MMR","region":"Asia","lat":17.3282,"lon":96.4784,"ucdb":{"pop15":360017.0,"areaKm2":40.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4692,"ssp1Km2":40.5,"ssp3Km2":25.0,"ssp5Km2":37.5,"loKm2":25.0,"hiKm2":40.5}}}

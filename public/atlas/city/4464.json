@@ -1,1 +1,1 @@
-{"id":4464,"slug":"wad-madan","name":"Wad Madan?","country":"Sudan","iso":"SDN","region":"Africa","lat":14.3869,"lon":33.5335,"ucdb":{"pop15":549310.0,"areaKm2":84.0},"layers":{"mass":null}}
+{"id":4464,"slug":"wad-madan","name":"Wad Madan?","country":"Sudan","iso":"SDN","region":"Africa","lat":14.3869,"lon":33.5335,"ucdb":{"pop15":549310.0,"areaKm2":84.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4876,"ssp1Km2":1778.2,"ssp3Km2":1311.3,"ssp5Km2":1708.0,"loKm2":1311.3,"hiKm2":1778.2}}}

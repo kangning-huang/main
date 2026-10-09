@@ -1,1 +1,1 @@
-{"id":529,"slug":"n-a-per","name":"N/A","country":"Peru","iso":"PER","region":"Latin America and the Caribbean","lat":-12.1054,"lon":-77.1945,"ucdb":{"pop15":403341.0,"areaKm2":2.0},"layers":{"mass":null}}
+{"id":529,"slug":"n-a-per","name":"N/A","country":"Peru","iso":"PER","region":"Latin America and the Caribbean","lat":-12.1054,"lon":-77.1945,"ucdb":{"pop15":403341.0,"areaKm2":2.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":6385,"ssp1Km2":1755.1,"ssp3Km2":1744.1,"ssp5Km2":1784.2,"loKm2":1744.1,"hiKm2":1784.2}}}

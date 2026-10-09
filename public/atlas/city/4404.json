@@ -1,1 +1,1 @@
-{"id":4404,"slug":"chimoio","name":"Chimoio","country":"Mozambique","iso":"MOZ","region":"Africa","lat":-19.1169,"lon":33.478,"ucdb":{"pop15":316378.0,"areaKm2":35.0},"layers":{"mass":null}}
+{"id":4404,"slug":"chimoio","name":"Chimoio","country":"Mozambique","iso":"MOZ","region":"Africa","lat":-19.1169,"lon":33.478,"ucdb":{"pop15":316378.0,"areaKm2":35.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6519,"ssp1Km2":121.0,"ssp3Km2":80.3,"ssp5Km2":109.5,"loKm2":80.3,"hiKm2":121.0}}}
