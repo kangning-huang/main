@@ -199,13 +199,13 @@ export default async function Home() {
             <p className="animate-fade-up delay-2 mt-2 text-sm text-paper/60">
               <Link href="/reach" className="transition-colors hover:text-ember">
                 <T
-                  en={`Cited by researchers in ${reach.fields} fields across ${reach.countries} countries`}
-                  zh={`被 ${reach.countries} 个国家和地区、${reach.fields} 个领域的研究者引用`}
+                  en={`Cited in ${reach.countries} countries — from ${reach.from} to ${reach.to}`}
+                  zh={`被 ${reach.countries} 个国家和地区引用——从「${reach.from}」到「${reach.to}」`}
                 />
                 <span className="ml-1.5 text-xs text-paper/40">
                   <T
-                    en={`(OpenAlex, lead-author papers, self-citations removed, ${reach.asOf}) →`}
-                    zh={`（OpenAlex，第一/通讯作者论文，已剔除自引，${reach.asOf}）→`}
+                    en={`(OpenAlex, all papers with DOI, self-citations removed, ${reach.asOf}) →`}
+                    zh={`（OpenAlex，全部有 DOI 论文，已剔除自引，${reach.asOf}）→`}
                   />
                 </span>
               </Link>

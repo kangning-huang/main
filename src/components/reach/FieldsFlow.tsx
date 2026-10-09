@@ -1,5 +1,8 @@
+"use client";
+
 import T from "@/components/T";
-import { influence, THEMES, THEME_COLORS, fieldZh } from "@/lib/influence";
+import { THEMES, THEME_COLORS, fieldZh } from "@/lib/influence";
+import { useReachLens } from "./ReachLens";
 
 const W = 760;
 const H = 420;
@@ -33,10 +36,11 @@ function layout(nodes: Omit<Node, "y" | "h" | "labelY">[], scale: number): Node[
   });
 }
 
+/** Secondary theme→field Sankey. Primary taxonomy is AdaptiveTopics. */
 export default function FieldsFlow() {
-  const { flows, fields, totals } = influence;
+  const { view } = useReachLens();
+  const { flows, fields, totals } = view;
 
-  // Right side: top fields by flow volume, rest folded into "Other fields".
   const fieldFlow: Record<string, number> = {};
   for (const f of flows) fieldFlow[f.field] = (fieldFlow[f.field] ?? 0) + f.citingWorks;
   const rankedFields = Object.entries(fieldFlow).sort((a, b) => b[1] - a[1]);
@@ -71,13 +75,20 @@ export default function FieldsFlow() {
       : []),
   ];
 
+  if (themeNodesRaw.length === 0 || fieldNodesRaw.length === 0) {
+    return (
+      <p className="text-sm text-ink-muted">
+        <T en="Not enough field flow data for this view." zh="该视角下领域流向数据不足。" />
+      </p>
+    );
+  }
+
   const total = themeNodesRaw.reduce((s, n) => s + n.value, 0);
   const maxNodes = Math.max(themeNodesRaw.length, fieldNodesRaw.length);
   const scale = (H - 20 - GAP * (maxNodes - 1)) / total;
   const left = layout(themeNodesRaw, scale);
   const right = layout(fieldNodesRaw, scale);
 
-  // Ribbons: walk themes in order, fields in order, stacking offsets on both ends.
   const leftOffset: Record<string, number> = Object.fromEntries(left.map((n) => [n.id, n.y]));
   const rightOffset: Record<string, number> = Object.fromEntries(right.map((n) => [n.id, n.y]));
   const ribbons: { d: string; color: string; title: string }[] = [];
@@ -110,17 +121,18 @@ export default function FieldsFlow() {
         <T
           en={
             <>
+              Secondary view: theme → OpenAlex <em>field</em> flow.{" "}
               <strong className="text-ink">{totals.citingWorksOutsideOwnField}</strong> of{" "}
-              {totals.uniqueCitingWorks} citing works ({pctOutside}%) sit in a different OpenAlex field from
-              the paper they cite. Citing works span <strong className="text-ink">{totals.fieldsCount}</strong>{" "}
-              OpenAlex fields.
+              {totals.uniqueCitingWorks.toLocaleString()} citing works ({pctOutside}%) sit in a different field
+              from the paper they cite. Prefer the adaptive cards above for subfields and topics — raw
+              Environmental Science is intentionally not the main story.
             </>
           }
           zh={
             <>
-              在 {totals.uniqueCitingWorks} 篇施引文献中，有 <strong className="text-ink">{totals.citingWorksOutsideOwnField}</strong>{" "}
-              篇（{pctOutside}%）与被引论文分属不同的 OpenAlex 领域；施引文献共覆盖{" "}
-              <strong className="text-ink">{totals.fieldsCount}</strong> 个 OpenAlex 领域。
+              次要视图：主题 → OpenAlex <em>领域</em>流向。在 {totals.uniqueCitingWorks.toLocaleString()} 篇施引中，有{" "}
+              <strong className="text-ink">{totals.citingWorksOutsideOwnField}</strong> 篇（{pctOutside}%）与被引论文分属不同领域。
+              子领域与主题请以上方自适应卡片为主——“环境科学”大类不再作为主叙事。
             </>
           }
         />
@@ -134,7 +146,7 @@ export default function FieldsFlow() {
           viewBox={`0 0 ${W} ${svgH}`}
           className="h-auto w-full min-w-[560px]"
           role="img"
-          aria-label="Flow from Ken Huang's research themes to the OpenAlex fields of the works that cite them"
+          aria-label="Flow from research themes to OpenAlex fields of citing works"
         >
           {ribbons.map((r, i) => (
             <path key={i} d={r.d} fill={r.color} fillOpacity={0.35} className="transition-opacity hover:[fill-opacity:0.7]">
@@ -144,7 +156,7 @@ export default function FieldsFlow() {
           {left.map((n) => (
             <g key={n.id}>
               <rect x={LEFT_X} y={n.y} width={NODE_W} height={n.h} rx={2} fill={THEME_COLORS[n.id]}>
-                <title>{`${n.label.en}: ${n.value} (citing work, theme) pairs — OpenAlex`}</title>
+                <title>{`${n.label.en}: ${n.value}`}</title>
               </rect>
               <text x={LEFT_X - 8} y={n.labelY} dy="0.35em" textAnchor="end" className="fill-ink text-[12px]">
                 <T en={n.label.en} zh={n.label.zh} />
@@ -155,7 +167,7 @@ export default function FieldsFlow() {
           {right.map((n) => (
             <g key={n.id}>
               <rect x={RIGHT_X} y={n.y} width={NODE_W} height={n.h} rx={2} fill="var(--color-ink-muted)">
-                <title>{`${n.label.en}: ${n.value} — OpenAlex`}</title>
+                <title>{`${n.label.en}: ${n.value}`}</title>
               </rect>
               <text x={RIGHT_X + NODE_W + 8} y={n.labelY} dy="0.35em" className="fill-ink text-[12px]">
                 <T en={n.label.en} zh={n.label.zh} />
@@ -166,8 +178,8 @@ export default function FieldsFlow() {
         </svg>
         <figcaption className="mt-2 text-xs text-ink-faint">
           <T
-            en="Ribbon width = citing works (self-citations removed). A work that builds on papers in two themes is counted once per theme. Source: OpenAlex primary-topic field of each citing work."
-            zh="条带宽度 = 施引文献数（已剔除自引）。同时引用两个主题论文的文献在每个主题下各计一次。数据来源：OpenAlex 施引文献的主要主题所属领域。"
+            en="Ribbon width = citing works (self-citations removed). A work citing two themes counts once per theme."
+            zh="条带宽度 = 施引文献数（已剔除自引）。同时引用两个主题的文献在每个主题下各计一次。"
           />
         </figcaption>
       </figure>
@@ -176,12 +188,6 @@ export default function FieldsFlow() {
         <summary className="cursor-pointer text-ink-muted hover:text-ink">
           <T en="All fields, with top subfields (table)" zh="全部领域及主要子领域（表格）" />
         </summary>
-        <p className="mt-2 text-xs text-ink-faint">
-          <T
-            en="OpenAlex assigns topics automatically and subfield labels are noisy. Spot-check the top fields against the citing titles before quoting them; treat single-digit fields as indicative only."
-            zh="OpenAlex 的主题由算法自动标注，子领域标签存在噪声。引用前请对照施引文献标题抽查排名靠前的领域；个位数的领域仅供参考。"
-          />
-        </p>
         <table className="mt-2 w-full text-left text-sm">
           <thead className="text-xs text-ink-faint">
             <tr>
