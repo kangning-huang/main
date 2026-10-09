@@ -176,6 +176,7 @@ async function main() {
   const leftAbs = {};
   const leftRate = {};
   const linkKeywords = {}; // key -> {kw: count}
+  const sfField = {};
 
   console.log(`Flow preview builder — lens=${lens}, papers=${papers.length}`);
 
@@ -199,14 +200,18 @@ async function main() {
       if (isSelf(c, keys)) continue;
       kept++;
       const node = matchAdaptive(c, adaptive);
-      // Map field-level hits into Other for the preview ribbon (Ken asked subfields/keywords not broad fields)
-      let rightId = node.id;
-      let rightName = node.name;
-      let rightLevel = node.level;
-      if (node.level === "field") {
-        rightId = "__other";
-        rightName = other?.name ?? "Other";
-        rightLevel = "other";
+      const pt = c.primary_topic;
+      const sfName = pt?.subfield?.display_name ?? null;
+      const fName = pt?.field?.display_name ?? "Unclassified";
+      let rightId, rightName, rightLevel;
+      if (node.level === "topic" || node.level === "subfield") {
+        rightId = node.id; rightName = node.name; rightLevel = node.level;
+      } else if (sfName) {
+        // provisional: individual subfield; bucketed after counting
+        rightId = `sf:${sfName}`; rightName = sfName; rightLevel = "subfield";
+        sfField[rightId] = fName;
+      } else {
+        rightId = "__other"; rightName = "Other"; rightLevel = "other";
       }
       const ak = `${fine}|${rightId}`;
       absLinks[ak] = (absLinks[ak] ?? 0) + 1;
@@ -238,6 +243,38 @@ async function main() {
         citesPerYear: Math.round((leftRate[id] ?? 0) * 10) / 10,
       }));
 
+  // ── Fold tail: keep top named subfields; bucket the rest by OpenAlex field → domain ──
+  const MAX_NAMED_SF = Number(process.env.MAX_NAMED_SF ?? 2);
+  const DOMAINS = themeConfig.rightDomains;
+  const domainOf = (field) => DOMAINS.find((d) => d.fields.includes(field)) ?? null;
+  const provisional = Object.keys(rightRate).filter((id) => id.startsWith("sf:"));
+  provisional.sort((a, b) => rightRate[b] - rightRate[a]);
+  const keepNamed = new Set(provisional.slice(0, MAX_NAMED_SF));
+  const remap = {};
+  const members = {};
+  for (const id of provisional) {
+    if (keepNamed.has(id)) continue;
+    const d = domainOf(sfField[id]);
+    const target = d ? `dom:${d.id}` : "__other";
+    remap[id] = target;
+    (members[target] ??= []).push({ name: id.slice(3), citesPerYear: Math.round(rightRate[id] * 10) / 10, absolute: rightAbs[id] });
+  }
+  const move = (obj) => { for (const [from, to] of Object.entries(remap)) { obj[to] = (obj[to] ?? 0) + (obj[from] ?? 0); delete obj[from]; } };
+  move(rightAbs); move(rightRate);
+  for (const k of Object.keys(absLinks)) {
+    const [l, r] = k.split("|");
+    if (!remap[r]) continue;
+    const nk = `${l}|${remap[r]}`;
+    absLinks[nk] = (absLinks[nk] ?? 0) + absLinks[k]; delete absLinks[k];
+    rateLinks[nk] = (rateLinks[nk] ?? 0) + (rateLinks[k] ?? 0); delete rateLinks[k];
+    linkKeywords[nk] ??= {};
+    for (const [kw, c] of Object.entries(linkKeywords[k] ?? {})) linkKeywords[nk][kw] = (linkKeywords[nk][kw] ?? 0) + c;
+    delete linkKeywords[k];
+  }
+  for (const d of DOMAINS) rightNodes.push({ id: `dom:${d.id}`, name: d.en, level: "domain", path: [d.en] });
+  for (const id of keepNamed) rightNodes.push({ id, name: id.slice(3), level: "subfield", path: [sfField[id], id.slice(3)] });
+  rightNodes.push({ id: "__other", name: "Other", level: "other", path: ["Other"] });
+
   const rightIds = [...new Set([...Object.keys(rightAbs), ...rightNodes.map((n) => n.id)])];
   const rightMeta = Object.fromEntries(
     [...adaptive, ...rightNodes].map((n) => [n.id, n])
@@ -266,6 +303,7 @@ async function main() {
       path: rightMeta[id]?.path ?? [rightMeta[id]?.name ?? id],
       absolute: rightAbs[id] ?? 0,
       citesPerYear: Math.round((rightRate[id] ?? 0) * 10) / 10,
+      members: (members[id] ?? []).sort((a, b) => b.citesPerYear - a.citesPerYear),
     }))
     .filter((n) => n.absolute > 0)
     .sort((a, b) => b.absolute - a.absolute);
