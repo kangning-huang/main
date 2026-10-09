@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Instrument_Serif, DM_Sans } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/lib/language-context";
@@ -8,6 +9,22 @@ import { personSchema, websiteSchema, OG_IMAGE_PATH, canonicalUrl, withOpenGraph
 
 const GA_ID = "G-M6RRTZHMPZ";
 
+// Self-hosted at build time by next/font (no runtime request to Google Fonts)
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-instrument-serif",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-dm-sans",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://kangning-huang.com"),
   title: {
@@ -15,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s | Kangning (Ken) Huang",
   },
   description:
-    "Kangning (Ken) Huang is an Assistant Professor of Environmental Studies at NYU Shanghai researching urbanization, urban heat islands, climate adaptation, remote sensing, and urban scaling laws.",
+    "How the size and shape of cities decide their climate future. Kangning (Ken) Huang, Assistant Professor of Environmental Studies, NYU Shanghai.",
   keywords: [
     "Kangning Huang", "Ken Huang", "黄康宁", "NYU Shanghai",
     "urban heat island", "urban expansion", "climate adaptation",
@@ -51,7 +68,11 @@ export default function RootLayout({
   const jsonLdSite = websiteSchema();
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html
+      lang="en"
+      className={`${instrumentSerif.variable} ${dmSans.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         {/* llms.txt discovery for AI crawlers */}
         <link rel="alternate" type="text/plain" href={canonicalUrl("/llms.txt")} title="LLMs.txt" />

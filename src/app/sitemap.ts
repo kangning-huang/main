@@ -11,9 +11,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      path: "/research",
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+    },
+    {
       path: "/publications",
       changeFrequency: "weekly" as const,
       priority: 0.95,
+    },
+    {
+      path: "/lab",
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
+      path: "/news",
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
     },
     {
       path: "/projects",
@@ -34,6 +49,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       path: "/urban-expansion",
       changeFrequency: "yearly" as const,
       priority: 0.8,
+    },
+    {
+      path: "/tinkering",
+      changeFrequency: "yearly" as const,
+      priority: 0.5,
     },
     {
       path: "/llms.txt",

@@ -4,11 +4,15 @@
 
 ## Site Structure
 
-- [Home](https://kangning-huang.com/): Overview, bio, selected publications, featured projects, and latest writing
+- [Home](https://kangning-huang.com/): Overview, key findings, bio, selected publications, featured projects, and latest writing
+- [Research](https://kangning-huang.com/research): Four research themes (urban futures; heat; flood and coasts; scaling and form) with key findings, papers, and interactive apps
 - [Publications](https://kangning-huang.com/publications): Full list of peer-reviewed publications with citation metrics
-- [Projects](https://kangning-huang.com/projects): Academic research tools and side projects
-- [Blog](https://kangning-huang.com/blog): Writing on cities, climate, autonomous vehicles, and more
-- [Advisees](https://kangning-huang.com/advisees): Current and past students and their research
+- [Lab](https://kangning-huang.com/lab): CLUEs (CLimate and Urban Environments) Lab — current members, alumni outcomes, and how to join
+- [News](https://kangning-huang.com/news): Dated log of papers accepted, in press, and published
+- [Projects](https://kangning-huang.com/projects): Interactive research tools accompanying papers
+- [Blog](https://kangning-huang.com/blog): Listing of writing on cities, climate, and more (full posts on Substack)
+- [Advisees](https://kangning-huang.com/advisees): Full list of mentored students, their projects, and placements
+- [Tinkering](https://kangning-huang.com/tinkering): Public-interest data tools (e.g. RoboTaxi Safety Tracker)
 - [Urban Expansion 2050](https://kangning-huang.com/urban-expansion): Interactive visualization of projected global urban land expansion
 
 ## About Kangning (Ken) Huang
@@ -30,7 +34,7 @@ His work spans urban expansion modeling, urban heat island dynamics, climate ada
 
 ## Key Publications
 
-- "Projecting global urban land expansion and heat island intensification through 2050" (Environmental Research Letters, 2019) — 480+ citations. Projects that global urban land area will expand by 78%–171% between 2015 and 2050, intensifying urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally).
+- "Projecting global urban land expansion and heat island intensification through 2050" (Environmental Research Letters, 2019) — about 548 citations on Google Scholar (October 2026). Projects that global urban land area will expand by 78%–171% between 2015 and 2050, intensifying urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally).
 - "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation" (Journal of Geophysical Research: Atmospheres, 2021) — Shows that urban expansion alone can increase nighttime heat exposure even when heat island intensity is reduced.
 - "Urban forests facing climate risks" (Nature Climate Change, 2022) — Analyzes how climate change threatens urban forests, a key tool for heat mitigation.
 - "Declining urban density attenuates rising population exposure to surface heat extremes" (Scientific Reports, 2025) — Demonstrates that decreasing urban density can partially offset rising heat exposure from climate warming.
@@ -74,4 +78,10 @@ Writing in Nature Climate Change (2022), Kangning Huang analyzed climate risks t
 - Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution (Scientific Reports, 2026; DOI 10.1038/s41598-026-70981-w)
 
 ## Lab
-CLUEs (CLimate and Urban Environments) Lab at NYU Shanghai.
+CLUEs (CLimate and Urban Environments) Lab at NYU Shanghai. Members, alumni outcomes, and how to join: https://kangning-huang.com/lab. Prospective students email kangning.huang@nyu.edu with "[CLUEs]" in the subject line, including a CV, a short research-interest note, and a relevant work sample.
+
+## News
+- Sep 2026 — "Nested economies of scale in global city mass" in press at Nature Cities
+- Sep 2026 — "Toward Cooler Cities by Larger Homogeneous Functional Clusters" in press at PNAS
+- Sep 2026 — "Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution" published in Scientific Reports (DOI 10.1038/s41598-026-70981-w)
+- Jul 2026 — "Unveiling the causal link between informal settlement demolition and urban cooling" published in npj Environmental Social Sciences (DOI 10.1038/s44432-026-00009-1)

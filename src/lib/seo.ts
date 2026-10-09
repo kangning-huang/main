@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { LINKS, SITE, COAUTHOR_LINKS } from "@/lib/constants";
 import type { Publication } from "@/lib/constants";
+import { getScholarCitationCount, ERL_2019_TITLE } from "@/lib/publications";
 
 const FALLBACK_SITE_URL = "https://kangning-huang.com";
 
@@ -121,6 +122,10 @@ export function personSchema() {
 }
 
 export function faqSchema() {
+  const erlCitations = getScholarCitationCount(ERL_2019_TITLE);
+  const erlCitationsNote = erlCitations
+    ? `, cited ${erlCitations} times on Google Scholar`
+    : "";
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -154,7 +159,7 @@ export function faqSchema() {
         name: "How much will cities expand by 2050?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "According to Kangning Huang's research published in Environmental Research Letters (2019, 480+ citations), global urban land area is projected to increase by 78%–171% (0.6–1.3 million km²) between 2015 and 2050, intensifying urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally) and increasing extreme heat risk for about half of the future urban population.",
+          text: `According to Kangning Huang's research published in Environmental Research Letters (2019${erlCitationsNote}), global urban land area is projected to increase by 78%–171% (0.6–1.3 million km²) between 2015 and 2050, intensifying urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally) and increasing extreme heat risk for about half of the future urban population.`,
         },
       },
     ],

@@ -3,29 +3,62 @@ import type { Metadata } from "next";
 import {
   SITE,
   LINKS,
-  RESEARCH_INTERESTS,
   PROJECTS,
+  publicationSlug,
 } from "@/lib/constants";
 import { fetchPublications } from "@/lib/publications";
 import { fetchBlogPosts } from "@/lib/blog";
+import { NEWS, formatNewsDate } from "@/lib/news";
 import { webPageSchema, profilePageSchema, faqSchema, OG_IMAGE_PATH, withOpenGraphDefaults, canonicalPageUrl } from "@/lib/seo";
 import T from "@/components/T";
 import PublicationCard from "@/components/PublicationCard";
 
-const RESEARCH_INTERESTS_ZH: Record<string, string> = {
-  Urbanization: "城市化",
-  "Extreme Heat Events": "极端高温事件",
-  "Climate Adaptation": "气候适应",
-  "Remote Sensing": "遥感",
-  GIScience: "地理信息科学",
-};
+const HOME_DESCRIPTION =
+  "How the size and shape of cities decide their climate future. Kangning (Ken) Huang, Assistant Professor of Environmental Studies, NYU Shanghai.";
+
+// Each finding is taken from the linked paper's highlights in publications-part-a.ts.
+const FINDINGS = [
+  {
+    en: "Double a city's population and its built mass grows only about 87%; bigger cities need less material per person.",
+    zh: "城市人口翻倍，建成质量仅增长约87%；城市越大，人均所需的建筑材料越少。",
+    venue: "Nature Cities",
+    year: "2026",
+    // In press — link to the on-site entry, not a DOI
+    href: `/publications#${publicationSlug("Nested economies of scale in global city mass")}`,
+  },
+  {
+    en: "By 2050, urban expansion alone could warm cities 0.5–0.7 °C on average, locally rivaling greenhouse-gas warming.",
+    zh: "到2050年，仅城市扩张一项就可能使城市平均升温0.5–0.7 °C，局部可与温室气体导致的增温相当。",
+    venue: "Environmental Research Letters",
+    year: "2019",
+    href: "https://doi.org/10.1088/1748-9326/ab4b71",
+  },
+  {
+    en: "Cool roofs can't fix the night: about half the added nighttime heat stress from expansion persists.",
+    zh: "冷屋顶解决不了夜间问题：城市扩张新增的夜间热应力约有一半依然存在。",
+    venue: "JGR: Atmospheres",
+    year: "2021",
+    href: "https://doi.org/10.1029/2020JD033831",
+  },
+  {
+    en: "Counting building height and flood defenses shifts global flood damage toward Southeast Asia, 42% of the total versus 15%.",
+    zh: "纳入建筑高度与防洪标准后，全球洪灾损失向东南亚转移：占比为42%，而传统方法仅为15%。",
+    venue: "Scientific Reports",
+    year: "2026",
+    href: "https://doi.org/10.1038/s41598-026-70981-w",
+  },
+  {
+    en: "Replacing informal settlements cooled surfaces by about 1.5 K, and how much depended on what was built next.",
+    zh: "拆除非正规住区使地表降温约1.5 K，降温幅度取决于拆除后建了什么。",
+    venue: "npj Environmental Social Sciences",
+    year: "2026",
+    href: "https://doi.org/10.1038/s44432-026-00009-1",
+  },
+];
+
+const extLink = "text-ember hover:underline";
 
 const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
-  "Robotaxi Safety Tracker": {
-    title: "自动驾驶出租车安全追踪",
-    description:
-      "基于NHTSA常规通用令碰撞数据，追踪特斯拉Cybercab安全性能的数据驱动仪表板。提供自动驾驶汽车安全指标（包括每起事故行驶里程对比）的透明、独立分析。",
-  },
   "Nested Scaling of City Mass": {
     title: "全球城市建成质量的嵌套标度规律",
     description:
@@ -57,8 +90,7 @@ export const metadata: Metadata = {
   title: {
     absolute: "Kangning (Ken) Huang — Assistant Professor of Environmental Studies, NYU Shanghai",
   },
-  description:
-    "Kangning (Ken) Huang is an Assistant Professor at NYU Shanghai researching urban heat islands, global urban expansion, climate adaptation, and flood risk.",
+  description: HOME_DESCRIPTION,
   alternates: {
     canonical: canonicalPageUrl("/"),
   },
@@ -67,8 +99,7 @@ export const metadata: Metadata = {
     firstName: "Kangning",
     lastName: "Huang",
     title: "Kangning (Ken) Huang — Assistant Professor, NYU Shanghai",
-    description:
-      "Assistant Professor of Environmental Studies at NYU Shanghai and lead of the CLUEs (CLimate and Urban Environments) Lab, studying how urbanization and climate change affect vulnerability to hazards.",
+    description: HOME_DESCRIPTION,
     url: canonicalPageUrl("/"),
     images: [
       {
@@ -83,19 +114,13 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const allPublications = await fetchPublications();
-  // Hand-picked mix of high-impact classics + recent lead-author work
+  // Exactly five hand-picked lead/last-author papers
   const selectedTitles = [
-    // Classics — highest-impact first-author papers
+    "Nested economies of scale in global city mass",
+    "Toward Cooler Cities by Larger Homogeneous Functional Clusters",
+    "Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution",
     "Projecting global urban land expansion and heat island intensification through 2050",
     "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-    "Facilitating urban climate forecasts in rapidly urbanizing regions with land-use change modeling",
-    // Prestige solo — Nature Climate Change
-    "Urban forests facing climate risks",
-    // Recent — current research direction
-    "Declining urban density attenuates rising population exposure to surface heat extremes",
-    "Nested economies of scale in global city mass",
-    "Planning for rhythmized urban parks: Temporal park classification and modes of action",
-    "Unveiling the causal link between informal settlement demolition and urban cooling",
   ];
   const titleSet = new Set(selectedTitles.map((t) => t.toLowerCase()));
   const featuredPubs = allPublications
@@ -107,13 +132,19 @@ export default async function Home() {
       return ai - bi;
     });
   const blogPosts = await fetchBlogPosts();
-  const featuredPosts = blogPosts.slice(0, 3);
-  const featuredProjects = PROJECTS.filter((p) => p.featured);
+  // At most two research posts; top up from non-Tesla posts if needed
+  const researchPosts = blogPosts.filter((p) => p.tag === "research");
+  const fillerPosts = blogPosts.filter(
+    (p) => p.tag !== "research" && !/tesla/i.test(p.title)
+  );
+  const featuredPosts = [...researchPosts, ...fillerPosts].slice(0, 2);
+  const featuredProjects = PROJECTS.filter(
+    (p) => p.featured && p.category === "academic"
+  );
   const pageSchema = webPageSchema({
     path: "/",
     title: "Home",
-    description:
-      "Assistant Professor of Environmental Studies at NYU Shanghai. Research, publications, and projects by Kangning (Ken) Huang.",
+    description: HOME_DESCRIPTION,
   });
 
   const profileSchema = profilePageSchema();
@@ -137,8 +168,8 @@ export default async function Home() {
         {/* Background image */}
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          src="/hero-nyc-skyline.jpg"
-          alt="New York City skyline at dusk"
+          src="/hero-nyu-shanghai.jpg"
+          alt="NYU Shanghai campus in Pudong, Shanghai"
           className="absolute inset-0 h-full w-full object-cover"
         />
         {/* Dark overlay for text legibility */}
@@ -147,35 +178,46 @@ export default async function Home() {
         <div className="topo-grain absolute inset-0" />
 
         <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-24 md:pb-28 md:pt-32 lg:px-8">
-          <p className="animate-fade-up text-sm font-medium uppercase tracking-[0.2em] text-ember">
-            <T en={SITE.affiliation} zh="上海纽约大学" />
-          </p>
-          <h1 className="animate-fade-up delay-1 mt-4 font-display text-5xl leading-[1.1] text-paper md:text-6xl lg:text-7xl">
+          <h1 className="animate-fade-up font-display text-5xl leading-[1.1] text-paper md:text-6xl lg:text-7xl">
             <T en={SITE.name} zh="黄康宁" />
           </h1>
-          <p className="animate-fade-up delay-2 mt-3 font-display text-xl italic text-paper/70 md:text-2xl">
-            <T en={SITE.title} zh="环境学助理教授" />
+          <p className="animate-fade-up delay-1 mt-5 max-w-3xl font-display text-2xl italic leading-snug text-paper/85 md:text-[30px]">
+            <T
+              en="How the size and shape of cities decide their climate future."
+              zh="城市的规模与形态如何决定其气候未来。"
+            />
+          </p>
+          <p className="animate-fade-up delay-2 mt-4 text-sm text-paper/60">
+            <T
+              en="Assistant Professor of Environmental Studies · CLUEs Lab, NYU Shanghai"
+              zh="环境学助理教授 · CLUEs Lab，上海纽约大学"
+            />
           </p>
 
           {/* Decorative divider */}
           <div className="animate-draw-line delay-3 mt-8 h-px w-32 origin-left bg-ember" />
 
-          <p className="animate-fade-up delay-4 mt-6 max-w-xl text-[15px] leading-relaxed text-paper/60">
-            <T
-              en={SITE.description}
-              zh="聚焦城市化、气候变化与环境灾害研究，致力于构建可持续且韧性的城市未来。"
-            />
-          </p>
+          {/* Primary actions */}
+          <div className="animate-fade-up delay-4 mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/research"
+              className="rounded-md bg-ember px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ember-dark"
+            >
+              <T en="Explore the research" zh="了解研究" />
+            </Link>
+            <Link
+              href="/lab#join"
+              className="rounded-md border border-paper/40 px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:border-ember hover:text-ember"
+            >
+              <T en="Join the lab" zh="加入实验室" />
+            </Link>
+          </div>
 
           {/* Links row */}
-          <div className="animate-fade-up delay-5 mt-8 flex flex-wrap gap-2.5">
+          <div className="animate-fade-up delay-5 mt-6 flex flex-wrap gap-2.5">
             {[
-              { en: "Google Scholar", zh: "谷歌学术", href: LINKS.googleScholar },
-              { en: "GitHub", zh: "GitHub", href: LINKS.github },
-              { en: "Substack", zh: "Substack", href: LINKS.substack },
-              { en: "X", zh: "X", href: LINKS.twitter },
-              { en: "NYU Faculty", zh: "教师主页", href: LINKS.nyuFaculty },
               { en: "CV (PDF)", zh: "简历 (PDF)", href: "/CV_Kangning_Huang.pdf" },
+              { en: "Google Scholar", zh: "谷歌学术", href: LINKS.googleScholar },
               { en: "Email", zh: "邮箱", href: `mailto:${SITE.email}` },
             ].map((link) => (
               <a
@@ -202,6 +244,41 @@ export default async function Home() {
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-paper to-transparent" />
       </section>
 
+      {/* ── Key findings ── */}
+      <section className="pb-4 pt-10 md:pt-12" aria-labelledby="findings-heading">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <h2 id="findings-heading" className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
+            <T en="Key findings" zh="主要发现" />
+          </h2>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+            {FINDINGS.map((f) => {
+              const external = f.href.startsWith("http");
+              return (
+                <li key={f.href} className="flex">
+                  <a
+                    href={f.href}
+                    {...(external
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                    className="card-hover group flex flex-1 flex-col rounded-lg border border-rule bg-paper p-4"
+                  >
+                    <p className="flex-1 text-sm leading-relaxed text-ink transition-colors group-hover:text-ember">
+                      <T en={f.en} zh={f.zh} />
+                    </p>
+                    <p className="mt-3 text-xs text-ink-faint">
+                      <span className="italic">{f.venue}</span>, {f.year}
+                      {external && (
+                        <span className="ml-1 text-[10px] opacity-60">&#8599;</span>
+                      )}
+                    </p>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </section>
+
       {/* ── About ── */}
       <section className="py-16 md:py-20" itemScope itemType="https://schema.org/Person" itemID="#person">
         <meta itemProp="name" content="Kangning (Ken) Huang" />
@@ -212,116 +289,43 @@ export default async function Home() {
             <T en="About" zh="关于" />
           </h2>
 
-          <div className="mt-8 grid gap-10 md:grid-cols-[1fr,280px]">
-            <div className="space-y-4 animate-fade-up delay-1" itemProp="description">
-              <T
-                en={
-                  <p className="text-[15px] leading-[1.75] text-ink-muted">
-                    I am an Assistant Professor of Environmental Studies at <a href="https://shanghai.nyu.edu" target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">NYU Shanghai</a>, where I lead the CLUEs (CLimate and Urban Environments) Lab. I received my PhD from Yale University, <a href="https://environment.yale.edu/" target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">School of the Environment</a> in 2020, and was an <a href="https://edec.ucar.edu/advanced-study-program/postdoctoral-fellowship-program" target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">Advanced Study Program Postdoctoral Fellow</a> at the National Center for Atmospheric Research.
-                  </p>
-                }
-                zh={
-                  <p className="text-[15px] leading-[1.75] text-ink-muted">
-                    我是<a href="https://shanghai.nyu.edu" target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">上海纽约大学</a>环境学助理教授，主持CLUEs Lab。2020年获<a href="https://environment.yale.edu/" target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">耶鲁大学环境学院</a>博士学位，之后在美国国家大气研究中心担任<a href="https://edec.ucar.edu/advanced-study-program/postdoctoral-fellowship-program" target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">高级研究项目</a>博士后研究员。
-                  </p>
-                }
-              />
-              <T
-                en={
-                  <p className="text-[15px] leading-[1.75] text-ink-muted">
-                    My research focuses on how the combination of urbanization and climate change affects vulnerability and adaptability to environmental hazards. By developing global-scale urbanization scenarios, I explore a broad range of possible urban climate futures and the interventions needed to achieve the more sustainable ones.
-                  </p>
-                }
-                zh={
-                  <p className="text-[15px] leading-[1.75] text-ink-muted">
-                    我的研究聚焦于城市化与气候变化如何共同影响环境灾害的脆弱性与适应能力。通过构建全球尺度的城市化情景，探索多种可能的城市气候未来及实现可持续路径所需的干预措施。
-                  </p>
-                }
-              />
-              <T
-                en={
-                  <p className="text-[15px] leading-[1.75] text-ink-muted">
-                    My work spans urban expansion modeling, urban heat island dynamics, climate adaptation trade-offs, and the scaling laws governing cities. My research has been funded by NASA, NSF, and other sponsors, and featured in Yale News, Scientific American, and E&amp;E News.
-                  </p>
-                }
-                zh={
-                  <p className="text-[15px] leading-[1.75] text-ink-muted">
-                    研究方向涵盖城市扩张建模、城市热岛动态、气候适应权衡及城市标度规律。研究获NASA、NSF等机构资助，并被Yale News、Scientific American和E&amp;E News等媒体报道。
-                  </p>
-                }
-              />
-            </div>
-
-            <div className="animate-fade-up delay-2">
-              <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
-                <T en="Research Areas" zh="研究方向" />
-              </p>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {RESEARCH_INTERESTS.map((interest) => (
-                  <span
-                    key={interest}
-                    className="rounded-full border border-ember/20 bg-ember-light px-3 py-1 text-sm font-medium text-ember-dark"
-                  >
-                    <T en={interest} zh={RESEARCH_INTERESTS_ZH[interest] ?? interest} />
-                  </span>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── Research Highlights (citable content for AI engines) ── */}
-      <section className="border-t border-rule-faint py-12 md:py-16">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <h2 className="section-heading animate-fade-up">
-            <T en="Research Highlights" zh="研究亮点" />
-          </h2>
-          <div className="mt-8 grid gap-6 md:grid-cols-2">
-            <article className="rounded-xl border border-rule bg-paper p-5">
-              <h3 className="font-display text-lg text-ink">
-                <T en="Global Urban Expansion Projections" zh="全球城市扩张预测" />
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
-                <T
-                  en="Kangning Huang's research projects that global urban land area will expand by 0.6–1.3 million km² (78%–171%) between 2015 and 2050. This expansion will intensify urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally) and increase extreme heat risk for about half of the future urban population, primarily in the tropical Global South. Published in Environmental Research Letters (2019), this work has been cited over 480 times."
-                  zh="黄康宁的研究预测，2015至2050年间全球城市用地面积将增加60万至130万平方公里（78%–171%）。这种扩张将使城市热岛效应平均增强0.5–0.7 °C（局部最高约3 °C），并使约一半的未来城市人口面临更高的极端高温风险，主要集中在热带全球南方地区。该研究于2019年发表在Environmental Research Letters上，已被引用超过480次。"
-                />
-              </p>
-            </article>
-            <article className="rounded-xl border border-rule bg-paper p-5">
-              <h3 className="font-display text-lg text-ink">
-                <T en="Urban Heat &amp; Climate Adaptation" zh="城市热环境与气候适应" />
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
-                <T
-                  en="Research from the CLUEs Lab demonstrates that nighttime heat stress from urban expansion persists even when heat island mitigation measures reduce daytime temperatures. Additionally, declining urban density can partially offset rising population exposure to surface heat extremes caused by climate warming, revealing important trade-offs in urban planning for climate adaptation."
-                  zh="CLUEs实验室的研究表明，即使热岛缓解措施降低了白天温度，城市扩张带来的夜间热应力仍然持续。此外，城市密度下降可以部分抵消气候变暖导致的地表极端热暴露增加，揭示了城市规划应对气候适应的重要权衡。"
-                />
-              </p>
-            </article>
-            <article className="rounded-xl border border-rule bg-paper p-5">
-              <h3 className="font-display text-lg text-ink">
-                <T en="Urban Scaling Laws" zh="城市标度规律" />
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
-                <T
-                  en="In press at Nature Cities (2026), Kangning Huang's work on nested economies of scale reveals that cities exhibit nonlinear scaling relationships between population and built mass across 3,000+ cities worldwide. These nested scaling patterns provide new insights into how cities grow physically and how urban form relates to resource consumption."
-                  zh="黄康宁2026年即将在Nature Cities发表（在印）的研究揭示了全球3000多个城市中人口与建成质量之间的非线性标度关系。这些嵌套标度模式为理解城市物理增长方式以及城市形态与资源消耗的关系提供了新见解。"
-                />
-              </p>
-            </article>
-            <article className="rounded-xl border border-rule bg-paper p-5">
-              <h3 className="font-display text-lg text-ink">
-                <T en="Urban Forests &amp; Environmental Risk" zh="城市森林与环境风险" />
-              </h3>
-              <p className="mt-2 text-sm leading-relaxed text-ink-muted">
-                <T
-                  en="Writing in Nature Climate Change (2022), Kangning Huang analyzed how climate change threatens urban forests — a critical tool for mitigating urban heat islands. His research also addresses 3D urban flood risk by integrating building height and protection standards into global flood risk assessments, revealing how vertical urban development changes flood vulnerability."
-                  zh="黄康宁在2022年Nature Climate Change上的文章分析了气候变化如何威胁城市森林——缓解城市热岛效应的关键工具。他的研究还通过将建筑高度和防护标准纳入全球洪水风险评估，揭示了垂直城市发展如何改变洪水脆弱性。"
-                />
-              </p>
-            </article>
+          <div className="mt-8 max-w-3xl space-y-4 animate-fade-up delay-1" itemProp="description">
+            <T
+              en={
+                <p className="text-[15px] leading-[1.75] text-ink-muted">
+                  I study cities as physical systems. My group, the CLUEs (CLimate and Urban Environments) Lab at <a href="https://shanghai.nyu.edu" target="_blank" rel="noopener noreferrer" className={extLink}>NYU Shanghai</a>, combines satellite data, climate models and causal inference across thousands of cities. We ask how the amount, height and arrangement of what we build shapes who overheats, who floods, and how much material a city consumes.
+                </p>
+              }
+              zh={
+                <p className="text-[15px] leading-[1.75] text-ink-muted">
+                  我把城市当作物理系统来研究。我的课题组——<a href="https://shanghai.nyu.edu" target="_blank" rel="noopener noreferrer" className={extLink}>上海纽约大学</a>CLUEs（CLimate and Urban Environments）实验室——结合卫星数据、气候模型与因果推断，对全球数千座城市开展分析。我们关注的问题是：建成环境的总量、高度与布局，如何决定谁会遭受高温、谁会被洪水侵袭，以及一座城市要消耗多少材料。
+                </p>
+              }
+            />
+            <T
+              en={
+                <p className="text-[15px] leading-[1.75] text-ink-muted">
+                  We have shown that larger cities need less built mass per person (<i>Nature Cities</i>, 2026), that urban expansion can locally rival greenhouse-gas warming by 2050 (<i>ERL</i>, 2019), and that taller, better-protected cities change where flood damage lands (<i>Scientific Reports</i>, 2026).
+                </p>
+              }
+              zh={
+                <p className="text-[15px] leading-[1.75] text-ink-muted">
+                  我们的研究表明：城市越大，人均建成质量越少（<i>Nature Cities</i>，2026）；到2050年，城市扩张带来的局地增温可与温室气体增温相当（<i>ERL</i>，2019）；更高、防护更完善的城市会改变洪灾损失的空间分布（<i>Scientific Reports</i>，2026）。
+                </p>
+              }
+            />
+            <T
+              en={
+                <p className="text-[15px] leading-[1.75] text-ink-muted">
+                  Before NYU Shanghai, I was an <a href="https://edec.ucar.edu/advanced-study-program/postdoctoral-fellowship-program" target="_blank" rel="noopener noreferrer" className={extLink}>Advanced Study Program Postdoctoral Fellow</a> at NCAR. I earned my PhD at the <a href="https://environment.yale.edu/" target="_blank" rel="noopener noreferrer" className={extLink}>Yale School of the Environment</a>.
+                </p>
+              }
+              zh={
+                <p className="text-[15px] leading-[1.75] text-ink-muted">
+                  加入上海纽约大学之前，我在美国国家大气研究中心（NCAR）担任<a href="https://edec.ucar.edu/advanced-study-program/postdoctoral-fellowship-program" target="_blank" rel="noopener noreferrer" className={extLink}>高级研究项目（ASP）</a>博士后研究员。我在<a href="https://environment.yale.edu/" target="_blank" rel="noopener noreferrer" className={extLink}>耶鲁大学环境学院</a>获得博士学位。
+                </p>
+              }
+            />
           </div>
         </div>
       </section>
@@ -349,6 +353,50 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* ── News ── */}
+      <section className="pt-16 md:pt-20" aria-labelledby="news-heading">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            <h2 id="news-heading" className="section-heading flex-1">
+              <T en="News" zh="动态" />
+            </h2>
+            <Link
+              href="/news"
+              className="link-underline ml-4 shrink-0 text-sm font-medium text-ember"
+            >
+              <T en="All news →" zh="全部动态 →" />
+            </Link>
+          </div>
+          <ul className="mt-6 divide-y divide-rule-faint">
+            {NEWS.slice(0, 3).map((item) => {
+              const date = formatNewsDate(item.date);
+              const external = item.href.startsWith("http");
+              return (
+                <li key={item.href}>
+                  <a
+                    href={item.href}
+                    {...(external
+                      ? { target: "_blank", rel: "noopener noreferrer" }
+                      : {})}
+                    className="group flex flex-col gap-1 py-3 sm:flex-row sm:items-baseline sm:gap-6"
+                  >
+                    <time
+                      dateTime={item.date}
+                      className="shrink-0 text-xs font-medium uppercase tracking-wider text-ink-faint sm:w-20"
+                    >
+                      <T en={date.en} zh={date.zh} />
+                    </time>
+                    <span className="text-[15px] leading-snug text-ink transition-colors group-hover:text-ember">
+                      <T en={item.en} zh={item.zh} />
+                    </span>
+                  </a>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </section>
+
       {/* ── Projects ── */}
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
@@ -364,7 +412,7 @@ export default async function Home() {
             </Link>
           </div>
 
-          <div className="mt-8 grid gap-5 md:grid-cols-3">
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
             {featuredProjects.map((project) => (
               <ProjectCard key={project.title} project={project} />
             ))}
@@ -378,7 +426,7 @@ export default async function Home() {
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="flex items-center justify-between">
               <h2 className="section-heading flex-1">
-                <T en="Latest Writing" zh="最新文章" />
+                <T en="Writing" zh="文章" />
               </h2>
               <Link
                 href="/blog"
@@ -464,8 +512,8 @@ export default async function Home() {
             </h2>
             <p className="mt-6 text-ink-muted">
               <T
-                en="I write about cities, climate, autonomous vehicles, and more on Substack."
-                zh="我在Substack上撰写关于城市、气候、自动驾驶等话题的文章。"
+                en="I write about cities and climate on Substack."
+                zh="我在Substack上撰写关于城市与气候的文章。"
               />
             </p>
             <a

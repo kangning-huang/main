@@ -1,12 +1,27 @@
+import Link from "next/link";
 import { SITE, LINKS } from "@/lib/constants";
 import T from "./T";
 
-const FOOTER_LINKS = [
-  { label: "Google Scholar", href: LINKS.googleScholar },
-  { label: "GitHub", href: LINKS.github },
-  { label: "X / Twitter", href: LINKS.twitter },
-  { label: "Substack", href: LINKS.substack },
+const SITE_LINKS = [
+  { en: "Research", zh: "研究", href: "/research" },
+  { en: "Publications", zh: "论文", href: "/publications" },
+  { en: "Lab", zh: "实验室", href: "/lab" },
+  { en: "News", zh: "动态", href: "/news" },
+  { en: "Blog", zh: "博客", href: "/blog" },
+  { en: "Tinkering", zh: "小项目", href: "/tinkering" },
 ];
+
+const EXTERNAL_LINKS = [
+  { en: "NYU Faculty", zh: "教师主页", href: LINKS.nyuFaculty },
+  { en: "CV (PDF)", zh: "简历 (PDF)", href: "/CV_Kangning_Huang.pdf" },
+  { en: "Google Scholar", zh: "谷歌学术", href: LINKS.googleScholar },
+  { en: "GitHub", zh: "GitHub", href: LINKS.github },
+  { en: "Substack", zh: "Substack", href: LINKS.substack },
+  { en: "X / Twitter", zh: "X / Twitter", href: LINKS.twitter },
+];
+
+const linkClass =
+  "link-underline text-sm text-ink-faint hover:text-ink transition-colors";
 
 export default function Footer() {
   return (
@@ -31,18 +46,27 @@ export default function Footer() {
             </a>
           </div>
 
-          <div className="flex flex-wrap gap-x-6 gap-y-2">
-            {FOOTER_LINKS.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="link-underline text-sm text-ink-faint hover:text-ink transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
+          <div className="flex flex-col gap-3">
+            <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Site">
+              {SITE_LINKS.map((link) => (
+                <Link key={link.href} href={link.href} className={linkClass}>
+                  <T en={link.en} zh={link.zh} />
+                </Link>
+              ))}
+            </nav>
+            <div className="flex flex-wrap gap-x-6 gap-y-2">
+              {EXTERNAL_LINKS.map((link) => (
+                <a
+                  key={link.en}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={linkClass}
+                >
+                  <T en={link.en} zh={link.zh} />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 

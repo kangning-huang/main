@@ -1,5 +1,7 @@
 import blogData from "@/data/blog-posts.json";
 
+export type BlogTag = "research" | "tools" | "other";
+
 export interface BlogPost {
   title: string;
   date: string;
@@ -8,6 +10,29 @@ export interface BlogPost {
   url: string;
   coverImage?: string;
   wordcount?: number;
+  tag?: BlogTag;
+}
+
+/**
+ * Manual topic tags, keyed by Substack post slug (the last URL path segment).
+ * Kept here rather than in blog-posts.json because the prebuild fetch
+ * rewrites that file. Untagged posts are treated as "other".
+ */
+const BLOG_TAGS: Record<string, BlogTag> = {
+  "the-biggest-climate-paradox-youve": "research",
+  "the-thermal-frontiers-of-ai": "research",
+  "the-hidden-geometry-of-inequality": "research",
+  "why-bigger-denser-cities-use-less": "research",
+  "when-cities-tear-down-to-cool-down": "research",
+  "i-spent-a-weekend-building-what-tesla": "tools",
+  "your-brain-wasnt-built-to-babysit": "tools",
+  "wait-purple-is-not-violet": "other",
+  "could-fleets-of-self-driving-cars": "other",
+  "can-you-have-a-burger-with-panda": "other",
+};
+
+function postSlug(url: string): string {
+  return url.replace(/[?#].*$/, "").replace(/\/+$/, "").split("/").pop() ?? "";
 }
 
 /**
@@ -21,5 +46,6 @@ export async function fetchBlogPosts(): Promise<BlogPost[]> {
     ...post,
     coverImage: post.coverImage || undefined,
     wordcount: post.wordcount || undefined,
+    tag: BLOG_TAGS[postSlug(post.url)] ?? "other",
   }));
 }

@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { LINKS } from "@/lib/constants";
-import { fetchPublications, getScholarData } from "@/lib/publications";
-import type { Publication } from "@/lib/constants";
+import { fetchPublications, getScholarData, isPublished, isInPress, isUnderReview } from "@/lib/publications";
 import CitationChart from "@/components/CitationChart";
-import PublicationCard from "@/components/PublicationCard";
+import PublicationList from "@/components/PublicationList";
 import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, scholarlyArticleListSchema, breadcrumbSchema, highlightVideoSchemas } from "@/lib/seo";
 import T from "@/components/T";
 
@@ -41,17 +40,10 @@ export default async function PublicationsPage() {
       "Full list of publications by Kangning (Ken) Huang, updated with citation metrics from Google Scholar.",
   });
 
-  const byYear = publications.reduce<Record<number, Publication[]>>(
-    (acc, pub) => {
-      if (!acc[pub.year]) acc[pub.year] = [];
-      acc[pub.year].push(pub);
-      return acc;
-    },
-    {}
-  );
-  const years = Object.keys(byYear)
-    .map(Number)
-    .sort((a, b) => b - a);
+  const published = publications.filter(isPublished);
+  const inPress = publications.filter(isInPress);
+  const underReview = publications.filter(isUnderReview);
+  const headlineCount = published.length + inPress.length;
 
   const breadcrumbs = breadcrumbSchema([{ name: "Publications", path: "/publications" }]);
   const videoSchemas = highlightVideoSchemas(publications);
@@ -85,9 +77,17 @@ export default async function PublicationsPage() {
           </h1>
           <p className="mt-2 text-ink-muted">
             <T
-              en={`${publications.length} publications`}
-              zh={`${publications.length} 篇论文`}
+              en={`${headlineCount} publications`}
+              zh={`${headlineCount} 篇论文`}
             />
+            {underReview.length > 0 && (
+              <span className="ml-2 text-sm text-ink-faint">
+                <T
+                  en={`· ${underReview.length} under review`}
+                  zh={`· ${underReview.length} 篇审稿中`}
+                />
+              </span>
+            )}
           </p>
         </div>
         <a
@@ -110,20 +110,11 @@ export default async function PublicationsPage() {
         />
       </div>
 
-      <div className="mt-10 space-y-10">
-        {years.map((year) => (
-          <section key={year}>
-            <h2 className="sticky top-[65px] z-10 border-b border-rule bg-paper/95 py-2 font-display text-xl text-ember backdrop-blur-sm">
-              {year}
-            </h2>
-            <div className="mt-4 space-y-1">
-              {byYear[year].map((pub, i) => (
-                <PublicationCard key={i} pub={pub} />
-              ))}
-            </div>
-          </section>
-        ))}
-      </div>
+      <PublicationList
+        published={published}
+        inPress={inPress}
+        underReview={underReview}
+      />
       </div>
     </>
   );

@@ -7,9 +7,10 @@ import { useLanguage } from "@/lib/language-context";
 import LanguageToggle from "./LanguageToggle";
 
 const NAV_ITEMS = [
+  { en: "Research", zh: "研究", href: "/research" },
   { en: "Publications", zh: "学术论文", href: "/publications" },
-  { en: "Projects", zh: "研究项目", href: "/projects" },
-  { en: "Advisees", zh: "指导学生", href: "/advisees" },
+  { en: "Lab", zh: "实验室", href: "/lab" },
+  { en: "News", zh: "动态", href: "/news" },
   { en: "Blog", zh: "博客", href: "/blog" },
 ];
 
@@ -85,7 +86,7 @@ export default function Header() {
       {/* Mobile menu */}
       <div
         className={`overflow-hidden border-t border-rule-faint bg-paper transition-all duration-300 md:hidden ${
-          menuOpen ? "max-h-80 opacity-100" : "max-h-0 opacity-0"
+          menuOpen ? "max-h-[32rem] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <nav className="px-6 py-4">
