@@ -9,7 +9,7 @@ type Filter = "all" | "lead";
 
 const FILTERS: { key: Filter; en: string; zh: string }[] = [
   { key: "all", en: "All", zh: "全部" },
-  { key: "lead", en: "Led by me", zh: "我主导的" },
+  { key: "lead", en: "First / last / corresponding author", zh: "第一/通讯/末位作者" },
 ];
 
 function groupByYear(pubs: Publication[]) {
