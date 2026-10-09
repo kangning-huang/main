@@ -1,1 +1,1 @@
-{"id":11498,"slug":"singapore","name":"Singapore","country":"Singapore","iso":"SGP","region":"Asia","lat":1.3911,"lon":103.8851,"ucdb":{"pop15":6920918.0,"areaKm2":879.0},"layers":{"mass":null}}
+{"id":11498,"slug":"singapore","name":"Singapore","country":"Singapore","iso":"SGP","region":"Asia","lat":1.3911,"lon":103.8851,"ucdb":{"pop15":6920918.0,"areaKm2":879.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":2524,"name":"Singapore","centres":3},"rank":343,"climate":"Tropical","pop2020":1543641,"dayA":1.05,"dayP":-0.45,"nightA":0.06,"nightP":-0.26}}}

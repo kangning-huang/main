@@ -1,1 +1,1 @@
-{"id":2414,"slug":"okene","name":"Okene","country":"Nigeria","iso":"NGA","region":"Africa","lat":7.5495,"lon":6.2092,"ucdb":{"pop15":809219.0,"areaKm2":117.0},"layers":{"mass":null}}
+{"id":2414,"slug":"okene","name":"Okene","country":"Nigeria","iso":"NGA","region":"Africa","lat":7.5495,"lon":6.2092,"ucdb":{"pop15":809219.0,"areaKm2":117.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":5684,"name":"Okene","centres":1},"rank":696,"climate":"Tropical","pop2020":787869,"dayA":0.03,"dayP":0.69,"nightA":0.81,"nightP":0.93}}}

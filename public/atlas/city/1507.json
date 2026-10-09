@@ -1,1 +1,1 @@
-{"id":1507,"slug":"freetown","name":"Freetown","country":"Sierra Leone","iso":"SLE","region":"Africa","lat":8.4715,"lon":-13.1942,"ucdb":{"pop15":1190401.0,"areaKm2":129.0},"layers":{"mass":null}}
+{"id":1507,"slug":"freetown","name":"Freetown","country":"Sierra Leone","iso":"SLE","region":"Africa","lat":8.4715,"lon":-13.1942,"ucdb":{"pop15":1190401.0,"areaKm2":129.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":156,"name":"Freetown","centres":1},"rank":524,"climate":"Tropical","pop2020":1041038,"dayA":1.04,"dayP":-1.78,"nightA":0.0,"nightP":-1.32}}}

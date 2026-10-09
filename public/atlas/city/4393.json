@@ -1,1 +1,1 @@
-{"id":4393,"slug":"irbid","name":"Irbid","country":"Jordan","iso":"JOR","region":"Asia","lat":32.551,"lon":35.8575,"ucdb":{"pop15":574578.0,"areaKm2":136.0},"layers":{"mass":null}}
+{"id":4393,"slug":"irbid","name":"Irbid","country":"Jordan","iso":"JOR","region":"Asia","lat":32.551,"lon":35.8575,"ucdb":{"pop15":574578.0,"areaKm2":136.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":265,"name":"Irbid","centres":1},"rank":576,"climate":"Temperate","pop2020":956200,"dayA":-0.82,"dayP":-0.46,"nightA":0.48,"nightP":0.23}}}

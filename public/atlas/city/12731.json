@@ -1,1 +1,1 @@
-{"id":12731,"slug":"selong","name":"Selong","country":"Indonesia","iso":"IDN","region":"Asia","lat":-8.6307,"lon":116.5034,"ucdb":{"pop15":420431.0,"areaKm2":140.0},"layers":{"mass":null}}
+{"id":12731,"slug":"selong","name":"Selong","country":"Indonesia","iso":"IDN","region":"Asia","lat":-8.6307,"lon":116.5034,"ucdb":{"pop15":420431.0,"areaKm2":140.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":6745,"name":"Selong","centres":2},"rank":708,"climate":"Tropical","pop2020":778446,"dayA":0.39,"dayP":0.51,"nightA":0.05,"nightP":-0.01}}}

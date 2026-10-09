@@ -1,1 +1,1 @@
-{"id":9602,"slug":"ulaanbaatar","name":"Ulaanbaatar","country":"Mongolia","iso":"MNG","region":"Asia","lat":47.9195,"lon":106.873,"ucdb":{"pop15":1316070.0,"areaKm2":166.0},"layers":{"mass":null}}
+{"id":9602,"slug":"ulaanbaatar","name":"Ulaanbaatar","country":"Mongolia","iso":"MNG","region":"Asia","lat":47.9195,"lon":106.873,"ucdb":{"pop15":1316070.0,"areaKm2":166.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":117,"name":"Ulaanbaatar","centres":1},"rank":531,"climate":"Arid","pop2020":1016716,"dayA":-1.93,"dayP":-2.42,"nightA":0.29,"nightP":0.12}}}

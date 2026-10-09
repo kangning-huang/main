@@ -1,1 +1,1 @@
-{"id":3596,"slug":"nyala","name":"Nyala","country":"Sudan","iso":"SDN","region":"Africa","lat":12.0544,"lon":24.8808,"ucdb":{"pop15":820684.0,"areaKm2":54.0},"layers":{"mass":null}}
+{"id":3596,"slug":"nyala","name":"Nyala","country":"Sudan","iso":"SDN","region":"Africa","lat":12.0544,"lon":24.8808,"ucdb":{"pop15":820684.0,"areaKm2":54.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":1340,"name":"Nyala","centres":1},"rank":863,"climate":"Arid","pop2020":603107,"dayA":0.28,"dayP":0.24,"nightA":0.53,"nightP":0.41}}}

@@ -1,1 +1,1 @@
-{"id":1452,"slug":"dakar","name":"Dakar","country":"Senegal","iso":"SEN","region":"Africa","lat":14.7429,"lon":-17.3795,"ucdb":{"pop15":3358310.0,"areaKm2":277.0},"layers":{"mass":null}}
+{"id":1452,"slug":"dakar","name":"Dakar","country":"Senegal","iso":"SEN","region":"Africa","lat":14.7429,"lon":-17.3795,"ucdb":{"pop15":3358310.0,"areaKm2":277.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":153,"name":"Dakar","centres":1},"rank":149,"climate":"Arid","pop2020":3053249,"dayA":0.25,"dayP":0.37,"nightA":0.45,"nightP":-0.11}}}

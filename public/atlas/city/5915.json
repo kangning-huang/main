@@ -1,1 +1,1 @@
-{"id":5915,"slug":"dubai","name":"Dubai","country":"United Arab Emirates","iso":"ARE","region":"Asia","lat":25.2213,"lon":55.3302,"ucdb":{"pop15":4909471.0,"areaKm2":766.0},"layers":{"mass":null}}
+{"id":5915,"slug":"dubai","name":"Dubai","country":"United Arab Emirates","iso":"ARE","region":"Asia","lat":25.2213,"lon":55.3302,"ucdb":{"pop15":4909471.0,"areaKm2":766.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":357,"name":"Dubai","centres":2},"rank":90,"climate":"Arid","pop2020":4688575,"dayA":0.04,"dayP":0.03,"nightA":0.78,"nightP":-0.38}}}

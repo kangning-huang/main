@@ -1,1 +1,1 @@
-{"id":8243,"slug":"jhusi","name":"Jhusi","country":"India","iso":"IND","region":"Asia","lat":25.4239,"lon":81.9195,"ucdb":{"pop15":360773.0,"areaKm2":18.0},"layers":{"mass":null}}
+{"id":8243,"slug":"jhusi","name":"Jhusi","country":"India","iso":"IND","region":"Asia","lat":25.4239,"lon":81.9195,"ucdb":{"pop15":360773.0,"areaKm2":18.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":9282,"name":"Prayagraj","centres":2},"rank":294,"climate":"Temperate","pop2020":1768225,"dayA":0.3,"dayP":0.34,"nightA":0.42,"nightP":0.42}}}

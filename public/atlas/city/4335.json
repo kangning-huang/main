@@ -1,1 +1,1 @@
-{"id":4335,"slug":"khartoum","name":"Khartoum","country":"Sudan","iso":"SDN","region":"Africa","lat":15.6181,"lon":32.5122,"ucdb":{"pop15":5824721.0,"areaKm2":750.0},"layers":{"mass":null}}
+{"id":4335,"slug":"khartoum","name":"Khartoum","country":"Sudan","iso":"SDN","region":"Africa","lat":15.6181,"lon":32.5122,"ucdb":{"pop15":5824721.0,"areaKm2":750.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":3226,"name":"Khartoum","centres":2},"rank":73,"climate":"Arid","pop2020":5270302,"dayA":-1.28,"dayP":-1.2,"nightA":-0.37,"nightP":-0.61}}}

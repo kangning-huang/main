@@ -1,1 +1,1 @@
-{"id":5893,"slug":"ashgabat","name":"Ashgabat","country":"Turkmenistan","iso":"TKM","region":"Asia","lat":37.9354,"lon":58.3918,"ucdb":{"pop15":803598.0,"areaKm2":119.0},"layers":{"mass":null}}
+{"id":5893,"slug":"ashgabat","name":"Ashgabat","country":"Turkmenistan","iso":"TKM","region":"Asia","lat":37.9354,"lon":58.3918,"ucdb":{"pop15":803598.0,"areaKm2":119.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":1138,"name":"Ashgabat","centres":1},"rank":888,"climate":"Arid","pop2020":564998,"dayA":0.61,"dayP":1.11,"nightA":0.26,"nightP":0.15}}}

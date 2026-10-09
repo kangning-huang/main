@@ -1,1 +1,1 @@
-{"id":5362,"slug":"hindiya","name":"Hindiya","country":"Iraq","iso":"IRQ","region":"Asia","lat":32.5362,"lon":44.2776,"ucdb":{"pop15":528710.0,"areaKm2":37.0},"layers":{"mass":null}}
+{"id":5362,"slug":"hindiya","name":"Hindiya","country":"Iraq","iso":"IRQ","region":"Asia","lat":32.5362,"lon":44.2776,"ucdb":{"pop15":528710.0,"areaKm2":37.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":3207,"name":"Hindiya","centres":2},"rank":670,"climate":"Arid","pop2020":820871,"dayA":0.31,"dayP":-0.21,"nightA":1.09,"nightP":0.23}}}

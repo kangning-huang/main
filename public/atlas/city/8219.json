@@ -1,1 +1,1 @@
-{"id":8219,"slug":"padmanabhapuram","name":"Padmanabhapuram","country":"India","iso":"IND","region":"Asia","lat":8.2396,"lon":77.3198,"ucdb":{"pop15":306790.0,"areaKm2":65.0},"layers":{"mass":null}}
+{"id":8219,"slug":"padmanabhapuram","name":"Padmanabhapuram","country":"India","iso":"IND","region":"Asia","lat":8.2396,"lon":77.3198,"ucdb":{"pop15":306790.0,"areaKm2":65.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":9338,"name":"Nagercoil","centres":2},"rank":852,"climate":"Tropical","pop2020":615735,"dayA":-0.08,"dayP":0.09,"nightA":-0.17,"nightP":0.0}}}

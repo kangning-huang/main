@@ -1,1 +1,1 @@
-{"id":6174,"slug":"almaty","name":"Almaty","country":"Kazakhstan","iso":"KAZ","region":"Asia","lat":43.2643,"lon":76.9027,"ucdb":{"pop15":1730584.0,"areaKm2":318.0},"layers":{"mass":null}}
+{"id":6174,"slug":"almaty","name":"Almaty","country":"Kazakhstan","iso":"KAZ","region":"Asia","lat":43.2643,"lon":76.9027,"ucdb":{"pop15":1730584.0,"areaKm2":318.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":2583,"name":"Almaty","centres":1},"rank":276,"climate":"Arid","pop2020":1881652,"dayA":0.77,"dayP":0.79,"nightA":0.13,"nightP":0.15}}}

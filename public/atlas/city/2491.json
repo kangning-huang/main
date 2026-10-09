@@ -1,1 +1,1 @@
-{"id":2491,"slug":"amaigbo","name":"Amaigbo","country":"Nigeria","iso":"NGA","region":"Africa","lat":5.7762,"lon":7.009,"ucdb":{"pop15":1713471.0,"areaKm2":510.0},"layers":{"mass":null}}
+{"id":2491,"slug":"amaigbo","name":"Amaigbo","country":"Nigeria","iso":"NGA","region":"Africa","lat":5.7762,"lon":7.009,"ucdb":{"pop15":1713471.0,"areaKm2":510.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":6152,"name":"Amaigbo","centres":5},"rank":166,"climate":"Tropical","pop2020":2840789,"dayA":0.6,"dayP":-0.13,"nightA":0.65,"nightP":0.06}}}

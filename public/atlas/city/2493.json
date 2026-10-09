@@ -1,1 +1,1 @@
-{"id":2493,"slug":"oslo","name":"Oslo","country":"Norway","iso":"NOR","region":"Europe","lat":59.9082,"lon":10.7432,"ucdb":{"pop15":782172.0,"areaKm2":242.0},"layers":{"mass":null}}
+{"id":2493,"slug":"oslo","name":"Oslo","country":"Norway","iso":"NOR","region":"Europe","lat":59.9082,"lon":10.7432,"ucdb":{"pop15":782172.0,"areaKm2":242.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":596,"name":"Oslo","centres":1},"rank":414,"climate":"Snow","pop2020":1284588,"dayA":0.17,"dayP":-0.18,"nightA":-0.29,"nightP":-0.18}}}

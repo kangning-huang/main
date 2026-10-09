@@ -1,1 +1,1 @@
-{"id":9962,"slug":"dhing","name":"Dhing","country":"India","iso":"IND","region":"Asia","lat":26.4475,"lon":92.486,"ucdb":{"pop15":435961.0,"areaKm2":205.0},"layers":{"mass":null}}
+{"id":9962,"slug":"dhing","name":"Dhing","country":"India","iso":"IND","region":"Asia","lat":26.4475,"lon":92.486,"ucdb":{"pop15":435961.0,"areaKm2":205.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":10500,"name":"Dhing","centres":2},"rank":900,"climate":"Tropical","pop2020":546518,"dayA":0.24,"dayP":0.14,"nightA":-0.06,"nightP":-0.01}}}

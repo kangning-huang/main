@@ -1,1 +1,1 @@
-{"id":5639,"slug":"ta-izz","name":"Ta'izz","country":"Yemen","iso":"YEM","region":"Asia","lat":13.5818,"lon":44.0173,"ucdb":{"pop15":672568.0,"areaKm2":37.0},"layers":{"mass":null}}
+{"id":5639,"slug":"ta-izz","name":"Ta'izz","country":"Yemen","iso":"YEM","region":"Asia","lat":13.5818,"lon":44.0173,"ucdb":{"pop15":672568.0,"areaKm2":37.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":1150,"name":"Ta'izz","centres":2},"rank":963,"climate":"Arid","pop2020":326274,"dayA":-0.47,"dayP":-0.67,"nightA":0.16,"nightP":-0.36}}}

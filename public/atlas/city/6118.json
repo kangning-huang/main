@@ -1,1 +1,1 @@
-{"id":6118,"slug":"kabul","name":"Kabul","country":"Afghanistan","iso":"AFG","region":"Asia","lat":34.5232,"lon":69.1566,"ucdb":{"pop15":4381842.0,"areaKm2":321.0},"layers":{"mass":null}}
+{"id":6118,"slug":"kabul","name":"Kabul","country":"Afghanistan","iso":"AFG","region":"Asia","lat":34.5232,"lon":69.1566,"ucdb":{"pop15":4381842.0,"areaKm2":321.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":2352,"name":"Kabul","centres":2},"rank":115,"climate":"Temperate","pop2020":3733737,"dayA":-1.02,"dayP":-1.72,"nightA":0.04,"nightP":-1.01}}}

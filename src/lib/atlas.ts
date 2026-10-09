@@ -12,7 +12,28 @@ export type AtlasPoint = {
   coverage: CoverageCode;
   massPerCapT: number | null;
   slug: string;
+  /** Population-weighted daytime SUHI-extreme trend, °C per decade (Sci Rep 2025). */
+  heatDayP: number | null;
+  /** 1 if covered by the informal-settlement cooling study (npj 2026). */
+  cool: 0 | 1;
 };
+
+export type LayerKey = "mass" | "heat" | "cooling";
+
+/** How many mapped studies have a result for this city. */
+export function paperCount(p: AtlasPoint): number {
+  let n = 0;
+  if (p.coverage !== 0 && p.massPerCapT != null) n += 1;
+  if (p.heatDayP != null) n += 1;
+  if (p.cool === 1) n += 1;
+  return n;
+}
+
+export function hasLayer(p: AtlasPoint, layer: LayerKey): boolean {
+  if (layer === "mass") return p.coverage !== 0 && p.massPerCapT != null;
+  if (layer === "heat") return p.heatDayP != null;
+  return p.cool === 1;
+}
 
 export type AtlasPointsFile = {
   version: number;
@@ -38,6 +59,7 @@ export type AtlasPointsFile = {
     mapped: number;
     massMatch: { exact: number; flagged: number; unmatched: number };
     pages: number;
+    layers?: Record<string, number>;
   };
   rows: Array<Array<string | number | null>>;
 };
@@ -63,6 +85,27 @@ export type CityMassLayer = {
   };
 };
 
+export type CityHeatLayer = {
+  quality: "exact" | "flagged";
+  fua: { id: number; name: string; centres: number };
+  rank: number;
+  climate: string;
+  pop2020: number;
+  /** Trends in °C per decade, 2003–2020. A = area-based, P = population-weighted. */
+  dayA: number;
+  dayP: number;
+  nightA: number;
+  nightP: number;
+};
+
+export type CityCoolingLayer = {
+  quality: "exact";
+  effectK: number;
+  ciLo: number;
+  ciHi: number;
+  pooledK: number;
+};
+
 export type CityDetail = {
   id: number;
   slug: string;
@@ -75,6 +118,8 @@ export type CityDetail = {
   ucdb: { pop15: number; areaKm2: number };
   layers: {
     mass?: CityMassLayer;
+    heat?: CityHeatLayer;
+    cooling?: CityCoolingLayer;
   };
 };
 
@@ -109,6 +154,9 @@ export function parsePoints(file: AtlasPointsFile): AtlasPoint[] {
           ? null
           : Number(obj.massPerCapT),
       slug: String(obj.slug),
+      heatDayP:
+        obj.heatDayP === null || obj.heatDayP === undefined ? null : Number(obj.heatDayP),
+      cool: Number(obj.cool ?? 0) === 1 ? 1 : 0,
     };
   });
 }
@@ -120,6 +168,21 @@ export const MASS_PAPER = {
   year: 2026,
   publicationsHref: "/publications#nested-economies-of-scale-in-global-city-mass",
   appUrl: "https://city-mass.nested-complexity.net",
+} as const;
+
+export const HEAT_PAPER = {
+  title: "Declining urban density attenuates rising population exposure to surface heat extremes",
+  venue: "Scientific Reports",
+  year: 2025,
+  doiUrl: "https://doi.org/10.1038/s41598-025-96045-z",
+} as const;
+
+export const COOLING_PAPER = {
+  title: "Unveiling the causal link between informal settlement demolition and urban cooling",
+  venue: "npj Environmental Social Sciences",
+  year: 2026,
+  doiUrl: "https://doi.org/10.1038/s44432-026-00009-1",
+  appUrl: "https://cooling.kangning-huang.com/",
 } as const;
 
 export const GLOBAL_SLOPE = 0.8995; // from points.json sources.cityMass.globalCitySlope

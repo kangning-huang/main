@@ -11,7 +11,7 @@ import AtlasExplorer from "@/components/atlas/AtlasExplorer";
 import Link from "next/link";
 
 const DESCRIPTION =
-  "Atlas of Urban Futures: a world map of cities from Kangning (Ken) Huang's research. Click a city to see built mass and scaling from the Nature Cities paper (in press), with more layers coming.";
+  "Atlas of Urban Futures: a world map of cities from Kangning (Ken) Huang's research. Click a city to see results from several papers: built mass and scaling (Nature Cities, in press), surface heat-island trends (Scientific Reports 2025) and informal-settlement cooling (npj 2026).";
 
 export const metadata: Metadata = {
   title: "Atlas of Urban Futures",
@@ -64,8 +64,8 @@ export default function AtlasPage() {
           </h1>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
-              en="One map of the cities in my datasets. Click a city to see what each paper says about it — starting with built mass and scaling (Nature Cities, in press). Urban expansion and further layers join as the crosswalks land."
-              zh="我数据集中所有城市的一张地图。点击一座城市，查看各篇论文对其的结果——目前先有建成质量与标度（Nature Cities，即将发表）。城市扩张等图层会在对照表就绪后加入。"
+              en="One map of the cities in my datasets. Click a city to see what each paper says about it: built mass and scaling (Nature Cities, in press), surface heat-island trends 2003–2020 (Scientific Reports 2025), and cooling after informal-settlement demolition (npj Environmental Social Sciences 2026). Dot color shows how many papers cover that city; use the filter chips to highlight one study."
+              zh="我数据集中所有城市的一张地图。点击一座城市，查看各篇论文对其的结果：建成质量与标度（Nature Cities，即将发表）、2003–2020 年地表热岛趋势（Scientific Reports 2025），以及城中村拆除后的降温效应（npj Environmental Social Sciences 2026）。圆点颜色表示覆盖该城市的论文数量；可用筛选按钮突出某一项研究。"
             />
           </p>
           <p className="mt-2 text-xs text-ink-faint animate-fade-up delay-2">

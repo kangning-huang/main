@@ -1,1 +1,1 @@
-{"id":5865,"slug":"doha","name":"Doha","country":"Qatar","iso":"QAT","region":"Asia","lat":25.2814,"lon":51.4669,"ucdb":{"pop15":1556520.0,"areaKm2":380.0},"layers":{"mass":null}}
+{"id":5865,"slug":"doha","name":"Doha","country":"Qatar","iso":"QAT","region":"Asia","lat":25.2814,"lon":51.4669,"ucdb":{"pop15":1556520.0,"areaKm2":380.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":146,"name":"Doha","centres":2},"rank":321,"climate":"Arid","pop2020":1662608,"dayA":0.41,"dayP":0.42,"nightA":0.8,"nightP":0.04}}}

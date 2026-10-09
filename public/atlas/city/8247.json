@@ -1,1 +1,1 @@
-{"id":8247,"slug":"nagercoil","name":"Nagercoil","country":"India","iso":"IND","region":"Asia","lat":8.1745,"lon":77.4233,"ucdb":{"pop15":364530.0,"areaKm2":39.0},"layers":{"mass":null}}
+{"id":8247,"slug":"nagercoil","name":"Nagercoil","country":"India","iso":"IND","region":"Asia","lat":8.1745,"lon":77.4233,"ucdb":{"pop15":364530.0,"areaKm2":39.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":9338,"name":"Nagercoil","centres":2},"rank":852,"climate":"Tropical","pop2020":615735,"dayA":-0.08,"dayP":0.09,"nightA":-0.17,"nightP":0.0}}}

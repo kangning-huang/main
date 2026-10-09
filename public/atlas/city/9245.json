@@ -1,1 +1,1 @@
-{"id":9245,"slug":"itahari","name":"Itahari","country":"Nepal","iso":"NPL","region":"Asia","lat":26.6421,"lon":87.2649,"ucdb":{"pop15":577638.0,"areaKm2":71.0},"layers":{"mass":null}}
+{"id":9245,"slug":"itahari","name":"Itahari","country":"Nepal","iso":"NPL","region":"Asia","lat":26.6421,"lon":87.2649,"ucdb":{"pop15":577638.0,"areaKm2":71.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":2033,"name":"Itahari","centres":2},"rank":939,"climate":"Temperate","pop2020":439798,"dayA":0.87,"dayP":0.21,"nightA":0.21,"nightP":-0.2}}}
