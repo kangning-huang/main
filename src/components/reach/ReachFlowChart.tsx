@@ -120,7 +120,7 @@ export default function ReachFlowChart() {
   }
   const svgH = Math.max(H, right[right.length - 1].labelY + 12, left[left.length - 1].labelY + 12);
   const topShare = Object.entries(shares).sort((a, b) => b[1] - a[1])[0];
-  const heatish = (shares["heat-health"] ?? 0) + (shares.cooling ?? 0);
+  const heatish = Math.round(((shares["heat-health"] ?? 0) + (shares.cooling ?? 0)) * 10) / 10;
 
   return (
     <div>
