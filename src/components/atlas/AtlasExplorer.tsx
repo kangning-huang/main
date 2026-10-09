@@ -19,6 +19,7 @@ const FILTERS: { key: LayerKey | null; en: string; zh: string }[] = [
   { key: "mass", en: "Built mass", zh: "建成质量" },
   { key: "heat", en: "Heat-island trend", zh: "热岛趋势" },
   { key: "cooling", en: "Demolition cooling", zh: "拆除降温" },
+  { key: "flood", en: "Flood damage", zh: "洪涝损失" },
 ];
 
 const SUGGESTED = ["lagos", "shanghai", "new-york", "jakarta", "nairobi"];

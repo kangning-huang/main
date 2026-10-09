@@ -16,9 +16,11 @@ export type AtlasPoint = {
   heatDayP: number | null;
   /** 1 if covered by the informal-settlement cooling study (npj 2026). */
   cool: 0 | 1;
+  /** 1 if covered by the height-aware flood study (Sci Rep 2026). */
+  flood: 0 | 1;
 };
 
-export type LayerKey = "mass" | "heat" | "cooling";
+export type LayerKey = "mass" | "heat" | "cooling" | "flood";
 
 /** How many mapped studies have a result for this city. */
 export function paperCount(p: AtlasPoint): number {
@@ -26,13 +28,15 @@ export function paperCount(p: AtlasPoint): number {
   if (p.coverage !== 0 && p.massPerCapT != null) n += 1;
   if (p.heatDayP != null) n += 1;
   if (p.cool === 1) n += 1;
+  if (p.flood === 1) n += 1;
   return n;
 }
 
 export function hasLayer(p: AtlasPoint, layer: LayerKey): boolean {
   if (layer === "mass") return p.coverage !== 0 && p.massPerCapT != null;
   if (layer === "heat") return p.heatDayP != null;
-  return p.cool === 1;
+  if (layer === "cooling") return p.cool === 1;
+  return p.flood === 1;
 }
 
 export type AtlasPointsFile = {
@@ -106,6 +110,19 @@ export type CityCoolingLayer = {
   pooledK: number;
 };
 
+export type CityFloodLayer = {
+  quality: "exact" | "flagged";
+  fua: { id: number; name: string; centres: number };
+  /** Height-aware building damage share without protection (% of footprints). */
+  dmgPct: number;
+  /** Same with FLOPROS protection applied (%); omitted when CSV cell empty. */
+  dmgProtPct?: number;
+  /** FLOPROS protection standard, return period in years. */
+  protYears?: number;
+  /** Mean building height in the FUA (m). */
+  heightM?: number;
+};
+
 export type CityDetail = {
   id: number;
   slug: string;
@@ -120,6 +137,7 @@ export type CityDetail = {
     mass?: CityMassLayer;
     heat?: CityHeatLayer;
     cooling?: CityCoolingLayer;
+    flood?: CityFloodLayer;
   };
 };
 
@@ -157,6 +175,7 @@ export function parsePoints(file: AtlasPointsFile): AtlasPoint[] {
       heatDayP:
         obj.heatDayP === null || obj.heatDayP === undefined ? null : Number(obj.heatDayP),
       cool: Number(obj.cool ?? 0) === 1 ? 1 : 0,
+      flood: Number(obj.flood ?? 0) === 1 ? 1 : 0,
     };
   });
 }
@@ -183,6 +202,15 @@ export const COOLING_PAPER = {
   year: 2026,
   doiUrl: "https://doi.org/10.1038/s44432-026-00009-1",
   appUrl: "https://cooling.kangning-huang.com/",
+} as const;
+
+export const FLOOD_PAPER = {
+  title:
+    "Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution",
+  venue: "Scientific Reports",
+  year: 2026,
+  doiUrl: "https://doi.org/10.1038/s41598-026-70981-w",
+  appUrl: "https://flood.kangning-huang.com/",
 } as const;
 
 export const GLOBAL_SLOPE = 0.8995; // from points.json sources.cityMass.globalCitySlope
