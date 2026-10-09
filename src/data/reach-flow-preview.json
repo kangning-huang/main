@@ -1,0 +1,895 @@
+{
+  "meta": {
+    "mode": "preview",
+    "asOf": "2026-10-09",
+    "lens": "all",
+    "weightingNote": "absolute = non-self citing works; citesPerYear = each citing work weighted by 1/yearsSince(cited paper), floor 1 year.",
+    "fineThemeNote": "Hand remap for preview: dust→air-dust; forests/tree/AC/demolition→cooling; expansion megahits stay expansion. Ken to confirm.",
+    "fieldNodesFoldedIntoOther": true,
+    "source": "OpenAlex"
+  },
+  "left": [
+    {
+      "id": "expansion",
+      "label": {
+        "en": "Urban expansion & futures",
+        "zh": "城市扩张与未来"
+      },
+      "color": "#00909a",
+      "absolute": 2612,
+      "citesPerYear": 362.2
+    },
+    {
+      "id": "heat-health",
+      "label": {
+        "en": "Heat exposure & health",
+        "zh": "高温暴露与健康"
+      },
+      "color": "#c74b16",
+      "absolute": 187,
+      "citesPerYear": 74.3
+    },
+    {
+      "id": "cooling",
+      "label": {
+        "en": "Cooling & greening",
+        "zh": "降温与绿化"
+      },
+      "color": "#2a9d6e",
+      "absolute": 74,
+      "citesPerYear": 35.8
+    },
+    {
+      "id": "air-dust",
+      "label": {
+        "en": "Air quality / dust",
+        "zh": "空气质量 / 扬尘"
+      },
+      "color": "#8b5a2b",
+      "absolute": 220,
+      "citesPerYear": 28.4
+    },
+    {
+      "id": "methods",
+      "label": {
+        "en": "Scaling, form & methods",
+        "zh": "标度、形态与方法"
+      },
+      "color": "#94700f",
+      "absolute": 228,
+      "citesPerYear": 16.4
+    },
+    {
+      "id": "flood",
+      "label": {
+        "en": "Flood & coasts",
+        "zh": "洪水与海岸"
+      },
+      "color": "#5b4b9a",
+      "absolute": 12,
+      "citesPerYear": 2
+    }
+  ],
+  "right": [
+    {
+      "id": "T10226",
+      "name": "Land Use and Ecosystem Services",
+      "level": "topic",
+      "path": [
+        "Environmental Science",
+        "Global and Planetary Change",
+        "Land Use and Ecosystem Services"
+      ],
+      "absolute": 1609,
+      "citesPerYear": 247.6
+    },
+    {
+      "id": "__other",
+      "name": "Other (41 areas)",
+      "level": "other",
+      "path": [
+        "Other"
+      ],
+      "absolute": 1122,
+      "citesPerYear": 155.6
+    },
+    {
+      "id": "subfields/2305",
+      "name": "Environmental Engineering",
+      "level": "subfield",
+      "path": [
+        "Environmental Science",
+        "Environmental Engineering"
+      ],
+      "absolute": 252,
+      "citesPerYear": 60.6
+    },
+    {
+      "id": "subfields/2303",
+      "name": "Ecology",
+      "level": "subfield",
+      "path": [
+        "Environmental Science",
+        "Ecology"
+      ],
+      "absolute": 142,
+      "citesPerYear": 19.4
+    },
+    {
+      "id": "subfields/2307",
+      "name": "Health, Toxicology and Mutagenesis",
+      "level": "subfield",
+      "path": [
+        "Environmental Science",
+        "Health, Toxicology and Mutagenesis"
+      ],
+      "absolute": 132,
+      "citesPerYear": 25.3
+    },
+    {
+      "id": "subfields/2308",
+      "name": "Management, Monitoring, Policy and Law",
+      "level": "subfield",
+      "path": [
+        "Environmental Science",
+        "Management, Monitoring, Policy and Law"
+      ],
+      "absolute": 76,
+      "citesPerYear": 10.7
+    }
+  ],
+  "links": [
+    {
+      "left": "expansion",
+      "right": "__other",
+      "absolute": 769,
+      "citesPerYear": 106.7,
+      "keywords": [
+        {
+          "name": "urbanization",
+          "count": 131
+        },
+        {
+          "name": "urban expansion",
+          "count": 37
+        },
+        {
+          "name": "climate change impacts",
+          "count": 29
+        },
+        {
+          "name": "Shared Socioeconomic Pathways",
+          "count": 22
+        },
+        {
+          "name": "urban sprawl",
+          "count": 17
+        }
+      ]
+    },
+    {
+      "left": "expansion",
+      "right": "subfields/2305",
+      "absolute": 155,
+      "citesPerYear": 21.2,
+      "keywords": [
+        {
+          "name": "urban heat island",
+          "count": 44
+        },
+        {
+          "name": "urbanization",
+          "count": 19
+        },
+        {
+          "name": "urban microclimate",
+          "count": 17
+        },
+        {
+          "name": "urban heat island mitigation",
+          "count": 10
+        },
+        {
+          "name": "urban morphology",
+          "count": 10
+        }
+      ]
+    },
+    {
+      "left": "expansion",
+      "right": "T10226",
+      "absolute": 1414,
+      "citesPerYear": 197.1,
+      "keywords": [
+        {
+          "name": "urbanization",
+          "count": 323
+        },
+        {
+          "name": "urban expansion",
+          "count": 322
+        },
+        {
+          "name": "land use change",
+          "count": 181
+        },
+        {
+          "name": "land use and land cover change",
+          "count": 141
+        },
+        {
+          "name": "urban heat island",
+          "count": 120
+        }
+      ]
+    },
+    {
+      "left": "expansion",
+      "right": "subfields/2308",
+      "absolute": 63,
+      "citesPerYear": 8.5,
+      "keywords": [
+        {
+          "name": "urban trees",
+          "count": 10
+        },
+        {
+          "name": "urban forests",
+          "count": 7
+        },
+        {
+          "name": "urban green space",
+          "count": 6
+        },
+        {
+          "name": "Shared Socioeconomic Pathways",
+          "count": 6
+        },
+        {
+          "name": "nature-based solutions",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "left": "expansion",
+      "right": "subfields/2307",
+      "absolute": 70,
+      "citesPerYear": 9.5,
+      "keywords": [
+        {
+          "name": "urban green space",
+          "count": 12
+        },
+        {
+          "name": "urban heat island",
+          "count": 10
+        },
+        {
+          "name": "heat exposure",
+          "count": 10
+        },
+        {
+          "name": "climate change",
+          "count": 8
+        },
+        {
+          "name": "heat-related mortality",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "left": "expansion",
+      "right": "subfields/2303",
+      "absolute": 141,
+      "citesPerYear": 19.2,
+      "keywords": [
+        {
+          "name": "urbanization",
+          "count": 32
+        },
+        {
+          "name": "urban birds",
+          "count": 21
+        },
+        {
+          "name": "bird diversity",
+          "count": 9
+        },
+        {
+          "name": "urban biodiversity",
+          "count": 9
+        },
+        {
+          "name": "urban wildlife",
+          "count": 8
+        }
+      ]
+    },
+    {
+      "left": "heat-health",
+      "right": "subfields/2305",
+      "absolute": 62,
+      "citesPerYear": 24.7,
+      "keywords": [
+        {
+          "name": "urban heat island",
+          "count": 24
+        },
+        {
+          "name": "urbanization",
+          "count": 9
+        },
+        {
+          "name": "urban heat",
+          "count": 8
+        },
+        {
+          "name": "urban green space",
+          "count": 6
+        },
+        {
+          "name": "land surface temperature",
+          "count": 6
+        }
+      ]
+    },
+    {
+      "left": "heat-health",
+      "right": "T10226",
+      "absolute": 74,
+      "citesPerYear": 30,
+      "keywords": [
+        {
+          "name": "urban heat island",
+          "count": 34
+        },
+        {
+          "name": "land surface temperature",
+          "count": 27
+        },
+        {
+          "name": "urbanization",
+          "count": 16
+        },
+        {
+          "name": "urban morphology",
+          "count": 10
+        },
+        {
+          "name": "urban heat island mitigation",
+          "count": 9
+        }
+      ]
+    },
+    {
+      "left": "heat-health",
+      "right": "__other",
+      "absolute": 36,
+      "citesPerYear": 12.6,
+      "keywords": [
+        {
+          "name": "rainfall-runoff",
+          "count": 5
+        },
+        {
+          "name": "baseflow",
+          "count": 5
+        },
+        {
+          "name": "potential evapotranspiration",
+          "count": 5
+        },
+        {
+          "name": "vegetation dynamics",
+          "count": 5
+        },
+        {
+          "name": "heat waves",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "left": "heat-health",
+      "right": "subfields/2307",
+      "absolute": 14,
+      "citesPerYear": 6.8,
+      "keywords": [
+        {
+          "name": "heat stress",
+          "count": 5
+        },
+        {
+          "name": "heat waves",
+          "count": 4
+        },
+        {
+          "name": "temperature",
+          "count": 2
+        },
+        {
+          "name": "older adults",
+          "count": 2
+        },
+        {
+          "name": "extreme heat",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "left": "heat-health",
+      "right": "subfields/2303",
+      "absolute": 1,
+      "citesPerYear": 0.2,
+      "keywords": [
+        {
+          "name": "crop mapping",
+          "count": 1
+        },
+        {
+          "name": "land cover mapping",
+          "count": 1
+        },
+        {
+          "name": "land use mapping",
+          "count": 1
+        },
+        {
+          "name": "Middle Rio Grande",
+          "count": 1
+        },
+        {
+          "name": "semantic segmentation",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "left": "cooling",
+      "right": "subfields/2308",
+      "absolute": 7,
+      "citesPerYear": 1.8,
+      "keywords": [
+        {
+          "name": "urban trees",
+          "count": 4
+        },
+        {
+          "name": "carbon stocks",
+          "count": 2
+        },
+        {
+          "name": "individual tree mapping",
+          "count": 2
+        },
+        {
+          "name": "arid cities",
+          "count": 2
+        },
+        {
+          "name": "tree crown detection",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "left": "cooling",
+      "right": "subfields/2305",
+      "absolute": 25,
+      "citesPerYear": 12.9,
+      "keywords": [
+        {
+          "name": "urban cooling",
+          "count": 7
+        },
+        {
+          "name": "urban heat island",
+          "count": 5
+        },
+        {
+          "name": "Universal Thermal Climate Index",
+          "count": 5
+        },
+        {
+          "name": "urban microclimate",
+          "count": 4
+        },
+        {
+          "name": "urban green space",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "left": "cooling",
+      "right": "T10226",
+      "absolute": 27,
+      "citesPerYear": 14.1,
+      "keywords": [
+        {
+          "name": "land surface temperature",
+          "count": 10
+        },
+        {
+          "name": "urban heat island",
+          "count": 9
+        },
+        {
+          "name": "urbanization",
+          "count": 7
+        },
+        {
+          "name": "urban heat mitigation",
+          "count": 4
+        },
+        {
+          "name": "urban trees",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "left": "cooling",
+      "right": "__other",
+      "absolute": 9,
+      "citesPerYear": 4.1,
+      "keywords": [
+        {
+          "name": "urban forests",
+          "count": 3
+        },
+        {
+          "name": "drought tolerance",
+          "count": 2
+        },
+        {
+          "name": "vapor pressure deficit",
+          "count": 1
+        },
+        {
+          "name": "water stress",
+          "count": 1
+        },
+        {
+          "name": "Cinnamomum camphora",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "left": "flood",
+      "right": "__other",
+      "absolute": 12,
+      "citesPerYear": 2,
+      "keywords": [
+        {
+          "name": "Greenland ice sheet",
+          "count": 4
+        },
+        {
+          "name": "glacier mass balance",
+          "count": 3
+        },
+        {
+          "name": "ice mass balance",
+          "count": 3
+        },
+        {
+          "name": "grace",
+          "count": 2
+        },
+        {
+          "name": "GRACE-FO",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "left": "methods",
+      "right": "subfields/2305",
+      "absolute": 1,
+      "citesPerYear": 0.6,
+      "keywords": [
+        {
+          "name": "urban green space",
+          "count": 1
+        },
+        {
+          "name": "extreme heat",
+          "count": 1
+        },
+        {
+          "name": "nonlinear threshold",
+          "count": 1
+        },
+        {
+          "name": "vegetation cover",
+          "count": 1
+        },
+        {
+          "name": "population density",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "left": "methods",
+      "right": "T10226",
+      "absolute": 93,
+      "citesPerYear": 6.3,
+      "keywords": [
+        {
+          "name": "land allocation",
+          "count": 22
+        },
+        {
+          "name": "multi-objective optimization",
+          "count": 18
+        },
+        {
+          "name": "land use optimization",
+          "count": 16
+        },
+        {
+          "name": "land use planning",
+          "count": 13
+        },
+        {
+          "name": "cellular automata",
+          "count": 13
+        }
+      ]
+    },
+    {
+      "left": "methods",
+      "right": "__other",
+      "absolute": 127,
+      "citesPerYear": 9.1,
+      "keywords": [
+        {
+          "name": "image registration",
+          "count": 16
+        },
+        {
+          "name": "remote sensing image registration",
+          "count": 12
+        },
+        {
+          "name": "feature matching",
+          "count": 10
+        },
+        {
+          "name": "multimodal image registration",
+          "count": 9
+        },
+        {
+          "name": "feature-based registration",
+          "count": 7
+        }
+      ]
+    },
+    {
+      "left": "methods",
+      "right": "subfields/2308",
+      "absolute": 6,
+      "citesPerYear": 0.4,
+      "keywords": [
+        {
+          "name": "spatial optimization",
+          "count": 3
+        },
+        {
+          "name": "multi-objective optimization",
+          "count": 2
+        },
+        {
+          "name": "genetic algorithm",
+          "count": 2
+        },
+        {
+          "name": "urban planning",
+          "count": 2
+        },
+        {
+          "name": "land allocation",
+          "count": 2
+        }
+      ]
+    },
+    {
+      "left": "methods",
+      "right": "subfields/2307",
+      "absolute": 1,
+      "citesPerYear": 0.1,
+      "keywords": [
+        {
+          "name": "local parks",
+          "count": 1
+        },
+        {
+          "name": "mixed integer programming",
+          "count": 1
+        },
+        {
+          "name": "minimax optimization",
+          "count": 1
+        },
+        {
+          "name": "historically marginalized groups",
+          "count": 1
+        },
+        {
+          "name": "recreational infrastructure",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "left": "air-dust",
+      "right": "__other",
+      "absolute": 169,
+      "citesPerYear": 21.1,
+      "keywords": [
+        {
+          "name": "PM2.5",
+          "count": 37
+        },
+        {
+          "name": "PM10",
+          "count": 20
+        },
+        {
+          "name": "dust storms",
+          "count": 19
+        },
+        {
+          "name": "road dust",
+          "count": 18
+        },
+        {
+          "name": "source apportionment",
+          "count": 13
+        }
+      ]
+    },
+    {
+      "left": "air-dust",
+      "right": "subfields/2307",
+      "absolute": 41,
+      "citesPerYear": 6.1,
+      "keywords": [
+        {
+          "name": "PM2.5",
+          "count": 18
+        },
+        {
+          "name": "particulate matter",
+          "count": 11
+        },
+        {
+          "name": "air pollution",
+          "count": 9
+        },
+        {
+          "name": "PM10",
+          "count": 6
+        },
+        {
+          "name": "polycyclic aromatic hydrocarbons",
+          "count": 4
+        }
+      ]
+    },
+    {
+      "left": "air-dust",
+      "right": "subfields/2305",
+      "absolute": 9,
+      "citesPerYear": 1.2,
+      "keywords": [
+        {
+          "name": "PM2.5",
+          "count": 5
+        },
+        {
+          "name": "aerosol optical depth",
+          "count": 2
+        },
+        {
+          "name": "air quality forecasting",
+          "count": 2
+        },
+        {
+          "name": "air quality monitoring",
+          "count": 2
+        },
+        {
+          "name": "downscaling",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "left": "air-dust",
+      "right": "T10226",
+      "absolute": 1,
+      "citesPerYear": 0.1,
+      "keywords": [
+        {
+          "name": "alpine meadow",
+          "count": 1
+        },
+        {
+          "name": "grassland resources",
+          "count": 1
+        },
+        {
+          "name": "grassland distribution",
+          "count": 1
+        },
+        {
+          "name": "grassland productivity",
+          "count": 1
+        },
+        {
+          "name": "ecological function",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "left": "cooling",
+      "right": "subfields/2307",
+      "absolute": 6,
+      "citesPerYear": 2.8,
+      "keywords": [
+        {
+          "name": "vulnerable populations",
+          "count": 2
+        },
+        {
+          "name": "environmental justice",
+          "count": 1
+        },
+        {
+          "name": "park accessibility",
+          "count": 1
+        },
+        {
+          "name": "NDVI",
+          "count": 1
+        },
+        {
+          "name": "elderly residents",
+          "count": 1
+        }
+      ]
+    }
+  ],
+  "stats": {
+    "absolute": {
+      "leftTotal": 3333,
+      "shares": {
+        "expansion": 78.4,
+        "heat-health": 5.6,
+        "cooling": 2.2,
+        "air-dust": 6.6,
+        "methods": 6.8,
+        "flood": 0.4
+      }
+    },
+    "citesPerYear": {
+      "leftTotal": 519.1,
+      "shares": {
+        "expansion": 69.8,
+        "heat-health": 14.3,
+        "cooling": 6.9,
+        "air-dust": 5.5,
+        "methods": 3.2,
+        "flood": 0.4
+      }
+    }
+  }
+}
