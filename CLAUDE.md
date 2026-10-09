@@ -40,7 +40,7 @@ Add or update the entry in the `CURATED_PUBLICATIONS` array. Each publication en
   year: 2025,
   citationCount: 0,
   doi: "10.xxxx/xxxxx",            // optional, add when available
-  isLeadAuthor: true,              // true if Kangning is first or last author
+  isLeadAuthor: true,              // true if Kangning is first, last, or corresponding author
   preprint: "https://...",         // optional, link to preprint
   webUrl: "https://...",           // optional, link to interactive web app
 }
