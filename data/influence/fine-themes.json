@@ -1,5 +1,5 @@
 {
-  "$comment": "Editable Reach Sankey left-side themes (L3/L4 preview). Change labels, colors, order, or paper→theme doi map; then re-run: node scripts/influence/build-flow-preview.mjs rightDomains: tail subfields (beyond the top named ones) are grouped by OpenAlex field into these named buckets.",
+  "$comment": "Editable Reach Sankey left-side themes (L4 default cites/year). Change labels, colors, order, paper→theme map, or rightDomains; then: node scripts/influence/build-reach-flow.mjs",
   "themes": [
     {
       "id": "expansion",

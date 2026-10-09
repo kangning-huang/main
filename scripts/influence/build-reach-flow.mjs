@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
- * Preview-only: fine-theme → adaptive subfield/topic flows for Sankey redesign.
- * Writes src/data/reach-flow-preview.json. Does not overwrite influence.json.
+ * Production: fine-theme → adaptive subfield/topic flows for Sankey redesign.
+ * Writes src/data/reach-flow.json. Companion to influence.json for the Sankey; does not overwrite influence.json.
  */
 import { readFileSync, writeFileSync } from "fs";
 import { dirname, join } from "path";
@@ -10,7 +10,7 @@ import { fileURLToPath } from "url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..", "..");
 const influence = JSON.parse(readFileSync(join(ROOT, "src/data/influence.json"), "utf8"));
-const OUT = join(ROOT, "src/data/reach-flow-preview.json");
+const OUT = join(ROOT, "src/data/reach-flow.json");
 
 const API = "https://api.openalex.org";
 const CITING_SELECT = "id,publication_year,primary_topic,topics,keywords,authorships";

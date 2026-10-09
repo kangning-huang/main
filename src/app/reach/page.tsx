@@ -47,12 +47,7 @@ export default function ReachPage() {
           <T en="SAMPLE DATA" zh="示例数据" />
         </div>
       )}
-
-      <div className="border-b border-ember/40 bg-ember-light/40 px-6 py-2 text-center text-xs text-ember-dark">
-        <T en="PREVIEW L4+R1 — cites/year default, adaptive subfields; not merged." zh="预览 L4+R1——默认年化引用、自适应子领域；尚未合并。" />
-      </div>
-
-      <ReachLensProvider>
+<ReachLensProvider>
         <section className="pt-10 pb-6 md:pt-14">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h1 className="font-display text-4xl text-ink md:text-5xl">

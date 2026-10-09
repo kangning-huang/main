@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import T from "@/components/T";
-import flowData from "@/data/reach-flow-preview.json";
+import flowData from "@/data/reach-flow.json";
 import { fieldZh } from "@/lib/influence";
 
 const W = 820;
@@ -211,8 +211,8 @@ export default function ReachFlowChart() {
         </svg>
         <figcaption className="mt-2 text-xs text-ink-faint">
           <T
-            en={`Preview L4+R1 · OpenAlex ${flowData.meta.asOf} · default = cites/year (toggle Absolute) · self-citations removed · named subfields + domain groups on right (hover for members) · keywords on hover only. Not live. Theme map: data/influence/fine-themes.json.`}
-            zh={`预览 L4+R1 · OpenAlex ${flowData.meta.asOf} · 默认年化引用（可切绝对）· 已剔除自引 · 右侧自适应子领域/主题 · 关键词仅悬停。尚未上线。主题映射：data/influence/fine-themes.json。`}
+            en={`OpenAlex ${flowData.meta.asOf} · cites per year since publication (toggle Absolute) · self-citations removed · right side = named subfields/topics plus field-domain groups (hover for members) · keywords on hover. Theme map: data/influence/fine-themes.json.`}
+            zh={`OpenAlex ${flowData.meta.asOf} · 默认按发表后年化引用（可切绝对）· 已剔除自引 · 右侧为具名子领域/主题与领域分组（悬停查看成员） · 关键词仅悬停。主题映射：data/influence/fine-themes.json。`}
           />
         </figcaption>
       </figure>

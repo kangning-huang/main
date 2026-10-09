@@ -1,6 +1,6 @@
 {
   "meta": {
-    "mode": "preview",
+    "mode": "live",
     "asOf": "2026-10-09",
     "lens": "all",
     "weightingNote": "absolute = non-self citing works; citesPerYear = each citing work weighted by 1/yearsSince(cited paper), floor 1 year.",

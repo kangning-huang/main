@@ -160,3 +160,5 @@ Optional confirms:
 
 ## Update 2026-10-09 evening
 Ken chose **Try L4 + R1**. Preview defaults to cites/year; theme map at `data/influence/fine-themes.json`. Draft PR #71 only.
+## Merged
+Ken approved L4+R1 with named domain buckets. Shipped to live /reach (PR #71).
