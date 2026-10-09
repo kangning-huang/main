@@ -139,7 +139,7 @@ export const PUBLICATIONS_B = [
   },
 {
     title: "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
-    authors: "Tango Hu, Jiahong Liu, Gang Zheng, Dengrong Zhang, Kangning Huang",
+    authors: "Tangao Hu, Jiahong Liu, Gang Zheng, Dengrong Zhang, Kangning Huang",
     venue: "Land Degradation & Development",
     year: 2019,
     citationCount: 70,
@@ -285,7 +285,7 @@ export const PUBLICATIONS_B = [
 {
     title: "The implementation and application of geographical simulation and optimization systems (GeoSOS)",
     authors: "Xia Li, Dan Li, Xiaoping Liu, Chunhua Lao, Yihan Zhang, Jinqiang He, Kangning Huang",
-    venue: "Acta Scientiarum Natralium Universitatis Sunyatseni",
+    venue: "Acta Scientiarum Naturalium Universitatis Sunyatseni",
     year: 2010,
     citationCount: 15,
     isLeadAuthor: false,

@@ -110,7 +110,7 @@ export const PROJECTS: Project[] = [
     title: "URBANMOD-ZIPF",
     description:
       "A global-scale urban land expansion model that preserves Zipf's Law of urban sizes. Open-source tool for simulating realistic patterns of urban growth across different scenarios.",
-    url: "https://github.com/kangning-huang",
+    url: "https://github.com/kangning-huang/URBANMOD-ZIPF",
     tags: ["Urban Modeling", "Open Source", "Python"],
     featured: false,
     category: "academic",
@@ -122,27 +122,10 @@ export const PROJECTS: Project[] = [
       "A data-driven dashboard tracking Tesla Cybercab safety performance using NHTSA Standing General Order crash data. Provides transparent, independent analysis of autonomous vehicle safety metrics including miles per incident (MPI) comparisons.",
     url: "https://robotaxi-safety-tracker.com",
     tags: ["Data Visualization", "Autonomous Vehicles", "Safety Analytics"],
-    featured: true,
+    // Side project — belongs on /tinkering, not the homepage
+    featured: false,
     category: "side",
     // imagePath: "/projects/robotaxi-safety-tracker.jpg", // Run `npm run screenshots` to generate
-  },
-  {
-    title: "Polybot Arena",
-    description:
-      "Visualizes how elite trading bots compete in Polymarket crypto prediction markets. Tracks the most profitable traders on Polymarket's 'Up or Down' markets for BTC, ETH, SOL, and XRP, showing their exact timing, positions, and P&L.",
-    url: "https://polybot-arena.com",
-    tags: ["Data Visualization", "Crypto", "Prediction Markets"],
-    featured: true,
-    category: "side",
-  },
-  {
-    title: "Capitol Alpha",
-    description:
-      "Congressional trading dashboard — track and analyze stock trades made by members of the U.S. Congress.",
-    url: "https://capitol-alpha.com",
-    tags: ["Data Visualization", "Finance", "Dashboard"],
-    featured: true,
-    category: "side",
   },
 ];
 
@@ -174,6 +157,14 @@ export interface Publication {
   highlightVideoDuration?: string;
   /** SEO/AEO: topic keywords for structured data and filtering */
   keywords?: string[];
+}
+
+/** Stable anchor id for a publication, e.g. "nested-economies-of-scale-in-global-city-mass" */
+export function publicationSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
 
 export const CURATED_PUBLICATIONS: Publication[] = [

@@ -276,7 +276,7 @@ export const PUBLICATIONS_A = [
     venue: "PNAS (in press)",
     year: 2026,
     citationCount: 0,
-    isLeadAuthor: false,
+    isLeadAuthor: true,
     highlights: [
       "Introduces the Urban Homogeneous Scale (UHS) metric — the spatial scale of functionally homogeneous building clusters — as a novel urban morphology measure for understanding urban heat island effects",
       "Analyzes 232,874 observations across 101 global cities using machine learning (XGBoost) building classification and Double Machine Learning causal inference to establish UHS-heat relationships",
@@ -333,7 +333,7 @@ export const PUBLICATIONS_A = [
     venue: "1st revision under review at Nature Communications",
     year: 2026,
     citationCount: 0,
-    isLeadAuthor: false,
+    isLeadAuthor: true,
     highlights: [
       "Examines the mismatch between infrastructure reach and capacity pressures driven by rapid urban expansion across sub-Saharan Africa",
     ],

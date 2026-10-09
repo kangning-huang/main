@@ -2,8 +2,10 @@
 
 import { useState, useRef, useEffect } from "react";
 import type { Publication } from "@/lib/constants";
-import { COAUTHOR_LINKS } from "@/lib/constants";
+import { COAUTHOR_LINKS, publicationSlug } from "@/lib/constants";
 import T from "@/components/T";
+
+const SELF_NAMES = new Set(["Kangning Huang", "K. Huang", "K Huang"]);
 
 export default function PublicationCard({ pub }: { pub: Publication }) {
   const hasExtra =
@@ -25,7 +27,7 @@ export default function PublicationCard({ pub }: { pub: Publication }) {
   }, [open, pub.highlightVideo]);
 
   return (
-    <article className="pub-item group py-4">
+    <article id={publicationSlug(pub.title)} className="pub-item group py-4">
       <div
         className={hasExtra ? "cursor-pointer" : undefined}
         onClick={hasExtra ? () => setOpen((o) => !o) : undefined}
@@ -84,7 +86,9 @@ export default function PublicationCard({ pub }: { pub: Publication }) {
             const url = COAUTHOR_LINKS[trimmed];
             return (
               <span key={i}>
-                {url ? (
+                {SELF_NAMES.has(trimmed) ? (
+                  <strong className="font-semibold text-ink-muted">{trimmed}</strong>
+                ) : url ? (
                   <a
                     href={url}
                     target="_blank"
@@ -108,7 +112,11 @@ export default function PublicationCard({ pub }: { pub: Publication }) {
           )}
           {pub.citationCount > 0 && (
             <span className="rounded-full bg-paper-deep px-2.5 py-0.5 text-xs text-ink-muted">
-              {pub.citationCount} <T en="citations" zh="引用" />
+              {pub.citationCount}{" "}
+              <T
+                en={pub.citationCount === 1 ? "citation" : "citations"}
+                zh="次引用"
+              />
             </span>
           )}
           {pub.doi && (
@@ -147,6 +155,11 @@ export default function PublicationCard({ pub }: { pub: Publication }) {
             </a>
           )}
         </div>
+        {pub.highlights && pub.highlights.length > 0 && (
+          <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+            {pub.highlights[0]}
+          </p>
+        )}
       </div>
 
       {/* Expandable section */}
