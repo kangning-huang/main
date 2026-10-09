@@ -12,6 +12,7 @@ import { NEWS, formatNewsDate } from "@/lib/news";
 import { webPageSchema, profilePageSchema, faqSchema, OG_IMAGE_PATH, withOpenGraphDefaults, canonicalPageUrl } from "@/lib/seo";
 import T from "@/components/T";
 import PublicationCard from "@/components/PublicationCard";
+import HeroHeadshot, { type HeadshotVariant } from "@/components/HeroHeadshot";
 import { reachHeadline } from "@/lib/influence";
 
 const HOME_DESCRIPTION =
@@ -58,6 +59,10 @@ const FINDINGS = [
 ];
 
 const extLink = "text-ember hover:underline";
+
+// Hero headshot layout (preview): "editorial" = portrait column beside the text,
+// "circle" = ringed portrait beside the name, "inline" = small avatar by the title line.
+const HEADSHOT_VARIANT = "editorial" as HeadshotVariant;
 
 const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
   "Nested Scaling of City Mass": {
@@ -180,81 +185,116 @@ export default async function Home() {
         <div className="topo-grain absolute inset-0" />
 
         <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-24 md:pb-28 md:pt-32 lg:px-8">
-          <h1 className="animate-fade-up font-display text-5xl leading-[1.1] text-paper md:text-6xl lg:text-7xl">
-            <T en={SITE.name} zh="黄康宁" />
-          </h1>
-          <p className="animate-fade-up delay-1 mt-5 max-w-3xl font-display text-2xl italic leading-snug text-paper/85 md:text-[30px]">
-            <T
-              en="How the size and shape of cities decide their climate future."
-              zh="城市的规模与形态如何决定其气候未来。"
-            />
-          </p>
-          <p className="animate-fade-up delay-2 mt-4 text-sm text-paper/60">
-            <T
-              en="Assistant Professor of Environmental Studies · CLUEs Lab, NYU Shanghai"
-              zh="环境学助理教授 · CLUEs Lab，上海纽约大学"
-            />
-          </p>
-          {reach && (
-            <p className="animate-fade-up delay-2 mt-2 text-sm text-paper/60">
-              <Link href="/reach" className="transition-colors hover:text-ember">
-                <T
-                  en={`Cited in ${reach.countries} countries — from ${reach.from} to ${reach.to}`}
-                  zh={`被 ${reach.countries} 个国家和地区引用——从「${reach.from}」到「${reach.to}」`}
-                />
-                <span className="ml-1.5 text-xs text-paper/40">
-                  <T
-                    en={`(OpenAlex, all papers with DOI, self-citations removed, ${reach.asOf}) →`}
-                    zh={`（OpenAlex，全部有 DOI 论文，已剔除自引，${reach.asOf}）→`}
-                  />
-                </span>
-              </Link>
-            </p>
-          )}
-
-          {/* Decorative divider */}
-          <div className="animate-draw-line delay-3 mt-8 h-px w-32 origin-left bg-ember" />
-
-          {/* Primary actions */}
-          <div className="animate-fade-up delay-4 mt-8 flex flex-wrap gap-3">
-            <Link
-              href="/atlas"
-              className="rounded-md bg-ember px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ember-dark"
-            >
-              <T en="Explore the Atlas" zh="探索图集" />
-            </Link>
-            <Link
-              href="/lab#join"
-              className="rounded-md border border-paper/40 px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:border-ember hover:text-ember"
-            >
-              <T en="Join the lab" zh="加入实验室" />
-            </Link>
-          </div>
-
-          {/* Links row */}
-          <div className="animate-fade-up delay-5 mt-6 flex flex-wrap gap-2.5">
-            {[
-              { en: "CV (PDF)", zh: "简历 (PDF)", href: "/CV_Kangning_Huang.pdf" },
-              { en: "Google Scholar", zh: "谷歌学术", href: LINKS.googleScholar },
-              { en: "Email", zh: "邮箱", href: `mailto:${SITE.email}` },
-            ].map((link) => (
-              <a
-                key={link.en}
-                href={link.href}
-                target={link.href.startsWith("mailto:") ? undefined : "_blank"}
-                rel={
-                  link.href.startsWith("mailto:")
-                    ? undefined
-                    : "noopener noreferrer"
+          <div
+            className={
+              HEADSHOT_VARIANT === "editorial"
+                ? "flex flex-col-reverse gap-10 md:grid md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-12 lg:gap-16"
+                : undefined
+            }
+          >
+            <div className="min-w-0">
+              <div
+                className={
+                  HEADSHOT_VARIANT === "circle"
+                    ? "flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-8"
+                    : undefined
                 }
-                className="rounded-full border border-paper/20 bg-ink/30 px-4 py-1.5 text-sm text-paper/70 backdrop-blur-sm transition-all duration-300 hover:border-ember hover:text-ember"
               >
-                <T en={link.en} zh={link.zh} />
-                {!link.href.startsWith("mailto:") && (
-                  <span className="ml-1 text-[10px] opacity-40">&#8599;</span>
+                {HEADSHOT_VARIANT === "circle" && (
+                  <div className="animate-fade-in">
+                    <HeroHeadshot variant="circle" />
+                  </div>
                 )}
-              </a>
-            ))}
+                <h1 className="animate-fade-up font-display text-5xl leading-[1.1] text-paper md:text-6xl lg:text-7xl">
+                  <T en={SITE.name} zh="黄康宁" />
+                </h1>
+              </div>
+              <p className="animate-fade-up delay-1 mt-5 max-w-3xl font-display text-2xl italic leading-snug text-paper/85 md:text-[30px]">
+                <T
+                  en="How the size and shape of cities decide their climate future."
+                  zh="城市的规模与形态如何决定其气候未来。"
+                />
+              </p>
+              <div
+                className={`animate-fade-up delay-2 mt-4 ${
+                  HEADSHOT_VARIANT === "inline" ? "flex items-center gap-4" : ""
+                }`}
+              >
+                {HEADSHOT_VARIANT === "inline" && <HeroHeadshot variant="inline" />}
+                <p className="text-sm text-paper/60">
+                  <T
+                    en="Assistant Professor of Environmental Studies · CLUEs Lab, NYU Shanghai"
+                    zh="环境学助理教授 · CLUEs Lab，上海纽约大学"
+                  />
+                </p>
+              </div>
+              {reach && (
+                <p className="animate-fade-up delay-2 mt-2 text-sm text-paper/60">
+                  <Link href="/reach" className="transition-colors hover:text-ember">
+                    <T
+                      en={`Cited in ${reach.countries} countries — from ${reach.from} to ${reach.to}`}
+                      zh={`被 ${reach.countries} 个国家和地区引用——从「${reach.from}」到「${reach.to}」`}
+                    />
+                    <span className="ml-1.5 text-xs text-paper/40">
+                      <T
+                        en={`(OpenAlex, all papers with DOI, self-citations removed, ${reach.asOf}) →`}
+                        zh={`（OpenAlex，全部有 DOI 论文，已剔除自引，${reach.asOf}）→`}
+                      />
+                    </span>
+                  </Link>
+                </p>
+              )}
+
+              {/* Decorative divider */}
+              <div className="animate-draw-line delay-3 mt-8 h-px w-32 origin-left bg-ember" />
+
+              {/* Primary actions */}
+              <div className="animate-fade-up delay-4 mt-8 flex flex-wrap gap-3">
+                <Link
+                  href="/atlas"
+                  className="rounded-md bg-ember px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ember-dark"
+                >
+                  <T en="Explore the Atlas" zh="探索图集" />
+                </Link>
+                <Link
+                  href="/lab#join"
+                  className="rounded-md border border-paper/40 px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:border-ember hover:text-ember"
+                >
+                  <T en="Join the lab" zh="加入实验室" />
+                </Link>
+              </div>
+
+              {/* Links row */}
+              <div className="animate-fade-up delay-5 mt-6 flex flex-wrap gap-2.5">
+                {[
+                  { en: "CV (PDF)", zh: "简历 (PDF)", href: "/CV_Kangning_Huang.pdf" },
+                  { en: "Google Scholar", zh: "谷歌学术", href: LINKS.googleScholar },
+                  { en: "Email", zh: "邮箱", href: `mailto:${SITE.email}` },
+                ].map((link) => (
+                  <a
+                    key={link.en}
+                    href={link.href}
+                    target={link.href.startsWith("mailto:") ? undefined : "_blank"}
+                    rel={
+                      link.href.startsWith("mailto:")
+                        ? undefined
+                        : "noopener noreferrer"
+                    }
+                    className="rounded-full border border-paper/20 bg-ink/30 px-4 py-1.5 text-sm text-paper/70 backdrop-blur-sm transition-all duration-300 hover:border-ember hover:text-ember"
+                  >
+                    <T en={link.en} zh={link.zh} />
+                    {!link.href.startsWith("mailto:") && (
+                      <span className="ml-1 text-[10px] opacity-40">&#8599;</span>
+                    )}
+                  </a>
+                ))}
+              </div>
+            </div>
+            {HEADSHOT_VARIANT === "editorial" && (
+              <div className="animate-fade-in delay-2">
+                <HeroHeadshot variant="editorial" />
+              </div>
+            )}
           </div>
         </div>
 
