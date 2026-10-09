@@ -9,6 +9,7 @@ import LanguageToggle from "./LanguageToggle";
 const NAV_ITEMS = [
   { en: "Research", zh: "研究", href: "/research" },
   { en: "Publications", zh: "学术论文", href: "/publications" },
+  { en: "Reach", zh: "影响", href: "/reach" },
   { en: "Lab", zh: "实验室", href: "/lab" },
   { en: "News", zh: "动态", href: "/news" },
   { en: "Blog", zh: "博客", href: "/blog" },

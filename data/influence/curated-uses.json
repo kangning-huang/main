@@ -1,0 +1,17 @@
+{
+  "$comment": "Hand-curated non-journal uses. Only add an entry with a verification trail (where/when it was checked). No counts here — these are not OpenAlex data.",
+  "uses": [
+    {
+      "id": "wri-resource-watch-cit005",
+      "builds_on_doi": "10.1088/1748-9326/ab4b71",
+      "builds_on_short": "ERL 2019 · urban expansion to 2050",
+      "en": "World Resources Institute's Resource Watch hosts the urban-expansion probability projections as dataset “cit.005a Urban Expansion Probabilities”, citing the 2019 ERL paper.",
+      "zh": "世界资源研究所（WRI）的 Resource Watch 平台收录了城市扩张概率预测数据集（“cit.005a Urban Expansion Probabilities”），并引用了 2019 年 ERL 论文。",
+      "url": "https://resourcewatch.org/data/explore/cit005b-Urban-Expansion-Probabilities",
+      "verified": {
+        "on": "2026-10-09",
+        "how": "Resource Watch API dataset bf14690e-a3d8-466b-b382-04876f27caf1 metadata citation field names Huang, Li, Liu & Seto (2019), ERL 14:114037, doi:10.1088/1748-9326/ab4b71; explore URL returned HTTP 200."
+      }
+    }
+  ]
+}
