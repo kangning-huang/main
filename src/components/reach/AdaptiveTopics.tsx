@@ -87,8 +87,8 @@ export default function AdaptiveTopics() {
       {other && (
         <p className="mt-4 text-sm text-ink-faint">
           <T
-            en={`${other.name}: ${other.citingWorks} citing works (${other.share}%).`}
-            zh={`${other.name}：${other.citingWorks} 篇（${other.share}%）。`}
+            en={`Plus a long tail of smaller research areas: ${other.citingWorks} citing works (${other.share}%). Named domains for that tail are in the flow chart above.`}
+            zh={`另有长尾较小研究领域：${other.citingWorks} 篇（${other.share}%）。长尾的具名分组见上方流向图。`}
           />
         </p>
       )}
