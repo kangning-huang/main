@@ -11,9 +11,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      path: "/atlas",
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+    },
+    {
       path: "/research",
       changeFrequency: "monthly" as const,
       priority: 0.95,
+    },
+    {
+      path: "/reach",
+      changeFrequency: "monthly" as const,
+      priority: 0.9,
     },
     {
       path: "/publications",

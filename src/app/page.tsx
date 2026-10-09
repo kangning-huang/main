@@ -200,10 +200,10 @@ export default async function Home() {
           {/* Primary actions */}
           <div className="animate-fade-up delay-4 mt-8 flex flex-wrap gap-3">
             <Link
-              href="/research"
+              href="/atlas"
               className="rounded-md bg-ember px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ember-dark"
             >
-              <T en="Explore the research" zh="了解研究" />
+              <T en="Explore the Atlas" zh="探索图集" />
             </Link>
             <Link
               href="/lab#join"
