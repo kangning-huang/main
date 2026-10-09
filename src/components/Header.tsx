@@ -10,6 +10,7 @@ const NAV_ITEMS = [
   { en: "Research", zh: "研究", href: "/research" },
   { en: "Publications", zh: "学术论文", href: "/publications" },
   { en: "Lab", zh: "实验室", href: "/lab" },
+  { en: "Teaching", zh: "教学", href: "/teaching" },
   { en: "News", zh: "动态", href: "/news" },
   { en: "Blog", zh: "博客", href: "/blog" },
 ];

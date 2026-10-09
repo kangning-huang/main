@@ -68,9 +68,17 @@ Parent teaching folder: Drive `1MuwLO-ZLLSXgNrcBFhkWJZMCZh2uIbKe` (owner kh3657@
 - Ken’s own syllabus drafts are his materials; still prefer linking a short public summary or a PDF Ken explicitly wants public under `public/teaching/` rather than dumping entire private Drive trees.
 - Capstone / advisee showcase: link to existing Lab / Advisees pages; **do not invent student names**.
 
-## Teaching statement
+## Teaching statement — adapted from Ken's own materials (2026-10-09)
 
-Draft ~150 words from syllabus themes for Ken to edit; mark clearly **DRAFT**. Themes available: debate-as-learning; AI for prep vs live unassisted performance; systems thinking (204); city-scale challenges as opportunities (208); oral defense / motivation (TEA interview).
+Website copy (~170 words EN) is distilled from Ken's third-year review teaching statement and the TEA 2-page statement. First person; no invented claims. DRAFT banner removed once this source-backed text replaced the auto-generated syllabus draft.
+
+### Primary statement sources (Drive, kh3657@nyu.edu)
+
+1. **3rd Year Review - Teaching - v3** (primary): Google Doc id `1xdqi39mf5CMiZ24agZhpoPUBZ5GCDONP8LjyOK0dh0A` in folder **3rd Year Review** (`1Og5OCKexa5CqxZd15xoJ0oNgF87BVL0z`). Local: `/workspace/teaching-materials/3rd-Year-Review-Teaching-v3.md` (and exported `.docx`).
+2. **3rd Year Review - Teaching - v2.pdf** (earlier): id `19zlbslleT0O2AeD0AtIKpuKI7Qnuh1kX`.
+3. **Teaching_Statement_TEA_2026_vC_2pg.md** (TEA application, fills AI-aware / 208 fieldwork framing): id `1HQ1k1-riBOjsTJs-T5oOQb0c2Ppjplqp`; PDF `1iCokw-eG1Fau-Bk-XrotXROUJ55OJA1P`. Local: `/workspace/teaching-materials/Teaching_Statement_TEA_2026_vC_2pg.md`.
+
+**Site usage:** Keep the public statement short. Do not publish student evaluation scores, named advisees, or future-course proposals from the review packet unless Ken asks. Advising outcomes stay on `/advisees` / `/lab`.
 
 ## Not found / do not invent
 
