@@ -1,1 +1,1 @@
-{"id":5466,"slug":"as-samawah","name":"As Samawah","country":"Iraq","iso":"IRQ","region":"Asia","lat":31.3146,"lon":45.282,"ucdb":{"pop15":320272.0,"areaKm2":38.0},"layers":{"mass":null}}
+{"id":5466,"slug":"as-samawah","name":"As Samawah","country":"Iraq","iso":"IRQ","region":"Asia","lat":31.3146,"lon":45.282,"ucdb":{"pop15":320272.0,"areaKm2":38.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2338,"ssp1Km2":111.2,"ssp3Km2":103.0,"ssp5Km2":114.8,"loKm2":103.0,"hiKm2":114.8}}}

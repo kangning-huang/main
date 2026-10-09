@@ -1,1 +1,1 @@
-{"id":7826,"slug":"nawab-ganj","name":"Nawab Ganj","country":"India","iso":"IND","region":"Asia","lat":26.6188,"lon":80.6698,"ucdb":{"pop15":374475.0,"areaKm2":25.0},"layers":{"mass":null}}
+{"id":7826,"slug":"nawab-ganj","name":"Nawab Ganj","country":"India","iso":"IND","region":"Asia","lat":26.6188,"lon":80.6698,"ucdb":{"pop15":374475.0,"areaKm2":25.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3186,"ssp1Km2":728.0,"ssp3Km2":384.0,"ssp5Km2":794.0,"loKm2":384.0,"hiKm2":794.0},"jgr":{"quality":"exact","dNightC":-0.06,"dNightCoolRoofC":-0.4}}}

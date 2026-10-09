@@ -1,1 +1,1 @@
-{"id":7479,"slug":"aliganj","name":"Aliganj","country":"India","iso":"IND","region":"Asia","lat":27.4893,"lon":79.1786,"ucdb":{"pop15":324653.0,"areaKm2":10.0},"layers":{"mass":null}}
+{"id":7479,"slug":"aliganj","name":"Aliganj","country":"India","iso":"IND","region":"Asia","lat":27.4893,"lon":79.1786,"ucdb":{"pop15":324653.0,"areaKm2":10.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":2922,"ssp1Km2":265.5,"ssp3Km2":137.0,"ssp5Km2":278.0,"loKm2":137.0,"hiKm2":278.0},"jgr":{"quality":"exact","dNightC":-0.43,"dNightCoolRoofC":-1.0}}}

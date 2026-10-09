@@ -1,1 +1,1 @@
-{"id":7810,"slug":"sidhauli","name":"Sidhauli","country":"India","iso":"IND","region":"Asia","lat":27.2808,"lon":80.8355,"ucdb":{"pop15":432469.0,"areaKm2":11.0},"layers":{"mass":null}}
+{"id":7810,"slug":"sidhauli","name":"Sidhauli","country":"India","iso":"IND","region":"Asia","lat":27.2808,"lon":80.8355,"ucdb":{"pop15":432469.0,"areaKm2":11.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3097,"ssp1Km2":1055.7,"ssp3Km2":444.0,"ssp5Km2":1200.0,"loKm2":444.0,"hiKm2":1200.0},"jgr":{"quality":"exact","dNightC":0.14,"dNightCoolRoofC":-0.01}}}

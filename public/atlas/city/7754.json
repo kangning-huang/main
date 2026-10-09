@@ -1,1 +1,1 @@
-{"id":7754,"slug":"hassan","name":"Hassan","country":"India","iso":"IND","region":"Asia","lat":12.997,"lon":76.1082,"ucdb":{"pop15":324224.0,"areaKm2":41.0},"layers":{"mass":null}}
+{"id":7754,"slug":"hassan","name":"Hassan","country":"India","iso":"IND","region":"Asia","lat":12.997,"lon":76.1082,"ucdb":{"pop15":324224.0,"areaKm2":41.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5064,"ssp1Km2":90.5,"ssp3Km2":61.5,"ssp5Km2":87.5,"loKm2":61.5,"hiKm2":90.5},"jgr":{"quality":"exact","dNightC":-0.01,"dNightCoolRoofC":-0.04}}}

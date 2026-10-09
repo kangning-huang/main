@@ -1,1 +1,1 @@
-{"id":6551,"slug":"shakar-garh","name":"Shakar Garh","country":"Pakistan","iso":"PAK","region":"Asia","lat":32.2612,"lon":75.1547,"ucdb":{"pop15":366175.0,"areaKm2":16.0},"layers":{"mass":null}}
+{"id":6551,"slug":"shakar-garh","name":"Shakar Garh","country":"Pakistan","iso":"PAK","region":"Asia","lat":32.2612,"lon":75.1547,"ucdb":{"pop15":366175.0,"areaKm2":16.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2207,"ssp1Km2":49.6,"ssp3Km2":25.0,"ssp5Km2":45.5,"loKm2":25.0,"hiKm2":49.6}}}

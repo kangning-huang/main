@@ -1,1 +1,1 @@
-{"id":7362,"slug":"shivpuri","name":"Shivpuri","country":"India","iso":"IND","region":"Asia","lat":25.4249,"lon":77.6598,"ucdb":{"pop15":330370.0,"areaKm2":18.0},"layers":{"mass":null}}
+{"id":7362,"slug":"shivpuri","name":"Shivpuri","country":"India","iso":"IND","region":"Asia","lat":25.4249,"lon":77.6598,"ucdb":{"pop15":330370.0,"areaKm2":18.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3464,"ssp1Km2":42.8,"ssp3Km2":27.3,"ssp5Km2":42.5,"loKm2":27.3,"hiKm2":42.8},"jgr":{"quality":"exact","dNightC":-0.16,"dNightCoolRoofC":-0.3}}}

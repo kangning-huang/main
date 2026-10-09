@@ -1,1 +1,1 @@
-{"id":10061,"slug":"satkania","name":"Satkania","country":"Bangladesh","iso":"BGD","region":"Asia","lat":22.0383,"lon":92.0715,"ucdb":{"pop15":443428.0,"areaKm2":139.0},"layers":{"mass":null}}
+{"id":10061,"slug":"satkania","name":"Satkania","country":"Bangladesh","iso":"BGD","region":"Asia","lat":22.0383,"lon":92.0715,"ucdb":{"pop15":443428.0,"areaKm2":139.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4164,"ssp1Km2":532.6,"ssp3Km2":250.0,"ssp5Km2":543.6,"loKm2":250.0,"hiKm2":543.6}}}

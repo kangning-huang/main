@@ -1,1 +1,1 @@
-{"id":13053,"slug":"timika","name":"Timika","country":"Indonesia","iso":"IDN","region":"Asia","lat":-4.5593,"lon":136.8842,"ucdb":{"pop15":305351.0,"areaKm2":21.0},"layers":{"mass":null}}
+{"id":13053,"slug":"timika","name":"Timika","country":"Indonesia","iso":"IDN","region":"Asia","lat":-4.5593,"lon":136.8842,"ucdb":{"pop15":305351.0,"areaKm2":21.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6169,"ssp1Km2":100.8,"ssp3Km2":84.2,"ssp5Km2":102.0,"loKm2":84.2,"hiKm2":102.0}}}

@@ -1,1 +1,1 @@
-{"id":1477,"slug":"bissau","name":"Bissau","country":"Guinea-Bissau","iso":"GNB","region":"Africa","lat":11.8705,"lon":-15.6107,"ucdb":{"pop15":502077.0,"areaKm2":61.0},"layers":{"mass":null}}
+{"id":1477,"slug":"bissau","name":"Bissau","country":"Guinea-Bissau","iso":"GNB","region":"Africa","lat":11.8705,"lon":-15.6107,"ucdb":{"pop15":502077.0,"areaKm2":61.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5170,"ssp1Km2":137.4,"ssp3Km2":122.3,"ssp5Km2":140.7,"loKm2":122.3,"hiKm2":140.7}}}

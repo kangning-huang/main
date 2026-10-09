@@ -1,1 +1,1 @@
-{"id":7946,"slug":"lalganj","name":"Lalganj","country":"India","iso":"IND","region":"Asia","lat":26.1696,"lon":80.9683,"ucdb":{"pop15":362160.0,"areaKm2":14.0},"layers":{"mass":null}}
+{"id":7946,"slug":"lalganj","name":"Lalganj","country":"India","iso":"IND","region":"Asia","lat":26.1696,"lon":80.9683,"ucdb":{"pop15":362160.0,"areaKm2":14.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3311,"ssp1Km2":83.5,"ssp3Km2":60.0,"ssp5Km2":101.0,"loKm2":60.0,"hiKm2":101.0},"jgr":{"quality":"exact","dNightC":-0.07,"dNightCoolRoofC":-0.24}}}

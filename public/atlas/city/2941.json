@@ -1,1 +1,1 @@
-{"id":2941,"slug":"n-a-nga","name":"N/A","country":"Nigeria","iso":"NGA","region":"Africa","lat":10.2967,"lon":11.2473,"ucdb":{"pop15":349475.0,"areaKm2":2.0},"layers":{"mass":null}}
+{"id":2941,"slug":"n-a-nga","name":"N/A","country":"Nigeria","iso":"NGA","region":"Africa","lat":10.2967,"lon":11.2473,"ucdb":{"pop15":349475.0,"areaKm2":2.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5377,"ssp1Km2":277.5,"ssp3Km2":231.5,"ssp5Km2":264.0,"loKm2":231.5,"hiKm2":277.5},"jgr":{"quality":"exact","dNightC":-0.25,"dNightCoolRoofC":-0.28}}}

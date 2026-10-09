@@ -1,1 +1,1 @@
-{"id":1467,"slug":"kaolack","name":"Kaolack","country":"Senegal","iso":"SEN","region":"Africa","lat":14.152,"lon":-16.0733,"ucdb":{"pop15":425534.0,"areaKm2":39.0},"layers":{"mass":null}}
+{"id":1467,"slug":"kaolack","name":"Kaolack","country":"Senegal","iso":"SEN","region":"Africa","lat":14.152,"lon":-16.0733,"ucdb":{"pop15":425534.0,"areaKm2":39.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4945,"ssp1Km2":181.2,"ssp3Km2":127.3,"ssp5Km2":176.8,"loKm2":127.3,"hiKm2":181.2}}}

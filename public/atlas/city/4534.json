@@ -1,1 +1,1 @@
-{"id":4534,"slug":"tabuk","name":"Tabuk","country":"Saudi Arabia","iso":"SAU","region":"Asia","lat":28.3849,"lon":36.5652,"ucdb":{"pop15":443345.0,"areaKm2":70.0},"layers":{"mass":null}}
+{"id":4534,"slug":"tabuk","name":"Tabuk","country":"Saudi Arabia","iso":"SAU","region":"Asia","lat":28.3849,"lon":36.5652,"ucdb":{"pop15":443345.0,"areaKm2":70.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2823,"ssp1Km2":333.2,"ssp3Km2":323.5,"ssp5Km2":384.8,"loKm2":323.5,"hiKm2":384.8}}}

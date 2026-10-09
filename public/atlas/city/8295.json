@@ -1,1 +1,1 @@
-{"id":8295,"slug":"bansi","name":"Bansi","country":"India","iso":"IND","region":"Asia","lat":27.1811,"lon":82.9322,"ucdb":{"pop15":356868.0,"areaKm2":9.0},"layers":{"mass":null}}
+{"id":8295,"slug":"bansi","name":"Bansi","country":"India","iso":"IND","region":"Asia","lat":27.1811,"lon":82.9322,"ucdb":{"pop15":356868.0,"areaKm2":9.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3126,"ssp1Km2":442.5,"ssp3Km2":221.3,"ssp5Km2":524.2,"loKm2":221.3,"hiKm2":524.2},"jgr":{"quality":"exact","dNightC":-0.06,"dNightCoolRoofC":-0.12}}}

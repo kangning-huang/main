@@ -1,1 +1,1 @@
-{"id":2708,"slug":"daura","name":"Daura","country":"Nigeria","iso":"NGA","region":"Africa","lat":13.0222,"lon":8.3223,"ucdb":{"pop15":323525.0,"areaKm2":33.0},"layers":{"mass":null}}
+{"id":2708,"slug":"daura","name":"Daura","country":"Nigeria","iso":"NGA","region":"Africa","lat":13.0222,"lon":8.3223,"ucdb":{"pop15":323525.0,"areaKm2":33.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":5058,"ssp1Km2":562.2,"ssp3Km2":490.3,"ssp5Km2":523.3,"loKm2":490.3,"hiKm2":562.2},"jgr":{"quality":"exact","dNightC":0.16,"dNightCoolRoofC":0.11}}}

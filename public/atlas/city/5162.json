@@ -1,1 +1,1 @@
-{"id":5162,"slug":"arsi-negelle","name":"Arsi Negelle","country":"Ethiopia","iso":"ETH","region":"Africa","lat":7.3561,"lon":38.6742,"ucdb":{"pop15":322442.0,"areaKm2":11.0},"layers":{"mass":null}}
+{"id":5162,"slug":"arsi-negelle","name":"Arsi Negelle","country":"Ethiopia","iso":"ETH","region":"Africa","lat":7.3561,"lon":38.6742,"ucdb":{"pop15":322442.0,"areaKm2":11.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5660,"ssp1Km2":81.7,"ssp3Km2":69.0,"ssp5Km2":83.0,"loKm2":69.0,"hiKm2":83.0}}}

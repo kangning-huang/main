@@ -1,1 +1,1 @@
-{"id":5963,"slug":"al-ghubra","name":"Al Ghubra","country":"Oman","iso":"OMN","region":"Asia","lat":23.5988,"lon":58.4304,"ucdb":{"pop15":345516.0,"areaKm2":79.0},"layers":{"mass":null}}
+{"id":5963,"slug":"al-ghubra","name":"Al Ghubra","country":"Oman","iso":"OMN","region":"Asia","lat":23.5988,"lon":58.4304,"ucdb":{"pop15":345516.0,"areaKm2":79.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3887,"ssp1Km2":139.5,"ssp3Km2":140.5,"ssp5Km2":169.5,"loKm2":139.5,"hiKm2":169.5}}}

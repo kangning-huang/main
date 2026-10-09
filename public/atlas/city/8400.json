@@ -1,1 +1,1 @@
-{"id":8400,"slug":"khamaria","name":"Khamaria","country":"India","iso":"IND","region":"Asia","lat":25.2577,"lon":82.5487,"ucdb":{"pop15":336659.0,"areaKm2":61.0},"layers":{"mass":null}}
+{"id":8400,"slug":"khamaria","name":"Khamaria","country":"India","iso":"IND","region":"Asia","lat":25.2577,"lon":82.5487,"ucdb":{"pop15":336659.0,"areaKm2":61.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3495,"ssp1Km2":91.0,"ssp3Km2":57.7,"ssp5Km2":101.8,"loKm2":57.7,"hiKm2":101.8},"jgr":{"quality":"exact","dNightC":-0.02,"dNightCoolRoofC":-0.54}}}

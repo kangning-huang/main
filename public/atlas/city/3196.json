@@ -1,1 +1,1 @@
-{"id":3196,"slug":"sarajevo","name":"Sarajevo","country":"Bosnia and Herzegovina","iso":"BIH","region":"Europe","lat":43.8553,"lon":18.3526,"ucdb":{"pop15":371884.0,"areaKm2":98.0},"layers":{"mass":null}}
+{"id":3196,"slug":"sarajevo","name":"Sarajevo","country":"Bosnia and Herzegovina","iso":"BIH","region":"Europe","lat":43.8553,"lon":18.3526,"ucdb":{"pop15":371884.0,"areaKm2":98.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":681,"ssp1Km2":625.0,"ssp3Km2":600.5,"ssp5Km2":664.5,"loKm2":600.5,"hiKm2":664.5}}}

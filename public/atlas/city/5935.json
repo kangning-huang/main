@@ -1,1 +1,1 @@
-{"id":5935,"slug":"jiroft","name":"Jiroft","country":"Iran","iso":"IRN","region":"Asia","lat":28.6769,"lon":57.74,"ucdb":{"pop15":356601.0,"areaKm2":33.0},"layers":{"mass":null}}
+{"id":5935,"slug":"jiroft","name":"Jiroft","country":"Iran","iso":"IRN","region":"Asia","lat":28.6769,"lon":57.74,"ucdb":{"pop15":356601.0,"areaKm2":33.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2802,"ssp1Km2":47.5,"ssp3Km2":48.0,"ssp5Km2":50.5,"loKm2":47.5,"hiKm2":50.5}}}

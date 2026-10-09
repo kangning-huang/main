@@ -1,1 +1,1 @@
-{"id":5634,"slug":"aktobe","name":"Aktobe","country":"Kazakhstan","iso":"KAZ","region":"Asia","lat":50.2957,"lon":57.205,"ucdb":{"pop15":394478.0,"areaKm2":104.0},"layers":{"mass":null}}
+{"id":5634,"slug":"aktobe","name":"Aktobe","country":"Kazakhstan","iso":"KAZ","region":"Asia","lat":50.2957,"lon":57.205,"ucdb":{"pop15":394478.0,"areaKm2":104.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":321,"ssp1Km2":138.5,"ssp3Km2":144.2,"ssp5Km2":150.3,"loKm2":138.5,"hiKm2":150.3}}}

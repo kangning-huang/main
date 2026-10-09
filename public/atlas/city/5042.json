@@ -1,1 +1,1 @@
-{"id":5042,"slug":"alaba-kulito","name":"Alaba Kulito","country":"Ethiopia","iso":"ETH","region":"Africa","lat":7.3121,"lon":38.0909,"ucdb":{"pop15":314655.0,"areaKm2":9.0},"layers":{"mass":null}}
+{"id":5042,"slug":"alaba-kulito","name":"Alaba Kulito","country":"Ethiopia","iso":"ETH","region":"Africa","lat":7.3121,"lon":38.0909,"ucdb":{"pop15":314655.0,"areaKm2":9.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5662,"ssp1Km2":206.8,"ssp3Km2":131.7,"ssp5Km2":190.5,"loKm2":131.7,"hiKm2":206.8}}}

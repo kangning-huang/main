@@ -1,1 +1,1 @@
-{"id":6267,"slug":"swabi","name":"Swabi","country":"Pakistan","iso":"PAK","region":"Asia","lat":34.0827,"lon":72.4643,"ucdb":{"pop15":350349.0,"areaKm2":59.0},"layers":{"mass":null}}
+{"id":6267,"slug":"swabi","name":"Swabi","country":"Pakistan","iso":"PAK","region":"Asia","lat":34.0827,"lon":72.4643,"ucdb":{"pop15":350349.0,"areaKm2":59.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":1783,"ssp1Km2":7445.7,"ssp3Km2":3175.0,"ssp5Km2":7520.7,"loKm2":3175.0,"hiKm2":7520.7}}}

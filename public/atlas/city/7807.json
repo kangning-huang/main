@@ -1,1 +1,1 @@
-{"id":7807,"slug":"bidar","name":"Bidar","country":"India","iso":"IND","region":"Asia","lat":17.9106,"lon":77.5069,"ucdb":{"pop15":357121.0,"areaKm2":31.0},"layers":{"mass":null}}
+{"id":7807,"slug":"bidar","name":"Bidar","country":"India","iso":"IND","region":"Asia","lat":17.9106,"lon":77.5069,"ucdb":{"pop15":357121.0,"areaKm2":31.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4656,"ssp1Km2":39.3,"ssp3Km2":30.5,"ssp5Km2":44.0,"loKm2":30.5,"hiKm2":44.0},"jgr":{"quality":"exact","dNightC":-0.1,"dNightCoolRoofC":-0.2}}}

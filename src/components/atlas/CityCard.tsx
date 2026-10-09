@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import type { CityDetail } from "@/lib/atlas";
-import { MASS_PAPER, HEAT_PAPER, COOLING_PAPER, FLOOD_PAPER, formatPop, formatMassT } from "@/lib/atlas";
+import { MASS_PAPER, HEAT_PAPER, COOLING_PAPER, FLOOD_PAPER, EXPANSION_PAPER, JGR_PAPER, formatPop, formatMassT } from "@/lib/atlas";
 import T from "@/components/T";
 
 type Props = {
@@ -27,7 +27,10 @@ export default function CityCard({ city, loading, onClose }: Props) {
   const heat = city.layers.heat;
   const cooling = city.layers.cooling;
   const flood = city.layers.flood;
-  const nLayers = [mass, heat, cooling, flood].filter(Boolean).length;
+  const expansion = city.layers.expansion;
+  const jgr = city.layers.jgr;
+  const nLayers = [mass, heat, cooling, flood, expansion, jgr].filter(Boolean).length;
+  const nMapped = 6;
 
   return (
     <aside
@@ -71,8 +74,8 @@ export default function CityCard({ city, loading, onClose }: Props) {
 
       <p className="mt-4 text-xs text-ink-faint">
         <T
-          en={`Covered by ${nLayers} of 4 mapped studies.`}
-          zh={`4 项已上图研究中覆盖 ${nLayers} 项。`}
+          en={`Covered by ${nLayers} of ${nMapped} mapped studies.`}
+          zh={`${nMapped} 项已上图研究中覆盖 ${nLayers} 项。`}
         />
       </p>
 
@@ -304,14 +307,84 @@ export default function CityCard({ city, loading, onClose }: Props) {
         )}
       </section>
 
+      {/* ERL 2019 urban expansion */}
+      <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
+        <PanelHead
+          en="Urban land by 2050 (urban cluster)"
+          zh="至 2050 年城市用地（城市集群）"
+          venue={`ERL ${EXPANSION_PAPER.year}`}
+        />
+        {!expansion ? (
+          <NotCovered
+            en="Not covered by this study’s Huang_2019 urban-cluster table for this GHSL urban centre."
+            zh="该 GHSL 城市中心未包含在 Huang_2019 城市集群表中。"
+          />
+        ) : (
+          <>
+            {expansion.quality === "flagged" && (
+              <p className="mt-2 rounded bg-ember-light px-2 py-1 text-xs text-ember-dark">
+                <T
+                  en="Match flagged: centroid fell outside the preferred cluster polygon or was reassigned to a same-country neighbor. Values are for the matched Huang_2019 urban cluster."
+                  zh="匹配存疑：质心落在优选集群多边形外，或改派至同国邻近集群。数值对应匹配的 Huang_2019 城市集群。"
+                />
+              </p>
+            )}
+            <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
+              <Stat en="Projected urban land (range)" zh="预估城市用地（范围）" value={`${expansion.loKm2.toLocaleString()}–${expansion.hiKm2.toLocaleString()} km²`} big />
+              <Stat en="SSP1 / SSP3 / SSP5" zh="SSP1 / SSP3 / SSP5" value={`${expansion.ssp1Km2.toLocaleString()} / ${expansion.ssp3Km2.toLocaleString()} / ${expansion.ssp5Km2.toLocaleString()}`} />
+            </dl>
+            <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
+              <T
+                en={`Under Huang_2019 URBANMOD projections, this urban cluster’s urban land area by 2050 ranges from ${expansion.loKm2.toLocaleString()} to ${expansion.hiKm2.toLocaleString()} km² across SSP1, SSP3 and SSP5. Scenario range, not a forecast.`}
+                zh={`按 Huang_2019 URBANMOD 预测，该城市集群至 2050 年的城市用地在 SSP1/SSP3/SSP5 下为 ${expansion.loKm2.toLocaleString()}–${expansion.hiKm2.toLocaleString()} km²。情景范围，不是预测。`}
+              />
+            </p>
+            <Not
+              en="What this number is not: not the city’s municipal area alone. It is urban land in the modelled urban cluster that contains this centre (clumps can span multiple GHSL centres). Heat-island intensification (0.5–0.7 °C average in the paper) is not shown as a per-city value here — see the paper / Earth Engine app."
+              zh="这个数字不是什么：不是单独的市政建成区；它是包含该中心的模型城市集群内的城市用地（一个集群可覆盖多个 GHSL 中心）。论文中的热岛增强（平均 0.5–0.7 °C）此处未给出城市级数值——见论文 / Earth Engine 应用。"
+            />
+            <Links doi={EXPANSION_PAPER.doiUrl} app={EXPANSION_PAPER.appUrl} />
+          </>
+        )}
+      </section>
+
+      {/* JGR 2021 nighttime WBGT */}
+      <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
+        <PanelHead
+          en="Nighttime heat-stress change (WBGT)"
+          zh="夜间热应激变化（WBGT）"
+          venue={`JGR ${JGR_PAPER.year}`}
+        />
+        {!jgr ? (
+          <NotCovered
+            en="Not covered by this study (WRF domains: China, India and Nigeria urban grids only)."
+            zh="该研究未覆盖此城市（WRF 范围仅为中国、印度、尼日利亚城市网格）。"
+          />
+        ) : (
+          <>
+            <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
+              <Stat en="Night ΔWBGT · expansion" zh="夜间 ΔWBGT · 扩张" value={`${jgr.dNightC > 0 ? "+" : ""}${jgr.dNightC.toFixed(2)} °C`} big />
+              {jgr.dNightCoolRoofC != null && (
+                <Stat en="Night ΔWBGT · + cool roofs" zh="夜间 ΔWBGT · 含冷屋顶" value={`${jgr.dNightCoolRoofC > 0 ? "+" : ""}${jgr.dNightCoolRoofC.toFixed(2)} °C`} big />
+              )}
+            </dl>
+            <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
+              <T
+                en={`Urban expansion to 2050 changes nighttime wet-bulb globe temperature by ${jgr.dNightC > 0 ? "+" : ""}${jgr.dNightC.toFixed(2)} °C at this urban centre${jgr.dNightCoolRoofC != null ? ` (${jgr.dNightCoolRoofC > 0 ? "+" : ""}${jgr.dNightCoolRoofC.toFixed(2)} °C if cool roofs are installed)` : ""}. Sampled from the paper’s published geographic maps. Scenario, not a forecast.`}
+                zh={`至 2050 年城市扩张使该城市中心夜间湿球黑球温度变化 ${jgr.dNightC > 0 ? "+" : ""}${jgr.dNightC.toFixed(2)} °C${jgr.dNightCoolRoofC != null ? `（安装冷屋顶后为 ${jgr.dNightCoolRoofC > 0 ? "+" : ""}${jgr.dNightCoolRoofC.toFixed(2)} °C）` : ""}。数值来自论文已发表的地理分布图采样。情景，不是预测。`}
+              />
+            </p>
+            <Not
+              en="What this number is not: not a city census table from the SI (SI Tables S1–S2 / Table 1–2 are climate-zone or MUR aggregates). It is a point sample of the published nighttime ΔWBGT raster at the GHSL urban-centre coordinate."
+              zh="这个数字不是什么：不是 SI 中的城市普查表（SI 表为气候带或巨型都市区汇总）；它是在 GHSL 城市中心坐标上对已发表夜间 ΔWBGT 栅格的点采样。"
+            />
+            <Links doi={JGR_PAPER.doiUrl} />
+          </>
+        )}
+      </section>
+
       {/* Coming layers */}
       <div className="mt-4 space-y-2">
-        <ComingRow
-          en="Urban expansion to 2050"
-          zh="至 2050 年城市扩张"
-          noteEn="Coming — city-level crosswalk for the ERL 2019 projections is not in this build."
-          noteZh="即将加入 — 本版尚未接入 ERL 2019 预测的城市级对照。"
-        />
         <ComingRow
           en="Functional clusters & cooling (101 cities)"
           zh="功能簇与降温（101 座城市）"

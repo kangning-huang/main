@@ -1,1 +1,1 @@
-{"id":8340,"slug":"jalalpur","name":"Jalalpur","country":"India","iso":"IND","region":"Asia","lat":26.3127,"lon":82.7387,"ucdb":{"pop15":393616.0,"areaKm2":6.0},"layers":{"mass":null}}
+{"id":8340,"slug":"jalalpur","name":"Jalalpur","country":"India","iso":"IND","region":"Asia","lat":26.3127,"lon":82.7387,"ucdb":{"pop15":393616.0,"areaKm2":6.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3241,"ssp1Km2":52.0,"ssp3Km2":29.2,"ssp5Km2":61.5,"loKm2":29.2,"hiKm2":61.5},"jgr":{"quality":"exact","dNightC":-0.03,"dNightCoolRoofC":-0.2}}}

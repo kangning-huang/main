@@ -1,1 +1,1 @@
-{"id":9933,"slug":"homna","name":"Homna","country":"Bangladesh","iso":"BGD","region":"Asia","lat":23.6941,"lon":90.8318,"ucdb":{"pop15":570556.0,"areaKm2":269.0},"layers":{"mass":null}}
+{"id":9933,"slug":"homna","name":"Homna","country":"Bangladesh","iso":"BGD","region":"Asia","lat":23.6941,"lon":90.8318,"ucdb":{"pop15":570556.0,"areaKm2":269.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3881,"ssp1Km2":360.4,"ssp3Km2":230.6,"ssp5Km2":355.9,"loKm2":230.6,"hiKm2":360.4}}}

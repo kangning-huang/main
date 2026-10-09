@@ -1,1 +1,1 @@
-{"id":6278,"slug":"tando-allayhar","name":"Tando Allayhar","country":"Pakistan","iso":"PAK","region":"Asia","lat":25.4558,"lon":68.7168,"ucdb":{"pop15":439322.0,"areaKm2":15.0},"layers":{"mass":null}}
+{"id":6278,"slug":"tando-allayhar","name":"Tando Allayhar","country":"Pakistan","iso":"PAK","region":"Asia","lat":25.4558,"lon":68.7168,"ucdb":{"pop15":439322.0,"areaKm2":15.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3451,"ssp1Km2":333.0,"ssp3Km2":150.0,"ssp5Km2":323.0,"loKm2":150.0,"hiKm2":333.0}}}

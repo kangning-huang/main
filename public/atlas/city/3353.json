@@ -1,1 +1,1 @@
-{"id":3353,"slug":"mbandaka","name":"Mbandaka","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":0.0396,"lon":18.258,"ucdb":{"pop15":380885.0,"areaKm2":30.0},"layers":{"mass":null}}
+{"id":3353,"slug":"mbandaka","name":"Mbandaka","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":0.0396,"lon":18.258,"ucdb":{"pop15":380885.0,"areaKm2":30.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5995,"ssp1Km2":264.5,"ssp3Km2":189.8,"ssp5Km2":280.7,"loKm2":189.8,"hiKm2":280.7}}}

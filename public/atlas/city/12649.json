@@ -1,1 +1,1 @@
-{"id":12649,"slug":"sampang","name":"Sampang","country":"Indonesia","iso":"IDN","region":"Asia","lat":-7.1943,"lon":113.2444,"ucdb":{"pop15":345380.0,"areaKm2":21.0},"layers":{"mass":null}}
+{"id":12649,"slug":"sampang","name":"Sampang","country":"Indonesia","iso":"IDN","region":"Asia","lat":-7.1943,"lon":113.2444,"ucdb":{"pop15":345380.0,"areaKm2":21.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6270,"ssp1Km2":71.5,"ssp3Km2":33.4,"ssp5Km2":56.0,"loKm2":33.4,"hiKm2":71.5}}}

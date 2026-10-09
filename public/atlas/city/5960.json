@@ -1,1 +1,1 @@
-{"id":5960,"slug":"port-louis","name":"Port Louis","country":"Mauritius","iso":"MUS","region":"Africa","lat":-20.2891,"lon":57.4878,"ucdb":{"pop15":545315.0,"areaKm2":144.0},"layers":{"mass":null}}
+{"id":5960,"slug":"port-louis","name":"Port Louis","country":"Mauritius","iso":"MUS","region":"Africa","lat":-20.2891,"lon":57.4878,"ucdb":{"pop15":545315.0,"areaKm2":144.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6543,"ssp1Km2":558.7,"ssp3Km2":122.6,"ssp5Km2":555.4,"loKm2":122.6,"hiKm2":558.7}}}

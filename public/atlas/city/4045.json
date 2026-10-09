@@ -1,1 +1,1 @@
-{"id":4045,"slug":"kalemie","name":"Kalemie","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":-5.926,"lon":29.2001,"ucdb":{"pop15":462456.0,"areaKm2":39.0},"layers":{"mass":null}}
+{"id":4045,"slug":"kalemie","name":"Kalemie","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":-5.926,"lon":29.2001,"ucdb":{"pop15":462456.0,"areaKm2":39.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":6224,"ssp1Km2":110.2,"ssp3Km2":70.7,"ssp5Km2":110.2,"loKm2":70.7,"hiKm2":110.2}}}

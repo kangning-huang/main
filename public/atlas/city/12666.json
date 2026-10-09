@@ -1,1 +1,1 @@
-{"id":12666,"slug":"sumenep","name":"Sumenep","country":"Indonesia","iso":"IDN","region":"Asia","lat":-7.0267,"lon":113.8885,"ucdb":{"pop15":520291.0,"areaKm2":91.0},"layers":{"mass":null}}
+{"id":12666,"slug":"sumenep","name":"Sumenep","country":"Indonesia","iso":"IDN","region":"Asia","lat":-7.0267,"lon":113.8885,"ucdb":{"pop15":520291.0,"areaKm2":91.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":6265,"ssp1Km2":206.8,"ssp3Km2":143.3,"ssp5Km2":227.0,"loKm2":143.3,"hiKm2":227.0}}}

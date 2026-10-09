@@ -1,1 +1,1 @@
-{"id":8161,"slug":"shahpura","name":"Shahpura","country":"India","iso":"IND","region":"Asia","lat":23.1822,"lon":80.6975,"ucdb":{"pop15":484536.0,"areaKm2":4.0},"layers":{"mass":null}}
+{"id":8161,"slug":"shahpura","name":"Shahpura","country":"India","iso":"IND","region":"Asia","lat":23.1822,"lon":80.6975,"ucdb":{"pop15":484536.0,"areaKm2":4.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3959,"ssp1Km2":253.3,"ssp3Km2":147.5,"ssp5Km2":310.2,"loKm2":147.5,"hiKm2":310.2},"jgr":{"quality":"exact","dNightC":-0.07,"dNightCoolRoofC":-0.06}}}

@@ -13,7 +13,8 @@ Static city map for [kangning-huang.com/atlas](https://kangning-huang.com/atlas)
 ## What v1 deliberately skips
 
 - Per-city static `/atlas/<slug>` pages (keeps the static export fast; cards load JSON on demand).
-- Expansion / PNAS cooling-clusters / SSA infrastructure layers (later PRs).
+- Expansion (ERL 2019) and nighttime heat stress (JGR 2021) layers shipped.
+- PNAS cooling-clusters / SSA infrastructure layers (later PRs).
 - Expansion layer numbers (crosswalk not built in this export).
 
 ## Regenerate

@@ -1,1 +1,1 @@
-{"id":9054,"slug":"samastipur","name":"Samastipur","country":"India","iso":"IND","region":"Asia","lat":25.896,"lon":85.788,"ucdb":{"pop15":452410.0,"areaKm2":93.0},"layers":{"mass":null}}
+{"id":9054,"slug":"samastipur","name":"Samastipur","country":"India","iso":"IND","region":"Asia","lat":25.896,"lon":85.788,"ucdb":{"pop15":452410.0,"areaKm2":93.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3341,"ssp1Km2":42.5,"ssp3Km2":27.3,"ssp5Km2":50.7,"loKm2":27.3,"hiKm2":50.7},"jgr":{"quality":"exact","dNightC":-0.08,"dNightCoolRoofC":-0.26}}}

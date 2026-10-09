@@ -1,1 +1,1 @@
-{"id":3116,"slug":"guider","name":"Guider","country":"Cameroon","iso":"CMR","region":"Africa","lat":9.9326,"lon":13.9436,"ucdb":{"pop15":340715.0,"areaKm2":12.0},"layers":{"mass":null}}
+{"id":3116,"slug":"guider","name":"Guider","country":"Cameroon","iso":"CMR","region":"Africa","lat":9.9326,"lon":13.9436,"ucdb":{"pop15":340715.0,"areaKm2":12.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":5396,"ssp1Km2":129.9,"ssp3Km2":100.0,"ssp5Km2":135.2,"loKm2":100.0,"hiKm2":135.2}}}

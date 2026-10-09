@@ -1,1 +1,1 @@
-{"id":2132,"slug":"dosso","name":"Dosso","country":"Niger","iso":"NER","region":"Africa","lat":13.0462,"lon":3.198,"ucdb":{"pop15":340939.0,"areaKm2":16.0},"layers":{"mass":null}}
+{"id":2132,"slug":"dosso","name":"Dosso","country":"Niger","iso":"NER","region":"Africa","lat":13.0462,"lon":3.198,"ucdb":{"pop15":340939.0,"areaKm2":16.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":5000,"ssp1Km2":745.5,"ssp3Km2":518.8,"ssp5Km2":752.3,"loKm2":518.8,"hiKm2":752.3}}}

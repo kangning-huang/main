@@ -1,1 +1,1 @@
-{"id":12100,"slug":"p-y-ngs-ng","name":"P'y?ngs?ng","country":"North Korea","iso":"PRK","region":"Asia","lat":39.2555,"lon":125.8666,"ucdb":{"pop15":300843.0,"areaKm2":41.0},"layers":{"mass":null}}
+{"id":12100,"slug":"p-y-ngs-ng","name":"P'y?ngs?ng","country":"North Korea","iso":"PRK","region":"Asia","lat":39.2555,"lon":125.8666,"ucdb":{"pop15":300843.0,"areaKm2":41.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":1142,"ssp1Km2":1480.9,"ssp3Km2":631.5,"ssp5Km2":1576.4,"loKm2":631.5,"hiKm2":1576.4}}}

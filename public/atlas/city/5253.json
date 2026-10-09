@@ -1,1 +1,1 @@
-{"id":5253,"slug":"ganja","name":"Ganja","country":"Azerbaijan","iso":"AZE","region":"Asia","lat":40.6806,"lon":46.3492,"ucdb":{"pop15":344734.0,"areaKm2":55.0},"layers":{"mass":null}}
+{"id":5253,"slug":"ganja","name":"Ganja","country":"Azerbaijan","iso":"AZE","region":"Asia","lat":40.6806,"lon":46.3492,"ucdb":{"pop15":344734.0,"areaKm2":55.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":978,"ssp1Km2":275.7,"ssp3Km2":263.0,"ssp5Km2":272.3,"loKm2":263.0,"hiKm2":275.7}}}

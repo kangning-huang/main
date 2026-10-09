@@ -1,1 +1,1 @@
-{"id":3953,"slug":"mansa","name":"Mansa","country":"Zambia","iso":"ZMB","region":"Africa","lat":-11.1966,"lon":28.8926,"ucdb":{"pop15":313758.0,"areaKm2":38.0},"layers":{"mass":null}}
+{"id":3953,"slug":"mansa","name":"Mansa","country":"Zambia","iso":"ZMB","region":"Africa","lat":-11.1966,"lon":28.8926,"ucdb":{"pop15":313758.0,"areaKm2":38.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":6383,"ssp1Km2":38.6,"ssp3Km2":28.5,"ssp5Km2":37.6,"loKm2":28.5,"hiKm2":38.6}}}

@@ -1,1 +1,1 @@
-{"id":10312,"slug":"xichang","name":"Xichang","country":"China","iso":"CHN","region":"Asia","lat":27.8895,"lon":102.2541,"ucdb":{"pop15":318217.0,"areaKm2":68.0},"layers":{"mass":null}}
+{"id":10312,"slug":"xichang","name":"Xichang","country":"China","iso":"CHN","region":"Asia","lat":27.8895,"lon":102.2541,"ucdb":{"pop15":318217.0,"areaKm2":68.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2923,"ssp1Km2":101.5,"ssp3Km2":86.0,"ssp5Km2":119.0,"loKm2":86.0,"hiKm2":119.0},"jgr":{"quality":"exact","dNightC":-0.02,"dNightCoolRoofC":-0.17}}}

@@ -1,1 +1,1 @@
-{"id":7768,"slug":"chhatarpur","name":"Chhatarpur","country":"India","iso":"IND","region":"Asia","lat":24.9048,"lon":79.5874,"ucdb":{"pop15":347643.0,"areaKm2":25.0},"layers":{"mass":null}}
+{"id":7768,"slug":"chhatarpur","name":"Chhatarpur","country":"India","iso":"IND","region":"Asia","lat":24.9048,"lon":79.5874,"ucdb":{"pop15":347643.0,"areaKm2":25.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3598,"ssp1Km2":39.5,"ssp3Km2":29.2,"ssp5Km2":53.0,"loKm2":29.2,"hiKm2":53.0},"jgr":{"quality":"exact","dNightC":-0.07,"dNightCoolRoofC":-0.39}}}

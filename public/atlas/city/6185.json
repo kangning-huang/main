@@ -1,1 +1,1 @@
-{"id":6185,"slug":"jacobabad","name":"Jacobabad","country":"Pakistan","iso":"PAK","region":"Asia","lat":28.278,"lon":68.4438,"ucdb":{"pop15":301179.0,"areaKm2":29.0},"layers":{"mass":null}}
+{"id":6185,"slug":"jacobabad","name":"Jacobabad","country":"Pakistan","iso":"PAK","region":"Asia","lat":28.278,"lon":68.4438,"ucdb":{"pop15":301179.0,"areaKm2":29.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2850,"ssp1Km2":43.0,"ssp3Km2":25.0,"ssp5Km2":35.5,"loKm2":25.0,"hiKm2":43.0}}}

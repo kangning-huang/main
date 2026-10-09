@@ -1,1 +1,1 @@
-{"id":9987,"slug":"noakhali","name":"Noakhali","country":"Bangladesh","iso":"BGD","region":"Asia","lat":22.9759,"lon":91.1263,"ucdb":{"pop15":2006142.0,"areaKm2":690.0},"layers":{"mass":null}}
+{"id":9987,"slug":"noakhali","name":"Noakhali","country":"Bangladesh","iso":"BGD","region":"Asia","lat":22.9759,"lon":91.1263,"ucdb":{"pop15":2006142.0,"areaKm2":690.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4032,"ssp1Km2":130.0,"ssp3Km2":50.0,"ssp5Km2":127.3,"loKm2":50.0,"hiKm2":130.0}}}

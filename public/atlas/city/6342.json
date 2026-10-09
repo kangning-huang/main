@@ -1,1 +1,1 @@
-{"id":6342,"slug":"chakwal","name":"Chakwal","country":"Pakistan","iso":"PAK","region":"Asia","lat":32.9337,"lon":72.8519,"ucdb":{"pop15":380689.0,"areaKm2":31.0},"layers":{"mass":null}}
+{"id":6342,"slug":"chakwal","name":"Chakwal","country":"Pakistan","iso":"PAK","region":"Asia","lat":32.9337,"lon":72.8519,"ucdb":{"pop15":380689.0,"areaKm2":31.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":1972,"ssp1Km2":998.3,"ssp3Km2":400.0,"ssp5Km2":978.3,"loKm2":400.0,"hiKm2":998.3}}}

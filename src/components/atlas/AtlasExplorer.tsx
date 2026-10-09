@@ -20,6 +20,8 @@ const FILTERS: { key: LayerKey | null; en: string; zh: string }[] = [
   { key: "heat", en: "Heat-island trend", zh: "热岛趋势" },
   { key: "cooling", en: "Demolition cooling", zh: "拆除降温" },
   { key: "flood", en: "Flood damage", zh: "洪涝损失" },
+  { key: "expansion", en: "Expansion 2050", zh: "扩张至 2050" },
+  { key: "jgr", en: "Night heat stress", zh: "夜间热应激" },
 ];
 
 const SUGGESTED = ["lagos", "shanghai", "new-york", "jakarta", "nairobi"];

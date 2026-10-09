@@ -1,1 +1,1 @@
-{"id":8386,"slug":"nautanwa","name":"Nautanwa","country":"India","iso":"IND","region":"Asia","lat":27.43,"lon":83.4285,"ucdb":{"pop15":355645.0,"areaKm2":11.0},"layers":{"mass":null}}
+{"id":8386,"slug":"nautanwa","name":"Nautanwa","country":"India","iso":"IND","region":"Asia","lat":27.43,"lon":83.4285,"ucdb":{"pop15":355645.0,"areaKm2":11.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3085,"ssp1Km2":678.7,"ssp3Km2":328.5,"ssp5Km2":729.3,"loKm2":328.5,"hiKm2":729.3},"jgr":{"quality":"exact","dNightC":0.02,"dNightCoolRoofC":-0.03}}}

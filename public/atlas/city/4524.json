@@ -1,1 +1,1 @@
-{"id":4524,"slug":"elazig","name":"Elazig","country":"Turkey","iso":"TUR","region":"Asia","lat":38.6704,"lon":39.2181,"ucdb":{"pop15":324305.0,"areaKm2":39.0},"layers":{"mass":null}}
+{"id":4524,"slug":"elazig","name":"Elazig","country":"Turkey","iso":"TUR","region":"Asia","lat":38.6704,"lon":39.2181,"ucdb":{"pop15":324305.0,"areaKm2":39.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":1191,"ssp1Km2":97.8,"ssp3Km2":99.0,"ssp5Km2":105.0,"loKm2":97.8,"hiKm2":105.0}}}

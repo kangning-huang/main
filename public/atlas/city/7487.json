@@ -1,1 +1,1 @@
-{"id":7487,"slug":"datia","name":"Datia","country":"India","iso":"IND","region":"Asia","lat":25.6673,"lon":78.4531,"ucdb":{"pop15":353603.0,"areaKm2":19.0},"layers":{"mass":null}}
+{"id":7487,"slug":"datia","name":"Datia","country":"India","iso":"IND","region":"Asia","lat":25.6673,"lon":78.4531,"ucdb":{"pop15":353603.0,"areaKm2":19.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3400,"ssp1Km2":47.5,"ssp3Km2":28.5,"ssp5Km2":51.0,"loKm2":28.5,"hiKm2":51.0},"jgr":{"quality":"exact","dNightC":-0.15,"dNightCoolRoofC":-0.47}}}

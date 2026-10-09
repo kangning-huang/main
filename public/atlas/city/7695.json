@@ -1,1 +1,1 @@
-{"id":7695,"slug":"kalpi","name":"Kalpi","country":"India","iso":"IND","region":"Asia","lat":26.1231,"lon":79.7498,"ucdb":{"pop15":309116.0,"areaKm2":9.0},"layers":{"mass":null}}
+{"id":7695,"slug":"kalpi","name":"Kalpi","country":"India","iso":"IND","region":"Asia","lat":26.1231,"lon":79.7498,"ucdb":{"pop15":309116.0,"areaKm2":9.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3285,"ssp1Km2":39.3,"ssp3Km2":31.5,"ssp5Km2":45.0,"loKm2":31.5,"hiKm2":45.0},"jgr":{"quality":"exact","dNightC":-0.19,"dNightCoolRoofC":-0.48}}}

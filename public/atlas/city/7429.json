@@ -1,1 +1,1 @@
-{"id":7429,"slug":"baheri","name":"Baheri","country":"India","iso":"IND","region":"Asia","lat":28.7901,"lon":79.4992,"ucdb":{"pop15":365226.0,"areaKm2":27.0},"layers":{"mass":null}}
+{"id":7429,"slug":"baheri","name":"Baheri","country":"India","iso":"IND","region":"Asia","lat":28.7901,"lon":79.4992,"ucdb":{"pop15":365226.0,"areaKm2":27.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2784,"ssp1Km2":38.5,"ssp3Km2":26.5,"ssp5Km2":39.3,"loKm2":26.5,"hiKm2":39.3},"jgr":{"quality":"exact","dNightC":-0.08,"dNightCoolRoofC":-0.35}}}

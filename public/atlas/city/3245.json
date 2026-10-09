@@ -1,1 +1,1 @@
-{"id":3245,"slug":"moundou","name":"Moundou","country":"Chad","iso":"TCD","region":"Africa","lat":8.5675,"lon":16.0707,"ucdb":{"pop15":369440.0,"areaKm2":25.0},"layers":{"mass":null}}
+{"id":3245,"slug":"moundou","name":"Moundou","country":"Chad","iso":"TCD","region":"Africa","lat":8.5675,"lon":16.0707,"ucdb":{"pop15":369440.0,"areaKm2":25.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5552,"ssp1Km2":112.5,"ssp3Km2":111.7,"ssp5Km2":122.0,"loKm2":111.7,"hiKm2":122.0}}}

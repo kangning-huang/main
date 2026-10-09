@@ -1,1 +1,1 @@
-{"id":7947,"slug":"baberu","name":"Baberu","country":"India","iso":"IND","region":"Asia","lat":25.5464,"lon":80.7041,"ucdb":{"pop15":373070.0,"areaKm2":6.0},"layers":{"mass":null}}
+{"id":7947,"slug":"baberu","name":"Baberu","country":"India","iso":"IND","region":"Asia","lat":25.5464,"lon":80.7041,"ucdb":{"pop15":373070.0,"areaKm2":6.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3328,"ssp1Km2":159.0,"ssp3Km2":86.5,"ssp5Km2":179.5,"loKm2":86.5,"hiKm2":179.5},"jgr":{"quality":"exact","dNightC":-0.05,"dNightCoolRoofC":-0.14}}}

@@ -1,1 +1,1 @@
-{"id":4608,"slug":"kisumu","name":"Kisumu","country":"Kenya","iso":"KEN","region":"Africa","lat":-0.0864,"lon":34.7771,"ucdb":{"pop15":308524.0,"areaKm2":43.0},"layers":{"mass":null}}
+{"id":4608,"slug":"kisumu","name":"Kisumu","country":"Kenya","iso":"KEN","region":"Africa","lat":-0.0864,"lon":34.7771,"ucdb":{"pop15":308524.0,"areaKm2":43.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6003,"ssp1Km2":207.0,"ssp3Km2":194.2,"ssp5Km2":216.2,"loKm2":194.2,"hiKm2":216.2}}}

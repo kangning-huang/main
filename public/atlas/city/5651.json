@@ -1,1 +1,1 @@
-{"id":5651,"slug":"ibb","name":"Ibb","country":"Yemen","iso":"YEM","region":"Asia","lat":13.9629,"lon":44.1717,"ucdb":{"pop15":365667.0,"areaKm2":21.0},"layers":{"mass":null}}
+{"id":5651,"slug":"ibb","name":"Ibb","country":"Yemen","iso":"YEM","region":"Asia","lat":13.9629,"lon":44.1717,"ucdb":{"pop15":365667.0,"areaKm2":21.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4943,"ssp1Km2":4475.0,"ssp3Km2":3777.2,"ssp5Km2":5351.3,"loKm2":3777.2,"hiKm2":5351.3}}}

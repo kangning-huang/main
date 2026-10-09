@@ -1,1 +1,1 @@
-{"id":8760,"slug":"sasaram","name":"Sasaram","country":"India","iso":"IND","region":"Asia","lat":24.9563,"lon":84.0396,"ucdb":{"pop15":331368.0,"areaKm2":42.0},"layers":{"mass":null}}
+{"id":8760,"slug":"sasaram","name":"Sasaram","country":"India","iso":"IND","region":"Asia","lat":24.9563,"lon":84.0396,"ucdb":{"pop15":331368.0,"areaKm2":42.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":3601,"ssp1Km2":117.8,"ssp3Km2":53.5,"ssp5Km2":142.0,"loKm2":53.5,"hiKm2":142.0},"jgr":{"quality":"exact","dNightC":-0.07,"dNightCoolRoofC":-0.44}}}

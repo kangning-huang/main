@@ -1,1 +1,1 @@
-{"id":8735,"slug":"nagapattinam","name":"Nagapattinam","country":"India","iso":"IND","region":"Asia","lat":10.6773,"lon":79.8425,"ucdb":{"pop15":415571.0,"areaKm2":116.0},"layers":{"mass":null}}
+{"id":8735,"slug":"nagapattinam","name":"Nagapattinam","country":"India","iso":"IND","region":"Asia","lat":10.6773,"lon":79.8425,"ucdb":{"pop15":415571.0,"areaKm2":116.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":5294,"ssp1Km2":146.7,"ssp3Km2":79.8,"ssp5Km2":154.3,"loKm2":79.8,"hiKm2":154.3},"jgr":{"quality":"exact","dNightC":-0.09,"dNightCoolRoofC":-0.21}}}

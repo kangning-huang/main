@@ -1,1 +1,1 @@
-{"id":10051,"slug":"n-a-bgd","name":"N/A","country":"Bangladesh","iso":"BGD","region":"Asia","lat":22.2045,"lon":91.9692,"ucdb":{"pop15":382903.0,"areaKm2":122.0},"layers":{"mass":null}}
+{"id":10051,"slug":"n-a-bgd","name":"N/A","country":"Bangladesh","iso":"BGD","region":"Asia","lat":22.2045,"lon":91.9692,"ucdb":{"pop15":382903.0,"areaKm2":122.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4164,"ssp1Km2":532.6,"ssp3Km2":250.0,"ssp5Km2":543.6,"loKm2":250.0,"hiKm2":543.6}}}

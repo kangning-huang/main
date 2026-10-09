@@ -1,1 +1,1 @@
-{"id":7889,"slug":"nanpara","name":"Nanpara","country":"India","iso":"IND","region":"Asia","lat":27.8566,"lon":81.5065,"ucdb":{"pop15":654290.0,"areaKm2":11.0},"layers":{"mass":null}}
+{"id":7889,"slug":"nanpara","name":"Nanpara","country":"India","iso":"IND","region":"Asia","lat":27.8566,"lon":81.5065,"ucdb":{"pop15":654290.0,"areaKm2":11.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2930,"ssp1Km2":59.0,"ssp3Km2":26.8,"ssp5Km2":65.2,"loKm2":26.8,"hiKm2":65.2},"jgr":{"quality":"exact","dNightC":-0.12,"dNightCoolRoofC":-0.41}}}

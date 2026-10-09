@@ -1,1 +1,1 @@
-{"id":5188,"slug":"ramadi","name":"Ramadi","country":"Iraq","iso":"IRQ","region":"Asia","lat":33.4325,"lon":43.3023,"ucdb":{"pop15":448266.0,"areaKm2":79.0},"layers":{"mass":null}}
+{"id":5188,"slug":"ramadi","name":"Ramadi","country":"Iraq","iso":"IRQ","region":"Asia","lat":33.4325,"lon":43.3023,"ucdb":{"pop15":448266.0,"areaKm2":79.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2014,"ssp1Km2":99.5,"ssp3Km2":105.0,"ssp5Km2":110.2,"loKm2":99.5,"hiKm2":110.2}}}

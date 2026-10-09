@@ -1,1 +1,1 @@
-{"id":4287,"slug":"aswan","name":"Aswan","country":"Egypt","iso":"EGY","region":"Africa","lat":24.0687,"lon":32.8934,"ucdb":{"pop15":329229.0,"areaKm2":41.0},"layers":{"mass":null}}
+{"id":4287,"slug":"aswan","name":"Aswan","country":"Egypt","iso":"EGY","region":"Africa","lat":24.0687,"lon":32.8934,"ucdb":{"pop15":329229.0,"areaKm2":41.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3791,"ssp1Km2":56.2,"ssp3Km2":45.5,"ssp5Km2":57.2,"loKm2":45.5,"hiKm2":57.2}}}

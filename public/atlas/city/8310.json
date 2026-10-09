@@ -1,1 +1,1 @@
-{"id":8310,"slug":"handia","name":"Handia","country":"India","iso":"IND","region":"Asia","lat":25.3389,"lon":82.2704,"ucdb":{"pop15":672497.0,"areaKm2":50.0},"layers":{"mass":null}}
+{"id":8310,"slug":"handia","name":"Handia","country":"India","iso":"IND","region":"Asia","lat":25.3389,"lon":82.2704,"ucdb":{"pop15":672497.0,"areaKm2":50.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3488,"ssp1Km2":38.7,"ssp3Km2":26.2,"ssp5Km2":43.8,"loKm2":26.2,"hiKm2":43.8},"jgr":{"quality":"exact","dNightC":-0.12,"dNightCoolRoofC":-0.42}}}

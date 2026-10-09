@@ -1,1 +1,1 @@
-{"id":2101,"slug":"porto-novo","name":"Porto-Novo","country":"Benin","iso":"BEN","region":"Africa","lat":6.5086,"lon":2.6251,"ucdb":{"pop15":565466.0,"areaKm2":94.0},"layers":{"mass":null}}
+{"id":2101,"slug":"porto-novo","name":"Porto-Novo","country":"Benin","iso":"BEN","region":"Africa","lat":6.5086,"lon":2.6251,"ucdb":{"pop15":565466.0,"areaKm2":94.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5690,"ssp1Km2":1390.8,"ssp3Km2":1178.9,"ssp5Km2":1437.8,"loKm2":1178.9,"hiKm2":1437.8}}}

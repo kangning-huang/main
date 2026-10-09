@@ -1,1 +1,1 @@
-{"id":8325,"slug":"sidhi","name":"Sidhi","country":"India","iso":"IND","region":"Asia","lat":24.4092,"lon":81.8786,"ucdb":{"pop15":375728.0,"areaKm2":10.0},"layers":{"mass":null}}
+{"id":8325,"slug":"sidhi","name":"Sidhi","country":"India","iso":"IND","region":"Asia","lat":24.4092,"lon":81.8786,"ucdb":{"pop15":375728.0,"areaKm2":10.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3719,"ssp1Km2":40.0,"ssp3Km2":33.3,"ssp5Km2":46.3,"loKm2":33.3,"hiKm2":46.3},"jgr":{"quality":"exact","dNightC":-0.04,"dNightCoolRoofC":-0.19}}}

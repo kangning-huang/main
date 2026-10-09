@@ -1,1 +1,1 @@
-{"id":9647,"slug":"cooch-behar","name":"Cooch Behar","country":"India","iso":"IND","region":"Asia","lat":26.3342,"lon":89.4506,"ucdb":{"pop15":302484.0,"areaKm2":48.0},"layers":{"mass":null}}
+{"id":9647,"slug":"cooch-behar","name":"Cooch Behar","country":"India","iso":"IND","region":"Asia","lat":26.3342,"lon":89.4506,"ucdb":{"pop15":302484.0,"areaKm2":48.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3233,"ssp1Km2":64.5,"ssp3Km2":27.3,"ssp5Km2":71.5,"loKm2":27.3,"hiKm2":71.5},"jgr":{"quality":"exact","dNightC":-0.13,"dNightCoolRoofC":-0.54}}}

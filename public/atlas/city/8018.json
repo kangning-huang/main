@@ -1,1 +1,1 @@
-{"id":8018,"slug":"khaga","name":"Khaga","country":"India","iso":"IND","region":"Asia","lat":25.7695,"lon":81.1071,"ucdb":{"pop15":477341.0,"areaKm2":14.0},"layers":{"mass":null}}
+{"id":8018,"slug":"khaga","name":"Khaga","country":"India","iso":"IND","region":"Asia","lat":25.7695,"lon":81.1071,"ucdb":{"pop15":477341.0,"areaKm2":14.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3382,"ssp1Km2":53.0,"ssp3Km2":29.2,"ssp5Km2":59.8,"loKm2":29.2,"hiKm2":59.8},"jgr":{"quality":"exact","dNightC":-0.1,"dNightCoolRoofC":-0.37}}}

@@ -1,1 +1,1 @@
-{"id":7486,"slug":"faridpur","name":"Faridpur","country":"India","iso":"IND","region":"Asia","lat":28.209,"lon":79.539,"ucdb":{"pop15":300637.0,"areaKm2":7.0},"layers":{"mass":null}}
+{"id":7486,"slug":"faridpur","name":"Faridpur","country":"India","iso":"IND","region":"Asia","lat":28.209,"lon":79.539,"ucdb":{"pop15":300637.0,"areaKm2":7.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":2838,"ssp1Km2":325.3,"ssp3Km2":167.3,"ssp5Km2":352.5,"loKm2":167.3,"hiKm2":352.5},"jgr":{"quality":"exact","dNightC":-0.09,"dNightCoolRoofC":-0.6}}}

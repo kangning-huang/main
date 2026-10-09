@@ -1,1 +1,1 @@
-{"id":5538,"slug":"hodeidah","name":"Hodeidah","country":"Yemen","iso":"YEM","region":"Asia","lat":14.7999,"lon":42.9628,"ucdb":{"pop15":558661.0,"areaKm2":50.0},"layers":{"mass":null}}
+{"id":5538,"slug":"hodeidah","name":"Hodeidah","country":"Yemen","iso":"YEM","region":"Asia","lat":14.7999,"lon":42.9628,"ucdb":{"pop15":558661.0,"areaKm2":50.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4897,"ssp1Km2":132.5,"ssp3Km2":129.8,"ssp5Km2":132.5,"loKm2":129.8,"hiKm2":132.5}}}

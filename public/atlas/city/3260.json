@@ -1,1 +1,1 @@
-{"id":3260,"slug":"windhoek","name":"Windhoek","country":"Namibia","iso":"NAM","region":"Africa","lat":-22.5419,"lon":17.0531,"ucdb":{"pop15":365942.0,"areaKm2":80.0},"layers":{"mass":null}}
+{"id":3260,"slug":"windhoek","name":"Windhoek","country":"Namibia","iso":"NAM","region":"Africa","lat":-22.5419,"lon":17.0531,"ucdb":{"pop15":365942.0,"areaKm2":80.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6608,"ssp1Km2":278.0,"ssp3Km2":125.0,"ssp5Km2":301.0,"loKm2":125.0,"hiKm2":301.0}}}

@@ -1,1 +1,1 @@
-{"id":1997,"slug":"tera","name":"Téra","country":"Niger","iso":"NER","region":"Africa","lat":14.0061,"lon":0.7522,"ucdb":{"pop15":354162.0,"areaKm2":6.0},"layers":{"mass":null}}
+{"id":1997,"slug":"tera","name":"Téra","country":"Niger","iso":"NER","region":"Africa","lat":14.0061,"lon":0.7522,"ucdb":{"pop15":354162.0,"areaKm2":6.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":5000,"ssp1Km2":745.5,"ssp3Km2":518.8,"ssp5Km2":752.3,"loKm2":518.8,"hiKm2":752.3}}}

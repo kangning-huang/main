@@ -1,1 +1,1 @@
-{"id":4389,"slug":"kosti","name":"Kosti","country":"Sudan","iso":"SDN","region":"Africa","lat":13.1522,"lon":32.6663,"ucdb":{"pop15":485519.0,"areaKm2":32.0},"layers":{"mass":null}}
+{"id":4389,"slug":"kosti","name":"Kosti","country":"Sudan","iso":"SDN","region":"Africa","lat":13.1522,"lon":32.6663,"ucdb":{"pop15":485519.0,"areaKm2":32.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5039,"ssp1Km2":360.5,"ssp3Km2":249.7,"ssp5Km2":314.2,"loKm2":249.7,"hiKm2":360.5}}}

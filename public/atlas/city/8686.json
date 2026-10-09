@@ -1,1 +1,1 @@
-{"id":8686,"slug":"bettiah","name":"Bettiah","country":"India","iso":"IND","region":"Asia","lat":26.8018,"lon":84.516,"ucdb":{"pop15":335028.0,"areaKm2":24.0},"layers":{"mass":null}}
+{"id":8686,"slug":"bettiah","name":"Bettiah","country":"India","iso":"IND","region":"Asia","lat":26.8018,"lon":84.516,"ucdb":{"pop15":335028.0,"areaKm2":24.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3129,"ssp1Km2":227.7,"ssp3Km2":110.7,"ssp5Km2":255.5,"loKm2":110.7,"hiKm2":255.5},"jgr":{"quality":"exact","dNightC":-0.13,"dNightCoolRoofC":-0.53}}}

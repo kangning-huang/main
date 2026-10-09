@@ -1,1 +1,1 @@
-{"id":2775,"slug":"zinder","name":"Zinder","country":"Niger","iso":"NER","region":"Africa","lat":13.8072,"lon":8.984,"ucdb":{"pop15":564389.0,"areaKm2":32.0},"layers":{"mass":null}}
+{"id":2775,"slug":"zinder","name":"Zinder","country":"Niger","iso":"NER","region":"Africa","lat":13.8072,"lon":8.984,"ucdb":{"pop15":564389.0,"areaKm2":32.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4980,"ssp1Km2":140.3,"ssp3Km2":100.0,"ssp5Km2":150.8,"loKm2":100.0,"hiKm2":150.8}}}

@@ -1,1 +1,1 @@
-{"id":3658,"slug":"ad-da-ein","name":"Ad Da'ein","country":"Sudan","iso":"SDN","region":"Africa","lat":11.4628,"lon":26.1343,"ucdb":{"pop15":560073.0,"areaKm2":26.0},"layers":{"mass":null}}
+{"id":3658,"slug":"ad-da-ein","name":"Ad Da'ein","country":"Sudan","iso":"SDN","region":"Africa","lat":11.4628,"lon":26.1343,"ucdb":{"pop15":560073.0,"areaKm2":26.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5230,"ssp1Km2":72.5,"ssp3Km2":57.2,"ssp5Km2":77.5,"loKm2":57.2,"hiKm2":77.5}}}

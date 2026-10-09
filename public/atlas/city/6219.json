@@ -1,1 +1,1 @@
-{"id":6219,"slug":"chakdara","name":"Chakdara","country":"Pakistan","iso":"PAK","region":"Asia","lat":34.6927,"lon":72.0356,"ucdb":{"pop15":312554.0,"areaKm2":46.0},"layers":{"mass":null}}
+{"id":6219,"slug":"chakdara","name":"Chakdara","country":"Pakistan","iso":"PAK","region":"Asia","lat":34.6927,"lon":72.0356,"ucdb":{"pop15":312554.0,"areaKm2":46.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":1783,"ssp1Km2":7445.7,"ssp3Km2":3175.0,"ssp5Km2":7520.7,"loKm2":3175.0,"hiKm2":7520.7}}}

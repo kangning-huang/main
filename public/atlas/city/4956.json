@@ -1,1 +1,1 @@
-{"id":4956,"slug":"morogoro","name":"Morogoro","country":"Tanzania","iso":"TZA","region":"Africa","lat":-6.8049,"lon":37.6683,"ucdb":{"pop15":361663.0,"areaKm2":68.0},"layers":{"mass":null}}
+{"id":4956,"slug":"morogoro","name":"Morogoro","country":"Tanzania","iso":"TZA","region":"Africa","lat":-6.8049,"lon":37.6683,"ucdb":{"pop15":361663.0,"areaKm2":68.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6250,"ssp1Km2":155.3,"ssp3Km2":118.5,"ssp5Km2":161.5,"loKm2":118.5,"hiKm2":161.5}}}

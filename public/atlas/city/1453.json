@@ -1,1 +1,1 @@
-{"id":1453,"slug":"mbour","name":"MBour","country":"Senegal","iso":"SEN","region":"Africa","lat":14.428,"lon":-16.9896,"ucdb":{"pop15":498706.0,"areaKm2":63.0},"layers":{"mass":null}}
+{"id":1453,"slug":"mbour","name":"MBour","country":"Senegal","iso":"SEN","region":"Africa","lat":14.428,"lon":-16.9896,"ucdb":{"pop15":498706.0,"areaKm2":63.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4920,"ssp1Km2":57.3,"ssp3Km2":51.1,"ssp5Km2":65.6,"loKm2":51.1,"hiKm2":65.6}}}

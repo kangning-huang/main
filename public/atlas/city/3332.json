@@ -1,1 +1,1 @@
-{"id":3332,"slug":"skopje","name":"Skopje","country":"Macedonia","iso":"MKD","region":"Europe","lat":42.007,"lon":21.4243,"ucdb":{"pop15":428210.0,"areaKm2":112.0},"layers":{"mass":null}}
+{"id":3332,"slug":"skopje","name":"Skopje","country":"Macedonia","iso":"MKD","region":"Europe","lat":42.007,"lon":21.4243,"ucdb":{"pop15":428210.0,"areaKm2":112.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":850,"ssp1Km2":493.7,"ssp3Km2":511.1,"ssp5Km2":573.9,"loKm2":493.7,"hiKm2":573.9}}}

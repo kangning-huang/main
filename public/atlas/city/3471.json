@@ -1,1 +1,1 @@
-{"id":3471,"slug":"adre","name":"???? Adré","country":"Chad","iso":"TCD","region":"Africa","lat":13.4691,"lon":22.2003,"ucdb":{"pop15":314794.0,"areaKm2":6.0},"layers":{"mass":null}}
+{"id":3471,"slug":"adre","name":"???? Adré","country":"Chad","iso":"TCD","region":"Africa","lat":13.4691,"lon":22.2003,"ucdb":{"pop15":314794.0,"areaKm2":6.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":4981,"ssp1Km2":139.8,"ssp3Km2":89.7,"ssp5Km2":118.3,"loKm2":89.7,"hiKm2":139.8}}}

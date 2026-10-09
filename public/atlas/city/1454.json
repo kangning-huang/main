@@ -1,1 +1,1 @@
-{"id":1454,"slug":"thies","name":"Thiès","country":"Senegal","iso":"SEN","region":"Africa","lat":14.784,"lon":-16.9267,"ucdb":{"pop15":432754.0,"areaKm2":43.0},"layers":{"mass":null}}
+{"id":1454,"slug":"thies","name":"Thiès","country":"Senegal","iso":"SEN","region":"Africa","lat":14.784,"lon":-16.9267,"ucdb":{"pop15":432754.0,"areaKm2":43.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4896,"ssp1Km2":300.5,"ssp3Km2":238.5,"ssp5Km2":287.8,"loKm2":238.5,"hiKm2":300.5}}}

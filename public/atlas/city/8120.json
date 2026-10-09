@@ -1,1 +1,1 @@
-{"id":8120,"slug":"kunda","name":"Kunda","country":"India","iso":"IND","region":"Asia","lat":25.7303,"lon":81.5305,"ucdb":{"pop15":320448.0,"areaKm2":20.0},"layers":{"mass":null}}
+{"id":8120,"slug":"kunda","name":"Kunda","country":"India","iso":"IND","region":"Asia","lat":25.7303,"lon":81.5305,"ucdb":{"pop15":320448.0,"areaKm2":20.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3402,"ssp1Km2":69.2,"ssp3Km2":27.8,"ssp5Km2":74.0,"loKm2":27.8,"hiKm2":74.0},"jgr":{"quality":"exact","dNightC":-0.15,"dNightCoolRoofC":-0.47}}}

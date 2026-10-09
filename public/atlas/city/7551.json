@@ -1,1 +1,1 @@
-{"id":7551,"slug":"lalitpur","name":"Lalitpur","country":"India","iso":"IND","region":"Asia","lat":24.6906,"lon":78.4173,"ucdb":{"pop15":468932.0,"areaKm2":24.0},"layers":{"mass":null}}
+{"id":7551,"slug":"lalitpur","name":"Lalitpur","country":"India","iso":"IND","region":"Asia","lat":24.6906,"lon":78.4173,"ucdb":{"pop15":468932.0,"areaKm2":24.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3648,"ssp1Km2":45.5,"ssp3Km2":30.3,"ssp5Km2":44.5,"loKm2":30.3,"hiKm2":45.5},"jgr":{"quality":"exact","dNightC":-0.02,"dNightCoolRoofC":-0.21}}}

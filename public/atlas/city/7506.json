@@ -1,1 +1,1 @@
-{"id":7506,"slug":"kaimganj","name":"Kaimganj","country":"India","iso":"IND","region":"Asia","lat":27.5499,"lon":79.3366,"ucdb":{"pop15":382727.0,"areaKm2":12.0},"layers":{"mass":null}}
+{"id":7506,"slug":"kaimganj","name":"Kaimganj","country":"India","iso":"IND","region":"Asia","lat":27.5499,"lon":79.3366,"ucdb":{"pop15":382727.0,"areaKm2":12.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2977,"ssp1Km2":171.0,"ssp3Km2":118.3,"ssp5Km2":189.5,"loKm2":118.3,"hiKm2":189.5},"jgr":{"quality":"exact","dNightC":-0.17,"dNightCoolRoofC":-0.64}}}

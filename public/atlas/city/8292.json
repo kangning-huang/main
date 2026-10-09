@@ -1,1 +1,1 @@
-{"id":8292,"slug":"tirunelveli","name":"Tirunelveli","country":"India","iso":"IND","region":"Asia","lat":8.7208,"lon":77.7037,"ucdb":{"pop15":344804.0,"areaKm2":48.0},"layers":{"mass":null}}
+{"id":8292,"slug":"tirunelveli","name":"Tirunelveli","country":"India","iso":"IND","region":"Asia","lat":8.7208,"lon":77.7037,"ucdb":{"pop15":344804.0,"areaKm2":48.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5532,"ssp1Km2":172.0,"ssp3Km2":83.0,"ssp5Km2":198.7,"loKm2":83.0,"hiKm2":198.7},"jgr":{"quality":"exact","dNightC":0.42,"dNightCoolRoofC":0.4}}}

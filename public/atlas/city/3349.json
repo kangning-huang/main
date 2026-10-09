@@ -1,1 +1,1 @@
-{"id":3349,"slug":"benghazi","name":"Benghazi","country":"Libya","iso":"LBY","region":"Africa","lat":32.0948,"lon":20.1014,"ucdb":{"pop15":464916.0,"areaKm2":160.0},"layers":{"mass":null}}
+{"id":3349,"slug":"benghazi","name":"Benghazi","country":"Libya","iso":"LBY","region":"Africa","lat":32.0948,"lon":20.1014,"ucdb":{"pop15":464916.0,"areaKm2":160.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2218,"ssp1Km2":202.8,"ssp3Km2":179.5,"ssp5Km2":209.8,"loKm2":179.5,"hiKm2":209.8}}}

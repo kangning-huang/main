@@ -1,1 +1,1 @@
-{"id":10060,"slug":"dimapur","name":"Dimapur","country":"India","iso":"IND","region":"Asia","lat":25.8872,"lon":93.7418,"ucdb":{"pop15":500250.0,"areaKm2":85.0},"layers":{"mass":null}}
+{"id":10060,"slug":"dimapur","name":"Dimapur","country":"India","iso":"IND","region":"Asia","lat":25.8872,"lon":93.7418,"ucdb":{"pop15":500250.0,"areaKm2":85.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3345,"ssp1Km2":38.5,"ssp3Km2":30.8,"ssp5Km2":47.5,"loKm2":30.8,"hiKm2":47.5},"jgr":{"quality":"exact","dNightC":-0.7,"dNightCoolRoofC":-0.81}}}

@@ -1,1 +1,1 @@
-{"id":7869,"slug":"thanagaon","name":"Thanagaon","country":"India","iso":"IND","region":"Asia","lat":27.4223,"lon":81.26,"ucdb":{"pop15":517728.0,"areaKm2":132.0},"layers":{"mass":null}}
+{"id":7869,"slug":"thanagaon","name":"Thanagaon","country":"India","iso":"IND","region":"Asia","lat":27.4223,"lon":81.26,"ucdb":{"pop15":517728.0,"areaKm2":132.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3018,"ssp1Km2":87.0,"ssp3Km2":57.0,"ssp5Km2":97.0,"loKm2":57.0,"hiKm2":97.0},"jgr":{"quality":"exact","dNightC":-0.02,"dNightCoolRoofC":-0.16}}}

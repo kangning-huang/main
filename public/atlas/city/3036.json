@@ -1,1 +1,1 @@
-{"id":3036,"slug":"brno","name":"Brno","country":"Czech Republic","iso":"CZE","region":"Europe","lat":49.1957,"lon":16.6157,"ucdb":{"pop15":316980.0,"areaKm2":94.0},"layers":{"mass":null}}
+{"id":3036,"slug":"brno","name":"Brno","country":"Czech Republic","iso":"CZE","region":"Europe","lat":49.1957,"lon":16.6157,"ucdb":{"pop15":316980.0,"areaKm2":94.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":369,"ssp1Km2":712.8,"ssp3Km2":501.0,"ssp5Km2":907.0,"loKm2":501.0,"hiKm2":907.0}}}

@@ -1,1 +1,1 @@
-{"id":4013,"slug":"rubaya","name":"Rubaya","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":-1.5552,"lon":28.8794,"ucdb":{"pop15":342564.0,"areaKm2":14.0},"layers":{"mass":null}}
+{"id":4013,"slug":"rubaya","name":"Rubaya","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":-1.5552,"lon":28.8794,"ucdb":{"pop15":342564.0,"areaKm2":14.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":6048,"ssp1Km2":579.5,"ssp3Km2":401.0,"ssp5Km2":555.7,"loKm2":401.0,"hiKm2":579.5}}}

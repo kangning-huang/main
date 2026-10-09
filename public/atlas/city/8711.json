@@ -1,1 +1,1 @@
-{"id":8711,"slug":"siwan","name":"Siwan","country":"India","iso":"IND","region":"Asia","lat":26.2237,"lon":84.3569,"ucdb":{"pop15":317529.0,"areaKm2":18.0},"layers":{"mass":null}}
+{"id":8711,"slug":"siwan","name":"Siwan","country":"India","iso":"IND","region":"Asia","lat":26.2237,"lon":84.3569,"ucdb":{"pop15":317529.0,"areaKm2":18.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3268,"ssp1Km2":56.0,"ssp3Km2":27.0,"ssp5Km2":70.5,"loKm2":27.0,"hiKm2":70.5},"jgr":{"quality":"exact","dNightC":-0.1,"dNightCoolRoofC":-0.36}}}

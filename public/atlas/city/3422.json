@@ -1,1 +1,1 @@
-{"id":3422,"slug":"abeche","name":"Abéché","country":"Chad","iso":"TCD","region":"Africa","lat":13.8303,"lon":20.8327,"ucdb":{"pop15":427638.0,"areaKm2":23.0},"layers":{"mass":null}}
+{"id":3422,"slug":"abeche","name":"Abéché","country":"Chad","iso":"TCD","region":"Africa","lat":13.8303,"lon":20.8327,"ucdb":{"pop15":427638.0,"areaKm2":23.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4981,"ssp1Km2":139.8,"ssp3Km2":89.7,"ssp5Km2":118.3,"loKm2":89.7,"hiKm2":139.8}}}

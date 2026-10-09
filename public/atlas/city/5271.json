@@ -1,1 +1,1 @@
-{"id":5271,"slug":"fallujah","name":"Fallujah","country":"Iraq","iso":"IRQ","region":"Asia","lat":33.3476,"lon":43.782,"ucdb":{"pop15":358796.0,"areaKm2":38.0},"layers":{"mass":null}}
+{"id":5271,"slug":"fallujah","name":"Fallujah","country":"Iraq","iso":"IRQ","region":"Asia","lat":33.3476,"lon":43.782,"ucdb":{"pop15":358796.0,"areaKm2":38.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":2028,"ssp1Km2":154.3,"ssp3Km2":109.0,"ssp5Km2":134.2,"loKm2":109.0,"hiKm2":154.3}}}

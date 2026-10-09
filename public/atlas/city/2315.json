@@ -1,1 +1,1 @@
-{"id":2315,"slug":"tahoua","name":"Tahoua","country":"Niger","iso":"NER","region":"Africa","lat":14.8882,"lon":5.2638,"ucdb":{"pop15":585729.0,"areaKm2":20.0},"layers":{"mass":null}}
+{"id":2315,"slug":"tahoua","name":"Tahoua","country":"Niger","iso":"NER","region":"Africa","lat":14.8882,"lon":5.2638,"ucdb":{"pop15":585729.0,"areaKm2":20.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":4884,"ssp1Km2":120.0,"ssp3Km2":99.3,"ssp5Km2":131.7,"loKm2":99.3,"hiKm2":131.7}}}

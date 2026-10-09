@@ -1,1 +1,1 @@
-{"id":8632,"slug":"muhammadabad-ind","name":"Muhammadabad","country":"India","iso":"IND","region":"Asia","lat":25.6151,"lon":83.7633,"ucdb":{"pop15":306271.0,"areaKm2":36.0},"layers":{"mass":null}}
+{"id":8632,"slug":"muhammadabad-ind","name":"Muhammadabad","country":"India","iso":"IND","region":"Asia","lat":25.6151,"lon":83.7633,"ucdb":{"pop15":306271.0,"areaKm2":36.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":3414,"ssp1Km2":119.2,"ssp3Km2":77.0,"ssp5Km2":135.0,"loKm2":77.0,"hiKm2":135.0},"jgr":{"quality":"exact","dNightC":-0.0,"dNightCoolRoofC":-0.23}}}

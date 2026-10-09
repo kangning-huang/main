@@ -1,1 +1,1 @@
-{"id":3548,"slug":"kebkabiya","name":"Kebkabiya","country":"Sudan","iso":"SDN","region":"Africa","lat":13.6473,"lon":24.0895,"ucdb":{"pop15":580840.0,"areaKm2":10.0},"layers":{"mass":null}}
+{"id":3548,"slug":"kebkabiya","name":"Kebkabiya","country":"Sudan","iso":"SDN","region":"Africa","lat":13.6473,"lon":24.0895,"ucdb":{"pop15":580840.0,"areaKm2":10.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":5001,"ssp1Km2":121.2,"ssp3Km2":94.2,"ssp5Km2":121.7,"loKm2":94.2,"hiKm2":121.7}}}

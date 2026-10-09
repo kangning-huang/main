@@ -1,1 +1,1 @@
-{"id":4412,"slug":"al-managil","name":"Al Managil","country":"Sudan","iso":"SDN","region":"Africa","lat":14.2396,"lon":32.9979,"ucdb":{"pop15":558879.0,"areaKm2":30.0},"layers":{"mass":null}}
+{"id":4412,"slug":"al-managil","name":"Al Managil","country":"Sudan","iso":"SDN","region":"Africa","lat":14.2396,"lon":32.9979,"ucdb":{"pop15":558879.0,"areaKm2":30.0},"layers":{"mass":null,"expansion":{"quality":"flagged","clump":4876,"ssp1Km2":1778.2,"ssp3Km2":1311.3,"ssp5Km2":1708.0,"loKm2":1311.3,"hiKm2":1778.2}}}

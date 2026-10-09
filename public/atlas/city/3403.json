@@ -1,1 +1,1 @@
-{"id":3403,"slug":"gemena","name":"Gemena","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":3.245,"lon":19.7803,"ucdb":{"pop15":374536.0,"areaKm2":37.0},"layers":{"mass":null}}
+{"id":3403,"slug":"gemena","name":"Gemena","country":"Democratic Republic of the Congo","iso":"COD","region":"Africa","lat":3.245,"lon":19.7803,"ucdb":{"pop15":374536.0,"areaKm2":37.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5887,"ssp1Km2":99.8,"ssp3Km2":68.0,"ssp5Km2":100.8,"loKm2":68.0,"hiKm2":100.8}}}

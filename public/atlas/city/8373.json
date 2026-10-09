@@ -1,1 +1,1 @@
-{"id":8373,"slug":"musiri","name":"Musiri","country":"India","iso":"IND","region":"Asia","lat":10.9497,"lon":78.409,"ucdb":{"pop15":313788.0,"areaKm2":46.0},"layers":{"mass":null}}
+{"id":8373,"slug":"musiri","name":"Musiri","country":"India","iso":"IND","region":"Asia","lat":10.9497,"lon":78.409,"ucdb":{"pop15":313788.0,"areaKm2":46.0},"layers":{"mass":null,"expansion":{"quality":"exact","clump":5293,"ssp1Km2":77.7,"ssp3Km2":28.7,"ssp5Km2":83.0,"loKm2":28.7,"hiKm2":83.0},"jgr":{"quality":"exact","dNightC":-0.01,"dNightCoolRoofC":-0.05}}}
