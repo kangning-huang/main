@@ -16,23 +16,10 @@ export default function AdaptiveTopics() {
 
   return (
     <div>
-      <p className="max-w-3xl text-[15px] leading-relaxed text-ink-muted">
+      <p className="max-w-3xl text-sm text-ink-muted">
         <T
-          en={
-            <>
-              OpenAlex fields that hold more than 30% of citing works are split into subfields, then topics,
-              until no single area dominates. <strong className="text-ink">{outside}</strong> of{" "}
-              {totals.uniqueCitingWorks.toLocaleString()} citing works ({pctOutside}%) sit outside Ken&apos;s own
-              OpenAlex topics — the clearest single measure of disciplinary reach.
-            </>
-          }
-          zh={
-            <>
-              任一 OpenAlex 领域若超过施引文献的 30%，则拆分为子领域、再拆为主题，直到没有单一类别占主导。
-              在 {totals.uniqueCitingWorks.toLocaleString()} 篇施引文献中，有{" "}
-              <strong className="text-ink">{outside}</strong> 篇（{pctOutside}%）落在黄康宁本人论文主题之外——这是衡量跨学科影响最直观的指标。
-            </>
-          }
+          en={<>{pctOutside}% of citing works ({outside.toLocaleString()} / {totals.uniqueCitingWorks.toLocaleString()}) sit outside Ken&apos;s own OpenAlex topics. Cards expand the flow chart above.</>}
+          zh={<>{pctOutside}% 的施引文献（{outside.toLocaleString()} / {totals.uniqueCitingWorks.toLocaleString()}）落在本人主题之外。卡片展开上方流向图。</>}
         />
       </p>
 
