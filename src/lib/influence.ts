@@ -153,8 +153,9 @@ export function getView(lens: ReachLens): InfluenceView {
   throw new Error(`influence.json missing views.${lens}`);
 }
 
+/** Ken's decision (2026-10-09): Reach always opens on All; no auto-flip. */
 export function defaultLens(): ReachLens {
-  return influence.meta.defaultView === "lead" ? "lead" : "all";
+  return "all";
 }
 
 /** Homepage H2 one-liner — All view; countries + two distant subfields/topics. */

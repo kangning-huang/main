@@ -45,7 +45,7 @@ export function ReachLensProvider({ children }: { children: ReactNode }) {
 }
 
 export function ReachLensChip() {
-  const { lens, setLens, view, autoFlipped } = useReachLens();
+  const { lens, setLens, view } = useReachLens();
   const { meta } = influence;
   return (
     <div className="mt-6 flex flex-col gap-3 animate-fade-up delay-2">
@@ -74,14 +74,6 @@ export function ReachLensChip() {
         >
           <T en="First / last / corresponding author" zh="第一 / 通讯作者" />
         </button>
-        {autoFlipped && lens === "lead" && (
-          <span className="text-xs text-ink-faint">
-            <T
-              en={`Default flipped to lead: co-author-only citers were ${meta.coauthorOnlyCitingShare}% of All.`}
-              zh={`因合作论文独占施引达 ${meta.coauthorOnlyCitingShare}%，默认切换为第一/通讯作者视角。`}
-            />
-          </span>
-        )}
       </div>
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-lg border border-rule bg-paper-warm/60 px-4 py-3 text-xs text-ink-muted">
         <span className="rounded bg-teal-light px-2 py-0.5 font-medium text-teal">
