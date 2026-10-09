@@ -1,1 +1,1 @@
-{"id":3777,"slug":"bulawayo","name":"Bulawayo","country":"Zimbabwe","iso":"ZWE","region":"Africa","lat":-20.155,"lon":28.532,"ucdb":{"pop15":665971.0,"areaKm2":115.0},"layers":{"mass":null}}
+{"id":3777,"slug":"bulawayo","name":"Bulawayo","country":"Zimbabwe","iso":"ZWE","region":"Africa","lat":-20.155,"lon":28.532,"ucdb":{"pop15":665971.0,"areaKm2":115.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":191,"name":"Bulawayo","centres":1},"rank":912,"climate":"Arid","pop2020":522061,"dayA":-0.11,"dayP":0.01,"nightA":-0.15,"nightP":0.01}}}

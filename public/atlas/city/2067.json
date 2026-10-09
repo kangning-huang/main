@@ -1,1 +1,1 @@
-{"id":2067,"slug":"niamey","name":"Niamey","country":"Niger","iso":"NER","region":"Africa","lat":13.5234,"lon":2.1116,"ucdb":{"pop15":1113943.0,"areaKm2":113.0},"layers":{"mass":null}}
+{"id":2067,"slug":"niamey","name":"Niamey","country":"Niger","iso":"NER","region":"Africa","lat":13.5234,"lon":2.1116,"ucdb":{"pop15":1113943.0,"areaKm2":113.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":448,"name":"Niamey","centres":1},"rank":455,"climate":"Arid","pop2020":1152800,"dayA":0.28,"dayP":0.02,"nightA":1.1,"nightP":0.24}}}

@@ -1,1 +1,1 @@
-{"id":6321,"slug":"mansehra","name":"Mansehra","country":"Pakistan","iso":"PAK","region":"Asia","lat":34.3331,"lon":73.2064,"ucdb":{"pop15":465955.0,"areaKm2":42.0},"layers":{"mass":null}}
+{"id":6321,"slug":"mansehra","name":"Mansehra","country":"Pakistan","iso":"PAK","region":"Asia","lat":34.3331,"lon":73.2064,"ucdb":{"pop15":465955.0,"areaKm2":42.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":5572,"name":"Abbottabad","centres":3},"rank":503,"climate":"Temperate","pop2020":1070224,"dayA":0.44,"dayP":0.2,"nightA":0.03,"nightP":-0.09}}}

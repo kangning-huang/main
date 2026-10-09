@@ -1,1 +1,1 @@
-{"id":8706,"slug":"ballia","name":"Ballia","country":"India","iso":"IND","region":"Asia","lat":25.7739,"lon":84.173,"ucdb":{"pop15":659108.0,"areaKm2":84.0},"layers":{"mass":null}}
+{"id":8706,"slug":"ballia","name":"Ballia","country":"India","iso":"IND","region":"Asia","lat":25.7739,"lon":84.173,"ucdb":{"pop15":659108.0,"areaKm2":84.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":9876,"name":"Ballia","centres":1},"rank":942,"climate":"Temperate","pop2020":431255,"dayA":-0.33,"dayP":0.51,"nightA":0.54,"nightP":0.62}}}

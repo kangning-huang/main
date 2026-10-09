@@ -1,1 +1,1 @@
-{"id":5329,"slug":"mombasa","name":"Mombasa","country":"Kenya","iso":"KEN","region":"Africa","lat":-4.0382,"lon":39.6562,"ucdb":{"pop15":1033984.0,"areaKm2":133.0},"layers":{"mass":null}}
+{"id":5329,"slug":"mombasa","name":"Mombasa","country":"Kenya","iso":"KEN","region":"Africa","lat":-4.0382,"lon":39.6562,"ucdb":{"pop15":1033984.0,"areaKm2":133.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":3056,"name":"Mombasa","centres":1},"rank":466,"climate":"Tropical","pop2020":1140725,"dayA":0.95,"dayP":1.07,"nightA":0.72,"nightP":0.39}}}

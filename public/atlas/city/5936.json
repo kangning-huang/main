@@ -1,1 +1,1 @@
-{"id":5936,"slug":"nur-sultan","name":"Nur-Sultan","country":"Kazakhstan","iso":"KAZ","region":"Asia","lat":51.1638,"lon":71.4447,"ucdb":{"pop15":749746.0,"areaKm2":147.0},"layers":{"mass":null}}
+{"id":5936,"slug":"nur-sultan","name":"Nur-Sultan","country":"Kazakhstan","iso":"KAZ","region":"Asia","lat":51.1638,"lon":71.4447,"ucdb":{"pop15":749746.0,"areaKm2":147.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":1510,"name":"Nur-Sultan","centres":1},"rank":712,"climate":"Snow","pop2020":773420,"dayA":0.35,"dayP":-0.78,"nightA":0.75,"nightP":-0.26}}}

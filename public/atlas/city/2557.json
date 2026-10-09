@@ -1,1 +1,1 @@
-{"id":2557,"slug":"oboama-nguru","name":"Oboama Nguru","country":"Nigeria","iso":"NGA","region":"Africa","lat":5.5521,"lon":7.283,"ucdb":{"pop15":984279.0,"areaKm2":219.0},"layers":{"mass":null}}
+{"id":2557,"slug":"oboama-nguru","name":"Oboama Nguru","country":"Nigeria","iso":"NGA","region":"Africa","lat":5.5521,"lon":7.283,"ucdb":{"pop15":984279.0,"areaKm2":219.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":6466,"name":"Oboama Nguru","centres":2},"rank":555,"climate":"Tropical","pop2020":984827,"dayA":0.34,"dayP":0.03,"nightA":0.43,"nightP":0.06}}}

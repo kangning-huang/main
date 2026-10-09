@@ -1,1 +1,1 @@
-{"id":5641,"slug":"al-misrakh","name":"Al Misrakh","country":"Yemen","iso":"YEM","region":"Asia","lat":13.5033,"lon":44.0254,"ucdb":{"pop15":397219.0,"areaKm2":68.0},"layers":{"mass":null}}
+{"id":5641,"slug":"al-misrakh","name":"Al Misrakh","country":"Yemen","iso":"YEM","region":"Asia","lat":13.5033,"lon":44.0254,"ucdb":{"pop15":397219.0,"areaKm2":68.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":1150,"name":"Ta'izz","centres":2},"rank":963,"climate":"Arid","pop2020":326274,"dayA":-0.47,"dayP":-0.67,"nightA":0.16,"nightP":-0.36}}}

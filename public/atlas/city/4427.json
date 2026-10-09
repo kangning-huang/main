@@ -1,1 +1,1 @@
-{"id":4427,"slug":"kampala","name":"Kampala","country":"Uganda","iso":"UGA","region":"Africa","lat":0.3273,"lon":32.5842,"ucdb":{"pop15":3483365.0,"areaKm2":528.0},"layers":{"mass":null}}
+{"id":4427,"slug":"kampala","name":"Kampala","country":"Uganda","iso":"UGA","region":"Africa","lat":0.3273,"lon":32.5842,"ucdb":{"pop15":3483365.0,"areaKm2":528.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":1899,"name":"Kampala","centres":4},"rank":109,"climate":"Tropical","pop2020":3979847,"dayA":0.77,"dayP":1.1,"nightA":0.24,"nightP":0.31}}}

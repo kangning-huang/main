@@ -1,1 +1,1 @@
-{"id":7322,"slug":"belagavi","name":"Belagavi","country":"India","iso":"IND","region":"Asia","lat":15.8594,"lon":74.5096,"ucdb":{"pop15":857170.0,"areaKm2":84.0},"layers":{"mass":null}}
+{"id":7322,"slug":"belagavi","name":"Belagavi","country":"India","iso":"IND","region":"Asia","lat":15.8594,"lon":74.5096,"ucdb":{"pop15":857170.0,"areaKm2":84.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":8052,"name":"Belagavi","centres":1},"rank":873,"climate":"Tropical","pop2020":583426,"dayA":-0.41,"dayP":-0.11,"nightA":0.51,"nightP":0.4}}}

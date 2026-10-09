@@ -1,1 +1,1 @@
-{"id":4189,"slug":"chitungwiza","name":"Chitungwiza","country":"Zimbabwe","iso":"ZWE","region":"Africa","lat":-18.0129,"lon":31.0702,"ucdb":{"pop15":448363.0,"areaKm2":50.0},"layers":{"mass":null}}
+{"id":4189,"slug":"chitungwiza","name":"Chitungwiza","country":"Zimbabwe","iso":"ZWE","region":"Africa","lat":-18.0129,"lon":31.0702,"ucdb":{"pop15":448363.0,"areaKm2":50.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":1558,"name":"Harare","centres":4},"rank":246,"climate":"Temperate","pop2020":2064497,"dayA":-0.02,"dayP":0.55,"nightA":0.29,"nightP":0.19}}}

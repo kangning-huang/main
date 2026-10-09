@@ -1,1 +1,1 @@
-{"id":8096,"slug":"balrampur","name":"Balrampur","country":"India","iso":"IND","region":"Asia","lat":27.4177,"lon":82.1728,"ucdb":{"pop15":668220.0,"areaKm2":19.0},"layers":{"mass":null}}
+{"id":8096,"slug":"balrampur","name":"Balrampur","country":"India","iso":"IND","region":"Asia","lat":27.4177,"lon":82.1728,"ucdb":{"pop15":668220.0,"areaKm2":19.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":9159,"name":"Balrampur","centres":1},"rank":988,"climate":"Temperate","pop2020":118754,"dayA":-0.32,"dayP":0.1,"nightA":0.28,"nightP":0.17}}}

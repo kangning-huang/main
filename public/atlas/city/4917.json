@@ -1,1 +1,1 @@
-{"id":4917,"slug":"tbilisi","name":"Tbilisi","country":"Georgia","iso":"GEO","region":"Asia","lat":41.712,"lon":44.8263,"ucdb":{"pop15":1077840.0,"areaKm2":132.0},"layers":{"mass":null}}
+{"id":4917,"slug":"tbilisi","name":"Tbilisi","country":"Georgia","iso":"GEO","region":"Asia","lat":41.712,"lon":44.8263,"ucdb":{"pop15":1077840.0,"areaKm2":132.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":826,"name":"Tbilisi","centres":1},"rank":585,"climate":"Temperate","pop2020":940125,"dayA":0.71,"dayP":0.49,"nightA":0.49,"nightP":0.55}}}

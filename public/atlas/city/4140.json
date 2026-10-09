@@ -1,1 +1,1 @@
-{"id":4140,"slug":"al-ubayyid","name":"Al-Ubayyid","country":"Sudan","iso":"SDN","region":"Africa","lat":13.1831,"lon":30.2218,"ucdb":{"pop15":680618.0,"areaKm2":61.0},"layers":{"mass":null}}
+{"id":4140,"slug":"al-ubayyid","name":"Al-Ubayyid","country":"Sudan","iso":"SDN","region":"Africa","lat":13.1831,"lon":30.2218,"ucdb":{"pop15":680618.0,"areaKm2":61.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":2852,"name":"Al-Ubayyid","centres":1},"rank":980,"climate":"Arid","pop2020":214758,"dayA":-0.49,"dayP":-0.75,"nightA":1.06,"nightP":0.75}}}

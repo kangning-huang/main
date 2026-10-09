@@ -1,1 +1,1 @@
-{"id":4808,"slug":"nairobi","name":"Nairobi","country":"Kenya","iso":"KEN","region":"Africa","lat":-1.2633,"lon":36.8244,"ucdb":{"pop15":3986170.0,"areaKm2":337.0},"layers":{"mass":null}}
+{"id":4808,"slug":"nairobi","name":"Nairobi","country":"Kenya","iso":"KEN","region":"Africa","lat":-1.2633,"lon":36.8244,"ucdb":{"pop15":3986170.0,"areaKm2":337.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":2171,"name":"Nairobi","centres":6},"rank":72,"climate":"Temperate","pop2020":5310460,"dayA":0.24,"dayP":1.07,"nightA":-0.54,"nightP":-0.35}}}

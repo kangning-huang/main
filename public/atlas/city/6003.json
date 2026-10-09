@@ -1,1 +1,1 @@
-{"id":6003,"slug":"shymkent","name":"Shymkent","country":"Kazakhstan","iso":"KAZ","region":"Asia","lat":42.3297,"lon":69.5978,"ucdb":{"pop15":738552.0,"areaKm2":148.0},"layers":{"mass":null}}
+{"id":6003,"slug":"shymkent","name":"Shymkent","country":"Kazakhstan","iso":"KAZ","region":"Asia","lat":42.3297,"lon":69.5978,"ucdb":{"pop15":738552.0,"areaKm2":148.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":2096,"name":"Shymkent","centres":2},"rank":591,"climate":"Temperate","pop2020":936522,"dayA":0.2,"dayP":-0.29,"nightA":-0.05,"nightP":-0.46}}}

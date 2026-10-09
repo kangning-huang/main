@@ -1,1 +1,1 @@
-{"id":4800,"slug":"arusha","name":"Arusha","country":"Tanzania","iso":"TZA","region":"Africa","lat":-3.3847,"lon":36.697,"ucdb":{"pop15":678319.0,"areaKm2":105.0},"layers":{"mass":null}}
+{"id":4800,"slug":"arusha","name":"Arusha","country":"Tanzania","iso":"TZA","region":"Africa","lat":-3.3847,"lon":36.697,"ucdb":{"pop15":678319.0,"areaKm2":105.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":3023,"name":"Arusha","centres":1},"rank":920,"climate":"Temperate","pop2020":493510,"dayA":1.34,"dayP":0.42,"nightA":0.02,"nightP":-0.54}}}

@@ -1,1 +1,1 @@
-{"id":6486,"slug":"anantnag","name":"Anantnag","country":"India","iso":"IND","region":"Asia","lat":33.7403,"lon":75.1634,"ucdb":{"pop15":328043.0,"areaKm2":86.0},"layers":{"mass":null}}
+{"id":6486,"slug":"anantnag","name":"Anantnag","country":"India","iso":"IND","region":"Asia","lat":33.7403,"lon":75.1634,"ucdb":{"pop15":328043.0,"areaKm2":86.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":2998,"name":"Anantnag","centres":3},"rank":872,"climate":"Temperate","pop2020":588193,"dayA":-0.19,"dayP":0.04,"nightA":-1.04,"nightP":-0.15}}}

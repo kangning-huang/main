@@ -1,1 +1,1 @@
-{"id":2971,"slug":"tripoli","name":"Tripoli","country":"Libya","iso":"LBY","region":"Africa","lat":32.8431,"lon":13.199,"ucdb":{"pop15":1136250.0,"areaKm2":429.0},"layers":{"mass":null}}
+{"id":2971,"slug":"tripoli","name":"Tripoli","country":"Libya","iso":"LBY","region":"Africa","lat":32.8431,"lon":13.199,"ucdb":{"pop15":1136250.0,"areaKm2":429.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":433,"name":"Tripoli","centres":1},"rank":413,"climate":"Arid","pop2020":1287822,"dayA":-0.18,"dayP":-0.04,"nightA":0.14,"nightP":-1.61}}}

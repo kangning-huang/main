@@ -1,1 +1,1 @@
-{"id":7548,"slug":"neeleshwaram","name":"Neeleshwaram","country":"India","iso":"IND","region":"Asia","lat":12.4046,"lon":75.0484,"ucdb":{"pop15":582129.0,"areaKm2":181.0},"layers":{"mass":null}}
+{"id":7548,"slug":"neeleshwaram","name":"Neeleshwaram","country":"India","iso":"IND","region":"Asia","lat":12.4046,"lon":75.0484,"ucdb":{"pop15":582129.0,"areaKm2":181.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":8401,"name":"Neeleshwaram","centres":1},"rank":957,"climate":"Tropical","pop2020":386943,"dayA":0.33,"dayP":0.02,"nightA":-0.31,"nightP":-0.28}}}

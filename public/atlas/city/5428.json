@@ -1,1 +1,1 @@
-{"id":5428,"slug":"ad-diwaniyah","name":"Ad Diwaniyah","country":"Iraq","iso":"IRQ","region":"Asia","lat":31.9909,"lon":44.9201,"ucdb":{"pop15":1017085.0,"areaKm2":59.0},"layers":{"mass":null}}
+{"id":5428,"slug":"ad-diwaniyah","name":"Ad Diwaniyah","country":"Iraq","iso":"IRQ","region":"Asia","lat":31.9909,"lon":44.9201,"ucdb":{"pop15":1017085.0,"areaKm2":59.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":3842,"name":"Ad Diwaniyah","centres":1},"rank":967,"climate":"Arid","pop2020":316650,"dayA":-0.07,"dayP":-0.56,"nightA":0.88,"nightP":-0.07}}}

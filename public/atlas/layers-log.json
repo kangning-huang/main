@@ -1,0 +1,18 @@
+{
+ "heat": {
+  "rows": 988,
+  "fuaExact": 930,
+  "fuaAmbiguous": 58,
+  "fuaUnmatched": [],
+  "noAtlasCentre": 0,
+  "centres": 1362
+ },
+ "cooling": {
+  "centres": 3,
+  "cities": [
+   "Beijing",
+   "Guangzhou",
+   "Shanghai"
+  ]
+ }
+}

@@ -1,1 +1,1 @@
-{"id":3498,"slug":"chi-in-u","name":"Chi?in?u","country":"Moldova","iso":"MDA","region":"Europe","lat":47.0155,"lon":28.8392,"ucdb":{"pop15":460761.0,"areaKm2":120.0},"layers":{"mass":null}}
+{"id":3498,"slug":"chi-in-u","name":"Chi?in?u","country":"Moldova","iso":"MDA","region":"Europe","lat":47.0155,"lon":28.8392,"ucdb":{"pop15":460761.0,"areaKm2":120.0},"layers":{"mass":null,"heat":{"quality":"exact","fua":{"id":282,"name":"Chișinău","centres":1},"rank":791,"climate":"Temperate","pop2020":683655,"dayA":0.9,"dayP":0.19,"nightA":-0.34,"nightP":-0.8}}}
