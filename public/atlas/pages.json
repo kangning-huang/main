@@ -1,0 +1,3002 @@
+[
+{
+"id": 12080,
+"slug": "guangzhou",
+"name": "Guangzhou",
+"country": "China"
+},
+{
+"id": 11862,
+"slug": "jakarta",
+"name": "Jakarta",
+"country": "Indonesia"
+},
+{
+"id": 12964,
+"slug": "tokyo",
+"name": "Tokyo",
+"country": "Japan"
+},
+{
+"id": 6955,
+"slug": "delhi-new-delhi",
+"name": "Delhi [New Delhi]",
+"country": "India"
+},
+{
+"id": 12400,
+"slug": "shanghai",
+"name": "Shanghai",
+"country": "China"
+},
+{
+"id": 9872,
+"slug": "dhaka",
+"name": "Dhaka",
+"country": "Bangladesh"
+},
+{
+"id": 6845,
+"slug": "mumbai",
+"name": "Mumbai",
+"country": "India"
+},
+{
+"id": 12829,
+"slug": "quezon-city-manila",
+"name": "Quezon City [Manila]",
+"country": "Philippines"
+},
+{
+"id": 9691,
+"slug": "kolkata",
+"name": "Kolkata",
+"country": "India"
+},
+{
+"id": 12389,
+"slug": "seoul",
+"name": "Seoul",
+"country": "South Korea"
+},
+{
+"id": 3902,
+"slug": "cairo",
+"name": "Cairo",
+"country": "Egypt"
+},
+{
+"id": 154,
+"slug": "mexico-city",
+"name": "Mexico City",
+"country": "Mexico"
+},
+{
+"id": 1303,
+"slug": "s-o-paulo",
+"name": "S?o Paulo",
+"country": "Brazil"
+},
+{
+"id": 10687,
+"slug": "beijing",
+"name": "Beijing",
+"country": "China"
+},
+{
+"id": 945,
+"slug": "new-york",
+"name": "New York",
+"country": "United States"
+},
+{
+"id": 12858,
+"slug": "osaka-kyoto",
+"name": "Osaka [Kyoto]",
+"country": "Japan"
+},
+{
+"id": 10715,
+"slug": "bangkok",
+"name": "Bangkok",
+"country": "Thailand"
+},
+{
+"id": 14,
+"slug": "los-angeles",
+"name": "Los Angeles",
+"country": "United States"
+},
+{
+"id": 3562,
+"slug": "istanbul",
+"name": "Istanbul",
+"country": "Turkey"
+},
+{
+"id": 3675,
+"slug": "moscow",
+"name": "Moscow",
+"country": "Russia"
+},
+{
+"id": 1105,
+"slug": "buenos-aires",
+"name": "Buenos Aires",
+"country": "Argentina"
+},
+{
+"id": 6169,
+"slug": "karachi",
+"name": "Karachi",
+"country": "Pakistan"
+},
+{
+"id": 5737,
+"slug": "tehran",
+"name": "Tehran",
+"country": "Iran"
+},
+{
+"id": 2125,
+"slug": "lagos",
+"name": "Lagos",
+"country": "Nigeria"
+},
+{
+"id": 11800,
+"slug": "ho-chi-minh-city",
+"name": "Ho Chi Minh City",
+"country": "Vietnam"
+},
+{
+"id": 8050,
+"slug": "bengaluru",
+"name": "Bengaluru",
+"country": "India"
+},
+{
+"id": 12430,
+"slug": "jieyang",
+"name": "Jieyang",
+"country": "China"
+},
+{
+"id": 6473,
+"slug": "lahore",
+"name": "Lahore",
+"country": "Pakistan"
+},
+{
+"id": 8675,
+"slug": "chennai",
+"name": "Chennai",
+"country": "India"
+},
+{
+"id": 1361,
+"slug": "rio-de-janeiro",
+"name": "Rio de Janeiro",
+"country": "Brazil"
+},
+{
+"id": 2046,
+"slug": "paris",
+"name": "Paris",
+"country": "France"
+},
+{
+"id": 1912,
+"slug": "london",
+"name": "London",
+"country": "United Kingdom"
+},
+{
+"id": 10297,
+"slug": "chengdu",
+"name": "Chengdu",
+"country": "China"
+},
+{
+"id": 528,
+"slug": "lima",
+"name": "Lima",
+"country": "Peru"
+},
+{
+"id": 12696,
+"slug": "new-taipei-taipei",
+"name": "New Taipei [Taipei]",
+"country": "Taiwan"
+},
+{
+"id": 12298,
+"slug": "suzhou",
+"name": "Suzhou",
+"country": "China"
+},
+{
+"id": 621,
+"slug": "bogota",
+"name": "Bogota",
+"country": "Colombia"
+},
+{
+"id": 12610,
+"slug": "surabaya",
+"name": "Surabaya",
+"country": "Indonesia"
+},
+{
+"id": 12044,
+"slug": "bandung",
+"name": "Bandung",
+"country": "Indonesia"
+},
+{
+"id": 8005,
+"slug": "hyderabad",
+"name": "Hyderabad",
+"country": "India"
+},
+{
+"id": 12914,
+"slug": "nagoya",
+"name": "Nagoya",
+"country": "Japan"
+},
+{
+"id": 12386,
+"slug": "hangzhou",
+"name": "Hangzhou",
+"country": "China"
+},
+{
+"id": 11549,
+"slug": "wuhan",
+"name": "Wuhan",
+"country": "China"
+},
+{
+"id": 3050,
+"slug": "luanda",
+"name": "Luanda",
+"country": "Angola"
+},
+{
+"id": 634,
+"slug": "chicago",
+"name": "Chicago",
+"country": "United States"
+},
+{
+"id": 6651,
+"slug": "ahmedabad",
+"name": "Ahmedabad",
+"country": "India"
+},
+{
+"id": 7041,
+"slug": "pune",
+"name": "Pune",
+"country": "India"
+},
+{
+"id": 10922,
+"slug": "tianjin",
+"name": "Tianjin",
+"country": "China"
+},
+{
+"id": 3673,
+"slug": "johannesburg",
+"name": "Johannesburg",
+"country": "South Africa"
+},
+{
+"id": 11139,
+"slug": "kuala-lumpur",
+"name": "Kuala Lumpur",
+"country": "Malaysia"
+},
+{
+"id": 931,
+"slug": "santiago",
+"name": "Santiago",
+"country": "Chile"
+},
+{
+"id": 875,
+"slug": "toronto",
+"name": "Toronto",
+"country": "Canada"
+},
+{
+"id": 12274,
+"slug": "hong-kong",
+"name": "Hong Kong",
+"country": "China"
+},
+{
+"id": 10248,
+"slug": "yangon",
+"name": "Yangon",
+"country": "Myanmar"
+},
+{
+"id": 5698,
+"slug": "riyadh",
+"name": "Riyadh",
+"country": "Saudi Arabia"
+},
+{
+"id": 3209,
+"slug": "kinshasa",
+"name": "Kinshasa",
+"country": "Democratic Republic of the Congo"
+},
+{
+"id": 3751,
+"slug": "alexandria",
+"name": "Alexandria",
+"country": "Egypt"
+},
+{
+"id": 11334,
+"slug": "shenyang",
+"name": "Shenyang",
+"country": "China"
+},
+{
+"id": 6728,
+"slug": "surat",
+"name": "Surat",
+"country": "India"
+},
+{
+"id": 556,
+"slug": "miami",
+"name": "Miami",
+"country": "United States"
+},
+{
+"id": 12072,
+"slug": "nanjing",
+"name": "Nanjing",
+"country": "China"
+},
+{
+"id": 5314,
+"slug": "baghdad",
+"name": "Baghdad",
+"country": "Iraq"
+},
+{
+"id": 11136,
+"slug": "hanoi",
+"name": "Hanoi",
+"country": "Vietnam"
+},
+{
+"id": 5222,
+"slug": "dar-es-salaam",
+"name": "Dar es Salaam",
+"country": "Tanzania"
+},
+{
+"id": 10035,
+"slug": "chattogram",
+"name": "Chattogram",
+"country": "Bangladesh"
+},
+{
+"id": 323,
+"slug": "dallas",
+"name": "Dallas",
+"country": "United States"
+},
+{
+"id": 12394,
+"slug": "yogyakarta",
+"name": "Yogyakarta",
+"country": "Indonesia"
+},
+{
+"id": 10479,
+"slug": "xi-an",
+"name": "Xi'an",
+"country": "China"
+},
+{
+"id": 1701,
+"slug": "madrid",
+"name": "Madrid",
+"country": "Spain"
+},
+{
+"id": 315,
+"slug": "houston",
+"name": "Houston",
+"country": "United States"
+},
+{
+"id": 12578,
+"slug": "wenzhou",
+"name": "Wenzhou",
+"country": "China"
+},
+{
+"id": 10607,
+"slug": "chongqing",
+"name": "Chongqing",
+"country": "China"
+},
+{
+"id": 7854,
+"slug": "lucknow",
+"name": "Lucknow",
+"country": "India"
+},
+{
+"id": 10,
+"slug": "san-jose",
+"name": "San Jose",
+"country": "United States"
+},
+{
+"id": 1675,
+"slug": "abidjan",
+"name": "Abidjan",
+"country": "Côte d'Ivoire"
+},
+{
+"id": 88,
+"slug": "guadalajara",
+"name": "Guadalajara",
+"country": "Mexico"
+},
+{
+"id": 21,
+"slug": "tijuana",
+"name": "Tijuana",
+"country": "United States"
+},
+{
+"id": 1910,
+"slug": "accra",
+"name": "Accra",
+"country": "Ghana"
+},
+{
+"id": 11009,
+"slug": "zhengzhou",
+"name": "Zhengzhou",
+"country": "China"
+},
+{
+"id": 8835,
+"slug": "colombo",
+"name": "Colombo",
+"country": "Sri Lanka"
+},
+{
+"id": 3396,
+"slug": "saint-petersburg",
+"name": "Saint Petersburg",
+"country": "Russia"
+},
+{
+"id": 200,
+"slug": "monterrey",
+"name": "Monterrey",
+"country": "Mexico"
+},
+{
+"id": 8463,
+"slug": "varanasi",
+"name": "Varanasi",
+"country": "India"
+},
+{
+"id": 2717,
+"slug": "kano",
+"name": "Kano",
+"country": "Nigeria"
+},
+{
+"id": 11112,
+"slug": "harbin",
+"name": "Harbin",
+"country": "China"
+},
+{
+"id": 12530,
+"slug": "xiamen",
+"name": "Xiamen",
+"country": "China"
+},
+{
+"id": 1346,
+"slug": "belo-horizonte",
+"name": "Belo Horizonte",
+"country": "Brazil"
+},
+{
+"id": 12569,
+"slug": "quanzhou",
+"name": "Quanzhou",
+"country": "China"
+},
+{
+"id": 11881,
+"slug": "hefei",
+"name": "Hefei",
+"country": "China"
+},
+{
+"id": 1575,
+"slug": "casablanca",
+"name": "Casablanca",
+"country": "Morocco"
+},
+{
+"id": 10692,
+"slug": "medan",
+"name": "Medan",
+"country": "Indonesia"
+},
+{
+"id": 2095,
+"slug": "algiers",
+"name": "Algiers",
+"country": "Algeria"
+},
+{
+"id": 816,
+"slug": "santo-domingo",
+"name": "Santo Domingo",
+"country": "Dominican Republic"
+},
+{
+"id": 2051,
+"slug": "barcelona",
+"name": "Barcelona",
+"country": "Spain"
+},
+{
+"id": 5134,
+"slug": "addis-ababa",
+"name": "Addis Ababa",
+"country": "Ethiopia"
+},
+{
+"id": 7756,
+"slug": "kanpur",
+"name": "Kanpur",
+"country": "India"
+},
+{
+"id": 13043,
+"slug": "sydney",
+"name": "Sydney",
+"country": "Australia"
+},
+{
+"id": 6329,
+"slug": "rawalpindi-islamabad",
+"name": "Rawalpindi [Islamabad]",
+"country": "Pakistan"
+},
+{
+"id": 79,
+"slug": "phoenix",
+"name": "Phoenix",
+"country": "United States"
+},
+{
+"id": 6893,
+"slug": "jaipur",
+"name": "Jaipur",
+"country": "India"
+},
+{
+"id": 11771,
+"slug": "qingdao",
+"name": "Qingdao",
+"country": "China"
+},
+{
+"id": 6405,
+"slug": "faisalabad",
+"name": "Faisalabad",
+"country": "Pakistan"
+},
+{
+"id": 4921,
+"slug": "jeddah",
+"name": "Jeddah",
+"country": "Saudi Arabia"
+},
+{
+"id": 3268,
+"slug": "cape-town",
+"name": "Cape Town",
+"country": "South Africa"
+},
+{
+"id": 13023,
+"slug": "melbourne",
+"name": "Melbourne",
+"country": "Australia"
+},
+{
+"id": 11223,
+"slug": "jinan",
+"name": "Jinan",
+"country": "China"
+},
+{
+"id": 10532,
+"slug": "taiyuan",
+"name": "Taiyuan",
+"country": "China"
+},
+{
+"id": 2276,
+"slug": "dortmund",
+"name": "Dortmund",
+"country": "Germany"
+},
+{
+"id": 12678,
+"slug": "busan",
+"name": "Busan",
+"country": "South Korea"
+},
+{
+"id": 1445,
+"slug": "recife",
+"name": "Recife",
+"country": "Brazil"
+},
+{
+"id": 561,
+"slug": "medellin",
+"name": "Medellín",
+"country": "Colombia"
+},
+{
+"id": 11540,
+"slug": "dalian",
+"name": "Dalian",
+"country": "China"
+},
+{
+"id": 855,
+"slug": "washington-d-c",
+"name": "Washington D.C.",
+"country": "United States"
+},
+{
+"id": 11248,
+"slug": "changchun",
+"name": "Changchun",
+"country": "China"
+},
+{
+"id": 11626,
+"slug": "changsha",
+"name": "Changsha",
+"country": "China"
+},
+{
+"id": 3420,
+"slug": "athens",
+"name": "Athens",
+"country": "Greece"
+},
+{
+"id": 10718,
+"slug": "shijiazhuang",
+"name": "Shijiazhuang",
+"country": "China"
+},
+{
+"id": 770,
+"slug": "detroit",
+"name": "Detroit",
+"country": "United States"
+},
+{
+"id": 2851,
+"slug": "berlin",
+"name": "Berlin",
+"country": "Germany"
+},
+{
+"id": 1406,
+"slug": "fortaleza",
+"name": "Fortaleza",
+"country": "Brazil"
+},
+{
+"id": 2980,
+"slug": "naples",
+"name": "Naples",
+"country": "Italy"
+},
+{
+"id": 9402,
+"slug": "asansol",
+"name": "Asansol",
+"country": "India"
+},
+{
+"id": 2189,
+"slug": "ibadan",
+"name": "Ibadan",
+"country": "Nigeria"
+},
+{
+"id": 6008,
+"slug": "tashkent",
+"name": "Tashkent",
+"country": "Uzbekistan"
+},
+{
+"id": 2484,
+"slug": "onitsha",
+"name": "Onitsha",
+"country": "Nigeria"
+},
+{
+"id": 898,
+"slug": "philadelphia",
+"name": "Philadelphia",
+"country": "United States"
+},
+{
+"id": 1017,
+"slug": "montreal",
+"name": "Montreal",
+"country": "Canada"
+},
+{
+"id": 857,
+"slug": "caracas",
+"name": "Caracas",
+"country": "Venezuela"
+},
+{
+"id": 12384,
+"slug": "semarang",
+"name": "Semarang",
+"country": "Indonesia"
+},
+{
+"id": 10476,
+"slug": "kunming",
+"name": "Kunming",
+"country": "China"
+},
+{
+"id": 7045,
+"slug": "urumqi",
+"name": "Ürümqi",
+"country": "China"
+},
+{
+"id": 12566,
+"slug": "fuzhou",
+"name": "Fuzhou",
+"country": "China"
+},
+{
+"id": 1420,
+"slug": "salvador",
+"name": "Salvador",
+"country": "Brazil"
+},
+{
+"id": 3541,
+"slug": "mbuji-mayi",
+"name": "Mbuji-Mayi",
+"country": "Democratic Republic of the Congo"
+},
+{
+"id": 2559,
+"slug": "milan",
+"name": "Milan",
+"country": "Italy"
+},
+{
+"id": 3809,
+"slug": "ankara",
+"name": "Ankara",
+"country": "Turkey"
+},
+{
+"id": 12010,
+"slug": "nanchang",
+"name": "Nanchang",
+"country": "China"
+},
+{
+"id": 1553,
+"slug": "bamako",
+"name": "Bamako",
+"country": "Mali"
+},
+{
+"id": 1785,
+"slug": "kumasi",
+"name": "Kumasi",
+"country": "Ghana"
+},
+{
+"id": 7927,
+"slug": "nagpur",
+"name": "Nagpur",
+"country": "India"
+},
+{
+"id": 7190,
+"slug": "indore",
+"name": "Indore",
+"country": "India"
+},
+{
+"id": 3868,
+"slug": "durban",
+"name": "Durban",
+"country": "South Africa"
+},
+{
+"id": 5918,
+"slug": "mashhad",
+"name": "Mashhad",
+"country": "Iran"
+},
+{
+"id": 3528,
+"slug": "izmir",
+"name": "Izmir",
+"country": "Turkey"
+},
+{
+"id": 6469,
+"slug": "gujranwala",
+"name": "Gujranwala",
+"country": "Pakistan"
+},
+{
+"id": 8914,
+"slug": "patna",
+"name": "Patna",
+"country": "India"
+},
+{
+"id": 6203,
+"slug": "peshawar",
+"name": "Peshawar",
+"country": "Pakistan"
+},
+{
+"id": 427,
+"slug": "guayaquil",
+"name": "Guayaquil",
+"country": "Ecuador"
+},
+{
+"id": 3517,
+"slug": "kyiv",
+"name": "Kyiv",
+"country": "Ukraine"
+},
+{
+"id": 4407,
+"slug": "damascus",
+"name": "Damascus",
+"country": "Syria"
+},
+{
+"id": 8201,
+"slug": "prayagraj",
+"name": "Prayagraj",
+"country": "India"
+},
+{
+"id": 12981,
+"slug": "cebu-city",
+"name": "Cebu City",
+"country": "Philippines"
+},
+{
+"id": 140,
+"slug": "seattle",
+"name": "Seattle",
+"country": "United States"
+},
+{
+"id": 12528,
+"slug": "ningbo",
+"name": "Ningbo",
+"country": "China"
+},
+{
+"id": 12250,
+"slug": "changzhou",
+"name": "Changzhou",
+"country": "China"
+},
+{
+"id": 7887,
+"slug": "kochi",
+"name": "Kochi",
+"country": "India"
+},
+{
+"id": 10854,
+"slug": "guiyang",
+"name": "Guiyang",
+"country": "China"
+},
+{
+"id": 12651,
+"slug": "daegu",
+"name": "Daegu",
+"country": "South Korea"
+},
+{
+"id": 4337,
+"slug": "beirut",
+"name": "Beirut",
+"country": "Lebanon"
+},
+{
+"id": 12109,
+"slug": "pyongyang",
+"name": "Pyongyang",
+"country": "North Korea"
+},
+{
+"id": 7264,
+"slug": "agra",
+"name": "Agra",
+"country": "India"
+},
+{
+"id": 4220,
+"slug": "maputo",
+"name": "Maputo",
+"country": "Mozambique"
+},
+{
+"id": 1800,
+"slug": "birmingham",
+"name": "Birmingham",
+"country": "United Kingdom"
+},
+{
+"id": 6337,
+"slug": "multan",
+"name": "Multan",
+"country": "Pakistan"
+},
+{
+"id": 12709,
+"slug": "kaohsiung",
+"name": "Kaohsiung",
+"country": "Taiwan"
+},
+{
+"id": 3798,
+"slug": "lusaka",
+"name": "Lusaka",
+"country": "Zambia"
+},
+{
+"id": 11382,
+"slug": "nanning",
+"name": "Nanning",
+"country": "China"
+},
+{
+"id": 10122,
+"slug": "lanzhou",
+"name": "Lanzhou",
+"country": "China"
+},
+{
+"id": 4309,
+"slug": "tel-aviv",
+"name": "Tel Aviv",
+"country": "Israel"
+},
+{
+"id": 1242,
+"slug": "curitiba",
+"name": "Curitiba",
+"country": "Brazil"
+},
+{
+"id": 2897,
+"slug": "rome",
+"name": "Rome",
+"country": "Italy"
+},
+{
+"id": 512,
+"slug": "cali",
+"name": "Cali",
+"country": "Colombia"
+},
+{
+"id": 467,
+"slug": "quito",
+"name": "Quito",
+"country": "Ecuador"
+},
+{
+"id": 3756,
+"slug": "lubumbashi",
+"name": "Lubumbashi",
+"country": "Democratic Republic of the Congo"
+},
+{
+"id": 272,
+"slug": "denver",
+"name": "Denver",
+"country": "United States"
+},
+{
+"id": 12693,
+"slug": "taichung",
+"name": "Taichung",
+"country": "Taiwan"
+},
+{
+"id": 7724,
+"slug": "kozhikode",
+"name": "Kozhikode",
+"country": "India"
+},
+{
+"id": 8023,
+"slug": "coimbatore",
+"name": "Coimbatore",
+"country": "India"
+},
+{
+"id": 12863,
+"slug": "makassar",
+"name": "Makassar",
+"country": "Indonesia"
+},
+{
+"id": 1780,
+"slug": "manchester",
+"name": "Manchester",
+"country": "United Kingdom"
+},
+{
+"id": 6760,
+"slug": "chandigarh",
+"name": "Chandigarh",
+"country": "India"
+},
+{
+"id": 12136,
+"slug": "tasikmalaya",
+"name": "Tasikmalaya",
+"country": "Indonesia"
+},
+{
+"id": 7061,
+"slug": "meerut",
+"name": "Meerut",
+"country": "India"
+},
+{
+"id": 719,
+"slug": "maracaibo",
+"name": "Maracaibo",
+"country": "Venezuela"
+},
+{
+"id": 177,
+"slug": "puebla",
+"name": "Puebla",
+"country": "Mexico"
+},
+{
+"id": 12741,
+"slug": "fukuoka",
+"name": "Fukuoka",
+"country": "Japan"
+},
+{
+"id": 2767,
+"slug": "tunis",
+"name": "Tunis",
+"country": "Tunisia"
+},
+{
+"id": 6737,
+"slug": "vadodara",
+"name": "Vadodara",
+"country": "India"
+},
+{
+"id": 4417,
+"slug": "aleppo",
+"name": "Aleppo",
+"country": "Syria"
+},
+{
+"id": 1165,
+"slug": "belem",
+"name": "Belém",
+"country": "Brazil"
+},
+{
+"id": 9284,
+"slug": "dhanbad",
+"name": "Dhanbad",
+"country": "India"
+},
+{
+"id": 7459,
+"slug": "bhopal",
+"name": "Bhopal",
+"country": "India"
+},
+{
+"id": 1022,
+"slug": "boston",
+"name": "Boston",
+"country": "United States"
+},
+{
+"id": 12253,
+"slug": "tegal",
+"name": "Tegal",
+"country": "Indonesia"
+},
+{
+"id": 8404,
+"slug": "gorakhpur",
+"name": "Gorakhpur",
+"country": "India"
+},
+{
+"id": 74,
+"slug": "las-vegas",
+"name": "Las Vegas",
+"country": "United States"
+},
+{
+"id": 1006,
+"slug": "manaus",
+"name": "Manaus",
+"country": "Brazil"
+},
+{
+"id": 187,
+"slug": "vancouver",
+"name": "Vancouver",
+"country": "Canada"
+},
+{
+"id": 5811,
+"slug": "isfahan",
+"name": "Isfahan",
+"country": "Iran"
+},
+{
+"id": 3401,
+"slug": "minsk",
+"name": "Minsk",
+"country": "Belarus"
+},
+{
+"id": 501,
+"slug": "tampa",
+"name": "Tampa",
+"country": "United States"
+},
+{
+"id": 10186,
+"slug": "baotou",
+"name": "Baotou",
+"country": "China"
+},
+{
+"id": 8095,
+"slug": "thiruvananthapuram",
+"name": "Thiruvananthapuram",
+"country": "India"
+},
+{
+"id": 7963,
+"slug": "kollam",
+"name": "Kollam",
+"country": "India"
+},
+{
+"id": 1551,
+"slug": "lisbon",
+"name": "Lisbon",
+"country": "Portugal"
+},
+{
+"id": 12479,
+"slug": "cixi",
+"name": "Cixi",
+"country": "China"
+},
+{
+"id": 2123,
+"slug": "rotterdam-the-hague",
+"name": "Rotterdam [The Hague]",
+"country": "Netherlands"
+},
+{
+"id": 626,
+"slug": "barranquilla",
+"name": "Barranquilla",
+"country": "Colombia"
+},
+{
+"id": 11653,
+"slug": "palembang",
+"name": "Palembang",
+"country": "Indonesia"
+},
+{
+"id": 12736,
+"slug": "sapporo",
+"name": "Sapporo",
+"country": "Japan"
+},
+{
+"id": 6476,
+"slug": "sialkot",
+"name": "Sialkot",
+"country": "Pakistan"
+},
+{
+"id": 10265,
+"slug": "hohhot",
+"name": "Hohhot",
+"country": "China"
+},
+{
+"id": 12708,
+"slug": "denpasar",
+"name": "Denpasar",
+"country": "Indonesia"
+},
+{
+"id": 1177,
+"slug": "goiania",
+"name": "Goiânia",
+"country": "Brazil"
+},
+{
+"id": 9924,
+"slug": "brahmanbaria",
+"name": "Brahmanbaria",
+"country": "Bangladesh"
+},
+{
+"id": 8344,
+"slug": "madurai",
+"name": "Madurai",
+"country": "India"
+},
+{
+"id": 1595,
+"slug": "rabat",
+"name": "Rabat",
+"country": "Morocco"
+},
+{
+"id": 3027,
+"slug": "vienna",
+"name": "Vienna",
+"country": "Austria"
+},
+{
+"id": 12211,
+"slug": "zhuhai",
+"name": "Zhuhai",
+"country": "China"
+},
+{
+"id": 473,
+"slug": "havana",
+"name": "Havana",
+"country": "Cuba"
+},
+{
+"id": 6251,
+"slug": "hyderabad-pak",
+"name": "Hyderabad",
+"country": "Pakistan"
+},
+{
+"id": 10155,
+"slug": "mandalay",
+"name": "Mandalay",
+"country": "Myanmar"
+},
+{
+"id": 8123,
+"slug": "faizabad",
+"name": "Faizabad",
+"country": "India"
+},
+{
+"id": 10860,
+"slug": "luoyang",
+"name": "Luoyang",
+"country": "China"
+},
+{
+"id": 6659,
+"slug": "ludhiana",
+"name": "Ludhiana",
+"country": "India"
+},
+{
+"id": 3216,
+"slug": "warsaw",
+"name": "Warsaw",
+"country": "Poland"
+},
+{
+"id": 1218,
+"slug": "porto-alegre",
+"name": "Porto Alegre",
+"country": "Brazil"
+},
+{
+"id": 6970,
+"slug": "nashik",
+"name": "Nashik",
+"country": "India"
+},
+{
+"id": 3444,
+"slug": "bucharest",
+"name": "Bucharest",
+"country": "Romania"
+},
+{
+"id": 9359,
+"slug": "jamshedpur",
+"name": "Jamshedpur",
+"country": "India"
+},
+{
+"id": 143,
+"slug": "ciudad-juarez",
+"name": "Ciudad Juárez",
+"country": "Mexico"
+},
+{
+"id": 3193,
+"slug": "budapest",
+"name": "Budapest",
+"country": "Hungary"
+},
+{
+"id": 554,
+"slug": "minneapolis-saint-paul",
+"name": "Minneapolis [Saint Paul]",
+"country": "United States"
+},
+{
+"id": 4285,
+"slug": "gaza",
+"name": "Gaza",
+"country": "Palestina"
+},
+{
+"id": 3589,
+"slug": "bursa",
+"name": "Bursa",
+"country": "Turkey"
+},
+{
+"id": 821,
+"slug": "valencia",
+"name": "Valencia",
+"country": "Venezuela"
+},
+{
+"id": 12444,
+"slug": "pati",
+"name": "Pati",
+"country": "Indonesia"
+},
+{
+"id": 101,
+"slug": "portland",
+"name": "Portland",
+"country": "United States"
+},
+{
+"id": 1372,
+"slug": "sao-goncalo",
+"name": "Sao Goncalo",
+"country": "Brazil"
+},
+{
+"id": 7251,
+"slug": "moradabad",
+"name": "Moradabad",
+"country": "India"
+},
+{
+"id": 11354,
+"slug": "zibo",
+"name": "Zibo",
+"country": "China"
+},
+{
+"id": 12179,
+"slug": "cirebon",
+"name": "Cirebon",
+"country": "Indonesia"
+},
+{
+"id": 7227,
+"slug": "aligarh",
+"name": "Aligarh",
+"country": "India"
+},
+{
+"id": 7779,
+"slug": "guruvayur",
+"name": "Guruvayur",
+"country": "India"
+},
+{
+"id": 11561,
+"slug": "xuzhou",
+"name": "Xuzhou",
+"country": "China"
+},
+{
+"id": 7970,
+"slug": "jabalpur",
+"name": "Jabalpur",
+"country": "India"
+},
+{
+"id": 9122,
+"slug": "visakhapatnam",
+"name": "Visakhapatnam",
+"country": "India"
+},
+{
+"id": 2570,
+"slug": "kaduna",
+"name": "Kaduna",
+"country": "Nigeria"
+},
+{
+"id": 2531,
+"slug": "hamburg",
+"name": "Hamburg",
+"country": "Germany"
+},
+{
+"id": 9160,
+"slug": "ranchi",
+"name": "Ranchi",
+"country": "India"
+},
+{
+"id": 11925,
+"slug": "haikou",
+"name": "Haikou",
+"country": "China"
+},
+{
+"id": 10991,
+"slug": "tangshan",
+"name": "Tangshan",
+"country": "China"
+},
+{
+"id": 2784,
+"slug": "munich",
+"name": "Munich",
+"country": "Germany"
+},
+{
+"id": 5820,
+"slug": "dammam",
+"name": "Dammam",
+"country": "Saudi Arabia"
+},
+{
+"id": 2354,
+"slug": "benin-city",
+"name": "Benin City",
+"country": "Nigeria"
+},
+{
+"id": 9653,
+"slug": "tamluk",
+"name": "Tamluk",
+"country": "India"
+},
+{
+"id": 7266,
+"slug": "aurangabad",
+"name": "Aurangabad",
+"country": "India"
+},
+{
+"id": 12540,
+"slug": "daejeon",
+"name": "Daejeon",
+"country": "South Korea"
+},
+{
+"id": 49,
+"slug": "sacramento",
+"name": "Sacramento",
+"country": "United States"
+},
+{
+"id": 3134,
+"slug": "katowice",
+"name": "Katowice",
+"country": "Poland"
+},
+{
+"id": 7387,
+"slug": "gwalior",
+"name": "Gwalior",
+"country": "India"
+},
+{
+"id": 8278,
+"slug": "salem",
+"name": "Salem",
+"country": "India"
+},
+{
+"id": 4351,
+"slug": "jerusalem",
+"name": "Jerusalem",
+"country": "Palestina"
+},
+{
+"id": 559,
+"slug": "atlanta",
+"name": "Atlanta",
+"country": "United States"
+},
+{
+"id": 5354,
+"slug": "tabriz",
+"name": "Tabriz",
+"country": "Iran"
+},
+{
+"id": 119,
+"slug": "leon",
+"name": "León",
+"country": "Mexico"
+},
+{
+"id": 7436,
+"slug": "bareilly",
+"name": "Bareilly",
+"country": "India"
+},
+{
+"id": 2310,
+"slug": "cologne",
+"name": "Cologne",
+"country": "Germany"
+},
+{
+"id": 4099,
+"slug": "beni",
+"name": "Beni",
+"country": "Democratic Republic of the Congo"
+},
+{
+"id": 11415,
+"slug": "jilin",
+"name": "Jilin",
+"country": "China"
+},
+{
+"id": 10398,
+"slug": "datong",
+"name": "Datong",
+"country": "China"
+},
+{
+"id": 5668,
+"slug": "basra",
+"name": "Basra",
+"country": "Iraq"
+},
+{
+"id": 250,
+"slug": "san-antonio",
+"name": "San Antonio",
+"country": "United States"
+},
+{
+"id": 12279,
+"slug": "huizhou",
+"name": "Huizhou",
+"country": "China"
+},
+{
+"id": 3698,
+"slug": "pretoria",
+"name": "Pretoria",
+"country": "South Africa"
+},
+{
+"id": 12611,
+"slug": "gwangju",
+"name": "Gwangju",
+"country": "South Korea"
+},
+{
+"id": 11438,
+"slug": "liuzhou",
+"name": "Liuzhou",
+"country": "China"
+},
+{
+"id": 2565,
+"slug": "abuja",
+"name": "Abuja",
+"country": "Nigeria"
+},
+{
+"id": 10137,
+"slug": "yinchuan",
+"name": "Yinchuan",
+"country": "China"
+},
+{
+"id": 8913,
+"slug": "muzaffarpur",
+"name": "Muzaffarpur",
+"country": "India"
+},
+{
+"id": 8513,
+"slug": "raipur",
+"name": "Raipur",
+"country": "India"
+},
+{
+"id": 146,
+"slug": "toluca",
+"name": "Toluca",
+"country": "Mexico"
+},
+{
+"id": 3781,
+"slug": "kharkiv",
+"name": "Kharkiv",
+"country": "Ukraine"
+},
+{
+"id": 12090,
+"slug": "garut",
+"name": "Garut",
+"country": "Indonesia"
+},
+{
+"id": 6840,
+"slug": "vasai-virar",
+"name": "Vasai-Virar",
+"country": "India"
+},
+{
+"id": 11706,
+"slug": "yantai",
+"name": "Yantai",
+"country": "China"
+},
+{
+"id": 1291,
+"slug": "campinas",
+"name": "Campinas",
+"country": "Brazil"
+},
+{
+"id": 7885,
+"slug": "mysuru",
+"name": "Mysuru",
+"country": "India"
+},
+{
+"id": 1911,
+"slug": "valencia-esp",
+"name": "Valencia",
+"country": "Spain"
+},
+{
+"id": 11401,
+"slug": "anshan",
+"name": "Anshan",
+"country": "China"
+},
+{
+"id": 2135,
+"slug": "brussels",
+"name": "Brussels",
+"country": "Belgium"
+},
+{
+"id": 6522,
+"slug": "rajkot",
+"name": "Rajkot",
+"country": "India"
+},
+{
+"id": 3862,
+"slug": "faiyum",
+"name": "Faiyum",
+"country": "Egypt"
+},
+{
+"id": 1035,
+"slug": "cordoba",
+"name": "Cordoba",
+"country": "Argentina"
+},
+{
+"id": 3795,
+"slug": "sincan",
+"name": "Sincan",
+"country": "Turkey"
+},
+{
+"id": 880,
+"slug": "baltimore",
+"name": "Baltimore",
+"country": "United States"
+},
+{
+"id": 12650,
+"slug": "jember",
+"name": "Jember",
+"country": "Indonesia"
+},
+{
+"id": 8628,
+"slug": "vijayawada",
+"name": "Vijayawada",
+"country": "India"
+},
+{
+"id": 12287,
+"slug": "purwokerto",
+"name": "Purwokerto",
+"country": "Indonesia"
+},
+{
+"id": 5854,
+"slug": "shiraz",
+"name": "Shiraz",
+"country": "Iran"
+},
+{
+"id": 4424,
+"slug": "gaziantep",
+"name": "Gaziantep",
+"country": "Turkey"
+},
+{
+"id": 5073,
+"slug": "mecca",
+"name": "Mecca",
+"country": "Saudi Arabia"
+},
+{
+"id": 11599,
+"slug": "linyi",
+"name": "Linyi",
+"country": "China"
+},
+{
+"id": 12618,
+"slug": "taizhou",
+"name": "Taizhou",
+"country": "China"
+},
+{
+"id": 1138,
+"slug": "montevideo",
+"name": "Montevideo",
+"country": "Uruguay"
+},
+{
+"id": 6595,
+"slug": "jodhpur",
+"name": "Jodhpur",
+"country": "India"
+},
+{
+"id": 1819,
+"slug": "leeds",
+"name": "Leeds",
+"country": "United Kingdom"
+},
+{
+"id": 2973,
+"slug": "stockholm",
+"name": "Stockholm",
+"country": "Sweden"
+},
+{
+"id": 568,
+"slug": "orlando",
+"name": "Orlando",
+"country": "United States"
+},
+{
+"id": 9726,
+"slug": "bogura",
+"name": "Bogura",
+"country": "Bangladesh"
+},
+{
+"id": 1312,
+"slug": "s-o-luis",
+"name": "S?o Luís",
+"country": "Brazil"
+},
+{
+"id": 8104,
+"slug": "tiruppur",
+"name": "Tiruppur",
+"country": "India"
+},
+{
+"id": 1751,
+"slug": "liverpool",
+"name": "Liverpool",
+"country": "United Kingdom"
+},
+{
+"id": 8448,
+"slug": "tiruchirappalli",
+"name": "Tiruchirappalli",
+"country": "India"
+},
+{
+"id": 12334,
+"slug": "pekalongan",
+"name": "Pekalongan",
+"country": "Indonesia"
+},
+{
+"id": 11640,
+"slug": "perth",
+"name": "Perth",
+"country": "Australia"
+},
+{
+"id": 9863,
+"slug": "khulna",
+"name": "Khulna",
+"country": "Bangladesh"
+},
+{
+"id": 10753,
+"slug": "baoding",
+"name": "Baoding",
+"country": "China"
+},
+{
+"id": 5159,
+"slug": "erbil",
+"name": "Erbil",
+"country": "Iraq"
+},
+{
+"id": 12319,
+"slug": "nantong",
+"name": "Nantong",
+"country": "China"
+},
+{
+"id": 12291,
+"slug": "sha-tin",
+"name": "Sha Tin",
+"country": "China"
+},
+{
+"id": 5712,
+"slug": "ahwaz",
+"name": "Ahwaz",
+"country": "Iran"
+},
+{
+"id": 6025,
+"slug": "novosibirsk",
+"name": "Novosibirsk",
+"country": "Russia"
+},
+{
+"id": 7669,
+"slug": "thalassery",
+"name": "Thalassery",
+"country": "India"
+},
+{
+"id": 6548,
+"slug": "amritsar",
+"name": "Amritsar",
+"country": "India"
+},
+{
+"id": 2405,
+"slug": "turin",
+"name": "Turin",
+"country": "Italy"
+},
+{
+"id": 12743,
+"slug": "kitakyushu",
+"name": "Kitakyushu",
+"country": "Japan"
+},
+{
+"id": 2574,
+"slug": "aba",
+"name": "Aba",
+"country": "Nigeria"
+},
+{
+"id": 1664,
+"slug": "fez",
+"name": "Fez",
+"country": "Morocco"
+},
+{
+"id": 790,
+"slug": "cleveland",
+"name": "Cleveland",
+"country": "United States"
+},
+{
+"id": 12778,
+"slug": "hiroshima",
+"name": "Hiroshima",
+"country": "Japan"
+},
+{
+"id": 7665,
+"slug": "hardoi",
+"name": "Hardoi",
+"country": "India"
+},
+{
+"id": 12947,
+"slug": "takasaki-maebashi",
+"name": "Takasaki [Maebashi]",
+"country": "Japan"
+},
+{
+"id": 10097,
+"slug": "xining",
+"name": "Xining",
+"country": "China"
+},
+{
+"id": 8183,
+"slug": "sultanpur",
+"name": "Sultanpur",
+"country": "India"
+},
+{
+"id": 8188,
+"slug": "erode",
+"name": "Erode",
+"country": "India"
+},
+{
+"id": 2511,
+"slug": "port-harcourt",
+"name": "Port Harcourt",
+"country": "Nigeria"
+},
+{
+"id": 12451,
+"slug": "yiwu",
+"name": "Yiwu",
+"country": "China"
+},
+{
+"id": 1210,
+"slug": "ceilandia",
+"name": "Ceilândia",
+"country": "Brazil"
+},
+{
+"id": 8464,
+"slug": "durg",
+"name": "Durg",
+"country": "India"
+},
+{
+"id": 4195,
+"slug": "nizhny-novgorod",
+"name": "Nizhny Novgorod",
+"country": "Russia"
+},
+{
+"id": 2186,
+"slug": "lyon",
+"name": "Lyon",
+"country": "France"
+},
+{
+"id": 12931,
+"slug": "sendai",
+"name": "Sendai",
+"country": "Japan"
+},
+{
+"id": 12602,
+"slug": "yueqing",
+"name": "Yueqing",
+"country": "China"
+},
+{
+"id": 729,
+"slug": "columbus",
+"name": "Columbus",
+"country": "United States"
+},
+{
+"id": 10912,
+"slug": "handan",
+"name": "Handan",
+"country": "China"
+},
+{
+"id": 1890,
+"slug": "oran",
+"name": "Oran",
+"country": "Algeria"
+},
+{
+"id": 6965,
+"slug": "saharanpur",
+"name": "Saharanpur",
+"country": "India"
+},
+{
+"id": 12181,
+"slug": "zhongshan",
+"name": "Zhongshan",
+"country": "China"
+},
+{
+"id": 9619,
+"slug": "berhampore",
+"name": "Berhampore",
+"country": "India"
+},
+{
+"id": 411,
+"slug": "kansas-city",
+"name": "Kansas City",
+"country": "United States"
+},
+{
+"id": 2167,
+"slug": "amsterdam",
+"name": "Amsterdam",
+"country": "Netherlands"
+},
+{
+"id": 458,
+"slug": "panama-city",
+"name": "Panama City",
+"country": "Panama"
+},
+{
+"id": 3581,
+"slug": "odesa",
+"name": "Odesa",
+"country": "Ukraine"
+},
+{
+"id": 3270,
+"slug": "belgrade",
+"name": "Belgrade",
+"country": "Serbia"
+},
+{
+"id": 12585,
+"slug": "putian",
+"name": "Putian",
+"country": "China"
+},
+{
+"id": 4907,
+"slug": "medina",
+"name": "Medina",
+"country": "Saudi Arabia"
+},
+{
+"id": 9982,
+"slug": "sylhet",
+"name": "Sylhet",
+"country": "Bangladesh"
+},
+{
+"id": 6442,
+"slug": "srinagar",
+"name": "Srinagar",
+"country": "India"
+},
+{
+"id": 9915,
+"slug": "guwahati",
+"name": "Guwahati",
+"country": "India"
+},
+{
+"id": 675,
+"slug": "milwaukee",
+"name": "Milwaukee",
+"country": "United States"
+},
+{
+"id": 487,
+"slug": "st-louis",
+"name": "St. Louis",
+"country": "United States"
+},
+{
+"id": 1070,
+"slug": "rosario",
+"name": "Rosario",
+"country": "Argentina"
+},
+{
+"id": 11519,
+"slug": "weifang",
+"name": "Weifang",
+"country": "China"
+},
+{
+"id": 12300,
+"slug": "zhangjiagang",
+"name": "Zhangjiagang",
+"country": "China"
+},
+{
+"id": 11719,
+"slug": "bandar-lampung",
+"name": "Bandar Lampung",
+"country": "Indonesia"
+},
+{
+"id": 651,
+"slug": "indianapolis",
+"name": "Indianapolis",
+"country": "United States"
+},
+{
+"id": 144,
+"slug": "san-luis-potosi",
+"name": "San Luis Potosí",
+"country": "Mexico"
+},
+{
+"id": 12088,
+"slug": "wuhu",
+"name": "Wuhu",
+"country": "China"
+},
+{
+"id": 11398,
+"slug": "fushun",
+"name": "Fushun",
+"country": "China"
+},
+{
+"id": 1400,
+"slug": "vila-velha",
+"name": "Vila Velha",
+"country": "Brazil"
+},
+{
+"id": 10923,
+"slug": "anyang",
+"name": "Anyang",
+"country": "China"
+},
+{
+"id": 3927,
+"slug": "mansoura",
+"name": "Mansoura",
+"country": "Egypt"
+},
+{
+"id": 7016,
+"slug": "dehradun",
+"name": "Dehradun",
+"country": "India"
+},
+{
+"id": 4288,
+"slug": "rostov-on-don",
+"name": "Rostov-on-Don",
+"country": "Russia"
+},
+{
+"id": 3044,
+"slug": "maiduguri",
+"name": "Maiduguri",
+"country": "Nigeria"
+},
+{
+"id": 11492,
+"slug": "guilin",
+"name": "Guilin",
+"country": "China"
+},
+{
+"id": 11113,
+"slug": "fancheng",
+"name": "Fancheng",
+"country": "China"
+},
+{
+"id": 8078,
+"slug": "gonda",
+"name": "Gonda",
+"country": "India"
+},
+{
+"id": 273,
+"slug": "austin",
+"name": "Austin",
+"country": "United States"
+},
+{
+"id": 7509,
+"slug": "solapur",
+"name": "Solapur",
+"country": "India"
+},
+{
+"id": 7028,
+"slug": "kota",
+"name": "Kota",
+"country": "India"
+},
+{
+"id": 12703,
+"slug": "tainan",
+"name": "Tainan",
+"country": "Taiwan"
+},
+{
+"id": 12803,
+"slug": "angeles-san-fernando",
+"name": "Angeles [San Fernando]",
+"country": "Philippines"
+},
+{
+"id": 11275,
+"slug": "haiphong",
+"name": "Haiphong",
+"country": "Vietnam"
+},
+{
+"id": 7973,
+"slug": "ettumanoor",
+"name": "Ettumanoor",
+"country": "India"
+},
+{
+"id": 2240,
+"slug": "ilorin",
+"name": "Ilorin",
+"country": "Nigeria"
+},
+{
+"id": 126,
+"slug": "torreon",
+"name": "Torreon",
+"country": "Mexico"
+},
+{
+"id": 5633,
+"slug": "chelyabinsk",
+"name": "Chelyabinsk",
+"country": "Russia"
+},
+{
+"id": 13129,
+"slug": "auckland",
+"name": "Auckland",
+"country": "New Zealand"
+},
+{
+"id": 1438,
+"slug": "maceio",
+"name": "Maceió",
+"country": "Brazil"
+},
+{
+"id": 4552,
+"slug": "kazan",
+"name": "Kazan",
+"country": "Russia"
+},
+{
+"id": 362,
+"slug": "calgary",
+"name": "Calgary",
+"country": "Canada"
+},
+{
+"id": 6238,
+"slug": "mardan",
+"name": "Mardan",
+"country": "Pakistan"
+},
+{
+"id": 6503,
+"slug": "jammu",
+"name": "Jammu",
+"country": "India"
+},
+{
+"id": 12409,
+"slug": "jiaxing",
+"name": "Jiaxing",
+"country": "China"
+},
+{
+"id": 4990,
+"slug": "mosul",
+"name": "Mosul",
+"country": "Iraq"
+},
+{
+"id": 5515,
+"slug": "kermanshah",
+"name": "Kermanshah",
+"country": "Iran"
+},
+{
+"id": 7558,
+"slug": "farrukhabad",
+"name": "Farrukhabad",
+"country": "India"
+},
+{
+"id": 5387,
+"slug": "najaf",
+"name": "Najaf",
+"country": "Iraq"
+},
+{
+"id": 9478,
+"slug": "bhubaneshwar",
+"name": "Bhubaneshwar",
+"country": "India"
+},
+{
+"id": 11767,
+"slug": "dandong",
+"name": "Dandong",
+"country": "China"
+},
+{
+"id": 1320,
+"slug": "santos",
+"name": "Santos",
+"country": "Brazil"
+},
+{
+"id": 11821,
+"slug": "a-n-ng",
+"name": "?à N?ng",
+"country": "Vietnam"
+},
+{
+"id": 1569,
+"slug": "porto",
+"name": "Porto",
+"country": "Portugal"
+},
+{
+"id": 11738,
+"slug": "tianjia-an",
+"name": "Tianjia?an",
+"country": "China"
+},
+{
+"id": 11146,
+"slug": "pekanbaru",
+"name": "Pekanbaru",
+"country": "Indonesia"
+},
+{
+"id": 3486,
+"slug": "kananga",
+"name": "Kananga",
+"country": "Democratic Republic of the Congo"
+},
+{
+"id": 4083,
+"slug": "donetsk",
+"name": "Donetsk",
+"country": "Ukraine"
+},
+{
+"id": 5914,
+"slug": "omsk",
+"name": "Omsk",
+"country": "Russia"
+},
+{
+"id": 12763,
+"slug": "samarinda",
+"name": "Samarinda",
+"country": "Indonesia"
+},
+{
+"id": 9131,
+"slug": "begusarai",
+"name": "Begusarai",
+"country": "India"
+},
+{
+"id": 7566,
+"slug": "shahjahanpur",
+"name": "Shahjahanpur",
+"country": "India"
+},
+{
+"id": 6618,
+"slug": "jalandhar",
+"name": "Jalandhar",
+"country": "India"
+},
+{
+"id": 11011,
+"slug": "binhai",
+"name": "Binhai",
+"country": "China"
+},
+{
+"id": 13076,
+"slug": "brisbane",
+"name": "Brisbane",
+"country": "Australia"
+},
+{
+"id": 2514,
+"slug": "stuttgart",
+"name": "Stuttgart",
+"country": "Germany"
+},
+{
+"id": 4104,
+"slug": "sohag",
+"name": "Sohag",
+"country": "Egypt"
+},
+{
+"id": 2593,
+"slug": "enugu",
+"name": "Enugu",
+"country": "Nigeria"
+},
+{
+"id": 1635,
+"slug": "tangier",
+"name": "Tangier",
+"country": "Morocco"
+},
+{
+"id": 403,
+"slug": "edmonton",
+"name": "Edmonton",
+"country": "Canada"
+},
+{
+"id": 193,
+"slug": "salt-lake-city",
+"name": "Salt Lake City",
+"country": "United States"
+},
+{
+"id": 12725,
+"slug": "mataram",
+"name": "Mataram",
+"country": "Indonesia"
+},
+{
+"id": 7924,
+"slug": "fatehpur",
+"name": "Fatehpur",
+"country": "India"
+},
+{
+"id": 11842,
+"slug": "zhanjiang",
+"name": "Zhanjiang",
+"country": "China"
+},
+{
+"id": 783,
+"slug": "barquisimeto",
+"name": "Barquisimeto",
+"country": "Venezuela"
+},
+{
+"id": 2445,
+"slug": "frankfurt-am-main",
+"name": "Frankfurt am Main",
+"country": "Germany"
+},
+{
+"id": 11547,
+"slug": "batam-city",
+"name": "Batam City",
+"country": "Indonesia"
+},
+{
+"id": 11698,
+"slug": "hengyang",
+"name": "Hengyang",
+"country": "China"
+},
+{
+"id": 1544,
+"slug": "agadir",
+"name": "Agadir",
+"country": "Morocco"
+},
+{
+"id": 670,
+"slug": "bucaramanga",
+"name": "Bucaramanga",
+"country": "Colombia"
+},
+{
+"id": 6234,
+"slug": "swat-city",
+"name": "Swat City",
+"country": "Pakistan"
+},
+{
+"id": 1709,
+"slug": "glasgow",
+"name": "Glasgow",
+"country": "United Kingdom"
+},
+{
+"id": 1570,
+"slug": "marrakesh",
+"name": "Marrakesh",
+"country": "Morocco"
+},
+{
+"id": 3729,
+"slug": "antalya",
+"name": "Antalya",
+"country": "Turkey"
+},
+{
+"id": 12882,
+"slug": "naha",
+"name": "Naha",
+"country": "Japan"
+},
+{
+"id": 10988,
+"slug": "padang",
+"name": "Padang",
+"country": "Indonesia"
+},
+{
+"id": 11692,
+"slug": "zhuzhou",
+"name": "Zhuzhou",
+"country": "China"
+},
+{
+"id": 966,
+"slug": "mendoza",
+"name": "Mendoza",
+"country": "Argentina"
+},
+{
+"id": 11654,
+"slug": "xiangtan",
+"name": "Xiangtan",
+"country": "China"
+},
+{
+"id": 7731,
+"slug": "lakhimpur",
+"name": "Lakhimpur",
+"country": "India"
+},
+{
+"id": 7944,
+"slug": "bahraich",
+"name": "Bahraich",
+"country": "India"
+},
+{
+"id": 12977,
+"slug": "adelaide",
+"name": "Adelaide",
+"country": "Australia"
+},
+{
+"id": 586,
+"slug": "cartagena",
+"name": "Cartagena",
+"country": "Colombia"
+},
+{
+"id": 139,
+"slug": "queretaro",
+"name": "Querétaro",
+"country": "Mexico"
+},
+{
+"id": 1449,
+"slug": "jo-o-pessoa",
+"name": "Jo?o Pessoa",
+"country": "Brazil"
+},
+{
+"id": 5489,
+"slug": "yekaterinburg",
+"name": "Yekaterinburg",
+"country": "Russia"
+},
+{
+"id": 9707,
+"slug": "krishnanagar",
+"name": "Krishnanagar",
+"country": "India"
+},
+{
+"id": 5756,
+"slug": "qom",
+"name": "Qom",
+"country": "Iran"
+},
+{
+"id": 3968,
+"slug": "al-zaqaziq",
+"name": "Al-Zaqaziq?",
+"country": "Egypt"
+},
+{
+"id": 12682,
+"slug": "ulsan",
+"name": "Ulsan",
+"country": "South Korea"
+},
+{
+"id": 833,
+"slug": "maracay",
+"name": "Maracay",
+"country": "Venezuela"
+},
+{
+"id": 8405,
+"slug": "mirzapur",
+"name": "Mirzapur",
+"country": "India"
+},
+{
+"id": 12710,
+"slug": "banjarmasin",
+"name": "Banjarmasin",
+"country": "Indonesia"
+},
+{
+"id": 8384,
+"slug": "jaunpur",
+"name": "Jaunpur",
+"country": "India"
+},
+{
+"id": 9657,
+"slug": "rangpur",
+"name": "Rangpur",
+"country": "Bangladesh"
+},
+{
+"id": 2228,
+"slug": "marseille",
+"name": "Marseille",
+"country": "France"
+},
+{
+"id": 350,
+"slug": "merida",
+"name": "Mérida",
+"country": "Mexico"
+},
+{
+"id": 2080,
+"slug": "lille",
+"name": "Lille",
+"country": "France"
+},
+{
+"id": 3754,
+"slug": "dnipro",
+"name": "Dnipro",
+"country": "Ukraine"
+},
+{
+"id": 4756,
+"slug": "samara",
+"name": "Samara",
+"country": "Russia"
+},
+{
+"id": 8578,
+"slug": "bilaspur",
+"name": "Bilaspur",
+"country": "India"
+},
+{
+"id": 11937,
+"slug": "huai-an",
+"name": "Huai'an",
+"country": "China"
+},
+{
+"id": 11739,
+"slug": "huangshi",
+"name": "Huangshi",
+"country": "China"
+},
+{
+"id": 1343,
+"slug": "teresina",
+"name": "Teresina",
+"country": "Brazil"
+},
+{
+"id": 7030,
+"slug": "muzaffarnagar",
+"name": "Muzaffarnagar",
+"country": "India"
+},
+{
+"id": 9278,
+"slug": "bokaro",
+"name": "Bokaro",
+"country": "India"
+},
+{
+"id": 10556,
+"slug": "qiqihar",
+"name": "Qiqihar",
+"country": "China"
+},
+{
+"id": 7496,
+"slug": "mangaluru",
+"name": "Mangaluru",
+"country": "India"
+},
+{
+"id": 112,
+"slug": "aguascalientes",
+"name": "Aguascalientes",
+"country": "Mexico"
+},
+{
+"id": 8661,
+"slug": "puducherry",
+"name": "Puducherry",
+"country": "India"
+},
+{
+"id": 11489,
+"slug": "jambi",
+"name": "Jambi",
+"country": "Indonesia"
+},
+{
+"id": 153,
+"slug": "cuernavaca",
+"name": "Cuernavaca",
+"country": "Mexico"
+},
+{
+"id": 4133,
+"slug": "girga",
+"name": "Girga",
+"country": "Egypt"
+},
+{
+"id": 6266,
+"slug": "krasnoyarsk",
+"name": "Krasnoyarsk",
+"country": "Russia"
+},
+{
+"id": 11140,
+"slug": "yichang",
+"name": "Yichang",
+"country": "China"
+},
+{
+"id": 11551,
+"slug": "huaibei",
+"name": "Huaibei",
+"country": "China"
+},
+{
+"id": 12499,
+"slug": "madiun",
+"name": "Madiun",
+"country": "Indonesia"
+},
+{
+"id": 1632,
+"slug": "seville",
+"name": "Seville",
+"country": "Spain"
+},
+{
+"id": 4028,
+"slug": "voronezh",
+"name": "Voronezh",
+"country": "Russia"
+},
+{
+"id": 8474,
+"slug": "vellore",
+"name": "Vellore",
+"country": "India"
+},
+{
+"id": 10342,
+"slug": "baoji",
+"name": "Baoji",
+"country": "China"
+},
+{
+"id": 11161,
+"slug": "jinzhou",
+"name": "Jinzhou",
+"country": "China"
+},
+{
+"id": 8584,
+"slug": "guntur",
+"name": "Guntur",
+"country": "India"
+},
+{
+"id": 6712,
+"slug": "udaipur",
+"name": "Udaipur",
+"country": "India"
+},
+{
+"id": 991,
+"slug": "san-miguel-de-tucuman",
+"name": "San Miguel de Tucumán",
+"country": "Argentina"
+},
+{
+"id": 7288,
+"slug": "sangli",
+"name": "Sangli",
+"country": "India"
+},
+{
+"id": 9975,
+"slug": "agartala",
+"name": "Agartala",
+"country": "India"
+},
+{
+"id": 3697,
+"slug": "klipgat",
+"name": "Klipgat",
+"country": "South Africa"
+},
+{
+"id": 753,
+"slug": "arequipa",
+"name": "Arequipa",
+"country": "Peru"
+},
+{
+"id": 5259,
+"slug": "kirkuk",
+"name": "Kirkuk",
+"country": "Iraq"
+},
+{
+"id": 10990,
+"slug": "xinxiang",
+"name": "Xinxiang",
+"country": "China"
+},
+{
+"id": 3889,
+"slug": "el-mahalla-el-kubra",
+"name": "El Mahalla El Kubra",
+"country": "Egypt"
+},
+{
+"id": 4027,
+"slug": "asyut",
+"name": "Asyut",
+"country": "Egypt"
+},
+{
+"id": 7084,
+"slug": "malegaon",
+"name": "Malegaon",
+"country": "India"
+},
+{
+"id": 5344,
+"slug": "ufa",
+"name": "Ufa",
+"country": "Russia"
+},
+{
+"id": 847,
+"slug": "virginia-beach",
+"name": "Virginia Beach",
+"country": "United States"
+},
+{
+"id": 901,
+"slug": "vina-del-mar-valparaiso",
+"name": "Viña del Mar [Valparaíso]",
+"country": "Chile"
+},
+{
+"id": 12124,
+"slug": "yangzhou",
+"name": "Yangzhou",
+"country": "China"
+},
+{
+"id": 12838,
+"slug": "okayama",
+"name": "Okayama",
+"country": "Japan"
+}
+]
