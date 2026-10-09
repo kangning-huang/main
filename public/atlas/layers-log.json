@@ -14,5 +14,66 @@
    "Guangzhou",
    "Shanghai"
   ]
+ },
+ "flood": {
+  "rows": 614,
+  "uniqueFua": 565,
+  "skippedNoDmg": 15,
+  "uniqueUcIds": 1307,
+  "centres": 867,
+  "exact": 862,
+  "flagged": 5,
+  "ucNotInAtlas": 440,
+  "examples": {
+   "Shanghai": {
+    "quality": "exact",
+    "fua": {
+     "id": 10097,
+     "name": "Shanghai",
+     "centres": 7
+    },
+    "dmgPct": 7.36,
+    "dmgProtPct": 0.98,
+    "protYears": 179,
+    "heightM": 7.7
+   },
+   "Beijing": {
+    "quality": "exact",
+    "fua": {
+     "id": 7704,
+     "name": "Beijing",
+     "centres": 6
+    },
+    "dmgPct": 4.76,
+    "dmgProtPct": 1.69,
+    "protYears": 20,
+    "heightM": 6.8
+   },
+   "New York": {
+    "quality": "exact",
+    "fua": {
+     "id": 7244,
+     "name": "New York",
+     "centres": 6
+    },
+    "dmgPct": 5.8,
+    "dmgProtPct": 0.11,
+    "protYears": 500,
+    "heightM": 5.8
+   },
+   "Jakarta": {
+    "quality": "flagged",
+    "fua": {
+     "id": 4897,
+     "name": "Jakarta",
+     "centres": 1
+    },
+    "dmgPct": 4.29,
+    "dmgProtPct": 0.63,
+    "protYears": 100,
+    "heightM": 4.6
+   },
+   "Wuhan": null
+  }
  }
 }

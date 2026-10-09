@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import type { CityDetail } from "@/lib/atlas";
-import { MASS_PAPER, HEAT_PAPER, COOLING_PAPER, formatPop, formatMassT } from "@/lib/atlas";
+import { MASS_PAPER, HEAT_PAPER, COOLING_PAPER, FLOOD_PAPER, formatPop, formatMassT } from "@/lib/atlas";
 import T from "@/components/T";
 
 type Props = {
@@ -26,7 +26,8 @@ export default function CityCard({ city, loading, onClose }: Props) {
   const mass = city.layers.mass;
   const heat = city.layers.heat;
   const cooling = city.layers.cooling;
-  const nLayers = [mass, heat, cooling].filter(Boolean).length;
+  const flood = city.layers.flood;
+  const nLayers = [mass, heat, cooling, flood].filter(Boolean).length;
 
   return (
     <aside
@@ -70,8 +71,8 @@ export default function CityCard({ city, loading, onClose }: Props) {
 
       <p className="mt-4 text-xs text-ink-faint">
         <T
-          en={`Covered by ${nLayers} of 3 mapped studies.`}
-          zh={`3 项已上图研究中覆盖 ${nLayers} 项。`}
+          en={`Covered by ${nLayers} of 4 mapped studies.`}
+          zh={`4 项已上图研究中覆盖 ${nLayers} 项。`}
         />
       </p>
 
@@ -240,14 +241,71 @@ export default function CityCard({ city, loading, onClose }: Props) {
         )}
       </section>
 
+      {/* Height-aware flood panel */}
+      <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
+        <PanelHead
+          en="Flood damage with building height & protection"
+          zh="考虑建筑高度与防洪标准的洪涝损失"
+          venue={`${FLOOD_PAPER.venue} ${FLOOD_PAPER.year}`}
+        />
+        {!flood ? (
+          <NotCovered
+            en="Not covered by this study (it covers ~600 functional urban areas with joinable GHSL urban centres)."
+            zh="该研究未覆盖此城市（研究范围为约 600 个可与 GHSL 城市中心对照的功能城市区）。"
+          />
+        ) : (
+          <>
+            {(flood.quality === "flagged" || flood.fua.name !== city.name) && (
+              <p className="mt-2 rounded bg-ember-light px-2 py-1 text-xs text-ember-dark">
+                <T
+                  en={`Values are for the functional urban area “${flood.fua.name}”${flood.quality === "flagged" ? " (this urban centre sits in more than one overlapping area; largest one used)" : ""}.`}
+                  zh={`数值对应功能城市区“${flood.fua.name}”${flood.quality === "flagged" ? "（该城市中心落在多个重叠区域，取人口最大者）" : ""}。`}
+                />
+              </p>
+            )}
+            <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
+              <Stat
+                en="Damage · no protection"
+                zh="损失 · 无防洪保护"
+                value={`${flood.dmgPct.toFixed(2)}%`}
+                big
+              />
+              <Stat
+                en="Damage · with protection"
+                zh="损失 · 含防洪保护"
+                value={
+                  flood.dmgProtPct != null ? `${flood.dmgProtPct.toFixed(2)}%` : "—"
+                }
+                big
+              />
+              {flood.protYears != null && (
+                <Stat
+                  en="Protection standard"
+                  zh="防洪标准"
+                  value={`~${flood.protYears}-year`}
+                />
+              )}
+              {flood.heightM != null && (
+                <Stat en="Mean building height" zh="平均建筑高度" value={`${flood.heightM} m`} />
+              )}
+            </dl>
+            <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
+              <T
+                en={floodReadingEn(flood)}
+                zh={floodReadingZh(flood)}
+              />
+            </p>
+            <Not
+              en="What this number is not: not a forecast and not a loss in money. It is the share of building footprints estimated as damaged under a flood scenario that already includes building height; the protected figure applies the modelled FLOPROS protection standard for that area."
+              zh="这个数字不是什么：不是预测，也不是货币损失；它是在已计入建筑高度的洪水情景下，估计受损建筑足迹占比；含保护的数字使用该区域的 FLOPROS 防洪标准。"
+            />
+            <Links doi={FLOOD_PAPER.doiUrl} app={FLOOD_PAPER.appUrl} />
+          </>
+        )}
+      </section>
+
       {/* Coming layers */}
       <div className="mt-4 space-y-2">
-        <ComingRow
-          en="Flood risk with building height & protection"
-          zh="考虑建筑高度与防洪标准的洪涝风险"
-          noteEn="Coming — Scientific Reports 2026; city table being checked against the published paper."
-          noteZh="即将加入 — Scientific Reports 2026；城市表正在与已发表论文核对。"
-        />
         <ComingRow
           en="Urban expansion to 2050"
           zh="至 2050 年城市扩张"
@@ -269,6 +327,23 @@ export default function CityCard({ city, loading, onClose }: Props) {
       </div>
     </aside>
   );
+}
+
+
+function floodReadingEn(flood: NonNullable<CityDetail["layers"]["flood"]>): string {
+  if (flood.dmgProtPct == null) {
+    return `About ${flood.dmgPct.toFixed(2)}% of building footprints in this functional urban area are estimated as damaged under the height-aware flood scenario (protection not reported for this area).`;
+  }
+  const cut = flood.dmgPct > 0 ? (1 - flood.dmgProtPct / flood.dmgPct) * 100 : 0;
+  return `About ${flood.dmgPct.toFixed(2)}% of building footprints are estimated as damaged without protection; with the modelled ~${flood.protYears ?? "—"}-year protection standard that falls to ${flood.dmgProtPct.toFixed(2)}% (about ${cut.toFixed(0)}% less). Scenario range, not a forecast.`;
+}
+
+function floodReadingZh(flood: NonNullable<CityDetail["layers"]["flood"]>): string {
+  if (flood.dmgProtPct == null) {
+    return `在计入建筑高度的洪水情景下，该功能城市区约 ${flood.dmgPct.toFixed(2)}% 的建筑足迹估计受损（该区域未报告防洪保护）。`;
+  }
+  const cut = flood.dmgPct > 0 ? (1 - flood.dmgProtPct / flood.dmgPct) * 100 : 0;
+  return `无保护时约 ${flood.dmgPct.toFixed(2)}% 的建筑足迹估计受损；按模型约 ${flood.protYears ?? "—"} 年一遇防洪标准后降至 ${flood.dmgProtPct.toFixed(2)}%（约减少 ${cut.toFixed(0)}%）。情景范围，不是预测。`;
 }
 
 function ComingRow({

@@ -13,7 +13,7 @@ Static city map for [kangning-huang.com/atlas](https://kangning-huang.com/atlas)
 ## What v1 deliberately skips
 
 - Per-city static `/atlas/<slug>` pages (keeps the static export fast; cards load JSON on demand).
-- Heat / flood / cooling layers (later PRs).
+- Expansion / PNAS cooling-clusters / SSA infrastructure layers (later PRs).
 - Expansion layer numbers (crosswalk not built in this export).
 
 ## Regenerate
