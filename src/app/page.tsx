@@ -12,6 +12,7 @@ import { NEWS, formatNewsDate } from "@/lib/news";
 import { webPageSchema, profilePageSchema, faqSchema, OG_IMAGE_PATH, withOpenGraphDefaults, canonicalPageUrl } from "@/lib/seo";
 import T from "@/components/T";
 import PublicationCard from "@/components/PublicationCard";
+import { reachHeadline } from "@/lib/influence";
 
 const HOME_DESCRIPTION =
   "How the size and shape of cities decide their climate future. Kangning (Ken) Huang, Assistant Professor of Environmental Studies, NYU Shanghai.";
@@ -114,6 +115,7 @@ export const metadata: Metadata = {
 
 export default async function Home() {
   const allPublications = await fetchPublications();
+  const reach = reachHeadline();
   // Exactly five hand-picked lead/last-author papers
   const selectedTitles = [
     "Nested economies of scale in global city mass",
@@ -193,6 +195,22 @@ export default async function Home() {
               zh="环境学助理教授 · CLUEs Lab，上海纽约大学"
             />
           </p>
+          {reach && (
+            <p className="animate-fade-up delay-2 mt-2 text-sm text-paper/60">
+              <Link href="/reach" className="transition-colors hover:text-ember">
+                <T
+                  en={`Cited by researchers in ${reach.fields} fields across ${reach.countries} countries`}
+                  zh={`被 ${reach.countries} 个国家和地区、${reach.fields} 个领域的研究者引用`}
+                />
+                <span className="ml-1.5 text-xs text-paper/40">
+                  <T
+                    en={`(OpenAlex, lead-author papers, self-citations removed, ${reach.asOf}) →`}
+                    zh={`（OpenAlex，第一/通讯作者论文，已剔除自引，${reach.asOf}）→`}
+                  />
+                </span>
+              </Link>
+            </p>
+          )}
 
           {/* Decorative divider */}
           <div className="animate-draw-line delay-3 mt-8 h-px w-32 origin-left bg-ember" />

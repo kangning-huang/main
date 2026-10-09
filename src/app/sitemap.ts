@@ -31,6 +31,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.95,
     },
     {
+      path: "/reach",
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
+    },
+    {
       path: "/lab",
       changeFrequency: "monthly" as const,
       priority: 0.85,
