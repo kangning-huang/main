@@ -14,7 +14,7 @@ import ReachMethod from "@/components/reach/ReachMethod";
 const DESCRIPTION =
   "Who builds on Kangning (Ken) Huang's research: what the works citing his papers are about, how far they sit from his own topics, and where they come from. OpenAlex, self-citations removed.";
 
-// Preview branch only (preview/reach-ripple): remove this flag and the banner when the Ripple map launches.
+// Preview branches only (preview/reach-ripple, preview/reach-viz-alt): remove this flag and the banner at launch.
 const RIPPLE_PREVIEW = true;
 
 export const metadata: Metadata = {
@@ -46,7 +46,7 @@ export default function ReachPage() {
 
       {RIPPLE_PREVIEW && (
         <div role="note" className="border-b border-ember bg-ember-light px-6 py-2.5 text-center text-sm font-medium text-ember-dark">
-          PREVIEW — Ripple Map (not merged)
+          PREVIEW — Ripple + alt viz (A beeswarm, C clusters) — not merged
         </div>
       )}
       {isSample && (

@@ -1,6 +1,8 @@
 "use client";
 
+import type { ReactNode } from "react";
 import { useLanguage } from "@/lib/language-context";
+import type { ReachViz } from "@/lib/reach-alt";
 import { ringFor, type RippleFocus, type RippleKeyword, type RippleView, type RippleWeight } from "@/lib/ripple";
 
 const fmt = (n: number) => n.toLocaleString("en-US");
@@ -40,11 +42,14 @@ export function RippleDetails({
   focus,
   weight,
   onSelect,
+  extra,
 }: {
   view: RippleView;
   focus: NonNullable<RippleFocus>;
   weight: RippleWeight;
   onSelect: (f: RippleFocus) => void;
+  /** View-specific section shown under a keyword's facts (the Clusters preview lists its co-occurring keywords). */
+  extra?: ReactNode;
 }) {
   const { zh, t } = useText();
   const theme = (id: string) => view.themes.find((x) => x.id === id);
@@ -172,6 +177,7 @@ export function RippleDetails({
           </>
         )}
       </dl>
+      {extra}
       <div>
         <h4 className="text-xs font-medium text-ink">{t("Which of Ken's papers they cite", "引用了哪些本人论文")}</h4>
         <ul className="mt-1.5 space-y-1">
@@ -296,20 +302,55 @@ export function RippleCallouts({ view, onSelect, compact = false }: { view: Ripp
   );
 }
 
-export function RippleReadingGuide() {
+export function RippleReadingGuide({ mode = "ripple", clusters = "cooccurrence" }: { mode?: ReachViz; clusters?: "cooccurrence" | "theme" }) {
   const { t } = useText();
+  const items =
+    mode === "beeswarm"
+      ? [
+          t("Each row is one of Ken's research themes; each bubble a keyword carried by works citing that theme's papers. Its area counts those works.", "每行是一个研究主题；每个圆是引用该主题论文的文献所携带的关键词，面积表示施引文献数。"),
+          t("Farther right = cited from fields further from Ken's own research topics (mean reach distance).", "越靠右 = 施引文献所在领域离本人研究主题越远（平均距离）。"),
+          t("Up and down within a row means nothing; it only keeps bubbles apart.", "行内上下位置没有含义，只为避免重叠。"),
+          t("Filled = new vocabulary the citers bring. Outline = also a keyword on Ken's own papers.", "实心 = 施引者带来的新词；空心 = 本人论文也有的关键词。"),
+          t("Hover, tap or Tab to a row or bubble for details; Esc returns to rest.", "悬停、点按或用 Tab 键查看主题与关键词详情；Esc 返回。"),
+        ]
+      : mode === "clusters"
+        ? [
+            t("Each bubble is a keyword carried by works that cite Ken's papers; its area counts those works, as in the Ripple.", "每个圆是施引文献携带的关键词，面积表示施引文献数（与涟漪图相同）。"),
+            clusters === "cooccurrence"
+              ? t("Keywords that often appear on the same citing works sit close together. Only distances matter: the map has no axes.", "常出现在同一批施引文献中的关键词彼此靠近。只有距离有意义，图没有坐标轴。")
+              : t("This lens has too few citing works carrying two keywords to map relatedness, so keywords are grouped by theme.", "此视角中同时带有两个关键词的施引文献太少，无法映射关联度，因此按主题分组。"),
+            t("Colour is the theme each keyword belongs to. Filled = new vocabulary; outline = also on Ken's own papers.", "颜色表示关键词所属主题。实心 = 新词；空心 = 本人论文也有。"),
+            t("Hover, tap or Tab to a bubble for details and the keywords it appears with; Esc returns to rest.", "悬停、点按或用 Tab 键查看详情及常同现的关键词；Esc 返回。"),
+          ]
+        : [
+            t("Each bubble is a keyword carried by works that cite Ken's papers; its area counts those works.", "每个圆是施引文献携带的关键词，面积表示施引文献数。"),
+            t("Farther from the centre = cited from fields further from Ken's own research topics.", "离中心越远 = 施引文献所在领域离本人研究主题越远。"),
+            t("Filled = new vocabulary the citers bring. Outline = also a keyword on Ken's own papers.", "实心 = 施引者带来的新词；空心 = 本人论文也有的关键词。"),
+            t("Hover, tap or Tab to a sector or bubble for details; Esc returns to rest.", "悬停、点按或用 Tab 键查看扇区与关键词详情；Esc 返回。"),
+          ];
   return (
     <ul className="space-y-1.5 text-sm leading-snug text-ink-muted">
-      <li>{t("Each bubble is a keyword carried by works that cite Ken's papers; its area counts those works.", "每个圆是施引文献携带的关键词，面积表示施引文献数。")}</li>
-      <li>{t("Farther from the centre = cited from fields further from Ken's own research topics.", "离中心越远 = 施引文献所在领域离本人研究主题越远。")}</li>
-      <li>{t("Filled = new vocabulary the citers bring. Outline = also a keyword on Ken's own papers.", "实心 = 施引者带来的新词；空心 = 本人论文也有的关键词。")}</li>
-      <li>{t("Hover, tap or Tab to a sector or bubble for details; Esc returns to rest.", "悬停、点按或用 Tab 键查看扇区与关键词详情；Esc 返回。")}</li>
+      {items.map((item) => (
+        <li key={item}>{item}</li>
+      ))}
     </ul>
   );
 }
 
 /** Encoding key: fill vs outline, bubble area, rings. */
-export function RippleLegend({ view, weight }: { view: RippleView; weight: RippleWeight }) {
+export function RippleLegend({
+  view,
+  weight,
+  scale,
+  note,
+}: {
+  view: RippleView;
+  weight: RippleWeight;
+  /** Bubble radii of the view drawn (defaults to the Ripple circle's). */
+  scale?: { rMax: number; rMin: number };
+  /** What position means in the view drawn (defaults to the Ripple's rings). */
+  note?: ReactNode;
+}) {
   const { zh, t } = useText();
   const max = weight === "absolute" ? view.meta.scale.maxWorks : view.meta.scale.maxPerYear;
   const nice = (v: number) => {
@@ -317,8 +358,9 @@ export function RippleLegend({ view, weight }: { view: RippleView; weight: Rippl
     return [1, 2, 5, 10].map((m) => m * p).filter((x) => x <= v).pop() ?? p;
   };
   const refs = [nice(max), nice(max / 6), nice(max / 30)].filter((v, i, a) => v > 0 && a.indexOf(v) === i);
-  const rMax = view.meta.scale.rMax;
-  const rOf = (v: number) => Math.max(view.meta.scale.rMin, rMax * Math.sqrt(v / max));
+  const rMax = scale?.rMax ?? view.meta.scale.rMax;
+  const rMin = scale?.rMin ?? view.meta.scale.rMin;
+  const rOf = (v: number) => Math.max(rMin, rMax * Math.sqrt(v / max));
   const width = refs.reduce((s, v) => s + 2 * rOf(v) + 14, 0);
   return (
     <div className="flex flex-wrap items-center gap-x-6 gap-y-3 text-xs text-ink-muted">
@@ -356,9 +398,10 @@ export function RippleLegend({ view, weight }: { view: RippleView; weight: Rippl
         </span>
       </span>
       <span>
-        {zh
-          ? `环：本人主题 → 同一子领域 → 同一领域 → 同一大类（OpenAlex 层级）。`
-          : `Rings: home topics → same subfield → same field → same domain (OpenAlex hierarchy).`}
+        {note ??
+          (zh
+            ? `环：本人主题 → 同一子领域 → 同一领域 → 同一大类（OpenAlex 层级）。`
+            : `Rings: home topics → same subfield → same field → same domain (OpenAlex hierarchy).`)}
       </span>
     </div>
   );
