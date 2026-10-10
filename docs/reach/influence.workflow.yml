@@ -34,11 +34,23 @@ jobs:
         with:
           node-version: 20
 
-      # The script has no npm dependencies, so no `npm ci` is needed.
-      # OPENALEX_API_KEY is optional: without it the run uses OpenAlex's
-      # public daily budget (~50 requests per run, well within it).
+      # Influence scripts have no npm dependencies. OPENALEX_API_KEY is optional.
       - name: Fetch OpenAlex influence data
         run: node scripts/influence/fetch-influence.mjs ${{ inputs.dry_run && '--dry-run' || '' }}
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          OPENALEX_MAILTO: ${{ vars.OPENALEX_MAILTO }}
+
+      - name: Build Reach flow JSON (retired Sankey data; kept for now)
+        if: ${{ !inputs.dry_run }}
+        run: node scripts/influence/build-reach-flow.mjs
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          OPENALEX_MAILTO: ${{ vars.OPENALEX_MAILTO }}
+
+      - name: Build Ripple map JSON
+        if: ${{ !inputs.dry_run }}
+        run: node scripts/influence/build-ripple.mjs
         env:
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           OPENALEX_MAILTO: ${{ vars.OPENALEX_MAILTO }}
@@ -47,8 +59,8 @@ jobs:
         id: check_changes
         if: ${{ !inputs.dry_run }}
         run: |
-          git add -N data/influence/
-          if git diff --quiet -- src/data/influence.json data/influence/; then
+          git add -N data/influence/ src/data/
+          if git diff --quiet -- src/data/influence.json src/data/ripple.json src/data/reach-flow.json data/influence/; then
             echo "changed=false" >> $GITHUB_OUTPUT
           else
             echo "changed=true" >> $GITHUB_OUTPUT
@@ -59,8 +71,8 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add src/data/influence.json data/influence/
-          git commit -m "Update Reach influence snapshot (OpenAlex) [automated]"
+          git add src/data/influence.json src/data/ripple.json src/data/reach-flow.json data/influence/ docs/reach/ripple-keyword-report.md || true
+          git commit -m "Update Reach influence + Ripple snapshot (OpenAlex) [automated]" || echo "nothing to commit"
           git push
 
       - name: Trigger deploy workflow

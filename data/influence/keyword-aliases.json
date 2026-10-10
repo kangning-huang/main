@@ -1,0 +1,21 @@
+{
+  "$comment": "Hand-edited keyword merges for the Ripple map (scripts/influence/build-ripple.mjs). merge: canonical OpenAlex keyword slug → variant slugs folded into it. labels: display-name overrides. stoplist: keywords never shown (anything on >15% of All-lens citing works is dropped automatically). rejected: candidate pairs Ken has declined, so the builder stops suggesting them. Seeded 2026-10-10 with variants present in the citing works; Ken to confirm.",
+  "merge": {
+    "urban-heat-island": [
+      "surface-urban-heat-island",
+      "urban-heat-island-intensity",
+      "surface-urban-heat-island-intensity",
+      "uhi-intensity"
+    ],
+    "urban-green-space": ["green-spaces"],
+    "shared-socioeconomic-pathways": ["socioeconomic-pathways"],
+    "ecosystem-service-value": ["ecosystem-services-value"],
+    "land-use-and-land-cover": ["land-use-land-cover"],
+    "urban-cooling": ["urban-cooling-effect"]
+  },
+  "labels": {},
+  "stoplist": [],
+  "rejected": [
+    ["bees", "building-energy-efficiency"]
+  ]
+}

@@ -1,7 +1,8 @@
 "use client";
 
-import { createContext, useContext, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 import T from "@/components/T";
+import { readQuery, updateQuery } from "@/lib/url-state";
 import {
   influence,
   defaultLens,
@@ -28,7 +29,16 @@ export function useReachLens(): Ctx {
 }
 
 export function ReachLensProvider({ children }: { children: ReactNode }) {
-  const [lens, setLens] = useState<ReachLens>(defaultLens);
+  const [lens, setLensState] = useState<ReachLens>(defaultLens);
+  // ?lens=lead opens the lead-author lens; All stays the clean default URL.
+  useEffect(() => {
+    const fromUrl = readQuery("lens");
+    if (fromUrl === "lead" || fromUrl === "all") setLensState(fromUrl);
+  }, []);
+  const setLens = useCallback((l: ReachLens) => {
+    setLensState(l);
+    updateQuery({ lens: l === "all" ? null : l });
+  }, []);
   const view = useMemo(() => getView(lens), [lens]);
   const papers = useMemo(() => {
     if (lens === "lead") return influence.papers.filter((p) => p.lens === "lead");

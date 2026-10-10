@@ -4,11 +4,13 @@ import Link from "next/link";
 import T from "@/components/T";
 import { influence, THEMES, THEME_COLORS } from "@/lib/influence";
 import { useReachLens } from "./ReachLens";
+import { getRipple } from "@/lib/ripple";
 
 export default function ReachMethod() {
   const { view, papers, lens } = useReachLens();
   const { meta } = influence;
   const { totals } = view;
+  const ripple = getRipple(lens);
   const themeName = (id: string) => THEMES.find((t) => t.id === id) ?? { en: id, zh: id };
   const tablePapers = lens === "lead" ? papers.filter((p) => p.lens === "lead") : papers;
 
@@ -51,6 +53,24 @@ export default function ReachMethod() {
           </li>
           <li>
             <T
+              en={`Ripple map keywords: OpenAlex keywords on citing works (score ≥ ${ripple.meta.params.keywordScoreMin}), merged through a hand-kept alias list; any keyword on more than ${Math.round(ripple.meta.params.genericShareMax * 100)}% of citing works is dropped as generic. Each theme shows its most distinctive keywords (share in the theme ÷ share overall, at least ${ripple.meta.params.minWorksInTheme} works), and its bubble slots are split between home-side and outside keywords in proportion to the theme's own outside share. Themes with fewer than ${ripple.meta.params.emergingBelowWorks} citing works show as “emerging”.`}
+              zh={`涟漪图关键词：施引文献的 OpenAlex 关键词（得分 ≥ ${ripple.meta.params.keywordScoreMin}），经人工别名表合并；出现在超过 ${Math.round(ripple.meta.params.genericShareMax * 100)}% 施引文献中的通用词被剔除。每个主题显示最具区分度的关键词（主题内占比 ÷ 总体占比，至少 ${ripple.meta.params.minWorksInTheme} 篇），并按该主题“主题外”占比分配本人主题侧与外侧的名额。施引少于 ${ripple.meta.params.emergingBelowWorks} 篇的主题标为“起步”。`}
+            />
+          </li>
+          <li>
+            <T
+              en={`Reach distance: each citing work's OpenAlex topic is compared with the ${ripple.meta.homeTopics} topics on Ken's papers — 0 = a home topic, 1 = same subfield, 2 = same field, 3 = same domain (Ken's papers already carry topics in all four OpenAlex domains). A bubble sits at the mean distance of its works, on a square-root scale; keywords with fewer than ${ripple.meta.params.minTaggedForMean} topic-tagged works sit at their theme's median.`}
+              zh={`距离：将每篇施引文献的 OpenAlex 主题与本人论文的 ${ripple.meta.homeTopics} 个主题比较——0 = 本人主题，1 = 同一子领域，2 = 同一领域，3 = 同一大类（本人论文的主题已覆盖 OpenAlex 全部四个大类）。圆的位置取其施引文献的平均距离（平方根刻度）；主题标注少于 ${ripple.meta.params.minTaggedForMean} 篇的关键词置于主题中位距离。`}
+            />
+          </li>
+          <li>
+            <T
+              en="Counting: the Ripple map counts unique citing works per theme — a work citing two papers in one theme counts once there, and once in each other theme it cites."
+              zh="计数：涟漪图按主题统计不重复的施引文献——引用同一主题两篇论文的文献在该主题只计一次，在其引用的其他主题各计一次。"
+            />
+          </li>
+          <li>
+            <T
               en={`Country normalization: ${meta.countryBaseline}`}
               zh="国家归一化：预期施引 ≈ 各施引领域中该国产出占比 × 该领域施引文献数之和。"
             />
@@ -85,8 +105,8 @@ export default function ReachMethod() {
           </li>
           <li>
             <T
-              en="Refreshed monthly by a GitHub Action; each run is kept as a dated snapshot."
-              zh="由 GitHub Action 每月更新；每次运行保存为带日期的快照。"
+              en="Set to refresh on the 1st of each month by a GitHub Action (OpenAlex fetch, then the Ripple build); each run is kept as a dated snapshot."
+              zh="设定由 GitHub Action 于每月 1 日更新（先抓取 OpenAlex，再生成涟漪图）；每次运行保存为带日期的快照。"
             />
           </li>
         </ul>

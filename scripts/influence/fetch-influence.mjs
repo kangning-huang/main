@@ -20,6 +20,19 @@ import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import { createHash } from "crypto";
+import {
+  API,
+  getJson,
+  getWork,
+  getCiting,
+  shortId,
+  stripDoi,
+  authorKeys,
+  selfCiteReason,
+  stats,
+  dataAsOf,
+  cacheSummary,
+} from "./lib/openalex.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..", "..");
@@ -27,7 +40,6 @@ const DOIS_PATH = join(ROOT, "data", "influence", "dois.json");
 const OUT_PATH = join(ROOT, "src", "data", "influence.json");
 const SNAPSHOT_DIR = join(ROOT, "data", "influence");
 
-const API = "https://api.openalex.org";
 const DRY_RUN = process.argv.includes("--dry-run");
 const EARLY_FROM_YEAR = 2025;
 const TOP_N = 10;
@@ -35,107 +47,6 @@ const ADAPTIVE_MAX_SHARE = 0.3;
 const OTHER_MIN_SHARE = 0.02;
 const TOPIC_SCORE_MIN = 0.5;
 const AUTO_FLIP_COAUTHOR_SHARE = 0.5; // reported only; default is always All
-const CITING_SELECT = [
-  "id", "doi", "title", "publication_year", "cited_by_count", "type",
-  "primary_topic", "topics", "keywords", "authorships", "primary_location",
-].join(",");
-
-let requestCount = 0;
-let costUsd = 0;
-
-function withAuth(url) {
-  const u = new URL(url);
-  if (process.env.OPENALEX_API_KEY) u.searchParams.set("api_key", process.env.OPENALEX_API_KEY);
-  if (process.env.OPENALEX_MAILTO) u.searchParams.set("mailto", process.env.OPENALEX_MAILTO);
-  else u.searchParams.set("mailto", "kh3657@nyu.edu");
-  return u.toString();
-}
-
-const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-
-async function getJson(url, attempt = 1) {
-  requestCount++;
-  let res;
-  try {
-    res = await fetch(withAuth(url), { headers: { Accept: "application/json" } });
-  } catch (err) {
-    if (attempt >= 5) throw err;
-    const wait = 1000 * 2 ** attempt;
-    console.warn(`  network error (${err.cause?.code ?? err.message}) — retrying in ${wait} ms`);
-    await sleep(wait);
-    return getJson(url, attempt + 1);
-  }
-  if (res.status === 429 || res.status >= 500) {
-    if (attempt >= 5) throw new Error(`OpenAlex ${res.status} after ${attempt} attempts: ${url}`);
-    const wait = 1000 * 2 ** attempt;
-    console.warn(`  ${res.status} — retrying in ${wait} ms`);
-    await sleep(wait);
-    return getJson(url, attempt + 1);
-  }
-  if (!res.ok) throw new Error(`OpenAlex ${res.status} ${res.statusText}: ${url}`);
-  const json = await res.json();
-  if (typeof json?.meta?.cost_usd === "number") costUsd += json.meta.cost_usd;
-  await sleep(120);
-  return json;
-}
-
-async function getAllCiting(workId) {
-  const out = [];
-  let cursor = "*";
-  while (cursor) {
-    const url = `${API}/works?filter=cites:${workId}&per_page=200&cursor=${encodeURIComponent(cursor)}&select=${CITING_SELECT}`;
-    const page = await getJson(url);
-    out.push(...page.results);
-    cursor = page.meta.next_cursor;
-    if (page.results.length === 0) break;
-  }
-  return out;
-}
-
-const shortId = (id) => (id ? id.replace("https://openalex.org/", "") : null);
-const stripDoi = (doi) => (doi ? doi.replace(/^https?:\/\/doi\.org\//i, "").toLowerCase() : null);
-
-function nameKey(name) {
-  if (!name) return null;
-  const tokens = name
-    .normalize("NFKD")
-    .replace(/[\u0300-\u036f]/g, "")
-    .toLowerCase()
-    .replace(/[^a-z\s-]/g, " ")
-    .split(/[\s-]+/)
-    .filter(Boolean);
-  if (tokens.length < 2 || tokens.some((t) => t.length < 2)) return null;
-  return tokens.sort().join(" ");
-}
-
-function authorKeys(work) {
-  const ids = new Set();
-  const orcids = new Set();
-  const names = new Set();
-  for (const a of work.authorships ?? []) {
-    if (a.author?.id) ids.add(a.author.id);
-    if (a.author?.orcid) orcids.add(a.author.orcid);
-    for (const n of [a.author?.display_name, a.raw_author_name]) {
-      const k = nameKey(n);
-      if (k) names.add(k);
-    }
-  }
-  return { ids, orcids, names };
-}
-
-function selfCiteReason(citing, citedKeys) {
-  for (const a of citing.authorships ?? []) {
-    if (a.author?.id && citedKeys.ids.has(a.author.id)) return "author-id";
-    if (a.author?.orcid && citedKeys.orcids.has(a.author.orcid)) return "orcid";
-  }
-  for (const a of citing.authorships ?? []) {
-    for (const n of [a.author?.display_name, a.raw_author_name]) {
-      const k = nameKey(n);
-      if (k && citedKeys.names.has(k)) return "name";
-    }
-  }
-  return null;
-}
 
 function countries(work) {
   const s = new Set();
@@ -625,9 +536,7 @@ async function attachCountryBaselines(view, yearFrom, asOfYear) {
 async function main() {
   const doisRaw = readFileSync(DOIS_PATH, "utf-8");
   const config = JSON.parse(doisRaw);
-  const asOf = new Date().toISOString().slice(0, 10);
-  const asOfYear = Number(asOf.slice(0, 4));
-  console.log(`Reach pipeline v2 — OpenAlex, as of ${asOf}${DRY_RUN ? " (dry run)" : ""}`);
+  console.log(`Reach pipeline v2 — OpenAlex, cache mode ${stats.cacheMode}${DRY_RUN ? " (dry run)" : ""}`);
   console.log(`API key: ${process.env.OPENALEX_API_KEY ? "set" : "not set (public + mailto)"}`);
   console.log(`Papers: ${config.papers.length}`);
 
@@ -647,15 +556,13 @@ async function main() {
     console.log(`\n${p.doi} (${p.lens})`);
     let work;
     try {
-      work = await getJson(
-        `${API}/works/doi:${p.doi}?select=id,doi,title,publication_year,cited_by_count,authorships,primary_location,primary_topic,topics`
-      );
+      work = await getWork(p.doi);
     } catch (err) {
       console.warn(`  SKIPPED — OpenAlex lookup failed: ${err.message}`);
       continue;
     }
     const keys = authorKeys(work);
-    const citing = await getAllCiting(shortId(work.id));
+    const citing = await getCiting(shortId(work.id));
     const kept = [];
     let removed = 0;
     for (const c of citing) {
@@ -720,6 +627,9 @@ async function main() {
     if (p.lens === "lead") addTo(leadCiting);
   }
 
+  // Date of the data, not of the run: a warm cache may be up to OPENALEX_CACHE_MAX_AGE_HOURS old.
+  const asOf = dataAsOf();
+  const asOfYear = Number(asOf.slice(0, 4));
   const leadPapers = papers.filter((p) => p.lens === "lead");
   const yearFrom = Math.min(...papers.map((p) => p.year));
 
@@ -803,7 +713,7 @@ async function main() {
       earlyFromYear: EARLY_FROM_YEAR,
       homeTopicCount: homeTopicIds.size,
       homeSubfields: [...homeSubfieldNames].sort(),
-      requests: requestCount,
+      requests: stats.requests,
       skipped: {
         natureCitiesNestedEconomies:
           "DOI 10.1038/s44284-026-00532-x intentionally omitted (embargo 404 until ~13 Nov 2026).",
@@ -823,7 +733,7 @@ async function main() {
   console.log(
     `\nSummary ALL: ${viewAll.totals.uniqueCitingWorks} works, ${viewAll.totals.countriesCount} countries, ${viewAll.adaptive.length} adaptive nodes` +
       `\nSummary LEAD: ${viewLead.totals.uniqueCitingWorks} works, ${viewLead.totals.countriesCount} countries` +
-      `\n${requestCount} requests, ~$${costUsd.toFixed(4)}`
+      `\n${cacheSummary()}`
   );
   console.log(
     `Homepage distant (All): from "${viewAll.homepageDistant.a}" to "${viewAll.homepageDistant.b}"`

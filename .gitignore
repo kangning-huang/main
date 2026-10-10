@@ -46,3 +46,6 @@ next-env.d.ts
 node_modules/
 .next/
 out/
+
+# OpenAlex citing-work cache for scripts/influence (local/CI only; never committed)
+/.cache/
