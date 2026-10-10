@@ -77,4 +77,4 @@ Otherwise encodings match: light theme, ~8% region fills, ~45% disc fills, solid
 
 ## PR
 
-**Draft PR:** (filled after open) · HEAD SHA: (filled after commit). Base: `main` (follow-on to viz-alt #79 / Ripple #78). **Do not merge** until Ken picks a Reach viz.
+**Draft PR:** (see below) · HEAD  (). Base:  (follow-on to viz-alt #79 / Ripple #78). **Do not merge** until Ken picks a Reach viz.
