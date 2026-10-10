@@ -186,9 +186,10 @@ Full per-theme tables (including candidates not shown): `docs/reach/ripple-keywo
 
 ## Screenshots
 
-- `/workspace/redesign/screenshots/preview-ripple-desktop-1280.png`
+- `/workspace/redesign/screenshots/preview-ripple-1280.png` (also `preview-ripple-desktop-1280.png`)
 - `/workspace/redesign/screenshots/preview-ripple-720.png`
-- `/workspace/redesign/screenshots/preview-ripple-mobile-380.png`
+- `/workspace/redesign/screenshots/preview-ripple-380.png` (also `preview-ripple-mobile-380.png`)
+- Repo copies: `docs/reach/screenshots/preview-ripple-*.png`
 - Dark theme: N/A (site has no dark mode).
 
 ## PR
