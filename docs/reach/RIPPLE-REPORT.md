@@ -2,7 +2,7 @@
 
 **Branch:** `preview/reach-ripple` · **Status:** draft preview — do not merge until Ken says.
 **Data as of:** 2026-10-10 (OpenAlex) · self-citations removed.
-**Draft PR:** [#78](https://github.com/kangning-huang/main/pull/78) · HEAD `0381601` (`03816015fcf0579517935b6a76624299674e7a9f`).
+**Draft PR:** [#78](https://github.com/kangning-huang/main/pull/78) · HEAD `e0ecd5f` (`e0ecd5fe461d0a3d65b18abbd8576f4eba4e2ebb`).
 
 ## Ken-settled defaults applied
 
