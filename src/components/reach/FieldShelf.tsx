@@ -468,7 +468,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle: ReactNode }) {
       <span className="font-medium text-ink">{paperReadout(fieldShelfPapers[activeP], zh)}</span>
     ) : focusI !== null ? null : (
       <span className="text-ink-faint">
-        {zh ? "悬停论文以点亮引用它的文献 · 悬停方块查看详情 · 点击在 OpenAlex 中打开" : "Hover a paper to light the works citing it · hover a square for details · click to open it in OpenAlex"}
+        {zh ? "悬停论文以点亮引用它的文献，悬停方块查看详情" : "Hover a paper to light the works citing it, or a square for its details"}
       </span>
     );
   const callouts = worthALook(view, zh);

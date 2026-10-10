@@ -123,7 +123,7 @@ export default function FieldShelfShelf({ view, active, pinned, cited, readout, 
             } ${faded ? "opacity-45" : ""}`}
             style={{ left: pc(x - S.spineW / 2), width: pc(S.spineW), top: m.spineTop, height: S.spineH }}
           >
-            <span className="pt-[7px] text-[10.5px] leading-[13px] whitespace-nowrap" style={{ writingMode: "vertical-rl" }}>
+            <span className="pt-[7px] text-start text-[10.5px] leading-[13px] whitespace-nowrap" style={{ writingMode: "vertical-rl" }}>
               <span className={lead ? "font-semibold" : "font-medium"}>{paper.label}</span>
               {S.lines === 2 && (
                 <>
