@@ -181,15 +181,11 @@ export default async function Home() {
         <div className="topo-grain absolute inset-0" />
 
         <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-24 md:pb-28 md:pt-32 lg:px-8">
-          <div className="min-w-0">
-              <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-8">
-                <div className="animate-fade-in">
-                  <HeroHeadshot />
-                </div>
-                <h1 className="animate-fade-up font-display text-5xl leading-[1.1] text-paper md:text-6xl lg:text-7xl">
-                  <T en={SITE.name} zh="黄康宁" />
-                </h1>
-              </div>
+          <div className="flex flex-col-reverse gap-10 md:grid md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-12 lg:gap-16">
+            <div className="min-w-0">
+              <h1 className="animate-fade-up font-display text-5xl leading-[1.1] text-paper md:text-6xl lg:text-7xl">
+                <T en={SITE.name} zh="黄康宁" />
+              </h1>
               <p className="animate-fade-up delay-1 mt-5 max-w-3xl font-display text-2xl italic leading-snug text-paper/85 md:text-[30px]">
                 <T
                   en="How the size and shape of cities decide their climate future."
@@ -263,6 +259,10 @@ export default async function Home() {
                   </a>
                 ))}
               </div>
+            </div>
+            <div className="animate-fade-in delay-2">
+              <HeroHeadshot />
+            </div>
           </div>
         </div>
 
