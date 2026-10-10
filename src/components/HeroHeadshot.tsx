@@ -8,6 +8,7 @@ const ALT = {
 };
 
 // Processed by scripts/headshot/process.py — see docs/headshot/TREATMENT.md.
+// Display ~75% of the original editorial size (lg 320→240). Assets stay 320×400 @1x.
 const SIZE = { w: 320, h: 400 } as const;
 const BASE = "/headshot/headshot-portrait";
 
@@ -15,11 +16,11 @@ export default function HeroHeadshot() {
   const { language } = useLanguage();
   const set = (ext: string) => `${BASE}-1x.${ext} 1x, ${BASE}-2x.${ext} 2x`;
   return (
-    <figure className="relative w-36 shrink-0 sm:w-44 md:w-64 lg:w-80">
+    <figure className="relative w-28 shrink-0 sm:w-32 md:w-48 lg:w-60">
       {/* Offset teal frame behind the photo */}
       <div
         aria-hidden
-        className="absolute inset-0 translate-x-3 translate-y-3 rounded-2xl border border-teal/70 md:translate-x-4 md:translate-y-4"
+        className="absolute inset-0 translate-x-2 translate-y-2 rounded-2xl border border-teal/70 md:translate-x-3 md:translate-y-3"
       />
       <picture>
         <source type="image/avif" srcSet={set("avif")} />
@@ -32,7 +33,7 @@ export default function HeroHeadshot() {
           alt={ALT[language]}
           fetchPriority="high"
           decoding="async"
-          className="relative block aspect-[4/5] h-auto w-full rounded-2xl object-cover shadow-[0_24px_60px_-20px_rgba(0,0,0,0.75)] ring-1 ring-paper/15"
+          className="relative block aspect-[4/5] h-auto w-full rounded-2xl object-cover shadow-[0_20px_48px_-18px_rgba(0,0,0,0.75)] ring-1 ring-paper/15"
         />
       </picture>
     </figure>

@@ -66,7 +66,7 @@ a JPG `<img>` with `1x`/`2x` srcset, explicit `width`/`height` (no CLS) and
 `fetchpriority="high"`. Alt text follows the site language toggle:
 EN "Kangning Huang speaking at a panel", ZH "黄康宁在论坛上发言".
 
-Shipped layout: **editorial** 4:5 rounded portrait on the right with offset teal frame (`src/components/HeroHeadshot.tsx`).
+Shipped layout: **editorial** 4:5 rounded portrait on the right with offset teal frame (`src/components/HeroHeadshot.tsx`). Display size is ~75% of the original editorial (lg `w-80`→`w-60` = 240×300 CSS px).
 
 ## Screenshots
 
