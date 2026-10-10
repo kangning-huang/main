@@ -1,6 +1,6 @@
 # Reach Field & Shelf — Preview Report
 
-**Branch:** `preview/reach-field-shelf` (forked from `preview/reach-constellation`, PR #80 tip `b9030ef`) · **Status:** draft — **do not merge**.
+**Branch:** `preview/reach-field-shelf` @ `c1a45ef` (forked from `preview/reach-constellation`, PR #80 tip `b9030ef`) · **Status:** draft — **do not merge**.
 **UI:** `/reach?viz=field-shelf` (on this branch `/reach` opens on Field & Shelf; `?viz=ripple`, `beeswarm`, `clusters`, `constellation` open the others). The toggle reads **Ripple | Beeswarm (A) | Clusters (C) | Constellation | Field & Shelf**; the banner reads “PREVIEW — Ripple | Beeswarm | Clusters | Constellation | Field & Shelf — not merged”.
 **Data:** the OpenAlex snapshot behind `influence.json` (as of 2026-10-10; cached citing lists, no new fetch), self-citations removed by the same strict per-paper rule. Every count below is recounted from the cache by `scripts/influence/build-field-shelf.mjs`; nothing is estimated or hand-entered.
 **Plan:** [`FIELD-SHELF-PLAN.md`](FIELD-SHELF-PLAN.md) · per-run detail: [`field-shelf-report.md`](field-shelf-report.md) (rewritten by every build).
