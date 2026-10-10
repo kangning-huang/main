@@ -8,7 +8,7 @@ generated or inpainted; every subject pixel comes from the source photo.
 Usage:
     python3 scripts/headshot/process.py [_source/ken-panel-headshot-raw.jpg]
 
-Writes public/headshot/headshot-{portrait,square}-{1x,2x}.{avif,webp,jpg}.
+Writes public/headshot/headshot-square-{1x,2x}.{avif,webp,jpg} (circle hero).
 See docs/headshot/TREATMENT.md for the rationale behind each constant.
 """
 
@@ -25,13 +25,13 @@ OUT = ROOT / "public/headshot"
 # Crop boxes in source pixels (left, top, right, bottom).
 # portrait: 4:5 head-and-shoulders for the editorial variant.
 # square:   tight head crop for the circular variants.
+# Portrait crop kept as a comment for the unused editorial experiment:
+#   portrait (4:5): (465, 100, 935, 688) → 320×400 / 470×588
 CROPS = {
-    "portrait": (465, 100, 935, 688),  # 470 x 588 (4:5), ends above the paper
-    "square": (590, 135, 890, 435),  # 300 x 300
+    "square": (590, 135, 890, 435),  # 300 x 300 — circle hero
 }
 # Output sizes (w, h). 2x never exceeds the native crop, so nothing is upscaled.
 SIZES = {
-    "portrait": {"1x": (320, 400), "2x": (470, 588)},
     "square": {"1x": (160, 160), "2x": (300, 300)},
 }
 

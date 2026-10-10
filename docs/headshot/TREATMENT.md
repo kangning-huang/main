@@ -50,15 +50,13 @@ The 2x images are the native crop, so nothing is upscaled.
 
 | Crop | Source box (l, t, r, b) | 1x | 2x | Used by |
 |---|---|---|---|---|
-| portrait (4:5) | `(465, 100, 935, 688)`, 470×588, ends above the paper | 320×400 | 470×588 | `editorial` |
-| square | `(590, 135, 890, 435)`, 300×300 | 160×160 | 300×300 | `circle`, `inline` |
+| square (shipped) | `(590, 135, 890, 435)`, 300×300 | 160×160 | 300×300 | circle hero |
+| portrait (unused) | `(465, 100, 935, 688)`, 470×588 | — | — | editorial experiment, not shipped |
 
 File sizes (bytes):
 
 | File | AVIF | WebP | JPG |
 |---|---:|---:|---:|
-| `headshot-portrait-1x` | 7,314 | 9,106 | 16,419 |
-| `headshot-portrait-2x` | 15,189 | 18,822 | 33,032 |
 | `headshot-square-1x` | 2,692 | 3,156 | 5,216 |
 | `headshot-square-2x` | 7,220 | 8,670 | 14,116 |
 
@@ -69,8 +67,7 @@ a JPG `<img>` with `1x`/`2x` srcset, explicit `width`/`height` (no CLS) and
 `fetchpriority="high"`. Alt text follows the site language toggle:
 EN "Kangning Huang speaking at a panel", ZH "黄康宁在论坛上发言".
 
-To switch layout, change `HEADSHOT_VARIANT` near the top of `src/app/page.tsx`
-(`"editorial"` | `"circle"` | `"inline"`).
+Shipped layout: teal-ring **circle** beside the H1 (`src/components/HeroHeadshot.tsx`).
 
 ## Screenshots
 

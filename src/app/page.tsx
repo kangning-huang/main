@@ -12,7 +12,7 @@ import { NEWS, formatNewsDate } from "@/lib/news";
 import { webPageSchema, profilePageSchema, faqSchema, OG_IMAGE_PATH, withOpenGraphDefaults, canonicalPageUrl } from "@/lib/seo";
 import T from "@/components/T";
 import PublicationCard from "@/components/PublicationCard";
-import HeroHeadshot, { type HeadshotVariant } from "@/components/HeroHeadshot";
+import HeroHeadshot from "@/components/HeroHeadshot";
 import { reachHeadline } from "@/lib/influence";
 
 const HOME_DESCRIPTION =
@@ -59,10 +59,6 @@ const FINDINGS = [
 ];
 
 const extLink = "text-ember hover:underline";
-
-// Hero headshot layout (preview): "editorial" = portrait column beside the text,
-// "circle" = ringed portrait beside the name, "inline" = small avatar by the title line.
-const HEADSHOT_VARIANT = "editorial" as HeadshotVariant;
 
 const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
   "Nested Scaling of City Mass": {
@@ -185,26 +181,11 @@ export default async function Home() {
         <div className="topo-grain absolute inset-0" />
 
         <div className="relative mx-auto max-w-6xl px-6 pb-20 pt-24 md:pb-28 md:pt-32 lg:px-8">
-          <div
-            className={
-              HEADSHOT_VARIANT === "editorial"
-                ? "flex flex-col-reverse gap-10 md:grid md:grid-cols-[minmax(0,1fr)_auto] md:items-center md:gap-12 lg:gap-16"
-                : undefined
-            }
-          >
-            <div className="min-w-0">
-              <div
-                className={
-                  HEADSHOT_VARIANT === "circle"
-                    ? "flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-8"
-                    : undefined
-                }
-              >
-                {HEADSHOT_VARIANT === "circle" && (
-                  <div className="animate-fade-in">
-                    <HeroHeadshot variant="circle" />
-                  </div>
-                )}
+          <div className="min-w-0">
+              <div className="flex flex-col items-start gap-6 md:flex-row md:items-center md:gap-8">
+                <div className="animate-fade-in">
+                  <HeroHeadshot />
+                </div>
                 <h1 className="animate-fade-up font-display text-5xl leading-[1.1] text-paper md:text-6xl lg:text-7xl">
                   <T en={SITE.name} zh="黄康宁" />
                 </h1>
@@ -215,19 +196,12 @@ export default async function Home() {
                   zh="城市的规模与形态如何决定其气候未来。"
                 />
               </p>
-              <div
-                className={`animate-fade-up delay-2 mt-4 ${
-                  HEADSHOT_VARIANT === "inline" ? "flex items-center gap-4" : ""
-                }`}
-              >
-                {HEADSHOT_VARIANT === "inline" && <HeroHeadshot variant="inline" />}
-                <p className="text-sm text-paper/60">
-                  <T
-                    en="Assistant Professor of Environmental Studies · CLUEs Lab, NYU Shanghai"
-                    zh="环境学助理教授 · CLUEs Lab，上海纽约大学"
-                  />
-                </p>
-              </div>
+              <p className="animate-fade-up delay-2 mt-4 text-sm text-paper/60">
+                <T
+                  en="Assistant Professor of Environmental Studies · CLUEs Lab, NYU Shanghai"
+                  zh="环境学助理教授 · CLUEs Lab，上海纽约大学"
+                />
+              </p>
               {reach && (
                 <p className="animate-fade-up delay-2 mt-2 text-sm text-paper/60">
                   <Link href="/reach" className="transition-colors hover:text-ember">
@@ -289,12 +263,6 @@ export default async function Home() {
                   </a>
                 ))}
               </div>
-            </div>
-            {HEADSHOT_VARIANT === "editorial" && (
-              <div className="animate-fade-in delay-2">
-                <HeroHeadshot variant="editorial" />
-              </div>
-            )}
           </div>
         </div>
 
