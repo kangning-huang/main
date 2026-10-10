@@ -222,7 +222,7 @@ Five decisions are Ken's to make; the first two should be settled before phase 2
 
 - [ ] Lead message: breadth ("this work travels far beyond urban science") or identity ("these communities build on the heat and urban-form agenda"). Sets the default lens and the headline.
 - [ ] Rename "Scaling, form & methods" or split IEEE TGRS 2013 into its own sector.
-- [ ] Keep the Sankey behind a "Fields" toggle, or retire it at launch.
+- [x] **Settled (Ken, 2026-10-10):** Retire the Fields Sankey at Ripple launch — do not keep it behind a Fields toggle. Ripple is the only section-01 chart. (`ReachFlowChart.tsx` / `reach-flow.json` may remain in-repo unused until a later cleanup PR.)
 - [ ] Phone layout: unrolled strip (recommended) or packed bubbles.
 - [ ] Commit the citing-work cache for reproducible builds, or keep it out of git.
 
