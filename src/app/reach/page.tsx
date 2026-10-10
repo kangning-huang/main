@@ -3,17 +3,19 @@ import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcru
 import T from "@/components/T";
 import { isSample } from "@/lib/influence";
 import { ReachLensProvider, ReachLensChip } from "@/components/reach/ReachLens";
-import ReachFlowChart from "@/components/reach/ReachFlowChart";
+import RippleSection from "@/components/reach/RippleSection";
 import AdaptiveTopics from "@/components/reach/AdaptiveTopics";
 import WhoUses from "@/components/reach/WhoUses";
 import WhereMap from "@/components/reach/WhereMap";
 import StandingOnIt from "@/components/reach/StandingOnIt";
 import Growth from "@/components/reach/Growth";
-import ReachIntro from "@/components/reach/ReachIntro";
 import ReachMethod from "@/components/reach/ReachMethod";
 
 const DESCRIPTION =
-  "Who builds on Kangning (Ken) Huang's research: subfields and topics citing his papers, from OpenAlex with self-citations removed.";
+  "Who builds on Kangning (Ken) Huang's research: what the works citing his papers are about, how far they sit from his own topics, and where they come from. OpenAlex, self-citations removed.";
+
+// Preview branch only (preview/reach-ripple): remove this flag and the banner when the Ripple map launches.
+const RIPPLE_PREVIEW = true;
 
 export const metadata: Metadata = {
   title: "Reach",
@@ -42,12 +44,17 @@ export default function ReachPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema({ path: "/reach", title: "Reach", description: DESCRIPTION })) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema([{ name: "Reach", path: "/reach" }])) }} />
 
+      {RIPPLE_PREVIEW && (
+        <div role="note" className="border-b border-ember bg-ember-light px-6 py-2.5 text-center text-sm font-medium text-ember-dark">
+          PREVIEW — Ripple Map (not merged)
+        </div>
+      )}
       {isSample && (
         <div role="alert" className="border-b border-ember bg-ember-light px-6 py-3 text-center text-sm font-medium text-ember-dark">
           <T en="SAMPLE DATA" zh="示例数据" />
         </div>
       )}
-<ReachLensProvider>
+      <ReachLensProvider>
         <section className="pt-10 pb-6 md:pt-14">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h1 className="font-display text-4xl text-ink md:text-5xl">
@@ -55,23 +62,17 @@ export default function ReachPage() {
             </h1>
             <p className="mt-3 max-w-2xl text-[15px] text-ink-muted">
               <T
-                en="OpenAlex citing works after self-citation removal. Flow first; details below."
-                zh="OpenAlex 施引文献（已剔除自引）。先看流向，细节在下方。"
+                en="Keywords from the works that cite Ken's papers, placed by how far each sits from his own research topics. OpenAlex, self-citations removed."
+                zh="引用黄康宁论文的文献关键词，按其与本人研究主题的距离排布。数据来自 OpenAlex，已剔除自引。"
               />
             </p>
             <ReachLensChip />
           </div>
         </section>
 
-        <section id="flow" className="scroll-mt-20 border-t border-rule-faint py-10 md:py-12">
+        <section id="ripple" aria-labelledby="ripple-heading" className="scroll-mt-20 border-t border-rule-faint py-10 md:py-12">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <ReachFlowChart />
-          </div>
-        </section>
-
-        <section className="border-t border-rule-faint py-8">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <ReachIntro />
+            <RippleSection />
           </div>
         </section>
 

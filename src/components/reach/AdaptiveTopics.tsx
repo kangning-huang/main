@@ -18,8 +18,8 @@ export default function AdaptiveTopics() {
     <div>
       <p className="max-w-3xl text-sm text-ink-muted">
         <T
-          en={<>{pctOutside}% of citing works ({outside.toLocaleString()} / {totals.uniqueCitingWorks.toLocaleString()}) sit outside Ken&apos;s own OpenAlex topics. Cards expand the flow chart above.</>}
-          zh={<>{pctOutside}% 的施引文献（{outside.toLocaleString()} / {totals.uniqueCitingWorks.toLocaleString()}）落在本人主题之外。卡片展开上方流向图。</>}
+          en={<>{pctOutside}% of citing works ({outside.toLocaleString()} / {totals.uniqueCitingWorks.toLocaleString()}) sit outside Ken&apos;s own OpenAlex topics. Cards group them by OpenAlex field, subfield and topic.</>}
+          zh={<>{pctOutside}% 的施引文献（{outside.toLocaleString()} / {totals.uniqueCitingWorks.toLocaleString()}）落在本人主题之外。卡片按 OpenAlex 领域、子领域和主题分组。</>}
         />
       </p>
 
@@ -87,8 +87,8 @@ export default function AdaptiveTopics() {
       {other && (
         <p className="mt-4 text-sm text-ink-faint">
           <T
-            en={`Plus a long tail of smaller research areas: ${other.citingWorks} citing works (${other.share}%). Named domains for that tail are in the flow chart above.`}
-            zh={`另有长尾较小研究领域：${other.citingWorks} 篇（${other.share}%）。长尾的具名分组见上方流向图。`}
+            en={`Plus a long tail of smaller research areas: ${other.citingWorks} citing works (${other.share}%).`}
+            zh={`另有长尾较小研究领域：${other.citingWorks} 篇（${other.share}%）。`}
           />
         </p>
       )}

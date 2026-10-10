@@ -1,41 +1,41 @@
 {
-  "$comment": "Editable Reach Sankey left-side themes (L4 default cites/year). Change labels, colors, order, paper→theme map, or rightDomains; then: node scripts/influence/build-reach-flow.mjs",
+  "$comment": "Reach themes: labels, Okabe–Ito colors, Ripple sector order (clockwise from 12 o'clock), and the paper→theme map. Edit, then run node scripts/influence/build-ripple.mjs. 'methods' is shown as 'Form & methods' until the embargoed Nature Cities scaling paper has a DOI. rightDomains is used only by the retired Sankey builder (build-reach-flow.mjs).",
   "themes": [
     {
       "id": "expansion",
       "en": "Urban expansion & futures",
       "zh": "城市扩张与未来",
-      "color": "#00909a"
-    },
-    {
-      "id": "heat-health",
-      "en": "Heat exposure & health",
-      "zh": "高温暴露与健康",
-      "color": "#c74b16"
-    },
-    {
-      "id": "cooling",
-      "en": "Cooling & greening",
-      "zh": "降温与绿化",
-      "color": "#2a9d6e"
-    },
-    {
-      "id": "air-dust",
-      "en": "Air quality / dust",
-      "zh": "空气质量 / 扬尘",
-      "color": "#8b5a2b"
+      "color": "#0072B2"
     },
     {
       "id": "methods",
-      "en": "Scaling, form & methods",
-      "zh": "标度、形态与方法",
-      "color": "#94700f"
+      "en": "Form & methods",
+      "zh": "形态与方法",
+      "color": "#CC79A7"
     },
     {
       "id": "flood",
       "en": "Flood & coasts",
       "zh": "洪水与海岸",
-      "color": "#5b4b9a"
+      "color": "#56B4E9"
+    },
+    {
+      "id": "heat-health",
+      "en": "Heat exposure & health",
+      "zh": "高温暴露与健康",
+      "color": "#D55E00"
+    },
+    {
+      "id": "cooling",
+      "en": "Cooling & greening",
+      "zh": "降温与绿化",
+      "color": "#009E73"
+    },
+    {
+      "id": "air-dust",
+      "en": "Air quality / dust",
+      "zh": "空气质量 / 扬尘",
+      "color": "#E69F00"
     }
   ],
   "defaultThemeId": "expansion",
