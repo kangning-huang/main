@@ -156,7 +156,9 @@ export default function AtlasExplorer() {
             <Swatch color={PAPER_COUNT_COLORS[1]} en="1" zh="1" />
             <Swatch color={PAPER_COUNT_COLORS[2]} en="2" zh="2" />
             <Swatch color={PAPER_COUNT_COLORS[3]} en="3" zh="3" />
-            <Swatch color={PAPER_COUNT_COLORS[4]} en="4+" zh="4+" />
+            <Swatch color={PAPER_COUNT_COLORS[4]} en="4" zh="4" />
+            <Swatch color={PAPER_COUNT_COLORS[5]} en="5" zh="5" />
+            <Swatch color={PAPER_COUNT_COLORS[6]} en="6" zh="6" />
             <Swatch color={PAPER_COUNT_COLORS[0]} en="None" zh="无" />
             {meta && (
               <span className="ml-auto">

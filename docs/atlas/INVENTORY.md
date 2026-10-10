@@ -26,7 +26,7 @@ City key for the Atlas: **GHSL UCDB 2015 R2019A `ID_HDC_G0`**.
 
 - Cooling app settlement counts (e.g. Shanghai 55 demolished) differ from the paper sample (77 / 584); Atlas shows only DID coefficients.
 - Flood CSVs are at FUA grain with multi-UC `UC_IDs`; ready to join once Ken green-lights.
-- Map UX (Ken override): **same-size dots**; color = paper count (1 / 2 / 3 / 4+); filter chips optional.
+- Map UX (Ken override): **same-size dots**; color = paper count (1 / 2 / 3 / 4 / 5 / 6); grey = 0; filter chips optional.
 
 ## Flood layer join notes (2026-10-09)
 
