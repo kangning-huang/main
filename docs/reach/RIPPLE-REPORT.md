@@ -192,6 +192,11 @@ Full per-theme tables (including candidates not shown): `docs/reach/ripple-keywo
 - Repo copies: `docs/reach/screenshots/preview-ripple-*.png`
 - Dark theme: N/A (site has no dark mode).
 
+
+## Workflow activation (preview caveat)
+
+GitHub OAuth used for this push lacks the `workflow` scope, so `.github/workflows/influence.yml` is **not** on the branch yet. The full YAML (fetch + `build-reach-flow` + `build-ripple`) lives at `docs/reach/influence.workflow.yml`. At launch / merge, copy it to `.github/workflows/influence.yml` with a token that has `workflow` scope (or add the file in the GitHub UI).
+
 ## PR
 
 _Filled after open: PR # and HEAD SHA._
