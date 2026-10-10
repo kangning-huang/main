@@ -222,6 +222,7 @@
    },
    "shelf": {
     "width": 700,
+    "minWidth": 560,
     "itemGap": 3,
     "groupGap": 16,
     "labelSize": 10.5,
@@ -851,7 +852,8 @@
       "x0": 7,
       "x1": 134,
       "en": [
-       "Urban expansion & futures"
+       "Urban expansion",
+       "& futures"
       ],
       "zh": [
        "城市扩张与未来"
@@ -862,7 +864,8 @@
       "x0": 150,
       "x1": 225,
       "en": [
-       "Form & methods"
+       "Form",
+       "& methods"
       ],
       "zh": [
        "形态与方法"
@@ -884,7 +887,8 @@
       "x0": 358,
       "x1": 485,
       "en": [
-       "Heat exposure & health"
+       "Heat exposure",
+       "& health"
       ],
       "zh": [
        "高温暴露与健康"
@@ -895,7 +899,8 @@
       "x0": 501,
       "x1": 602,
       "en": [
-       "Cooling & greening"
+       "Cooling",
+       "& greening"
       ],
       "zh": [
        "降温与绿化"
@@ -910,7 +915,8 @@
        "dust"
       ],
       "zh": [
-       "空气质量 / 扬尘"
+       "空气质量 /",
+       "扬尘"
       ]
      }
     ]
@@ -4139,7 +4145,8 @@
        "& methods"
       ],
       "zh": [
-       "形态与方法"
+       "形态",
+       "与方法"
       ]
      },
      {
@@ -4169,7 +4176,8 @@
       "x0": 577,
       "x1": 688,
       "en": [
-       "Cooling & greening"
+       "Cooling",
+       "& greening"
       ],
       "zh": [
        "降温与绿化"

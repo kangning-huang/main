@@ -448,7 +448,7 @@ async function main() {
       homeSubfieldsLeadCount: Hsub.size,
       homeFieldsLeadCount: Hfield.size,
       homeDomainsLeadCount: Hdom.size,
-      homeTopicsLead: [...homeTopics.values()].map(({ papers: _p, ...t }) => t),
+      homeTopicsLead: [...homeTopics.values()].map((t) => ({ id: t.id, name: t.name, subfield: t.subfield, field: t.field, domain: t.domain })),
       maxDistance: maxD,
       bands: BANDS,
       density: "constant",
@@ -462,7 +462,7 @@ async function main() {
         ? { all: inf.views.all.totals.citingWorksOutsideOwnTopics, lead: inf.views.lead.totals.citingWorksOutsideOwnTopics, homeTopics: inf.meta.homeTopicCount ?? null }
         : null,
       tooltips: { all: "/data/field-shelf-tooltips-all.json", lead: "/data/field-shelf-tooltips-lead.json", bytes: tipSizes },
-      layout: { field: FIELD, shelf: { width: SHELF.width, itemGap: SHELF.itemGap, groupGap: SHELF.groupGap, labelSize: SHELF.labelSize, descSize: SHELF.descSize, lineH: SHELF.lineH, padY: SHELF.padY, themeSize: SHELF.themeSize, themeLineH: SHELF.themeLineH } },
+      layout: { field: FIELD, shelf: { width: SHELF.width, minWidth: SHELF.minWidth, itemGap: SHELF.itemGap, groupGap: SHELF.groupGap, labelSize: SHELF.labelSize, descSize: SHELF.descSize, lineH: SHELF.lineH, padY: SHELF.padY, themeSize: SHELF.themeSize, themeLineH: SHELF.themeLineH } },
     },
     themes: THEMES.map((t) => ({ id: t.id, en: t.en, zh: t.zh, color: t.color })),
     papers: papers.map((p) => ({

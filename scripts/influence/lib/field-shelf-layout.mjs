@@ -22,6 +22,7 @@ export const FIELD = {
 
 export const SHELF = {
   width: 700, // reference stage width
+  minWidth: 560, // narrowest stage the client draws (lg at 1024 px): text must fit at this scale
   margin: 4,
   itemGap: 3, // between spines of one theme
   groupGap: 16, // between themes
@@ -131,7 +132,14 @@ function fitLines(text, size, max) {
   const all = [...text.matchAll(/ /g)].map((m) => m.index);
   const ok = all.filter((i) => !text.slice(0, i).endsWith("&") && !text.slice(i + 1).startsWith("/"));
   const spaces = ok.length ? ok : all;
-  if (spaces.length === 0) return [text];
+  if (spaces.length === 0) {
+    // Chinese has no spaces: break before 与 ("and", like "&" above), else mid-word.
+    const chars = [...text];
+    if (chars.length < 4) return [text];
+    const and = chars.indexOf("与");
+    const at = and > 0 && and < chars.length - 1 ? and : Math.ceil(chars.length / 2);
+    return [chars.slice(0, at).join(""), chars.slice(at).join("")];
+  }
   let best = null;
   for (const i of spaces) {
     const lines = [text.slice(0, i), text.slice(i + 1)];
@@ -183,14 +191,16 @@ export function layoutShelf(items, themes, { lines = 1, width = SHELF.width } = 
   );
   const spineH = Math.ceil(textLen + 2 * S.padY);
 
-  // Theme names: one line if it fits over the group (plus half a gap each side), else two.
+  // Theme names: one line if it fits over the group (plus half a gap each side) on the narrowest
+  // stage — x positions shrink with the stage, text does not — else two.
   const themeById = new Map(themes.map((t) => [t.id, t]));
   const overflow = [];
+  const narrow = Math.min(1, S.minWidth / width);
   const out = groupBoxes.map((b, i) => {
     const t = themeById.get(b.theme);
     const left = i === 0 ? b.x0 : (groupBoxes[i - 1].x1 + b.x0) / 2;
     const right = i === groupBoxes.length - 1 ? b.x1 : (b.x1 + groupBoxes[i + 1].x0) / 2;
-    const max = right - left - 4;
+    const max = (right - left) * narrow - 4;
     const label = {};
     for (const lang of ["en", "zh"]) {
       const ls = fitLines(t[lang], S.themeSize, max);
