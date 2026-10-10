@@ -46,4 +46,4 @@ Both read only `src/data/ripple.json` (no invented counts).
 
 ## PR
 
-_Filled after open._
+**Draft PR [#79](https://github.com/kangning-huang/main/pull/79)** · HEAD `cf386fd` (`cf386fdc0a77873bd0fbd5ca6af24da97dd03947`). Base: `preview/reach-ripple` (follow-on to #78).
