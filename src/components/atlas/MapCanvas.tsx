@@ -27,18 +27,20 @@ const DOT_R = 2.4;
 const DOT_R_SEL = 3.4;
 const GREY = "rgba(120, 110, 100, 0.4)";
 
-/** Sequential paper-count palette: 1 → pale teal, 2 → teal, 3 → deep teal/ink, 4+ → ember. */
+/** Sequential paper-count palette: 1–6 distinct steps (pale teal → deep teal → ember → deep rust). Grey = 0. */
 export const PAPER_COUNT_COLORS: Record<number, string> = {
   0: GREY,
-  1: "rgb(140, 190, 188)",
-  2: "rgb(13, 115, 119)",
-  3: "rgb(8, 70, 78)",
-  4: "rgb(199, 75, 22)",
+  1: "rgb(140, 190, 188)", // #8CBEBC
+  2: "rgb(58, 155, 152)", // #3A9B98
+  3: "rgb(13, 115, 119)", // #0D7377
+  4: "rgb(8, 70, 78)", // #08464E
+  5: "rgb(199, 75, 22)", // #C74B16
+  6: "rgb(139, 34, 8)", // #8B2208
 };
 
 export function colorForCount(n: number): string {
   if (n <= 0) return PAPER_COUNT_COLORS[0];
-  if (n >= 4) return PAPER_COUNT_COLORS[4];
+  if (n >= 6) return PAPER_COUNT_COLORS[6];
   return PAPER_COUNT_COLORS[n];
 }
 
