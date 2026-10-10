@@ -199,7 +199,7 @@ GitHub OAuth used for this push lacks the `workflow` scope, so `.github/workflow
 
 ## PR
 
-_Filled after open: PR # and HEAD SHA._
+**Draft PR [#78](https://github.com/kangning-huang/main/pull/78)** · HEAD `a73cfff` (`a73cfffec79fe8978ebacb4ec9357f656237c42d`).
 ## Open aliases needing Ken (priority)
 
 Full auto-detected list: `docs/reach/ripple-keyword-report.md` § Alias candidates.
