@@ -1,0 +1,411 @@
+{
+ "$comment": "The last Constellation layout, written by build-constellation.mjs. raw: UMAP's output (the next build starts UMAP here, and reuses it outright while umapInput is unchanged). coords: the same positions aligned and oriented, before gutters (the next build Procrustes-aligns onto these).",
+ "asOf": "2026-10-10",
+ "model": "sentence-transformers/all-MiniLM-L6-v2",
+ "umap": "0.5.7",
+ "umapInput": "110b01e6044e9cacd1c0cee0",
+ "raw": {
+  "aerosol-optical-depth": [
+   5.198602,
+   7.669851
+  ],
+  "biodiversity-conservation": [
+   0.336032,
+   3.278768
+  ],
+  "biodiversity-loss": [
+   0.761852,
+   3.442025
+  ],
+  "built-up-area-expansion": [
+   2.353678,
+   4.8162
+  ],
+  "climate-change": [
+   3.610191,
+   3.03299
+  ],
+  "climate-change-adaptation": [
+   4.088509,
+   2.364383
+  ],
+  "dust-emission": [
+   4.826933,
+   7.86475
+  ],
+  "dust-storms": [
+   4.87534,
+   7.225884
+  ],
+  "ecosystem-services": [
+   1.022752,
+   4.056838
+  ],
+  "farmland-loss": [
+   2.51544,
+   4.734083
+  ],
+  "feature-matching": [
+   1.8962,
+   6.631714
+  ],
+  "genetic-algorithm": [
+   2.078704,
+   5.668264
+  ],
+  "google-earth-engine": [
+   2.614867,
+   4.107743
+  ],
+  "habitat-connectivity": [
+   -0.260417,
+   2.836784
+  ],
+  "habitat-fragmentation": [
+   0.028215,
+   3.059263
+  ],
+  "heat-waves": [
+   4.611402,
+   1.783047
+  ],
+  "image-registration": [
+   2.176003,
+   6.801602
+  ],
+  "impervious-surfaces": [
+   3.081576,
+   3.720366
+  ],
+  "land-allocation": [
+   1.650598,
+   5.715109
+  ],
+  "land-surface-temperature": [
+   5.511691,
+   1.465491
+  ],
+  "land-use-and-land-cover-change": [
+   2.876946,
+   4.899981
+  ],
+  "land-use-change": [
+   3.167156,
+   5.400164
+  ],
+  "land-use-planning": [
+   1.726001,
+   5.251039
+  ],
+  "local-climate-zones": [
+   5.203364,
+   2.216015
+  ],
+  "multi-objective-optimization": [
+   2.019953,
+   5.811591
+  ],
+  "pm10": [
+   5.172935,
+   7.558948
+  ],
+  "pm2-5": [
+   4.505651,
+   7.668448
+  ],
+  "protected-areas": [
+   0.198913,
+   3.645529
+  ],
+  "remote-sensing-image-registration": [
+   1.474002,
+   6.755288
+  ],
+  "shared-socioeconomic-pathways": [
+   3.4478,
+   4.888399
+  ],
+  "species-richness": [
+   0.273092,
+   2.526969
+  ],
+  "sustainable-urban-development": [
+   1.985405,
+   4.183527
+  ],
+  "urban-agglomerations": [
+   3.218276,
+   4.361703
+  ],
+  "urban-biodiversity": [
+   0.539599,
+   2.68368
+  ],
+  "urban-biodiversity-conservation": [
+   -0.042834,
+   2.253495
+  ],
+  "urban-cooling": [
+   4.100886,
+   1.351121
+  ],
+  "urban-expansion": [
+   2.904492,
+   4.080334
+  ],
+  "urban-green-space": [
+   1.391085,
+   2.352337
+  ],
+  "urban-greening": [
+   3.505838,
+   1.954317
+  ],
+  "urban-heat-island": [
+   5.304146,
+   2.07941
+  ],
+  "urban-heat-island-mitigation": [
+   4.682548,
+   1.083532
+  ],
+  "urban-microclimate": [
+   5.097559,
+   1.283718
+  ],
+  "urban-morphology": [
+   5.757017,
+   1.805561
+  ],
+  "urban-parks": [
+   0.740679,
+   2.199854
+  ],
+  "urban-planning": [
+   2.439961,
+   3.267173
+  ],
+  "urban-rural-gradient": [
+   1.356111,
+   2.829879
+  ],
+  "urban-sprawl": [
+   2.147926,
+   3.73401
+  ],
+  "urban-thermal-environment": [
+   5.000044,
+   1.672141
+  ],
+  "vehicle-emissions": [
+   4.549663,
+   7.141762
+  ],
+  "wet-bulb-globe-temperature": [
+   4.80841,
+   2.112775
+  ]
+ },
+ "coords": {
+  "aerosol-optical-depth": [
+   4.16529,
+   8.15205
+  ],
+  "biodiversity-conservation": [
+   0.6049,
+   2.65206
+  ],
+  "biodiversity-loss": [
+   0.97396,
+   2.91997
+  ],
+  "built-up-area-expansion": [
+   2.15588,
+   4.65931
+  ],
+  "climate-change": [
+   3.83111,
+   3.26207
+  ],
+  "climate-change-adaptation": [
+   4.46618,
+   2.74005
+  ],
+  "dust-emission": [
+   3.75584,
+   8.24411
+  ],
+  "dust-storms": [
+   3.96795,
+   7.63954
+  ],
+  "ecosystem-services": [
+   1.06684,
+   3.58136
+  ],
+  "farmland-loss": [
+   2.33339,
+   4.62186
+  ],
+  "feature-matching": [
+   1.2441,
+   6.29456
+  ],
+  "genetic-algorithm": [
+   1.66975,
+   5.41118
+  ],
+  "google-earth-engine": [
+   2.59153,
+   4.0426
+  ],
+  "habitat-connectivity": [
+   0.14317,
+   2.07077
+  ],
+  "habitat-fragmentation": [
+   0.36439,
+   2.36037
+  ],
+  "heat-waves": [
+   5.12172,
+   2.31385
+  ],
+  "image-registration": [
+   1.4704,
+   6.53108
+  ],
+  "impervious-surfaces": [
+   3.1426,
+   3.78921
+  ],
+  "land-allocation": [
+   1.24411,
+   5.34562
+  ],
+  "land-surface-temperature": [
+   6.07352,
+   2.24013
+  ],
+  "land-use-and-land-cover-change": [
+   2.63964,
+   4.87567
+  ],
+  "land-use-change": [
+   2.7905,
+   5.43392
+  ],
+  "land-use-planning": [
+   1.43705,
+   4.91688
+  ],
+  "local-climate-zones": [
+   5.58145,
+   2.88528
+  ],
+  "multi-objective-optimization": [
+   1.5759,
+   5.53441
+  ],
+  "pm10": [
+   4.1692,
+   8.03828
+  ],
+  "pm2-5": [
+   3.49631,
+   7.97135
+  ],
+  "protected-areas": [
+   0.37753,
+   2.97084
+  ],
+  "remote-sensing-image-registration": [
+   0.80431,
+   6.30465
+  ],
+  "shared-socioeconomic-pathways": [
+   3.19404,
+   5.01223
+  ],
+  "species-richness": [
+   0.73869,
+   1.90959
+  ],
+  "sustainable-urban-development": [
+   1.96391,
+   3.95288
+  ],
+  "urban-agglomerations": [
+   3.10865,
+   4.44408
+  ],
+  "urban-biodiversity": [
+   0.95555,
+   2.12994
+  ],
+  "urban-biodiversity-conservation": [
+   0.50431,
+   1.56367
+  ],
+  "urban-cooling": [
+   4.74039,
+   1.76452
+  ],
+  "urban-expansion": [
+   2.87838,
+   4.09108
+  ],
+  "urban-green-space": [
+   1.86378,
+   2.03027
+  ],
+  "urban-greening": [
+   4.00949,
+   2.19315
+  ],
+  "urban-heat-island": [
+   5.71415,
+   2.77941
+  ],
+  "urban-heat-island-mitigation": [
+   5.37148,
+   1.65659
+  ],
+  "urban-microclimate": [
+   5.72054,
+   1.95737
+  ],
+  "urban-morphology": [
+   6.22247,
+   2.63211
+  ],
+  "urban-parks": [
+   1.27501,
+   1.71464
+  ],
+  "urban-planning": [
+   2.64014,
+   3.1854
+  ],
+  "urban-rural-gradient": [
+   1.70641,
+   2.48249
+  ],
+  "urban-sprawl": [
+   2.23723,
+   3.56075
+  ],
+  "urban-thermal-environment": [
+   5.52582,
+   2.30732
+  ],
+  "vehicle-emissions": [
+   3.67514,
+   7.474
+  ],
+  "wet-bulb-globe-temperature": [
+   5.22667,
+   2.68334
+  ]
+ }
+}

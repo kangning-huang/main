@@ -5,12 +5,15 @@ import T from "@/components/T";
 import { influence, THEMES, THEME_COLORS } from "@/lib/influence";
 import { useReachLens } from "./ReachLens";
 import { getRipple } from "@/lib/ripple";
+import { getConstellation, num } from "@/lib/constellation";
 
 export default function ReachMethod() {
   const { view, papers, lens } = useReachLens();
   const { meta } = influence;
   const { totals } = view;
   const ripple = getRipple(lens);
+  const cview = getConstellation(lens);
+  const cp = cview.meta.params;
   const themeName = (id: string) => THEMES.find((t) => t.id === id) ?? { en: id, zh: id };
   const tablePapers = lens === "lead" ? papers.filter((p) => p.lens === "lead") : papers;
 
@@ -61,6 +64,12 @@ export default function ReachMethod() {
             <T
               en={`Reach distance: each citing work's OpenAlex topic is compared with the ${ripple.meta.homeTopics} topics on Ken's papers — 0 = a home topic, 1 = same subfield, 2 = same field, 3 = same domain (Ken's papers already carry topics in all four OpenAlex domains). A bubble sits at the mean distance of its works, on a square-root scale; keywords with fewer than ${ripple.meta.params.minTaggedForMean} topic-tagged works sit at their theme's median.`}
               zh={`距离：将每篇施引文献的 OpenAlex 主题与本人论文的 ${ripple.meta.homeTopics} 个主题比较——0 = 本人主题，1 = 同一子领域，2 = 同一领域，3 = 同一大类（本人论文的主题已覆盖 OpenAlex 全部四个大类）。圆的位置取其施引文献的平均距离（平方根刻度）；主题标注少于 ${ripple.meta.params.minTaggedForMean} 篇的关键词置于主题中位距离。`}
+            />
+          </li>
+          <li>
+            <T
+              en={`Constellation map (preview): the same OpenAlex keywords on citing works, without generic and place-name keywords. Each keyword is embedded with the all-MiniLM-L6-v2 sentence model as the mean of its label and the titles of the citing works that carry it; UMAP (cosine, ${num(cp.umapNeighbors ?? cp.nNeighbors, 15)} neighbours, min_dist ${num(cp.umapMinDist ?? cp.minDist, 0.3)}, fixed seed) lays the keywords out in two dimensions, and ${cview.regions.filter((r) => r.keywords > 0).length} regions come from clustering the embeddings (4–7, chosen by silhouette). Only neighbourhoods carry meaning; the axes and directions do not. Stars are papers with at least ${num(cp.starMinWorks, 30)} non-self citing works, placed at the mean position of their citers' keywords; the dashed arrow starts at the mean position of the map keywords closest to the paper's own title and keywords. Drift is that distance in keyword-steps (the mean gap between neighbouring keywords); a bridge has at least ${Math.round(num(cp.bridgeShareMin, 0.25) * 100)}% of its citers' keyword mentions in each of two regions.`}
+              zh={`星座图（预览）：同样使用施引文献的 OpenAlex 关键词，剔除通用词与地名。每个关键词以 all-MiniLM-L6-v2 句向量模型嵌入（关键词本身与带有它的施引文献标题的平均）；UMAP（余弦，${num(cp.umapNeighbors ?? cp.nNeighbors, 15)} 个近邻，min_dist ${num(cp.umapMinDist ?? cp.minDist, 0.3)}，固定随机种子）将其排布在二维平面上；${cview.regions.filter((r) => r.keywords > 0).length} 个区域由嵌入向量聚类得到（4–7 个，按轮廓系数选择）。只有“邻近”有含义，坐标轴与方向没有。星为非自引施引至少 ${num(cp.starMinWorks, 30)} 篇的论文，位于其施引文献关键词的平均位置；虚线箭头起点是与论文自身标题和关键词最接近的图中关键词的平均位置。漂移为二者距离（以相邻关键词的平均间距为单位）；“桥梁”指施引文献关键词在两个区域各占至少 ${Math.round(num(cp.bridgeShareMin, 0.25) * 100)}%。`}
             />
           </li>
           <li>

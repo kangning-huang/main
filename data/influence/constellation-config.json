@@ -1,0 +1,47 @@
+{
+  "$comment": "Hand-kept settings for scripts/influence/build-constellation.mjs. places: OpenAlex keyword slugs that name a place (country, region, city, basin, plateau, desert). They are frequent on citing works but are not research neighbourhoods, so the Constellation leaves them out (the Ripple is unaffected). paperLabels / paperLabelsZh: star labels where the dois.json short label would repeat within a lens (English / Chinese). Ken to review.",
+  "places": [
+    "china",
+    "chinese-cities",
+    "beijing",
+    "shanghai",
+    "guangzhou",
+    "shenzhen",
+    "wuhan",
+    "nanjing",
+    "chengdu",
+    "chongqing",
+    "lanzhou",
+    "zhejiang",
+    "hong-kong",
+    "beijing-tianjin-hebei-region",
+    "yangtze-river-delta",
+    "yangtze-river-economic-belt",
+    "pearl-river-delta",
+    "guangdong-hong-kong-macao-greater-bay-area",
+    "yellow-river-basin",
+    "wei-river-basin",
+    "tibetan-plateau",
+    "loess-plateau",
+    "arabian-desert",
+    "south-china",
+    "india",
+    "nigeria",
+    "tokyo",
+    "european-cities",
+    "global-south",
+    "global-south-cities",
+    "taklamakan-desert",
+    "arabian-peninsula",
+    "sub-saharan-africa",
+    "wei-river"
+  ],
+  "paperLabels": {
+    "10.1038/s41893-020-0521-x": "Nat Sustain 2020 · mapping",
+    "10.1038/s41893-019-0436-6": "Nat Sustain 2020 · biodiversity"
+  },
+  "paperLabelsZh": {
+    "10.1038/s41893-020-0521-x": "Nat Sustain 2020 · 城市变化制图",
+    "10.1038/s41893-019-0436-6": "Nat Sustain 2020 · 生物多样性"
+  }
+}

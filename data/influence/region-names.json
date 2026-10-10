@@ -1,0 +1,41 @@
+{
+  "$comment": "Hand-kept names and colours for the Constellation's regions (scripts/influence/build-constellation.mjs). The builder matches each region to an entry by its five largest shown keywords: 3+ shared keeps the name, 2 keeps it with a warning, fewer means no match, and the builder proposes a name and warns. It never renames anything silently. Colours: the four the design paints (land use #1baf7a, heat #eb6834, remote-sensing #0d366b, air #d55181) plus #2a78d6 from the same documented palette. First named 2026-10-10 from that run's top keywords; Ken to review.",
+  "regions": [
+    {
+      "id": "land-use",
+      "en": "Urban expansion & land use",
+      "zh": "城市扩张与土地利用",
+      "color": "#1baf7a",
+      "signature": ["urban-expansion", "land-use-change", "land-use-and-land-cover-change", "urban-planning", "shared-socioeconomic-pathways"]
+    },
+    {
+      "id": "heat",
+      "en": "Urban heat & cooling",
+      "zh": "城市高温与降温",
+      "color": "#eb6834",
+      "signature": ["urban-heat-island", "land-surface-temperature", "climate-change-adaptation", "climate-change", "impervious-surfaces"]
+    },
+    {
+      "id": "biodiversity",
+      "en": "Urban biodiversity & green space",
+      "zh": "城市生物多样性与绿地",
+      "color": "#2a78d6",
+      "signature": ["urban-green-space", "ecosystem-services", "urban-biodiversity", "biodiversity-conservation", "urban-rural-gradient"]
+    },
+    {
+      "id": "air",
+      "en": "Air pollution & dust",
+      "zh": "空气污染与扬尘",
+      "color": "#d55181",
+      "signature": ["pm2-5", "pm10", "vehicle-emissions", "dust-storms", "aerosol-optical-depth"]
+    },
+    {
+      "id": "remote-sensing",
+      "en": "Image registration",
+      "zh": "图像配准",
+      "color": "#0d366b",
+      "signature": ["image-registration", "feature-matching", "remote-sensing-image-registration"]
+    }
+  ],
+  "fallbackColors": ["#4a3aa7", "#8e44ad"]
+}

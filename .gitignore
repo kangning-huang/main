@@ -49,3 +49,6 @@ out/
 
 # OpenAlex citing-work cache for scripts/influence (local/CI only; never committed)
 /.cache/
+
+# Local constellation embedding venv (never commit)
+.venv-constellation/
