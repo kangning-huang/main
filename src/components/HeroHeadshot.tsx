@@ -8,14 +8,19 @@ const ALT = {
 };
 
 // Processed by scripts/headshot/process.py — see docs/headshot/TREATMENT.md.
-const SIZE = { w: 160, h: 160 } as const;
-const BASE = "/headshot/headshot-square";
+const SIZE = { w: 320, h: 400 } as const;
+const BASE = "/headshot/headshot-portrait";
 
 export default function HeroHeadshot() {
   const { language } = useLanguage();
   const set = (ext: string) => `${BASE}-1x.${ext} 1x, ${BASE}-2x.${ext} 2x`;
   return (
-    <div className="shrink-0 rounded-full bg-gradient-to-br from-teal to-teal/40 p-[3px] shadow-[0_18px_40px_-16px_rgba(0,0,0,0.8)]">
+    <figure className="relative w-36 shrink-0 sm:w-44 md:w-64 lg:w-80">
+      {/* Offset teal frame behind the photo */}
+      <div
+        aria-hidden
+        className="absolute inset-0 translate-x-3 translate-y-3 rounded-2xl border border-teal/70 md:translate-x-4 md:translate-y-4"
+      />
       <picture>
         <source type="image/avif" srcSet={set("avif")} />
         <source type="image/webp" srcSet={set("webp")} />
@@ -27,9 +32,9 @@ export default function HeroHeadshot() {
           alt={ALT[language]}
           fetchPriority="high"
           decoding="async"
-          className="block h-28 w-28 rounded-full border-[3px] border-ink object-cover md:h-36 md:w-36"
+          className="relative block aspect-[4/5] h-auto w-full rounded-2xl object-cover shadow-[0_24px_60px_-20px_rgba(0,0,0,0.75)] ring-1 ring-paper/15"
         />
       </picture>
-    </div>
+    </figure>
   );
 }
