@@ -30,7 +30,7 @@ import { useReachLens } from "./ReachLens";
 
 const fmt = (n: number) => n.toLocaleString("en-US");
 const pctOf = (a: number, b: number) => (b > 0 ? Math.round((100 * a) / b) : 0);
-/** Gap between the shelf and the field box, px (the box's mt-3). */
+/** Gap between the shelf and the field box, px. */
 const FIELD_GAP = 12;
 /** A hovered square's card waits this long before closing, so the pointer can reach its links. */
 const CLOSE_DELAY = 180;
@@ -390,10 +390,12 @@ export default function FieldShelf({ vizToggle }: { vizToggle: ReactNode }) {
     });
   }, [ready, pinP, pinI, view]);
 
-  // Details for a square pinned from the URL; the small Lead payload is fetched as soon as Lead is chosen.
+  // Details for a square pinned from the URL, or for a search still typed in after a lens switch; the
+  // small Lead payload is fetched as soon as Lead is chosen.
+  const searching = query.trim().length >= 2;
   useEffect(() => {
-    if (pinI !== null || lens === "lead") load();
-  }, [pinI, lens, load]);
+    if (pinI !== null || searching || lens === "lead") load();
+  }, [pinI, searching, lens, load]);
 
   useEffect(
     () => () => {
@@ -403,7 +405,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle: ReactNode }) {
   );
 
   const lit = useMemo(() => (activeP === null ? null : maskOf(view, (i) => view.squares[i].papers.includes(activeP))), [view, activeP]);
-  const hitList = useMemo(() => (tips && query.trim().length >= 2 ? searchSquares(view, tips, query) : null), [view, tips, query]);
+  const hitList = useMemo(() => (tips && searching ? searchSquares(view, tips, query) : null), [view, tips, query, searching]);
   const hits = useMemo(() => {
     if (!hitList) return null;
     const m = new Uint8Array(view.squares.length);
