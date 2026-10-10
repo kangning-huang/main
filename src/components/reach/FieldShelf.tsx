@@ -216,7 +216,12 @@ function FieldShelfLegend({ view }: { view: FieldShelfView }) {
   );
 }
 
-/** Two or three shelf papers worth lighting first, from the data (largest lead paper, largest overall, farthest reach). */
+/**
+ * Two or three shelf papers worth lighting first, from the data: the largest lead paper, the largest
+ * overall, and the lead paper (≥ 30 citers) whose citers sit outside the home topics most often. Only
+ * lead papers can "travel": the home topics are their own, while a co-authored paper in another field
+ * (dust, snow) is outside by definition.
+ */
 function worthALook(view: FieldShelfView, zh: boolean) {
   const items = view.shelf.items.map((it) => it.p).filter((p) => fieldShelfPapers[p].citing > 0);
   const out: { p: number; title: string; body: string }[] = [];
@@ -236,7 +241,7 @@ function worthALook(view: FieldShelfView, zh: boolean) {
   add(byCiting[0], zh ? "书架上最大的一本" : "Largest on the shelf", (x) =>
     zh ? `${x.short}（${x.lens === "lead" ? "第一/通讯作者" : "合作"}）：${fmt(x.citing)} 篇施引。` : `${x.short} (${x.lens === "lead" ? "lead" : "co-authored"}): ${fmt(x.citing)} citing works.`
   );
-  const far = items.filter((p) => fieldShelfPapers[p].citing >= 30).sort((a, b) => fieldShelfPapers[b].outside / fieldShelfPapers[b].citing - fieldShelfPapers[a].outside / fieldShelfPapers[a].citing)[0];
+  const far = items.filter((p) => fieldShelfPapers[p].lens === "lead" && fieldShelfPapers[p].citing >= 30).sort((a, b) => fieldShelfPapers[b].outside / fieldShelfPapers[b].citing - fieldShelfPapers[a].outside / fieldShelfPapers[a].citing)[0];
   add(far, zh ? "走得最远" : "Travels farthest", (x) =>
     zh
       ? `${x.short}：${fmt(x.citing)} 篇施引中 ${fmt(x.outside)} 篇落在本人主题之外。`
