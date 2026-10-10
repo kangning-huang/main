@@ -3,14 +3,17 @@
  * A, beeswarm rows (scripts/influence/build-reach-beeswarm.mjs → reach-beeswarm.json), and
  * C, a keyword co-occurrence map (scripts/influence/build-reach-clusters.mjs → reach-clusters.json).
  * Counts, themes and distances stay in ripple.json; these files hold positions and pair counts.
- * The fourth preview, the Constellation map, has its own data: src/lib/constellation.ts.
+ * The fourth preview, the Constellation map, has its own data: src/lib/constellation.ts; the fifth,
+ * Field & Shelf, too: src/lib/field-shelf.ts.
  */
 import beeswarmData from "@/data/reach-beeswarm.json";
 import clustersData from "@/data/reach-clusters.json";
 import type { ReachLens } from "@/lib/influence";
 
-export type ReachViz = "ripple" | "beeswarm" | "clusters" | "constellation";
-export const REACH_VIZ: ReachViz[] = ["ripple", "beeswarm", "clusters", "constellation"];
+export type ReachViz = "ripple" | "beeswarm" | "clusters" | "constellation" | "field-shelf";
+export const REACH_VIZ: ReachViz[] = ["ripple", "beeswarm", "clusters", "constellation", "field-shelf"];
+/** The view /reach opens on without ?viz. Preview branch preview/reach-field-shelf only: Ripple on the live site. */
+export const DEFAULT_VIZ: ReachViz = "field-shelf";
 
 /** A resting label: text anchored at (x, y), optional leader [x1, y1, x2, y2] and inline callout badge. */
 export interface AltLabel {

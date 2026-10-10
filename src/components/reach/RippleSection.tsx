@@ -3,12 +3,13 @@
 import { useEffect, useState } from "react";
 import T from "@/components/T";
 import { useLanguage } from "@/lib/language-context";
-import { REACH_VIZ, getBeeswarm, getClusters, type ReachViz } from "@/lib/reach-alt";
+import { DEFAULT_VIZ, REACH_VIZ, getBeeswarm, getClusters, type ReachViz } from "@/lib/reach-alt";
 import { getRipple, sameFocus, type RippleFocus, type RippleWeight } from "@/lib/ripple";
 import { getConstellation, restDrift, sameConstellationFocus, type ConstellationFocus, type ConstellationView } from "@/lib/constellation";
 import { readQuery, updateQuery } from "@/lib/url-state";
 import ConstellationMap from "./ConstellationMap";
 import ConstellationPhone from "./ConstellationPhone";
+import FieldShelf from "./FieldShelf";
 import { ConstellationCallouts, ConstellationDetails, ConstellationLegend, ConstellationReadingGuide, ConstellationTable, constellationCallouts } from "./ConstellationPanel";
 import ReachBeeswarm from "./ReachBeeswarm";
 import ReachClusters, { ClusterPartners } from "./ReachClusters";
@@ -20,12 +21,14 @@ import { RippleCallouts, RippleDetails, RippleLegend, RippleReadingGuide, callou
 
 const fmt = (n: number) => n.toLocaleString("en-US");
 
-// Preview branches only (preview/reach-viz-alt, preview/reach-constellation): alternative views behind a toggle, Ripple stays the default.
+// Preview branches only (preview/reach-viz-alt, preview/reach-constellation, preview/reach-field-shelf): alternative views behind a
+// toggle. Ripple is the default on the earlier previews; this branch opens on Field & Shelf (DEFAULT_VIZ).
 const VIZ_NAMES: Record<ReachViz, { en: string; zh: string; kicker: { en: string; zh: string } }> = {
   ripple: { en: "Ripple", zh: "涟漪图", kicker: { en: "Ripple map", zh: "涟漪图" } },
   beeswarm: { en: "Beeswarm (A)", zh: "蜂群图 (A)", kicker: { en: "Beeswarm · reach by theme", zh: "蜂群图 · 分主题距离" } },
   clusters: { en: "Clusters (C)", zh: "聚类图 (C)", kicker: { en: "Clusters · keyword map", zh: "聚类图 · 关键词关联" } },
   constellation: { en: "Constellation", zh: "星座图", kicker: { en: "Constellation · vocabulary map", zh: "星座图 · 词汇地图" } },
+  "field-shelf": { en: "Field & Shelf", zh: "田野与书架", kicker: { en: "Field & Shelf · one square per citing work", zh: "田野与书架 · 每篇施引一个方块" } },
 };
 
 /** A Constellation focus that exists (and is drawn) in this lens, else null. */
@@ -36,7 +39,7 @@ function validConstellation(view: ConstellationView, f: ConstellationFocus): Con
   return view.regions.some((r) => r.id === f.id && r.keywords > 0) ? f : null;
 }
 
-/** Section 01 of /reach: the Ripple map (circle ≥ 720 px, strip below), or a preview alternative. */
+/** Section 01 of /reach: the Ripple map (circle ≥ 720 px, strip below), or a preview alternative (Field & Shelf has its own shell). */
 export default function RippleSection() {
   const { lens } = useReachLens();
   const { language } = useLanguage();
@@ -45,7 +48,7 @@ export default function RippleSection() {
   const clusters = getClusters(lens);
   const beeswarm = getBeeswarm(lens);
   const cview = getConstellation(lens);
-  const [viz, setViz] = useState<ReachViz>("ripple");
+  const [viz, setViz] = useState<ReachViz>(DEFAULT_VIZ);
   const [weight, setWeight] = useState<RippleWeight>("absolute");
   const [selected, setSelected] = useState<RippleFocus>(null);
   const [hovered, setHovered] = useState<RippleFocus>(null);
@@ -90,19 +93,23 @@ export default function RippleSection() {
   const cSelKind = cSel?.kind ?? null;
   const cSelId = cSel?.id ?? null;
   const isConstellation = viz === "constellation";
+  const isFieldShelf = viz === "field-shelf";
 
   useEffect(() => {
     if (!ready) return;
+    // Field & Shelf keeps its own ?shelf= / ?fs= and has no themes, keywords or weighting.
+    const ripple = !isConstellation && !isFieldShelf;
     updateQuery({
-      viz: viz === "ripple" ? null : viz,
-      theme: !isConstellation && selKind === "theme" ? selId : null,
-      kw: isConstellation ? (cSelKind === "keyword" ? cSelId : null) : selKind === "keyword" ? selId : null,
+      viz: viz === DEFAULT_VIZ ? null : viz,
+      theme: ripple && selKind === "theme" ? selId : null,
+      kw: isConstellation ? (cSelKind === "keyword" ? cSelId : null) : ripple && selKind === "keyword" ? selId : null,
       paper: isConstellation && cSelKind === "paper" ? cSelId : null,
       region: isConstellation && cSelKind === "region" ? cSelId : null,
       drift: isConstellation && allDrift ? "all" : null,
-      weight: weight === "perYear" ? "perYear" : null,
+      weight: !isFieldShelf && weight === "perYear" ? "perYear" : null,
+      ...(isFieldShelf ? {} : { shelf: null, fs: null }),
     });
-  }, [ready, viz, isConstellation, selKind, selId, cSelKind, cSelId, allDrift, weight]);
+  }, [ready, viz, isConstellation, isFieldShelf, selKind, selId, cSelKind, cSelId, allDrift, weight]);
 
   const calloutRank = new Map(view.callouts.map((c, i) => [c.keyword, i + 1]));
   const select = (f: RippleFocus) => {
@@ -174,20 +181,26 @@ export default function RippleSection() {
       on ? "border-ink text-ink" : "border-rule text-ink-muted hover:border-ink-faint hover:text-ink"
     }`;
 
+  const vizToggle = (
+    <div className="flex flex-wrap items-center gap-2">
+      <div className="flex w-fit flex-wrap rounded-[1.25rem] border border-dashed border-ember p-0.5 text-sm" role="group" aria-label={zh ? "视图（预览）" : "View (preview)"}>
+        {REACH_VIZ.map((v) => (
+          <button key={v} type="button" aria-pressed={viz === v} onClick={() => switchViz(v)} className={pill(viz === v)}>
+            {zh ? VIZ_NAMES[v].zh : VIZ_NAMES[v].en}
+          </button>
+        ))}
+      </div>
+      <span className="text-[11px] uppercase tracking-[0.12em] text-ember-dark">
+        <T en="Preview" zh="预览" />
+      </span>
+    </div>
+  );
+
+  if (isFieldShelf) return <FieldShelf vizToggle={vizToggle} />;
+
   const controls = (
     <div className="flex flex-col gap-3">
-      <div className="flex flex-wrap items-center gap-2">
-        <div className="flex w-fit flex-wrap rounded-[1.25rem] border border-dashed border-ember p-0.5 text-sm" role="group" aria-label={zh ? "视图（预览）" : "View (preview)"}>
-          {REACH_VIZ.map((v) => (
-            <button key={v} type="button" aria-pressed={viz === v} onClick={() => switchViz(v)} className={pill(viz === v)}>
-              {zh ? VIZ_NAMES[v].zh : VIZ_NAMES[v].en}
-            </button>
-          ))}
-        </div>
-        <span className="text-[11px] uppercase tracking-[0.12em] text-ember-dark">
-          <T en="Preview" zh="预览" />
-        </span>
-      </div>
+      {vizToggle}
       <div className="flex flex-wrap items-center gap-2">
         <div className="flex w-fit rounded-full border border-rule p-0.5 text-sm" role="group" aria-label={zh ? "权重" : "Weighting"}>
           <button type="button" aria-pressed={weight === "absolute"} onClick={() => setWeight("absolute")} className={pill(weight === "absolute")}>
