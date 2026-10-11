@@ -152,7 +152,7 @@ export default function ReachFlowChart() {
             onClick={() => setMode("citesPerYear")}
             className={`rounded-full px-3 py-1 ${mode === "citesPerYear" ? "bg-ember-light text-ember-dark" : "text-ink-muted hover:text-ink"}`}
           >
-            <T en="Cites / year" zh="年化引用" />
+            <T en="Cites / year" zh="引用次数 / 年" />
           </button>
           <button
             type="button"
@@ -160,7 +160,7 @@ export default function ReachFlowChart() {
             onClick={() => setMode("absolute")}
             className={`rounded-full px-3 py-1 ${mode === "absolute" ? "bg-ember-light text-ember-dark" : "text-ink-muted hover:text-ink"}`}
           >
-            <T en="Absolute cites" zh="绝对引用" />
+            <T en="Absolute cites" zh="引用总数" />
           </button>
         </div>
       </div>
