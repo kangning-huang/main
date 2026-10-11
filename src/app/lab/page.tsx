@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { SITE } from "@/lib/constants";
-import { CURRENT_MEMBERS, ALUMNI } from "@/lib/advisees";
+import { CURRENT_MEMBERS, ALUMNI, POSTDOCS } from "@/lib/advisees";
 import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 import T from "@/components/T";
 
@@ -96,6 +96,27 @@ export default function LabPage() {
             <T en="Current members" zh="现有成员" />
           </h2>
           <div className="mt-6 grid gap-5 md:grid-cols-3">
+            {POSTDOCS.map((m) => (
+              <article key={m.name} className="flex gap-4 rounded-xl border border-rule bg-paper p-5">
+                <span
+                  aria-hidden="true"
+                  className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ember-light font-display text-lg text-ember-dark"
+                >
+                  {initials(m.name)}
+                </span>
+                <div>
+                  <h3 className="font-display text-lg text-ink">{m.name}</h3>
+                  <p className="text-xs text-ink-faint">
+                    <T en={m.roleEn} zh={m.roleZh} />
+                  </p>
+                  {m.project && m.projectZh ? (
+                    <p className="mt-2 text-sm leading-relaxed text-ink-muted">
+                      <T en={m.project} zh={m.projectZh} />
+                    </p>
+                  ) : null}
+                </div>
+              </article>
+            ))}
             {CURRENT_MEMBERS.map((m) => (
               <article key={m.name} className="flex gap-4 rounded-xl border border-rule bg-paper p-5">
                 <span
