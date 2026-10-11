@@ -4,8 +4,13 @@
 Classical operations only (Pillow): face-centred square crop, gentle levels,
 resize, encode. No generative edits.
 
+The live Scholar CDN only serves up to 256×171 (medium_photo). That file is
+byte-identical (MAE ≈ 3.5/255) to a Lanczos downscale of
+`_source/ken-panel-headshot-raw.jpg`, so we render from the full-res raw and
+keep the Scholar downloads in `_source/` for provenance.
+
 Usage:
-    python3 scripts/headshot/process.py [_source/ken-couple-headshot-user-crop.jpg]
+    python3 scripts/headshot/process.py [_source/ken-panel-headshot-raw.jpg]
 
 Writes public/headshot/headshot-square-{1x,2x}.{avif,webp,jpg}.
 See docs/headshot/TREATMENT.md.
@@ -20,36 +25,20 @@ import numpy as np
 from PIL import Image, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[2]
-SRC = (
-    Path(sys.argv[1])
-    if len(sys.argv) > 1
-    else ROOT / "_source/ken-couple-headshot-user-crop.jpg"
-)
+SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "_source/ken-panel-headshot-raw.jpg"
 OUT = ROOT / "public/headshot"
 
-# After optional center-square, use the full image.
-# (Filled at runtime once dimensions are known.)
+# Face-centred square (source pixels). Matches the prior circle hero crop.
 CROPS = {
-    "square": (0, 0, 0, 0),  # placeholder; set in main()
+    "square": (590, 135, 890, 435),  # 300 × 300
 }
 SIZES = {
     "square": {"1x": (160, 160), "2x": (300, 300)},
 }
 
 
-def center_square(img: Image.Image) -> Image.Image:
-    """If not square, center-crop to the shorter side."""
-    w, h = img.size
-    if w == h:
-        return img
-    side = min(w, h)
-    left = (w - side) // 2
-    top = (h - side) // 2
-    return img.crop((left, top, left + side, top + side))
-
-
 def gentle_grade(img: Image.Image) -> Image.Image:
-    """Light contrast + warmth only — keep natural backdrop."""
+    """Light contrast + warmth only — keep Scholar's natural backdrop."""
     a = np.asarray(img, np.float32)
     a = a * np.array([1.03, 1.0, 0.97], np.float32)  # slight warm
     a = (a - 128.0) * 1.04 + 128.0 + 2.0  # gentle contrast + lift
@@ -58,16 +47,12 @@ def gentle_grade(img: Image.Image) -> Image.Image:
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
+    # Remove prior editorial portrait exports so they are not shipped.
     for stale in OUT.glob("headshot-portrait-*"):
         stale.unlink()
         print(f"removed {stale.relative_to(ROOT)}")
 
     src = Image.open(SRC).convert("RGB")
-    src = center_square(src)
-    w, h = src.size
-    CROPS["square"] = (0, 0, w, h)
-    print(f"source square: {w}×{h} from {SRC.relative_to(ROOT)}")
-
     graded = gentle_grade(src)
 
     for name, box in CROPS.items():
