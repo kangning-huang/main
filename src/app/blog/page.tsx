@@ -58,7 +58,7 @@ export default async function BlogPage() {
           <p className="mt-2 text-ink-muted">
             <T
               en="Writing on cities, climate, autonomous vehicles, and more."
-              zh="关于城市、气候、自动驾驶等话题的写作。"
+              zh="我在这里写城市、气候和自动驾驶等话题。"
             />
           </p>
         </div>
@@ -178,7 +178,7 @@ export default async function BlogPage() {
           <p className="text-ink-muted">
             <T
               en="Posts are loading from Substack. Visit the newsletter directly:"
-              zh="文章正在从Substack加载。请直接访问："
+              zh="正在从 Substack 加载文章。你也可以直接前往 Substack 阅读。"
             />
           </p>
           <a

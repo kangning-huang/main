@@ -55,7 +55,7 @@ export default function NewsPage() {
           <p className="mt-4 text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
               en="Acceptance, in-press, and publication notes, newest first."
-              zh="论文接收、待刊与发表动态，按时间倒序排列。"
+              zh="我的论文接收、待刊和发表动态，最新消息排在前面。"
             />
           </p>
 

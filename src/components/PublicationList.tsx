@@ -9,7 +9,7 @@ type Filter = "all" | "lead";
 
 const FILTERS: { key: Filter; en: string; zh: string }[] = [
   { key: "all", en: "All", zh: "全部" },
-  { key: "lead", en: "First / last / corresponding author", zh: "第一/通讯/末位作者" },
+  { key: "lead", en: "First / last / corresponding author", zh: "第一／末位／通讯作者" },
 ];
 
 function groupByYear(pubs: Publication[]) {
@@ -95,7 +95,7 @@ export default function PublicationList({
         {shownInPress.length > 0 && (
           <section>
             <h2 className="font-display text-2xl text-ink">
-              <T en="In press" zh="即将发表" />
+              <T en="In press" zh="待刊" />
             </h2>
             <div className="mt-4 space-y-1">
               {shownInPress.map((pub) => (

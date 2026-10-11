@@ -65,7 +65,7 @@ export default function TinkeringPage() {
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
               en="Public-interest data tools I build to learn new methods."
-              zh="我为学习新方法而搭建的公益数据工具。"
+              zh="我做这些公益数据工具，也借此学习新方法。"
             />
           </p>
 

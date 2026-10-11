@@ -212,7 +212,7 @@ export default function UrbanExpansionPage() {
         <p>
           <T
             en="The projections are based on the research published in:"
-            zh="预测基于以下研究成果："
+            zh="这些预测依据以下研究成果。"
           />
         </p>
         <blockquote className="border-l-2 border-ember pl-4 italic text-ink-muted">

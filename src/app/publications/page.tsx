@@ -96,7 +96,7 @@ export default async function PublicationsPage() {
           rel="noopener noreferrer"
           className="inline-flex items-center rounded-full border border-rule px-4 py-2 text-sm font-medium text-ink-muted transition-all hover:border-ember hover:text-ember"
         >
-          <T en="View on Google Scholar" zh="在谷歌学术上查看" /> &#8599;
+          <T en="View on Google Scholar" zh="查看谷歌学术" /> &#8599;
         </a>
       </div>
 

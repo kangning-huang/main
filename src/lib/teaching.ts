@@ -140,7 +140,7 @@ export const SIGNATURE_METHODS: { title: Bilingual; body: Bilingual }[] = [
     },
   },
   {
-    title: { en: "IPAT lab", zh: "IPAT 定量实验" },
+    title: { en: "IPAT lab", zh: "IPAT 实验" },
     body: {
       en: "In pairs, students compute emissions for two countries and project them to 2050 under three scenarios. Their results become evidence for the population-and-consumption debate.",
       zh: "学生两人一组，计算两个国家的排放量，再按三种情景推算到 2050 年。计算结果直接用于“人口与消费”辩论，作为论证证据。",
@@ -154,7 +154,7 @@ export const SIGNATURE_METHODS: { title: Bilingual; body: Bilingual }[] = [
     },
   },
   {
-    title: { en: "Chart openers & one-minute closers", zh: "图表开场与一分钟收尾" },
+    title: { en: "Chart openers & one-minute closers", zh: "图表开场，一分钟收尾" },
     body: {
       en: "Each class opens with an unlabeled environmental chart to guess, reveal, and critique, and closes with a one-sentence statement of where you now stand on the motion.",
       zh: "每节课先看一张隐去标注的环境图表，猜它讲了什么，揭晓后再一起评析。下课前，每人用一句话写下自己对辩题的当前立场，以及是什么让自己改变了看法。",
