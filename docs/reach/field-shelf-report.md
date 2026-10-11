@@ -36,7 +36,7 @@ Every number below is recounted from the cached OpenAlex citing lists. This file
 
 ## Headlines
 
-- **All:** 3,224 works cite this research. 152 are themselves cited ≥100 times — 2 of them ≥1,000. — 3,224 篇文献引用了这些研究。其中 152 篇自身被引 ≥100 次，2 篇 ≥1,000 次。
+- **All:** 3,224 works cite my research. 152 are themselves cited ≥100 times — 2 of them ≥1,000. — 3,224 篇文献引用了本人的研究。其中 152 篇自身被引 ≥100 次，2 篇 ≥1,000 次。
 - **Lead:** 1,419 works cite Ken's 15 lead-author papers. 80 are themselves cited ≥100 times. — 1,419 篇文献引用了本人的 15 篇第一/通讯作者论文。其中 80 篇自身被引 ≥100 次。
 
 ## Fixed home topics (H_lead): 28 topics
