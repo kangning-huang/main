@@ -48,7 +48,7 @@ export const RESEARCH_INTERESTS = [
 ];
 
 export const ABOUT_TEXT = [
-  "I study cities as physical systems at NYU Shanghai, where I lead the CLimate and Urban Environments (CLUEs) Lab. Before that I was an Advanced Study Program Postdoctoral Fellow at NCAR; I earned my PhD at the Yale School of the Environment in 2020.",
+  "I study cities as complex socio-ecological systems, the outcome of interactions between human and natural systems, at NYU Shanghai, where I lead the CLimate and Urban Environments (CLUEs) Lab. Before that I was an Advanced Study Program Postdoctoral Fellow at NCAR; I earned my PhD at the Yale School of the Environment in 2020.",
   "Urbanization and climate change land on the same people at once. We build global urban-expansion scenarios to ask how much land cities will claim by mid-century, how that growth warms and floods them, and which interventions change the outcome.",
   "The work covers urban expansion modeling, heat-island dynamics, adaptation trade-offs, and urban scaling. It has been funded by NASA, NSF, Google, Shanghai Municipal Government and other sponsors, and covered by Yale News, Scientific American, and E&E News.",
 ];

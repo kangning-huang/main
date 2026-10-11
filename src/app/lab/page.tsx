@@ -86,8 +86,8 @@ export default function LabPage() {
           </p>
           <p className="mt-5 max-w-3xl text-[15px] leading-[1.75] text-ink-muted animate-fade-up delay-1">
             <T
-              en="The CLUEs (CLimate and Urban Environments) Lab at NYU Shanghai studies cities as physical systems. We combine satellite data, climate models and causal inference across thousands of cities to ask how the amount, height and arrangement of what we build shapes who overheats, who floods, and how much material a city consumes."
-              zh="上海纽约大学CLUEs（CLimate and Urban Environments）实验室把城市当作物理系统来研究。我们结合卫星数据、气候模型与因果推断，对全球数千座城市开展分析，探究建成环境的总量、高度与布局如何决定谁会遭受高温、谁会被洪水侵袭，以及一座城市要消耗多少材料。"
+              en="The CLUEs (CLimate and Urban Environments) Lab at NYU Shanghai studies cities as complex socio-ecological systems, the outcome of interactions between human and natural systems. We combine satellite data, climate models and causal inference across thousands of cities to ask how the amount, height and arrangement of what we build shapes who overheats, who floods, and how much material a city consumes."
+              zh="上海纽约大学CLUEs（CLimate and Urban Environments）实验室把城市当作复杂的社会-生态系统来研究——它产生于人与自然系统的相互作用。我们结合卫星数据、气候模型与因果推断，对全球数千座城市开展分析，探究建成环境的总量、高度与布局如何决定谁会遭受高温、谁会被洪水侵袭，以及一座城市要消耗多少材料。"
             />
           </p>
 
