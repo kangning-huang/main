@@ -30,14 +30,14 @@ export function shelfMetrics(view: FieldShelfView) {
 
 /** "ERL 2019 · 392 citing", or "Sci Rep 2026 · no citing works yet". */
 export function paperReadout(p: FieldShelfPaper, zh: boolean) {
-  if (p.citing === 0) return zh ? `${p.label} · ${p.year} · 暂无施引文献` : `${p.label} · ${p.year} · no citing works yet`;
-  return zh ? `${p.label} · ${fmt(p.citing)} 篇施引文献` : `${p.label} · ${fmt(p.citing)} citing`;
+  if (p.citing === 0) return zh ? `${p.label} · ${p.year} · 暂无文献引用` : `${p.label} · ${p.year} · no citing works yet`;
+  return zh ? `${p.label} · ${fmt(p.citing)} 篇文献引用` : `${p.label} · ${fmt(p.citing)} citing`;
 }
 
 export function paperAria(p: FieldShelfPaper, zh: boolean) {
-  const role = p.lens === "lead" ? (zh ? "第一/通讯作者" : "lead author") : zh ? "合作" : "co-authored";
-  if (p.citing === 0) return zh ? `${p.short}（${role}），暂无施引文献` : `${p.short} (${role}): no citing works yet`;
-  return zh ? `${p.short}（${role}），${fmt(p.citing)} 篇施引文献` : `${p.short} (${role}): ${fmt(p.citing)} citing works`;
+  const role = p.lens === "lead" ? (zh ? "第一/末位/通讯作者" : "lead author") : zh ? "合作" : "co-authored";
+  if (p.citing === 0) return zh ? `${p.short}（${role}），暂无文献引用` : `${p.short} (${role}): no citing works yet`;
+  return zh ? `${p.short}（${role}），有 ${fmt(p.citing)} 篇文献引用它` : `${p.short} (${role}): ${fmt(p.citing)} citing works`;
 }
 
 interface Props {
@@ -141,7 +141,7 @@ export default function FieldShelfShelf({ view, active, pinned, cited, readout, 
             style={{ left: pc(x), top: m.countTop }}
             aria-hidden="true"
           >
-            {paper.citing === 0 ? (zh ? "目前为 0" : "0 yet") : fmt(paper.citing)}
+            {paper.citing === 0 ? (zh ? "暂为 0" : "0 yet") : fmt(paper.citing)}
           </span>
         );
       })}
@@ -191,7 +191,7 @@ export function PaperDetails({
       {!compact && (
         <div>
           <p className="text-[11px] uppercase tracking-[0.14em] text-ink-faint">
-            {theme ? (zh ? theme.zh : theme.en) : paper.theme} · {lead ? (zh ? "第一/通讯作者" : "lead author") : zh ? "合作论文" : "co-authored"}
+            {theme ? (zh ? theme.zh : theme.en) : paper.theme} · {lead ? (zh ? "第一/末位/通讯作者" : "lead author") : zh ? "合作论文" : "co-authored"}
           </p>
           <h3 className="mt-1 font-display text-2xl leading-tight text-ink">{paper.short}</h3>
           <p className="mt-1 leading-snug text-ink-muted">
@@ -210,22 +210,22 @@ export function PaperDetails({
       )}
       {paper.citing === 0 ? (
         <p className="leading-snug text-ink-muted">
-          {zh ? `发表于 ${paper.year} 年。OpenAlex 暂未收录引用它的非自引文献，因此没有方块亮起。` : `Published ${paper.year}; no non-self citing work in OpenAlex yet, so no squares light up.`}
+          {zh ? `发表于 ${paper.year} 年。OpenAlex 目前还没有收录引用它的文献（不含自引），所以没有方块亮起。` : `Published ${paper.year}; no non-self citing work in OpenAlex yet, so no squares light up.`}
         </p>
       ) : (
         <>
           <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5">
-            <dt className="text-ink-faint">{zh ? "引用这些论文的文献" : "Citing works"}</dt>
+            <dt className="text-ink-faint">{zh ? "引用它的文献" : "Citing works"}</dt>
             <dd className="tabular-nums text-ink">
               {fmt(paper.citing)} <span className="text-ink-muted">{zh ? "（不含自引）" : "(non-self)"}</span>
             </dd>
-            <dt className="text-ink-faint">{zh ? "引用它的高被引文献（≥100）" : "High-impact citers (≥100)"}</dt>
+            <dt className="text-ink-faint">{zh ? "高被引文献（≥100）" : "High-impact citers (≥100)"}</dt>
             <dd className="tabular-nums text-ink">
               {fmt(view.squares.filter((sq) => sq.papers.includes(p) && sq.citedBy >= 100).length)}
             </dd>
           </dl>
           <div>
-            <h4 className="text-xs font-medium text-ink">{zh ? "引用它且被引最多的文献" : "Most-cited works citing it"}</h4>
+            <h4 className="text-xs font-medium text-ink">{zh ? "引用它的文献中，哪些被引最多" : "Most-cited works citing it"}</h4>
             {top ? (
               <ol className="mt-1.5 space-y-2">
                 {top.map((i) => {
@@ -248,7 +248,7 @@ export function PaperDetails({
                       </a>
                       <span className="block text-xs text-ink-faint">
                         {[authorLine(tip, zh), tip.venue, tip.year].filter(Boolean).join(" · ")}
-                        {zh ? ` · 被引 ${fmt(tip.citedBy)} 次（OpenAlex）` : ` · cited by ${fmt(tip.citedBy)} (OpenAlex)`}
+                        {zh ? ` · 自身被引 ${fmt(tip.citedBy)} 次（OpenAlex）` : ` · cited by ${fmt(tip.citedBy)} (OpenAlex)`}
                       </span>
                     </li>
                   );
@@ -258,7 +258,7 @@ export function PaperDetails({
               <p className="mt-1.5 text-xs text-ink-faint">
                 {status === "error" ? (
                   <>
-                    {zh ? "列表未能加载。" : "The list did not load."}{" "}
+                    {zh ? "列表加载失败。" : "The list did not load."}{" "}
                     <button type="button" onClick={onLoad} className="text-teal hover:underline">
                       {zh ? "重试" : "Retry"}
                     </button>

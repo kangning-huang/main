@@ -203,7 +203,7 @@ function Stage({
             status={status}
             zh={zh}
             onRetry={onLoad}
-            hint={focusPinned ? undefined : zh ? "点击方块打开" : "click the square to open"}
+            hint={focusPinned ? undefined : zh ? "点击方块打开文献" : "click the square to open"}
           />
         </FieldShelfTooltip>
       )}
@@ -241,32 +241,32 @@ function FieldShelfLegend({ view }: { view: FieldShelfView }) {
       </p>
       <p className="tabular-nums">
         {zh
-          ? `高被引施引文献中，${fmt(t.ge100)} 篇自身被引 ≥100 次 · ${fmt(t.ge1000)} 篇 ≥1,000 次 · 最高 ${fmt(t.maxCitedBy)} 次。`
+          ? `引用我论文的文献中，${fmt(t.ge100)} 篇自身被引 ≥100 次 · ${fmt(t.ge1000)} 篇 ≥1,000 次 · 最高 ${fmt(t.maxCitedBy)} 次。`
           : `High-impact citers: ${fmt(t.ge100)} with ≥100 citations of their own · ${fmt(t.ge1000)} with ≥1,000 · max ${fmt(t.maxCitedBy)}.`}
       </p>
       <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5">
         <span className="flex items-center gap-1.5">
           <span className="inline-block h-3 w-2 rounded-[2px] border-[1.5px] border-ink" aria-hidden="true" />
-          {zh ? "第一作者、末位作者或通讯作者的论文" : "First / last / corresponding-author paper"}
+          {zh ? "第一/末位/通讯作者论文" : "First / last / corresponding-author paper"}
         </span>
         <span className="flex items-center gap-1.5">
           <span className="inline-block h-3 w-2 rounded-[2px] border border-rule" aria-hidden="true" />
           {zh ? "合作论文" : "Co-authored"}
         </span>
-        <span>{zh ? "书脊下的数字表示引用这篇论文的文献数，不含自引。" : "Number under a spine = its non-self citing works."}</span>
+        <span>{zh ? "书脊下的数字，是引用这篇论文的文献数，不含自引。" : "Number under a spine = its non-self citing works."}</span>
       </div>
       <p>
         {view.lens === "all"
           ? zh
-            ? `${fmt(t.citingWorks)} 个方块，每个对应一篇引用这些论文的 OpenAlex 文献。全部视角中约${fourInFive ? "五分之四" : `${Math.round(share * 100)}%`}的方块（${(share * 100).toFixed(1)}%）只引用合作论文；可切换到“第一 / 通讯作者”缩小范围。`
+            ? `图中有 ${fmt(t.citingWorks)} 个方块，每个代表一篇引用这些论文的 OpenAlex 文献。在“全部”视角下，约${fourInFive ? "五分之四" : `${Math.round(share * 100)}%`}的文献（${(share * 100).toFixed(1)}%）只引用合作论文；切换到“第一/末位/通讯作者”可以缩小范围。`
             : `${fmt(t.citingWorks)} squares — one per OpenAlex work that cites this corpus. ${fourInFive ? "About four in five" : `${Math.round(share * 100)}% of`} All squares (${(share * 100).toFixed(1)}%) cite only co-authored papers; use First / last / corresponding to narrow.`
           : zh
-            ? `${fmt(t.citingWorks)} 个方块，代表引用我的 ${t.leadPapers} 篇第一/通讯作者论文的 OpenAlex 文献，每篇一个。方块密度与“全部”视角相同，所以图更小；切换视角时，同一文献颜色不变。`
+            ? `这里的 ${fmt(t.citingWorks)} 个方块，每个代表一篇 OpenAlex 文献，引用了我担任第一、末位或通讯作者的 ${t.leadPapers} 篇论文中的至少一篇。方块密度与“全部”视角相同，数量少了，图也就小了；切换视角时，同一篇文献颜色不变。`
             : `${fmt(t.citingWorks)} squares — one per OpenAlex work citing Ken's ${t.leadPapers} first / last / corresponding-author papers. Same density as All, so the field is smaller; a work keeps its colour across lenses.`}
       </p>
       <p className="text-ink-faint">
         {zh
-          ? `被引次数直接取自 OpenAlex cited_by_count（${meta.asOf}），不编造数值。统计流程收录的各类文献都画成方块；“随机看一篇”优先选取自身被引较多的期刊论文和综述。`
+          ? `被引次数直接来自 OpenAlex cited_by_count（${meta.asOf}），没有编造数值。纳入统计的各类文献都用方块表示；“随机看一篇”优先选取自身被引较多的期刊论文和综述。`
           : `Citation counts are OpenAlex cited_by_count (${meta.asOf}), never invented. Every record type the pipeline counts is a square; “Show me one” prefers higher-cited articles and reviews.`}
       </p>
     </div>
@@ -289,16 +289,16 @@ function worthALook(view: FieldShelfView, zh: boolean) {
   const byCiting = [...items].sort((a, b) => fieldShelfPapers[b].citing - fieldShelfPapers[a].citing);
   add(
     byCiting.find((p) => fieldShelfPapers[p].lens === "lead"),
-    zh ? "被引最多的第一/通讯作者论文" : "Most-cited lead paper",
-    (x) => (zh ? `${x.short}，${fmt(x.citing)} 篇施引文献。` : `${x.short}: ${fmt(x.citing)} citing works.`)
+    zh ? "被引最多的第一/末位/通讯作者论文" : "Most-cited lead paper",
+    (x) => (zh ? `${x.short}，有 ${fmt(x.citing)} 篇文献引用它。` : `${x.short}: ${fmt(x.citing)} citing works.`)
   );
   add(byCiting[0], zh ? "书架上最大的一本" : "Largest on the shelf", (x) =>
-    zh ? `${x.short}（${x.lens === "lead" ? "第一/通讯作者" : "合作"}），${fmt(x.citing)} 篇施引文献。` : `${x.short} (${x.lens === "lead" ? "lead" : "co-authored"}): ${fmt(x.citing)} citing works.`
+    zh ? `${x.short}（${x.lens === "lead" ? "第一/末位/通讯作者" : "合作"}），有 ${fmt(x.citing)} 篇文献引用它。` : `${x.short} (${x.lens === "lead" ? "lead" : "co-authored"}): ${fmt(x.citing)} citing works.`
   );
   add(
     byCiting.find((p) => fieldShelfPapers[p].lens === "coauthor"),
     zh ? "被引最多的合作论文" : "Most-cited co-authored paper",
-    (x) => (zh ? `${x.short}，${fmt(x.citing)} 篇施引文献。` : `${x.short}: ${fmt(x.citing)} citing works.`)
+    (x) => (zh ? `${x.short}，有 ${fmt(x.citing)} 篇文献引用它。` : `${x.short}: ${fmt(x.citing)} citing works.`)
   );
   return out;
 }
@@ -346,20 +346,20 @@ function FieldShelfTable({ view, tips, status, onLoad }: { view: FieldShelfView;
     <div className="overflow-x-auto">
       {status !== "ready" && (
         <p className="mt-3 text-xs text-ink-faint">
-          {status === "error" ? (zh ? "标题未能加载，仅显示编号。" : "Titles did not load; showing ids only.") : zh ? "正在加载标题…" : "Loading titles…"}
+          {status === "error" ? (zh ? "标题加载失败，暂时只显示编号。" : "Titles did not load; showing ids only.") : zh ? "正在加载标题…" : "Loading titles…"}
         </p>
       )}
       <table className="mt-3 w-full min-w-[720px] text-left text-sm">
         <caption className="sr-only">
-          {zh ? "施引文献表列出标题、年份、发表来源、引用了我的哪些论文，以及文献自身被引次数" : "Citing works: title, year, venue, which of Ken's papers it cites, own citation count"}
+          {zh ? "这张表列出引用我论文的文献，包括标题、年份、发表来源、引用了我的哪些论文，以及它们自身的被引次数。" : "Citing works: title, year, venue, which of Ken's papers it cites, own citation count"}
         </caption>
         <thead className="text-xs text-ink-faint">
           <tr>
-            <th className="py-1 pr-3 font-normal">{zh ? "引用我的文献" : "Citing work"}</th>
+            <th className="py-1 pr-3 font-normal">{zh ? "文献" : "Citing work"}</th>
             <th className="py-1 pr-3 text-right font-normal">{zh ? "年份" : "Year"}</th>
-            <th className="py-1 pr-3 font-normal">{zh ? "出处" : "Venue"}</th>
-            <th className="py-1 pr-3 font-normal">{zh ? "引用我的论文" : "Builds on"}</th>
-            <th className="py-1 text-right font-normal">{zh ? "被引次数" : "Citations"}</th>
+            <th className="py-1 pr-3 font-normal">{zh ? "发表来源" : "Venue"}</th>
+            <th className="py-1 pr-3 font-normal">{zh ? "引用哪些论文" : "Builds on"}</th>
+            <th className="py-1 text-right font-normal">{zh ? "自身被引次数" : "Citations"}</th>
           </tr>
         </thead>
         <tbody>
@@ -501,7 +501,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
         setPinSq(v.squares[i].id);
         say(i, t);
       })
-      .catch(() => setAnnounce(zh ? "引用我研究的文献列表未能加载。" : "The list of citing works did not load."));
+      .catch(() => setAnnounce(zh ? "引用我论文的文献列表加载失败。" : "The list of citing works did not load."));
   };
   const reset = () => {
     keepCard();
@@ -517,14 +517,14 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
 
   const N = view.totals.citingWorks;
   const canvasLabel = zh
-    ? `${fmt(N)} 个方块，每个代表一篇施引文献；颜色表示文献自身被引次数，越靠近中心，被引越多。其中 ${fmt(view.totals.ge100)} 篇被引 ≥100 次，${fmt(view.totals.ge1000)} 篇 ≥1,000 次。下表列出全部文献。`
+    ? `图中有 ${fmt(N)} 个方块，每个代表一篇引用我论文的文献。颜色表示这篇文献自身被引多少次；越靠近中心，被引越多。其中 ${fmt(view.totals.ge100)} 篇被引 ≥100 次，${fmt(view.totals.ge1000)} 篇 ≥1,000 次。下表可以查看全部文献。`
     : `${fmt(N)} squares, one per citing work; colour is each work's own citation count, centre = higher impact. ${fmt(view.totals.ge100)} with ≥100 citations, ${fmt(view.totals.ge1000)} with ≥1,000. The table below lists them all.`;
   const readout =
     activeP !== null ? (
       <span className="font-medium text-ink">{paperReadout(fieldShelfPapers[activeP], zh)}</span>
     ) : focusI !== null ? null : (
       <span className="text-ink-faint">
-        {zh ? "悬停在论文上，点亮引用它的文献并显示全部连线；悬停在方块上查看详情" : "Hover a paper to light its citers and draw every link, or a square for its details"}
+        {zh ? "把鼠标移到书架上的论文，就会点亮引用它的文献，并画出全部连线；移到方块上，可以查看文献详情" : "Hover a paper to light its citers and draw every link, or a square for its details"}
       </span>
     );
   const callouts = worthALook(view, zh);
@@ -537,13 +537,13 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
     >
       <div className="grid gap-x-8 gap-y-5 lg:grid-cols-[minmax(0,1fr)_340px] lg:grid-rows-[auto_auto_1fr]">
         <header className="lg:col-start-2 lg:row-start-1">
-          <p className="text-xs uppercase tracking-[0.14em] text-ink-faint">01 · {zh ? "领域与书架 · 每个方块代表一篇引用我研究的文献" : "Field & Shelf · one square per citing work"}</p>
+          <p className="text-xs uppercase tracking-[0.14em] text-ink-faint">01 · {zh ? "领域与书架 · 每个方块是一篇引用我论文的文献" : "Field & Shelf · one square per citing work"}</p>
           <h2 id="field-shelf-heading" className="mt-2 font-display text-3xl leading-tight text-ink md:text-[2.25rem] lg:text-[2rem]">
             {zh ? view.headline.zh : view.headline.en}
           </h2>
           <p className="mt-2 text-sm text-ink-muted">
             {zh
-              ? `${fmt(view.totals.ge100)} 篇施引文献自身被引 ≥100 次 · ${fmt(view.totals.ge1000)} 篇 ≥1,000 次 · OpenAlex，${fieldShelfMeta.asOf} · 已剔除自引`
+              ? `引用我论文的文献中，${fmt(view.totals.ge100)} 篇自身被引 ≥100 次 · ${fmt(view.totals.ge1000)} 篇 ≥1,000 次 · OpenAlex，${fieldShelfMeta.asOf} · 已剔除自引`
               : `${fmt(view.totals.ge100)} citing works with ≥100 citations of their own · ${fmt(view.totals.ge1000)} with ≥1,000 · OpenAlex, ${fieldShelfMeta.asOf} · self-citations removed`}
           </p>
         </header>
@@ -610,7 +610,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
               <PaperDetails view={view} p={activeP} tips={tips} status={status} onLoad={load} onPreview={hoverSquare} />
               {pinP !== null && (
                 <button type="button" onClick={() => pinPaperTo(null)} className="mt-4 text-xs text-teal hover:text-ember">
-                  <T en="← Back to the whole field (Esc)" zh="← 返回全图（Esc）" />
+                  <T en="← Back to the whole field (Esc)" zh="← 返回领域全图（Esc）" />
                 </button>
               )}
             </>
@@ -655,7 +655,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
 
       <details className="mt-6 text-sm" onToggle={(e) => setTableOpen(e.currentTarget.open)}>
         <summary className="cursor-pointer text-ink-muted hover:text-ink">
-          <T en="Show as table" zh="用表格显示" />
+          <T en="Show as table" zh="查看表格" />
         </summary>
         {tableOpen ? (
           <FieldShelfTable view={view} tips={tips} status={status} onLoad={load} />
