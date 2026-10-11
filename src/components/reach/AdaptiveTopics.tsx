@@ -88,7 +88,7 @@ export default function AdaptiveTopics() {
         <p className="mt-4 text-sm text-ink-faint">
           <T
             en={`Plus a long tail of smaller research areas: ${other.citingWorks} citing works (${other.share}%). Named domains for that tail are in the flow chart above.`}
-            zh={`其余规模较小的研究领域合计 ${other.citingWorks} 篇施引文献（${other.share}%）。这些领域的具体分组见上方流向图。`}
+            zh={`其余规模较小的领域，共有 ${other.citingWorks} 篇文献引用了我的研究，占 ${other.share}%。具体分组见上方流向图。`}
           />
         </p>
       )}
@@ -96,7 +96,7 @@ export default function AdaptiveTopics() {
       <p className="mt-4 text-xs text-ink-faint">
         <T
           en="Keyword chips come from citing works (OpenAlex), not from Ken's own papers. Topic labels are automatic and can be noisy — treat single-digit cards as indicative."
-          zh="关键词取自 OpenAlex 施引文献，不取自我的论文。主题标签自动生成，可能不准确；文献数只有个位数的卡片仅供参考。"
+          zh="关键词取自 OpenAlex 中引用我研究的文献，不取自我的论文。主题标签自动生成，可能不准确；文献数只有个位数的卡片，仅供参考。"
         />
       </p>
     </div>

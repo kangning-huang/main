@@ -78,7 +78,7 @@ export default function FieldsFlow() {
   if (themeNodesRaw.length === 0 || fieldNodesRaw.length === 0) {
     return (
       <p className="text-sm text-ink-muted">
-        <T en="Not enough field flow data for this view." zh="领域流向数据不足，无法显示此图。" />
+        <T en="Not enough field flow data for this view." zh="当前视角的领域流向数据不足，无法显示此图。" />
       </p>
     );
   }
@@ -179,7 +179,7 @@ export default function FieldsFlow() {
         <figcaption className="mt-2 text-xs text-ink-faint">
           <T
             en="Ribbon width = citing works (self-citations removed). A work citing two themes counts once per theme."
-            zh="条带宽度表示施引文献数，已剔除自引。一篇文献若引用两个主题，在每个主题下各计一次。"
+            zh="条带宽度表示引用我研究的文献数，已剔除自引。一篇文献如果引用了两个主题下的论文，就在每个主题下各计一次。"
           />
         </figcaption>
       </figure>
@@ -192,7 +192,7 @@ export default function FieldsFlow() {
           <thead className="text-xs text-ink-faint">
             <tr>
               <th className="py-1 pr-4 font-normal"><T en="Field" zh="领域" /></th>
-              <th className="py-1 pr-4 text-right font-normal"><T en="Citing works" zh="引用这些论文的文献" /></th>
+              <th className="py-1 pr-4 text-right font-normal"><T en="Citing works" zh="引用文献" /></th>
               <th className="py-1 font-normal"><T en="Top subfields" zh="主要子领域" /></th>
             </tr>
           </thead>
