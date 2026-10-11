@@ -9,27 +9,27 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
   "Nested Scaling of City Mass": {
     title: "全球城市建成质量的嵌套标度规律",
     description:
-      "关于全球城市建成质量嵌套规模经济论文的配套交互式可视化。探索3000多个城市中城市人口与建成环境之间的非线性标度关系。",
+      "城市人口增加时，建成质量怎样变化？这个工具展示3000多个城市的人口与建成质量之间的非线性标度关系，以及其中的嵌套规模经济。",
   },
   "Urban Expansion 2050": {
     title: "2050年全球城市扩张",
     description:
-      "到2050年的全球城市用地扩张预测。基于2019年发表在Environmental Research Letters上的研究，数据可在WRI Resource Watch上获取。",
+      "这个工具展示全球城市用地到2050年的扩张预测，依据是2019年发表于 Environmental Research Letters 的研究；数据也可在 WRI Resource Watch 获取。",
   },
   "3D Urban Flood Risk": {
     title: "三维城市洪水风险",
     description:
-      "将建筑高度和防护标准纳入全球洪水风险评估论文的配套交互式网页应用。在全球范围内可视化城市三维洪水暴露。",
+      "这个网页工具展示全球城市三维洪水暴露，评估同时考虑建筑高度和防洪标准。",
   },
   "Urban Renewal Cooling DID": {
-    title: "城市更新降温的因果分析",
+    title: "城市更新降温的双重差分因果分析",
     description:
-      "关于非正规住区拆除与城市降温之间因果关系论文的关键结果交互式可视化。采用双重差分方法揭示城市更新的降温效应。",
+      "非正规住区拆除会让城市降温吗？这个工具展示双重差分分析的关键结果，说明城市更新对降温的因果影响。",
   },
   "URBANMOD-ZIPF": {
     title: "URBANMOD-ZIPF",
     description:
-      "保持齐普夫定律的全球尺度城市用地扩张模型。用于模拟不同情景下真实城市增长模式的开源工具。",
+      "这个开源模型模拟不同情景下全球城市用地扩张，保持齐普夫定律，呈现贴近现实的城市增长模式。",
   },
 };
 
@@ -84,7 +84,7 @@ export default function ProjectsPage() {
         <p className="mt-2 text-ink-muted">
           <T
             en="Tools and maps from the papers."
-            zh="研究工具、交互式可视化和网络应用。"
+            zh="我把论文里的研究结果做成了工具和地图。"
           />
         </p>
 
@@ -94,7 +94,7 @@ export default function ProjectsPage() {
         <p className="mt-1 text-sm text-ink-muted">
           <T
             en="Maps and explorers tied to specific results."
-            zh="配套研究论文的交互式可视化和工具。"
+            zh="这些地图和交互工具展示论文中的具体研究结果。"
           />
         </p>
         <ProjectGrid projects={PROJECTS.filter((p) => p.category === "academic")} />
