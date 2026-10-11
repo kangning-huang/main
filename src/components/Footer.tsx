@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { SITE, LINKS } from "@/lib/constants";
 import T from "./T";
+import FooterWeChatNote from "./FooterWeChatNote";
 
 const SITE_LINKS = [
   { en: "Atlas", zh: "图集", href: "/atlas" },
@@ -47,6 +48,7 @@ export default function Footer() {
             >
               {SITE.email}
             </a>
+            <FooterWeChatNote />
           </div>
 
           <div className="flex flex-col gap-3">
