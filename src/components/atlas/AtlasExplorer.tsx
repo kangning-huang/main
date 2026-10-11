@@ -29,7 +29,6 @@ const SUGGESTED = ["lagos", "shanghai", "new-york", "jakarta", "nairobi"];
 export default function AtlasExplorer() {
   const [points, setPoints] = useState<AtlasPoint[]>([]);
   const [meta, setMeta] = useState<AtlasPointsFile | null>(null);
-  const [land, setLand] = useState<Record<string, unknown> | null>(null);
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [city, setCity] = useState<CityDetail | null>(null);
   const [loadingCity, setLoadingCity] = useState(false);
@@ -40,17 +39,12 @@ export default function AtlasExplorer() {
     let cancelled = false;
     (async () => {
       try {
-        const [ptsRes, landRes] = await Promise.all([
-          fetch("/atlas/points.json"),
-          fetch("/atlas/land-110m.json"),
-        ]);
-        if (!ptsRes.ok || !landRes.ok) throw new Error("Failed to load atlas data");
+        const ptsRes = await fetch("/atlas/points.json");
+        if (!ptsRes.ok) throw new Error("Failed to load atlas data");
         const ptsFile = (await ptsRes.json()) as AtlasPointsFile;
-        const landTopo = (await landRes.json()) as Record<string, unknown>;
         if (cancelled) return;
         setMeta(ptsFile);
         setPoints(parsePoints(ptsFile));
-        setLand(landTopo);
       } catch (e) {
         if (!cancelled) setError(e instanceof Error ? e.message : "Load error");
       }
@@ -147,7 +141,6 @@ export default function AtlasExplorer() {
             points={points}
             selectedId={selectedId}
             onSelect={select}
-            land={land as never}
           />
           <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-ink-muted">
             <span className="text-ink-faint">

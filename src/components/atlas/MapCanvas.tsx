@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useCallback } from "react";
-import { geoNaturalEarth1, geoPath, geoCircle } from "d3-geo";
-import { feature } from "topojson-client";
+import { useEffect, useRef } from "react";
+import maplibregl from "maplibre-gl";
+import "maplibre-gl/dist/maplibre-gl.css";
 import {
   paperCount,
   hasLayer,
@@ -10,30 +10,15 @@ import {
   type LayerKey,
 } from "@/lib/atlas";
 
-// Topology from world-atlas land-110m.json (Natural Earth)
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-type LandTopology = { type: string; objects: { land: any }; arcs: unknown; bbox?: number[]; transform?: unknown };
-
 type Props = {
   points: AtlasPoint[];
   selectedId: number | null;
   onSelect: (id: number) => void;
-  land: LandTopology | null;
   /** When set, only cities covered by this study are drawn in color; others stay faint grey. */
   filter?: LayerKey | null;
 };
 
-type View = {
-  scale: number;
-  translate: [number, number];
-};
-
-const DOT_R = 2.4;
-const DOT_R_SEL = 3.4;
 const GREY = "rgba(120, 110, 100, 0.4)";
-/** Angular radius (° ) of the regional frame around a selected city — enough for neighbours, not a single pin. */
-const CITY_RADIUS_DEG = 18;
-const ZOOM_MS = 480;
 
 /** Sequential paper-count palette: 1–6 distinct steps (pale teal → deep teal → ember → deep rust). Grey = 0. */
 export const PAPER_COUNT_COLORS: Record<number, string> = {
@@ -52,286 +37,282 @@ export function colorForCount(n: number): string {
   return PAPER_COUNT_COLORS[n];
 }
 
-function easeOutCubic(t: number): number {
-  return 1 - Math.pow(1 - t, 3);
-}
+/** Carto Positron (light) / Dark Matter (vector). No API key required for vector styles today. */
+export const CARTO_STYLE_LIGHT =
+  "https://basemaps.cartocdn.com/gl/positron-gl-style/style.json";
+export const CARTO_STYLE_DARK =
+  "https://basemaps.cartocdn.com/gl/dark-matter-gl-style/style.json";
+
+const ATTRIBUTION =
+  '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors © <a href="https://carto.com/attribution/" target="_blank" rel="noopener noreferrer">CARTO</a>';
+
+/** Angular half-width (°) of the regional frame around a selected city — closer than the prior 18°. */
+const CITY_RADIUS_DEG = 9;
+const WORLD_BOUNDS: [[number, number], [number, number]] = [
+  [-168, -56],
+  [188, 75],
+];
+const ZOOM_MS = 480;
+const SOURCE_ID = "atlas-cities";
+const LAYER_ID = "atlas-cities-circles";
+const LAYER_SEL_ID = "atlas-cities-selected";
 
 function prefersReducedMotion(): boolean {
   if (typeof window === "undefined") return false;
   return window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 }
 
-function worldView(w: number, h: number): View {
-  const projection = geoNaturalEarth1().fitExtent(
-    [
-      [12, 12],
-      [w - 12, h - 12],
-    ],
-    { type: "Sphere" },
+function prefersDarkBasemap(): boolean {
+  if (typeof window === "undefined") return false;
+  // Site has no dark-mode toggle yet; follow the browser / OS preference.
+  // If a site theme (html.dark / data-theme="dark") is added later, prefer that.
+  const root = document.documentElement;
+  if (root.classList.contains("dark") || root.dataset.theme === "dark") return true;
+  if (root.classList.contains("light") || root.dataset.theme === "light") return false;
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+
+function pointsToGeoJSON(
+  points: AtlasPoint[],
+  filter: LayerKey | null,
+): GeoJSON.FeatureCollection {
+  const features: GeoJSON.Feature[] = points.map((p) => {
+    const n = paperCount(p);
+    const passes = !filter || hasLayer(p, filter);
+    return {
+      type: "Feature",
+      id: p.id,
+      properties: {
+        id: p.id,
+        name: p.name,
+        papers: n,
+        color: passes ? colorForCount(n) : GREY,
+        opacity: passes && n > 0 ? 0.9 : 0.45,
+        sort: n,
+      },
+      geometry: {
+        type: "Point",
+        coordinates: [p.lon, p.lat],
+      },
+    };
+  });
+  // Higher paper counts on top.
+  features.sort(
+    (a, b) =>
+      ((a.properties?.sort as number) ?? 0) - ((b.properties?.sort as number) ?? 0),
   );
-  return {
-    scale: projection.scale(),
-    translate: projection.translate() as [number, number],
-  };
+  return { type: "FeatureCollection", features };
 }
 
-function cityView(w: number, h: number, lon: number, lat: number): View {
-  const circle = geoCircle().center([lon, lat]).radius(CITY_RADIUS_DEG)();
-  const projection = geoNaturalEarth1().fitExtent(
-    [
-      [28, 28],
-      [w - 28, h - 28],
-    ],
-    circle,
-  );
-  return {
-    scale: projection.scale(),
-    translate: projection.translate() as [number, number],
-  };
+function cityBounds(lon: number, lat: number): [[number, number], [number, number]] {
+  const cos = Math.max(0.2, Math.cos((lat * Math.PI) / 180));
+  const dLon = CITY_RADIUS_DEG / cos;
+  const dLat = CITY_RADIUS_DEG;
+  return [
+    [lon - dLon, lat - dLat],
+    [lon + dLon, lat + dLat],
+  ];
 }
 
-function lerpView(a: View, b: View, t: number): View {
-  return {
-    scale: a.scale + (b.scale - a.scale) * t,
-    translate: [
-      a.translate[0] + (b.translate[0] - a.translate[0]) * t,
-      a.translate[1] + (b.translate[1] - a.translate[1]) * t,
-    ],
-  };
-}
+function addCityLayers(map: maplibregl.Map) {
+  if (map.getLayer(LAYER_ID)) return;
 
-function makeProjection(view: View) {
-  return geoNaturalEarth1().scale(view.scale).translate(view.translate);
+  if (!map.getSource(SOURCE_ID)) {
+    map.addSource(SOURCE_ID, {
+      type: "geojson",
+      data: { type: "FeatureCollection", features: [] },
+      promoteId: "id",
+    });
+  }
+
+  map.addLayer({
+    id: LAYER_ID,
+    type: "circle",
+    source: SOURCE_ID,
+    paint: {
+      "circle-radius": 2.6,
+      "circle-color": ["get", "color"],
+      "circle-opacity": ["get", "opacity"],
+      "circle-stroke-width": 0,
+    },
+  });
+
+  map.addLayer({
+    id: LAYER_SEL_ID,
+    type: "circle",
+    source: SOURCE_ID,
+    filter: ["==", ["get", "id"], -1],
+    paint: {
+      "circle-radius": 4.2,
+      "circle-color": ["get", "color"],
+      "circle-opacity": 1,
+      "circle-stroke-width": 2,
+      "circle-stroke-color": "#281c14",
+    },
+  });
 }
 
 export default function MapCanvas({
   points,
   selectedId,
   onSelect,
-  land,
   filter = null,
 }: Props) {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
-  const projRef = useRef<ReturnType<typeof geoNaturalEarth1> | null>(null);
-  const sizeRef = useRef({ w: 0, h: 0, dpr: 1 });
-  const hitRef = useRef<AtlasPoint[]>([]);
-  const viewRef = useRef<View | null>(null);
-  const animRef = useRef<number | null>(null);
+  const mapRef = useRef<maplibregl.Map | null>(null);
+  const onSelectRef = useRef(onSelect);
   const pointsRef = useRef(points);
   const selectedIdRef = useRef(selectedId);
-  const landRef = useRef(land);
   const filterRef = useRef(filter);
+  const readyRef = useRef(false);
 
+  onSelectRef.current = onSelect;
   pointsRef.current = points;
   selectedIdRef.current = selectedId;
-  landRef.current = land;
   filterRef.current = filter;
 
-  const paintFrame = useCallback((view: View) => {
-    const canvas = canvasRef.current;
-    const wrap = wrapRef.current;
-    if (!canvas || !wrap) return;
+  // Create map once.
+  useEffect(() => {
+    const el = wrapRef.current;
+    if (!el || mapRef.current) return;
 
-    const w = wrap.clientWidth;
-    const h = Math.max(360, Math.round(w * 0.52));
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    sizeRef.current = { w, h, dpr };
+    const dark = prefersDarkBasemap();
+    const map = new maplibregl.Map({
+      container: el,
+      style: dark ? CARTO_STYLE_DARK : CARTO_STYLE_LIGHT,
+      bounds: WORLD_BOUNDS,
+      fitBoundsOptions: { padding: 12 },
+      attributionControl: false,
+      cooperativeGestures: true,
+    });
 
-    canvas.width = Math.round(w * dpr);
-    canvas.height = Math.round(h * dpr);
-    canvas.style.width = `${w}px`;
-    canvas.style.height = `${h}px`;
-
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return;
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.clearRect(0, 0, w, h);
-
-    ctx.fillStyle = "#f5f0e8";
-    ctx.fillRect(0, 0, w, h);
-
-    const projection = makeProjection(view);
-    projRef.current = projection;
-    viewRef.current = view;
-    const path = geoPath(projection, ctx);
-
-    ctx.beginPath();
-    path({ type: "Sphere" });
-    ctx.fillStyle = "#ebe4d8";
-    ctx.fill();
-
-    const landTopo = landRef.current;
-    if (landTopo) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      const landFeat = feature(landTopo as any, landTopo.objects.land);
-      ctx.beginPath();
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      path(landFeat as any);
-      ctx.fillStyle = "#fffcf7";
-      ctx.fill();
-      ctx.strokeStyle = "rgba(40, 36, 32, 0.18)";
-      ctx.lineWidth = 0.6;
-      ctx.stroke();
-    }
-
-    const pts = pointsRef.current;
-    const selId = selectedIdRef.current;
-    const layerFilter = filterRef.current;
-
-    // Sort: zero-paper first, then by paper count, so denser cities sit on top.
-    const sorted = [...pts].sort(
-      (a, b) => paperCount(a) - paperCount(b) || a.pop15 - b.pop15,
+    map.addControl(
+      new maplibregl.AttributionControl({
+        compact: true,
+        customAttribution: ATTRIBUTION,
+      }),
+      "bottom-right",
     );
-    hitRef.current = [];
+    map.addControl(
+      new maplibregl.NavigationControl({ showCompass: false }),
+      "top-right",
+    );
 
-    const paint = (p: AtlasPoint, emphasize = false) => {
-      const xy = projection([p.lon, p.lat]);
-      if (!xy) return;
-      const [x, y] = xy;
-      if (x < -8 || y < -8 || x > w + 8 || y > h + 8) {
-        // Still register for hit-testing only when near the canvas.
-        return;
+    const onStyleReady = () => {
+      addCityLayers(map);
+      const src = map.getSource(SOURCE_ID) as maplibregl.GeoJSONSource | undefined;
+      if (src) {
+        src.setData(pointsToGeoJSON(pointsRef.current, filterRef.current));
       }
-      const n = paperCount(p);
-      const passesFilter = !layerFilter || hasLayer(p, layerFilter);
-      const r = emphasize ? DOT_R_SEL : DOT_R;
-      ctx.beginPath();
-      ctx.arc(x, y, r, 0, Math.PI * 2);
-      ctx.fillStyle = passesFilter ? colorForCount(n) : GREY;
-      ctx.globalAlpha = emphasize ? 1 : passesFilter && n > 0 ? 0.9 : 0.45;
-      ctx.fill();
-      ctx.globalAlpha = 1;
-      if (emphasize) {
-        ctx.strokeStyle = "#281c14";
-        ctx.lineWidth = 1.5;
-        ctx.stroke();
+      // Re-apply selection filter after style swap.
+      if (map.getLayer(LAYER_SEL_ID)) {
+        map.setFilter(LAYER_SEL_ID, [
+          "==",
+          ["get", "id"],
+          selectedIdRef.current ?? -1,
+        ]);
       }
-      hitRef.current.push(p);
+      readyRef.current = true;
     };
 
-    for (const p of sorted) paint(p, false);
-    if (selId != null) {
-      const sel = pts.find((p) => p.id === selId);
-      if (sel) paint(sel, true);
-    }
-  }, []);
+    map.on("load", onStyleReady);
+    map.on("style.load", onStyleReady);
 
-  const targetViewFor = useCallback((w: number, h: number, id: number | null): View => {
-    if (id == null) return worldView(w, h);
-    const sel = pointsRef.current.find((p) => p.id === id);
-    if (!sel) return worldView(w, h);
-    return cityView(w, h, sel.lon, sel.lat);
-  }, []);
+    map.on("click", LAYER_ID, (e) => {
+      const f = e.features?.[0];
+      const id = f?.properties?.id;
+      if (typeof id === "number") onSelectRef.current(id);
+      else if (typeof id === "string" && id !== "") onSelectRef.current(Number(id));
+    });
 
-  const animateTo = useCallback(
-    (target: View) => {
-      if (animRef.current != null) {
-        cancelAnimationFrame(animRef.current);
-        animRef.current = null;
-      }
-      const wrap = wrapRef.current;
-      if (!wrap) return;
-      const w = wrap.clientWidth;
-      const h = Math.max(360, Math.round(w * 0.52));
-      const from = viewRef.current ?? worldView(w, h);
+    map.on("mouseenter", LAYER_ID, () => {
+      map.getCanvas().style.cursor = "pointer";
+    });
+    map.on("mouseleave", LAYER_ID, () => {
+      map.getCanvas().style.cursor = "";
+    });
 
-      if (prefersReducedMotion()) {
-        paintFrame(target);
-        return;
-      }
+    // Also allow clicking the selected overlay.
+    map.on("click", LAYER_SEL_ID, (e) => {
+      const f = e.features?.[0];
+      const id = f?.properties?.id;
+      if (typeof id === "number") onSelectRef.current(id);
+      else if (typeof id === "string" && id !== "") onSelectRef.current(Number(id));
+    });
 
-      const start = performance.now();
-      const step = (now: number) => {
-        const t = Math.min(1, (now - start) / ZOOM_MS);
-        const eased = easeOutCubic(t);
-        paintFrame(lerpView(from, target, eased));
-        if (t < 1) {
-          animRef.current = requestAnimationFrame(step);
-        } else {
-          animRef.current = null;
-        }
-      };
-      animRef.current = requestAnimationFrame(step);
-    },
-    [paintFrame],
-  );
-
-  // Redraw + animate when selection / data / filter / land change.
-  useEffect(() => {
-    const wrap = wrapRef.current;
-    if (!wrap) return;
-    const w = wrap.clientWidth;
-    if (w <= 0) return;
-    const h = Math.max(360, Math.round(w * 0.52));
-    const target = targetViewFor(w, h, selectedId);
-    // First paint: jump. Later selection changes: animate.
-    if (viewRef.current == null) {
-      paintFrame(target);
-    } else {
-      animateTo(target);
-    }
-  }, [selectedId, points, land, filter, paintFrame, animateTo, targetViewFor]);
-
-  // Resize: snap to the correct target for current selection (no mid-animation fight).
-  useEffect(() => {
-    const onResize = () => {
-      const wrap = wrapRef.current;
-      if (!wrap) return;
-      if (animRef.current != null) {
-        cancelAnimationFrame(animRef.current);
-        animRef.current = null;
-      }
-      const w = wrap.clientWidth;
-      const h = Math.max(360, Math.round(w * 0.52));
-      paintFrame(targetViewFor(w, h, selectedIdRef.current));
+    const media = window.matchMedia("(prefers-color-scheme: dark)");
+    const onScheme = () => {
+      const nextDark = prefersDarkBasemap();
+      const nextStyle = nextDark ? CARTO_STYLE_DARK : CARTO_STYLE_LIGHT;
+      const current = map.getStyle()?.name ?? "";
+      // setStyle always; MapLibre will reload vector tiles.
+      void current;
+      readyRef.current = false;
+      map.setStyle(nextStyle);
     };
-    window.addEventListener("resize", onResize);
+    media.addEventListener("change", onScheme);
+
+    mapRef.current = map;
+
     return () => {
-      window.removeEventListener("resize", onResize);
-      if (animRef.current != null) cancelAnimationFrame(animRef.current);
+      media.removeEventListener("change", onScheme);
+      map.remove();
+      mapRef.current = null;
+      readyRef.current = false;
     };
-  }, [paintFrame, targetViewFor]);
+  }, []);
 
-  const handlePointer = (clientX: number, clientY: number) => {
-    const canvas = canvasRef.current;
-    const projection = projRef.current;
-    if (!canvas || !projection) return;
-    const rect = canvas.getBoundingClientRect();
-    const x = clientX - rect.left;
-    const y = clientY - rect.top;
+  // Sync GeoJSON when points / filter change.
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
 
-    let best: AtlasPoint | null = null;
-    let bestD = 14;
-    for (const p of hitRef.current) {
-      const xy = projection([p.lon, p.lat]);
-      if (!xy) continue;
-      const d = Math.hypot(xy[0] - x, xy[1] - y);
-      if (d > 14) continue;
-      if (
-        !best ||
-        d < bestD - 0.5 ||
-        (Math.abs(d - bestD) <= 0.5 && paperCount(p) > paperCount(best)) ||
-        (Math.abs(d - bestD) <= 0.5 &&
-          paperCount(p) === paperCount(best) &&
-          p.pop15 > best.pop15)
-      ) {
-        best = p;
-        bestD = d;
+    const apply = () => {
+      if (!map.getSource(SOURCE_ID)) addCityLayers(map);
+      const src = map.getSource(SOURCE_ID) as maplibregl.GeoJSONSource | undefined;
+      if (src) src.setData(pointsToGeoJSON(points, filter));
+    };
+
+    if (map.isStyleLoaded()) apply();
+    else map.once("style.load", apply);
+  }, [points, filter]);
+
+  // Zoom to selected city (or back to world).
+  useEffect(() => {
+    const map = mapRef.current;
+    if (!map) return;
+
+    const duration = prefersReducedMotion() ? 0 : ZOOM_MS;
+    const go = () => {
+      if (selectedId == null) {
+        map.fitBounds(WORLD_BOUNDS, { padding: 12, duration });
+        if (map.getLayer(LAYER_SEL_ID)) {
+          map.setFilter(LAYER_SEL_ID, ["==", ["get", "id"], -1]);
+        }
+        return;
       }
-    }
-    if (best) onSelect(best.id);
-  };
+      const sel = pointsRef.current.find((p) => p.id === selectedId);
+      if (!sel) return;
+      if (map.getLayer(LAYER_SEL_ID)) {
+        map.setFilter(LAYER_SEL_ID, ["==", ["get", "id"], selectedId]);
+      }
+      map.fitBounds(cityBounds(sel.lon, sel.lat), {
+        padding: 36,
+        duration,
+        maxZoom: 9.5,
+      });
+    };
+
+    if (map.isStyleLoaded()) go();
+    else map.once("load", go);
+  }, [selectedId]);
 
   return (
-    <div ref={wrapRef} className="relative w-full overflow-hidden rounded-lg border border-rule bg-paper-warm">
-      <canvas
-        ref={canvasRef}
-        role="img"
-        aria-label="World map of cities colored by how many papers cover each city"
-        className="block w-full cursor-crosshair"
-        onClick={(e) => handlePointer(e.clientX, e.clientY)}
-      />
-    </div>
+    <div
+      ref={wrapRef}
+      role="img"
+      aria-label="World map of cities colored by how many papers cover each city"
+      className="relative h-[min(62vw,520px)] min-h-[360px] w-full overflow-hidden rounded-lg border border-rule bg-paper-warm [&_.maplibregl-ctrl-attrib]:text-[10px] [&_.maplibregl-ctrl-attrib]:leading-tight"
+    />
   );
 }
