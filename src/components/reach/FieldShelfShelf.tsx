@@ -30,14 +30,14 @@ export function shelfMetrics(view: FieldShelfView) {
 
 /** "ERL 2019 · 392 citing", or "Sci Rep 2026 · no citing works yet". */
 export function paperReadout(p: FieldShelfPaper, zh: boolean) {
-  if (p.citing === 0) return zh ? `${p.label} · ${p.year} · 暂无施引` : `${p.label} · ${p.year} · no citing works yet`;
-  return zh ? `${p.label} · ${fmt(p.citing)} 篇施引` : `${p.label} · ${fmt(p.citing)} citing`;
+  if (p.citing === 0) return zh ? `${p.label} · ${p.year} · 暂无施引文献` : `${p.label} · ${p.year} · no citing works yet`;
+  return zh ? `${p.label} · ${fmt(p.citing)} 篇施引文献` : `${p.label} · ${fmt(p.citing)} citing`;
 }
 
 export function paperAria(p: FieldShelfPaper, zh: boolean) {
   const role = p.lens === "lead" ? (zh ? "第一/通讯作者" : "lead author") : zh ? "合作" : "co-authored";
-  if (p.citing === 0) return zh ? `${p.short}（${role}）：暂无施引文献` : `${p.short} (${role}): no citing works yet`;
-  return zh ? `${p.short}（${role}）：${fmt(p.citing)} 篇施引文献` : `${p.short} (${role}): ${fmt(p.citing)} citing works`;
+  if (p.citing === 0) return zh ? `${p.short}（${role}），暂无施引文献` : `${p.short} (${role}): no citing works yet`;
+  return zh ? `${p.short}（${role}），${fmt(p.citing)} 篇施引文献` : `${p.short} (${role}): ${fmt(p.citing)} citing works`;
 }
 
 interface Props {
@@ -210,7 +210,7 @@ export function PaperDetails({
       )}
       {paper.citing === 0 ? (
         <p className="leading-snug text-ink-muted">
-          {zh ? `${paper.year} 年发表；OpenAlex 中暂无非自引施引文献，所以图中没有对应方块。` : `Published ${paper.year}; no non-self citing work in OpenAlex yet, so no squares light up.`}
+          {zh ? `发表于 ${paper.year} 年。OpenAlex 暂未收录引用它的非自引文献，因此没有方块亮起。` : `Published ${paper.year}; no non-self citing work in OpenAlex yet, so no squares light up.`}
         </p>
       ) : (
         <>
@@ -248,7 +248,7 @@ export function PaperDetails({
                       </a>
                       <span className="block text-xs text-ink-faint">
                         {[authorLine(tip, zh), tip.venue, tip.year].filter(Boolean).join(" · ")}
-                        {zh ? ` · 被引 ${fmt(tip.citedBy)}（OpenAlex）` : ` · cited by ${fmt(tip.citedBy)} (OpenAlex)`}
+                        {zh ? ` · 被引 ${fmt(tip.citedBy)} 次（OpenAlex）` : ` · cited by ${fmt(tip.citedBy)} (OpenAlex)`}
                       </span>
                     </li>
                   );

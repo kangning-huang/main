@@ -17,7 +17,7 @@ export default function WhoUses() {
         <figcaption className="mb-3 text-sm text-ink-muted">
           <T
             en={`Citing works with at least one author at each type of institution (of ${totals.uniqueCitingWorks.toLocaleString()}; a work can count in several rows)`}
-            zh={`至少有一位作者来自该类机构的施引文献数（共 ${totals.uniqueCitingWorks.toLocaleString()} 篇；一篇文献可计入多行）`}
+            zh={`按机构类型统计施引文献，至少一位作者来自该类机构就计入（共 ${totals.uniqueCitingWorks.toLocaleString()} 篇；同一篇可计入多行）`}
           />
         </figcaption>
         <ul className="space-y-2">

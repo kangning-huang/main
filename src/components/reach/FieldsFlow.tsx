@@ -179,7 +179,7 @@ export default function FieldsFlow() {
         <figcaption className="mt-2 text-xs text-ink-faint">
           <T
             en="Ribbon width = citing works (self-citations removed). A work citing two themes counts once per theme."
-            zh="条带宽度 = 施引文献数（已剔除自引）。同时引用两个主题的文献在每个主题下各计一次。"
+            zh="条带宽度表示施引文献数，已剔除自引。一篇文献若引用两个主题，在每个主题下各计一次。"
           />
         </figcaption>
       </figure>

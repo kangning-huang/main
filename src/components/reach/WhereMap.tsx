@@ -86,7 +86,7 @@ export default function WhereMap() {
           <span className="w-full text-ink-faint">
             <T
               en={`Source: OpenAlex, author affiliations of citing works (self-citations removed), as of ${meta.asOf}. Basemap: Natural Earth 1:110m (public domain), Equal Earth projection.`}
-              zh={`数据来源：OpenAlex 施引文献作者机构（已剔除自引），截至 ${meta.asOf}。底图：Natural Earth 1:110m（公有领域），等积地球投影。`}
+              zh={`数据取自 OpenAlex 施引文献的作者所属机构，已剔除自引，截至 ${meta.asOf}。底图采用 Natural Earth 1:110m（公有领域），使用 Equal Earth 投影。`}
             />
           </span>
         </figcaption>
@@ -94,12 +94,12 @@ export default function WhereMap() {
 
       <details className="mt-4 text-sm">
         <summary className="cursor-pointer text-ink-muted hover:text-ink">
-          <T en={`Countries with ≥ ${MIN_WORKS} citing works (table)`} zh={`施引文献 ≥ ${MIN_WORKS} 篇的国家和地区（表格）`} />
+          <T en={`Countries with ≥ ${MIN_WORKS} citing works (table)`} zh={`施引文献数 ≥ ${MIN_WORKS} 篇的国家和地区（表格）`} />
         </summary>
         <p className="mt-2 text-xs text-ink-faint">
           <T
             en={`Small research systems have small expected values, so their ratios swing widely (one extra paper moves them a lot). Not drawn at this map scale: ${notDrawn.map((c) => countryName(c.code).en).join(", ")}.`}
-            zh={`科研体量较小的国家和地区预期值很小，比值波动较大（多一篇论文就会显著改变比值）。以下地区在此比例尺地图上未绘出：${notDrawn.map((c) => countryName(c.code).zh).join("、")}。`}
+            zh={`科研产出较少的国家和地区，预期值也小，多一篇文献就可能让比值大幅变化。当前地图比例尺下未绘出的地区有 ${notDrawn.map((c) => countryName(c.code).zh).join("、")}。`}
           />
         </p>
         <table className="mt-2 w-full text-left text-sm">

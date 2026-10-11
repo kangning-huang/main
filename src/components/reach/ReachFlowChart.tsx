@@ -139,8 +139,8 @@ export default function ReachFlowChart() {
               }
               zh={
                 mode === "absolute"
-                  ? `OpenAlex 施引文献（已剔除自引）→ 自适应子领域与主题。扩张仍居首（${topShare?.[1]}%）；高温+降温合计 ${heatish}%。`
-                  : `每篇施引按 1/被引论文发表年数加权（下限 1 年）。扩张 ${shares.expansion}%；高温+降温升至 ${heatish}%。`
+                  ? `OpenAlex 施引文献（已剔除自引）→ 自适应子领域与主题。扩张仍占比最高（${topShare?.[1]}%）；高温+降温合计 ${heatish}%。`
+                  : `每篇施引文献按 1/被引论文发表至今年数加权，年数至少按 1 年计。扩张占 ${shares.expansion}%；高温+降温升至 ${heatish}%。`
               }
             />
           </p>
@@ -212,7 +212,7 @@ export default function ReachFlowChart() {
         <figcaption className="mt-2 text-xs text-ink-faint">
           <T
             en={`OpenAlex ${flowData.meta.asOf} · cites per year since publication (toggle Absolute) · self-citations removed · right side = named subfields/topics plus field-domain groups (hover for members) · keywords on hover. Theme map: data/influence/fine-themes.json.`}
-            zh={`OpenAlex ${flowData.meta.asOf} · 默认按发表后年化引用（可切绝对）· 已剔除自引 · 右侧为具名子领域/主题与领域分组（悬停查看成员） · 关键词仅悬停。主题映射：data/influence/fine-themes.json。`}
+            zh={`OpenAlex ${flowData.meta.asOf} · 按发表至今年均被引次数统计（可切换为总次数） · 已剔除自引 · 右侧列出子领域/主题及领域分组（悬停查看组内成员） · 悬停查看关键词。主题映射见 data/influence/fine-themes.json。`}
           />
         </figcaption>
       </figure>

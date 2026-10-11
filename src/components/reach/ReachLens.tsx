@@ -85,7 +85,7 @@ export function ReachLensChip() {
         <span>
           <T
             en={`${view.totals.papers} papers · ${view.totals.uniqueCitingWorks.toLocaleString()} citing works · ${view.totals.countriesCount} countries`}
-            zh={`${view.totals.papers} 篇论文 · ${view.totals.uniqueCitingWorks.toLocaleString()} 篇施引 · ${view.totals.countriesCount} 个国家/地区`}
+            zh={`${view.totals.papers} 篇论文 · ${view.totals.uniqueCitingWorks.toLocaleString()} 篇施引文献 · ${view.totals.countriesCount} 个国家/地区`}
           />
         </span>
         <span>

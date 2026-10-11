@@ -15,7 +15,7 @@ export default function StandingOnIt() {
         <p className="mb-4 text-sm text-ink-muted">
           <T
             en={`The ten most-cited works (by their own OpenAlex citation count) that cite at least one paper in the ${lens === "lead" ? "first / last / corresponding" : "All"} view, self-citations removed.`}
-            zh="引用了当前视角论文、且自身 OpenAlex 被引次数最高的十篇文献（已剔除自引）。"
+            zh="引用当前视角下至少一篇论文、且自身在 OpenAlex 被引最多的十篇文献，已剔除自引。"
           />
         </p>
         <ol className="space-y-4">
@@ -60,7 +60,7 @@ export default function StandingOnIt() {
                 <T en="View on Resource Watch →" zh="在 Resource Watch 查看 →" />
               </a>
               <p className="mt-2 text-[11px] text-ink-faint">
-                <T en={`Hand-curated; verified ${u.verified.on}. Not counted in any OpenAlex figure.`} zh={`人工整理；核实于 ${u.verified.on}。不计入任何 OpenAlex 统计。`} />
+                <T en={`Hand-curated; verified ${u.verified.on}. Not counted in any OpenAlex figure.`} zh={`人工整理，于 ${u.verified.on} 核实。不计入任何 OpenAlex 统计。`} />
               </p>
             </li>
           ))}
