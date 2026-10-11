@@ -1,5 +1,5 @@
 {
-  "totalCitations": 5003,
+  "totalCitations": 5018,
   "hIndex": 22,
   "i10Index": 28,
   "citedByYears": {
@@ -14,23 +14,23 @@
     "2022": 650,
     "2023": 742,
     "2024": 817,
-    "2025": 977,
-    "2026": 866
+    "2025": 978,
+    "2026": 879
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 1121,
+      "citationCount": 1122,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 957,
+      "citationCount": 961,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 772,
+      "citationCount": 775,
       "year": 2020
     },
     {
@@ -45,17 +45,17 @@
     },
     {
       "title": "Fugitive road dust PM2. 5 emissions and their potential health impacts",
-      "citationCount": 168,
+      "citationCount": 169,
       "year": 2019
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 116,
+      "citationCount": 117,
       "year": 2024
     },
     {
       "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
-      "citationCount": 115,
+      "citationCount": 116,
       "year": 2018
     },
     {
@@ -75,7 +75,7 @@
     },
     {
       "title": "High‐resolution gridded population projections for China under the shared socioeconomic pathways",
-      "citationCount": 84,
+      "citationCount": 83,
       "year": 2020
     },
     {
@@ -99,14 +99,14 @@
       "year": 2025
     },
     {
+      "title": "Exacerbated heat stress induced by urban browning in the Global South",
+      "citationCount": 47,
+      "year": 2025
+    },
+    {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity. Nat Sustain 3: 16–24",
       "citationCount": 47,
       "year": 2020
-    },
-    {
-      "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 44,
-      "year": 2025
     },
     {
       "title": "Investigating future urbanization’s impact on local climate under different climate change scenarios in MEGA-urban regions: A case study of the Pearl River Delta, China",
@@ -134,14 +134,14 @@
       "year": 2022
     },
     {
+      "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
+      "citationCount": 17,
+      "year": 2025
+    },
+    {
       "title": "The implementation and application of geographical simulation and optimization systems (GeoSOS)",
       "citationCount": 17,
       "year": 2010
-    },
-    {
-      "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
-      "citationCount": 16,
-      "year": 2025
     },
     {
       "title": "Mapping of individual building heights reveals the large gap of urban-rural living spaces in the contiguous US",
@@ -155,7 +155,7 @@
     },
     {
       "title": "Moderating AC usage can reduce thermal disparity between indoor and outdoor environments",
-      "citationCount": 11,
+      "citationCount": 12,
       "year": 2024
     },
     {
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-10-04T04:48:29.163Z"
+  "lastUpdated": "2026-10-11T04:36:32.634Z"
 }
