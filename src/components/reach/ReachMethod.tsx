@@ -39,14 +39,20 @@ export default function ReachMethod() {
           </li>
           <li>
             <T
-              en={meta.adaptiveRule ?? "Adaptive taxonomy: split any OpenAlex field holding more than 30% of citing works into subfields and topics until no node exceeds 30%."}
-              zh="自适应分类：任一 OpenAlex 领域若超过施引文献的 30%，则拆分为子领域与主题，直到没有节点超过 30%。"
+              en="Field & Shelf (section 01): one square per non-self citing OpenAlex work. Squares are packed by topic distance from the fixed home topics of Ken's lead (first / last / corresponding) papers — 22 OpenAlex topics computed once. Core = a home topic; neighbour = same subfield or field; further = same domain, another domain, or no topic. Direction around the field means nothing. Hovering a shelf paper lights its citers and draws a thin link from each; hovering a square shows ≤ 4 lines back to the papers it cites."
+              zh="田野与书架（第 01 节）：每个非自引 OpenAlex 施引文献对应一个方块。方块按与本人第一/通讯作者论文固定主题（22 个 OpenAlex 主题，一次算定）的距离排布。核心 = 本人主题；邻近 = 同一子领域或领域；较远 = 同一大类、其他大类或无主题。方向没有含义。悬停书架上的论文会点亮其施引并画出每一条连线；悬停方块则最多画出 4 条连回它所引用的论文。"
             />
           </li>
           <li>
             <T
-              en={meta.outsideOwnTopicsRule ?? "Outside-own-topics % uses OpenAlex topics on Ken's papers vs citing works."}
-              zh="“主题外施引占比”比较黄康宁本人论文的 OpenAlex 主题与施引文献主题。"
+              en="Outside-home share on Field & Shelf uses that fixed lead topic set in both All and Lead views (squares do not recolour when the chip flips). The Topic cards / Who / Where sections below still use the adaptive OpenAlex taxonomy and the broader “topics on all pinned papers” outside-% where labelled."
+              zh="田野与书架的“主题外”占比始终对照上述固定第一/通讯作者主题集（切换全部/第一通讯时方块不变色）。下方主题卡片、谁在使用、在哪里等节仍使用自适应 OpenAlex 分类，以及（在标注处）对照全部固定论文主题的主题外占比。"
+            />
+          </li>
+          <li>
+            <T
+              en={meta.adaptiveRule ?? "Adaptive taxonomy (topic cards): split any OpenAlex field holding more than 30% of citing works into subfields and topics until no node exceeds 30%."}
+              zh="自适应分类（主题卡片）：任一 OpenAlex 领域若超过施引文献的 30%，则拆分为子领域与主题，直到没有节点超过 30%。"
             />
           </li>
           <li>

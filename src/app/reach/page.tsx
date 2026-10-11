@@ -3,17 +3,16 @@ import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcru
 import T from "@/components/T";
 import { isSample } from "@/lib/influence";
 import { ReachLensProvider, ReachLensChip } from "@/components/reach/ReachLens";
-import ReachFlowChart from "@/components/reach/ReachFlowChart";
+import FieldShelf from "@/components/reach/FieldShelf";
 import AdaptiveTopics from "@/components/reach/AdaptiveTopics";
 import WhoUses from "@/components/reach/WhoUses";
 import WhereMap from "@/components/reach/WhereMap";
 import StandingOnIt from "@/components/reach/StandingOnIt";
 import Growth from "@/components/reach/Growth";
-import ReachIntro from "@/components/reach/ReachIntro";
 import ReachMethod from "@/components/reach/ReachMethod";
 
 const DESCRIPTION =
-  "Who builds on Kangning (Ken) Huang's research: subfields and topics citing his papers, from OpenAlex with self-citations removed.";
+  "Who builds on Kangning (Ken) Huang's research: every OpenAlex work that cites his papers, packed by how far each sits from the topics of his lead papers. Self-citations removed.";
 
 export const metadata: Metadata = {
   title: "Reach",
@@ -47,7 +46,7 @@ export default function ReachPage() {
           <T en="SAMPLE DATA" zh="示例数据" />
         </div>
       )}
-<ReachLensProvider>
+      <ReachLensProvider>
         <section className="pt-10 pb-6 md:pt-14">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h1 className="font-display text-4xl text-ink md:text-5xl">
@@ -55,23 +54,17 @@ export default function ReachPage() {
             </h1>
             <p className="mt-3 max-w-2xl text-[15px] text-ink-muted">
               <T
-                en="OpenAlex citing works after self-citation removal. Flow first; details below."
-                zh="OpenAlex 施引文献（已剔除自引）。先看流向，细节在下方。"
+                en="One square per OpenAlex work that cites Ken's papers, packed by topic distance from the home topics of his lead papers. Self-citations removed."
+                zh="OpenAlex 中每一篇施引文献对应一个方块，按与本人第一/通讯作者论文主题的距离排布。已剔除自引。"
               />
             </p>
             <ReachLensChip />
           </div>
         </section>
 
-        <section id="flow" className="scroll-mt-20 border-t border-rule-faint py-10 md:py-12">
+        <section id="field-shelf" aria-labelledby="field-shelf-heading" className="scroll-mt-20 border-t border-rule-faint py-10 md:py-12">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <ReachFlowChart />
-          </div>
-        </section>
-
-        <section className="border-t border-rule-faint py-8">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <ReachIntro />
+            <FieldShelf />
           </div>
         </section>
 
