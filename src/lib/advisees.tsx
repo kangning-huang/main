@@ -148,6 +148,27 @@ export const ADVISEES: Advisee[] = [
   },
 ];
 
+export interface LabPostdoc {
+  name: string;
+  /** Role subtitle shown under the name (EN / ZH). */
+  roleEn: string;
+  roleZh: string;
+  /** Optional project/focus line; omit or leave empty for a minimal card. */
+  project?: string;
+  projectZh?: string;
+  linkedin?: string;
+  website?: string;
+}
+
+/** Current postdocs and other non-undergraduate lab members shown on /lab. */
+export const POSTDOCS: LabPostdoc[] = [
+  {
+    name: "Aiyu Zheng",
+    roleEn: "Postdoc · Co-advised with Mingzhen Lu",
+    roleZh: "博士后 · 与 Mingzhen Lu 联合指导",
+  },
+];
+
 /** Class years from 2026 on are treated as current undergraduate lab members. */
 export const CURRENT_CLASS_YEAR_MIN = 2026;
 
