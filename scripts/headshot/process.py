@@ -5,7 +5,7 @@ Classical operations only (Pillow): face-centred square crop, gentle levels,
 resize, encode. No generative edits.
 
 Usage:
-    python3 scripts/headshot/process.py [_source/ken-couple-headshot-raw.jpg]
+    python3 scripts/headshot/process.py [_source/ken-couple-headshot-user-crop.jpg]
 
 Writes public/headshot/headshot-square-{1x,2x}.{avif,webp,jpg}.
 See docs/headshot/TREATMENT.md.
@@ -20,16 +20,32 @@ import numpy as np
 from PIL import Image, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[2]
-SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "_source/ken-couple-headshot-raw.jpg"
+SRC = (
+    Path(sys.argv[1])
+    if len(sys.argv) > 1
+    else ROOT / "_source/ken-couple-headshot-user-crop.jpg"
+)
 OUT = ROOT / "public/headshot"
 
-# Face-centred square (source pixels) — Ken face from couple selfie (2026-10-12).
+# After optional center-square, use the full image.
+# (Filled at runtime once dimensions are known.)
 CROPS = {
-    "square": (400, 75, 768, 443),  # 368 × 368
+    "square": (0, 0, 0, 0),  # placeholder; set in main()
 }
 SIZES = {
     "square": {"1x": (160, 160), "2x": (300, 300)},
 }
+
+
+def center_square(img: Image.Image) -> Image.Image:
+    """If not square, center-crop to the shorter side."""
+    w, h = img.size
+    if w == h:
+        return img
+    side = min(w, h)
+    left = (w - side) // 2
+    top = (h - side) // 2
+    return img.crop((left, top, left + side, top + side))
 
 
 def gentle_grade(img: Image.Image) -> Image.Image:
@@ -47,6 +63,11 @@ def main() -> None:
         print(f"removed {stale.relative_to(ROOT)}")
 
     src = Image.open(SRC).convert("RGB")
+    src = center_square(src)
+    w, h = src.size
+    CROPS["square"] = (0, 0, w, h)
+    print(f"source square: {w}×{h} from {SRC.relative_to(ROOT)}")
+
     graded = gentle_grade(src)
 
     for name, box in CROPS.items():
