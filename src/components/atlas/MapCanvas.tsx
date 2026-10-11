@@ -20,8 +20,8 @@ type Props = {
 
 const GREY = "rgba(120, 110, 100, 0.45)";
 const DOT_R = 3.2;
-const DOT_R_SEL = 6.5;
-const HIT_PX = 14;
+const DOT_R_SEL = 8;
+const HIT_PX = 16;
 
 /** Sequential paper-count palette: 1–6 distinct steps (pale teal → deep teal → ember → deep rust). Grey = 0. */
 export const PAPER_COUNT_COLORS: Record<number, string> = {
@@ -49,8 +49,8 @@ export const CARTO_STYLE_DARK =
 const ATTRIBUTION =
   '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener noreferrer">OpenStreetMap</a> contributors © <a href="https://carto.com/attribution/" target="_blank" rel="noopener noreferrer">CARTO</a>';
 
-/** Angular half-width (°) of the regional frame around a selected city. */
-const CITY_RADIUS_DEG = 9;
+/** Angular half-width (°) of the frame around a selected city — city-scale, closer than the prior ~9°. */
+const CITY_RADIUS_DEG = 2;
 const WORLD_BOUNDS: [[number, number], [number, number]] = [
   [-168, -56],
   [188, 75],
@@ -177,11 +177,12 @@ export default function MapCanvas({
 
       const fill = passes ? colorForCount(n) : GREY;
       if (emphasize) {
+        // Outer cream halo so the pick reads clearly at city zoom.
         ctx.beginPath();
-        ctx.arc(x, y, r + 5, 0, Math.PI * 2);
-        ctx.fillStyle = dark ? "rgba(255,252,247,0.92)" : "rgba(255,252,247,0.95)";
+        ctx.arc(x, y, r + 7, 0, Math.PI * 2);
+        ctx.fillStyle = dark ? "rgba(255,252,247,0.94)" : "rgba(255,252,247,0.97)";
         ctx.fill();
-        ctx.lineWidth = 1.5;
+        ctx.lineWidth = 1.75;
         ctx.strokeStyle = selStroke;
         ctx.stroke();
       }
@@ -192,7 +193,7 @@ export default function MapCanvas({
       ctx.globalAlpha = emphasize ? 1 : passes && n > 0 ? 0.92 : 0.4;
       ctx.fill();
       ctx.globalAlpha = 1;
-      ctx.lineWidth = emphasize ? 2.25 : 0.85;
+      ctx.lineWidth = emphasize ? 2.75 : 0.85;
       ctx.strokeStyle = emphasize ? selStroke : stroke;
       ctx.stroke();
 
@@ -314,7 +315,21 @@ export default function MapCanvas({
     media.addEventListener("change", onScheme);
 
     mapRef.current = map;
-    schedulePaint();
+    (window as unknown as { __atlasMap?: maplibregl.Map }).__atlasMap = map;
+
+    const syncSize = () => {
+      const wrap = wrapRef.current;
+      const mapEl = mapElRef.current;
+      if (wrap && mapEl) {
+        mapEl.style.width = `${wrap.clientWidth}px`;
+        mapEl.style.height = `${wrap.clientHeight}px`;
+      }
+      map.resize();
+      schedulePaint();
+    };
+    map.on("load", syncSize);
+    // MapLibre often measures before absolute layout settles — sync twice.
+    requestAnimationFrame(() => requestAnimationFrame(syncSize));
 
     return () => {
       media.removeEventListener("change", onScheme);
@@ -346,9 +361,9 @@ export default function MapCanvas({
       const sel = pointsRef.current.find((p) => p.id === selectedId);
       if (!sel) return;
       map.fitBounds(cityBounds(sel.lon, sel.lat), {
-        padding: 36,
+        padding: 48,
         duration,
-        maxZoom: 9.5,
+        maxZoom: 11,
       });
     };
 
@@ -361,6 +376,11 @@ export default function MapCanvas({
     const wrap = wrapRef.current;
     if (!wrap) return;
     const ro = new ResizeObserver(() => {
+      const mapEl = mapElRef.current;
+      if (mapEl && wrap) {
+        mapEl.style.width = `${wrap.clientWidth}px`;
+        mapEl.style.height = `${wrap.clientHeight}px`;
+      }
       mapRef.current?.resize();
       schedulePaint();
     });
@@ -381,7 +401,7 @@ export default function MapCanvas({
       aria-label="World map of cities colored by how many papers cover each city"
       className="relative h-[min(62vw,520px)] min-h-[360px] w-full overflow-hidden rounded-lg border border-rule bg-paper-warm [&_.maplibregl-ctrl-attrib]:text-[10px] [&_.maplibregl-ctrl-attrib]:leading-tight"
     >
-      <div ref={mapElRef} className="absolute inset-0" />
+      <div ref={mapElRef} className="absolute inset-0 h-full w-full" />
       {/* pointer-events-none when MapLibre is up so pan/zoom work; clickable if basemap failed */}
       <canvas
         ref={canvasRef}
