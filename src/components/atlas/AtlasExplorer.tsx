@@ -32,7 +32,7 @@ const FILTERS: { key: LayerKey | null; en: string; zh: string }[] = [
   { key: "heat", en: "Heat-island trend", zh: "热岛趋势" },
   { key: "cooling", en: "Demolition cooling", zh: "拆除降温" },
   { key: "flood", en: "Flood damage", zh: "洪涝损失" },
-  { key: "expansion", en: "Expansion 2050", zh: "扩张至 2050" },
+  { key: "expansion", en: "Expansion 2050", zh: "2050 年城市扩张" },
   { key: "jgr", en: "Night heat stress", zh: "夜间热应激" },
 ];
 
@@ -160,7 +160,7 @@ export default function AtlasExplorer() {
           />
           <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-ink-muted">
             <span className="text-ink-faint">
-              <T en="Papers covering city:" zh="覆盖该城市的论文数：" />
+              <T en="Papers covering city:" zh="覆盖此城市的论文：" />
             </span>
             <Swatch color={PAPER_COUNT_COLORS[1]} en="1" zh="1" />
             <Swatch color={PAPER_COUNT_COLORS[2]} en="2" zh="2" />

@@ -16,7 +16,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
     return (
       <aside className="rounded-lg border border-rule bg-paper p-5 shadow-sm">
         <p className="text-sm text-ink-muted">
-          <T en="Loading city…" zh="加载城市中…" />
+          <T en="Loading city…" zh="正在加载城市…" />
         </p>
       </aside>
     );
@@ -75,7 +75,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
       <p className="mt-4 text-xs text-ink-faint">
         <T
           en={`Covered by ${nLayers} of ${nMapped} mapped studies.`}
-          zh={`${nMapped} 项已上图研究中覆盖 ${nLayers} 项。`}
+          zh={`已上图的 ${nMapped} 项研究中，有 ${nLayers} 项覆盖此城市。`}
         />
       </p>
 
@@ -83,7 +83,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
       <section className="mt-5 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
         <div className="flex items-center justify-between gap-2">
           <h3 className="text-sm font-medium text-ink">
-            <T en="Built mass & scaling" zh="建成质量与标度" />
+            <T en="Built mass & scaling" zh="建成质量 & 标度" />
           </h3>
           <span className="rounded bg-teal-light px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wide text-teal">
             {MASS_PAPER.venue}
@@ -94,7 +94,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
           <p className="mt-3 text-sm text-ink-muted">
             <T
               en="Not covered in the city-mass dataset for this GHSL urban centre."
-              zh="该 GHSL 城市中心未包含在建成质量数据集中。"
+              zh="城市建成质量数据集未覆盖此 GHSL 城市中心。"
             />
           </p>
         ) : (
@@ -119,7 +119,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
               </div>
               <div>
                 <dt className="text-xs text-ink-faint">
-                  <T en="vs. scaling line" zh="相对标度线" />
+                  <T en="vs. scaling line" zh="与标度线相比" />
                 </dt>
                 <dd className="mt-0.5 text-lg font-medium text-ink">
                   {mass.vsScaling >= 1 ? "+" : ""}
@@ -134,7 +134,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
               </div>
               <div>
                 <dt className="text-xs text-ink-faint">
-                  <T en="Dataset population" zh="数据集人口" />
+                  <T en="Dataset population" zh="数据集人口数" />
                 </dt>
                 <dd className="mt-0.5 font-medium text-ink">{formatPop(mass.pop)}</dd>
               </div>
@@ -184,9 +184,9 @@ export default function CityCard({ city, loading, onClose }: Props) {
 
       {/* Heat-island trend panel */}
       <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
-        <PanelHead en="Surface heat-island trend, 2003–2020" zh="地表热岛趋势（2003–2020）" venue={`${HEAT_PAPER.venue} ${HEAT_PAPER.year}`} />
+        <PanelHead en="Surface heat-island trend, 2003–2020" zh="地表热岛趋势，2003–2020" venue={`${HEAT_PAPER.venue} ${HEAT_PAPER.year}`} />
         {!heat ? (
-          <NotCovered en="Not covered by this study (it covers the ~1,000 largest functional urban areas)." zh="该研究未覆盖此城市（研究范围为约 1,000 个最大的功能城市区）。" />
+          <NotCovered en="Not covered by this study (it covers the ~1,000 largest functional urban areas)." zh="这项研究未覆盖此城市（覆盖范围为最大的 ~1,000 个功能城市区）。" />
         ) : (
           <>
             {(heat.quality === "flagged" || heat.fua.name !== city.name) && (
@@ -220,13 +220,13 @@ export default function CityCard({ city, loading, onClose }: Props) {
 
       {/* Informal-settlement cooling panel */}
       <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
-        <PanelHead en="Cooling after informal-settlement demolition" zh="城中村拆除后的降温" venue={`npj ${COOLING_PAPER.year}`} />
+        <PanelHead en="Cooling after informal-settlement demolition" zh="非正规住区拆除后的降温" venue={`npj ${COOLING_PAPER.year}`} />
         {!cooling ? (
-          <NotCovered en="Not covered by this study (Beijing, Shanghai and Guangzhou only)." zh="该研究未覆盖此城市（仅北京、上海、广州）。" />
+          <NotCovered en="Not covered by this study (Beijing, Shanghai and Guangzhou only)." zh="这项研究未覆盖此城市（仅覆盖北京、上海和广州）。" />
         ) : (
           <>
             <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
-              <Stat en="Surface cooling (DID)" zh="地表降温（双重差分）" value={`${cooling.effectK.toFixed(2)} K`} big />
+              <Stat en="Surface cooling (DID)" zh="地表降温（DID）" value={`${cooling.effectK.toFixed(2)} K`} big />
               <Stat en="95% interval" zh="95% 区间" value={`${cooling.ciLo.toFixed(2)} to ${cooling.ciHi.toFixed(2)} K`} />
             </dl>
             <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
@@ -248,13 +248,13 @@ export default function CityCard({ city, loading, onClose }: Props) {
       <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
         <PanelHead
           en="Flood damage with building height & protection"
-          zh="考虑建筑高度与防洪标准的洪涝损失"
+          zh="考虑建筑高度 & 防洪标准的洪涝损失"
           venue={`${FLOOD_PAPER.venue} ${FLOOD_PAPER.year}`}
         />
         {!flood ? (
           <NotCovered
             en="Not covered by this study (it covers ~600 functional urban areas with joinable GHSL urban centres)."
-            zh="该研究未覆盖此城市（研究范围为约 600 个可与 GHSL 城市中心对照的功能城市区）。"
+            zh="这项研究未覆盖此城市（覆盖范围为 ~600 个可与 GHSL 城市中心匹配的功能城市区）。"
           />
         ) : (
           <>
@@ -269,13 +269,13 @@ export default function CityCard({ city, loading, onClose }: Props) {
             <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
               <Stat
                 en="Damage · no protection"
-                zh="损失 · 无防洪保护"
+                zh="洪涝损失 · 无防洪保护"
                 value={`${flood.dmgPct.toFixed(2)}%`}
                 big
               />
               <Stat
                 en="Damage · with protection"
-                zh="损失 · 含防洪保护"
+                zh="洪涝损失 · 有防洪保护"
                 value={
                   flood.dmgProtPct != null ? `${flood.dmgProtPct.toFixed(2)}%` : "—"
                 }
@@ -311,13 +311,13 @@ export default function CityCard({ city, loading, onClose }: Props) {
       <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
         <PanelHead
           en="Urban land by 2050 (urban cluster)"
-          zh="至 2050 年城市用地（城市集群）"
+          zh="2050 年城市用地（城市集群）"
           venue={`ERL ${EXPANSION_PAPER.year}`}
         />
         {!expansion ? (
           <NotCovered
             en="Not covered by this study’s Huang_2019 urban-cluster table for this GHSL urban centre."
-            zh="该 GHSL 城市中心未包含在 Huang_2019 城市集群表中。"
+            zh="这项研究的 Huang_2019 城市集群表未覆盖此 GHSL 城市中心。"
           />
         ) : (
           <>
@@ -330,7 +330,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
               </p>
             )}
             <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
-              <Stat en="Projected urban land (range)" zh="预估城市用地（范围）" value={`${expansion.loKm2.toLocaleString()}–${expansion.hiKm2.toLocaleString()} km²`} big />
+              <Stat en="Projected urban land (range)" zh="预测城市用地（范围）" value={`${expansion.loKm2.toLocaleString()}–${expansion.hiKm2.toLocaleString()} km²`} big />
               <Stat en="SSP1 / SSP3 / SSP5" zh="SSP1 / SSP3 / SSP5" value={`${expansion.ssp1Km2.toLocaleString()} / ${expansion.ssp3Km2.toLocaleString()} / ${expansion.ssp5Km2.toLocaleString()}`} />
             </dl>
             <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
@@ -358,14 +358,14 @@ export default function CityCard({ city, loading, onClose }: Props) {
         {!jgr ? (
           <NotCovered
             en="Not covered by this study (WRF domains: China, India and Nigeria urban grids only)."
-            zh="该研究未覆盖此城市（WRF 范围仅为中国、印度、尼日利亚城市网格）。"
+            zh="这项研究未覆盖此城市（WRF 模拟范围：仅限中国、印度和尼日利亚的城市网格）。"
           />
         ) : (
           <>
             <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
               <Stat en="Night ΔWBGT · expansion" zh="夜间 ΔWBGT · 扩张" value={`${jgr.dNightC > 0 ? "+" : ""}${jgr.dNightC.toFixed(2)} °C`} big />
               {jgr.dNightCoolRoofC != null && (
-                <Stat en="Night ΔWBGT · + cool roofs" zh="夜间 ΔWBGT · 含冷屋顶" value={`${jgr.dNightCoolRoofC > 0 ? "+" : ""}${jgr.dNightCoolRoofC.toFixed(2)} °C`} big />
+                <Stat en="Night ΔWBGT · + cool roofs" zh="夜间 ΔWBGT · 扩张 + 冷屋顶" value={`${jgr.dNightCoolRoofC > 0 ? "+" : ""}${jgr.dNightCoolRoofC.toFixed(2)} °C`} big />
               )}
             </dl>
             <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
@@ -387,15 +387,15 @@ export default function CityCard({ city, loading, onClose }: Props) {
       <div className="mt-4 space-y-2">
         <ComingRow
           en="Functional clusters & cooling (101 cities)"
-          zh="功能簇与降温（101 座城市）"
+          zh="功能集群 & 降温（101 个城市）"
           noteEn="Coming — PNAS paper in press."
-          noteZh="即将加入 — PNAS 论文即将发表。"
+          noteZh="即将上线 — PNAS 论文即将发表。"
         />
         <ComingRow
           en="SSA infrastructure"
           zh="撒哈拉以南非洲基础设施"
           noteEn="Coming — Nature Communications paper in revision."
-          noteZh="即将加入 — Nature Communications 论文修订中。"
+          noteZh="即将上线 — Nature Communications 论文修订中。"
         />
       </div>
     </aside>

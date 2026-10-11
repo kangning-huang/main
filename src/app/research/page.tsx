@@ -460,7 +460,7 @@ export default function ResearchPage() {
                   <div className="space-y-8">
                     <div>
                       <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
-                        <T en="Papers" zh="相关论文" />
+                        <T en="Papers" zh="论文" />
                       </h3>
                       <ul className="mt-4 space-y-3">
                         {theme.papers.map((p) => (
@@ -489,7 +489,7 @@ export default function ResearchPage() {
                     {theme.apps.length > 0 && (
                       <div>
                         <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
-                          <T en="Explore" zh="交互工具" />
+                          <T en="Explore" zh="探索" />
                         </h3>
                         <ul className="mt-4 flex flex-wrap gap-2">
                           {theme.apps.map((app) =>
