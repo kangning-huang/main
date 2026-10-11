@@ -36,6 +36,8 @@ export const metadata: Metadata = {
 export default function AtlasPage() {
   return (
     <>
+      {/* Prefetch city dots ASAP (before MapLibre chunk). Next also emits :HL for this. */}
+      <link rel="preload" href="/atlas/points.json" as="fetch" crossOrigin="anonymous" />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{

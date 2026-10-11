@@ -1,11 +1,12 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
-import MapCanvas, { PAPER_COUNT_COLORS } from "./MapCanvas";
+import dynamic from "next/dynamic";
 import CitySearch from "./CitySearch";
 import CityCard from "./CityCard";
 import T from "@/components/T";
 import {
+  fetchAtlasPoints,
   parsePoints,
   paperCount,
   type AtlasPoint,
@@ -13,6 +14,17 @@ import {
   type CityDetail,
   type LayerKey,
 } from "@/lib/atlas";
+import { PAPER_COUNT_COLORS } from "@/lib/atlas-colors";
+
+/** MapLibre stays in its own chunk; explorer + points.json are not blocked on it. */
+const MapCanvas = dynamic(() => import("./MapCanvas"), {
+  ssr: false,
+  loading: () => (
+    <div className="flex h-[min(62vw,520px)] min-h-[360px] w-full items-center justify-center rounded-lg border border-rule bg-paper-warm text-xs text-ink-muted">
+      <T en="Loading map…" zh="正在加载地图…" />
+    </div>
+  ),
+});
 
 const FILTERS: { key: LayerKey | null; en: string; zh: string }[] = [
   { key: null, en: "All studies", zh: "全部研究" },
@@ -37,11 +49,11 @@ export default function AtlasExplorer() {
 
   useEffect(() => {
     let cancelled = false;
+    // Warm the MapLibre chunk in parallel with points.json.
+    void import("maplibre-gl");
     (async () => {
       try {
-        const ptsRes = await fetch("/atlas/points.json");
-        if (!ptsRes.ok) throw new Error("Failed to load atlas data");
-        const ptsFile = (await ptsRes.json()) as AtlasPointsFile;
+        const ptsFile = await fetchAtlasPoints();
         if (cancelled) return;
         setMeta(ptsFile);
         setPoints(parsePoints(ptsFile));
