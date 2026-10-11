@@ -25,7 +25,7 @@ export const IMPACT_LABELS: Record<FieldShelfImpactBin, { en: string; zh: string
   4: { en: "≥1,000", zh: "≥1,000" },
 };
 export const IMPACT_NOTES: Record<FieldShelfImpactBin, { en: string; zh: string }> = {
-  0: { en: "not yet cited again", zh: "尚未被再次引用" },
+  0: { en: "not yet cited again", zh: "还未被再次引用" },
   1: { en: "lightly cited citing works", zh: "引用我研究的低被引文献" },
   2: { en: "moderately cited", zh: "中度被引" },
   3: { en: "highly cited (≥100)", zh: "被引次数高（≥100）" },
@@ -70,7 +70,7 @@ const TYPE_NAMES: Record<string, { en: string; zh: string }> = {
   book: { en: "Book", zh: "书籍" },
   "conference-paper": { en: "Conference paper", zh: "会议论文" },
   "conference-abstract": { en: "Conference abstract", zh: "会议摘要" },
-  "peer-review": { en: "Peer review", zh: "同行评审意见" },
+  "peer-review": { en: "Peer review", zh: "同行评审" },
   dissertation: { en: "Dissertation", zh: "学位论文" },
   "data-paper": { en: "Data paper", zh: "数据论文" },
   editorial: { en: "Editorial", zh: "社论" },

@@ -358,7 +358,7 @@ function FieldShelfTable({ view, tips, status, onLoad }: { view: FieldShelfView;
             <th className="py-1 pr-3 font-normal">{zh ? "施引文献" : "Citing work"}</th>
             <th className="py-1 pr-3 text-right font-normal">{zh ? "年份" : "Year"}</th>
             <th className="py-1 pr-3 font-normal">{zh ? "期刊" : "Venue"}</th>
-            <th className="py-1 pr-3 font-normal">{zh ? "引用本人论文" : "Builds on"}</th>
+            <th className="py-1 pr-3 font-normal">{zh ? "引用我的论文" : "Builds on"}</th>
             <th className="py-1 text-right font-normal">{zh ? "自身被引" : "Citations"}</th>
           </tr>
         </thead>
@@ -655,7 +655,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
 
       <details className="mt-6 text-sm" onToggle={(e) => setTableOpen(e.currentTarget.open)}>
         <summary className="cursor-pointer text-ink-muted hover:text-ink">
-          <T en="Show as table" zh="以表格显示" />
+          <T en="Show as table" zh="用表格显示" />
         </summary>
         {tableOpen ? (
           <FieldShelfTable view={view} tips={tips} status={status} onLoad={load} />

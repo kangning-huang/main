@@ -128,7 +128,7 @@ export default function ReachFlowChart() {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h2 className="font-display text-3xl text-ink md:text-4xl">
-            <T en="Where citing work sits" zh="施引文献落在何处" />
+            <T en="Where citing work sits" zh="引用我的文献分布" />
           </h2>
           <p className="mt-2 max-w-2xl text-[15px] text-ink-muted">
             <T

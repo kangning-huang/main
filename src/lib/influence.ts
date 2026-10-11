@@ -231,7 +231,7 @@ export const INSTITUTION_TYPE_LABELS: Record<string, { en: string; zh: string }>
   archive: { en: "Archives & libraries", zh: "档案馆与图书馆" },
   funder: { en: "Funders", zh: "资助机构" },
   other: { en: "Other", zh: "其他" },
-  "no-affiliation": { en: "No affiliation listed", zh: "未列出机构" },
+  "no-affiliation": { en: "No affiliation listed", zh: "未列出所属机构" },
 };
 
 const regionEn = new Intl.DisplayNames(["en"], { type: "region" });
