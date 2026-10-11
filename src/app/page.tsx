@@ -22,7 +22,7 @@ const HOME_DESCRIPTION =
 const FINDINGS = [
   {
     en: "Double a city's population and its built mass grows only about 87%; bigger cities need less material per person.",
-    zh: "城市人口翻倍，建成质量仅增长约87%；城市越大，人均所需的建筑材料越少。",
+    zh: "城市人口翻倍，建成质量仅增长约87%；城市越大，人均所需材料越少。",
     venue: "Nature Cities",
     year: "2026",
     // In press — link to the on-site entry, not a DOI
@@ -37,14 +37,14 @@ const FINDINGS = [
   },
   {
     en: "Cool roofs can't fix the night: about half the added nighttime heat stress from expansion persists.",
-    zh: "冷屋顶解决不了夜间问题：城市扩张新增的夜间热应力约有一半依然存在。",
+    zh: "即使用上冷屋顶，城市扩张新增的夜间热压力仍有约一半无法消除。",
     venue: "JGR: Atmospheres",
     year: "2021",
     href: "https://doi.org/10.1029/2020JD033831",
   },
   {
     en: "Counting building height and flood defenses shifts global flood damage toward Southeast Asia, 42% of the total versus 15%.",
-    zh: "纳入建筑高度与防洪标准后，全球洪灾损失向东南亚转移：占比为42%，而传统方法仅为15%。",
+    zh: "把建筑高度和防洪标准算进去，东南亚占全球洪灾损失估算值的42%；传统方法估出的比例只有15%。",
     venue: "Scientific Reports",
     year: "2026",
     href: "https://doi.org/10.1038/s41598-026-70981-w",
@@ -67,7 +67,7 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
       "交互地图与浏览器，展示 3000 多座城市建成质量的嵌套规模经济：建成质量如何随人口在城市与街区两级变化。",
   },
   "Urban Expansion 2050": {
-    title: "2050年全球城市扩张",
+    title: "2050年城市扩张",
     description:
       "查看到 2050 年全球城市用地可能如何扩张。预测基于 2019 年发表于 Environmental Research Letters 的研究，数据可在 WRI Resource Watch 获取。",
   },
@@ -77,14 +77,14 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
       "把建筑高度和防洪标准纳入评估后，全球城市的三维洪水暴露会变成什么样。",
   },
   "Urban Renewal Cooling DID": {
-    title: "城市更新降温的因果分析",
+    title: "城市更新能降温多少（双重差分 DID 分析）",
     description:
       "双重差分结果：拆除非正规住区带来多少地表降温，以及重建方式如何改变这一信号。",
   },
   "URBANMOD-ZIPF": {
     title: "URBANMOD-ZIPF",
     description:
-      "保持齐普夫定律的全球尺度城市用地扩张模型。用于模拟不同情景下真实城市增长模式的开源工具。",
+      "这个开源工具展示不同情景下全球城市用地如何扩张，模拟过程保留齐普夫定律描述的城市规模分布。",
   },
 };
 
@@ -195,7 +195,7 @@ export default async function Home() {
               <p className="animate-fade-up delay-2 mt-4 text-sm text-paper/60">
                 <T
                   en="Assistant Professor of Environmental Studies · CLUEs Lab, NYU Shanghai"
-                  zh="环境学助理教授 · CLUEs Lab，上海纽约大学"
+                  zh="环境学助理教授 · CLimate and Urban Environments（CLUEs）实验室，上海纽约大学"
                 />
               </p>
               {reach && (
@@ -208,7 +208,7 @@ export default async function Home() {
                     <span className="ml-1.5 text-xs text-paper/40">
                       <T
                         en={`(OpenAlex, all papers with DOI, self-citations removed, ${reach.asOf}) →`}
-                        zh={`（OpenAlex，全部有 DOI 论文，已剔除自引，${reach.asOf}）→`}
+                        zh={`（OpenAlex，统计全部有 DOI 的论文，已剔除自引，截至 ${reach.asOf}）→`}
                       />
                     </span>
                   </Link>
@@ -539,7 +539,7 @@ export default async function Home() {
             <p className="mt-6 text-ink-muted">
               <T
                 en="I write about cities and climate on Substack."
-                zh="我在Substack上撰写关于城市与气候的文章。"
+                zh="我在 Substack 上写城市与气候相关的文章。"
               />
             </p>
             <a
@@ -548,7 +548,7 @@ export default async function Home() {
               rel="noopener noreferrer"
               className="mt-5 inline-flex items-center rounded-full bg-ember px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ember-dark"
             >
-              <T en="Read on Substack →" zh="在Substack上阅读 →" />
+              <T en="Read on Substack →" zh="到 Substack 阅读 →" />
             </a>
           </div>
         </section>

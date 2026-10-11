@@ -13,11 +13,11 @@ const APPLY_SUBJECT = "[Join CLUEs]";
 
 // Every outcome below appears on /advisees (src/lib/advisees.tsx).
 const OUTCOMES: { en: string; zh: string }[] = [
-  { en: "Erasmus Mundus International Master in Urban Studies", zh: "Erasmus Mundus国际城市研究硕士项目" },
+  { en: "Erasmus Mundus International Master in Urban Studies", zh: "Erasmus Mundus 国际城市研究硕士项目" },
   { en: "Yale School of Public Health (M.S.)", zh: "耶鲁大学公共卫生学院（硕士）" },
   { en: "Penn Master of City Planning", zh: "宾夕法尼亚大学城市规划硕士" },
   { en: "Carnegie Mellon School of Computer Science (M.S.)", zh: "卡内基梅隆大学计算机科学学院（硕士）" },
-  { en: "Clinton Global Initiative University Fellow", zh: "克林顿全球倡议大学 (CGI U) 研究员" },
+  { en: "Clinton Global Initiative University Fellow", zh: "Clinton Global Initiative University（CGI U）Fellow" },
   { en: "Two Millennium Fellows", zh: "两名千禧年研究员" },
   { en: "Pingan Youth Inspiration Plan funding", zh: "平安青年励志计划资助" },
   { en: "Best presentation, NYU Shanghai symposium", zh: "上海纽约大学研讨会最佳报告奖" },
@@ -193,7 +193,7 @@ export default function LabPage() {
           </ul>
           <p className="mt-4 text-sm">
             <Link href="/advisees" className="link-underline font-medium text-ember">
-              <T en="Full advisee list with projects and placements →" zh="查看全部指导学生、项目与去向 →" />
+              <T en="Full advisee list with projects and placements →" zh="查看我指导的全部学生、项目与去向 →" />
             </Link>
           </p>
 
@@ -217,14 +217,14 @@ export default function LabPage() {
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
                     <T
                       en="You want to measure how cities grow, heat, flood, or consume materials, not only to describe them."
-                      zh="真正好奇城市如何运转、如何应对变化中的气候。"
+                      zh="你想用数据量化城市增长、升温、洪涝或材料消耗，不只描述现象。"
                     />
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
                     <T
                       en="You already use Google Earth Engine, Python, or causal inference, or you are ready to learn them on a real project."
-                      zh="具备或乐于学习 Google Earth Engine、Python 与因果推断方法。"
+                      zh="你已经会用 Google Earth Engine、Python 或因果推断方法，或者愿意在实际项目中学习。"
                     />
                   </li>
                 </ul>
@@ -263,13 +263,13 @@ export default function LabPage() {
                   <li>
                     <T
                       en="A short note on the research questions you want to work on."
-                      zh="一段简短说明，介绍你感兴趣的研究问题；"
+                      zh="简单写几句，说明你想研究什么问题。"
                     />
                   </li>
                   <li>
                     <T
                       en="One sample of your work (code, writing, or a map)."
-                      zh="一份相关的作品样例（代码、文章或地图）。"
+                      zh="一份你的作品，可以是代码、文章或地图。"
                     />
                   </li>
                 </ol>
@@ -279,7 +279,7 @@ export default function LabPage() {
             <p className="mt-6 text-sm text-ink-faint">
               <T
                 en="Funded openings are not listed on this page. Email to ask what is open now."
-                zh="此处不列出有资助的职位。如需了解当前名额情况，请直接联系。"
+                zh="这里不列出有资助的职位。想了解目前有哪些名额，请给我发邮件。"
               />
             </p>
           </section>

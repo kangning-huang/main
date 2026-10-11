@@ -51,7 +51,7 @@ export const COURSES: Course[] = [
     highlights: [
       {
         en: "Six two-week debate cycles with randomly assigned For/Against sides",
-        zh: "六个为期两周的辩论周期，正反方随机分配",
+        zh: "六轮辩论，每轮两周，正反方随机分配",
       },
       {
         en: "IPAT quantitative lab and a classroom Public Goods Game",
@@ -59,7 +59,7 @@ export const COURSES: Course[] = [
       },
       {
         en: "Final project applying course ideas to one real-world environmental issue",
-        zh: "期末项目：用课程核心观点分析一个真实的环境议题",
+        zh: "期末项目，用课程所学分析一个现实环境问题",
       },
     ],
   },
@@ -75,15 +75,15 @@ export const COURSES: Course[] = [
     highlights: [
       {
         en: "Six problem sets: population, prey–predator, S-curve growth, IPAT, personal energy footprint, resource-constrained growth",
-        zh: "六次习题：人口动态、捕食者–猎物、S 型增长、IPAT、个人能源足迹、资源约束下的增长",
+        zh: "六次习题，涵盖人口动态、捕食者与猎物、S 型增长、IPAT、个人能源足迹和资源约束下的增长",
       },
       {
         en: "Mid-term presentation on the climate, biome, and environmental change of a student's hometown",
-        zh: "期中报告：解析家乡的气候、生物群系与环境变化",
+        zh: "期中展示，介绍家乡的气候、生物群系和环境变化",
       },
       {
         en: "Final presentation and report on a contemporary environmental challenge",
-        zh: "期末报告：分析一项当代重大环境挑战",
+        zh: "期末展示与书面报告，分析一项当代环境挑战",
       },
     ],
     syllabusUrl:
@@ -104,14 +104,14 @@ export const COURSES: Course[] = [
       { en: "Field-trip report", zh: "实地考察报告" },
       {
         en: "Group final city policy report (Tableau / Google Earth Engine optional)",
-        zh: "小组期末城市政策报告（可选用 Tableau / Google Earth Engine）",
+        zh: "期末以小组为单位撰写城市政策报告（可选用 Tableau / Google Earth Engine）",
       },
     ],
     syllabusUrl:
       "https://docs.google.com/document/d/e/2PACX-1vTrhXo9OGMOFASQhge4gDUPwET_PLufDlfaA2kwZhVEZIc9VCMPkc0FkQl9ORC8Z2VgpaxWGg1gcrUW/pub",
     recognition: {
       en: "Shanghai City-Level Undergraduate Key Course (2025)",
-      zh: "上海高校市级重点课程（2025）",
+      zh: "上海高校市级重点课程（本科，2025）",
     },
   },
 ];
@@ -150,7 +150,7 @@ export const SIGNATURE_METHODS: { title: Bilingual; body: Bilingual }[] = [
     title: { en: "Public Goods Game", zh: "公共物品博弈" },
     body: {
       en: "A multi-round classroom game, first anonymous and then with communication. The class's own cooperation data feeds the debate on the commons.",
-      zh: "多轮课堂博弈，先匿名进行，再允许交流。全班自己的合作数据成为“公地”辩论的证据。",
+      zh: "课堂博弈分多轮进行，先匿名，再允许交流。全班的合作数据会成为“公地”辩论的证据。",
     },
   },
   {
