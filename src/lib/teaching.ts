@@ -46,7 +46,7 @@ export const COURSES: Course[] = [
     tag: { en: "CORE STS gateway", zh: "CORE STS 通识入门课" },
     summary: {
       en: "Introduces environmental thought through six structured debate cycles on contested motions: nature, movements, population, the commons, values, and technological futures.",
-      zh: "以六轮结构化辩论为主线，围绕自然、环保运动、人口、公地、价值观与技术未来六个争议议题，引导学生进入环境思想。",
+      zh: "课程用六轮结构化辩论带学生认识环境思想。辩题围绕自然、环保运动、人口、公地、价值观与技术未来展开，每个议题都有值得讨论的分歧。",
     },
     highlights: [
       {
@@ -70,7 +70,7 @@ export const COURSES: Course[] = [
     tag: { en: "Environmental Studies gateway", zh: "环境研究方向入门课" },
     summary: {
       en: "A systems-science survey of energy and material flows, dynamics, footprints, and environmental change: one of the two gateway courses in the Environmental Studies track.",
-      zh: "从系统科学视角综览能量与物质流动、系统动力学、生态足迹与环境变化，是社会科学环境研究方向的两门入门课之一。",
+      zh: "这门课从系统科学出发，介绍能量与物质流动、系统动力学、生态足迹和环境变化，是社会科学环境研究方向的两门入门课之一。",
     },
     highlights: [
       {
@@ -97,7 +97,7 @@ export const COURSES: Course[] = [
     terms: { en: "2022–2025 · Spring 2026", zh: "2022–2025 · 2026年春季" },
     summary: {
       en: "Urban environmental challenges and opportunities across energy, heat, water, food, materials, and land, with spatial data skills and city-focused policy projects.",
-      zh: "围绕能源、高温、水、食物、材料与土地，探讨城市面临的环境挑战与机遇，并训练空间数据技能、完成以城市为对象的政策项目。",
+      zh: "城市在能源、高温、水、食物、材料与土地上面临哪些环境挑战，又有哪些机遇？课程围绕这些问题展开，带学生练习处理空间数据，并完成以城市为对象的政策项目。",
     },
     highlights: [
       { en: "Weekly analytical reports", zh: "每周分析报告" },
@@ -122,28 +122,28 @@ export const SIGNATURE_METHODS: { title: Bilingual; body: Bilingual }[] = [
     title: { en: "Assigned-side debates", zh: "指定立场辩论" },
     body: {
       en: "Six debate cycles. Each cycle the class is randomly split into For and Against teams, and every member speaks. Defending a position you didn't choose is the fastest way to understand it.",
-      zh: "全学期六轮辩论，每轮随机分为正反两方，每位成员都要发言。为自己未必认同的立场辩护，是理解它最快的方式。",
+      zh: "全学期共六轮辩论，每轮随机分为正反两队，每个人都要发言。试着为自己未必认同的立场辩护，是理解这一立场最快的方式。",
     },
   },
   {
     title: { en: "Pre- and post-debate ballots", zh: "辩论前后匿名投票" },
     body: {
       en: "Everyone records an honest position on paper, anonymously, before and after each debate. The side that moves the ballot “wins”; argument quality is graded separately by rubric.",
-      zh: "每场辩论前后，所有人在纸上匿名记录自己的真实立场。能让票数发生移动的一方即为“胜方”；论证质量另按评分标准评定。",
+      zh: "每场辩论前后，所有人都在纸上匿名写下自己的真实立场。哪一方让投票转向自己，哪一方就“获胜”；论证质量另按评分标准评定。",
     },
   },
   {
     title: { en: "Device-free floor", zh: "无设备辩论现场" },
     body: {
       en: "Evidence decks freeze 24 hours before each debate, and the floor is device-free. Preparation may use any tool, including AI; performance is live and unassisted.",
-      zh: "证据幻灯片在辩论前 24 小时冻结，辩论现场不使用任何电子设备。准备阶段可以使用包括 AI 在内的任何工具，现场表现则必须独立完成。",
+      zh: "证据幻灯片在每场辩论前 24 小时定稿，此后不再修改。准备时可以使用任何工具，包括 AI；辩论现场不使用电子设备，发言与应辩须独立完成。",
     },
   },
   {
     title: { en: "IPAT lab", zh: "IPAT 定量实验" },
     body: {
       en: "In pairs, students compute emissions for two countries and project them to 2050 under three scenarios. Their results become evidence for the population-and-consumption debate.",
-      zh: "学生两人一组，计算两个国家的排放并在三种情景下预测至 2050 年，结果直接用作“人口与消费”辩论的证据。",
+      zh: "学生两人一组，计算两个国家的排放量，再按三种情景推算到 2050 年。计算结果直接用于“人口与消费”辩论，作为论证证据。",
     },
   },
   {
@@ -157,7 +157,7 @@ export const SIGNATURE_METHODS: { title: Bilingual; body: Bilingual }[] = [
     title: { en: "Chart openers & one-minute closers", zh: "图表开场与一分钟收尾" },
     body: {
       en: "Each class opens with an unlabeled environmental chart to guess, reveal, and critique, and closes with a one-sentence statement of where you now stand on the motion.",
-      zh: "每节课以一张无标注的环境图表开场：先猜、再揭晓、再评析；结束时每人用一句话写下自己当前对辩题的立场以及改变立场的原因。",
+      zh: "每节课先看一张隐去标注的环境图表，猜它讲了什么，揭晓后再一起评析。下课前，每人用一句话写下自己对辩题的当前立场，以及是什么让自己改变了看法。",
     },
   },
 ];

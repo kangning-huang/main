@@ -10,7 +10,7 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
   "RoboTaxi Safety Tracker": {
     title: "自动驾驶出租车安全追踪",
     description:
-      "基于NHTSA常规通用令碰撞数据，追踪特斯拉Cybercab安全性能的数据驱动仪表板。提供自动驾驶汽车安全指标（包括每起事故行驶里程对比）的透明、独立分析。",
+      "这个仪表板用 NHTSA 常规通用令碰撞数据跟踪特斯拉 Cybercab 安全表现，独立分析自动驾驶汽车安全指标。你可以查看每起事故对应的行驶里程等指标，比较安全表现，了解分析依据。",
   },
 };
 

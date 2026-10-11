@@ -56,7 +56,7 @@ export default function AdviseesPage() {
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
               en="I supervise NYU Shanghai undergraduates on capstones, research projects, and fellowships. The work is research design, methods, revision, and how to present results."
-              zh="我在上海纽约大学通过毕业论文、研究项目和奖学金指导本科生，注重研究设计、方法训练、反复反馈和学术沟通能力的培养。"
+              zh="我指导上海纽约大学本科生完成毕业论文、研究项目和学术资助项目。指导围绕研究设计、方法训练和学术交流展开，通过反复反馈，帮助学生把研究做好、讲清楚。"
             />
           </p>
           <p className="mt-3 max-w-3xl text-sm text-ink-muted animate-fade-up delay-1">

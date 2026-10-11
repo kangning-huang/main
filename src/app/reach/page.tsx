@@ -55,7 +55,7 @@ export default function ReachPage() {
             <p className="mt-3 max-w-2xl text-[15px] text-ink-muted">
               <T
                 en="Each square is one OpenAlex work that cites these papers. Colour tracks that citing work's own citation count, with higher-impact work toward the centre. Self-citations are removed."
-                zh="OpenAlex 中每一篇施引文献对应一个方块，颜色表示该文献自身的被引次数（高被引靠中心）。已剔除自引。"
+                zh="每个方块代表 OpenAlex 中一篇引用了这些论文的文献。颜色表示这篇文献自身被引用多少次，被引次数越高，位置越靠近中心。图中已剔除自引。"
               />
             </p>
             <ReachLensChip />
