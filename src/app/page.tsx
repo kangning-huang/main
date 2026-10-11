@@ -237,7 +237,7 @@ export default async function Home() {
               {/* Links row */}
               <div className="animate-fade-up delay-5 mt-6 flex flex-wrap gap-2.5">
                 {[
-                  { en: "CV (PDF)", zh: "简历 (PDF)", href: "/CV_Kangning_Huang.pdf" },
+                  { en: "CV (PDF)", zh: "简历（PDF）", href: "/CV_Kangning_Huang.pdf" },
                   { en: "Google Scholar", zh: "谷歌学术", href: LINKS.googleScholar },
                   { en: "Email", zh: "邮箱", href: `mailto:${SITE.email}` },
                 ].map((link) => (

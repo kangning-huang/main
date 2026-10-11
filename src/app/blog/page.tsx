@@ -97,7 +97,7 @@ export default async function BlogPage() {
                 {posts[0].wordcount && (
                   <>
                     <span className="h-0.5 w-0.5 rounded-full bg-ink-faint" />
-                    <span>{Math.ceil(posts[0].wordcount / 250)} <T en="min read" zh="分钟阅读" /></span>
+                    <span>{Math.ceil(posts[0].wordcount / 250)} <T en="min read" zh="分钟读完" /></span>
                   </>
                 )}
               </div>
@@ -147,7 +147,7 @@ export default async function BlogPage() {
                       {post.wordcount && (
                         <>
                           <span className="h-0.5 w-0.5 rounded-full bg-ink-faint" />
-                          <span>{Math.ceil(post.wordcount / 250)} <T en="min read" zh="分钟阅读" /></span>
+                          <span>{Math.ceil(post.wordcount / 250)} <T en="min read" zh="分钟读完" /></span>
                         </>
                       )}
                     </div>
