@@ -312,7 +312,7 @@ export default async function Home() {
         <meta itemProp="affiliation" content="NYU Shanghai" />
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <h2 className="section-heading animate-fade-up">
-            <T en="About" zh="关于" />
+            <T en="About" zh="关于我" />
           </h2>
 
           <div className="mt-8 max-w-3xl space-y-4 animate-fade-up delay-1" itemProp="description">
@@ -452,7 +452,7 @@ export default async function Home() {
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <div className="flex items-center justify-between">
               <h2 className="section-heading flex-1">
-                <T en="Writing" zh="文章" />
+                <T en="Writing" zh="我的文章" />
               </h2>
               <Link
                 href="/blog"
@@ -534,7 +534,7 @@ export default async function Home() {
         <section className="border-t border-rule-faint bg-paper-warm py-16 md:py-20">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h2 className="section-heading">
-              <T en="Writing" zh="文章" />
+              <T en="Writing" zh="我的文章" />
             </h2>
             <p className="mt-6 text-ink-muted">
               <T

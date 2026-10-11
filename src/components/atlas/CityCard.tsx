@@ -175,7 +175,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
                 rel="noopener noreferrer"
                 className="text-teal hover:underline"
               >
-                <T en="Full app →" zh="完整应用 →" />
+                <T en="Full app →" zh="打开完整应用 →" />
               </a>
             </div>
           </>
@@ -499,11 +499,11 @@ function Links({ doi, app }: { doi: string; app?: string }) {
   return (
     <div className="mt-3 flex flex-wrap gap-3 text-sm">
       <a href={doi} target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">
-        <T en="Paper →" zh="论文 →" />
+        <T en="Paper →" zh="查看论文 →" />
       </a>
       {app && (
         <a href={app} target="_blank" rel="noopener noreferrer" className="text-teal hover:underline">
-          <T en="Full app →" zh="完整应用 →" />
+          <T en="Full app →" zh="打开完整应用 →" />
         </a>
       )}
     </div>

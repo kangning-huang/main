@@ -215,7 +215,7 @@ export function PaperDetails({
       ) : (
         <>
           <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5">
-            <dt className="text-ink-faint">{zh ? "施引文献" : "Citing works"}</dt>
+            <dt className="text-ink-faint">{zh ? "引用这些论文的文献" : "Citing works"}</dt>
             <dd className="tabular-nums text-ink">
               {fmt(paper.citing)} <span className="text-ink-muted">{zh ? "（不含自引）" : "(non-self)"}</span>
             </dd>
