@@ -182,7 +182,7 @@ export function reachHeadline(): {
 
 const FIELD_ZH: Record<string, string> = {
   "Environmental Science": "环境科学",
-  Engineering: "工程",
+  Engineering: "工程学",
   "Agricultural and Biological Sciences": "农业与生物科学",
   "Economics, Econometrics and Finance": "经济学、计量经济学与金融",
   "Social Sciences": "社会科学",
@@ -194,10 +194,10 @@ const FIELD_ZH: Record<string, string> = {
   "Biochemistry, Genetics and Molecular Biology": "生物化学、遗传学与分子生物学",
   "Decision Sciences": "决策科学",
   Energy: "能源",
-  "Health Professions": "卫生职业",
+  "Health Professions": "医疗卫生专业",
   Psychology: "心理学",
   Mathematics: "数学",
-  "Physics and Astronomy": "物理与天文学",
+  "Physics and Astronomy": "物理学与天文学",
   Chemistry: "化学",
   "Materials Science": "材料科学",
   Neuroscience: "神经科学",
@@ -206,15 +206,15 @@ const FIELD_ZH: Record<string, string> = {
   Unclassified: "未分类",
   "Environmental Engineering": "环境工程",
   "Global and Planetary Change": "全球与行星变化",
-  "Pollution": "污染",
+  "Pollution": "环境污染",
   "Health, Toxicology and Mutagenesis": "健康、毒理学与诱变",
   "Atmospheric Science": "大气科学",
   "Ecology": "生态学",
   "Urban Studies": "城市研究",
-  "Geography, Planning and Development": "地理、规划与发展",
+  "Geography, Planning and Development": "地理学、规划与发展",
   "Nature and Landscape Conservation": "自然与景观保护",
   "Water Science and Technology": "水科学与技术",
-  "Building and Construction": "建筑与建造",
+  "Building and Construction": "建筑与施工",
   "Civil and Structural Engineering": "土木与结构工程",
   "Renewable Energy, Sustainability and the Environment": "可再生能源、可持续性与环境",
 };
@@ -223,7 +223,7 @@ export const fieldZh = (name: string) => FIELD_ZH[name] ?? name;
 
 export const INSTITUTION_TYPE_LABELS: Record<string, { en: string; zh: string }> = {
   education: { en: "Universities", zh: "高校" },
-  facility: { en: "Research institutes & labs", zh: "研究机构与实验室" },
+  facility: { en: "Research institutes & labs", zh: "科研机构与实验室" },
   government: { en: "Government", zh: "政府机构" },
   nonprofit: { en: "Nonprofits", zh: "非营利组织" },
   company: { en: "Companies", zh: "企业" },
@@ -231,7 +231,7 @@ export const INSTITUTION_TYPE_LABELS: Record<string, { en: string; zh: string }>
   archive: { en: "Archives & libraries", zh: "档案馆与图书馆" },
   funder: { en: "Funders", zh: "资助机构" },
   other: { en: "Other", zh: "其他" },
-  "no-affiliation": { en: "No affiliation listed", zh: "未列出所属机构" },
+  "no-affiliation": { en: "No affiliation listed", zh: "未注明所属机构" },
 };
 
 const regionEn = new Intl.DisplayNames(["en"], { type: "region" });
