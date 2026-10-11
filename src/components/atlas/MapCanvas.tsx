@@ -1,15 +1,22 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
-import maplibregl from "maplibre-gl";
-import "maplibre-gl/dist/maplibre-gl.css";
+import type { Map as MapLibreMap } from "maplibre-gl";
 import {
   paperCount,
   hasLayer,
   type AtlasPoint,
   type LayerKey,
 } from "@/lib/atlas";
+import {
+  PAPER_COUNT_COLORS,
+  ATLAS_DOT_GREY,
+  colorForCount,
+} from "@/lib/atlas-colors";
 import T from "@/components/T";
+
+// Re-export palette for any legacy imports; preferred path is @/lib/atlas-colors.
+export { PAPER_COUNT_COLORS, colorForCount };
 
 type Props = {
   points: AtlasPoint[];
@@ -21,27 +28,10 @@ type Props = {
   filter?: LayerKey | null;
 };
 
-const GREY = "rgba(120, 110, 100, 0.45)";
+const GREY = ATLAS_DOT_GREY;
 const DOT_R = 3.2;
 const DOT_R_SEL = 8;
 const HIT_PX = 16;
-
-/** Sequential paper-count palette: 1–6 distinct steps (pale teal → deep teal → ember → deep rust). Grey = 0. */
-export const PAPER_COUNT_COLORS: Record<number, string> = {
-  0: GREY,
-  1: "rgb(140, 190, 188)", // #8CBEBC
-  2: "rgb(58, 155, 152)", // #3A9B98
-  3: "rgb(13, 115, 119)", // #0D7377
-  4: "rgb(8, 70, 78)", // #08464E
-  5: "rgb(199, 75, 22)", // #C74B16
-  6: "rgb(139, 34, 8)", // #8B2208
-};
-
-export function colorForCount(n: number): string {
-  if (n <= 0) return PAPER_COUNT_COLORS[0];
-  if (n >= 6) return PAPER_COUNT_COLORS[6];
-  return PAPER_COUNT_COLORS[n];
-}
 
 /** Carto Positron (light) / Dark Matter (vector). No API key required for vector styles today. */
 export const CARTO_STYLE_LIGHT =
@@ -96,6 +86,8 @@ function cityBounds(lon: number, lat: number): [[number, number], [number, numbe
  *    looks "empty" while points.json loaded fine.
  * 3. If projection yields zero in-bounds dots while we have hundreds of points,
  *    fall back to equirectangular for that frame and request a refit.
+ * 4. MapLibre is loaded asynchronously so /atlas/points.json + first equirect
+ *    paint are not blocked on the ~1MB maplibre-gl chunk (mobile first paint).
  */
 export default function MapCanvas({
   points,
@@ -107,7 +99,7 @@ export default function MapCanvas({
   const wrapRef = useRef<HTMLDivElement>(null);
   const mapElRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const mapRef = useRef<maplibregl.Map | null>(null);
+  const mapRef = useRef<MapLibreMap | null>(null);
   const onSelectRef = useRef(onSelect);
   const pointsRef = useRef(points);
   const selectedIdRef = useRef(selectedId);
@@ -120,6 +112,8 @@ export default function MapCanvas({
   const [mapFailed, setMapFailed] = useState(false);
   const hitRef = useRef<{ p: AtlasPoint; x: number; y: number }[]>([]);
   const rafRef = useRef<number | null>(null);
+  /** Pre-sorted for paint (paperCount asc, then pop) — avoid sorting 4k rows every frame. */
+  const sortedRef = useRef<AtlasPoint[]>([]);
 
   onSelectRef.current = onSelect;
   pointsRef.current = points;
@@ -182,9 +176,7 @@ export default function MapCanvas({
       return [x, y];
     };
 
-    const sorted = [...pts].sort(
-      (a, b) => paperCount(a) - paperCount(b) || a.pop15 - b.pop15,
-    );
+    const sorted = sortedRef.current.length === pts.length ? sortedRef.current : pts;
     hitRef.current = [];
     let drawn = 0;
 
@@ -254,7 +246,7 @@ export default function MapCanvas({
   }, [paintDots]);
 
   const fitCamera = useCallback(
-    (map: maplibregl.Map, duration: number) => {
+    (map: MapLibreMap, duration: number) => {
       const selId = selectedIdRef.current;
       if (selId == null) {
         map.fitBounds(WORLD_BOUNDS, { padding: 12, duration });
@@ -275,7 +267,7 @@ export default function MapCanvas({
   );
 
   const syncSizeAndRefit = useCallback(
-    (map: maplibregl.Map, opts?: { forceRefit?: boolean }) => {
+    (map: MapLibreMap, opts?: { forceRefit?: boolean }) => {
       const wrap = wrapRef.current;
       const mapEl = mapElRef.current;
       if (!wrap || !mapEl) return;
@@ -306,132 +298,189 @@ export default function MapCanvas({
     [fitCamera, schedulePaint],
   );
 
-  // Create MapLibre basemap once; dots are canvas-overlay (see paintDots).
+  // Keep draw order cache in sync with points (not every pan/zoom frame).
+  useEffect(() => {
+    sortedRef.current = [...points].sort(
+      (a, b) => paperCount(a) - paperCount(b) || a.pop15 - b.pop15,
+    );
+  }, [points]);
+
+  // Create MapLibre basemap once (async chunk); dots paint on canvas immediately via equirect.
   useEffect(() => {
     const el = mapElRef.current;
     if (!el || mapRef.current) return;
 
+    let cancelled = false;
+    let map: MapLibreMap | null = null;
+    let media: MediaQueryList | null = null;
+    let onScheme: (() => void) | null = null;
+
     darkRef.current = prefersDarkBasemap();
-    let map: maplibregl.Map;
-    try {
-      map = new maplibregl.Map({
-        container: el,
-        style: darkRef.current ? CARTO_STYLE_DARK : CARTO_STYLE_LIGHT,
-        bounds: WORLD_BOUNDS,
-        fitBoundsOptions: { padding: 12 },
-        attributionControl: false,
-        cooperativeGestures: true,
-        // Soften WebGL requirements so more machines get a basemap.
-        canvasContextAttributes: { failIfMajorPerformanceCaveat: false },
-      });
-    } catch (err) {
-      console.warn("Atlas MapLibre init failed; dots still draw on canvas.", err);
-      mapReadyRef.current = false;
-      setMapFailed(true);
-      schedulePaint();
-      return;
-    }
+    // First paint can use equirect while maplibre-gl downloads (~1MB).
+    schedulePaint();
 
-    map.addControl(
-      new maplibregl.AttributionControl({
-        compact: true,
-        customAttribution: ATTRIBUTION,
-      }),
-      "bottom-right",
-    );
-    map.addControl(
-      new maplibregl.NavigationControl({ showCompass: false }),
-      "top-right",
-    );
-
-    const pinStacking = () => {
-      // Keep the WebGL basemap under the 2D overlay on GPUs that promote WebGL.
+    (async () => {
+      // Runtime CJS interop: module.default holds Map / controls.
+      type MapLibreNS = {
+        Map: new (options: ConstructorParameters<typeof MapLibreMap>[0]) => MapLibreMap;
+        AttributionControl: new (options?: object) => object;
+        NavigationControl: new (options?: object) => object;
+      };
+      let maplibregl: MapLibreNS;
       try {
-        const gl = map.getCanvas();
-        const box = map.getCanvasContainer();
-        gl.style.zIndex = "0";
-        box.style.zIndex = "0";
-        box.style.position = box.style.position || "absolute";
-      } catch {
-        /* ignore */
+        const mod = await import("maplibre-gl");
+        // CSS side-effect; Next resolves it without a TS module decl.
+        await import(
+          /* webpackChunkName: "maplibre-gl-css" */
+          "maplibre-gl/dist/maplibre-gl.css"
+        );
+        maplibregl = (mod as { default: MapLibreNS }).default;
+      } catch (err) {
+        if (cancelled) return;
+        console.warn("Atlas MapLibre load failed; dots still draw on canvas.", err);
+        mapReadyRef.current = false;
+        setMapFailed(true);
+        schedulePaint();
+        return;
       }
-    };
+      if (cancelled || !mapElRef.current) return;
 
-    const onReady = () => {
-      pinStacking();
-      syncSizeAndRefit(map, { forceRefit: true });
-    };
-    map.on("load", onReady);
-    map.on("style.load", onReady);
-    map.on("move", schedulePaint);
-    map.on("zoom", schedulePaint);
-    map.on("resize", schedulePaint);
-    map.on("idle", () => {
-      if (refitNeededRef.current) syncSizeAndRefit(map, { forceRefit: true });
-      else schedulePaint();
-    });
-    map.on("error", (e) => {
-      console.warn("Atlas MapLibre error", e.error ?? e);
-    });
+      let live: MapLibreMap;
+      try {
+        live = new maplibregl.Map({
+          container: mapElRef.current,
+          style: darkRef.current ? CARTO_STYLE_DARK : CARTO_STYLE_LIGHT,
+          bounds: WORLD_BOUNDS,
+          fitBoundsOptions: { padding: 12 },
+          attributionControl: false,
+          cooperativeGestures: true,
+          // Soften WebGL requirements so more machines get a basemap.
+          canvasContextAttributes: { failIfMajorPerformanceCaveat: false },
+        });
+      } catch (err) {
+        if (cancelled) return;
+        console.warn("Atlas MapLibre init failed; dots still draw on canvas.", err);
+        mapReadyRef.current = false;
+        setMapFailed(true);
+        schedulePaint();
+        return;
+      }
+      map = live;
 
-    // Canvas overlay uses pointer-events:none so pan/zoom stay on the map.
-    // Hit-test dots on map click using the last painted screen positions.
-    map.on("click", (e) => {
-      const { x, y } = e.point;
-      let best: AtlasPoint | null = null;
-      let bestD = HIT_PX;
-      for (const { p, x: px, y: py } of hitRef.current) {
-        const d = Math.hypot(px - x, py - y);
-        if (d > HIT_PX) continue;
-        if (
-          !best ||
-          d < bestD - 0.5 ||
-          (Math.abs(d - bestD) <= 0.5 && paperCount(p) > paperCount(best)) ||
-          (Math.abs(d - bestD) <= 0.5 &&
-            paperCount(p) === paperCount(best) &&
-            p.pop15 > best.pop15)
-        ) {
-          best = p;
-          bestD = d;
+      live.addControl(
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+        new maplibregl.AttributionControl({
+          compact: true,
+          customAttribution: ATTRIBUTION,
+        }) as any,
+        "bottom-right",
+      );
+      live.addControl(
+        new maplibregl.NavigationControl({ showCompass: false }) as any,
+        "top-right",
+      );
+
+      const pinStacking = () => {
+        // Keep the WebGL basemap under the 2D overlay on GPUs that promote WebGL.
+        try {
+          const gl = live.getCanvas();
+          const box = live.getCanvasContainer();
+          gl.style.zIndex = "0";
+          box.style.zIndex = "0";
+          box.style.position = box.style.position || "absolute";
+        } catch {
+          /* ignore */
         }
-      }
-      if (best) onSelectRef.current(best.id);
-    });
+      };
 
-    map.on("mousemove", (e) => {
-      const { x, y } = e.point;
-      let near = false;
-      for (const { x: px, y: py } of hitRef.current) {
-        if (Math.hypot(px - x, py - y) <= HIT_PX) {
-          near = true;
-          break;
+      const onReady = () => {
+        if (cancelled) return;
+        pinStacking();
+        syncSizeAndRefit(live, { forceRefit: true });
+      };
+      live.on("load", onReady);
+      live.on("style.load", onReady);
+      live.on("move", schedulePaint);
+      live.on("zoom", schedulePaint);
+      live.on("resize", schedulePaint);
+      live.on("idle", () => {
+        if (refitNeededRef.current) syncSizeAndRefit(live, { forceRefit: true });
+        else schedulePaint();
+      });
+      live.on("error", (e) => {
+        console.warn("Atlas MapLibre error", e.error ?? e);
+      });
+
+      // Canvas overlay uses pointer-events:none so pan/zoom stay on the map.
+      // Hit-test dots on map click using the last painted screen positions.
+      live.on("click", (e) => {
+        const { x, y } = e.point;
+        let best: AtlasPoint | null = null;
+        let bestD = HIT_PX;
+        for (const { p, x: px, y: py } of hitRef.current) {
+          const d = Math.hypot(px - x, py - y);
+          if (d > HIT_PX) continue;
+          if (
+            !best ||
+            d < bestD - 0.5 ||
+            (Math.abs(d - bestD) <= 0.5 && paperCount(p) > paperCount(best)) ||
+            (Math.abs(d - bestD) <= 0.5 &&
+              paperCount(p) === paperCount(best) &&
+              p.pop15 > best.pop15)
+          ) {
+            best = p;
+            bestD = d;
+          }
         }
+        if (best) onSelectRef.current(best.id);
+      });
+
+      live.on("mousemove", (e) => {
+        const { x, y } = e.point;
+        let near = false;
+        for (const { x: px, y: py } of hitRef.current) {
+          if (Math.hypot(px - x, py - y) <= HIT_PX) {
+            near = true;
+            break;
+          }
+        }
+        live.getCanvas().style.cursor = near ? "pointer" : "";
+      });
+
+      media = window.matchMedia("(prefers-color-scheme: dark)");
+      onScheme = () => {
+        darkRef.current = prefersDarkBasemap();
+        mapReadyRef.current = false;
+        forceEquirectRef.current = true; // keep dots visible during style reload
+        schedulePaint();
+        live.setStyle(darkRef.current ? CARTO_STYLE_DARK : CARTO_STYLE_LIGHT);
+        // style.load will flip mapReady and refit
+      };
+      media.addEventListener("change", onScheme);
+
+      if (cancelled) {
+        live.remove();
+        return;
       }
-      map.getCanvas().style.cursor = near ? "pointer" : "";
-    });
+      mapRef.current = live;
 
-    const media = window.matchMedia("(prefers-color-scheme: dark)");
-    const onScheme = () => {
-      darkRef.current = prefersDarkBasemap();
-      mapReadyRef.current = false;
-      forceEquirectRef.current = true; // keep dots visible during style reload
-      schedulePaint();
-      map.setStyle(darkRef.current ? CARTO_STYLE_DARK : CARTO_STYLE_LIGHT);
-      // style.load will flip mapReady and refit
-    };
-    media.addEventListener("change", onScheme);
-
-    mapRef.current = map;
-
-    // MapLibre often measures before absolute layout settles — sync twice.
-    requestAnimationFrame(() =>
-      requestAnimationFrame(() => syncSizeAndRefit(map, { forceRefit: true })),
-    );
+      // MapLibre often measures before absolute layout settles — sync twice.
+      requestAnimationFrame(() =>
+        requestAnimationFrame(() => {
+          if (!cancelled && mapRef.current === live) {
+            syncSizeAndRefit(live, { forceRefit: true });
+          }
+        }),
+      );
+    })();
 
     return () => {
-      media.removeEventListener("change", onScheme);
-      map.remove();
-      mapRef.current = null;
+      cancelled = true;
+      if (media && onScheme) media.removeEventListener("change", onScheme);
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+      }
       mapReadyRef.current = false;
     };
   }, [schedulePaint, syncSizeAndRefit]);
@@ -504,6 +553,16 @@ export default function MapCanvas({
         className="absolute inset-0 z-0 h-full w-full"
         style={{ zIndex: 0 }}
       />
+      {points.length === 0 && (
+        <div
+          className="pointer-events-none absolute inset-0 z-[1] flex items-center justify-center bg-paper-warm/50"
+          aria-live="polite"
+        >
+          <span className="rounded-md border border-rule bg-paper/95 px-3 py-1.5 text-xs text-ink-muted shadow-sm">
+            <T en="Loading cities…" zh="正在加载城市…" />
+          </span>
+        </div>
+      )}
       {/* Explicit world reset — MapLibre nav is top-right; keep this top-left. */}
       <button
         type="button"

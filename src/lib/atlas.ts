@@ -211,6 +211,21 @@ export function parsePoints(file: AtlasPointsFile): AtlasPoint[] {
   });
 }
 
+
+/** Browser-only shared promise so points.json starts once and early. */
+let atlasPointsPromise: Promise<AtlasPointsFile> | null = null;
+
+/** Fetch + cache /atlas/points.json (deduped across callers). */
+export function fetchAtlasPoints(): Promise<AtlasPointsFile> {
+  if (!atlasPointsPromise) {
+    atlasPointsPromise = fetch("/atlas/points.json").then(async (res) => {
+      if (!res.ok) throw new Error("Failed to load atlas data");
+      return (await res.json()) as AtlasPointsFile;
+    });
+  }
+  return atlasPointsPromise;
+}
+
 /** Nature Cities paper is in press — link the publications entry, never the DOI. */
 export const MASS_PAPER = {
   title: "Nested economies of scale in global city mass",
