@@ -15,6 +15,7 @@ import {
   getFieldShelf,
   loadFieldShelfTips,
   openAlexUrl,
+  citersOfPaper,
   pickOne,
   searchSquares,
   type FieldShelfTips,
@@ -35,13 +36,25 @@ const FIELD_GAP = 12;
 /** A hovered square's card waits this long before closing, so the pointer can reach its links. */
 const CLOSE_DELAY = 180;
 
+/**
+ * Stroke opacity for the shelf→field citation fan. Scales with √N so megahits (ERL ~392,
+ * Nat Commun ~799) stay readable; small papers stay a bit stronger. Never caps the line count.
+ */
+function shelfFanOpacity(n: number): number {
+  if (n <= 0) return 0;
+  return Math.min(0.18, Math.max(0.05, 3.0 / Math.sqrt(n)));
+}
+
+/** Per-band opacity multipliers on the shelf fan (core strongest). */
+const SHELF_FAN_BAND = [1, 0.82, 0.68] as const;
+
 function maskOf(view: FieldShelfView, keep: (i: number) => boolean): Uint8Array {
   const m = new Uint8Array(view.squares.length);
   for (let i = 0; i < m.length; i++) if (keep(i)) m[i] = 1;
   return m;
 }
 
-/** Desktop (≥ 720 px): shelf above, field below, ≤ 4 lines from the square in focus to the papers it cites. */
+/** Desktop (≥ 720 px): shelf above, field below. Square focus: ≤ 4 lines. Shelf paper focus: lines from every citer. */
 function Stage({
   view,
   lit,
@@ -104,6 +117,24 @@ function Stage({
     return it ? [{ p, x: (it.x / view.shelf.width) * width }] : [];
   });
   const r = (view.field.cell / 2) * (frame?.s ?? 1) + 3;
+  // Shelf paper focus (and no square card): draw every citing link. Square focus keeps ≤ 4 lines.
+  const shelfFan = activePaper !== null && focus === null && frame && width > 0;
+  const fanCiters = shelfFan ? citersOfPaper(view, activePaper) : [];
+  const fanItem = shelfFan ? view.shelf.items.find((x) => x.p === activePaper) : null;
+  const fanAnchorX = fanItem ? (fanItem.x / view.shelf.width) * width : 0;
+  const fanAlpha = shelfFanOpacity(fanCiters.length);
+  const cellCss = view.field.cell * (frame?.s ?? 1);
+  const fanPaths = shelfFan
+    ? ([0, 1, 2] as const).map((band) => {
+        const parts: string[] = [];
+        for (const i of fanCiters) {
+          if (view.squares[i].band !== band) continue;
+          const pt = squareCentre(view, i, frame);
+          parts.push(`M${pt.x.toFixed(1)} ${(boxTop + pt.y).toFixed(1)}L${fanAnchorX.toFixed(1)} ${m.anchorY}`);
+        }
+        return { band, d: parts.join(""), n: parts.length };
+      })
+    : [];
 
   return (
     <div ref={stageRef} className="relative">
@@ -123,6 +154,39 @@ function Stage({
           className="absolute inset-0 h-full w-full"
         />
       </div>
+      {shelfFan && fanItem && (
+        <svg className="pointer-events-none absolute top-0 left-0 overflow-visible" width={width} height={boxTop + boxH} aria-hidden="true">
+          {/* All citing links first (thin, low α, band-tinted strength); lit squares redrawn on top so megahits stay readable. No entrance animation — reduced-motion gets the same final state. */}
+          {fanPaths.map(({ band, d, n }) =>
+            n > 0 ? (
+              <path
+                key={band}
+                d={d}
+                fill="none"
+                stroke="var(--color-teal)"
+                strokeWidth={0.55}
+                strokeOpacity={fanAlpha * SHELF_FAN_BAND[band]}
+                strokeLinecap="butt"
+              />
+            ) : null
+          )}
+          {fanCiters.map((i) => {
+            const pt = squareCentre(view, i, frame);
+            const half = cellCss / 2;
+            return (
+              <rect
+                key={view.squares[i].id}
+                x={pt.x - half}
+                y={boxTop + pt.y - half}
+                width={cellCss}
+                height={cellCss}
+                fill={BAND_COLORS[view.squares[i].band]}
+              />
+            );
+          })}
+          <circle cx={fanAnchorX} cy={m.anchorY} r={2.5} fill="var(--color-teal)" />
+        </svg>
+      )}
       {c && (
         <svg className="pointer-events-none absolute top-0 left-0 overflow-visible" width={width} height={boxTop + boxH} aria-hidden="true">
           {anchors.map((a) => (
@@ -258,14 +322,14 @@ function ReadingGuide() {
         "每个方块是一篇引用本人论文的文献（OpenAlex，已剔除自引）。点击方块在 OpenAlex 中打开。",
         `墨色：在本人 ${fieldShelfMeta.homeTopicsLeadCount} 个第一/通讯作者论文主题之内。浅余烬色：同一子领域或领域。余烬色：更远（同一大类、其他大类或无主题）。`,
         "越靠近中心越接近本人主题；方向没有含义。",
-        "书架上是本人论文，按主题再按年份排列；墨色描边的书脊是第一/末位/通讯作者论文。悬停或按 Tab 键可点亮引用它的方块。",
+        "书架上是本人论文，按主题再按年份排列；墨色描边的书脊是第一/末位/通讯作者论文。悬停或按 Tab 键可点亮引用它的方块，并画出每一条连线。",
         "可按作者、标题、期刊或年份搜索，或点“随机看一篇”。Esc 返回。",
       ]
     : [
         "Each square is one work that cites Ken's papers (OpenAlex, self-citations removed). Click one to open it in OpenAlex.",
         `Ink: inside the ${fieldShelfMeta.homeTopicsLeadCount} home topics of Ken's lead papers. Light ember: a neighbouring topic (same subfield or field). Ember: further out (same domain, another domain, or no topic).`,
         "Nearer the centre = closer to those topics. Direction means nothing.",
-        "The shelf holds Ken's papers by theme, then year; ink-edged spines are first / last / corresponding-author papers. Hover or Tab to one to light the works citing it.",
+        "The shelf holds Ken's papers by theme, then year; ink-edged spines are first / last / corresponding-author papers. Hover or Tab to one to light its citers and draw a thin link from each.",
         "Search by author, title, venue or year, or press Show me one. Esc returns to rest.",
       ];
   return (
@@ -346,8 +410,8 @@ function FieldShelfTable({ view, tips, status, onLoad }: { view: FieldShelfView;
 /**
  * Section 01 as Field & Shelf (preview, docs/reach/FIELD-SHELF-PLAN.md): every work citing Ken's papers
  * is one square, packed by topic distance from the fixed home topics of his lead papers; his papers sit
- * on a shelf above. Hover a paper to light its citers; hover a square for its card and ≤ 4 lines back to
- * the shelf; click to open it in OpenAlex. URL: ?viz=field-shelf&shelf=<doi>&fs=<OpenAlex id>.
+ * on a shelf above. Hover a paper to light its citers and draw every citation link; hover a square for its
+ * card and ≤ 4 lines back to the shelf; click to open it in OpenAlex. URL: ?viz=field-shelf&shelf=<doi>&fs=<OpenAlex id>.
  */
 export default function FieldShelf({ vizToggle }: { vizToggle: ReactNode }) {
   const { lens } = useReachLens();
@@ -473,7 +537,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle: ReactNode }) {
       <span className="font-medium text-ink">{paperReadout(fieldShelfPapers[activeP], zh)}</span>
     ) : focusI !== null ? null : (
       <span className="text-ink-faint">
-        {zh ? "悬停论文以点亮引用它的文献，悬停方块查看详情" : "Hover a paper to light the works citing it, or a square for its details"}
+        {zh ? "悬停论文以点亮引用并画出全部连线，悬停方块查看详情" : "Hover a paper to light its citers and draw every link, or a square for its details"}
       </span>
     );
   const callouts = worthALook(view, zh);

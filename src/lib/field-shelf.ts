@@ -334,13 +334,18 @@ export function pickOne(view: FieldShelfView, tips: FieldShelfTips, within: ((i:
   return pool ? pool[Math.floor(random() * pool.length)] : null;
 }
 
-/** Most-cited citing works of a paper (needs the tooltip payload). */
-export function topCiters(view: FieldShelfView, tips: FieldShelfTips, paper: number, n: number): number[] {
+/** Indexes of every square in this view that cites `paper` (shelf fan / lighting). */
+export function citersOfPaper(view: FieldShelfView, paper: number): number[] {
   const out: number[] = [];
   view.squares.forEach((s, i) => {
     if (s.papers.includes(paper)) out.push(i);
   });
-  return out
+  return out;
+}
+
+/** Most-cited citing works of a paper (needs the tooltip payload). */
+export function topCiters(view: FieldShelfView, tips: FieldShelfTips, paper: number, n: number): number[] {
+  return citersOfPaper(view, paper)
     .sort((a, b) => (tips.get(view.squares[b].id)?.citedBy ?? 0) - (tips.get(view.squares[a].id)?.citedBy ?? 0) || (view.squares[b].year ?? 0) - (view.squares[a].year ?? 0))
     .slice(0, n);
 }

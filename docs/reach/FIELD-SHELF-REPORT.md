@@ -9,7 +9,7 @@
 
 One square per OpenAlex work that cites Ken's papers (3,102 in All, 573 in Lead), packed into a calm field by topic distance from the **fixed home topics of his 11 lead papers**: ink in the core (a home topic), light ember for neighbours (same subfield or field), ember further out (same domain, another domain, or no topic). Direction means nothing. His papers stand above the field as a shelf of spines, grouped by theme and then year, each with its count of non-self citing works (“0 yet” when nobody cites it so far).
 
-- Hover or Tab to a spine → its citers light up, the rest dim to 15 %, and the readout says e.g. `ERL 2019 · 392 citing · 37% outside home topics`. No line fans.
+- Hover or Tab to a spine → its citers light up, the rest dim to 15 %, **and a thin teal link is drawn from every citing square up to that spine** (all of them — ERL 2019 draws 392, Nat Commun 2020 draws 799; stroke 0.55 px, opacity ≈ `3/√N` clamped to 0.05–0.18, with core/neighbour/further multipliers 1 / 0.82 / 0.68). Lit squares are redrawn on top of the links so megahits stay readable. No line-count cap; no entrance animation (reduced-motion sees the same final fan). Square hover still draws **≤ 4** lines only.
 - Hover a square → a card (title, first author, venue, year, “Builds on”, band and topic, OpenAlex link, DOI secondary) and at most 4 thin lines back to the spines it cites. Click → the OpenAlex record in a new tab.
 - Search (title, any author, venue, year) lights hits in teal; ↑ ↓ locate them, Enter opens OpenAlex. “Show me one” picks a random outside-home article or review (within the lit paper's citers if one is pinned).
 - Phone (< 720 px): the field is a picture (sticky while a paper is open), the shelf is a list with counts and outside share; tap a paper for its band split and most-cited citers; search and “Show me one” open a card. A tap on the field picks the nearest square (bonus).
@@ -31,7 +31,7 @@ One square per OpenAlex work that cites Ken's papers (3,102 in All, 573 in Lead)
 | “How it cites” | Omitted (locked): no citation-intent text anywhere |
 | Home topics | Fixed **Lead set**: 22 OpenAlex topics, computed once (locked). Squares never change colour with the chip — the builder asserts it |
 | Heat at rest | Topic-distance bands only: core d = 0 ink · neighbour d = 1–2 light ember · further d ≥ 3 or untagged ember |
-| Links | Shelf hover lights citers (dim ≈ 15 %), no fan; square hover ≤ 4 lines |
+| Links | Shelf hover lights citers (dim ≈ 15 %) **and draws every citing link** (thin, low-α fan; no count cap); square hover ≤ 4 lines |
 | Panel | Light, on-brand (`#fffcf7` paper, ink, ember, teal); no forest / mint |
 | Render | Canvas 2D squares (3 px, pixel-snapped at any device pixel ratio, 6 px staggered grid, ±1 px jitter) + HTML card; tooltip payloads lazy-loaded |
 | Click | OpenAlex record; DOI secondary in the card |
@@ -177,6 +177,21 @@ Both tooltip files are committed: each is well under the 2 MB limit and both reg
 
 - Required: `/workspace/redesign/screenshots/preview-reach-field-shelf-1280.png`, `…-380.png`, `…-hover.png` (copies in `docs/reach/screenshots/`). The hover shot shows an IPCC AR6 chapter that cites four of Ken's papers: card plus four lines to ERL 2019, Nat Commun 2020 and both Nat Sustain 2020 papers.
 - Review states (not committed): `/workspace/redesign/screenshots/preview-reach-field-shelf-{1280-lead,1280-shelf,1280-search,1280-zh,720,380-paper}.png`. Regenerate with `CHROMIUM_PATH=/usr/bin/google-chrome node scripts/reach/field-shelf-screenshots.mjs <baseUrl> <outDir…>` (`ONLY=` to pick).
+
+
+
+## Shelf-hover citation fan (2026-10-11)
+
+Ken asked that hovering a **shelf paper** also draw **all** citation links from its citing squares up to that spine (in addition to lighting). Square hover stays at ≤ 4 lines.
+
+| Sample paper | Lines drawn | Notes |
+| --- | ---: | --- |
+| ERL 2019 (lead) | **392** | megahit; base opacity ≈ 0.152 × band |
+| Nat Commun 2020 (co-author) | **799** | largest shelf; base opacity ≈ 0.106 × band |
+| IJGIS 2013 | **79** | mid; base opacity clamped at 0.18 × band |
+| Remote Sensing 2025 | **2** | small; base opacity clamped at 0.18 × band |
+
+Encoding: teal `#0d7377`, stroke **0.55** CSS px, base opacity `min(0.18, max(0.05, 3/√N))`, band multipliers core **1** / neighbour **0.82** / further **0.68**. Links are a single SVG `<path>` per band (no per-line DOM nodes). Lit squares are painted again above the paths so the field stays readable under dense fans. `prefers-reduced-motion`: same final fan, no staggered reveal. Screenshot: `docs/reach/screenshots/preview-reach-field-shelf-shelf-hover-lines.png` (also `/workspace/redesign/screenshots/`).
 
 ## Known issues and open questions
 

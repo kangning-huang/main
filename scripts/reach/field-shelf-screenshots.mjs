@@ -27,6 +27,8 @@ const SHOTS = [
   // Review states.
   { name: "1280-lead", width: 1280, height: 1000, query: "?viz=field-shelf&lens=lead" },
   { name: "1280-shelf", width: 1280, height: 1000, query: `${Q}&shelf=${ERL}` },
+  // Shelf paper focus: every citing link drawn (ERL 2019 → 392 lines).
+  { name: "shelf-hover-lines", width: 1280, height: 1000, query: `${Q}&shelf=${ERL}` },
   { name: "1280-search", width: 1280, height: 1000, query: Q, search: "seto" },
   { name: "1280-zh", width: 1280, height: 1000, query: Q, zh: true },
   { name: "720", width: 720, height: 1100, query: Q },
