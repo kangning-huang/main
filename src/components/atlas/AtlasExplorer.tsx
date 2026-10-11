@@ -99,7 +99,7 @@ export default function AtlasExplorer() {
         <CitySearch points={points} onSelect={select} />
         <div className="flex flex-wrap gap-2 text-sm">
           <span className="text-ink-faint">
-            <T en="Try:" zh="试试：" />
+            <T en="Try:" zh="试试:" />
           </span>
           {SUGGESTED.map((slug) => {
             const p = bySlug.get(slug);

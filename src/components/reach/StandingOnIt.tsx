@@ -33,7 +33,7 @@ export default function StandingOnIt() {
                     <T en={`cited ${w.openalexCitedByCount.toLocaleString()}× (OpenAlex)`} zh={`被引 ${w.openalexCitedByCount.toLocaleString()} 次（OpenAlex）`} />
                   </div>
                   <div className="mt-0.5 text-xs text-ink-faint">
-                    <T en="builds on: " zh="引用了：" />
+                    <T en="builds on: " zh="引用:" />
                     {w.builds_on.join("; ")}
                   </div>
                 </div>

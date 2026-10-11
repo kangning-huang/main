@@ -435,7 +435,7 @@ function ComingRow({
       <p className="text-sm text-ink-muted">
         <T en={en} zh={zh} />{" "}
         <span className="text-[10px] uppercase tracking-wide">
-          <T en="coming" zh="即将推出" />
+          <T en="coming" zh="即将上线" />
         </span>
       </p>
       <p className="mt-0.5 text-xs text-ink-faint">
