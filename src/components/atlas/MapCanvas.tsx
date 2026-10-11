@@ -83,11 +83,16 @@ function cityBounds(lon: number, lat: number): [[number, number], [number, numbe
 /**
  * Paper-count dots are drawn on a 2D canvas overlay (not MapLibre circle layers).
  *
- * Root cause of missing dots on some clients: MapLibre GL circle layers with
- * data-driven `["get","color"]` / `["get","opacity"]` can fail to paint when
- * WebGL init is flaky, the style reloads, or the custom layer is dropped under
- * the remote Carto style. Basemap stays; dots vanish. Canvas overlay keeps dots
- * visible on both Positron and Dark Matter regardless of circle-layer state.
+ * Hardening (2026-10-11):
+ * 1. WebGL canvases can composite above sibling 2D canvases on some GPUs/browsers
+ *    even when DOM z-index says otherwise — force a stacking context + translateZ
+ *    so the overlay stays visible above the Carto basemap.
+ * 2. MapLibre often measures the absolute pane before layout settles (#91). After
+ *    resize we re-fitBounds (world or selected city) so map.project stays aligned
+ *    with the overlay; otherwise every dot can project off-screen and the field
+ *    looks "empty" while points.json loaded fine.
+ * 3. If projection yields zero in-bounds dots while we have hundreds of points,
+ *    fall back to equirectangular for that frame and request a refit.
  */
 export default function MapCanvas({
   points,
@@ -105,6 +110,9 @@ export default function MapCanvas({
   const filterRef = useRef(filter);
   const darkRef = useRef(false);
   const mapReadyRef = useRef(false);
+  const forceEquirectRef = useRef(false);
+  const refitNeededRef = useRef(false);
+  const lastSizeRef = useRef({ w: 0, h: 0 });
   const [mapFailed, setMapFailed] = useState(false);
   const hitRef = useRef<{ p: AtlasPoint; x: number; y: number }[]>([]);
   const rafRef = useRef<number | null>(null);
@@ -125,12 +133,15 @@ export default function MapCanvas({
     if (w <= 0 || h <= 0) return;
 
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
-    if (canvas.width !== Math.round(w * dpr) || canvas.height !== Math.round(h * dpr)) {
-      canvas.width = Math.round(w * dpr);
-      canvas.height = Math.round(h * dpr);
-      canvas.style.width = `${w}px`;
-      canvas.style.height = `${h}px`;
+    const bw = Math.round(w * dpr);
+    const bh = Math.round(h * dpr);
+    if (canvas.width !== bw || canvas.height !== bh) {
+      canvas.width = bw;
+      canvas.height = bh;
     }
+    // Prefer explicit pixel size over inset-0 stretch so bitmap ↔ CSS stay 1:1.
+    canvas.style.width = `${w}px`;
+    canvas.style.height = `${h}px`;
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
@@ -144,16 +155,23 @@ export default function MapCanvas({
     const stroke = dark ? "rgba(255,252,247,0.55)" : "rgba(40,28,20,0.35)";
     const selStroke = dark ? "#fff8f0" : "#281c14";
 
+    const useMap =
+      !!map &&
+      mapReadyRef.current &&
+      !forceEquirectRef.current &&
+      !mapFailed;
+
     const project = (lon: number, lat: number): [number, number] | null => {
-      if (map && mapReadyRef.current) {
+      if (useMap && map) {
         try {
           const pt = map.project([lon, lat]);
+          if (!Number.isFinite(pt.x) || !Number.isFinite(pt.y)) return null;
           return [pt.x, pt.y];
         } catch {
           /* fall through */
         }
       }
-      // Fallback equirectangular if MapLibre is not ready / WebGL failed.
+      // Fallback equirectangular if MapLibre is not ready / WebGL failed / projection empty.
       const [[west, south], [east, north]] = WORLD_BOUNDS;
       const x = ((lon - west) / (east - west)) * w;
       const y = ((north - lat) / (north - south)) * h;
@@ -164,6 +182,7 @@ export default function MapCanvas({
       (a, b) => paperCount(a) - paperCount(b) || a.pop15 - b.pop15,
     );
     hitRef.current = [];
+    let drawn = 0;
 
     const drawOne = (p: AtlasPoint, emphasize: boolean) => {
       const xy = project(p.lon, p.lat);
@@ -198,6 +217,7 @@ export default function MapCanvas({
       ctx.stroke();
 
       hitRef.current.push({ p, x, y });
+      drawn += 1;
     };
 
     for (const p of sorted) {
@@ -208,7 +228,18 @@ export default function MapCanvas({
       const sel = pts.find((p) => p.id === selId);
       if (sel) drawOne(sel, true);
     }
-  }, []);
+
+    // Projection went off-screen (typical after zero-size MapLibre init). Fall back
+    // once and ask the resize/refit path to realign the camera.
+    if (useMap && pts.length >= 50 && drawn === 0) {
+      forceEquirectRef.current = true;
+      refitNeededRef.current = true;
+      // Re-enter with equirectangular so the user sees dots immediately.
+      requestAnimationFrame(() => {
+        paintDots();
+      });
+    }
+  }, [mapFailed]);
 
   const schedulePaint = useCallback(() => {
     if (rafRef.current != null) return;
@@ -217,6 +248,59 @@ export default function MapCanvas({
       paintDots();
     });
   }, [paintDots]);
+
+  const fitCamera = useCallback(
+    (map: maplibregl.Map, duration: number) => {
+      const selId = selectedIdRef.current;
+      if (selId == null) {
+        map.fitBounds(WORLD_BOUNDS, { padding: 12, duration });
+        return;
+      }
+      const sel = pointsRef.current.find((p) => p.id === selId);
+      if (!sel) {
+        map.fitBounds(WORLD_BOUNDS, { padding: 12, duration });
+        return;
+      }
+      map.fitBounds(cityBounds(sel.lon, sel.lat), {
+        padding: 48,
+        duration,
+        maxZoom: 11,
+      });
+    },
+    [],
+  );
+
+  const syncSizeAndRefit = useCallback(
+    (map: maplibregl.Map, opts?: { forceRefit?: boolean }) => {
+      const wrap = wrapRef.current;
+      const mapEl = mapElRef.current;
+      if (!wrap || !mapEl) return;
+
+      const w = wrap.clientWidth;
+      const h = wrap.clientHeight;
+      if (w <= 0 || h <= 0) return;
+
+      mapEl.style.width = `${w}px`;
+      mapEl.style.height = `${h}px`;
+      map.resize();
+
+      const prev = lastSizeRef.current;
+      const sizeChanged =
+        Math.abs(prev.w - w) > 1 || Math.abs(prev.h - h) > 1 || prev.w === 0;
+      lastSizeRef.current = { w, h };
+
+      if (opts?.forceRefit || sizeChanged || refitNeededRef.current) {
+        refitNeededRef.current = false;
+        forceEquirectRef.current = false;
+        // duration 0 so paintDots on the next move/idle sees a settled transform
+        fitCamera(map, 0);
+      }
+
+      mapReadyRef.current = true;
+      schedulePaint();
+    },
+    [fitCamera, schedulePaint],
+  );
 
   // Create MapLibre basemap once; dots are canvas-overlay (see paintDots).
   useEffect(() => {
@@ -256,15 +340,32 @@ export default function MapCanvas({
       "top-right",
     );
 
+    const pinStacking = () => {
+      // Keep the WebGL basemap under the 2D overlay on GPUs that promote WebGL.
+      try {
+        const gl = map.getCanvas();
+        const box = map.getCanvasContainer();
+        gl.style.zIndex = "0";
+        box.style.zIndex = "0";
+        box.style.position = box.style.position || "absolute";
+      } catch {
+        /* ignore */
+      }
+    };
+
     const onReady = () => {
-      mapReadyRef.current = true;
-      schedulePaint();
+      pinStacking();
+      syncSizeAndRefit(map, { forceRefit: true });
     };
     map.on("load", onReady);
     map.on("style.load", onReady);
     map.on("move", schedulePaint);
     map.on("zoom", schedulePaint);
     map.on("resize", schedulePaint);
+    map.on("idle", () => {
+      if (refitNeededRef.current) syncSizeAndRefit(map, { forceRefit: true });
+      else schedulePaint();
+    });
     map.on("error", (e) => {
       console.warn("Atlas MapLibre error", e.error ?? e);
     });
@@ -309,26 +410,19 @@ export default function MapCanvas({
     const onScheme = () => {
       darkRef.current = prefersDarkBasemap();
       mapReadyRef.current = false;
+      forceEquirectRef.current = true; // keep dots visible during style reload
+      schedulePaint();
       map.setStyle(darkRef.current ? CARTO_STYLE_DARK : CARTO_STYLE_LIGHT);
-      // style.load will flip mapReady and repaint
+      // style.load will flip mapReady and refit
     };
     media.addEventListener("change", onScheme);
 
     mapRef.current = map;
 
-    const syncSize = () => {
-      const wrap = wrapRef.current;
-      const mapEl = mapElRef.current;
-      if (wrap && mapEl) {
-        mapEl.style.width = `${wrap.clientWidth}px`;
-        mapEl.style.height = `${wrap.clientHeight}px`;
-      }
-      map.resize();
-      schedulePaint();
-    };
-    map.on("load", syncSize);
     // MapLibre often measures before absolute layout settles — sync twice.
-    requestAnimationFrame(() => requestAnimationFrame(syncSize));
+    requestAnimationFrame(() =>
+      requestAnimationFrame(() => syncSizeAndRefit(map, { forceRefit: true })),
+    );
 
     return () => {
       media.removeEventListener("change", onScheme);
@@ -336,7 +430,7 @@ export default function MapCanvas({
       mapRef.current = null;
       mapReadyRef.current = false;
     };
-  }, [schedulePaint]);
+  }, [schedulePaint, syncSizeAndRefit]);
 
   // Repaint when data / filter / selection change.
   useEffect(() => {
@@ -353,39 +447,26 @@ export default function MapCanvas({
 
     const duration = prefersReducedMotion() ? 0 : ZOOM_MS;
     const go = () => {
-      if (selectedId == null) {
-        map.fitBounds(WORLD_BOUNDS, { padding: 12, duration });
-        return;
-      }
-      const sel = pointsRef.current.find((p) => p.id === selectedId);
-      if (!sel) return;
-      map.fitBounds(cityBounds(sel.lon, sel.lat), {
-        padding: 48,
-        duration,
-        maxZoom: 11,
-      });
+      forceEquirectRef.current = false;
+      fitCamera(map, duration);
     };
 
     if (map.isStyleLoaded()) go();
     else map.once("load", go);
-  }, [selectedId, schedulePaint]);
+  }, [selectedId, fitCamera, schedulePaint]);
 
   // ResizeObserver keeps canvas + map in sync with layout.
   useEffect(() => {
     const wrap = wrapRef.current;
     if (!wrap) return;
     const ro = new ResizeObserver(() => {
-      const mapEl = mapElRef.current;
-      if (mapEl && wrap) {
-        mapEl.style.width = `${wrap.clientWidth}px`;
-        mapEl.style.height = `${wrap.clientHeight}px`;
-      }
-      mapRef.current?.resize();
-      schedulePaint();
+      const map = mapRef.current;
+      if (map) syncSizeAndRefit(map);
+      else schedulePaint();
     });
     ro.observe(wrap);
     return () => ro.disconnect();
-  }, [schedulePaint]);
+  }, [schedulePaint, syncSizeAndRefit]);
 
   useEffect(() => {
     return () => {
@@ -398,17 +479,27 @@ export default function MapCanvas({
       ref={wrapRef}
       role="img"
       aria-label="World map of cities colored by how many papers cover each city"
-      className="relative h-[min(62vw,520px)] min-h-[360px] w-full overflow-hidden rounded-lg border border-rule bg-paper-warm [&_.maplibregl-ctrl-attrib]:text-[10px] [&_.maplibregl-ctrl-attrib]:leading-tight"
+      className="relative isolate z-0 h-[min(62vw,520px)] min-h-[360px] w-full overflow-hidden rounded-lg border border-rule bg-paper-warm [&_.maplibregl-ctrl-attrib]:text-[10px] [&_.maplibregl-ctrl-attrib]:leading-tight"
     >
-      <div ref={mapElRef} className="absolute inset-0 h-full w-full" />
-      {/* pointer-events-none when MapLibre is up so pan/zoom work; clickable if basemap failed */}
+      {/* z-0 + isolate: contain WebGL compositing so the overlay can sit above */}
+      <div
+        ref={mapElRef}
+        className="absolute inset-0 z-0 h-full w-full"
+        style={{ zIndex: 0 }}
+      />
+      {/* translateZ(0) promotes a compositor layer above WebGL on flaky GPUs */}
       <canvas
         ref={canvasRef}
         className={
           mapFailed
-            ? "absolute inset-0 z-[1] cursor-crosshair"
-            : "pointer-events-none absolute inset-0 z-[1]"
+            ? "absolute left-0 top-0 z-[2] cursor-crosshair"
+            : "pointer-events-none absolute left-0 top-0 z-[2]"
         }
+        style={{
+          zIndex: 2,
+          transform: "translateZ(0)",
+          WebkitTransform: "translateZ(0)",
+        }}
         onClick={
           mapFailed
             ? (e) => {
