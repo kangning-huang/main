@@ -45,8 +45,8 @@ export default function ReachMethod() {
           </li>
           <li>
             <T
-              en="Field colour is each citing work's own OpenAlex cited_by_count (same across All / Lead). Topic cards / Who below use the adaptive OpenAlex taxonomy; Where compares Glow (KDE) and Honeycomb (hexbin) affiliation density, plus optional observed÷expected countries."
-              zh="田野颜色表示施引文献自身的 OpenAlex 被引次数（全部/第一通讯视角下同一文献同色）。主题卡片与谁在使用使用自适应 OpenAlex 分类；在哪里可比较机构密度热力（Glow）与蜂巢分箱（Honeycomb），并可叠加“实际÷预期”国家着色。"
+              en="Field colour is each citing work's own OpenAlex cited_by_count (same across All / Lead). Where is the observed÷expected country map; Topic cards / Who below use the adaptive OpenAlex taxonomy; any outside-home % elsewhere on the page is labelled with its topic rule."
+              zh="田野颜色表示施引文献自身的 OpenAlex 被引次数（全部/第一通讯视角下同一文献同色）。在哪里为国家“实际÷预期”地图；主题卡片与谁在使用使用自适应 OpenAlex 分类；页面上若另有“主题外”占比，会标注其所用主题规则。"
             />
           </li>
           <li>
@@ -57,8 +57,8 @@ export default function ReachMethod() {
           </li>
           <li>
             <T
-              en={`Where: Glow = Gaussian KDE (σ ≈ 550 km); Honeycomb = ~300 km equal-area hexbin; weight = unique citing works per institution; Lead shares All's colour scale. Optional country shading uses observed÷expected. ${meta.countryBaseline}`}
-              zh="在哪里：Glow 为高斯核密度（σ ≈ 550 km）；Honeycomb 为约 300 km 等积六边形分箱；权重为每机构唯一施引文献数；Lead 与 All 共用色标。可选国家着色为实际÷预期。国家归一化：预期施引 ≈ 各施引领域中该国产出占比 × 该领域施引文献数之和。"
+              en={`Country normalization: ${meta.countryBaseline}`}
+              zh="国家归一化：预期施引 ≈ 各施引领域中该国产出占比 × 该领域施引文献数之和。"
             />
           </li>
           <li>
