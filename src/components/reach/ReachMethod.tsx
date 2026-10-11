@@ -45,8 +45,8 @@ export default function ReachMethod() {
           </li>
           <li>
             <T
-              en="Field colour is each citing work's own OpenAlex cited_by_count (same across All / Lead). Topic cards / Who / Where below still use the adaptive OpenAlex taxonomy; any outside-home % elsewhere on the page is labelled with its topic rule."
-              zh="田野颜色表示施引文献自身的 OpenAlex 被引次数（全部/第一通讯视角下同一文献同色）。下方主题卡片、谁在使用、在哪里等节仍使用自适应 OpenAlex 分类；页面上若另有“主题外”占比，会标注其所用主题规则。"
+              en="Field colour is each citing work's own OpenAlex cited_by_count (same across All / Lead). Where / Topic cards / Who below still use the adaptive OpenAlex taxonomy; any outside-home % elsewhere on the page is labelled with its topic rule."
+              zh="田野颜色表示施引文献自身的 OpenAlex 被引次数（全部/第一通讯视角下同一文献同色）。下方在哪里、主题卡片、谁在使用等节仍使用自适应 OpenAlex 分类；页面上若另有“主题外”占比，会标注其所用主题规则。"
             />
           </li>
           <li>
