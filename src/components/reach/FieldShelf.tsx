@@ -315,11 +315,11 @@ function ReadingGuide() {
         "可按作者、标题、期刊或年份搜索，或点“随机看一篇”。Esc 返回。",
       ]
     : [
-        "Each square is one work that cites Ken's papers (OpenAlex, self-citations removed). Click one to open it in OpenAlex.",
-        "Colour = that citing work's own citation count (log bins, ember → ink). Darker and nearer the centre = higher-impact papers that cite this research.",
-        "Direction means nothing; the centre is the high-impact core, the edge holds lightly cited citers.",
-        "The shelf holds Ken's papers by theme, then year; ink-edged spines are first / last / corresponding-author papers. Hover or Tab to one to light its citers and draw a thin link from each.",
-        "Search by author, title, venue or year, or press Show me one. Esc returns to rest.",
+        "Each square is one work that cites these papers (OpenAlex, self-citations removed). Click a square to open it in OpenAlex.",
+        "Colour is the citing work's own citation count (log bins, ember to ink). Darker and nearer the centre means that citing paper is itself more cited.",
+        "Direction on the field means nothing. The centre holds high-impact citers; the edge holds lightly cited ones.",
+        "The shelf is Ken's papers by theme, then year. Ink-edged spines mark first-, last-, or corresponding-author papers. Hover or Tab a spine to light its citers and draw a thin link from each.",
+        "Search by author, title, venue, or year, or press Show me one. Esc returns to rest.",
       ];
   return (
     <ul className="space-y-1.5 text-sm leading-snug text-ink-muted">

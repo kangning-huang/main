@@ -36,7 +36,7 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
 export const metadata: Metadata = {
   title: "Projects",
   description:
-    "Research tools, interactive visualizations, and web applications developed by Kangning (Ken) Huang.",
+    "Tools and maps from Kangning (Ken) Huang's papers: maps and explorers tied to specific results.",
   alternates: {
     canonical: canonicalUrl("/projects"),
   },
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     type: "website",
     title: pageTitle("Projects"),
     description:
-      "Research tools, interactive visualizations, and web applications developed by Kangning (Ken) Huang.",
+      "Tools and maps from Kangning (Ken) Huang's papers: maps and explorers tied to specific results.",
     url: canonicalUrl("/projects"),
     images: [
       {
@@ -62,7 +62,7 @@ export default function ProjectsPage() {
     path: "/projects",
     title: "Projects",
     description:
-      "Research tools, interactive visualizations, and web applications developed by Kangning (Ken) Huang.",
+      "Tools and maps from Kangning (Ken) Huang's papers: maps and explorers tied to specific results.",
   });
 
   const breadcrumbs = breadcrumbSchema([{ name: "Projects", path: "/projects" }]);
@@ -83,17 +83,17 @@ export default function ProjectsPage() {
         </h1>
         <p className="mt-2 text-ink-muted">
           <T
-            en="Research tools, interactive visualizations, and web applications."
+            en="Tools and maps from the papers."
             zh="研究工具、交互式可视化和网络应用。"
           />
         </p>
 
         <h2 className="mt-10 font-display text-2xl text-ink">
-          <T en="Academic Projects" zh="学术项目" />
+          <T en="Academic projects" zh="学术项目" />
         </h2>
         <p className="mt-1 text-sm text-ink-muted">
           <T
-            en="Interactive visualizations and tools accompanying my research papers."
+            en="Maps and explorers tied to specific results."
             zh="配套研究论文的交互式可视化和工具。"
           />
         </p>

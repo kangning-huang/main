@@ -59,7 +59,7 @@ export default function TeachingPage() {
           </h1>
           <p className="mt-5 max-w-3xl text-[15px] leading-[1.75] text-ink-muted animate-fade-up delay-1">
             <T
-              en="I teach environmental studies at NYU Shanghai, from a debate-driven introduction to environmental thought, through a systems-science gateway, to a course on the environmental challenges and opportunities of cities."
+              en="I teach environmental studies at NYU Shanghai in three courses: a debate-driven introduction to environmental thought, a systems-science gateway, and a course on the environmental challenges and opportunities of cities."
               zh="我在上海纽约大学讲授环境研究课程：从以辩论为主线的环境思想导论，到系统科学视角的入门课，再到关注城市环境挑战与机遇的专题课。"
             />
           </p>
@@ -100,7 +100,7 @@ export default function TeachingPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted">
             <T
-              en="Beyond the classroom, I supervise undergraduate capstones and research projects through the CLUEs Lab. Projects, placements, and student honors are listed on the lab and advisee pages."
+              en="Outside class I supervise undergraduate capstones and research through the CLUEs Lab. Projects, placements, and honors are on the lab and advisee pages."
               zh="在课堂之外，我通过 CLUEs 实验室指导本科毕业论文与研究项目。项目、去向与学生荣誉详见实验室与指导学生页面。"
             />
           </p>

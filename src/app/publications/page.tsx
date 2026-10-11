@@ -9,7 +9,7 @@ import T from "@/components/T";
 export const metadata: Metadata = {
   title: "Publications",
   description:
-    "Publications by Kangning (Ken) Huang on urban heat islands, global urban expansion, climate adaptation, flood risk, urban scaling laws, and remote sensing. Updated with live Google Scholar citation metrics.",
+    "Papers on urban expansion, heat, flood risk, urban scaling, and remote sensing, with live Google Scholar citation counts.",
   alternates: {
     canonical: canonicalUrl("/publications"),
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     type: "website",
     title: pageTitle("Publications"),
     description:
-      "Publications by Kangning (Ken) Huang on urban heat islands, global urban expansion, climate adaptation, flood risk, urban scaling laws, and remote sensing.",
+      "Papers on urban expansion, heat, flood risk, urban scaling, and remote sensing, with live Google Scholar citation counts.",
     url: canonicalUrl("/publications"),
     images: [
       {
