@@ -100,7 +100,7 @@ export function WorkDetails({
           {sq.papers.map((p) => (
             <li key={p}>
               {fieldShelfPapers[p].short}
-              {fieldShelfPapers[p].lens === "lead" && <span className="ml-1 text-[10px] text-ink-faint">{zh ? "一作/通讯" : "lead"}</span>}
+              {fieldShelfPapers[p].lens === "lead" && <span className="ml-1 text-[10px] text-ink-faint">{zh ? "第一/通讯" : "lead"}</span>}
             </li>
           ))}
         </ul>

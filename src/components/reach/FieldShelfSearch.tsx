@@ -87,7 +87,7 @@ export default function FieldShelfSearch({ view, tips, status, onLoad, query, on
             aria-controls={listId}
             aria-autocomplete="list"
             aria-activedescendant={showList && active >= 0 ? `${listId}-${active}` : undefined}
-            aria-label={zh ? "查找施引文献" : "Find a citing work"}
+            aria-label={zh ? "查找引用我的文献" : "Find a citing work"}
             placeholder={zh ? "查找引用我研究的文献（作者、标题、发表来源、年份）" : "Find a citing work: author, title, venue, year"}
             value={query}
             onFocus={() => {
@@ -106,7 +106,7 @@ export default function FieldShelfSearch({ view, tips, status, onLoad, query, on
           <ul
             id={listId}
             role="listbox"
-            aria-label={zh ? "匹配的施引文献" : "Matching citing works"}
+            aria-label={zh ? "引用我的文献搜索结果" : "Matching citing works"}
             className={`absolute inset-x-0 top-full z-30 mt-1 max-h-80 overflow-auto rounded-xl border border-rule bg-paper p-1 shadow-[0_12px_32px_-12px_rgba(20,18,17,0.25)] ${showList ? "" : "hidden"}`}
           >
             {listed.map((i, k) => {

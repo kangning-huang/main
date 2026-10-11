@@ -217,7 +217,7 @@ export function PaperDetails({
           <dl className="grid grid-cols-[auto_1fr] gap-x-4 gap-y-1.5">
             <dt className="text-ink-faint">{zh ? "施引文献" : "Citing works"}</dt>
             <dd className="tabular-nums text-ink">
-              {fmt(paper.citing)} <span className="text-ink-muted">{zh ? "（非自引）" : "(non-self)"}</span>
+              {fmt(paper.citing)} <span className="text-ink-muted">{zh ? "（不含自引）" : "(non-self)"}</span>
             </dd>
             <dt className="text-ink-faint">{zh ? "引用它的高被引文献（≥100）" : "High-impact citers (≥100)"}</dt>
             <dd className="tabular-nums text-ink">
