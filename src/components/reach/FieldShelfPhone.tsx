@@ -90,7 +90,7 @@ export default function FieldShelfPhone({ view, lit, hits, pinPaper, onPinPaper,
       )}
 
       <div>
-        <h3 className="text-xs font-medium uppercase tracking-[0.14em] text-ink-faint">{zh ? "我的论文 · 点按后点亮引用它们的文献" : "Ken's papers · tap to light their citers"}</h3>
+        <h3 className="text-xs font-medium uppercase tracking-[0.14em] text-ink-faint">{zh ? "我的论文 · 点按一篇，点亮引用它的文献" : "Ken's papers · tap to light their citers"}</h3>
         {groups.map(({ theme, items }) => (
           <section key={theme.id} className="mt-3" aria-label={zh ? theme.zh : theme.en}>
             <h4 className="text-xs text-ink-muted">{zh ? theme.zh : theme.en}</h4>
@@ -109,7 +109,7 @@ export default function FieldShelfPhone({ view, lit, hits, pinPaper, onPinPaper,
                     >
                       <span
                         className={`inline-block h-3 w-2 translate-y-[1px] rounded-[2px] ${lead ? "border-[1.5px] border-ink" : "border border-rule"}`}
-                        aria-label={lead ? (zh ? "第一/通讯作者" : "lead author") : zh ? "合作" : "co-authored"}
+                        aria-label={lead ? (zh ? "第一/末位/通讯作者" : "lead author") : zh ? "合作" : "co-authored"}
                       />
                       <span className={`min-w-0 text-sm leading-snug ${open ? "font-medium text-ember-dark" : lead ? "text-ink" : "text-ink-muted"}`}>{paper.short}</span>
                       <span className="text-xs whitespace-nowrap tabular-nums text-ink-muted">

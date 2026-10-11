@@ -66,10 +66,10 @@ export default function FieldShelfSearch({ view, tips, status, onLoad, query, on
 
   const statusText = (() => {
     if (status === "error") return null;
-    if (query.trim().length < 2) return status === "loading" ? (zh ? "正在加载引用我研究的文献…" : "Loading the citing works…") : "";
+    if (query.trim().length < 2) return status === "loading" ? (zh ? "正在加载引用我论文的文献…" : "Loading the citing works…") : "";
     if (!tips) return zh ? "正在加载…" : "Loading…";
-    if (!hits || hits.length === 0) return zh ? "没有匹配的文献" : "No citing work matches";
-    return zh ? `找到 ${fmt(hits.length)} 篇匹配文献，已在图中以青色点亮` : `${fmt(hits.length)} match${hits.length === 1 ? "" : "es"}, lit in teal`;
+    if (!hits || hits.length === 0) return zh ? "没有找到匹配文献" : "No citing work matches";
+    return zh ? `找到 ${fmt(hits.length)} 篇文献，已在图中用青绿色点亮` : `${fmt(hits.length)} match${hits.length === 1 ? "" : "es"}, lit in teal`;
   })();
 
   return (
@@ -87,8 +87,8 @@ export default function FieldShelfSearch({ view, tips, status, onLoad, query, on
             aria-controls={listId}
             aria-autocomplete="list"
             aria-activedescendant={showList && active >= 0 ? `${listId}-${active}` : undefined}
-            aria-label={zh ? "查找引用我的文献" : "Find a citing work"}
-            placeholder={zh ? "查找引用我研究的文献（作者、标题、发表来源、年份）" : "Find a citing work: author, title, venue, year"}
+            aria-label={zh ? "查找文献" : "Find a citing work"}
+            placeholder={zh ? "按作者、标题、发表来源或年份，查找引用我论文的文献" : "Find a citing work: author, title, venue, year"}
             value={query}
             onFocus={() => {
               onLoad();
@@ -106,7 +106,7 @@ export default function FieldShelfSearch({ view, tips, status, onLoad, query, on
           <ul
             id={listId}
             role="listbox"
-            aria-label={zh ? "引用我的文献搜索结果" : "Matching citing works"}
+            aria-label={zh ? "匹配的文献" : "Matching citing works"}
             className={`absolute inset-x-0 top-full z-30 mt-1 max-h-80 overflow-auto rounded-xl border border-rule bg-paper p-1 shadow-[0_12px_32px_-12px_rgba(20,18,17,0.25)] ${showList ? "" : "hidden"}`}
           >
             {listed.map((i, k) => {
@@ -139,7 +139,7 @@ export default function FieldShelfSearch({ view, tips, status, onLoad, query, on
             })}
             {hits && hits.length > LISTED && (
               <li role="presentation" className="px-2.5 py-1.5 text-xs text-ink-faint">
-                {zh ? `先显示前 ${LISTED} 篇（共 ${fmt(hits.length)} 篇）；多输入几个词可缩小范围。` : `First ${LISTED} of ${fmt(hits.length)}; type more words to narrow.`}
+                {zh ? `先显示 ${fmt(hits.length)} 篇中的前 ${LISTED} 篇；再加几个词，可以缩小范围。` : `First ${LISTED} of ${fmt(hits.length)}; type more words to narrow.`}
               </li>
             )}
           </ul>
@@ -157,7 +157,7 @@ export default function FieldShelfSearch({ view, tips, status, onLoad, query, on
       </div>
       {status === "error" ? (
         <p className="mt-1.5 text-xs text-ink-muted" aria-live="polite">
-          {zh ? "引用我论文的文献列表未能加载。" : "The list of citing works did not load."}{" "}
+          {zh ? "引用我论文的文献列表加载失败。" : "The list of citing works did not load."}{" "}
           <button type="button" onClick={onLoad} className="text-teal hover:underline">
             {zh ? "重试" : "Retry"}
           </button>

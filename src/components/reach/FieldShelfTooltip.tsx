@@ -81,7 +81,7 @@ export function WorkDetails({
           <p className="line-clamp-3 text-[13px] font-medium leading-snug text-ink">{tip.title}</p>
         ) : status === "error" ? (
           <p className="text-[13px] text-ink-muted">
-            {zh ? "详情未能加载。" : "Details did not load."}{" "}
+            {zh ? "详情加载失败。" : "Details did not load."}{" "}
             <button type="button" onClick={onRetry} className="text-teal underline-offset-2 hover:underline">
               {zh ? "重试" : "Retry"}
             </button>
@@ -95,12 +95,12 @@ export function WorkDetails({
         </p>
       </div>
       <div>
-        <p className="text-[10.5px] uppercase tracking-[0.12em] text-ink-faint">{zh ? "引用我的论文" : "Builds on"}</p>
+        <p className="text-[10.5px] uppercase tracking-[0.12em] text-ink-faint">{zh ? "引用哪些论文" : "Builds on"}</p>
         <ul className="mt-0.5 space-y-px text-ink">
           {sq.papers.map((p) => (
             <li key={p}>
               {fieldShelfPapers[p].short}
-              {fieldShelfPapers[p].lens === "lead" && <span className="ml-1 text-[10px] text-ink-faint">{zh ? "第一/通讯" : "lead"}</span>}
+              {fieldShelfPapers[p].lens === "lead" && <span className="ml-1 text-[10px] text-ink-faint">{zh ? "第一/末位/通讯" : "lead"}</span>}
             </li>
           ))}
         </ul>
