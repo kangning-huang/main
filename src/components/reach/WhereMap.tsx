@@ -9,6 +9,8 @@ import { useReachLens } from "./ReachLens";
 
 const MIN_WORKS = 5;
 
+type DensityMode = "glow" | "honeycomb";
+
 const BINS: { min: number; color: string; en: string; zh: string }[] = [
   { min: 6, color: "#0d7377", en: "≥ 6× expected", zh: "≥ 预期 6 倍" },
   { min: 3, color: "#4fa5a8", en: "3–6×", zh: "3–6 倍" },
@@ -18,16 +20,15 @@ const BINS: { min: number; color: string; en: string; zh: string }[] = [
 ];
 const binFor = (ratio: number) => BINS.find((b) => ratio >= b.min) ?? BINS[BINS.length - 1];
 
-/** Ember–teal density ramp on transparent (matches site ink/ember). */
+/** Ember–teal density ramp (shared by Glow + Honeycomb). */
 function colourFor(t: number): [number, number, number, number] {
   if (t <= 0) return [0, 0, 0, 0];
-  // stops: soft teal → deep teal → ember
   const stops: { t: number; c: [number, number, number, number] }[] = [
-    { t: 0.05, c: [168, 213, 214, 40] },
-    { t: 0.25, c: [79, 165, 168, 110] },
-    { t: 0.5, c: [13, 115, 119, 160] },
-    { t: 0.75, c: [196, 92, 38, 190] },
-    { t: 1, c: [139, 46, 14, 220] },
+    { t: 0.05, c: [168, 213, 214, 55] },
+    { t: 0.25, c: [79, 165, 168, 130] },
+    { t: 0.5, c: [13, 115, 119, 175] },
+    { t: 0.75, c: [196, 92, 38, 200] },
+    { t: 1, c: [139, 46, 14, 230] },
   ];
   const u = Math.min(1, Math.max(0, t));
   let a = stops[0], b = stops[stops.length - 1];
@@ -48,34 +49,23 @@ function colourFor(t: number): [number, number, number, number] {
   ];
 }
 
+function rgba(c: [number, number, number, number]) {
+  return `rgba(${c[0]},${c[1]},${c[2]},${(c[3] / 255).toFixed(3)})`;
+}
+
 async function inflateGrid(b64: string, expected: number): Promise<Uint8Array> {
-  const bin = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0));
+  const bin = Uint8Array.from(atob(b64), (ch) => ch.charCodeAt(0));
   if (typeof DecompressionStream === "undefined") {
-    // Unlikely on modern browsers; treat as raw if lengths match
     if (bin.length === expected) return bin;
     throw new Error("deflate unsupported");
   }
   const stream = new Blob([bin]).stream().pipeThrough(new DecompressionStream("deflate"));
-  const buf = new Uint8Array(await new Response(stream).arrayBuffer());
-  if (buf.length !== expected) {
-    console.warn(`where-glow grid length ${buf.length} ≠ ${expected}`);
-  }
-  return buf;
+  return new Uint8Array(await new Response(stream).arrayBuffer());
 }
 
 type GlowView = (typeof whereGlow)["views"]["all"];
 
-function GlowCanvas({
-  view,
-  mapW,
-  mapH,
-  hatchId,
-}: {
-  view: GlowView;
-  mapW: number;
-  mapH: number;
-  hatchId: string;
-}) {
+function GlowCanvas({ view, mapW, mapH }: { view: GlowView; mapW: number; mapH: number }) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const wrapRef = useRef<HTMLDivElement>(null);
   const [ready, setReady] = useState(false);
@@ -90,9 +80,10 @@ function GlowCanvas({
     setErr(null);
     inflateGrid(view.grid, gw * gh)
       .then((g) => {
-        if (cancelled) return;
-        gridRef.current = g;
-        setReady(true);
+        if (!cancelled) {
+          gridRef.current = g;
+          setReady(true);
+        }
       })
       .catch((e) => {
         if (!cancelled) setErr(e instanceof Error ? e.message : "glow decode failed");
@@ -120,8 +111,6 @@ function GlowCanvas({
       const ctx = canvas.getContext("2d");
       if (!ctx) return;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-      // Build source ImageData at grid res, then scale smoothly
       const src = document.createElement("canvas");
       src.width = gw;
       src.height = gh;
@@ -163,25 +152,67 @@ function GlowCanvas({
           <T en={`Glow unavailable (${err})`} zh={`热力暂不可用（${err}）`} />
         </div>
       )}
-      {/* hatch pattern id reserved for choropleth sibling */}
-      <span className="hidden" data-hatch={hatchId} />
     </div>
+  );
+}
+
+function hexPath(cx: number, cy: number, size: number): string {
+  // pointy-top
+  const pts: string[] = [];
+  for (let i = 0; i < 6; i++) {
+    const ang = (Math.PI / 180) * (60 * i - 30);
+    const x = cx + size * Math.cos(ang);
+    const y = cy + size * Math.sin(ang);
+    pts.push(`${x.toFixed(1)},${y.toFixed(1)}`);
+  }
+  return `M${pts.join("L")}Z`;
+}
+
+function HoneycombLayer({ view }: { view: GlowView }) {
+  const hexMeta = (whereGlow.meta as { hex?: { sizePx: number; flatToFlatKm: number } }).hex;
+  const size = hexMeta?.sizePx ?? 6;
+  const hexes = (view as GlowView & { hexes?: [number, number, number, number][] }).hexes ?? [];
+  const hexNormMax = (view as GlowView & { hexNormMax?: number }).hexNormMax ?? 1;
+  const gamma = 0.55;
+
+  if (hexes.length === 0) {
+    return (
+      <text x={worldMap.width / 2} y={worldMap.height / 2} textAnchor="middle" className="fill-ink-muted" fontSize="12">
+        Honeycomb data missing — rebuild where-glow.json
+      </text>
+    );
+  }
+
+  return (
+    <g aria-label="Affiliation hexbin density">
+      {hexes.map(([x, y, w, n], i) => {
+        const t = Math.pow(Math.min(1, w / hexNormMax), gamma);
+        const fill = rgba(colourFor(Math.max(0.05, t)));
+        return (
+          <path key={i} d={hexPath(x, y, size)} fill={fill} stroke="#fffcf7" strokeWidth={0.35} strokeOpacity={0.7}>
+            <title>{`${w} citing-work links · ${n} institution${n === 1 ? "" : "s"}`}</title>
+          </path>
+        );
+      })}
+    </g>
   );
 }
 
 export default function WhereMap() {
   const { view, lens } = useReachLens();
   const { countries, totals } = view;
-  const { meta } = influence;
   const byCode = useMemo(() => new Map(countries.map((c) => [c.code, c])), [countries]);
   const drawn = useMemo(() => new Set(worldMap.countries.map((c) => c.iso2)), []);
   const notDrawn = countries.filter((c) => !drawn.has(c.code));
   const tableRows = countries.filter((c) => c.citingWorks >= MIN_WORKS);
   const hatchId = useId().replace(/:/g, "");
   const [showOe, setShowOe] = useState(false);
+  const [densityMode, setDensityMode] = useState<DensityMode>("glow");
 
   const glowView = whereGlow.views[lens === "lead" ? "lead" : "all"];
   const gaps = whereGlow.meta.gaps;
+  const hexMeta = (whereGlow.meta as { hex?: { flatToFlatKm: number; sizePx: number } }).hex;
+  const hexCount = ((glowView as GlowView & { hexes?: unknown[] }).hexes ?? []).length;
 
   return (
     <div>
@@ -190,24 +221,52 @@ export default function WhereMap() {
           en={
             <>
               Authors in <strong className="text-ink">{totals.countriesCount}</strong> countries and territories have
-              built on these papers. The <em>glow</em> is a kernel-density map of OpenAlex author-affiliation cities
-              (each unique institution weighted by how many citing works list it). Multi-affiliation papers light every
-              campus with coordinates. Absolute density mostly follows where science happens — toggle the country
-              shading for the tenure-readable <em>observed ÷ expected</em> view.
+              built on these papers. Compare two absolute-density views of OpenAlex author-affiliation cities (each
+              unique institution weighted by how many citing works list it): <em>Glow</em> (kernel density) and{" "}
+              <em>Honeycomb</em> (equal-area hexbin). Multi-affiliation papers count at every campus with coordinates.
+              Toggle country shading for the tenure-readable <em>observed ÷ expected</em> view.
             </>
           }
           zh={
             <>
               来自 <strong className="text-ink">{totals.countriesCount}</strong>{" "}
-              个国家和地区的作者引用了这些论文。热力为 OpenAlex
-              施引作者机构所在城市的核密度：每个有坐标的机构按“列出该机构的施引文献数”加权；一篇多机构论文会点亮各校区。绝对密度主要反映科研产出分布——需要可引用的“实际 ÷
+              个国家和地区的作者引用了这些论文。可比较两种施引机构绝对密度：<em>热力 Glow</em>
+              （核密度）与<em>蜂巢 Honeycomb</em>
+              （等积六边形分箱）；每个有坐标机构按列出该机构的施引文献数加权，多机构论文计入各校区。需要可引用的“实际 ÷
               预期”时，请打开国家着色。
             </>
           }
         />
       </p>
 
-      <div className="mt-4 flex flex-wrap items-center gap-3 text-sm">
+      <div className="mt-4 flex flex-wrap items-center gap-x-4 gap-y-3 text-sm">
+        <div
+          role="group"
+          aria-label="Density map style"
+          className="inline-flex rounded-full border border-rule bg-paper p-0.5 shadow-sm"
+        >
+          {(
+            [
+              { id: "glow", en: "Glow", zh: "热力" },
+              { id: "honeycomb", en: "Honeycomb", zh: "蜂巢" },
+            ] as const
+          ).map((opt) => {
+            const on = densityMode === opt.id;
+            return (
+              <button
+                key={opt.id}
+                type="button"
+                aria-pressed={on}
+                onClick={() => setDensityMode(opt.id)}
+                className={`rounded-full px-3.5 py-1.5 text-sm transition ${
+                  on ? "bg-ink text-paper" : "text-ink-muted hover:text-ink"
+                }`}
+              >
+                <T en={opt.en} zh={opt.zh} />
+              </button>
+            );
+          })}
+        </div>
         <label className="inline-flex cursor-pointer items-center gap-2 text-ink-muted hover:text-ink">
           <input
             type="checkbox"
@@ -219,8 +278,12 @@ export default function WhereMap() {
         </label>
         <span className="text-xs text-ink-faint">
           <T
-            en={`${glowView.institutionsWithGeo} institutions with coordinates · weight ${glowView.totalWeight} citing-work links`}
-            zh={`${glowView.institutionsWithGeo} 个有坐标机构 · 权重 ${glowView.totalWeight} 篇次施引`}
+            en={`${glowView.institutionsWithGeo} institutions · weight ${glowView.totalWeight}${
+              densityMode === "honeycomb" ? ` · ${hexCount} hexes` : ""
+            }`}
+            zh={`${glowView.institutionsWithGeo} 个机构 · 权重 ${glowView.totalWeight}${
+              densityMode === "honeycomb" ? ` · ${hexCount} 个六边形` : ""
+            }`}
           />
         </span>
       </div>
@@ -231,7 +294,11 @@ export default function WhereMap() {
             viewBox={`0 0 ${worldMap.width} ${worldMap.height}`}
             className="h-auto w-full"
             role="img"
-            aria-label="World map: affiliation density glow of citing authors, Equal Earth projection (OpenAlex)"
+            aria-label={
+              densityMode === "glow"
+                ? "World map: affiliation density glow of citing authors (OpenAlex)"
+                : "World map: affiliation hexbin density of citing authors (OpenAlex)"
+            }
           >
             <defs>
               <pattern
@@ -254,15 +321,12 @@ export default function WhereMap() {
                   fill = `url(#reach-hatch-${hatchId})`;
                   title = `${c.name}: ${d.citingWorks} citing work${d.citingWorks === 1 ? "" : "s"} — too few to normalize`;
                 } else if (d && d.ratio != null) {
-                  // Subdue choropleth under glow
                   fill = binFor(d.ratio).color;
                   title = `${c.name}: ${d.citingWorks} citing works vs ${d.expected} expected → ${d.ratio}× (OpenAlex)`;
                 }
-              } else {
-                if (d && d.citingWorks > 0) {
-                  fill = "#ebe4d8";
-                  title = `${c.name}: ${d.citingWorks} citing works (OpenAlex)`;
-                }
+              } else if (d && d.citingWorks > 0) {
+                fill = "#ebe4d8";
+                title = `${c.name}: ${d.citingWorks} citing works (OpenAlex)`;
               }
               return (
                 <path
@@ -277,8 +341,11 @@ export default function WhereMap() {
                 </path>
               );
             })}
+            {densityMode === "honeycomb" && <HoneycombLayer view={glowView} />}
           </svg>
-          <GlowCanvas view={glowView} mapW={worldMap.width} mapH={worldMap.height} hatchId={hatchId} />
+          {densityMode === "glow" && (
+            <GlowCanvas view={glowView} mapW={worldMap.width} mapH={worldMap.height} />
+          )}
         </div>
 
         <figcaption className="mt-3 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs text-ink-muted">
@@ -289,7 +356,10 @@ export default function WhereMap() {
                 background: "linear-gradient(90deg, rgba(168,213,214,0.3), #0d7377, #c45c26)",
               }}
             />
-            <T en="Affiliation density (glow)" zh="机构密度（热力）" />
+            <T
+              en={densityMode === "glow" ? "Affiliation density (glow)" : "Affiliation density (honeycomb)"}
+              zh={densityMode === "glow" ? "机构密度（热力）" : "机构密度（蜂巢）"}
+            />
           </span>
           {showOe &&
             BINS.map((b) => (
@@ -307,15 +377,22 @@ export default function WhereMap() {
             </span>
           )}
           <span className="w-full text-ink-faint">
-            <T
-              en={`Glow: Gaussian kernel σ ≈ ${whereGlow.meta.kernel.sigmaKm} km on Equal Earth; weight = unique citing works per institution. Lead uses the same colour scale as All (dimmer, not re-scaled). Source: OpenAlex affiliations (self-citations removed), as of ${whereGlow.meta.asOf}. Basemap: Natural Earth 1:110m (public domain).`}
-              zh={`热力：等积地球投影上高斯核 σ ≈ ${whereGlow.meta.kernel.sigmaKm} km；权重为每机构的唯一施引文献数。Lead 与 All 共用色标（更淡、不重标定）。数据：OpenAlex 机构（已剔除自引），截至 ${whereGlow.meta.asOf}。底图：Natural Earth 1:110m（公有领域）。`}
-            />
+            {densityMode === "glow" ? (
+              <T
+                en={`Glow: Gaussian kernel σ ≈ ${whereGlow.meta.kernel.sigmaKm} km on Equal Earth; weight = unique citing works per institution. Lead uses the same colour scale as All (dimmer, not re-scaled). Source: OpenAlex affiliations (self-citations removed), as of ${whereGlow.meta.asOf}. Basemap: Natural Earth 1:110m (public domain).`}
+                zh={`热力：等积地球投影上高斯核 σ ≈ ${whereGlow.meta.kernel.sigmaKm} km；权重为每机构的唯一施引文献数。Lead 与 All 共用色标（更淡、不重标定）。数据：OpenAlex 机构（已剔除自引），截至 ${whereGlow.meta.asOf}。底图：Natural Earth 1:110m（公有领域）。`}
+              />
+            ) : (
+              <T
+                en={`Honeycomb: equal-area hexbin ~${hexMeta?.flatToFlatKm ?? 300} km flat-to-flat on Equal Earth; cell weight = sum of unique citing works at institutions in that cell. Lead shares All’s colour scale. Source: OpenAlex affiliations (self-citations removed), as of ${whereGlow.meta.asOf}. Basemap: Natural Earth 1:110m (public domain).`}
+                zh={`蜂巢：等积地球投影上等积六边形（对边约 ${hexMeta?.flatToFlatKm ?? 300} km）；格网权重为落入该格的机构唯一施引文献数之和。Lead 与 All 共用色标。数据：OpenAlex 机构（已剔除自引），截至 ${whereGlow.meta.asOf}。底图：Natural Earth 1:110m（公有领域）。`}
+              />
+            )}
           </span>
           <span className="w-full text-ink-faint">
             <T
-              en={`Gaps: ${gaps.worksNoAffiliationAll} All / ${gaps.worksNoAffiliationLead} Lead citing works have no OpenAlex affiliation; ${gaps.institutionsMissingGeoAll} / ${gaps.institutionsMissingGeoLead} institutions lack coordinates (no glow). Multi-campus systems plot at the OpenAlex HQ city. China coverage is a lower bound (CNKI under-count).`}
-              zh={`缺口：全部视角 ${gaps.worksNoAffiliationAll} / Lead ${gaps.worksNoAffiliationLead} 篇施引无 OpenAlex 机构；${gaps.institutionsMissingGeoAll} / ${gaps.institutionsMissingGeoLead} 个机构无坐标（不进入热力）。多校区系统落在 OpenAlex 总部城市。中国覆盖为下限（知网低估）。`}
+              en={`Gaps: ${gaps.worksNoAffiliationAll} All / ${gaps.worksNoAffiliationLead} Lead citing works have no OpenAlex affiliation; ${gaps.institutionsMissingGeoAll} / ${gaps.institutionsMissingGeoLead} institutions lack coordinates (no density). Multi-campus systems plot at the OpenAlex HQ city. China coverage is a lower bound (CNKI under-count).`}
+              zh={`缺口：全部视角 ${gaps.worksNoAffiliationAll} / Lead ${gaps.worksNoAffiliationLead} 篇施引无 OpenAlex 机构；${gaps.institutionsMissingGeoAll} / ${gaps.institutionsMissingGeoLead} 个机构无坐标（不进入密度图）。多校区系统落在 OpenAlex 总部城市。中国覆盖为下限（知网低估）。`}
             />
           </span>
         </figcaption>

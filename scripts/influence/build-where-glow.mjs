@@ -23,6 +23,9 @@ const ROOT = join(__dirname, "..", "..");
 const DOIS_PATH = join(ROOT, "data", "influence", "dois.json");
 const WORLD_PATH = join(ROOT, "src", "data", "world-map.json");
 const OUT_PATH = join(ROOT, "src", "data", "where-glow.json");
+const CACHE_PATH = join(ROOT, "data", "influence", "where-affiliations-cache.json");
+/** Optional: node scripts/influence/build-where-glow.mjs --from-cache  (uses data/influence/where-affiliations-cache.json) */
+const USE_CACHE = process.argv.includes("--cache") || process.argv.includes("--from-cache");
 
 const API = "https://api.openalex.org";
 const CITING_SELECT = [
@@ -69,6 +72,10 @@ const KERNEL_SIGMA_PX = Math.max(16, KERNEL_KM * pxPerKmAt30);
 
 const GRID_W = 480; // half-res for payload; client upscales
 const GRID_H = Math.round((MAP_HEIGHT / MAP_WIDTH) * GRID_W);
+// Honeycomb: equal-area hexbin on Equal Earth (~300 km flat-to-flat at mid-latitudes)
+const HEX_KM = 300;
+const HEX_FLAT_PX = Math.max(8, HEX_KM * pxPerKmAt30); // ~300 km at mid-latitudes (≥8px) // flat-to-flat
+const HEX_SIZE_PX = HEX_FLAT_PX / Math.sqrt(3); // center → vertex (pointy-top)
 const BATCH = 50;
 
 let requestCount = 0;
@@ -252,6 +259,52 @@ function applyGeoResults(results, geo, missing) {
   }
 }
 
+
+/** Pointy-top axial hex binning (redblobgames). size = center→vertex in map px. */
+function hexKey(x, y, size) {
+  const q = ((Math.sqrt(3) / 3) * x - (1 / 3) * y) / size;
+  const r = ((2 / 3) * y) / size;
+  let cx = q, cy = -q - r, cz = r;
+  let rx = Math.round(cx), ry = Math.round(cy), rz = Math.round(cz);
+  const dx = Math.abs(rx - cx), dy = Math.abs(ry - cy), dz = Math.abs(rz - cz);
+  if (dx > dy && dx > dz) rx = -ry - rz;
+  else if (dy > dz) ry = -rx - rz;
+  else rz = -rx - ry;
+  return `${rx},${rz}`;
+}
+
+function hexCenter(q, r, size) {
+  const x = size * (Math.sqrt(3) * q + (Math.sqrt(3) / 2) * r);
+  const y = size * ((3 / 2) * r);
+  return [x, y];
+}
+
+function hexbin(points, size) {
+  const bins = new Map();
+  for (const p of points) {
+    const key = hexKey(p.x, p.y, size);
+    const e = bins.get(key) ?? { w: 0, n: 0 };
+    e.w += p.w;
+    e.n += 1;
+    bins.set(key, e);
+  }
+  const hexes = [];
+  let max = 0;
+  for (const [key, e] of bins) {
+    const [qs, rs] = key.split(",").map(Number);
+    const [x, y] = hexCenter(qs, rs, size);
+    if (e.w > max) max = e.w;
+    hexes.push({
+      x: Math.round(x * 10) / 10,
+      y: Math.round(y * 10) / 10,
+      w: e.w,
+      n: e.n,
+    });
+  }
+  hexes.sort((a, b) => b.w - a.w);
+  return { hexes, max };
+}
+
 function kdeGrid(points, sigmaPx, width, height, mapW, mapH) {
   const grid = new Float64Array(width * height);
   const sx = width / mapW;
@@ -407,8 +460,13 @@ async function main() {
 
   const allView = viewPayload("all", allT);
   const leadView = viewPayload("lead", leadT);
+
+  const allHex = hexbin(allView.points, HEX_SIZE_PX);
+  const leadHex = hexbin(leadView.points, HEX_SIZE_PX);
+
   // Shared scale: Lead normalized to All max so Lead reads dimmer
   const normMax = allView.max || leadView.max || 1;
+  const hexNormMax = allHex.max || leadHex.max || 1;
   const allPacked = packGrid(quantize(allView.grid, normMax));
   const leadPacked = packGrid(quantize(leadView.grid, normMax));
 
@@ -418,14 +476,57 @@ async function main() {
       id, name, type, country, city, lat, lon, w,
     }));
 
+  const packHexes = (hexes) =>
+    hexes.map((h) => [
+      Math.round(h.x * 10) / 10,
+      Math.round(h.y * 10) / 10,
+      h.w,
+      h.n,
+    ]);
+
+  // Cache slim affiliation points for --cache rebuilds (no OpenAlex re-fetch)
+  const doisHash = createHash("sha256").update(doisRaw).digest("hex").slice(0, 16);
+  const cache = {
+    doisFileSha256: doisHash,
+    asOf,
+    generatedAt: new Date().toISOString(),
+    map: { width: W, height: H },
+    gaps: {
+      worksNoAffiliationAll: allView.worksNoAffiliation,
+      worksNoAffiliationLead: leadView.worksNoAffiliation,
+      institutionsMissingGeoAll: allView.institutionsMissingGeo,
+      institutionsMissingGeoLead: leadView.institutionsMissingGeo,
+      institutionsMissingGeoTotal: missing.length,
+      worksTouchingMissingGeoAll: allView.worksTouchingMissingGeo,
+      worksTouchingMissingGeoLead: leadView.worksTouchingMissingGeo,
+    },
+    views: {
+      all: {
+        uniqueWorks: allView.uniqueWorks,
+        points: allView.points.map(({ id, name, type, country, city, lat, lon, x, y, w }) => ({
+          id, name, type, country, city, lat, lon, x, y, w,
+        })),
+      },
+      lead: {
+        uniqueWorks: leadView.uniqueWorks,
+        points: leadView.points.map(({ id, name, type, country, city, lat, lon, x, y, w }) => ({
+          id, name, type, country, city, lat, lon, x, y, w,
+        })),
+      },
+    },
+  };
+  mkdirSync(dirname(CACHE_PATH), { recursive: true });
+  writeFileSync(CACHE_PATH, JSON.stringify(cache));
+  console.log(`Wrote affiliation cache ${CACHE_PATH} (${(Buffer.byteLength(JSON.stringify(cache)) / 1024).toFixed(1)} KB)`);
+
   const out = {
     meta: {
       mode: "live",
       source: "OpenAlex",
       asOf,
       generatedAt: new Date().toISOString(),
-      schema: "where-glow-v1",
-      doisFileSha256: createHash("sha256").update(doisRaw).digest("hex").slice(0, 16),
+      schema: "where-glow-v2-honeycomb",
+      doisFileSha256: doisHash,
       projection: "Equal Earth (Šavrič et al. 2018), matching world-map.json",
       map: { width: W, height: H },
       grid: { width: GRID_W, height: GRID_H, encoding: "deflate+base64", dtype: "uint8", gamma: 0.55 },
@@ -435,8 +536,16 @@ async function main() {
         sigmaPx: Math.round(KERNEL_SIGMA_PX * 10) / 10,
         note: "σ ≈ 550 km (floored to ≥16 map px) at mid-latitudes in Equal Earth map pixels; weight = unique citing works per institution",
       },
+      hex: {
+        type: "pointy-top",
+        flatToFlatKm: Math.round(HEX_FLAT_PX / pxPerKmAt30),
+        flatToFlatPx: Math.round(HEX_FLAT_PX * 10) / 10,
+        sizePx: Math.round(HEX_SIZE_PX * 10) / 10,
+        encoding: "[x, y, weight, institutionCount]",
+        note: "Equal-area hexbin on Equal Earth (~300 km flat-to-flat). Weight = sum of unique citing works at institutions whose projected point falls in the cell.",
+      },
       unit: "Each institution contributes weight = count of unique non-self citing works listing that affiliation. Multi-affiliation papers add weight at each institution with coordinates. Same institution is not stacked per coauthor.",
-      sameScale: "Lead density quantized against All max so the Lead lens looks dimmer, not re-scaled.",
+      sameScale: "Lead density quantized against All max (glow grid + hex weights) so the Lead lens looks dimmer, not re-scaled.",
       selfCitationRule:
         "Same as Reach: drop citing work if it shares any author with the cited paper (OpenAlex ID / ORCID / normalized full name).",
       requests: requestCount,
@@ -449,7 +558,7 @@ async function main() {
         institutionsMissingGeoTotal: missing.length,
         worksTouchingMissingGeoAll: allView.worksTouchingMissingGeo,
         worksTouchingMissingGeoLead: leadView.worksTouchingMissingGeo,
-        note: "Works with no OpenAlex affiliation still count in the country choropleth. Institutions without geo.latitude/longitude contribute no glow. Multi-campus systems (e.g. CAS) plot at the OpenAlex HQ city.",
+        note: "Works with no OpenAlex affiliation still count in the country choropleth. Institutions without geo.latitude/longitude contribute no glow/hex. Multi-campus systems (e.g. CAS) plot at the OpenAlex HQ city.",
       },
     },
     views: {
@@ -459,7 +568,10 @@ async function main() {
         totalWeight: allView.totalWeight,
         gridMax: allView.max,
         normMax,
+        hexMax: allHex.max,
+        hexNormMax,
         grid: allPacked,
+        hexes: packHexes(allHex.hexes),
         topInstitutions: slimPoints(allView.points),
       },
       lead: {
@@ -468,7 +580,10 @@ async function main() {
         totalWeight: leadView.totalWeight,
         gridMax: leadView.max,
         normMax,
+        hexMax: leadHex.max,
+        hexNormMax,
         grid: leadPacked,
+        hexes: packHexes(leadHex.hexes),
         topInstitutions: slimPoints(leadView.points),
       },
     },
@@ -478,8 +593,9 @@ async function main() {
   writeFileSync(OUT_PATH, JSON.stringify(out));
   const kb = (Buffer.byteLength(JSON.stringify(out)) / 1024).toFixed(1);
   console.log(`\nWrote ${OUT_PATH} (${kb} KB)`);
-  console.log(`All: ${allView.institutionsWithGeo} inst, weight ${allView.totalWeight}, gridMax ${allView.max.toFixed(2)}`);
-  console.log(`Lead: ${leadView.institutionsWithGeo} inst, weight ${leadView.totalWeight}, gridMax ${leadView.max.toFixed(2)}`);
+  console.log(`All: ${allView.institutionsWithGeo} inst, weight ${allView.totalWeight}, gridMax ${allView.max.toFixed(2)}, hexes ${allHex.hexes.length} max ${allHex.max}`);
+  console.log(`Lead: ${leadView.institutionsWithGeo} inst, weight ${leadView.totalWeight}, gridMax ${leadView.max.toFixed(2)}, hexes ${leadHex.hexes.length} max ${leadHex.max}`);
+  console.log(`Hex flat-to-flat ${HEX_FLAT_PX.toFixed(1)}px (~${HEX_KM} km), size ${HEX_SIZE_PX.toFixed(2)}px`);
   console.log(`${requestCount} requests, ~$${costUsd.toFixed(4)}`);
 }
 
