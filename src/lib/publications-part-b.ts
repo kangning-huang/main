@@ -17,12 +17,12 @@ export const PUBLICATIONS_B = [
   },
 {
     title: "Global projections of future urban land expansion under shared socioeconomic pathways",
-    authors: "Guangzhao Chen, Xia Li, Xiaoping Liu, Yimin Chen, Xun Liang, Jiye Leng, Xiaocong Xu, Wenjie Liao, Yue'an Qiu, Qianlian Wu, Kangning Huang",
+    authors: "Guangzhao Chen, Xia Li, Xiaoping Liu, Yimin Chen, Xun Liang, Jiye Leng, Xiaocong Xu, Weilin Liao, Yue'an Qiu, Qianlian Wu, Kangning Huang",
     venue: "Nature Communications",
     year: 2020,
     citationCount: 937,
     doi: "10.1038/s41467-020-14386-x",
-    isLeadAuthor: false,
+    isLeadAuthor: true,
     highlights: [
       "Projects global urban land expansion through 2100 under all five SSPs, with SSP5 yielding the greatest total urban land area and SSP1/SSP4 showing turning points in the 2080s/2070s as socioeconomic growth slows",
       "Approximately 50–63% of newly expanded urban land worldwide is projected to replace existing croplands, making agricultural land the dominant land-cover type lost to urbanization",
@@ -143,7 +143,8 @@ export const PUBLICATIONS_B = [
     venue: "Land Degradation & Development",
     year: 2019,
     citationCount: 70,
-    isLeadAuthor: false,
+    doi: "10.1002/ldr.3429",
+    isLeadAuthor: true,
     highlights: [
       "Natural wetlands in Hangzhou Bay decreased at ~10 km² per year from 1984 to 2016, with the degradation rate quadrupling from ~4 to ~18 km²/year after establishment of an economic development zone in 2001",
       "Under a continued high-development scenario, the coastline is projected to move approximately 5.89 km inland, undermining coastal protections against sea level rise",
@@ -171,7 +172,7 @@ export const PUBLICATIONS_B = [
     venue: "Remote Sensing of Environment",
     year: 2015,
     citationCount: 64,
-    doi: "10.1016/j.rse.2015.06.016",
+    doi: "10.1016/j.rse.2014.10.016",
     isLeadAuthor: false,
     highlights: [
       "Develops a snow depth retrieval algorithm based on support vector regression that combines passive microwave brightness temperature with visible/infrared reflectance to improve accuracy over microwave-only approaches",
@@ -231,7 +232,8 @@ export const PUBLICATIONS_B = [
     venue: "Frontiers of Earth Science",
     year: 2018,
     citationCount: 26,
-    isLeadAuthor: false,
+    doi: "10.1007/s11707-018-0717-9",
+    isLeadAuthor: true,
     highlights: [
       "Integrates local self-similarity (LSS) descriptors, which capture common internal layout features across sensor types, with mutual information to handle images with both rigid and non-rigid radiometric distortions",
       "Uses a Bayesian probabilistic model for matching LSS feature ensembles, followed by particle swarm optimization to maximize combined self-similarity and mutual information for optimal correspondences",
@@ -245,7 +247,8 @@ export const PUBLICATIONS_B = [
     venue: "Land Degradation & Development",
     year: 2021,
     citationCount: 13,
-    isLeadAuthor: false,
+    doi: "10.1002/ldr.3980",
+    isLeadAuthor: true,
     highlights: [
       "Monitors the detailed spatiotemporal evolution of land development in the Qiantang New District reclamation area in China, revealing dramatic land-use changes under rapid urbanization pressures",
       "Identifies key historical drivers of land-use change in reclaimed coastal areas where understanding of long-term dynamics has been limited",
@@ -273,7 +276,7 @@ export const PUBLICATIONS_B = [
     venue: "Environmental Science & Technology",
     year: 2024,
     citationCount: 6,
-    doi: "10.1021/acs.est.4c05618",
+    doi: "10.1021/acs.est.4c00424",
     isLeadAuthor: false,
     highlights: [
       "Air conditioning systems can reduce indoor temperatures by up to 18 °C but cause substantial nighttime outdoor warming of 2–2.5 °C in high-density urban neighborhoods, creating a thermal equity problem",
@@ -288,7 +291,7 @@ export const PUBLICATIONS_B = [
     venue: "Acta Scientiarum Naturalium Universitatis Sunyatseni",
     year: 2010,
     citationCount: 15,
-    isLeadAuthor: false,
+    isLeadAuthor: true,
     highlights: [
       "Integrates three major computational components — cellular automata (CA), multi-agent systems (MAS), and swarm intelligence (SI) — into the unified GeoSOS platform for process-based geographical modeling",
       "Includes multiple CA algorithms (MCE-CA, Logistic-CA, PCA-CA, ANN-CA, Decision-tree-CA) that automatically derive transition rules through data mining for simulating urban growth and land-use change",
