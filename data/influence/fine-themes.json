@@ -1,40 +1,40 @@
 {
-  "$comment": "Editable Reach Sankey left-side themes (L4 default cites/year). Change labels, colors, order, paper→theme map, or rightDomains; then: node scripts/influence/build-reach-flow.mjs",
+  "$comment": "Editable Reach Sankey left-side themes (L4 default cites/year). Change labels, colors, order, paper\u2192theme map, or rightDomains; then: node scripts/influence/build-reach-flow.mjs",
   "themes": [
     {
       "id": "expansion",
       "en": "Urban expansion & futures",
-      "zh": "城市扩张与未来",
+      "zh": "\u57ce\u5e02\u6269\u5f20\u4e0e\u672a\u6765",
       "color": "#00909a"
     },
     {
       "id": "heat-health",
       "en": "Heat exposure & health",
-      "zh": "高温暴露与健康",
+      "zh": "\u9ad8\u6e29\u66b4\u9732\u4e0e\u5065\u5eb7",
       "color": "#c74b16"
     },
     {
       "id": "cooling",
       "en": "Cooling & greening",
-      "zh": "降温与绿化",
+      "zh": "\u964d\u6e29\u4e0e\u7eff\u5316",
       "color": "#2a9d6e"
     },
     {
       "id": "air-dust",
       "en": "Air quality / dust",
-      "zh": "空气质量 / 扬尘",
+      "zh": "\u7a7a\u6c14\u8d28\u91cf / \u626c\u5c18",
       "color": "#8b5a2b"
     },
     {
       "id": "methods",
       "en": "Scaling, form & methods",
-      "zh": "标度、形态与方法",
+      "zh": "\u6807\u5ea6\u3001\u5f62\u6001\u4e0e\u65b9\u6cd5",
       "color": "#94700f"
     },
     {
       "id": "flood",
       "en": "Flood & coasts",
-      "zh": "洪水与海岸",
+      "zh": "\u6d2a\u6c34\u4e0e\u6d77\u5cb8",
       "color": "#5b4b9a"
     }
   ],
@@ -43,145 +43,145 @@
     {
       "doi": "10.1088/1748-9326/ab4b71",
       "theme": "expansion",
-      "short": "ERL 2019 · urban expansion to 2050",
+      "short": "ERL 2019 \u00b7 urban expansion to 2050",
       "note": "lead"
     },
     {
       "doi": "10.1080/13658816.2012.730147",
       "theme": "expansion",
-      "short": "IJGIS 2013 · land-use allocation",
+      "short": "IJGIS 2013 \u00b7 land-use allocation",
       "note": "lead"
     },
     {
       "doi": "10.1038/s41467-020-14386-x",
       "theme": "expansion",
-      "short": "Nat Commun 2020 · SSP urban land projections",
-      "note": "coauthor"
+      "short": "Nat Commun 2020 \u00b7 SSP urban land projections",
+      "note": "lead"
     },
     {
       "doi": "10.1038/s41893-020-0521-x",
       "theme": "expansion",
-      "short": "Nat Sustain 2020 · global urban change 1985–2015",
+      "short": "Nat Sustain 2020 \u00b7 global urban change 1985\u20132015",
       "note": "coauthor"
     },
     {
       "doi": "10.1038/s41893-019-0436-6",
       "theme": "expansion",
-      "short": "Nat Sustain 2020 · urban growth & biodiversity",
+      "short": "Nat Sustain 2020 \u00b7 urban growth & biodiversity",
       "note": "coauthor"
     },
     {
       "doi": "10.1080/13658816.2011.635594",
       "theme": "methods",
-      "short": "IJGIS 2012 · MACO land-use allocation",
+      "short": "IJGIS 2012 \u00b7 MACO land-use allocation",
       "note": "coauthor"
     },
     {
       "doi": "10.1029/2020JD033831",
       "theme": "heat-health",
-      "short": "JGR-A 2021 · nighttime heat stress",
+      "short": "JGR-A 2021 \u00b7 nighttime heat stress",
       "note": "lead"
     },
     {
       "doi": "10.1016/j.uclim.2021.100806",
       "theme": "heat-health",
-      "short": "Urban Climate 2021 · urban climate forecasts",
+      "short": "Urban Climate 2021 \u00b7 urban climate forecasts",
       "note": "lead"
     },
     {
       "doi": "10.1038/s41558-022-01481-8",
       "theme": "cooling",
-      "short": "Nat Clim Change 2022 · urban forests",
+      "short": "Nat Clim Change 2022 \u00b7 urban forests",
       "note": "lead"
     },
     {
       "doi": "10.1038/s41598-025-96045-z",
       "theme": "heat-health",
-      "short": "Sci Rep 2025 · urban density & heat",
+      "short": "Sci Rep 2025 \u00b7 urban density & heat",
       "note": "lead"
     },
     {
       "doi": "10.1038/s41558-025-02303-3",
       "theme": "heat-health",
-      "short": "Nat Clim Change 2025 · urban overheating mortality",
+      "short": "Nat Clim Change 2025 \u00b7 urban overheating mortality",
       "note": "coauthor"
     },
     {
       "doi": "10.1038/s44284-024-00184-9",
       "theme": "heat-health",
-      "short": "Nature Cities 2025 · urban browning heat stress",
+      "short": "Nature Cities 2025 \u00b7 urban browning heat stress",
       "note": "coauthor"
     },
     {
       "doi": "10.1021/acs.est.4c14275",
       "theme": "cooling",
-      "short": "ES&T 2025 · urban tree cooling",
+      "short": "ES&T 2025 \u00b7 urban tree cooling",
       "note": "coauthor"
     },
     {
       "doi": "10.1021/acs.est.4c00424",
       "theme": "cooling",
-      "short": "ES&T 2024 · AC usage & indoor–outdoor heat",
+      "short": "ES&T 2024 \u00b7 AC usage & indoor\u2013outdoor heat",
       "note": "coauthor; DOI corrected from publications typo"
     },
     {
       "doi": "10.1038/s44432-026-00009-1",
       "theme": "cooling",
-      "short": "npj ESS 2026 · demolition & cooling",
+      "short": "npj ESS 2026 \u00b7 demolition & cooling",
       "note": "lead; early"
     },
     {
       "doi": "10.1021/acs.est.9b00666",
       "theme": "air-dust",
-      "short": "ES&T 2019 · road dust PM2.5",
+      "short": "ES&T 2019 \u00b7 road dust PM2.5",
       "note": "coauthor; moved out of heat"
     },
     {
       "doi": "10.1016/j.atmosenv.2018.07.043",
       "theme": "air-dust",
-      "short": "Atmos Environ 2018 · dust emissions",
+      "short": "Atmos Environ 2018 \u00b7 dust emissions",
       "note": "coauthor; moved out of heat"
     },
     {
       "doi": "10.3390/toxics13010045",
       "theme": "air-dust",
-      "short": "Toxics 2025 · air pollution & anxiety visits",
+      "short": "Toxics 2025 \u00b7 air pollution & anxiety visits",
       "note": "coauthor; moved out of heat"
     },
     {
       "doi": "10.1007/s44274-024-00148-9",
       "theme": "flood",
-      "short": "Discover Env 2024 · Belt and Road heat/flood",
+      "short": "Discover Env 2024 \u00b7 Belt and Road heat/flood",
       "note": "lead"
     },
     {
       "doi": "10.3390/rs17101747",
       "theme": "flood",
-      "short": "Remote Sensing 2025 · inundation mapping",
+      "short": "Remote Sensing 2025 \u00b7 inundation mapping",
       "note": "lead"
     },
     {
       "doi": "10.1038/s41598-026-70981-w",
       "theme": "flood",
-      "short": "Sci Rep 2026 · height-aware flood risk",
+      "short": "Sci Rep 2026 \u00b7 height-aware flood risk",
       "note": "lead; early"
     },
     {
-      "doi": "10.1016/j.rse.2015.06.016",
+      "doi": "10.1016/j.rse.2014.10.016",
       "theme": "flood",
-      "short": "RSE 2015 · snow depth retrieval",
+      "short": "RSE 2015 \u00b7 snow depth retrieval",
       "note": "coauthor"
     },
     {
       "doi": "10.1109/tgrs.2013.2242895",
       "theme": "methods",
-      "short": "IEEE TGRS 2013 · multisensor registration",
+      "short": "IEEE TGRS 2013 \u00b7 multisensor registration",
       "note": "coauthor"
     },
     {
       "doi": "10.1080/01944363.2025.2523604",
       "theme": "methods",
-      "short": "JAPA 2026 · rhythmized urban parks",
+      "short": "JAPA 2026 \u00b7 rhythmized urban parks",
       "note": "lead"
     }
   ],
@@ -189,7 +189,7 @@
     {
       "id": "env-other",
       "en": "Pollution, water & conservation",
-      "zh": "污染、水与保护",
+      "zh": "\u6c61\u67d3\u3001\u6c34\u4e0e\u4fdd\u62a4",
       "fields": [
         "Environmental Science"
       ]
@@ -197,7 +197,7 @@
     {
       "id": "social",
       "en": "Social sciences & policy",
-      "zh": "社会科学与政策",
+      "zh": "\u793e\u4f1a\u79d1\u5b66\u4e0e\u653f\u7b56",
       "fields": [
         "Social Sciences",
         "Economics, Econometrics and Finance",
@@ -210,7 +210,7 @@
     {
       "id": "eng",
       "en": "Engineering & built environment",
-      "zh": "工程与建成环境",
+      "zh": "\u5de5\u7a0b\u4e0e\u5efa\u6210\u73af\u5883",
       "fields": [
         "Engineering",
         "Energy",
@@ -222,7 +222,7 @@
     {
       "id": "earth",
       "en": "Earth & atmospheric sciences",
-      "zh": "地球与大气科学",
+      "zh": "\u5730\u7403\u4e0e\u5927\u6c14\u79d1\u5b66",
       "fields": [
         "Earth and Planetary Sciences",
         "Physics and Astronomy"
@@ -231,7 +231,7 @@
     {
       "id": "health",
       "en": "Health & medicine",
-      "zh": "健康与医学",
+      "zh": "\u5065\u5eb7\u4e0e\u533b\u5b66",
       "fields": [
         "Medicine",
         "Health Professions",
@@ -247,7 +247,7 @@
     {
       "id": "cs",
       "en": "Computer science & remote sensing",
-      "zh": "计算机与遥感",
+      "zh": "\u8ba1\u7b97\u673a\u4e0e\u9065\u611f",
       "fields": [
         "Computer Science",
         "Mathematics"
@@ -256,7 +256,7 @@
     {
       "id": "agbio",
       "en": "Agriculture & biology",
-      "zh": "农业与生物",
+      "zh": "\u519c\u4e1a\u4e0e\u751f\u7269",
       "fields": [
         "Agricultural and Biological Sciences"
       ]
