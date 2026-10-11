@@ -22,49 +22,49 @@ export default function ReachMethod() {
           <li>
             <T
               en="Papers: a pinned DOI list synced from the Publications pages. No author-name search (OpenAlex disambiguation splits and merges profiles). In-press papers without a resolving DOI, and Nature Cities Nested economies (embargo DOI), are omitted."
-              zh="论文按“学术论文”页同步的固定 DOI 清单收录。OpenAlex 识别作者时会拆分或合并档案，因此不按姓名检索。尚无可解析 DOI 的待刊论文，以及 Nature Cities 的 Nested economies（DOI 尚未解禁），暂不纳入。"
+              zh="这里收录的论文，以“学术论文”页同步的固定 DOI 清单为准。OpenAlex 的作者档案有时会被拆分或合并，因此用 DOI 确认论文，不按姓名检索。尚无可解析 DOI 的待刊论文，以及 DOI 尚未开放的 Nature Cities 论文 Nested economies，暂不纳入。"
             />
           </li>
           <li>
             <T
               en="Filter: All includes every pinned DOI. “First / last / corresponding author” is hand-pinned (lens: lead) — OpenAlex is_corresponding is never trusted alone. Corresponding-only flags still need Ken's review where unknown."
-              zh="“全部”包含所有固定 DOI。“第一/通讯作者”由人工标注（lens: lead），不单凭 OpenAlex 的 is_corresponding 字段判断。尚未确认的“仅通讯作者”标注，仍需我核实。"
+              zh="“全部论文”包含清单上的所有 DOI。“第一/末位/通讯作者”视角按人工标注筛选（lens: lead），不单凭 OpenAlex 的 is_corresponding 字段判断。尚未确认的“仅通讯作者”标注，仍需我核实。"
             />
           </li>
           <li>
             <T
               en={`Self-citations (strict, per cited paper): ${meta.selfCitationRule} Removed in this view: ${totals.selfCitationsRemoved} of ${totals.citingLinksFetched} citation links.`}
-              zh={`自引（严格、按被引论文）：只要施引文献与被引论文有任何共同作者即剔除。本视角从 ${totals.citingLinksFetched} 条中剔除 ${totals.selfCitationsRemoved} 条。`}
+              zh={`自引按每篇被引用的论文分别判断。只要一篇论文和引用它的文献有任何一位共同作者，就剔除这条引用。当前视角共获取 ${totals.citingLinksFetched} 条引用记录，其中 ${totals.selfCitationsRemoved} 条作为自引剔除。`}
             />
           </li>
           <li>
             <T
               en="Field & Shelf (section 01): one square per non-self citing OpenAlex work. Colour and centre position encode that citing work's own OpenAlex cited_by_count on a log-ish ember–ink ramp (0 · 1–9 · 10–99 · 100–999 · ≥1,000); nearer the centre means more cited. Direction means nothing. Hover a shelf paper to light its citers and draw a thin link from each; hover a square to show up to four lines back to the papers it cites."
-              zh="领域与书架（第 01 节）中，每篇 OpenAlex 施引文献对应一个方块，已剔除自引。颜色和距中心远近表示文献自身在 OpenAlex 的被引次数（cited_by_count）。颜色从余烬色到墨色，近似按对数分段（0 · 1–9 · 10–99 · 100–999 · ≥1,000）；越靠近中心，被引越多，方向没有含义。鼠标移到书架上的论文，会点亮引用它的文献，并逐一画出细线；移到方块上，最多显示 4 条连线，指向它引用的论文。"
+              zh="在“领域与书架”（第 01 节）中，一个方块代表一篇 OpenAlex 收录的、引用我研究的文献，已剔除自引。方块的颜色和离中心的距离，表示这篇文献自身在 OpenAlex 中的被引次数（cited_by_count）。颜色从余烬色到墨色，近似按对数分档（0 · 1–9 · 10–99 · 100–999 · ≥1,000）；越靠近中心，被引次数越多，所在方向没有含义。把鼠标移到书架上的论文，引用它的文献就会亮起，并与它逐一连线；移到方块上，则最多显示 4 条连线，指向它引用的论文。"
             />
           </li>
           <li>
             <T
               en="Field colour is each citing work's own OpenAlex cited_by_count (same across All / Lead). Where is the observed÷expected country map; Topic cards / Who below use the adaptive OpenAlex taxonomy; any outside-home % elsewhere on the page is labelled with its topic rule."
-              zh="领域颜色表示施引文献自身在 OpenAlex 的被引次数（cited_by_count），同一文献在“全部”和“第一/通讯作者”视角下颜色相同。“在哪里”地图显示各国实际施引数÷预期施引数；下方主题卡片和“谁在使用”按 OpenAlex 分类自适应分组。页面其他位置若显示“主题外”占比，会注明所用主题规则。"
+              zh="领域中的颜色表示引用我研究的文献自身在 OpenAlex 中的被引次数（cited_by_count）。所以，同一篇文献在“全部论文”和“第一/末位/通讯作者”视角下，颜色相同。“在哪里”地图显示各国实际引用文献数与预期文献数的比值。下方的主题卡片和“谁在用”按 OpenAlex 分类自动调整分组；页面其他位置若显示“主题外”占比，会注明所用的主题规则。"
             />
           </li>
           <li>
             <T
               en={meta.adaptiveRule ?? "Adaptive taxonomy (topic cards): split any OpenAlex field holding more than 30% of citing works into subfields and topics until no node exceeds 30%."}
-              zh="自适应分类（主题卡片）：任一 OpenAlex 领域若超过施引文献的 30%，则拆分为子领域与主题，直到没有节点超过 30%。"
+              zh="主题卡片按 OpenAlex 分类自动分组。引用我研究的文献中，如果一个领域占比超过 30%，就继续细分为子领域和主题，直到每组占比都不超过 30%。"
             />
           </li>
           <li>
             <T
               en={`Country normalization: ${meta.countryBaseline}`}
-              zh="国家归一化按 2012–2026 年数据计算。每国预期施引文献数 ≈ 各施引领域（该国在该领域 OpenAlex 文献中的占比 × 该领域施引文献数）之和。"
+              zh="各国的预期文献数，按 2012–2026 年的数据估算。先算出该国文献占 OpenAlex 某个领域文献总数的比例，再乘以该领域引用我研究的文献数。把各领域的结果相加，就得到该国的预期值。"
             />
           </li>
           <li>
             <T
               en="OpenAlex under-counts Chinese-language venues (e.g. CNKI). Treat China coverage as a lower bound."
-              zh="OpenAlex 对中文文献来源（如知网）覆盖不足，中国相关统计应视为下限。"
+              zh="OpenAlex 对知网等中文文献来源的收录还不完整，因此这里的中国相关统计应看作下限。"
             />
           </li>
           <li>
@@ -92,7 +92,7 @@ export default function ReachMethod() {
           <li>
             <T
               en="Refreshed monthly by a GitHub Action; each run is kept as a dated snapshot."
-              zh="通过 GitHub Action 每月更新，每次保留一份带日期的数据快照。"
+              zh="数据通过 GitHub Action 每月更新，每次都会保存一份注明日期的数据快照。"
             />
           </li>
         </ul>
@@ -107,7 +107,7 @@ export default function ReachMethod() {
                 <th className="py-1 pr-3 font-normal"><T en="Paper" zh="论文" /></th>
                 <th className="py-1 pr-3 font-normal"><T en="Lens" zh="视角" /></th>
                 <th className="py-1 pr-3 font-normal"><T en="Theme" zh="主题" /></th>
-                <th className="py-1 pr-3 text-right font-normal"><T en="OpenAlex cited-by" zh="OpenAlex 被引记录" /></th>
+                <th className="py-1 pr-3 text-right font-normal"><T en="OpenAlex cited-by" zh="OpenAlex 被引数" /></th>
                 <th className="py-1 pr-3 text-right font-normal"><T en="Self removed" zh="剔除自引" /></th>
                 <th className="py-1 text-right font-normal"><T en="Non-self" zh="非自引" /></th>
               </tr>

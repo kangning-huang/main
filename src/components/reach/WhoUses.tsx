@@ -17,7 +17,7 @@ export default function WhoUses() {
         <figcaption className="mb-3 text-sm text-ink-muted">
           <T
             en={`Citing works with at least one author at each type of institution (of ${totals.uniqueCitingWorks.toLocaleString()}; a work can count in several rows)`}
-            zh={`按机构类型统计施引文献，至少一位作者来自该类机构就计入（共 ${totals.uniqueCitingWorks.toLocaleString()} 篇；同一篇可计入多行）`}
+            zh={`这里按机构类型统计引用我研究的文献。只要有一位作者来自某类机构，这篇文献就计入该行。共 ${totals.uniqueCitingWorks.toLocaleString()} 篇文献，同一篇可计入多行。`}
           />
         </figcaption>
         <ul className="space-y-2">
@@ -44,7 +44,7 @@ export default function WhoUses() {
           })}
         </ul>
         <p className="mt-3 text-xs text-ink-faint">
-          <T en="Government and nonprofit rows (ember) are a policy-relevance signal." zh="政府与非营利机构所在行（赭色）提示研究与政策相关。" />
+          <T en="Government and nonprofit rows (ember) are a policy-relevance signal." zh="政府和非营利机构所在行以余烬色标出，可作为研究与政策相关的线索。" />
         </p>
       </figure>
 

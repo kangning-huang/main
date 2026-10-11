@@ -8,7 +8,7 @@ import { useReachLens } from "./ReachLens";
 const MIN_WORKS = 5; // below this the ratio is too noisy to colour
 
 const BINS: { min: number; color: string; en: string; zh: string }[] = [
-  { min: 6, color: "#0d7377", en: "≥ 6× expected", zh: "≥ 预期 6 倍" },
+  { min: 6, color: "#0d7377", en: "≥ 6× expected", zh: "≥ 预期的 6 倍" },
   { min: 3, color: "#4fa5a8", en: "3–6×", zh: "3–6 倍" },
   { min: 1.5, color: "#a8d5d6", en: "1.5–3×", zh: "1.5–3 倍" },
   { min: 0.67, color: "#d9d2c6", en: "about as expected (0.67–1.5×)", zh: "接近预期（0.67–1.5 倍）" },
@@ -81,12 +81,12 @@ export default function WhereMap() {
           ))}
           <span className="inline-flex items-center gap-1.5">
             <svg width="12" height="12" aria-hidden="true"><rect width="12" height="12" rx="2" fill="url(#reach-hatch)" /></svg>
-            <T en={`1–${MIN_WORKS - 1} citing works`} zh={`1–${MIN_WORKS - 1} 篇文献引用我的研究`} />
+            <T en={`1–${MIN_WORKS - 1} citing works`} zh={`引用文献 1–${MIN_WORKS - 1} 篇`} />
           </span>
           <span className="w-full text-ink-faint">
             <T
               en={`Source: OpenAlex, author affiliations of citing works (self-citations removed), as of ${meta.asOf}. Basemap: Natural Earth 1:110m (public domain), Equal Earth projection.`}
-              zh={`数据取自 OpenAlex 施引文献的作者所属机构，已剔除自引，截至 ${meta.asOf}。底图采用 Natural Earth 1:110m（公有领域），使用 Equal Earth 投影。`}
+              zh={`地图中的国家和地区，按引用我研究的文献里作者所属机构确定。数据来自 OpenAlex，已剔除自引，截至 ${meta.asOf}。底图采用 Natural Earth 1:110m（公有领域），使用 Equal Earth 投影。`}
             />
           </span>
         </figcaption>
@@ -94,19 +94,19 @@ export default function WhereMap() {
 
       <details className="mt-4 text-sm">
         <summary className="cursor-pointer text-ink-muted hover:text-ink">
-          <T en={`Countries with ≥ ${MIN_WORKS} citing works (table)`} zh={`施引文献数 ≥ ${MIN_WORKS} 篇的国家和地区（表格）`} />
+          <T en={`Countries with ≥ ${MIN_WORKS} citing works (table)`} zh={`引用文献 ≥ ${MIN_WORKS} 篇的国家和地区（表格）`} />
         </summary>
         <p className="mt-2 text-xs text-ink-faint">
           <T
             en={`Small research systems have small expected values, so their ratios swing widely (one extra paper moves them a lot). Not drawn at this map scale: ${notDrawn.map((c) => countryName(c.code).en).join(", ")}.`}
-            zh={`科研产出较少的国家和地区，预期值也小，多一篇文献就可能让比值大幅变化。当前地图比例尺下未绘出的地区有 ${notDrawn.map((c) => countryName(c.code).zh).join("、")}。`}
+            zh={`科研产出较少的国家和地区，预期文献数也少，因此多一篇文献引用我的研究，就可能让比值大幅变化。当前地图比例尺下没有画出的地区包括 ${notDrawn.map((c) => countryName(c.code).zh).join("、")}。`}
           />
         </p>
         <table className="mt-2 w-full text-left text-sm">
           <thead className="text-xs text-ink-faint">
             <tr>
               <th className="py-1 pr-3 font-normal"><T en="Country / territory" zh="国家/地区" /></th>
-              <th className="py-1 pr-3 text-right font-normal"><T en="Citing works" zh="引用这些论文的文献" /></th>
+              <th className="py-1 pr-3 text-right font-normal"><T en="Citing works" zh="引用文献" /></th>
               <th className="py-1 pr-3 text-right font-normal"><T en="Expected" zh="预期" /></th>
               <th className="py-1 text-right font-normal"><T en="Ratio" zh="比值" /></th>
             </tr>

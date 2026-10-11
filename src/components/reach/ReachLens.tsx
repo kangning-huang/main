@@ -72,7 +72,7 @@ export function ReachLensChip() {
           }`}
           aria-pressed={lens === "lead"}
         >
-          <T en="First / last / corresponding author" zh="第一/通讯作者" />
+          <T en="First / last / corresponding author" zh="第一/末位/通讯作者" />
         </button>
       </div>
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-lg border border-rule bg-paper-warm/60 px-4 py-3 text-xs text-ink-muted">
@@ -85,7 +85,7 @@ export function ReachLensChip() {
         <span>
           <T
             en={`${view.totals.papers} papers · ${view.totals.uniqueCitingWorks.toLocaleString()} citing works · ${view.totals.countriesCount} countries`}
-            zh={`${view.totals.papers} 篇论文 · ${view.totals.uniqueCitingWorks.toLocaleString()} 篇施引文献 · ${view.totals.countriesCount} 个国家/地区`}
+            zh={`${view.totals.papers} 篇论文 · ${view.totals.uniqueCitingWorks.toLocaleString()} 篇引用文献 · ${view.totals.countriesCount} 个国家/地区`}
           />
         </span>
         <span>
