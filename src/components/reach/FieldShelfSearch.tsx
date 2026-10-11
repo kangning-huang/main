@@ -157,7 +157,7 @@ export default function FieldShelfSearch({ view, tips, status, onLoad, query, on
       </div>
       {status === "error" ? (
         <p className="mt-1.5 text-xs text-ink-muted" aria-live="polite">
-          {zh ? "施引文献列表未能加载。" : "The list of citing works did not load."}{" "}
+          {zh ? "引用我论文的文献列表未能加载。" : "The list of citing works did not load."}{" "}
           <button type="button" onClick={onLoad} className="text-teal hover:underline">
             {zh ? "重试" : "Retry"}
           </button>

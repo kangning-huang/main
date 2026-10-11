@@ -87,7 +87,7 @@ export function WorkDetails({
             </button>
           </p>
         ) : (
-          <p className="text-[13px] text-ink-faint">{zh ? "正在加载…" : "Loading details…"}</p>
+          <p className="text-[13px] text-ink-faint">{zh ? "正在加载详情…" : "Loading details…"}</p>
         )}
         <p className="mt-0.5 text-ink-muted">
           {meta}
@@ -95,7 +95,7 @@ export function WorkDetails({
         </p>
       </div>
       <div>
-        <p className="text-[10.5px] uppercase tracking-[0.12em] text-ink-faint">{zh ? "引用本人论文" : "Builds on"}</p>
+        <p className="text-[10.5px] uppercase tracking-[0.12em] text-ink-faint">{zh ? "引用我的论文" : "Builds on"}</p>
         <ul className="mt-0.5 space-y-px text-ink">
           {sq.papers.map((p) => (
             <li key={p}>
