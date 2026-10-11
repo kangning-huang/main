@@ -5,8 +5,11 @@ face retouching.
 
 ## Source
 
-- Couple selfie (Ken face crop): `_source/ken-couple-headshot-raw.jpg` (768×1024).
-- Face square provenance: `_source/ken-couple-headshot-face-square.jpg`.
+- **Current (2026-10-12):** user-supplied face crop
+  `_source/ken-couple-headshot-user-crop.jpg` (893×1174; process.py
+  center-crops to square on the shorter side before resize).
+- Prior auto face square kept: `_source/ken-couple-headshot-face-square.jpg`.
+- Couple selfie raw kept: `_source/ken-couple-headshot-raw.jpg` (768×1024).
 - Prior panel source kept: `_source/ken-panel-headshot-raw.jpg`.
 - Google Scholar profile: https://scholar.google.com/citations?user=s_domssAAAAJ&hl=en
 
@@ -19,10 +22,11 @@ python3 scripts/headshot/process.py path/to/original.jpg
 
 ## Steps
 
-1. Gentle grade (warm R×1.03 / B×0.97, contrast ×1.04, +2 lift).
-2. Face-centred square crop `(400, 75, 768, 443)` → 368×368.
-3. Lanczos resize + light unsharp (r 0.8, 35%, threshold 2).
-4. Encode JPEG q84 progressive, WebP q80 m6, AVIF q60 speed 4.
+1. Center-square the source if `w ≠ h` (crop to `min(w,h)` centered).
+2. Gentle grade (warm R×1.03 / B×0.97, contrast ×1.04, +2 lift).
+3. Full-image square crop `(0, 0, w, h)`.
+4. Lanczos resize + light unsharp (r 0.8, 35%, threshold 2).
+5. Encode JPEG q84 progressive, WebP q80 m6, AVIF q60 speed 4.
 
 ## Outputs
 
