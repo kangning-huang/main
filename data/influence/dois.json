@@ -1,31 +1,31 @@
 {
-  "$comment": "Pinned DOI list for the /reach pipeline. Edit by hand; never populate from OpenAlex author search. lens lead = first/last/corresponding (hand-pinned; OpenAlex is_corresponding is unreliable). lens coauthor = other papers with resolving DOIs. Papers without a published DOI and Nature Cities Nested economies (embargo DOI 404) are intentionally absent.",
+  "$comment": "Pinned DOI list for the /reach pipeline. Edit by hand; never populate from OpenAlex author search. lens lead = first/last/corresponding (hand-pinned; OpenAlex is_corresponding is unreliable). lens coauthor = other papers with resolving DOIs. Papers without a published DOI and Nature Cities Nested economies (embargo DOI 404) are intentionally absent. Acta Sunyatseni 2010 GeoSOS has no resolving DOI/OpenAlex work — publications lead only, not Reach-pinned.",
   "themes": [
     {
       "id": "urban-futures",
       "en": "Urban futures",
-      "zh": "\u57ce\u5e02\u672a\u6765"
+      "zh": "城市未来"
     },
     {
       "id": "heat",
       "en": "Heat",
-      "zh": "\u9ad8\u6e29"
+      "zh": "高温"
     },
     {
       "id": "flood-coasts",
       "en": "Flood and coasts",
-      "zh": "\u6d2a\u6c34\u4e0e\u6d77\u5cb8"
+      "zh": "洪水与海岸"
     },
     {
       "id": "scaling-form",
       "en": "Scaling and form",
-      "zh": "\u6807\u5ea6\u4e0e\u5f62\u6001"
+      "zh": "标度与形态"
     }
   ],
   "papers": [
     {
       "doi": "10.1088/1748-9326/ab4b71",
-      "short": "ERL 2019 \u00b7 urban expansion to 2050",
+      "short": "ERL 2019 · urban expansion to 2050",
       "year": 2019,
       "theme": "urban-futures",
       "themeSource": "research-page",
@@ -34,7 +34,7 @@
     },
     {
       "doi": "10.1080/13658816.2012.730147",
-      "short": "IJGIS 2013 \u00b7 land-use allocation",
+      "short": "IJGIS 2013 · land-use allocation",
       "year": 2013,
       "theme": "urban-futures",
       "themeSource": "reach-agent",
@@ -43,7 +43,7 @@
     },
     {
       "doi": "10.1029/2020JD033831",
-      "short": "JGR-A 2021 \u00b7 nighttime heat stress",
+      "short": "JGR-A 2021 · nighttime heat stress",
       "year": 2021,
       "theme": "heat",
       "themeSource": "research-page",
@@ -52,7 +52,7 @@
     },
     {
       "doi": "10.1016/j.uclim.2021.100806",
-      "short": "Urban Climate 2021 \u00b7 urban climate forecasts",
+      "short": "Urban Climate 2021 · urban climate forecasts",
       "year": 2021,
       "theme": "heat",
       "themeSource": "reach-agent",
@@ -61,16 +61,16 @@
     },
     {
       "doi": "10.1038/s41558-022-01481-8",
-      "short": "Nat Clim Change 2022 \u00b7 urban forests",
+      "short": "Nat Clim Change 2022 · urban forests",
       "year": 2022,
       "theme": "heat",
       "themeSource": "reach-agent",
       "lens": "lead",
-      "doiSource": "Crossref title match; sole author Huang, Nature Climate Change 12, 893\u2013894 (2022)"
+      "doiSource": "Crossref title match; sole author Huang, Nature Climate Change 12, 893–894 (2022)"
     },
     {
       "doi": "10.1007/s44274-024-00148-9",
-      "short": "Discover Env 2024 \u00b7 Belt and Road heat/flood",
+      "short": "Discover Env 2024 · Belt and Road heat/flood",
       "year": 2024,
       "theme": "flood-coasts",
       "themeSource": "reach-agent",
@@ -79,7 +79,7 @@
     },
     {
       "doi": "10.1038/s41598-025-96045-z",
-      "short": "Sci Rep 2025 \u00b7 urban density & heat",
+      "short": "Sci Rep 2025 · urban density & heat",
       "year": 2025,
       "theme": "heat",
       "themeSource": "research-page",
@@ -88,7 +88,7 @@
     },
     {
       "doi": "10.3390/rs17101747",
-      "short": "Remote Sensing 2025 \u00b7 inundation mapping",
+      "short": "Remote Sensing 2025 · inundation mapping",
       "year": 2025,
       "theme": "flood-coasts",
       "themeSource": "research-page",
@@ -97,7 +97,7 @@
     },
     {
       "doi": "10.1038/s44432-026-00009-1",
-      "short": "npj ESS 2026 \u00b7 demolition & cooling",
+      "short": "npj ESS 2026 · demolition & cooling",
       "year": 2026,
       "theme": "heat",
       "themeSource": "research-page",
@@ -106,7 +106,7 @@
     },
     {
       "doi": "10.1038/s41598-026-70981-w",
-      "short": "Sci Rep 2026 \u00b7 height-aware flood risk",
+      "short": "Sci Rep 2026 · height-aware flood risk",
       "year": 2026,
       "theme": "flood-coasts",
       "themeSource": "research-page",
@@ -115,7 +115,7 @@
     },
     {
       "doi": "10.1080/01944363.2025.2523604",
-      "short": "JAPA 2026 \u00b7 rhythmized urban parks",
+      "short": "JAPA 2026 · rhythmized urban parks",
       "year": 2026,
       "theme": "scaling-form",
       "themeSource": "reach-agent",
@@ -124,16 +124,16 @@
     },
     {
       "doi": "10.1038/s41467-020-14386-x",
-      "short": "Nat Commun 2020 \u00b7 SSP urban land projections",
+      "short": "Nat Commun 2020 · SSP urban land projections",
       "year": 2020,
       "theme": "urban-futures",
       "themeSource": "research-page",
       "lens": "lead",
-      "doiSource": "src/lib/publications-part-b.ts; last author (OpenAlex authorships[11/11]); flipped coauthor\u2192lead in authorship audit 2026-10-11"
+      "doiSource": "src/lib/publications-part-b.ts; last author (OpenAlex authorships[11/11]); flipped coauthor→lead in authorship audit 2026-10-11"
     },
     {
       "doi": "10.1038/s41893-020-0521-x",
-      "short": "Nat Sustain 2020 \u00b7 global urban change 1985\u20132015",
+      "short": "Nat Sustain 2020 · global urban change 1985–2015",
       "year": 2020,
       "theme": "urban-futures",
       "themeSource": "reach-agent",
@@ -142,7 +142,7 @@
     },
     {
       "doi": "10.1038/s41893-019-0436-6",
-      "short": "Nat Sustain 2020 \u00b7 urban growth & biodiversity",
+      "short": "Nat Sustain 2020 · urban growth & biodiversity",
       "year": 2020,
       "theme": "urban-futures",
       "themeSource": "reach-agent",
@@ -151,7 +151,7 @@
     },
     {
       "doi": "10.1080/13658816.2011.635594",
-      "short": "IJGIS 2012 \u00b7 MACO land-use allocation",
+      "short": "IJGIS 2012 · MACO land-use allocation",
       "year": 2012,
       "theme": "urban-futures",
       "themeSource": "reach-agent",
@@ -160,7 +160,7 @@
     },
     {
       "doi": "10.1021/acs.est.9b00666",
-      "short": "ES&T 2019 \u00b7 road dust PM2.5",
+      "short": "ES&T 2019 · road dust PM2.5",
       "year": 2019,
       "theme": "heat",
       "themeSource": "reach-agent",
@@ -169,7 +169,7 @@
     },
     {
       "doi": "10.1109/tgrs.2013.2242895",
-      "short": "IEEE TGRS 2013 \u00b7 multisensor registration",
+      "short": "IEEE TGRS 2013 · multisensor registration",
       "year": 2013,
       "theme": "scaling-form",
       "themeSource": "reach-agent",
@@ -178,7 +178,7 @@
     },
     {
       "doi": "10.1016/j.atmosenv.2018.07.043",
-      "short": "Atmos Environ 2018 \u00b7 dust emissions",
+      "short": "Atmos Environ 2018 · dust emissions",
       "year": 2018,
       "theme": "heat",
       "themeSource": "reach-agent",
@@ -187,16 +187,16 @@
     },
     {
       "doi": "10.1016/j.rse.2014.10.016",
-      "short": "RSE 2015 \u00b7 snow depth retrieval",
+      "short": "RSE 2015 · snow depth retrieval",
       "year": 2015,
       "theme": "flood-coasts",
       "themeSource": "reach-agent",
       "lens": "coauthor",
-      "doiSource": "src/lib/publications-part-b.ts; corrected DOI 2015.06.016\u21922014.10.016 (wrong paper was glacier HIGA)"
+      "doiSource": "src/lib/publications-part-b.ts; corrected DOI 2015.06.016→2014.10.016 (wrong paper was glacier HIGA)"
     },
     {
       "doi": "10.1021/acs.est.4c14275",
-      "short": "ES&T 2025 \u00b7 urban tree cooling",
+      "short": "ES&T 2025 · urban tree cooling",
       "year": 2025,
       "theme": "heat",
       "themeSource": "reach-agent",
@@ -205,7 +205,7 @@
     },
     {
       "doi": "10.1038/s41558-025-02303-3",
-      "short": "Nat Clim Change 2025 \u00b7 urban overheating mortality",
+      "short": "Nat Clim Change 2025 · urban overheating mortality",
       "year": 2025,
       "theme": "heat",
       "themeSource": "reach-agent",
@@ -214,7 +214,7 @@
     },
     {
       "doi": "10.1038/s44284-024-00184-9",
-      "short": "Nature Cities 2025 \u00b7 urban browning heat stress",
+      "short": "Nature Cities 2025 · urban browning heat stress",
       "year": 2025,
       "theme": "heat",
       "themeSource": "reach-agent",
@@ -223,21 +223,48 @@
     },
     {
       "doi": "10.1021/acs.est.4c00424",
-      "short": "ES&T 2024 \u00b7 AC usage & indoor\u2013outdoor heat",
+      "short": "ES&T 2024 · AC usage & indoor–outdoor heat",
       "year": 2024,
       "theme": "heat",
       "themeSource": "reach-agent",
       "lens": "coauthor",
-      "doiSource": "OpenAlex title match; publications-part-b.ts listed 10.1021/acs.est.4c05618 which 404s on OpenAlex \u2014 corrected to 10.1021/acs.est.4c00424"
+      "doiSource": "OpenAlex title match; publications-part-b.ts listed 10.1021/acs.est.4c05618 which 404s on OpenAlex — corrected to 10.1021/acs.est.4c00424"
     },
     {
       "doi": "10.3390/toxics13010045",
-      "short": "Toxics 2025 \u00b7 air pollution & anxiety visits",
+      "short": "Toxics 2025 · air pollution & anxiety visits",
       "year": 2025,
       "theme": "heat",
       "themeSource": "reach-agent",
       "lens": "coauthor",
       "doiSource": "src/lib/publications-part-a.ts"
+    },
+    {
+      "doi": "10.1002/ldr.3429",
+      "short": "LDD 2019 · wetland degradation",
+      "year": 2019,
+      "theme": "flood-coasts",
+      "themeSource": "reach-agent",
+      "lens": "lead",
+      "doiSource": "OpenAlex; last author (5/5); pinned lead per Ken 2026-10-11 after authorship audit"
+    },
+    {
+      "doi": "10.1007/s11707-018-0717-9",
+      "short": "Frontiers Earth Sci 2018 · multi-sensor registration",
+      "year": 2018,
+      "theme": "scaling-form",
+      "themeSource": "reach-agent",
+      "lens": "lead",
+      "doiSource": "OpenAlex; last author (5/5); pinned lead per Ken 2026-10-11 after authorship audit"
+    },
+    {
+      "doi": "10.1002/ldr.3980",
+      "short": "LDD 2021 · reclamation land development",
+      "year": 2021,
+      "theme": "flood-coasts",
+      "themeSource": "reach-agent",
+      "lens": "lead",
+      "doiSource": "OpenAlex; last author (6/6); pinned lead per Ken 2026-10-11 after authorship audit"
     }
   ]
 }

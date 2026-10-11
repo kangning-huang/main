@@ -5,61 +5,63 @@ Every number below is recounted from the cached OpenAlex citing lists. This file
 
 ## Checks
 
-- PASS all: citing works 3,141 vs influence.json uniqueCitingWorks 3,141 (influence.json as of 2026-10-11, cache as of 2026-10-11)
-- PASS all: non-self citing links 3,372 vs influence.json 3,372
-- PASS all: self-citations removed 308 vs influence.json 308
-- PASS all: papers 24 (12 lead) vs influence.json 24 (12 lead)
-- PASS lead: citing works 1,330 vs influence.json uniqueCitingWorks 1,330 (influence.json as of 2026-10-11, cache as of 2026-10-11)
-- PASS lead: non-self citing links 1,378 vs influence.json 1,378
-- PASS lead: self-citations removed 115 vs influence.json 115
-- PASS lead: papers 12 (12 lead) vs influence.json 12 (12 lead)
+- PASS all: citing works 3,224 vs influence.json uniqueCitingWorks 3,224 (influence.json as of 2026-10-11, cache as of 2026-10-11)
+- PASS all: non-self citing links 3,461 vs influence.json 3,461
+- PASS all: self-citations removed 313 vs influence.json 313
+- PASS all: papers 27 (15 lead) vs influence.json 27 (15 lead)
+- PASS lead: citing works 1,419 vs influence.json uniqueCitingWorks 1,419 (influence.json as of 2026-10-11, cache as of 2026-10-11)
+- PASS lead: non-self citing links 1,467 vs influence.json 1,467
+- PASS lead: self-citations removed 120 vs influence.json 120
+- PASS lead: papers 15 (15 lead) vs influence.json 15 (15 lead)
 - PASS every paper's non-self citing works match influence.json papers[].citingNonSelf
-- PASS co-author-only share of All 57.7% vs influence.json 57.7%
-- INFO outside home topics: Field & Shelf (fixed lead set, 24 topics) All 1,527/3,141 · Lead 497/1330; influence.json (topics of all 44 on the pinned papers) All 1,064 · Lead 430. Different rules, both labelled; influence.json is not changed.
-- PASS all: Σ paperIdxs over squares (3,372) = non-self citing links
+- PASS co-author-only share of All 56% vs influence.json 56%
+- INFO outside home topics: Field & Shelf (fixed lead set, 28 topics) All 1,492/3,224 · Lead 534/1419; influence.json (topics of all 45 on the pinned papers) All 1,097 · Lead 464. Different rules, both labelled; influence.json is not changed.
+- PASS all: Σ paperIdxs over squares (3,461) = non-self citing links
 - PASS all: max paperIdxs.length = 4 (≤ 4 lines per square)
-- PASS all: one square per OpenAlex id (3,141 unique)
+- PASS all: one square per OpenAlex id (3,224 unique)
 - PASS all: squares never touch (min gap 1px)
-- PASS all: every paper of the view is on the shelf (24), including those with 0 citing works
-- PASS lead: Σ paperIdxs over squares (1,378) = non-self citing links
+- PASS all: every paper of the view is on the shelf (27), including those with 0 citing works
+- PASS lead: Σ paperIdxs over squares (1,467) = non-self citing links
 - PASS lead: max paperIdxs.length = 3 (≤ 4 lines per square)
-- PASS lead: one square per OpenAlex id (1,330 unique)
+- PASS lead: one square per OpenAlex id (1,419 unique)
 - PASS lead: squares never touch (min gap 1px)
-- PASS lead: every paper of the view is on the shelf (12), including those with 0 citing works
+- PASS lead: every paper of the view is on the shelf (15), including those with 0 citing works
 - PASS Lead squares ⊂ All squares
 - PASS Lead squares point only at lead papers
 - PASS no square changes citedBy between All and Lead
 - PASS every All square has integer citedBy ≥ 0
 - PASS most-cited square (citedBy 3839) near centre (dist 1.0px)
 - INFO lead papers with 0 non-self citing works (shown as "0 yet"): Discover Env 2024, npj ESS 2026, Sci Rep 2026
-- INFO constant density: Lead field 408×161px vs All 624×244px (linear ×0.66; √(573/3102) = 0.65)
-- WARN lead: theme name "methods" (en) estimated 66px over 49px of room
-- WARN lead: theme name "methods" (zh) estimated 55px over 49px of room
+- INFO constant density: Lead field 418×161px vs All 636×245px (linear ×0.66; √(573/3102) = 0.66)
 
 ## Headlines
 
-- **All:** 3,141 works cite this research. 150 are themselves cited ≥100 times — 2 of them ≥1,000. — 3,141 篇文献引用了这些研究。其中 150 篇自身被引 ≥100 次，2 篇 ≥1,000 次。
-- **Lead:** 1,330 works cite Ken's 12 lead-author papers. 77 are themselves cited ≥100 times. — 1,330 篇文献引用了本人的 12 篇第一/通讯作者论文。其中 77 篇自身被引 ≥100 次。
+- **All:** 3,224 works cite this research. 152 are themselves cited ≥100 times — 2 of them ≥1,000. — 3,224 篇文献引用了这些研究。其中 152 篇自身被引 ≥100 次，2 篇 ≥1,000 次。
+- **Lead:** 1,419 works cite Ken's 15 lead-author papers. 80 are themselves cited ≥100 times. — 1,419 篇文献引用了本人的 15 篇第一/通讯作者论文。其中 80 篇自身被引 ≥100 次。
 
-## Fixed home topics (H_lead): 24 topics
+## Fixed home topics (H_lead): 28 topics
 
-The union of OpenAlex `topics[]` (plus the assigned topic) on the 12 lead papers: 24 topics in 17 subfields, 7 fields and 3 domains. With 3 of OpenAlex's 4 domains at home, distances run 0–4. Distance is footnote-only; field colour is cited_by_count.
+The union of OpenAlex `topics[]` (plus the assigned topic) on the 15 lead papers: 28 topics in 20 subfields, 7 fields and 3 domains. With 3 of OpenAlex's 4 domains at home, distances run 0–4. Distance is footnote-only; field colour is cited_by_count.
 
 | Topic | Subfield | Field | Domain | On lead papers |
 | --- | --- | --- | --- | --- |
 | Agriculture, Land Use, Rural Development | General Agricultural and Biological Sciences | Agricultural and Biological Sciences | Life Sciences | Nat Commun 2020 |
+| Advanced Image and Video Retrieval Techniques | Computer Vision and Pattern Recognition | Computer Science | Physical Sciences | Frontiers Earth Sci 2018 |
 | Advanced Multi-Objective Optimization Algorithms | Computational Theory and Mathematics | Computer Science | Physical Sciences | IJGIS 2013 |
-| Remote Sensing and Land Use | Atmospheric Science | Earth and Planetary Sciences | Physical Sciences | Urban Climate 2021 |
+| Remote Sensing and Land Use | Atmospheric Science | Earth and Planetary Sciences | Physical Sciences | Urban Climate 2021, LDD 2021 |
+| Advanced Image Fusion Techniques | Media Technology | Engineering | Physical Sciences | Frontiers Earth Sci 2018 |
 | Artificial Immune Systems Applications | Biomedical Engineering | Engineering | Physical Sciences | IJGIS 2013 |
 | Earthquake and Tsunami Effects | Civil and Structural Engineering | Engineering | Physical Sciences | Sci Rep 2026 |
 | Remote-Sensing Image Classification | Media Technology | Engineering | Physical Sciences | Remote Sensing 2025 |
+| Satellite Image Processing and Photogrammetry | Ocean Engineering | Engineering | Physical Sciences | Frontiers Earth Sci 2018 |
 | Synthetic Aperture Radar (SAR) Applications and Techniques | Aerospace Engineering | Engineering | Physical Sciences | Remote Sensing 2025 |
 | Climate Change and Health Impacts | Health, Toxicology and Mutagenesis | Environmental Science | Physical Sciences | JGR-A 2021, Sci Rep 2025 |
 | Climate variability and models | Global and Planetary Change | Environmental Science | Physical Sciences | ERL 2019, JGR-A 2021 |
-| Environmental Changes in China | Global and Planetary Change | Environmental Science | Physical Sciences | Nat Commun 2020 |
+| Coastal wetland ecosystem dynamics | Ecology | Environmental Science | Physical Sciences | LDD 2019 |
+| Environmental Changes in China | Global and Planetary Change | Environmental Science | Physical Sciences | Nat Commun 2020, LDD 2019, LDD 2021 |
 | Flood Risk Assessment and Management | Global and Planetary Change | Environmental Science | Physical Sciences | Remote Sensing 2025, Sci Rep 2026 |
 | Forest Management and Policy | Global and Planetary Change | Environmental Science | Physical Sciences | Nat Clim Change 2022 |
-| Land Use and Ecosystem Services | Global and Planetary Change | Environmental Science | Physical Sciences | ERL 2019, IJGIS 2013, Urban Climate 2021, Sci Rep 2025, npj ESS 2026, Nat Commun 2020 |
+| Land Use and Ecosystem Services | Global and Planetary Change | Environmental Science | Physical Sciences | ERL 2019, IJGIS 2013, Urban Climate 2021, Sci Rep 2025, npj ESS 2026, Nat Commun 2020, LDD 2019, LDD 2021 |
 | Species Distribution and Climate Change | Ecological Modeling | Environmental Science | Physical Sciences | Nat Clim Change 2022 |
 | Urban Arborization and Environmental Studies | Management, Monitoring, Policy and Law | Environmental Science | Physical Sciences | Nat Clim Change 2022 |
 | Urban Green Space and Health | Health, Toxicology and Mutagenesis | Environmental Science | Physical Sciences | JAPA 2026 |
@@ -78,8 +80,8 @@ Colour and centre-packing use OpenAlex `cited_by_count` of each citing work (log
 
 | View | Citing works | 0 | 1–9 | 10–99 | 100–999 | ≥1,000 | ≥100 | ≥1,000 | max |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
-| all | 3,141 | 589 | 1,095 | 1,307 | 148 | 2 | 150 | 2 | 3,839 |
-| lead | 1,330 | 217 | 447 | 589 | 77 | 0 | 77 | 0 | 828 |
+| all | 3,224 | 606 | 1,126 | 1,340 | 150 | 2 | 152 | 2 | 3,839 |
+| lead | 1,419 | 234 | 479 | 626 | 80 | 0 | 80 | 0 | 828 |
 
 Breaks: 0, 1, 10, 100, 1000 · colours: #cfc4b6, #b89a82, #dd9270, #c74b16, #141211.
 
@@ -87,24 +89,24 @@ Breaks: 0, 1, 10, 100, 1000 · colours: #cfc4b6, #b89a82, #dd9270, #c74b16, #141
 
 | View | Citing works | Core (d 0) | Neighbour (d 1–2) | Further (d ≥ 3 or no topic) | Outside home (d ≠ 0) |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| all | 3,141 | 1,614 (51.4%) | 1,423 (45.3%) | 104 (3.3%) | 1,527 (48.6%) |
-| lead | 1,330 | 833 (62.6%) | 452 (34.0%) | 45 (3.4%) | 497 (37.4%) |
+| all | 3,224 | 1,732 (53.7%) | 1,386 (43.0%) | 106 (3.3%) | 1,492 (46.3%) |
+| lead | 1,419 | 885 (62.4%) | 487 (34.3%) | 47 (3.3%) | 534 (37.6%) |
 
 | View | d = 0 | 1 | 2 | 3 | 4 | no topic |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
-| all | 1,614 | 684 | 739 | 82 | 21 | 1 |
-| lead | 833 | 236 | 216 | 32 | 13 | 0 |
+| all | 1,732 | 941 | 445 | 82 | 23 | 1 |
+| lead | 885 | 308 | 179 | 32 | 15 | 0 |
 
-For comparison, `influence.json` (and the Ripple) count a work as outside when its topic is not among the 44 topics of **all** pinned papers: 1,064 of 3,141 (All), 430 of 1330 (Lead). Field & Shelf uses the fixed lead set, so its shares are 48.6% (All) and 37.4% (Lead); captions say which rule they use.
+For comparison, `influence.json` (and the Ripple) count a work as outside when its topic is not among the 45 topics of **all** pinned papers: 1,097 of 3,224 (All), 464 of 1419 (Lead). Field & Shelf uses the fixed lead set, so its shares are 46.3% (All) and 37.6% (Lead); captions say which rule they use.
 
 ## How many of Ken's papers each citing work cites
 
 | View | 1 paper | 2 | 3 | 4 | max |
 | --- | ---: | ---: | ---: | ---: | ---: |
-| all | 2,935 (93.4%) | 183 | 21 | 2 | 4 |
-| lead | 1,283 (96.5%) | 46 | 1 | 0 | 3 |
+| all | 3,012 (93.4%) | 189 | 21 | 2 | 4 |
+| lead | 1,372 (96.7%) | 46 | 1 | 0 | 3 |
 
-Co-author share: 1,811 of 3,141 All squares (57.7%) cite only co-authored papers.
+Co-author share: 1,805 of 3,224 All squares (56.0%) cite only co-authored papers.
 
 ## Shelf (theme, then year)
 
@@ -112,8 +114,8 @@ Co-author share: 1,811 of 3,141 All squares (57.7%) cite only co-authored papers
 | ---: | --- | --- | --- | ---: | ---: | ---: | --- |
 | 1 | IJGIS 2013 · land-use allocation | lead | expansion | 2013 (OpenAlex 2012) | 79 | 32 (41%) | 47 / 28 / 4 |
 | 2 | ERL 2019 · urban expansion to 2050 | lead | expansion | 2019 | 392 | 144 (37%) | 248 / 132 / 12 |
-| 3 | Nat Commun 2020 · SSP urban land projections | lead | expansion | 2020 | 799 | 303 (38%) | 496 / 276 / 27 |
-| 4 | Nat Sustain 2020 · global urban change 1985–2015 | coauthor | expansion | 2020 | 773 | 333 (43%) | 440 / 306 / 27 |
+| 3 | Nat Commun 2020 · SSP urban land projections | lead | expansion | 2020 | 799 | 301 (38%) | 498 / 274 / 27 |
+| 4 | Nat Sustain 2020 · global urban change 1985–2015 | coauthor | expansion | 2020 | 773 | 332 (43%) | 441 / 305 / 27 |
 | 5 | Nat Sustain 2020 · urban growth & biodiversity | coauthor | expansion | 2020 (OpenAlex 2019) | 569 | 324 (57%) | 245 / 301 / 23 |
 | 6 | JGR-A 2021 · nighttime heat stress | lead | heat-health | 2021 | 63 | 12 (19%) | 51 / 11 / 1 |
 | 7 | Urban Climate 2021 · urban climate forecasts | lead | heat-health | 2021 | 19 | 5 (26%) | 14 / 5 / 0 |
@@ -128,12 +130,15 @@ Co-author share: 1,811 of 3,141 All squares (57.7%) cite only co-authored papers
 | 16 | ES&T 2019 · road dust PM2.5 | coauthor | air-dust | 2019 | 131 | 131 (100%) | 0 / 128 / 3 |
 | 17 | Toxics 2025 · air pollution & anxiety visits | coauthor | air-dust | 2025 | 3 | 3 (100%) | 0 / 3 / 0 |
 | 18 | IJGIS 2012 · MACO land-use allocation | coauthor | methods | 2012 | 133 | 54 (41%) | 79 / 49 / 5 |
-| 19 | IEEE TGRS 2013 · multisensor registration | coauthor | methods | 2013 | 94 | 86 (91%) | 8 / 85 / 1 |
-| 20 | JAPA 2026 · rhythmized urban parks | lead | methods | 2026 (OpenAlex 2025) | 1 | 0 (0%) | 1 / 0 / 0 |
-| 21 | RSE 2015 · snow depth retrieval | coauthor | flood | 2015 (OpenAlex 2014) | 49 | 45 (92%) | 4 / 45 / 0 |
-| 22 | Discover Env 2024 · Belt and Road heat/flood | lead | flood | 2024 | 0 | 0 yet | 0 / 0 / 0 |
-| 23 | Remote Sensing 2025 · inundation mapping | lead | flood | 2025 | 2 | 1 (50%) | 1 / 1 / 0 |
-| 24 | Sci Rep 2026 · height-aware flood risk | lead | flood | 2026 | 0 | 0 yet | 0 / 0 / 0 |
+| 19 | IEEE TGRS 2013 · multisensor registration | coauthor | methods | 2013 | 94 | 16 (17%) | 78 / 15 / 1 |
+| 20 | Frontiers Earth Sci 2018 · multi-sensor registration | lead | methods | 2018 | 21 | 6 (29%) | 15 / 4 / 2 |
+| 21 | JAPA 2026 · rhythmized urban parks | lead | methods | 2026 (OpenAlex 2025) | 1 | 0 (0%) | 1 / 0 / 0 |
+| 22 | RSE 2015 · snow depth retrieval | coauthor | flood | 2015 (OpenAlex 2014) | 49 | 45 (92%) | 4 / 45 / 0 |
+| 23 | LDD 2019 · wetland degradation | lead | flood | 2019 | 56 | 27 (48%) | 29 / 27 / 0 |
+| 24 | LDD 2021 · reclamation land development | lead | flood | 2021 | 12 | 6 (50%) | 6 / 6 / 0 |
+| 25 | Discover Env 2024 · Belt and Road heat/flood | lead | flood | 2024 | 0 | 0 yet | 0 / 0 / 0 |
+| 26 | Remote Sensing 2025 · inundation mapping | lead | flood | 2025 | 2 | 1 (50%) | 1 / 1 / 0 |
+| 27 | Sci Rep 2026 · height-aware flood risk | lead | flood | 2026 | 0 | 0 yet | 0 / 0 / 0 |
 
 Lead papers with no non-self citing work yet (on the shelf as "0 yet", no squares): Discover Env 2024 · Belt and Road heat/flood; npj ESS 2026 · demolition & cooling; Sci Rep 2026 · height-aware flood risk.
 
@@ -141,11 +146,11 @@ Lead papers with no non-self citing work yet (on the shelf as "0 yet", no square
 
 | Type | All | Lead |
 | --- | ---: | ---: |
-| article | 2,692 | 1154 |
-| preprint | 142 | 66 |
-| book-chapter | 90 | 37 |
+| article | 2,762 | 1229 |
+| preprint | 146 | 70 |
+| book-chapter | 93 | 41 |
 | peer-review | 68 | 18 |
-| conference-paper | 58 | 20 |
+| conference-paper | 63 | 25 |
 | review | 32 | 12 |
 | dissertation | 21 | 6 |
 | data-paper | 18 | 9 |
@@ -153,19 +158,20 @@ Lead papers with no non-self citing work yet (on the shelf as "0 yet", no square
 | book | 4 | 1 |
 | report | 4 | 3 |
 | reference-entry | 4 | 0 |
+| retraction | 1 | 1 |
 | other | 1 | 0 |
 | conference-abstract | 1 | 0 |
 | paratext | 1 | 0 |
 
-Without a venue: 114 (All) / 37 (Lead). Without a DOI: 3 / 1 (the tooltip then links OpenAlex only). "Show me one" draws from articles and reviews with a venue and ≥10 own citations: 1,414 (All) / 646 (Lead).
+Without a venue: 114 (All) / 37 (Lead). Without a DOI: 3 / 1 (the tooltip then links OpenAlex only). "Show me one" draws from articles and reviews with a venue and ≥10 own citations: 1,448 (All) / 685 (Lead).
 
 ## Geometry
 
-- **all:** field 624×244px (ellipse rx 305.9, ry 117.7; 3px squares on a 6px grid, ±1px jitter). Shelf: 24 spines 23×131px, 1 text line(s), theme names in 2 line(s), reference width 700px.
-- **lead:** field 408×161px (ellipse rx 199.1, ry 76.6; 3px squares on a 6px grid, ±1px jitter). Shelf: 12 spines 50×144px, 2 text line(s), theme names in 2 line(s), reference width 700px.
+- **all:** field 636×245px (ellipse rx 309.9, ry 119.2; 3px squares on a 6px grid, ±1px jitter). Shelf: 27 spines 20×145px, 1 text line(s), theme names in 2 line(s), reference width 700px.
+- **lead:** field 418×161px (ellipse rx 205.6, ry 79.1; 3px squares on a 6px grid, ±1px jitter). Shelf: 15 spines 39×156px, 2 text line(s), theme names in 2 line(s), reference width 700px.
 
 ## Tooltip payloads (lazy)
 
-- `public/data/field-shelf-tooltips-all.json`: 1033 KB raw, 362 KB gzip (3,141 works).
-- `public/data/field-shelf-tooltips-lead.json`: 444 KB raw, 153 KB gzip (1,330 works).
+- `public/data/field-shelf-tooltips-all.json`: 1061 KB raw, 372 KB gzip (3,224 works).
+- `public/data/field-shelf-tooltips-lead.json`: 474 KB raw, 164 KB gzip (1,419 works).
 
