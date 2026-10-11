@@ -40,13 +40,13 @@ export default function ReachMethod() {
           <li>
             <T
               en="Field & Shelf (section 01): one square per non-self citing OpenAlex work. Colour and centre position encode that citing work's own OpenAlex cited_by_count on a log-ish ember–ink ramp (0 · 1–9 · 10–99 · 100–999 · ≥1,000); nearer the centre means more cited. Direction means nothing. Hover a shelf paper to light its citers and draw a thin link from each; hover a square to show up to four lines back to the papers it cites."
-              zh="田野与书架（第 01 节）中，每篇 OpenAlex 施引文献对应一个方块，已剔除自引。颜色和距中心远近表示文献自身在 OpenAlex 的被引次数（cited_by_count）。颜色从余烬色到墨色，近似按对数分段（0 · 1–9 · 10–99 · 100–999 · ≥1,000）；越靠近中心，被引越多，方向没有含义。鼠标移到书架上的论文，会点亮引用它的文献，并逐一画出细线；移到方块上，最多显示 4 条连线，指向它引用的论文。"
+              zh="领域与书架（第 01 节）中，每篇 OpenAlex 施引文献对应一个方块，已剔除自引。颜色和距中心远近表示文献自身在 OpenAlex 的被引次数（cited_by_count）。颜色从余烬色到墨色，近似按对数分段（0 · 1–9 · 10–99 · 100–999 · ≥1,000）；越靠近中心，被引越多，方向没有含义。鼠标移到书架上的论文，会点亮引用它的文献，并逐一画出细线；移到方块上，最多显示 4 条连线，指向它引用的论文。"
             />
           </li>
           <li>
             <T
               en="Field colour is each citing work's own OpenAlex cited_by_count (same across All / Lead). Where is the observed÷expected country map; Topic cards / Who below use the adaptive OpenAlex taxonomy; any outside-home % elsewhere on the page is labelled with its topic rule."
-              zh="田野颜色表示施引文献自身在 OpenAlex 的被引次数（cited_by_count），同一文献在“全部”和“第一/通讯作者”视角下颜色相同。“在哪里”地图显示各国实际施引数÷预期施引数；下方主题卡片和“谁在使用”按 OpenAlex 分类自适应分组。页面其他位置若显示“主题外”占比，会注明所用主题规则。"
+              zh="领域颜色表示施引文献自身在 OpenAlex 的被引次数（cited_by_count），同一文献在“全部”和“第一/通讯作者”视角下颜色相同。“在哪里”地图显示各国实际施引数÷预期施引数；下方主题卡片和“谁在使用”按 OpenAlex 分类自适应分组。页面其他位置若显示“主题外”占比，会注明所用主题规则。"
             />
           </li>
           <li>

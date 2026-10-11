@@ -537,7 +537,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
     >
       <div className="grid gap-x-8 gap-y-5 lg:grid-cols-[minmax(0,1fr)_340px] lg:grid-rows-[auto_auto_1fr]">
         <header className="lg:col-start-2 lg:row-start-1">
-          <p className="text-xs uppercase tracking-[0.14em] text-ink-faint">01 · {zh ? "田野与书架 · 每个方块代表一篇引用我研究的文献" : "Field & Shelf · one square per citing work"}</p>
+          <p className="text-xs uppercase tracking-[0.14em] text-ink-faint">01 · {zh ? "领域与书架 · 每个方块代表一篇引用我研究的文献" : "Field & Shelf · one square per citing work"}</p>
           <h2 id="field-shelf-heading" className="mt-2 font-display text-3xl leading-tight text-ink md:text-[2.25rem] lg:text-[2rem]">
             {zh ? view.headline.zh : view.headline.en}
           </h2>
