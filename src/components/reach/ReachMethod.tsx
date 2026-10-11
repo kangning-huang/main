@@ -22,31 +22,31 @@ export default function ReachMethod() {
           <li>
             <T
               en="Papers: a pinned DOI list synced from the Publications pages. No author-name search (OpenAlex disambiguation splits and merges profiles). In-press papers without a resolving DOI, and Nature Cities Nested economies (embargo DOI), are omitted."
-              zh="论文：与“学术论文”页同步的固定 DOI 列表。不使用作者姓名检索。尚无可用 DOI 的待刊论文，以及《Nature Cities》嵌套规模经济论文（DOI 仍在禁运），暂未纳入。"
+              zh="论文按“学术论文”页同步的固定 DOI 清单收录。OpenAlex 识别作者时会拆分或合并档案，因此不按姓名检索。尚无可解析 DOI 的待刊论文，以及 Nature Cities 的 Nested economies（DOI 尚未解禁），暂不纳入。"
             />
           </li>
           <li>
             <T
               en="Filter: All includes every pinned DOI. “First / last / corresponding author” is hand-pinned (lens: lead) — OpenAlex is_corresponding is never trusted alone. Corresponding-only flags still need Ken's review where unknown."
-              zh="筛选：“全部”含所有固定 DOI；“第一/通讯作者”为人工标注（lens: lead），从不单独采信 OpenAlex 的通讯作者字段。仅通讯、非一作的标注仍待核实。"
+              zh="“全部”包含所有固定 DOI。“第一/通讯作者”由人工标注（lens: lead），不单凭 OpenAlex 的 is_corresponding 字段判断。尚未确认的“仅通讯作者”标注，仍需我核实。"
             />
           </li>
           <li>
             <T
               en={`Self-citations (strict, per cited paper): ${meta.selfCitationRule} Removed in this view: ${totals.selfCitationsRemoved} of ${totals.citingLinksFetched} citation links.`}
-              zh={`自引（严格、按被引论文）：只要施引文献与被引论文有任何共同作者即剔除。本视角剔除 ${totals.citingLinksFetched} 条中的 ${totals.selfCitationsRemoved} 条。`}
+              zh={`自引（严格、按被引论文）：只要施引文献与被引论文有任何共同作者即剔除。本视角从 ${totals.citingLinksFetched} 条中剔除 ${totals.selfCitationsRemoved} 条。`}
             />
           </li>
           <li>
             <T
               en="Field & Shelf (section 01): one square per non-self citing OpenAlex work. Colour and centre position encode that citing work's own OpenAlex cited_by_count on a log-ish ember–ink ramp (0 · 1–9 · 10–99 · 100–999 · ≥1,000); nearer the centre means more cited. Direction means nothing. Hover a shelf paper to light its citers and draw a thin link from each; hover a square to show up to four lines back to the papers it cites."
-              zh="田野与书架（第 01 节）：每个非自引 OpenAlex 施引文献对应一个方块。颜色与中心位置表示该施引文献自身的 OpenAlex 被引次数（对数分段余烬→墨色：0 · 1–9 · 10–99 · 100–999 · ≥1,000）；越靠近中心被引越高。方向没有含义。悬停书架上的论文会点亮其施引并画出每一条连线；悬停方块则最多画出 4 条连回它所引用的论文。"
+              zh="田野与书架（第 01 节）中，每篇 OpenAlex 施引文献对应一个方块，已剔除自引。颜色和距中心远近表示文献自身在 OpenAlex 的被引次数（cited_by_count）。颜色从余烬色到墨色，近似按对数分段（0 · 1–9 · 10–99 · 100–999 · ≥1,000）；越靠近中心，被引越多，方向没有含义。鼠标移到书架上的论文，会点亮引用它的文献，并逐一画出细线；移到方块上，最多显示 4 条连线，指向它引用的论文。"
             />
           </li>
           <li>
             <T
               en="Field colour is each citing work's own OpenAlex cited_by_count (same across All / Lead). Where is the observed÷expected country map; Topic cards / Who below use the adaptive OpenAlex taxonomy; any outside-home % elsewhere on the page is labelled with its topic rule."
-              zh="田野颜色表示施引文献自身的 OpenAlex 被引次数（全部/第一通讯视角下同一文献同色）。在哪里为国家“实际÷预期”地图；主题卡片与谁在使用使用自适应 OpenAlex 分类；页面上若另有“主题外”占比，会标注其所用主题规则。"
+              zh="田野颜色表示施引文献自身在 OpenAlex 的被引次数（cited_by_count），同一文献在“全部”和“第一/通讯作者”视角下颜色相同。“在哪里”地图显示各国实际施引数÷预期施引数；下方主题卡片和“谁在使用”按 OpenAlex 分类自适应分组。页面其他位置若显示“主题外”占比，会注明所用主题规则。"
             />
           </li>
           <li>
@@ -58,13 +58,13 @@ export default function ReachMethod() {
           <li>
             <T
               en={`Country normalization: ${meta.countryBaseline}`}
-              zh="国家归一化：预期施引 ≈ 各施引领域中该国产出占比 × 该领域施引文献数之和。"
+              zh="国家归一化按 2012–2026 年数据计算。每国预期施引文献数 ≈ 各施引领域（该国在该领域 OpenAlex 文献中的占比 × 该领域施引文献数）之和。"
             />
           </li>
           <li>
             <T
               en="OpenAlex under-counts Chinese-language venues (e.g. CNKI). Treat China coverage as a lower bound."
-              zh="OpenAlex 对中文期刊（如知网）覆盖不足；将中国相关数字视为下限。"
+              zh="OpenAlex 对中文文献来源（如知网）覆盖不足，中国相关统计应视为下限。"
             />
           </li>
           <li>
@@ -92,7 +92,7 @@ export default function ReachMethod() {
           <li>
             <T
               en="Refreshed monthly by a GitHub Action; each run is kept as a dated snapshot."
-              zh="由 GitHub Action 每月更新；每次运行保存为带日期的快照。"
+              zh="通过 GitHub Action 每月更新，每次保留一份带日期的数据快照。"
             />
           </li>
         </ul>

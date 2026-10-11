@@ -23,7 +23,7 @@ export default function Growth() {
       <p className="max-w-3xl text-[15px] leading-relaxed text-ink-muted">
         <T
           en={`Citing works per year, by theme, self-citations removed (OpenAlex). All panels share one scale. ${asOfYear} is a partial year (to ${meta.asOf}). Papers published from ${meta.earlyFromYear} on are listed as “early” instead of drawn as bars.`}
-          zh={`按主题统计的每年施引文献数，已剔除自引（OpenAlex）。各面板使用同一纵轴。${asOfYear} 年为不完整年份（截至 ${meta.asOf}）。${meta.earlyFromYear} 年及以后发表的论文标为“早期”，不绘制柱状图。`}
+          zh={`每年有多少文献引用这些论文，按主题统计并剔除自引（OpenAlex）。各图纵轴刻度相同。${asOfYear} 年数据仅截至 ${meta.asOf}。${meta.earlyFromYear} 年及以后发表的论文标为“早期”，不画柱状图。`}
         />
       </p>
 
@@ -95,7 +95,7 @@ export default function Growth() {
         <p className="mt-3 text-xs text-ink-faint">
           <T
             en={`Growth drops ${view.growthDatesDropped} citing work(s) whose OpenAlex date is earlier than the paper it cites.`}
-            zh={`增长图剔除了 ${view.growthDatesDropped} 篇日期早于被引论文的施引文献。`}
+            zh={`增长图已剔除 ${view.growthDatesDropped} 篇施引文献，它们在 OpenAlex 中记录的日期早于所引论文。`}
           />
         </p>
       )}

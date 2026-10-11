@@ -236,12 +236,12 @@ function FieldShelfLegend({ view }: { view: FieldShelfView }) {
       </div>
       <p>
         {zh
-          ? "颜色 = 施引文献自身的 OpenAlex 被引次数（对数分段）。越靠近中心被引越高。方向没有含义。"
+          ? "颜色表示施引文献自身在 OpenAlex 的被引次数，按对数分段。越靠近中心，被引越多；方向没有含义。"
           : "Colour = the citing work's own OpenAlex citation count (log bins). Nearer the centre = more cited. Direction means nothing."}
       </p>
       <p className="tabular-nums">
         {zh
-          ? `高被引施引：≥100 次 ${fmt(t.ge100)} 篇 · ≥1,000 次 ${fmt(t.ge1000)} 篇 · 最高 ${fmt(t.maxCitedBy)} 次。`
+          ? `高被引施引文献中，${fmt(t.ge100)} 篇自身被引 ≥100 次 · ${fmt(t.ge1000)} 篇 ≥1,000 次 · 最高 ${fmt(t.maxCitedBy)} 次。`
           : `High-impact citers: ${fmt(t.ge100)} with ≥100 citations of their own · ${fmt(t.ge1000)} with ≥1,000 · max ${fmt(t.maxCitedBy)}.`}
       </p>
       <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5">
@@ -261,12 +261,12 @@ function FieldShelfLegend({ view }: { view: FieldShelfView }) {
             ? `${fmt(t.citingWorks)} 个方块，每个对应一篇引用这些论文的 OpenAlex 文献。全部视角中约${fourInFive ? "五分之四" : `${Math.round(share * 100)}%`}的方块（${(share * 100).toFixed(1)}%）只引用合作论文；可切换到“第一 / 通讯作者”缩小范围。`
             : `${fmt(t.citingWorks)} squares — one per OpenAlex work that cites this corpus. ${fourInFive ? "About four in five" : `${Math.round(share * 100)}% of`} All squares (${(share * 100).toFixed(1)}%) cite only co-authored papers; use First / last / corresponding to narrow.`
           : zh
-            ? `${fmt(t.citingWorks)} 个方块，每个对应一篇引用本人 ${t.leadPapers} 篇第一/通讯作者论文的 OpenAlex 文献。密度与全部视角相同，所以图更小；同一施引文献颜色不变。`
+            ? `${fmt(t.citingWorks)} 个方块，代表引用我的 ${t.leadPapers} 篇第一/通讯作者论文的 OpenAlex 文献，每篇一个。方块密度与“全部”视角相同，所以图更小；切换视角时，同一文献颜色不变。`
             : `${fmt(t.citingWorks)} squares — one per OpenAlex work citing Ken's ${t.leadPapers} first / last / corresponding-author papers. Same density as All, so the field is smaller; a work keeps its colour across lenses.`}
       </p>
       <p className="text-ink-faint">
         {zh
-          ? `被引次数来自 OpenAlex cited_by_count（${meta.asOf}），从不臆造。所有被收录的记录类型都是方块；“随机看一篇”优先挑自身被引较高的期刊论文与综述。`
+          ? `被引次数直接取自 OpenAlex cited_by_count（${meta.asOf}），不编造数值。统计流程收录的各类文献都画成方块；“随机看一篇”优先选取自身被引较多的期刊论文和综述。`
           : `Citation counts are OpenAlex cited_by_count (${meta.asOf}), never invented. Every record type the pipeline counts is a square; “Show me one” prefers higher-cited articles and reviews.`}
       </p>
     </div>
@@ -290,15 +290,15 @@ function worthALook(view: FieldShelfView, zh: boolean) {
   add(
     byCiting.find((p) => fieldShelfPapers[p].lens === "lead"),
     zh ? "引用最多的第一/通讯作者论文" : "Most-cited lead paper",
-    (x) => (zh ? `${x.short}：${fmt(x.citing)} 篇施引。` : `${x.short}: ${fmt(x.citing)} citing works.`)
+    (x) => (zh ? `${x.short}，${fmt(x.citing)} 篇施引文献。` : `${x.short}: ${fmt(x.citing)} citing works.`)
   );
   add(byCiting[0], zh ? "书架上最大的一本" : "Largest on the shelf", (x) =>
-    zh ? `${x.short}（${x.lens === "lead" ? "第一/通讯作者" : "合作"}）：${fmt(x.citing)} 篇施引。` : `${x.short} (${x.lens === "lead" ? "lead" : "co-authored"}): ${fmt(x.citing)} citing works.`
+    zh ? `${x.short}（${x.lens === "lead" ? "第一/通讯作者" : "合作"}），${fmt(x.citing)} 篇施引文献。` : `${x.short} (${x.lens === "lead" ? "lead" : "co-authored"}): ${fmt(x.citing)} citing works.`
   );
   add(
     byCiting.find((p) => fieldShelfPapers[p].lens === "coauthor"),
     zh ? "引用最多的合作论文" : "Most-cited co-authored paper",
-    (x) => (zh ? `${x.short}：${fmt(x.citing)} 篇施引。` : `${x.short}: ${fmt(x.citing)} citing works.`)
+    (x) => (zh ? `${x.short}，${fmt(x.citing)} 篇施引文献。` : `${x.short}: ${fmt(x.citing)} citing works.`)
   );
   return out;
 }
@@ -351,7 +351,7 @@ function FieldShelfTable({ view, tips, status, onLoad }: { view: FieldShelfView;
       )}
       <table className="mt-3 w-full min-w-[720px] text-left text-sm">
         <caption className="sr-only">
-          {zh ? "施引文献表：标题、年份、期刊、引用的本人论文、自身被引" : "Citing works: title, year, venue, which of Ken's papers it cites, own citation count"}
+          {zh ? "施引文献表列出标题、年份、发表来源、引用了我的哪些论文，以及文献自身被引次数" : "Citing works: title, year, venue, which of Ken's papers it cites, own citation count"}
         </caption>
         <thead className="text-xs text-ink-faint">
           <tr>
@@ -517,7 +517,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
 
   const N = view.totals.citingWorks;
   const canvasLabel = zh
-    ? `${fmt(N)} 个方块，每篇施引文献一个；颜色表示其自身被引次数，中心为高被引。≥100 次 ${fmt(view.totals.ge100)} 篇，≥1,000 次 ${fmt(view.totals.ge1000)} 篇。完整列表见下方表格。`
+    ? `${fmt(N)} 个方块，每个代表一篇施引文献；颜色表示文献自身被引次数，越靠近中心，被引越多。其中 ${fmt(view.totals.ge100)} 篇被引 ≥100 次，${fmt(view.totals.ge1000)} 篇 ≥1,000 次。下表列出全部文献。`
     : `${fmt(N)} squares, one per citing work; colour is each work's own citation count, centre = higher impact. ${fmt(view.totals.ge100)} with ≥100 citations, ${fmt(view.totals.ge1000)} with ≥1,000. The table below lists them all.`;
   const readout =
     activeP !== null ? (
@@ -543,7 +543,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
           </h2>
           <p className="mt-2 text-sm text-ink-muted">
             {zh
-              ? `高被引施引 ≥100：${fmt(view.totals.ge100)} 篇 · ≥1,000：${fmt(view.totals.ge1000)} 篇 · OpenAlex，${fieldShelfMeta.asOf} · 已剔除自引`
+              ? `${fmt(view.totals.ge100)} 篇施引文献自身被引 ≥100 次 · ${fmt(view.totals.ge1000)} 篇 ≥1,000 次 · OpenAlex，${fieldShelfMeta.asOf} · 已剔除自引`
               : `${fmt(view.totals.ge100)} citing works with ≥100 citations of their own · ${fmt(view.totals.ge1000)} with ≥1,000 · OpenAlex, ${fieldShelfMeta.asOf} · self-citations removed`}
           </p>
         </header>

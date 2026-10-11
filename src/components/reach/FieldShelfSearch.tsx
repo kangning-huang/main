@@ -69,7 +69,7 @@ export default function FieldShelfSearch({ view, tips, status, onLoad, query, on
     if (query.trim().length < 2) return status === "loading" ? (zh ? "正在加载施引文献列表…" : "Loading the citing works…") : "";
     if (!tips) return zh ? "正在加载…" : "Loading…";
     if (!hits || hits.length === 0) return zh ? "没有匹配的施引文献" : "No citing work matches";
-    return zh ? `${fmt(hits.length)} 篇匹配，在图中以青色标出` : `${fmt(hits.length)} match${hits.length === 1 ? "" : "es"}, lit in teal`;
+    return zh ? `找到 ${fmt(hits.length)} 篇匹配文献，已在图中以青色点亮` : `${fmt(hits.length)} match${hits.length === 1 ? "" : "es"}, lit in teal`;
   })();
 
   return (
@@ -139,7 +139,7 @@ export default function FieldShelfSearch({ view, tips, status, onLoad, query, on
             })}
             {hits && hits.length > LISTED && (
               <li role="presentation" className="px-2.5 py-1.5 text-xs text-ink-faint">
-                {zh ? `仅列出前 ${LISTED} 篇（共 ${fmt(hits.length)} 篇），请输入更多字词。` : `First ${LISTED} of ${fmt(hits.length)}; type more words to narrow.`}
+                {zh ? `先显示前 ${LISTED} 篇（共 ${fmt(hits.length)} 篇）；多输入几个词可缩小范围。` : `First ${LISTED} of ${fmt(hits.length)}; type more words to narrow.`}
               </li>
             )}
           </ul>
