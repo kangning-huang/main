@@ -112,7 +112,7 @@ export const ADVISEES: Advisee[] = [
       <>Selected as <a href="https://www.clintonfoundation.org/programs/leadership-public-service/clinton-global-initiative-university/" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Clinton Global Initiative University (CGI U)</a> Fellow</>,
     ],
     achievementsZh: [
-      <>入选<a href="https://www.clintonfoundation.org/programs/leadership-public-service/clinton-global-initiative-university/" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">克林顿全球倡议大学 (CGI U)</a> 研究员</>,
+      <>入选<a href="https://www.clintonfoundation.org/programs/leadership-public-service/clinton-global-initiative-university/" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">克林顿全球倡议大学（CGI U）</a> 研究员</>,
     ],
   },
   {

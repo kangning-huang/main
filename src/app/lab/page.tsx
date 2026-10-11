@@ -79,7 +79,7 @@ export default function LabPage() {
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <h1 className="section-heading animate-fade-up">
-            <T en="CLUEs Lab" zh="CLUEs 实验室" />
+            <T en="CLUEs Lab" zh="CLimate and Urban Environments（CLUEs）实验室" />
           </h1>
           <p className="mt-2 text-sm text-ink-faint animate-fade-up delay-1">
             CLimate and Urban Environments · NYU Shanghai
@@ -143,7 +143,7 @@ export default function LabPage() {
 
           {/* ── Outcomes strip ── */}
           <h2 id="outcomes" className="mt-14 scroll-mt-24 font-display text-2xl text-ink">
-            <T en="Where students have gone" zh="学生去向与荣誉" />
+            <T en="Where students have gone" zh="学生去向" />
           </h2>
           <ul className="mt-5 flex flex-wrap gap-2">
             {OUTCOMES.map((o) => (
@@ -158,7 +158,7 @@ export default function LabPage() {
 
           {/* ── Alumni ── */}
           <h2 id="alumni" className="mt-14 scroll-mt-24 font-display text-2xl text-ink">
-            <T en="Alumni" zh="已毕业学生" />
+            <T en="Alumni" zh="往届成员" />
           </h2>
           <ul className="mt-5 divide-y divide-rule-faint border-y border-rule-faint">
             {ALUMNI.map((a) => (
@@ -204,7 +204,7 @@ export default function LabPage() {
             className="mt-16 scroll-mt-24 rounded-xl border border-rule bg-paper-warm p-6 md:p-8"
           >
             <h2 id="join-heading" className="font-display text-2xl text-ink">
-              <T en="Join us" zh="加入我们" />
+              <T en="Join us" zh="加入实验室" />
             </h2>
 
             <div className="mt-6 grid gap-8 md:grid-cols-2">
@@ -232,7 +232,7 @@ export default function LabPage() {
 
               <div>
                 <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
-                  <T en="How to apply" zh="申请方式" />
+                  <T en="How to apply" zh="如何申请" />
                 </h3>
                 <p className="mt-4 text-sm leading-relaxed text-ink-muted">
                   <T
@@ -258,7 +258,7 @@ export default function LabPage() {
                 </p>
                 <ol className="mt-3 list-decimal space-y-1 pl-5 text-sm leading-relaxed text-ink-muted">
                   <li>
-                    <T en="Your CV." zh="个人简历；" />
+                    <T en="Your CV." zh="个人简历。" />
                   </li>
                   <li>
                     <T

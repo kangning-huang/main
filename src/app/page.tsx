@@ -224,7 +224,7 @@ export default async function Home() {
                   href="/atlas"
                   className="rounded-md bg-ember px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ember-dark"
                 >
-                  <T en="Explore the Atlas" zh="探索图集" />
+                  <T en="Explore the Atlas" zh="查看图集" />
                 </Link>
                 <Link
                   href="/lab#join"
@@ -361,7 +361,7 @@ export default async function Home() {
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="flex items-center justify-between">
             <h2 className="section-heading flex-1">
-              <T en="Selected Publications" zh="代表论文" />
+              <T en="Selected Publications" zh="精选论文" />
             </h2>
             <Link
               href="/publications"
@@ -484,7 +484,7 @@ export default async function Home() {
                   {featuredPosts[0].date}
                   {featuredPosts[0].wordcount && (
                     <span className="ml-3 text-ink-faint/60">
-                      {Math.ceil(featuredPosts[0].wordcount / 250)} <T en="min read" zh="分钟阅读" />
+                      {Math.ceil(featuredPosts[0].wordcount / 250)} <T en="min read" zh="分钟读完" />
                     </span>
                   )}
                 </p>

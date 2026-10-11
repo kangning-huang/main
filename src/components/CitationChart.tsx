@@ -3,9 +3,9 @@
 import { useLanguage } from "@/lib/language-context";
 
 const CAREER_MILESTONES = [
-  { year: 2014, en: "PhD, Yale", zh: "博士，耶鲁", labelRow: 0 },
-  { year: 2020, en: "Postdoc, NCAR", zh: "博士后，NCAR", labelRow: 0 },
-  { year: 2022, en: "Asst Prof, NYU Shanghai", zh: "助理教授，上海纽约大学", labelRow: 1 },
+  { year: 2014, en: "PhD, Yale", zh: "耶鲁大学博士", labelRow: 0 },
+  { year: 2020, en: "Postdoc, NCAR", zh: "NCAR 博士后", labelRow: 0 },
+  { year: 2022, en: "Asst Prof, NYU Shanghai", zh: "上海纽约大学助理教授", labelRow: 1 },
 ];
 
 interface CitationChartProps {
@@ -134,7 +134,7 @@ export default function CitationChart({
       {/* Source attribution */}
       <div className="mt-4 text-[11px] text-ink-faint">
         {language === "zh"
-          ? "数据来自谷歌学术，自动更新"
+          ? "数据来自 Google Scholar，自动更新"
           : "Data from Google Scholar, updated automatically"}
       </div>
     </div>
