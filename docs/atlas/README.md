@@ -4,7 +4,7 @@ Static city map for [kangning-huang.com/atlas](https://kangning-huang.com/atlas)
 
 ## What v1 includes
 
-- World map of **4,015** GHSL Urban Centres (2015) on a **MapLibre** map with **CARTO Positron / Dark Matter** vector basemaps (light/dark via `prefers-color-scheme`). City dots (paper-count palette) are painted on a 2D canvas overlay above the basemap so they stay visible if MapLibre circle layers fail; selecting a city zooms closer (~9° frame).
+- World map of **4,015** GHSL Urban Centres (2015) on a **MapLibre** map with **CARTO Positron / Dark Matter** vector basemaps (light/dark via `prefers-color-scheme`). City dots (paper-count palette) are painted on a 2D canvas overlay above the basemap so they stay visible if MapLibre circle layers fail; selecting a city zooms to a tight city frame (~2°) with a prominent halo+core marker.
 - **Built mass / scaling** layer from `kangning-huang/nested-scaling-city-mass` (Nature Cities, in press). ~3,588 cities matched; match quality flagged when centroids disagree.
 - Search + click → city card with real values from `public/atlas/city/<id>.json`.
 - Paper link goes to the **publications** anchor (no Nature Cities DOI until it resolves).

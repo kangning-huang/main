@@ -315,7 +315,6 @@ export default function MapCanvas({
     media.addEventListener("change", onScheme);
 
     mapRef.current = map;
-    (window as unknown as { __atlasMap?: maplibregl.Map }).__atlasMap = map;
 
     const syncSize = () => {
       const wrap = wrapRef.current;
