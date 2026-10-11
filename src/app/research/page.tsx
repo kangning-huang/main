@@ -56,7 +56,7 @@ const THEMES: Theme[] = [
     title: { en: "Urban futures", zh: "城市未来" },
     question: {
       en: "How much will cities grow by mid-century, where, and what will that growth commit us to?",
-      zh: "到本世纪中叶，城市将扩张多少、在哪里扩张，这些扩张又将带来哪些长期后果？",
+      zh: "到本世纪中叶，城市会扩大多少、向哪里扩张，又会留下哪些长期影响？",
     },
     findings: [
       {
@@ -68,14 +68,14 @@ const THEMES: Theme[] = [
       },
       {
         en: "Tropical regions in the Southern Hemisphere face disproportionately high extreme-heat risk from compounding urbanization and climate warming.",
-        zh: "南半球热带地区在城市化与气候变暖叠加作用下，面临格外高的极端高温风险。",
+        zh: "城市化与气候变暖叠加，让南半球热带地区面临格外高的极端高温风险。",
         venue: "Environmental Research Letters",
         year: "2019",
         href: doiHref("10.1088/1748-9326/ab4b71"),
       },
       {
         en: "Roughly 50–63% of newly expanded urban land worldwide is projected to replace existing cropland.",
-        zh: "预计全球新增城市用地中约50%—63%将占用现有耕地。",
+        zh: "预计全球城市新增用地中，约50%至63%会占用现有耕地。",
         venue: "Nature Communications",
         year: "2020",
         href: doiHref("10.1038/s41467-020-14386-x"),
@@ -99,7 +99,7 @@ const THEMES: Theme[] = [
         venue: "Nature Communications",
         year: "2026",
         href: pubHref("Infrastructure reach and capacity pressure in sub-Saharan Africa's future urban expansion"),
-        status: { en: "in revision", zh: "修改审稿中" },
+        status: { en: "in revision", zh: "修订中" },
       },
     ],
     apps: [
@@ -113,11 +113,11 @@ const THEMES: Theme[] = [
     openQuestions: [
       {
         en: "Will infrastructure reach the places where the next wave of urban residents will live?",
-        zh: "基础设施能否覆盖下一波城市人口将要居住的地方？",
+        zh: "城市迎来下一波人口增长时，基础设施能覆盖新增居民将要居住的地方吗？",
       },
       {
         en: "Which expansion pathways keep the cities of 2050 cooler and less exposed?",
-        zh: "哪些扩张路径能让2050年的城市更凉爽、暴露风险更低？",
+        zh: "怎样扩张，才能让2050年的城市更凉爽、暴露风险更低？",
       },
     ],
   },
@@ -126,12 +126,12 @@ const THEMES: Theme[] = [
     title: { en: "Heat", zh: "高温" },
     question: {
       en: "How does the way we build cities change who overheats, by day and by night?",
-      zh: "城市的建设方式如何改变谁在白天和夜晚遭受高温？",
+      zh: "城市怎么建，会让哪些人在白天和夜晚更容易受高温影响？",
     },
     findings: [
       {
         en: "About half of the added nighttime outdoor heat stress from urban expansion persists even after large-scale cool-roof deployment.",
-        zh: "即使大规模推广冷屋顶，城市扩张新增的夜间室外热应力仍约有一半无法消除。",
+        zh: "即使大规模推广冷屋顶，城市扩张新增的夜间室外热应力仍有约一半无法消除。",
         venue: "JGR: Atmospheres",
         year: "2021",
         href: doiHref("10.1029/2020JD033831"),
@@ -145,7 +145,7 @@ const THEMES: Theme[] = [
       },
       {
         en: "A 100-metre increase in the scale of functionally homogeneous building clusters is associated with roughly 5% lower daytime urban heat island intensity.",
-        zh: "功能同质建筑集群的尺度每增加100米，白天城市热岛强度约降低5%。",
+        zh: "功能相同的建筑集群，尺度每增加100米，白天城市热岛强度约降低5%。",
         venue: "PNAS",
         year: "2026",
         href: pubHref("Toward Cooler Cities by Larger Homogeneous Functional Clusters"),
@@ -187,18 +187,18 @@ const THEMES: Theme[] = [
     apps: [
       {
         en: "Urban renewal cooling explorer",
-        zh: "城市更新降温交互可视化",
+        zh: "城市更新降温效果",
         href: "https://cooling.kangning-huang.com/",
       },
     ],
     openQuestions: [
       {
         en: "Why does nighttime heat resist the fixes that work during the day?",
-        zh: "为什么夜间高温难以通过白天有效的措施来缓解？",
+        zh: "白天管用的降温办法，为什么到了夜里就难以奏效？",
       },
       {
         en: "When a neighborhood is rebuilt cooler, who ends up enjoying the benefit?",
-        zh: "当一个街区被改造得更凉爽时，最终是谁享受到了好处？",
+        zh: "一个街区改造后更凉快了，最后是谁受益？",
       },
     ],
   },
@@ -207,7 +207,7 @@ const THEMES: Theme[] = [
     title: { en: "Flood and coasts", zh: "洪水与海岸" },
     question: {
       en: "Where does flood damage really land once we count building height and flood defenses?",
-      zh: "把建筑高度和防洪设施考虑在内后，洪灾损失究竟落在哪里？",
+      zh: "把建筑高度和防洪设施算进去，洪灾损失究竟会落在哪里？",
     },
     findings: [
       {
@@ -219,7 +219,7 @@ const THEMES: Theme[] = [
       },
       {
         en: "In Chinese cities, protection systems can reduce potential flood damage by more than 90%.",
-        zh: "在中国城市，防洪体系可使潜在洪灾损失降低90%以上。",
+        zh: "在中国城市，防洪体系可将潜在洪灾损失降低90%以上。",
         venue: "Scientific Reports",
         year: "2026",
         href: doiHref("10.1038/s41598-026-70981-w"),
@@ -250,29 +250,29 @@ const THEMES: Theme[] = [
         venue: "Ecological Indicators",
         year: "2026",
         href: pubHref("Beyond land exposure: multidimensional assessment of future built-environment and material-stock impacts under coastal inundation"),
-        status: { en: "submitted; ongoing co-authored work", zh: "已投稿，合作研究进行中" },
+        status: { en: "submitted; ongoing co-authored work", zh: "论文已投稿，合作研究仍在进行" },
       },
     ],
     apps: [
       {
         en: "3D urban flood risk explorer",
-        zh: "三维城市洪水风险交互应用",
+        zh: "三维城市洪水风险图",
         href: "https://flood.kangning-huang.com/",
       },
     ],
     openQuestions: [
       {
         en: "What is at stake in coastal cities beyond the area of land that floods?",
-        zh: "在沿海城市，除了被淹没的土地面积之外，还有什么面临风险？",
+        zh: "沿海城市有多少土地会被淹？除此之外，还有什么面临风险？",
       },
     ],
   },
   {
     id: "scaling-form",
-    title: { en: "Scaling and form", zh: "标度与形态" },
+    title: { en: "Scaling and form", zh: "标度规律与城市形态" },
     question: {
       en: "How much material does a city need per person, and why do larger cities need less?",
-      zh: "一座城市人均需要多少建筑材料？为什么大城市所需更少？",
+      zh: "一座城市平均每人需要多少建筑材料？为什么城市越大，人均用量越少？",
     },
     findings: [
       {
@@ -302,18 +302,18 @@ const THEMES: Theme[] = [
     apps: [
       {
         en: "City mass scaling explorer",
-        zh: "城市建成质量标度交互可视化",
+        zh: "城市建成质量标度",
         href: "https://city-mass.nested-complexity.net",
       },
     ],
     openQuestions: [
       {
         en: "Which cities are over-built or under-built relative to their size, and why?",
-        zh: "相对于其规模，哪些城市建得过多、哪些建得不足？原因何在？",
+        zh: "考虑城市规模后，哪些城市建得过多，哪些建得不足？为什么？",
       },
       {
         en: "How does building upward change the material and mobility costs of a growing city?",
-        zh: "向上建设如何改变一座成长中城市的材料与出行成本？",
+        zh: "城市不断长大，把楼建得更高，会怎样改变建材和出行成本？",
       },
     ],
     figure: {
@@ -321,7 +321,7 @@ const THEMES: Theme[] = [
       alt: "Still from the animated summary of “Nested economies of scale in global city mass”",
       caption: {
         en: "From the animated summary of the Nature Cities paper (in press).",
-        zh: "摘自 Nature Cities 论文（待刊）的动画摘要。",
+        zh: "摘自 Nature Cities 待刊论文的动画摘要。",
       },
     },
   },
@@ -522,7 +522,7 @@ export default function ResearchPage() {
 
                     <div>
                       <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
-                        <T en="Open questions" zh="待解问题" />
+                        <T en="Open questions" zh="还没回答的问题" />
                       </h3>
                       <ul className="mt-4 space-y-2">
                         {theme.openQuestions.map((q) => (

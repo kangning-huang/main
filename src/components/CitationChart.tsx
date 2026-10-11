@@ -39,7 +39,7 @@ export default function CitationChart({
             {totalCitations.toLocaleString()}
           </div>
           <div className="text-xs text-ink-muted">
-            {language === "zh" ? "引用" : "Citations"}
+            {language === "zh" ? "被引次数" : "Citations"}
           </div>
         </div>
         <div className="h-8 w-px bg-rule" />
