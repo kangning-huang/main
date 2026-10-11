@@ -319,7 +319,7 @@ export default async function Home() {
             <T
               en={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
-                  I study cities as physical systems. My group, the CLUEs (CLimate and Urban Environments) Lab at <a href="https://shanghai.nyu.edu" target="_blank" rel="noopener noreferrer" className={extLink}>NYU Shanghai</a>, combines satellite data, climate models and causal inference across thousands of cities. We ask how the amount, height and arrangement of what we build shapes who overheats, who floods, and how much material a city consumes.
+                  I study cities as physical systems. At <a href="https://shanghai.nyu.edu" target="_blank" rel="noopener noreferrer" className={extLink}>NYU Shanghai</a> I lead the CLimate and Urban Environments (CLUEs) Lab. We combine satellite data, climate models, and causal inference across thousands of cities, and ask how the amount, height, and arrangement of what we build shapes who overheats, who floods, and how much material a city consumes.
                 </p>
               }
               zh={

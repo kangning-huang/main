@@ -379,7 +379,7 @@ export default function ResearchPage() {
           </h1>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
-              en="How the size and shape of cities decide their climate future. The CLUEs (CLimate and Urban Environments) Lab works on four connected themes."
+              en="How the size and shape of cities decide their climate future. Four themes in the CLimate and Urban Environments (CLUEs) Lab: urban futures, heat, flood and coasts, and scaling and form."
               zh="城市的规模与形态如何决定其气候未来。CLUEs（CLimate and Urban Environments）实验室围绕四个相互关联的主题展开研究。"
             />
           </p>
@@ -544,13 +544,13 @@ export default function ResearchPage() {
               <T
                 en={
                   <>
-                    Want to work on these questions?{" "}
+                    These questions are open.{" "}
                     <Link href="/lab#join" className="link-underline font-medium text-ember">
                       Join the lab
                     </Link>
-                    , or browse{" "}
+                    , or{" "}
                     <Link href="/publications" className="link-underline font-medium text-ember">
-                      all publications
+                      read the papers
                     </Link>
                     .
                   </>

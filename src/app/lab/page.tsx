@@ -9,7 +9,7 @@ const DESCRIPTION =
   "The CLUEs (CLimate and Urban Environments) Lab at NYU Shanghai, led by Kangning (Ken) Huang: members, alumni, and how to join.";
 
 // TODO(Ken): add supervision routes (undergrad RA, visiting, postdoc, PhD programs) and funding status when ready
-const APPLY_SUBJECT = "[CLUEs]";
+const APPLY_SUBJECT = "[Join CLUEs]";
 
 // Every outcome below appears on /advisees (src/lib/advisees.tsx).
 const OUTCOMES: { en: string; zh: string }[] = [
@@ -195,14 +195,14 @@ export default function LabPage() {
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
                     <T
-                      en="Genuine curiosity about how cities work and how they meet a changing climate."
+                      en="You want to measure how cities grow, heat, flood, or consume materials, not only to describe them."
                       zh="真正好奇城市如何运转、如何应对变化中的气候。"
                     />
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
                     <T
-                      en="Experience with, or eagerness to learn, Google Earth Engine, Python, and causal inference."
+                      en="You already use Google Earth Engine, Python, or causal inference, or you are ready to learn them on a real project."
                       zh="具备或乐于学习 Google Earth Engine、Python 与因果推断方法。"
                     />
                   </li>
@@ -221,7 +221,7 @@ export default function LabPage() {
                         <a href={mailto} className="link-underline font-medium text-ember">
                           {SITE.email}
                         </a>{" "}
-                        with <code className="rounded bg-paper px-1 py-0.5 text-xs text-ink">{APPLY_SUBJECT}</code> in the subject line, and include:
+                        with <code className="rounded bg-paper px-1 py-0.5 text-xs text-ink">{APPLY_SUBJECT}</code> in the subject line. Attach your CV, a short note on the research questions you want to work on, and one sample of your work (code, writing, or a map).
                       </>
                     }
                     zh={
@@ -241,13 +241,13 @@ export default function LabPage() {
                   </li>
                   <li>
                     <T
-                      en="A short note on the research questions that interest you."
+                      en="A short note on the research questions you want to work on."
                       zh="一段简短说明，介绍你感兴趣的研究问题；"
                     />
                   </li>
                   <li>
                     <T
-                      en="A relevant sample of your work (code, writing, or a map)."
+                      en="One sample of your work (code, writing, or a map)."
                       zh="一份相关的作品样例（代码、文章或地图）。"
                     />
                   </li>
@@ -257,7 +257,7 @@ export default function LabPage() {
 
             <p className="mt-6 text-sm text-ink-faint">
               <T
-                en="Funded openings are not listed here. Please get in touch to ask about current availability."
+                en="Funded openings are not listed on this page. Email to ask what is open now."
                 zh="此处不列出有资助的职位。如需了解当前名额情况，请直接联系。"
               />
             </p>

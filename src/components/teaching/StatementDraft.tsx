@@ -21,24 +21,20 @@ export default function StatementDraft() {
           en={
             <>
               <p>
-                I teach to cultivate systems thinking and adaptive learning in an era reshaped by
-                generative AI. Each course is designed backward from what students should still be able
-                to do after the semester ends: build analytical frameworks, connect ideas across
-                disciplines, evaluate evidence under uncertainty, and communicate recommendations with
-                explicit tradeoffs. Learning outcomes rest on three pillars—systems thinking,
-                data-driven analysis, and interdisciplinary synthesis—and assignments form progressive
-                scaffolds rather than isolated tasks.
+                I design each course from what students should still be able to do after the semester:
+                build an analytical frame, connect ideas across fields, judge evidence under
+                uncertainty, and state recommendations with the tradeoffs named. Generative AI is part
+                of that setting, so adaptive learning matters as much as systems thinking.
               </p>
               <p>
                 In <em>Environmental System Science</em>, students work through feedbacks,
-                energy–material flows, and system dynamics models. In <em>Cities at a Crossroads</em>,
-                they diagnose real urban challenges—energy, heat, water, land—and propose
-                evidence-based policy, including through fieldwork. I treat generative AI as part of
-                the learning environment: students may use it as a technical assistant, but they must
-                validate outputs, check claims against observation, and perform live, unassisted when
-                judgment is what matters. The goal is not only that students learn content, but that
-                they leave more capable of framing questions, choosing methods with intention, and
-                shaping the socio-environmental systems they will inhabit.
+                energy–material flows, and system-dynamics models. In <em>Cities at a Crossroads</em>,
+                they diagnose real urban problems (energy, heat, water, land) and propose
+                evidence-based policy, including through fieldwork. Students may use generative AI as
+                a technical assistant; they must check outputs against observation, and they perform
+                live and unassisted when the grade is for judgment. The aim is that they leave better
+                at framing questions, choosing methods on purpose, and acting on the socio-environmental
+                systems they will inhabit.
               </p>
             </>
           }

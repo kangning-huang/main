@@ -39,7 +39,7 @@ export default function ReachMethod() {
           </li>
           <li>
             <T
-              en="Field & Shelf (section 01): one square per non-self citing OpenAlex work. Colour and centre position encode that citing work's own OpenAlex cited_by_count on a log-ish ember–ink ramp (0 · 1–9 · 10–99 · 100–999 · ≥1,000); nearer the centre = more cited. Direction means nothing. Hovering a shelf paper lights its citers and draws a thin link from each; hovering a square shows ≤ 4 lines back to the papers it cites."
+              en="Field & Shelf (section 01): one square per non-self citing OpenAlex work. Colour and centre position encode that citing work's own OpenAlex cited_by_count on a log-ish ember–ink ramp (0 · 1–9 · 10–99 · 100–999 · ≥1,000); nearer the centre means more cited. Direction means nothing. Hover a shelf paper to light its citers and draw a thin link from each; hover a square to show up to four lines back to the papers it cites."
               zh="田野与书架（第 01 节）：每个非自引 OpenAlex 施引文献对应一个方块。颜色与中心位置表示该施引文献自身的 OpenAlex 被引次数（对数分段余烬→墨色：0 · 1–9 · 10–99 · 100–999 · ≥1,000）；越靠近中心被引越高。方向没有含义。悬停书架上的论文会点亮其施引并画出每一条连线；悬停方块则最多画出 4 条连回它所引用的论文。"
             />
           </li>

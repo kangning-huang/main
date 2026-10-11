@@ -6,7 +6,7 @@ export const SITE = {
   title: "Assistant Professor of Environmental Studies",
   affiliation: "NYU Shanghai",
   description:
-    "Building a sustainable and resilient urban future through research on urbanization, climate change, and environmental hazards.",
+    "How the size and shape of cities decide their climate future: urban expansion, heat, flood risk, and the material mass of the built environment.",
   email: "kangning.huang@nyu.edu",
   googleScholarId: "s_domssAAAAJ",
 };
@@ -48,9 +48,9 @@ export const RESEARCH_INTERESTS = [
 ];
 
 export const ABOUT_TEXT = [
-  "I am an Assistant Professor of Environmental Studies at NYU Shanghai, where I lead the CLUEs (CLimate and Urban Environments) Lab. I received my PhD from Yale University, School of the Environment in 2020, and was an Advanced Study Program Postdoctoral Fellow at the National Center for Atmospheric Research.",
-  "My research focuses on how the combination of urbanization and climate change affects vulnerability and adaptability to environmental hazards. By developing global-scale urbanization scenarios, I explore a broad range of possible urban climate futures and the interventions needed to achieve the more sustainable ones.",
-  "My work spans urban expansion modeling, urban heat island dynamics, climate adaptation trade-offs, and the scaling laws governing cities. My research has been funded by NASA, NSF, and other sponsors, and featured in Yale News, Scientific American, and E&E News.",
+  "I study cities as physical systems at NYU Shanghai, where I lead the CLimate and Urban Environments (CLUEs) Lab. Before that I was an Advanced Study Program Postdoctoral Fellow at NCAR; I earned my PhD at the Yale School of the Environment in 2020.",
+  "Urbanization and climate change land on the same people at once. We build global urban-expansion scenarios to ask how much land cities will claim by mid-century, how that growth warms and floods them, and which interventions change the outcome.",
+  "The work covers urban expansion modeling, heat-island dynamics, adaptation trade-offs, and urban scaling. It has been funded by NASA, NSF, Google, Shanghai Municipal Government and other sponsors, and covered by Yale News, Scientific American, and E&E News.",
 ];
 
 export interface Project {
@@ -69,7 +69,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Nested Scaling of City Mass",
     description:
-      "Interactive visualization accompanying the paper on nested economies of scale in global city built mass. Explores the nonlinear scaling relationships between urban populations and their built environments across 3,000+ cities.",
+      "Map and explorer for nested economies of scale in city built mass across 3,000+ cities: how built mass scales with population at city and neighborhood levels.",
     url: "https://city-mass.nested-complexity.net",
     tags: ["Urban Scaling", "Interactive Visualization", "Nature Cities"],
     featured: true,
@@ -79,7 +79,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Urban Expansion 2050",
     description:
-      "Projected global urban land expansion through 2050. Based on the research published in Environmental Research Letters (2019), with data available on WRI Resource Watch.",
+      "Global urban land expansion through 2050, from the Environmental Research Letters (2019) projections; data also on WRI Resource Watch.",
     url: "/urban-expansion",
     tags: ["Urban Modeling", "Remote Sensing"],
     featured: true,
@@ -89,7 +89,7 @@ export const PROJECTS: Project[] = [
   {
     title: "3D Urban Flood Risk",
     description:
-      "Interactive web app for the paper on integrating building height and protection standards in global flood risk assessment. Visualizes 3D urban flood exposure across cities worldwide.",
+      "3D flood exposure when building height and protection standards enter the assessment, across cities worldwide.",
     url: "https://flood.kangning-huang.com/",
     tags: ["Flood Risk", "3D Visualization", "Interactive"],
     featured: true,
@@ -99,7 +99,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Urban Renewal Cooling DID",
     description:
-      "Interactive visualization of key results from the paper on the causal link between informal settlement demolition and urban cooling. Uses a difference-in-differences approach to unveil cooling effects of urban renewal.",
+      "Difference-in-differences results on informal-settlement demolition and surface cooling: how much cooled, and what rebuilding did to the signal.",
     url: "https://cooling.kangning-huang.com/",
     tags: ["Urban Cooling", "Causal Inference", "Interactive Visualization"],
     featured: true,
@@ -109,7 +109,7 @@ export const PROJECTS: Project[] = [
   {
     title: "URBANMOD-ZIPF",
     description:
-      "A global-scale urban land expansion model that preserves Zipf's Law of urban sizes. Open-source tool for simulating realistic patterns of urban growth across different scenarios.",
+      "Open-source global urban land-expansion model that preserves Zipf's law of city sizes across scenarios.",
     url: "https://github.com/kangning-huang/URBANMOD-ZIPF",
     tags: ["Urban Modeling", "Open Source", "Python"],
     featured: false,
@@ -119,7 +119,7 @@ export const PROJECTS: Project[] = [
   {
     title: "RoboTaxi Safety Tracker",
     description:
-      "A data-driven dashboard tracking Tesla Cybercab safety performance using NHTSA Standing General Order crash data. Provides transparent, independent analysis of autonomous vehicle safety metrics including miles per incident (MPI) comparisons.",
+      "Dashboard of Tesla Cybercab safety from NHTSA Standing General Order crash data, including miles-per-incident comparisons. Built as an independent public check on the published numbers.",
     url: "https://robotaxi-safety-tracker.com",
     tags: ["Data Visualization", "Autonomous Vehicles", "Safety Analytics"],
     // Side project — belongs on /tinkering, not the homepage
