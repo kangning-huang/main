@@ -29,7 +29,7 @@ export default function StandingOnIt() {
                     {w.title}
                   </a>
                   <div className="mt-1 text-xs text-ink-muted">
-                    {w.venue ? <em>{w.venue}</em> : <T en="(no venue in OpenAlex)" zh="（OpenAlex 无期刊信息）" />} · {w.year} ·{" "}
+                    {w.venue ? <em>{w.venue}</em> : <T en="(no venue in OpenAlex)" zh="（OpenAlex 无发表来源信息）" />} · {w.year} ·{" "}
                     <T en={`cited ${w.openalexCitedByCount.toLocaleString()}× (OpenAlex)`} zh={`被引 ${w.openalexCitedByCount.toLocaleString()} 次（OpenAlex）`} />
                   </div>
                   <div className="mt-0.5 text-xs text-ink-faint">
@@ -42,7 +42,7 @@ export default function StandingOnIt() {
           })}
         </ol>
         <p className="mt-4 text-xs text-ink-faint">
-          <T en={`OpenAlex, as of ${meta.asOf}.`} zh={`OpenAlex，截至 ${meta.asOf}。`} />
+          <T en={`OpenAlex, as of ${meta.asOf}.`} zh={`OpenAlex，数据截至 ${meta.asOf}。`} />
         </p>
       </div>
 

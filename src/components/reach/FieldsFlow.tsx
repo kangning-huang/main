@@ -78,7 +78,7 @@ export default function FieldsFlow() {
   if (themeNodesRaw.length === 0 || fieldNodesRaw.length === 0) {
     return (
       <p className="text-sm text-ink-muted">
-        <T en="Not enough field flow data for this view." zh="该视角下领域流向数据不足。" />
+        <T en="Not enough field flow data for this view." zh="领域流向数据不足，无法显示此图。" />
       </p>
     );
   }

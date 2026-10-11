@@ -107,7 +107,7 @@ export default function ReachMethod() {
                 <th className="py-1 pr-3 font-normal"><T en="Paper" zh="论文" /></th>
                 <th className="py-1 pr-3 font-normal"><T en="Lens" zh="视角" /></th>
                 <th className="py-1 pr-3 font-normal"><T en="Theme" zh="主题" /></th>
-                <th className="py-1 pr-3 text-right font-normal"><T en="OpenAlex cited-by" zh="OpenAlex 被引" /></th>
+                <th className="py-1 pr-3 text-right font-normal"><T en="OpenAlex cited-by" zh="OpenAlex 被引记录" /></th>
                 <th className="py-1 pr-3 text-right font-normal"><T en="Self removed" zh="剔除自引" /></th>
                 <th className="py-1 text-right font-normal"><T en="Non-self" zh="非自引" /></th>
               </tr>
