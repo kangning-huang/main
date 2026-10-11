@@ -12,7 +12,7 @@ import Growth from "@/components/reach/Growth";
 import ReachMethod from "@/components/reach/ReachMethod";
 
 const DESCRIPTION =
-  "Who builds on this work: each OpenAlex citing square coloured by that work's own citation count, with higher-impact work toward the centre. Self-citations removed.";
+  "Research citing Kangning Huang's papers (OpenAlex, self-citations removed): one square per citing work, more-cited work toward the centre.";
 
 export const metadata: Metadata = {
   title: "Reach",
@@ -50,7 +50,7 @@ export default function ReachPage() {
         <section className="pt-10 pb-6 md:pt-14">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h1 className="font-display text-4xl text-ink md:text-5xl">
-              <T en="Who builds on this work" zh="谁在此基础上继续研究" />
+              <T en="What others have built on my work" zh="他人基于我的研究的工作" />
             </h1>
             <p className="mt-3 max-w-2xl text-[15px] text-ink-muted">
               <T
