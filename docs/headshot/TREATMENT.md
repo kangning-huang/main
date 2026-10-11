@@ -1,75 +1,47 @@
-# Homepage headshot: image treatment
+# Homepage headshot: Google Scholar–style circle
 
-Classical edits only (Pillow 12.3 + NumPy 2.5). No generative models, inpainting or
-face/body retouching: every subject pixel comes from the source photo, with only
-global colour and contrast changes applied to it.
+Classical edits only (Pillow + NumPy). No generative models, inpainting, or
+face retouching.
+
+## Source
+
+- Full-res panel photo: `_source/ken-panel-headshot-raw.jpg` (1280×854).
+- Google Scholar profile downloads (provenance only; CDN max is 256×171):
+  - `_source/ken-scholar-profile-view.jpg` — `view_photo`
+  - `_source/ken-scholar-profile-medium.jpg` — `medium_photo`
+- Scholar profile: https://scholar.google.com/citations?user=s_domssAAAAJ&hl=en
+- Scholar CDN:
+  - https://scholar.googleusercontent.com/citations?view_op=view_photo&user=s_domssAAAAJ&citpid=10
+  - https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=s_domssAAAAJ&citpid=10
+
+The Scholar `medium_photo` is effectively a Lanczos downscale of the full-res
+raw (MAE ≈ 3.5 / 255), so outputs are rendered from the raw file for sharpness
+while matching Scholar’s framing content.
 
 ## Reproduce
 
 ```sh
-python3 scripts/headshot/process.py                       # defaults to _source/ken-panel-headshot-raw.jpg
-python3 scripts/headshot/process.py path/to/original.jpg  # or pass a path
+python3 scripts/headshot/process.py
+python3 scripts/headshot/process.py path/to/original.jpg
 ```
 
-Source: `_source/ken-panel-headshot-raw.jpg`, 1280×854 JPEG,
-sha256 `4d38da7eb62068625ac4d9b833118306510d994dd726e167f67f68018eb5fb73`.
+## Steps
 
-## Steps (in order, on the full frame)
+1. Gentle grade (warm R×1.03 / B×0.97, contrast ×1.04, +2 lift). Backdrop is
+   left as photographed — same look as Scholar, not the old teal-bokeh mask.
+2. Face-centred square crop `(590, 135, 890, 435)` → 300×300.
+3. Lanczos resize + light unsharp (r 0.8, 35%, threshold 2).
+4. Encode JPEG q84 progressive, WebP q80 m6, AVIF q60 speed 4.
 
-1. **Backdrop key.** A pixel counts as backdrop if `B > 150 && B − R > 80 && R < 130`
-   (int16 maths so the subtraction can't wrap). The `R < 130` ceiling keeps
-   blue-lit skin out of the key.
-2. **Silhouette hull.** Everything outside a generous hand-drawn polygon around
-   the subject counts as backdrop too. This catches dark building shapes on the
-   screen that don't key as blue. The polygon is `backdrop_mask()` → `hull`.
-3. **Protected regions.** Forced to subject because they key as blue:
-   - mic cube polygon `(612,394) (695,401) (689,467) (590,471) (595,410)`
-   - shirt + tie box `(660,435)–(750,600)`
-   - shirt cuff box `(560,580)–(618,635)`
-4. **Mask cleanup.** Min/Max 3 px open + close (speckle), then grow the backdrop by
-   MaxFilter 5 to absorb blue fringe, then Gaussian feather of 2.5 px.
-5. **Backdrop.** Normalised-convolution Gaussian blur (radius 7) over backdrop
-   pixels only, so the suit doesn't bleed into it as a dark rim. Then a luminance
-   duotone from ink `#141211` to teal `#0d7377`:
-   levels `(L − 0.15) / 0.75`, gamma 1.25, mix capped at 85% teal. Only the
-   brightest lights get a faint glow. The NYC skyline ends up as abstract teal
-   bokeh.
-6. **Subject.**
-   - Despill in the soft edge band (hair, shoulders, 7 px): `B ≤ max(R,G) × 1.25 + 12`.
-   - White balance R × 1.05, B × 0.92 (warms skin, cuts blue cast).
-   - Contrast × 1.06 around mid-grey, +4 lift.
-7. **Composite + vignette.** Alpha-blend by the feathered mask, then a soft radial
-   vignette (35%) centred at (55%, 35%) of the frame.
-8. **Crop + resize + export.** Lanczos resize and a light unsharp mask
-   (r 1.0, 40%, threshold 2). Encoders: JPEG q84 progressive, WebP q80 m6,
-   AVIF q60 speed 4.
+## Outputs
 
-## Crops and outputs
+| File | 1x | 2x |
+|---|---|---|
+| `public/headshot/headshot-square-*` | 160×160 | 300×300 |
 
-The 2x images are the native crop, so nothing is upscaled.
-
-| Crop | Source box (l, t, r, b) | 1x | 2x | Used by |
-|---|---|---|---|---|
-| portrait (shipped) | `(465, 100, 935, 688)`, 470×588, ends above the paper | 320×400 | 470×588 | editorial hero |
-
-File sizes (bytes):
-
-| File | AVIF | WebP | JPG |
-|---|---:|---:|---:|
-| `headshot-portrait-1x` | 7,314 | 9,106 | 16,419 |
-| `headshot-portrait-2x` | 15,189 | 18,822 | 33,032 |
+Editorial `headshot-portrait-*` assets are removed from the live path.
 
 ## Front end
 
-`src/components/HeroHeadshot.tsx` renders a `<picture>` element: AVIF, then WebP, then
-a JPG `<img>` with `1x`/`2x` srcset, explicit `width`/`height` (no CLS) and
-`fetchpriority="high"`. Alt text follows the site language toggle:
-EN "Kangning Huang speaking at a panel", ZH "黄康宁在论坛上发言".
-
-Shipped layout: **editorial** 4:5 rounded portrait on the right with offset teal frame (`src/components/HeroHeadshot.tsx`). Display size is ~75% of the original editorial (lg `w-80`→`w-60` = 240×300 CSS px).
-
-## Screenshots
-
-`scripts/headshot/screenshots.mjs <variant> <baseUrl> <outDir...>` captures 1440×900
-and 390×844 (2x DPR) views of a served `out/`. Set `CHROMIUM_PATH` to reuse an
-installed Chromium. In-repo copies in `screenshots/` are WebP q90.
+`src/components/HeroHeadshot.tsx` — plain `rounded-full` circle beside the name
+(AVIF → WebP → JPG, 1x/2x). No teal offset frame; light ring only.
