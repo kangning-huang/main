@@ -9,11 +9,14 @@ import {
   type AtlasPoint,
   type LayerKey,
 } from "@/lib/atlas";
+import T from "@/components/T";
 
 type Props = {
   points: AtlasPoint[];
   selectedId: number | null;
   onSelect: (id: number) => void;
+  /** Clear the city card and return to the default world camera. */
+  onClearSelection?: () => void;
   /** When set, only cities covered by this study are drawn in color; others stay faint grey. */
   filter?: LayerKey | null;
 };
@@ -98,6 +101,7 @@ export default function MapCanvas({
   points,
   selectedId,
   onSelect,
+  onClearSelection,
   filter = null,
 }: Props) {
   const wrapRef = useRef<HTMLDivElement>(null);
@@ -474,6 +478,19 @@ export default function MapCanvas({
     };
   }, []);
 
+  const goWorldView = useCallback(() => {
+    onClearSelection?.();
+    const map = mapRef.current;
+    if (!map) {
+      schedulePaint();
+      return;
+    }
+    const duration = prefersReducedMotion() ? 0 : ZOOM_MS;
+    forceEquirectRef.current = false;
+    // Always fit the default world extent (do not wait on selectedId clearing).
+    map.fitBounds(WORLD_BOUNDS, { padding: 12, duration });
+  }, [onClearSelection, schedulePaint]);
+
   return (
     <div
       ref={wrapRef}
@@ -487,6 +504,20 @@ export default function MapCanvas({
         className="absolute inset-0 z-0 h-full w-full"
         style={{ zIndex: 0 }}
       />
+      {/* Explicit world reset — MapLibre nav is top-right; keep this top-left. */}
+      <button
+        type="button"
+        onClick={goWorldView}
+        className={
+          selectedId != null
+            ? "absolute left-3 top-3 z-[3] rounded-md border border-ember bg-paper px-2.5 py-1.5 text-xs font-medium text-ember-dark shadow-sm hover:bg-ember-light focus:outline-none focus-visible:ring-2 focus-visible:ring-ember"
+            : "absolute left-3 top-3 z-[3] rounded-md border border-rule bg-paper/95 px-2.5 py-1.5 text-xs font-medium text-ink-muted shadow-sm hover:border-ember hover:text-ember focus:outline-none focus-visible:ring-2 focus-visible:ring-ember"
+        }
+        aria-label="Zoom out to world view"
+        title="Zoom out to world view"
+      >
+        <T en="World view" zh="全球视图" />
+      </button>
       {/* translateZ(0) promotes a compositor layer above WebGL on flaky GPUs */}
       <canvas
         ref={canvasRef}
