@@ -30,7 +30,7 @@ const FINDINGS = [
   },
   {
     en: "By 2050, urban expansion alone could warm cities 0.5–0.7 °C on average, locally rivaling greenhouse-gas warming.",
-    zh: "到2050年，仅城市扩张一项就可能使城市平均升温0.5–0.7 °C，局部可与温室气体导致的增温相当。",
+    zh: "到 2050 年，单是城市扩张就可能让城市平均升温 0.5–0.7 °C。在一些地方，这一幅度可与温室气体带来的增温相当。",
     venue: "Environmental Research Letters",
     year: "2019",
     href: "https://doi.org/10.1088/1748-9326/ab4b71",
@@ -64,22 +64,22 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
   "Nested Scaling of City Mass": {
     title: "全球城市建成质量的嵌套标度规律",
     description:
-      "关于全球城市建成质量嵌套规模经济论文的配套交互式可视化。探索3000多个城市中城市人口与建成环境之间的非线性标度关系。",
+      "交互地图与浏览器，展示 3000 多座城市建成质量的嵌套规模经济：建成质量如何随人口在城市与街区两级变化。",
   },
   "Urban Expansion 2050": {
     title: "2050年全球城市扩张",
     description:
-      "到2050年的全球城市用地扩张预测。基于2019年发表在Environmental Research Letters上的研究，数据可在WRI Resource Watch上获取。",
+      "查看到 2050 年全球城市用地可能如何扩张。预测基于 2019 年发表于 Environmental Research Letters 的研究，数据可在 WRI Resource Watch 获取。",
   },
   "3D Urban Flood Risk": {
     title: "三维城市洪水风险",
     description:
-      "将建筑高度和防护标准纳入全球洪水风险评估论文的配套交互式网页应用。在全球范围内可视化城市三维洪水暴露。",
+      "把建筑高度和防洪标准纳入评估后，全球城市的三维洪水暴露会变成什么样。",
   },
   "Urban Renewal Cooling DID": {
     title: "城市更新降温的因果分析",
     description:
-      "关于非正规住区拆除与城市降温之间因果关系论文的关键结果交互式可视化。采用双重差分方法揭示城市更新的降温效应。",
+      "双重差分结果：拆除非正规住区带来多少地表降温，以及重建方式如何改变这一信号。",
   },
   "URBANMOD-ZIPF": {
     title: "URBANMOD-ZIPF",
@@ -203,7 +203,7 @@ export default async function Home() {
                   <Link href="/reach" className="transition-colors hover:text-ember">
                     <T
                       en={`Cited in ${reach.countries} countries — from ${reach.from} to ${reach.to}`}
-                      zh={`被 ${reach.countries} 个国家和地区引用——从「${reach.from}」到「${reach.to}」`}
+                      zh={`来自 ${reach.countries} 个国家和地区的研究引用了我的工作，从「${reach.from}」到「${reach.to}」`}
                     />
                     <span className="ml-1.5 text-xs text-paper/40">
                       <T

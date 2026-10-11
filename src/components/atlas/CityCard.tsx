@@ -103,7 +103,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
               <p className="mt-2 rounded bg-ember-light px-2 py-1 text-xs text-ember-dark">
                 <T
                   en={`Match flagged: ${mass.match.reason ?? "name or location uncertain"}. Values shown for the matched record (${mass.match.sourceName}).`}
-                  zh={`匹配存疑：${mass.match.reason ?? "名称或位置不确定"}。以下数值来自匹配记录（${mass.match.sourceName}）。`}
+                  zh={`匹配结果存疑，原因是${mass.match.reason ?? "名称或位置不确定"}。以下数值来自匹配记录（${mass.match.sourceName}）。`}
                 />
               </p>
             )}
@@ -149,8 +149,8 @@ export default function CityCard({ city, loading, onClose }: Props) {
                 }
                 zh={
                   mass.vsScaling >= 1
-                    ? `比全球标度线上同等规模城市的建成质量约高 ${((mass.vsScaling - 1) * 100).toFixed(0)}%（β ≈ 0.90）。`
-                    : `比全球标度线上同等规模城市的建成质量约低 ${((1 - mass.vsScaling) * 100).toFixed(0)}%（β ≈ 0.90）。`
+                    ? `按全球标度关系比较，这座城市的建成质量比同等规模城市约高 ${((mass.vsScaling - 1) * 100).toFixed(0)}%（β ≈ 0.90）。`
+                    : `按全球标度关系比较，这座城市的建成质量比同等规模城市约低 ${((1 - mass.vsScaling) * 100).toFixed(0)}%（β ≈ 0.90）。`
                 }
               />
             </p>
@@ -158,7 +158,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
             <p className="mt-2 border-l-2 border-rule pl-2 text-xs italic text-ink-faint">
               <T
                 en="What this number is not: it is not a judgment that the city is over- or under-built in a planning sense — only its position relative to the empirical scaling relationship across ~3,600 cities."
-                zh="这个数字不是什么：它不是对该城市“建多了/建少了”的规划评价，而只是它在约 3,600 座城市经验标度关系中的相对位置。"
+                zh="这个数值表示这座城市在约 3,600 座城市呈现的经验标度关系中处于什么位置。它不能用来判断城市规划上“建多了”还是“建少了”。"
               />
             </p>
 
@@ -193,7 +193,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
               <p className="mt-2 rounded bg-ember-light px-2 py-1 text-xs text-ember-dark">
                 <T
                   en={`Values are for the whole functional urban area “${heat.fua.name}”${heat.quality === "flagged" ? " (name shared by more than one area; largest one used)" : ""}.`}
-                  zh={`数值对应整个功能城市区“${heat.fua.name}”${heat.quality === "flagged" ? "（多个区域同名，取人口最大者）" : ""}。`}
+                  zh={`数值对应整个功能城市区“${heat.fua.name}”${heat.quality === "flagged" ? "（多个区域同名，选取人口最多者）" : ""}。`}
                 />
               </p>
             )}
@@ -206,12 +206,12 @@ export default function CityCard({ city, loading, onClose }: Props) {
             <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
               <T
                 en={`From 2003 to 2020, the daytime heat-island extreme where residents live ${trendWord(heat.dayP, "en")} (area average: ${fmtTrend(heat.dayA)}).`}
-                zh={`2003–2020 年，居民所在处的日间热岛极值${trendWord(heat.dayP, "zh")}（面积平均：${fmtTrend(heat.dayA)}）。`}
+                zh={`夜间 · 面积平均`}
               />
             </p>
             <Not
               en="What this number is not: not air temperature and not a forecast. It is the historical trend of the hottest 1% of land-surface heat-island values (MODIS), °C per decade."
-              zh="这个数字不是什么：不是气温，也不是预测；它是地表热岛最热 1% 值（MODIS）的历史趋势，单位 °C/十年。"
+              zh="这个数值表示 MODIS 记录中，地表热岛最热 1% 数值随时间变化的历史趋势，单位为 °C/十年。它不表示气温，也不预测未来。"
             />
             <Links doi={HEAT_PAPER.doiUrl} />
           </>
@@ -232,12 +232,12 @@ export default function CityCard({ city, loading, onClose }: Props) {
             <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
               <T
                 en={`Demolished informal-settlement sites here cooled by about ${Math.abs(cooling.effectK).toFixed(1)} K in land-surface temperature relative to comparable sites that were not demolished (all three cities pooled: ${Math.abs(cooling.pooledK).toFixed(1)} K).`}
-                zh={`与未拆除的可比地块相比，这里被拆除的城中村地块地表温度约下降 ${Math.abs(cooling.effectK).toFixed(1)} K（三城合并：${Math.abs(cooling.pooledK).toFixed(1)} K）。`}
+                zh={`与未拆除的可比地块相比，这里的城中村地块拆除后，地表温度约下降 ${Math.abs(cooling.effectK).toFixed(1)} K（三城合并估计为 ${Math.abs(cooling.pooledK).toFixed(1)} K）。`}
               />
             </p>
             <Not
               en="What this number is not: not a city-wide cooling and not a health benefit. It applies to the demolished sites only (about 7.7 km² across all three cities), and depends on what was built afterwards."
-              zh="这个数字不是什么：不是全城降温，也不等于健康收益；它只针对被拆除的地块（三城合计约 7.7 km²），并取决于拆除后的用地。"
+              zh="这个降温数值只适用于拆除地块（三城合计约 7.7 km²），效果取决于拆除后土地如何使用。它不代表全城降温，也不等于健康收益。"
             />
             <Links doi={COOLING_PAPER.doiUrl} app={COOLING_PAPER.appUrl} />
           </>
@@ -262,7 +262,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
               <p className="mt-2 rounded bg-ember-light px-2 py-1 text-xs text-ember-dark">
                 <T
                   en={`Values are for the functional urban area “${flood.fua.name}”${flood.quality === "flagged" ? " (this urban centre sits in more than one overlapping area; largest one used)" : ""}.`}
-                  zh={`数值对应功能城市区“${flood.fua.name}”${flood.quality === "flagged" ? "（该城市中心落在多个重叠区域，取人口最大者）" : ""}。`}
+                  zh={`数值对应功能城市区“${flood.fua.name}”${flood.quality === "flagged" ? "（该城市中心位于多个重叠区域，选取人口最多者）" : ""}。`}
                 />
               </p>
             )}
@@ -300,7 +300,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
             </p>
             <Not
               en="What this number is not: not a forecast and not a loss in money. It is the share of building footprints estimated as damaged under a flood scenario that already includes building height; the protected figure applies the modelled FLOPROS protection standard for that area."
-              zh="这个数字不是什么：不是预测，也不是货币损失；它是在已计入建筑高度的洪水情景下，估计受损建筑足迹占比；含保护的数字使用该区域的 FLOPROS 防洪标准。"
+              zh="这个数值表示，在计入建筑高度的洪水情景下，估计受损建筑占地面积占总建筑占地面积的比例。它不是未来预测，也不表示货币损失。计入防护后的结果采用该区域在 FLOPROS 中的防洪标准。"
             />
             <Links doi={FLOOD_PAPER.doiUrl} app={FLOOD_PAPER.appUrl} />
           </>
@@ -325,7 +325,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
               <p className="mt-2 rounded bg-ember-light px-2 py-1 text-xs text-ember-dark">
                 <T
                   en="Match flagged: centroid fell outside the preferred cluster polygon or was reassigned to a same-country neighbor. Values are for the matched Huang_2019 urban cluster."
-                  zh="匹配存疑：质心落在优选集群多边形外，或改派至同国邻近集群。数值对应匹配的 Huang_2019 城市集群。"
+                  zh="匹配结果存疑。质心落在优先匹配的集群边界外，或被重新分配到同一国家的邻近集群。这里显示匹配到的 Huang_2019 城市集群数值。"
                 />
               </p>
             )}
@@ -336,12 +336,12 @@ export default function CityCard({ city, loading, onClose }: Props) {
             <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
               <T
                 en={`Under Huang_2019 URBANMOD projections, this urban cluster’s urban land area by 2050 ranges from ${expansion.loKm2.toLocaleString()} to ${expansion.hiKm2.toLocaleString()} km² across SSP1, SSP3 and SSP5. Scenario range, not a forecast.`}
-                zh={`按 Huang_2019 URBANMOD 预测，该城市集群至 2050 年的城市用地在 SSP1/SSP3/SSP5 下为 ${expansion.loKm2.toLocaleString()}–${expansion.hiKm2.toLocaleString()} km²。情景范围，不是预测。`}
+                zh={`Huang_2019 URBANMOD 模型估算，到 2050 年，这个城市集群在 SSP1/SSP3/SSP5 情景下的城市用地为 ${expansion.loKm2.toLocaleString()}–${expansion.hiKm2.toLocaleString()} km²。这是不同情景下的范围，不是对未来的预测。`}
               />
             </p>
             <Not
               en="What this number is not: not the city’s municipal area alone. It is urban land in the modelled urban cluster that contains this centre (clumps can span multiple GHSL centres). Heat-island intensification (0.5–0.7 °C average in the paper) is not shown as a per-city value here — see the paper / Earth Engine app."
-              zh="这个数字不是什么：不是单独的市政建成区；它是包含该中心的模型城市集群内的城市用地（一个集群可覆盖多个 GHSL 中心）。论文中的热岛增强（平均 0.5–0.7 °C）此处未给出城市级数值——见论文 / Earth Engine 应用。"
+              zh="这个数字表示模型中包含该城市中心的整个城市集群有多少城市用地，范围不限于这座城市的行政区。一个集群可能覆盖多个 GHSL 中心。论文估计热岛平均增强 0.5–0.7 °C，此处未列出各城市的具体数值，可查看论文或 Earth Engine 应用。"
             />
             <Links doi={EXPANSION_PAPER.doiUrl} app={EXPANSION_PAPER.appUrl} />
           </>
@@ -376,7 +376,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
             </p>
             <Not
               en="What this number is not: not a city census table from the SI (SI Tables S1–S2 / Table 1–2 are climate-zone or MUR aggregates). It is a point sample of the published nighttime ΔWBGT raster at the GHSL urban-centre coordinate."
-              zh="这个数字不是什么：不是 SI 中的城市普查表（SI 表为气候带或巨型都市区汇总）；它是在 GHSL 城市中心坐标上对已发表夜间 ΔWBGT 栅格的点采样。"
+              zh="这个数值来自已发表的夜间 ΔWBGT 栅格，取样位置是 GHSL 城市中心坐标。它是单点取样结果，不代表全城普查数据。SI 表 S1–S2 / 表 1–2 按气候带或巨型都市区（MUR）汇总，并非逐城统计。"
             />
             <Links doi={JGR_PAPER.doiUrl} />
           </>

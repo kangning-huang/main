@@ -67,13 +67,13 @@ export default function AtlasPage() {
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
               en="One map of the cities in my datasets. Click a city for what each paper reports there: built mass and scaling (Nature Cities, in press); surface heat-island trends, 2003–2020 (Sci Rep 2025); cooling after informal-settlement demolition (npj Envi Soc Sci 2026); height-aware flood damage with protection (Sci Rep 2026); urban land by 2050 (ERL 2019); and nighttime heat-stress change in China, India, and Nigeria (JGR 2021). Dot color is how many of those papers cover the city; filter chips isolate one study."
-              zh="我数据集中所有城市的一张地图。点击一座城市，查看各篇论文对其的结果：建成质量与标度（Nature Cities，即将发表）、2003–2020 年地表热岛趋势（Scientific Reports 2025）、城中村拆除后的降温（npj 2026），计入建筑高度与防洪标准的洪涝损失（Scientific Reports 2026）、至 2050 年城市用地（ERL 2019），以及中国/印度/尼日利亚夜间热应激变化（JGR 2021）。圆点颜色表示覆盖该城市的论文数量；可用筛选按钮突出某一项研究。"
+              zh="这张地图汇集了我数据集中的所有城市。点击一座城市，就能查看各篇论文在这里发现了什么。研究涵盖建成质量与标度（Nature Cities，即将发表）、2003–2020 年地表热岛趋势（Scientific Reports 2025）、城中村拆除后的降温（npj 2026）、计入建筑高度与防洪标准的洪涝损失（Scientific Reports 2026）、到 2050 年的城市用地（ERL 2019），以及中国、印度、尼日利亚夜间热应激变化（JGR 2021）。圆点颜色表示有多少篇论文覆盖这座城市；点击筛选按钮，可突出显示某项研究。"
             />
           </p>
           <p className="mt-2 text-xs text-ink-faint animate-fade-up delay-2">
             <T
               en="City key: GHSL Urban Centre Database 2015. Basemap: CARTO Positron / Dark Matter (© OpenStreetMap contributors © CARTO); follows your browser light/dark preference. "
-              zh="城市主键：GHSL 城市中心数据库 2015。底图：CARTO Positron / Dark Matter（© OpenStreetMap contributors © CARTO）；随浏览器浅色/深色偏好切换。"
+              zh="城市标识采用 GHSL Urban Centre Database 2015。底图使用 CARTO Positron / Dark Matter（© OpenStreetMap contributors © CARTO），随浏览器设置切换浅色或深色模式。"
             />
             <Link href="/publications#nested-economies-of-scale-in-global-city-mass" className="text-ember hover:underline">
               <T en="Paper →" zh="论文 →" />

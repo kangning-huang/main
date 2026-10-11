@@ -173,7 +173,7 @@ export default function AtlasExplorer() {
               <span className="ml-auto">
                 <T
                   en={`${meta.counts.mapped.toLocaleString()} cities · ${multiCount.toLocaleString()} with 2+ papers`}
-                  zh={`${meta.counts.mapped.toLocaleString()} 座城市 · ${multiCount.toLocaleString()} 座有 2 篇及以上`}
+                  zh={`${meta.counts.mapped.toLocaleString()} 座城市 · ${multiCount.toLocaleString()} 座有 2 篇及以上论文覆盖`}
                 />
               </span>
             )}
@@ -185,7 +185,7 @@ export default function AtlasExplorer() {
             <aside className="rounded-lg border border-dashed border-rule bg-paper-warm/40 p-5 text-sm text-ink-muted">
               <T
                 en="Click a city on the map, or search above, to see what each paper says about it. Dot color is how many papers cover that city."
-                zh="在地图上点击一座城市，或在上方搜索，查看各篇论文对该城市的结果。圆点颜色表示覆盖该城市的论文数量。"
+                zh="点击地图上的城市，或在上方搜索，就能查看各篇论文在这里发现了什么。圆点颜色表示有多少篇论文覆盖这座城市。"
               />
             </aside>
           ) : (

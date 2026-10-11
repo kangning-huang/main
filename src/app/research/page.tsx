@@ -61,7 +61,7 @@ const THEMES: Theme[] = [
     findings: [
       {
         en: "Global urban land could expand by 0.6–1.3 million km² (78%–171%) between 2015 and 2050 across shared socioeconomic pathways.",
-        zh: "在不同共享社会经济路径下，2015—2050年全球城市用地可能扩张60万—130万平方公里（78%—171%）。",
+        zh: "在不同共享社会经济路径下，2015 至 2050 年，全球城市用地可能增加 60 万至 130 万平方公里（78% 至 171%）。",
         venue: "Environmental Research Letters",
         year: "2019",
         href: doiHref("10.1088/1748-9326/ab4b71"),
@@ -212,7 +212,7 @@ const THEMES: Theme[] = [
     findings: [
       {
         en: "Counting building height and protection standards shifts global flood damage toward Southeast Asia: 42% of the total versus 15% under depth-only assessments.",
-        zh: "纳入建筑高度与防洪标准后，全球洪灾损失向东南亚转移：占比为42%，而仅考虑淹没深度时为15%。",
+        zh: "计入建筑高度与防洪标准后，东南亚占全球估计洪灾损失的 42%；若只看淹没深度，这一比例为 15%。",
         venue: "Scientific Reports",
         year: "2026",
         href: doiHref("10.1038/s41598-026-70981-w"),
@@ -226,7 +226,7 @@ const THEMES: Theme[] = [
       },
       {
         en: "Pixel-level inundation probabilities from Sentinel-1 radar on Google Earth Engine enable rapid flood mapping with quantified uncertainty.",
-        zh: "基于Google Earth Engine与Sentinel-1雷达数据的像元级淹没概率，可实现带不确定性量化的快速洪水制图。",
+        zh: "在 Google Earth Engine 上处理 Sentinel-1 雷达数据，估算每个像元被淹没的概率，就能快速绘制洪水范围图，并量化结果有多大不确定性。",
         venue: "Remote Sensing",
         year: "2025",
         href: doiHref("10.3390/rs17101747"),
@@ -284,7 +284,7 @@ const THEMES: Theme[] = [
       },
       {
         en: "Economies of scale intensify at finer resolution: neighborhood-level scaling (δ ≈ 0.75) is more sub-linear than city-level scaling (β ≈ 0.90).",
-        zh: "规模经济在更精细的空间尺度上更为显著：街区层面的标度指数（δ ≈ 0.75）低于城市层面（β ≈ 0.90）。",
+        zh: "空间尺度越细，规模经济越明显。街区层面的标度指数（δ ≈ 0.75）低于城市层面（β ≈ 0.90）。",
         venue: "Nature Cities",
         year: "2026",
         href: pubHref("Nested economies of scale in global city mass"),
@@ -380,7 +380,7 @@ export default function ResearchPage() {
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
               en="How the size and shape of cities decide their climate future. Four themes in the CLimate and Urban Environments (CLUEs) Lab: urban futures, heat, flood and coasts, and scaling and form."
-              zh="城市的规模与形态如何决定其气候未来。CLUEs（CLimate and Urban Environments）实验室围绕四个相互关联的主题展开研究。"
+              zh="城市规模与形态如何决定未来气候？CLimate and Urban Environments（CLUEs）实验室围绕四个相互关联的主题研究这个问题。"
             />
           </p>
 
