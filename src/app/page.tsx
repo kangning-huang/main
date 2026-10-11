@@ -13,6 +13,7 @@ import { webPageSchema, profilePageSchema, faqSchema, OG_IMAGE_PATH, withOpenGra
 import T from "@/components/T";
 import PublicationCard from "@/components/PublicationCard";
 import HeroHeadshot from "@/components/HeroHeadshot";
+import HomeWritingSubscribe from "@/components/HomeWritingSubscribe";
 import { reachHeadline } from "@/lib/influence";
 
 const HOME_DESCRIPTION =
@@ -528,6 +529,8 @@ export default async function Home() {
                 ))}
               </div>
             )}
+
+            <HomeWritingSubscribe mode="with-posts" />
           </div>
         </section>
       ) : (
@@ -536,20 +539,7 @@ export default async function Home() {
             <h2 className="section-heading">
               <T en="Writing" zh="我的文章" />
             </h2>
-            <p className="mt-6 text-ink-muted">
-              <T
-                en="I write about cities and climate on Substack."
-                zh="我在 Substack 上写城市与气候相关的文章。"
-              />
-            </p>
-            <a
-              href={LINKS.substack}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-5 inline-flex items-center rounded-full bg-ember px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ember-dark"
-            >
-              <T en="Read on Substack →" zh="到 Substack 阅读 →" />
-            </a>
+            <HomeWritingSubscribe mode="empty" />
           </div>
         </section>
       )}

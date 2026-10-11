@@ -3,6 +3,7 @@ import { LINKS } from "@/lib/constants";
 import { fetchBlogPosts } from "@/lib/blog";
 import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 import T from "@/components/T";
+import BlogSubscribe from "@/components/BlogSubscribe";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -58,18 +59,11 @@ export default async function BlogPage() {
           <p className="mt-2 text-ink-muted">
             <T
               en="Writing on cities, climate, autonomous vehicles, and more."
-              zh="我在这里写城市、气候和自动驾驶等话题。"
+              zh="城市、气候等话题——英文在 Substack，中文在公众号「反直觉手记」。"
             />
           </p>
         </div>
-        <a
-          href={LINKS.substack}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center rounded-full bg-ember px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ember-dark"
-        >
-          <T en="Subscribe on Substack" zh="订阅 Substack" /> &#8599;
-        </a>
+        <BlogSubscribe />
       </div>
 
       {posts.length > 0 ? (
@@ -178,7 +172,7 @@ export default async function BlogPage() {
           <p className="text-ink-muted">
             <T
               en="Posts are loading from Substack. Visit the newsletter directly:"
-              zh="正在从 Substack 加载文章。你也可以直接前往 Substack 阅读。"
+              zh="文章加载中。也可扫码关注公众号「反直觉手记」，或前往 Substack 阅读。"
             />
           </p>
           <a
