@@ -118,8 +118,8 @@ function headline(lens, total, leadPapers, ge100, ge1000) {
       };
   if (lens === "all") {
     return {
-      en: `${n0(total)} works cite this research. ${hot.en}`,
-      zh: `${n0(total)} 篇文献引用了这些研究。${hot.zh}`,
+      en: `${n0(total)} works cite my research. ${hot.en}`,
+      zh: `${n0(total)} 篇文献引用了本人的研究。${hot.zh}`,
     };
   }
   return {
