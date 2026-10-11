@@ -50,7 +50,7 @@ export default function ReachPage() {
         <section className="pt-10 pb-6 md:pt-14">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h1 className="font-display text-4xl text-ink md:text-5xl">
-              <T en="What others have built on my work" zh="别人在我研究上接着做了什么" />
+              <T en="Who have cited my works" zh="谁引用了我的研究成果" />
             </h1>
             <p className="mt-3 max-w-2xl text-[15px] text-ink-muted">
               <T
