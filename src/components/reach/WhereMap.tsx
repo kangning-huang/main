@@ -106,7 +106,7 @@ export default function WhereMap() {
           <thead className="text-xs text-ink-faint">
             <tr>
               <th className="py-1 pr-3 font-normal"><T en="Country / territory" zh="国家/地区" /></th>
-              <th className="py-1 pr-3 text-right font-normal"><T en="Citing works" zh="施引文献" /></th>
+              <th className="py-1 pr-3 text-right font-normal"><T en="Citing works" zh="引用这些论文的文献" /></th>
               <th className="py-1 pr-3 text-right font-normal"><T en="Expected" zh="预期" /></th>
               <th className="py-1 text-right font-normal"><T en="Ratio" zh="比值" /></th>
             </tr>

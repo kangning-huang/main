@@ -192,7 +192,7 @@ export default function FieldsFlow() {
           <thead className="text-xs text-ink-faint">
             <tr>
               <th className="py-1 pr-4 font-normal"><T en="Field" zh="领域" /></th>
-              <th className="py-1 pr-4 text-right font-normal"><T en="Citing works" zh="施引文献" /></th>
+              <th className="py-1 pr-4 text-right font-normal"><T en="Citing works" zh="引用这些论文的文献" /></th>
               <th className="py-1 font-normal"><T en="Top subfields" zh="主要子领域" /></th>
             </tr>
           </thead>

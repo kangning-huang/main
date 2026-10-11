@@ -73,7 +73,7 @@ export default async function PublicationsPage() {
         <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h1 className="font-display text-4xl text-ink">
-            <T en="Publications" zh="学术论文" />
+            <T en="Publications" zh="论文" />
           </h1>
           <p className="mt-2 text-ink-muted">
             <T
