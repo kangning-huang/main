@@ -3,8 +3,6 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { useLanguage } from "@/lib/language-context";
 import {
-  BAND_COLORS,
-  BAND_NAMES,
   doiUrl,
   fieldShelfPapers,
   fieldShelfThemes,
@@ -18,7 +16,6 @@ import {
 import { authorLine } from "./FieldShelfTooltip";
 
 const fmt = (n: number) => n.toLocaleString("en-US");
-const pctOf = (a: number, b: number) => (b > 0 ? Math.round((100 * a) / b) : 0);
 
 /** Vertical rhythm of the shelf, CSS px (not scaled: it holds text). */
 export function shelfMetrics(view: FieldShelfView) {
@@ -31,20 +28,16 @@ export function shelfMetrics(view: FieldShelfView) {
   return { themeH, spineTop, spineBottom, countTop, anchorY, readoutTop, height: readoutTop + 20 };
 }
 
-/** "ERL 2019 · 392 citing · 37% outside home topics", or "Sci Rep 2026 · no citing works yet". */
+/** "ERL 2019 · 392 citing", or "Sci Rep 2026 · no citing works yet". */
 export function paperReadout(p: FieldShelfPaper, zh: boolean) {
   if (p.citing === 0) return zh ? `${p.label} · ${p.year} · 暂无施引` : `${p.label} · ${p.year} · no citing works yet`;
-  return zh
-    ? `${p.label} · ${fmt(p.citing)} 篇施引 · ${pctOf(p.outside, p.citing)}% 在本人主题之外`
-    : `${p.label} · ${fmt(p.citing)} citing · ${pctOf(p.outside, p.citing)}% outside home topics`;
+  return zh ? `${p.label} · ${fmt(p.citing)} 篇施引` : `${p.label} · ${fmt(p.citing)} citing`;
 }
 
 export function paperAria(p: FieldShelfPaper, zh: boolean) {
   const role = p.lens === "lead" ? (zh ? "第一/通讯作者" : "lead author") : zh ? "合作" : "co-authored";
   if (p.citing === 0) return zh ? `${p.short}（${role}）：暂无施引文献` : `${p.short} (${role}): no citing works yet`;
-  return zh
-    ? `${p.short}（${role}）：${fmt(p.citing)} 篇施引文献，${pctOf(p.outside, p.citing)}% 在本人主题之外`
-    : `${p.short} (${role}): ${fmt(p.citing)} citing works, ${pctOf(p.outside, p.citing)}% outside the lead home topics`;
+  return zh ? `${p.short}（${role}）：${fmt(p.citing)} 篇施引文献` : `${p.short} (${role}): ${fmt(p.citing)} citing works`;
 }
 
 interface Props {
@@ -160,32 +153,9 @@ export default function FieldShelfShelf({ view, active, pinned, cited, readout, 
   );
 }
 
-/** Core / neighbour / further split of a paper's citing works: one thin stacked bar, 2-px surface gaps. */
-export function BandBar({ bands, zh }: { bands: [number, number, number]; zh: boolean }) {
-  const total = bands[0] + bands[1] + bands[2];
-  if (total === 0) return null;
-  return (
-    <div>
-      <div className="flex h-2 w-full gap-[2px]" aria-hidden="true">
-        {bands.map((n, b) =>
-          n > 0 ? <span key={b} className="h-full first:rounded-l-[3px] last:rounded-r-[3px]" style={{ flexGrow: n, flexBasis: 0, background: BAND_COLORS[b] }} /> : null
-        )}
-      </div>
-      <p className="mt-1 flex flex-wrap gap-x-3 text-xs text-ink-muted tabular-nums">
-        {bands.map((n, b) => (
-          <span key={b}>
-            {fmt(n)} {zh ? BAND_NAMES[b as 0 | 1 | 2].zh : BAND_NAMES[b as 0 | 1 | 2].en.toLowerCase()}
-          </span>
-        ))}
-      </p>
-    </div>
-  );
-}
-
 /**
- * A shelf paper in focus: what it is, how many works cite it, how far they sit from the lead home
- * topics, and its most-cited citers (OpenAlex cited_by_count, from the lazy payload). Hovering a
- * citer previews its square on the field.
+ * A shelf paper in focus: what it is, how many works cite it, and its most-cited citers
+ * (OpenAlex cited_by_count, from the lazy payload). Hovering a citer previews its square on the field.
  */
 export function PaperDetails({
   view,
@@ -249,12 +219,11 @@ export function PaperDetails({
             <dd className="tabular-nums text-ink">
               {fmt(paper.citing)} <span className="text-ink-muted">{zh ? "（非自引）" : "(non-self)"}</span>
             </dd>
-            <dt className="text-ink-faint">{zh ? "本人主题之外" : "Outside home topics"}</dt>
+            <dt className="text-ink-faint">{zh ? "高被引施引（≥100）" : "High-impact citers (≥100)"}</dt>
             <dd className="tabular-nums text-ink">
-              {pctOf(paper.outside, paper.citing)}% <span className="text-ink-muted">({fmt(paper.outside)})</span>
+              {fmt(view.squares.filter((sq) => sq.papers.includes(p) && sq.citedBy >= 100).length)}
             </dd>
           </dl>
-          <BandBar bands={paper.bands} zh={zh} />
           <div>
             <h4 className="text-xs font-medium text-ink">{zh ? "被引最多的施引文献" : "Most-cited works citing it"}</h4>
             {top ? (

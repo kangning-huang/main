@@ -12,7 +12,7 @@ import Growth from "@/components/reach/Growth";
 import ReachMethod from "@/components/reach/ReachMethod";
 
 const DESCRIPTION =
-  "Who builds on Kangning (Ken) Huang's research: every OpenAlex work that cites his papers, packed by how far each sits from the topics of his lead papers. Self-citations removed.";
+  "Who builds on Kangning (Ken) Huang's research: every OpenAlex work that cites his papers, coloured by how highly cited that citing work itself is. Self-citations removed.";
 
 export const metadata: Metadata = {
   title: "Reach",
@@ -54,8 +54,8 @@ export default function ReachPage() {
             </h1>
             <p className="mt-3 max-w-2xl text-[15px] text-ink-muted">
               <T
-                en="One square per OpenAlex work that cites Ken's papers, packed by topic distance from the home topics of his lead papers. Self-citations removed."
-                zh="OpenAlex 中每一篇施引文献对应一个方块，按与本人第一/通讯作者论文主题的距离排布。已剔除自引。"
+                en="One square per OpenAlex work that cites Ken's papers, coloured by that work's own citation count (high-impact toward the centre). Self-citations removed."
+                zh="OpenAlex 中每一篇施引文献对应一个方块，颜色表示该文献自身的被引次数（高被引靠中心）。已剔除自引。"
               />
             </p>
             <ReachLensChip />

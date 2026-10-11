@@ -1,49 +1,66 @@
 /**
- * Accessors for the Field & Shelf preview (docs/reach/FIELD-SHELF-PLAN.md):
+ * Accessors for Field & Shelf (docs/reach/FIELD-SHELF-PLAN.md):
  * src/data/field-shelf.json (scripts/influence/build-field-shelf.mjs) is bundled with the page; the
  * tooltip payloads in public/data/field-shelf-tooltips-{all,lead}.json are fetched on first hover,
- * search or "Show me one". One square per work citing Ken's papers. Its band compares the work's
- * OpenAlex topic with the FIXED home topics of his lead papers, so a square keeps its colour in both
- * lenses: the All / Lead chip only filters squares and shelf.
+ * search or "Show me one". One square per work citing Ken's papers. Colour and centre position encode
+ * that citing work's own OpenAlex cited_by_count (log bins); the All / Lead chip only filters.
  */
 import fieldShelfData from "@/data/field-shelf.json";
 import type { ReachLens } from "@/lib/influence";
 
-/** 0 core (a home topic) · 1 neighbour (same subfield or field) · 2 further (same domain, another domain, or no topic). */
-export type FieldShelfBand = 0 | 1 | 2;
+/** Log-ish citation bins: 0 · 1–9 · 10–99 · 100–999 · ≥1000 (OpenAlex cited_by_count). */
+export type FieldShelfImpactBin = 0 | 1 | 2 | 3 | 4;
 
 /**
- * Mark colours on the paper surface (#fffcf7), checked with the dataviz validator: ink is the neutral
- * "inside" class; the ember arm is an ordinal ramp (ΔE 16.8, CVD 15.3). Light ember sits at 2.44:1, so
- * the legend, the tooltip's band line and the table carry the band too.
+ * Sequential ember–ink ramp on paper (#fffcf7): pale warm → light ember → ember → ink.
+ * High-impact citers are darkest and sit toward the centre.
  */
-export const BAND_COLORS = ["#141211", "#dd9270", "#c74b16"] as const;
+export const IMPACT_BREAKS = [0, 1, 10, 100, 1000] as const;
+export const IMPACT_COLORS = ["#cfc4b6", "#b89a82", "#dd9270", "#c74b16", "#141211"] as const;
+export const IMPACT_LABELS: Record<FieldShelfImpactBin, { en: string; zh: string }> = {
+  0: { en: "0 citations", zh: "0 次被引" },
+  1: { en: "1–9", zh: "1–9" },
+  2: { en: "10–99", zh: "10–99" },
+  3: { en: "100–999", zh: "100–999" },
+  4: { en: "≥1,000", zh: "≥1,000" },
+};
+export const IMPACT_NOTES: Record<FieldShelfImpactBin, { en: string; zh: string }> = {
+  0: { en: "not yet cited again", zh: "尚未被再次引用" },
+  1: { en: "lightly cited citing works", zh: "轻度被引的施引文献" },
+  2: { en: "moderately cited", zh: "中度被引" },
+  3: { en: "highly cited (≥100)", zh: "高被引（≥100）" },
+  4: { en: "very highly cited (≥1,000)", zh: "极高被引（≥1,000）" },
+};
+
 export const HIT_COLOR = "#0d7377";
 /** Opacity of squares outside the paper in focus or the search hits. */
 export const DIM_ALPHA = 0.15;
 
-export const BAND_NAMES: Record<FieldShelfBand, { en: string; zh: string }> = {
-  0: { en: "Core", zh: "核心" },
-  1: { en: "Neighbour", zh: "邻近" },
-  2: { en: "Further", zh: "较远" },
-};
+export function impactBin(citedBy: number): FieldShelfImpactBin {
+  const n = Number.isFinite(citedBy) ? Math.max(0, Math.floor(citedBy)) : 0;
+  if (n >= 1000) return 4;
+  if (n >= 100) return 3;
+  if (n >= 10) return 2;
+  if (n >= 1) return 1;
+  return 0;
+}
 
-/** What each band means, for legends. */
-export const BAND_NOTES: Record<FieldShelfBand, { en: string; zh: string }> = {
-  0: { en: "inside the home topics of Ken's lead papers", zh: "在本人第一/通讯作者论文的主题之内" },
-  1: { en: "same subfield or field", zh: "同一子领域或领域" },
-  2: { en: "same domain, another domain, or no topic", zh: "同一大类、其他大类或无主题" },
-};
+export function impactColor(citedBy: number): string {
+  return IMPACT_COLORS[impactBin(citedBy)];
+}
 
-/** Topic distance d (OpenAlex hierarchy) in words; null = the work has no OpenAlex topic. */
+export function citedByText(n: number, zh: boolean): string {
+  if (zh) return n === 0 ? "自身被引 0 次" : `自身被引 ${n.toLocaleString("en-US")} 次`;
+  return n === 0 ? "0 citations of its own" : `${n.toLocaleString("en-US")} citations of its own`;
+}
+
+/** @deprecated topic distance kept only for tip footnotes if present */
 export function distanceText(d: number | null, zh: boolean): string {
   const en = ["a home topic of Ken's lead papers", "same subfield as a home topic", "same field as a home topic", "same domain, different field", "another domain"];
   const cn = ["本人第一/通讯作者论文的主题", "与本人主题同一子领域", "与本人主题同一领域", "同一大类，不同领域", "其他大类"];
   if (d === null) return zh ? "无 OpenAlex 主题" : "no OpenAlex topic";
   return (zh ? cn : en)[d] ?? String(d);
 }
-
-export const bandOfDistance = (d: number | null): FieldShelfBand => (d === 0 ? 0 : d === 1 || d === 2 ? 1 : 2);
 
 const TYPE_NAMES: Record<string, { en: string; zh: string }> = {
   article: { en: "Article", zh: "期刊论文" },
@@ -84,9 +101,9 @@ export interface FieldShelfPaper {
   openalex: string;
   /** Non-self citing works. */
   citing: number;
-  /** Of those, outside the lead home topics (d ≠ 0). */
+  /** Of those, outside the lead home topics (d ≠ 0) — footnote only. */
   outside: number;
-  /** Core / neighbour / further counts. */
+  /** Core / neighbour / further counts — footnote only; not field colour. */
   bands: [number, number, number];
 }
 
@@ -103,7 +120,8 @@ export interface FieldShelfSquare {
   /** Top-left corner in the view's field box, px. */
   x: number;
   y: number;
-  band: FieldShelfBand;
+  /** OpenAlex cited_by_count of this citing work (never invented). */
+  citedBy: number;
   year: number | null;
   /** Indexes into fieldShelf.papers: the pinned papers of this view it cites (1–4). */
   papers: number[];
@@ -133,9 +151,13 @@ export interface FieldShelfView {
     selfCitationsRemoved: number;
     coauthorOnly: number;
     maxPapersPerSquare: number;
+    ge100: number;
+    ge1000: number;
+    maxCitedBy: number;
   };
   bands: { core: number; neighbour: number; further: number };
-  /** Citing works at distance 0–4, then without a topic. */
+  impact: { counts: number[]; ge100: number; ge1000: number; maxCitedBy: number };
+  /** Citing works at distance 0–4, then without a topic (footnote). */
   distance: number[];
   multiCite: Record<string, number>;
   headline: { en: string; zh: string };
@@ -149,6 +171,8 @@ type RawView = Omit<FieldShelfView, "lens" | "squares" | "index"> & { squares: R
 interface RawData {
   meta: {
     asOf: string;
+    schema?: string;
+    encoding?: string;
     homeTopicsLeadCount: number;
     homeTopicsLead: { id: string; name: string; subfield: string | null; field: string | null; domain: string | null }[];
     maxDistance: number;
@@ -156,6 +180,13 @@ interface RawData {
     influenceOutsideHome: { all: number; lead: number; homeTopics: number | null } | null;
     showMeOneTypes: string[];
     tooltips: { all: string; lead: string };
+    impact?: {
+      breaks: number[];
+      colors: string[];
+      labels: { en: string; zh: string }[];
+      scale: string;
+      note: string;
+    };
   };
   themes: FieldShelfTheme[];
   papers: FieldShelfPaper[];
@@ -170,7 +201,7 @@ export const fieldShelfThemes: FieldShelfTheme[] = raw.themes;
 
 function decode(lens: ReachLens): FieldShelfView {
   const v = raw.views[lens];
-  const squares = v.squares.map(([n, x, y, band, year, papers]) => ({ id: `W${n}`, x, y, band: band as FieldShelfBand, year, papers }));
+  const squares = v.squares.map(([n, x, y, citedBy, year, papers]) => ({ id: `W${n}`, x, y, citedBy, year, papers }));
   return { ...v, lens, squares, index: new Map(squares.map((s, i) => [s.id, i])) };
 }
 
@@ -325,9 +356,14 @@ export function pickOne(view: FieldShelfView, tips: FieldShelfTips, within: ((i:
     all.filter((i) => {
       const s = view.squares[i];
       const t = tips.get(s.id);
-      return s.band !== 0 && !!t && !!t.venue && !!t.type && types.has(t.type);
+      return s.citedBy >= 100 && !!t && !!t.venue && !!t.type && types.has(t.type);
     }),
-    all.filter((i) => view.squares[i].band !== 0),
+    all.filter((i) => {
+      const s = view.squares[i];
+      const t = tips.get(s.id);
+      return s.citedBy >= 10 && !!t && !!t.venue && !!t.type && types.has(t.type);
+    }),
+    all.filter((i) => view.squares[i].citedBy >= 10),
     all,
   ];
   const pool = tiers.find((t) => t.length > 0);

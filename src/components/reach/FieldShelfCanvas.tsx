@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useLayoutEffect, useMemo, useRef, useState, type PointerEvent } from "react";
-import { BAND_COLORS, DIM_ALPHA, FIELD_AREA, HIT_COLOR, type FieldShelfView } from "@/lib/field-shelf";
+import { DIM_ALPHA, FIELD_AREA, HIT_COLOR, IMPACT_COLORS, impactBin, type FieldShelfView } from "@/lib/field-shelf";
 
 /** One-shot fill in citation-year order, then still. */
 const ENTRANCE_MS = 2000;
@@ -39,6 +39,7 @@ const smooth = (t: number) => t * t * (3 - 2 * t);
 const easeInOut = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - (-2 * t + 2) ** 3 / 2);
 
 interface Prepared {
+  /** Indexes grouped by impact bin (0–4). */
   byBand: number[][];
   /** Position of each square in citation-year order (year, then OpenAlex id). */
   rank: Int32Array;
@@ -49,11 +50,12 @@ interface Prepared {
 const bucketKey = (bx: number, by: number) => (bx + 2048) * 4096 + (by + 2048);
 
 function prepare(view: FieldShelfView): Prepared {
-  const byBand: number[][] = [[], [], []];
-  view.squares.forEach((q, i) => byBand[q.band].push(i));
+  const byBand: number[][] = [[], [], [], [], []];
+  view.squares.forEach((q, i) => byBand[impactBin(q.citedBy)].push(i));
   const order = view.squares.map((_, i) => i);
   const num = (i: number) => Number(view.squares[i].id.slice(1));
-  order.sort((a, b) => (view.squares[a].year ?? 9999) - (view.squares[b].year ?? 9999) || num(a) - num(b));
+  // Entrance: most-cited first (centre fills first), then year, then id.
+  order.sort((a, b) => view.squares[b].citedBy - view.squares[a].citedBy || (view.squares[a].year ?? 9999) - (view.squares[b].year ?? 9999) || num(a) - num(b));
   const rank = new Int32Array(order.length);
   order.forEach((i, r) => (rank[i] = r));
   const buckets = new Map<number, number[]>();
@@ -138,8 +140,8 @@ function paintFrame(canvas: HTMLCanvasElement, E: Engine, L: Live, now: number):
     const e = easeInOut(t);
     const from = E.lens.from;
     const ff = fieldFrame(from, w);
-    for (const b of [0, 1, 2] as const) {
-      ctx.fillStyle = BAND_COLORS[b];
+    for (let b = 0; b < IMPACT_COLORS.length; b++) {
+      ctx.fillStyle = IMPACT_COLORS[b];
       ctx.globalAlpha = 1;
       for (const i of pr.byBand[b]) {
         const q = v.squares[i];
@@ -155,7 +157,7 @@ function paintFrame(canvas: HTMLCanvasElement, E: Engine, L: Live, now: number):
       }
       ctx.globalAlpha = 1 - e;
       for (const o of from.squares) {
-        if (o.band === b && !v.index.has(o.id)) at(ff.ox + o.x * ff.s, ff.oy + o.y * ff.s);
+        if (impactBin(o.citedBy) === b && !v.index.has(o.id)) at(ff.ox + o.x * ff.s, ff.oy + o.y * ff.s);
       }
     }
     ctx.globalAlpha = 1;
@@ -179,7 +181,7 @@ function paintFrame(canvas: HTMLCanvasElement, E: Engine, L: Live, now: number):
       for (const i of pr.byBand[b]) if (keep(i) && shown(i)) at(frame.ox + v.squares[i].x * frame.s, frame.oy + v.squares[i].y * frame.s);
     };
     if (ht) {
-      for (const b of [0, 1, 2]) pass(b, BAND_COLORS[b], DIM_ALPHA, (i) => !ht[i]);
+      for (let b = 0; b < IMPACT_COLORS.length; b++) pass(b, IMPACT_COLORS[b], DIM_ALPHA, (i) => !ht[i]);
       // Search hits one pixel larger on every side: a handful of 3-px squares is easy to miss.
       const big = size + 2 * Math.max(1, Math.round(frame.s * dpr));
       const off = (big - size) / 2;
@@ -190,10 +192,10 @@ function paintFrame(canvas: HTMLCanvasElement, E: Engine, L: Live, now: number):
         ctx.fillRect(Math.round((frame.ox + v.squares[i].x * frame.s) * dpr) - off, Math.round((frame.oy + v.squares[i].y * frame.s) * dpr) - off, big, big);
       }
     } else if (lt) {
-      for (const b of [0, 1, 2]) pass(b, BAND_COLORS[b], DIM_ALPHA, (i) => !lt[i]);
-      for (const b of [0, 1, 2]) pass(b, BAND_COLORS[b], 1, (i) => lt[i] === 1);
+      for (let b = 0; b < IMPACT_COLORS.length; b++) pass(b, IMPACT_COLORS[b], DIM_ALPHA, (i) => !lt[i]);
+      for (let b = 0; b < IMPACT_COLORS.length; b++) pass(b, IMPACT_COLORS[b], 1, (i) => lt[i] === 1);
     } else {
-      for (const b of [0, 1, 2]) pass(b, BAND_COLORS[b], 1, () => true);
+      for (let b = 0; b < IMPACT_COLORS.length; b++) pass(b, IMPACT_COLORS[b], 1, () => true);
     }
     ctx.globalAlpha = 1;
   }
@@ -206,7 +208,7 @@ interface Props {
   lit: Uint8Array | null;
   /** Search hits: drawn teal over a dimmed field. */
   hits: Uint8Array | null;
-  /** Fill the field in citation-year order the first time it scrolls into view (skipped with reduced motion). */
+  /** Fill the field most-cited-first the first time it scrolls into view (skipped with reduced motion). */
   entrance?: boolean;
   onHover?: (i: number | null) => void;
   /** Click or tap: the nearest square, or null on empty space. */
@@ -262,7 +264,7 @@ export default function FieldShelfCanvas({ view, lit, hits, entrance = false, on
     return () => ro.disconnect();
   }, []);
 
-  // Entrance: once, when at least a quarter of the field is on screen; reduced motion shows the final state.
+  // Entrance: once (most-cited first), when at least a quarter of the field is on screen; reduced motion shows the final state.
   useEffect(() => {
     const el = ref.current;
     const E = engine.current;

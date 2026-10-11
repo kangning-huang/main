@@ -5,19 +5,22 @@ import T from "@/components/T";
 import { useLanguage } from "@/lib/language-context";
 import { readQuery, updateQuery } from "@/lib/url-state";
 import {
-  BAND_COLORS,
-  BAND_NAMES,
-  BAND_NOTES,
   FIELD_AREA,
-  distanceText,
+  IMPACT_COLORS,
+  IMPACT_LABELS,
+  IMPACT_NOTES,
+  citedByText,
   fieldShelfMeta,
   fieldShelfPapers,
   getFieldShelf,
+  impactBin,
+  impactColor,
   loadFieldShelfTips,
   openAlexUrl,
   citersOfPaper,
   pickOne,
   searchSquares,
+  type FieldShelfImpactBin,
   type FieldShelfTips,
   type FieldShelfView,
   type TipsStatus,
@@ -26,11 +29,10 @@ import FieldShelfCanvas, { fieldFrame, squareCentre } from "./FieldShelfCanvas";
 import FieldShelfPhone from "./FieldShelfPhone";
 import FieldShelfSearch from "./FieldShelfSearch";
 import FieldShelfShelf, { PaperDetails, paperReadout, shelfMetrics } from "./FieldShelfShelf";
-import FieldShelfTooltip, { BandSwatch, WorkDetails, authorLine, useFieldShelfTips } from "./FieldShelfTooltip";
+import FieldShelfTooltip, { ImpactSwatch, WorkDetails, authorLine, useFieldShelfTips } from "./FieldShelfTooltip";
 import { useReachLens } from "./ReachLens";
 
 const fmt = (n: number) => n.toLocaleString("en-US");
-const pctOf = (a: number, b: number) => (b > 0 ? Math.round((100 * a) / b) : 0);
 /** Gap between the shelf and the field box, px. */
 const FIELD_GAP = 12;
 /** A hovered square's card waits this long before closing, so the pointer can reach its links. */
@@ -44,9 +46,6 @@ function shelfFanOpacity(n: number): number {
   if (n <= 0) return 0;
   return Math.min(0.18, Math.max(0.05, 3.0 / Math.sqrt(n)));
 }
-
-/** Per-band opacity multipliers on the shelf fan (core strongest). */
-const SHELF_FAN_BAND = [1, 0.82, 0.68] as const;
 
 function maskOf(view: FieldShelfView, keep: (i: number) => boolean): Uint8Array {
   const m = new Uint8Array(view.squares.length);
@@ -124,17 +123,14 @@ function Stage({
   const fanAnchorX = fanItem ? (fanItem.x / view.shelf.width) * width : 0;
   const fanAlpha = shelfFanOpacity(fanCiters.length);
   const cellCss = view.field.cell * (frame?.s ?? 1);
-  const fanPaths = shelfFan
-    ? ([0, 1, 2] as const).map((band) => {
-        const parts: string[] = [];
-        for (const i of fanCiters) {
-          if (view.squares[i].band !== band) continue;
+  const fanPath = shelfFan
+    ? fanCiters
+        .map((i) => {
           const pt = squareCentre(view, i, frame);
-          parts.push(`M${pt.x.toFixed(1)} ${(boxTop + pt.y).toFixed(1)}L${fanAnchorX.toFixed(1)} ${m.anchorY}`);
-        }
-        return { band, d: parts.join(""), n: parts.length };
-      })
-    : [];
+          return `M${pt.x.toFixed(1)} ${(boxTop + pt.y).toFixed(1)}L${fanAnchorX.toFixed(1)} ${m.anchorY}`;
+        })
+        .join("")
+    : "";
 
   return (
     <div ref={stageRef} className="relative">
@@ -156,20 +152,10 @@ function Stage({
       </div>
       {shelfFan && fanItem && (
         <svg className="pointer-events-none absolute top-0 left-0 overflow-visible" width={width} height={boxTop + boxH} aria-hidden="true">
-          {/* All citing links first (thin, low α, band-tinted strength); lit squares redrawn on top so megahits stay readable. No entrance animation — reduced-motion gets the same final state. */}
-          {fanPaths.map(({ band, d, n }) =>
-            n > 0 ? (
-              <path
-                key={band}
-                d={d}
-                fill="none"
-                stroke="var(--color-teal)"
-                strokeWidth={0.55}
-                strokeOpacity={fanAlpha * SHELF_FAN_BAND[band]}
-                strokeLinecap="butt"
-              />
-            ) : null
-          )}
+          {/* All citing links (thin, low α); lit squares redrawn on top so megahits stay readable. */}
+          {fanPath ? (
+            <path d={fanPath} fill="none" stroke="var(--color-teal)" strokeWidth={0.55} strokeOpacity={fanAlpha} strokeLinecap="butt" />
+          ) : null}
           {fanCiters.map((i) => {
             const pt = squareCentre(view, i, frame);
             const half = cellCss / 2;
@@ -180,7 +166,7 @@ function Stage({
                 y={boxTop + pt.y - half}
                 width={cellCss}
                 height={cellCss}
-                fill={BAND_COLORS[view.squares[i].band]}
+                fill={impactColor(view.squares[i].citedBy)}
               />
             );
           })}
@@ -225,32 +211,39 @@ function Stage({
   );
 }
 
-/** Encoding key and the honest caption: what a square is, what the colours compare against, who dominates All. */
+/** Encoding key: colour = citing work's own citations (log bins); centre = more cited. */
 function FieldShelfLegend({ view }: { view: FieldShelfView }) {
   const { language } = useLanguage();
   const zh = language === "zh";
   const t = view.totals;
   const meta = fieldShelfMeta;
-  const counts = [view.bands.core, view.bands.neighbour, view.bands.further];
   const share = meta.coauthorOnlyShare;
   const fourInFive = Math.abs(share - 0.8) <= 0.03;
-  const inf = meta.influenceOutsideHome;
-  const all = getFieldShelf("all").totals;
-  const lead = getFieldShelf("lead").totals;
+  const counts = view.impact.counts;
   return (
     <div className="space-y-2.5 text-xs leading-relaxed text-ink-muted">
-      <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5">
-        {([0, 1, 2] as const).map((b) => (
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5">
+        {([0, 1, 2, 3, 4] as FieldShelfImpactBin[]).map((b) => (
           <span key={b} className="flex items-center gap-1.5">
-            <BandSwatch band={b} />
+            <ImpactSwatch bin={b} />
             <span>
-              <span className="text-ink">{zh ? BAND_NAMES[b].zh : BAND_NAMES[b].en}</span> — {zh ? BAND_NOTES[b].zh : BAND_NOTES[b].en}{" "}
-              <span className="tabular-nums">({fmt(counts[b])})</span>
+              <span className="text-ink tabular-nums">{zh ? IMPACT_LABELS[b].zh : IMPACT_LABELS[b].en}</span>
+              <span className="text-ink-faint"> · {zh ? IMPACT_NOTES[b].zh : IMPACT_NOTES[b].en}</span>{" "}
+              <span className="tabular-nums">({fmt(counts[b] ?? 0)})</span>
             </span>
           </span>
         ))}
-        <span>{zh ? "越靠近中心 = 离本人主题越近。方向没有含义。" : "Nearer the centre = nearer home. Direction means nothing."}</span>
       </div>
+      <p>
+        {zh
+          ? "颜色 = 施引文献自身的 OpenAlex 被引次数（对数分段）。越靠近中心被引越高。方向没有含义。"
+          : "Colour = the citing work's own OpenAlex citation count (log bins). Nearer the centre = more cited. Direction means nothing."}
+      </p>
+      <p className="tabular-nums">
+        {zh
+          ? `高被引施引：≥100 次 ${fmt(t.ge100)} 篇 · ≥1,000 次 ${fmt(t.ge1000)} 篇 · 最高 ${fmt(t.maxCitedBy)} 次。`
+          : `High-impact citers: ${fmt(t.ge100)} with ≥100 citations of their own · ${fmt(t.ge1000)} with ≥1,000 · max ${fmt(t.maxCitedBy)}.`}
+      </p>
       <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5">
         <span className="flex items-center gap-1.5">
           <span className="inline-block h-3 w-2 rounded-[2px] border-[1.5px] border-ink" aria-hidden="true" />
@@ -265,16 +258,16 @@ function FieldShelfLegend({ view }: { view: FieldShelfView }) {
       <p>
         {view.lens === "all"
           ? zh
-            ? `${fmt(t.citingWorks)} 个方块，每个对应一篇引用这些论文的 OpenAlex 文献。余烬色标出落在本人第一/通讯作者论文主题之外的文献。全部视角中约${fourInFive ? "五分之四" : `${Math.round(share * 100)}%`}的方块（${(share * 100).toFixed(1)}%）只引用合作论文；可切换到“第一 / 通讯作者”缩小范围。`
-            : `${fmt(t.citingWorks)} squares — one per OpenAlex work that cites this corpus. Ember marks works outside the home topics of Ken's lead papers. ${fourInFive ? "About four in five" : `${Math.round(share * 100)}% of`} All squares (${(share * 100).toFixed(1)}%) cite only co-authored papers; use First / last / corresponding to narrow.`
+            ? `${fmt(t.citingWorks)} 个方块，每个对应一篇引用这些论文的 OpenAlex 文献。全部视角中约${fourInFive ? "五分之四" : `${Math.round(share * 100)}%`}的方块（${(share * 100).toFixed(1)}%）只引用合作论文；可切换到“第一 / 通讯作者”缩小范围。`
+            : `${fmt(t.citingWorks)} squares — one per OpenAlex work that cites this corpus. ${fourInFive ? "About four in five" : `${Math.round(share * 100)}% of`} All squares (${(share * 100).toFixed(1)}%) cite only co-authored papers; use First / last / corresponding to narrow.`
           : zh
-            ? `${fmt(t.citingWorks)} 个方块，每个对应一篇引用本人 ${t.leadPapers} 篇第一/通讯作者论文的 OpenAlex 文献。密度与全部视角相同，所以图更小；颜色不变。`
-            : `${fmt(t.citingWorks)} squares — one per OpenAlex work citing Ken's ${t.leadPapers} first / last / corresponding-author papers. Same density as All, so the field is smaller; colours do not change.`}
+            ? `${fmt(t.citingWorks)} 个方块，每个对应一篇引用本人 ${t.leadPapers} 篇第一/通讯作者论文的 OpenAlex 文献。密度与全部视角相同，所以图更小；同一施引文献颜色不变。`
+            : `${fmt(t.citingWorks)} squares — one per OpenAlex work citing Ken's ${t.leadPapers} first / last / corresponding-author papers. Same density as All, so the field is smaller; a work keeps its colour across lenses.`}
       </p>
       <p className="text-ink-faint">
         {zh
-          ? `本人主题固定为这 ${lead.leadPapers} 篇第一/通讯作者论文上的 ${meta.homeTopicsLeadCount} 个 OpenAlex 主题，两个视角相同，切换时方块不会变色。以此为准，全部视角 ${fmt(all.citingWorks)} 篇中 ${fmt(all.outsideHome)} 篇在主题之外（第一/通讯：${fmt(lead.citingWorks)} 篇中 ${fmt(lead.outsideHome)} 篇）${inf ? `；涟漪图的 ${fmt(inf.all)} 篇以全部 ${all.papers} 篇论文的 ${inf.homeTopics ?? ""} 个主题为准` : ""}。所有被收录的 OpenAlex 记录类型都是方块（论文、预印本、章节、同行评审意见等）；“随机看一篇”只挑期刊论文与综述。`
-          : `Home topics are fixed: the ${meta.homeTopicsLeadCount} OpenAlex topics on Ken's ${lead.leadPapers} lead papers, in both views, so squares keep their colour when you switch. Against them, ${fmt(all.outsideHome)} of ${fmt(all.citingWorks)} All squares sit outside (Lead: ${fmt(lead.outsideHome)} of ${fmt(lead.citingWorks)})${inf ? `; the Ripple's ${fmt(inf.all)} measures against the ${inf.homeTopics ?? ""} topics of all ${all.papers} papers` : ""}. Every record type the pipeline counts is a square (articles, preprints, chapters, peer reviews …); “Show me one” picks articles and reviews.`}
+          ? `被引次数来自 OpenAlex cited_by_count（${meta.asOf}），从不臆造。所有被收录的记录类型都是方块；“随机看一篇”优先挑自身被引较高的期刊论文与综述。`
+          : `Citation counts are OpenAlex cited_by_count (${meta.asOf}), never invented. Every record type the pipeline counts is a square; “Show me one” prefers higher-cited articles and reviews.`}
       </p>
     </div>
   );
@@ -297,19 +290,15 @@ function worthALook(view: FieldShelfView, zh: boolean) {
   add(
     byCiting.find((p) => fieldShelfPapers[p].lens === "lead"),
     zh ? "引用最多的第一/通讯作者论文" : "Most-cited lead paper",
-    (x) =>
-      zh
-        ? `${x.short}：${fmt(x.citing)} 篇施引，${pctOf(x.outside, x.citing)}% 在本人主题之外。`
-        : `${x.short}: ${fmt(x.citing)} citing works, ${pctOf(x.outside, x.citing)}% outside the home topics.`
+    (x) => (zh ? `${x.short}：${fmt(x.citing)} 篇施引。` : `${x.short}: ${fmt(x.citing)} citing works.`)
   );
   add(byCiting[0], zh ? "书架上最大的一本" : "Largest on the shelf", (x) =>
     zh ? `${x.short}（${x.lens === "lead" ? "第一/通讯作者" : "合作"}）：${fmt(x.citing)} 篇施引。` : `${x.short} (${x.lens === "lead" ? "lead" : "co-authored"}): ${fmt(x.citing)} citing works.`
   );
-  const far = items.filter((p) => fieldShelfPapers[p].lens === "lead" && fieldShelfPapers[p].citing >= 30).sort((a, b) => fieldShelfPapers[b].outside / fieldShelfPapers[b].citing - fieldShelfPapers[a].outside / fieldShelfPapers[a].citing)[0];
-  add(far, zh ? "走得最远" : "Travels farthest", (x) =>
-    zh
-      ? `${x.short}：${fmt(x.citing)} 篇施引中 ${fmt(x.outside)} 篇落在本人主题之外。`
-      : `${x.short}: ${fmt(x.outside)} of its ${fmt(x.citing)} citing works sit outside the home topics.`
+  add(
+    byCiting.find((p) => fieldShelfPapers[p].lens === "coauthor"),
+    zh ? "引用最多的合作论文" : "Most-cited co-authored paper",
+    (x) => (zh ? `${x.short}：${fmt(x.citing)} 篇施引。` : `${x.short}: ${fmt(x.citing)} citing works.`)
   );
   return out;
 }
@@ -320,15 +309,15 @@ function ReadingGuide() {
   const items = zh
     ? [
         "每个方块是一篇引用本人论文的文献（OpenAlex，已剔除自引）。点击方块在 OpenAlex 中打开。",
-        `墨色：在本人 ${fieldShelfMeta.homeTopicsLeadCount} 个第一/通讯作者论文主题之内。浅余烬色：同一子领域或领域。余烬色：更远（同一大类、其他大类或无主题）。`,
-        "越靠近中心越接近本人主题；方向没有含义。",
+        "颜色 = 该施引文献自身的被引次数（对数分段，余烬→墨色）。越深、越靠中心，说明引用本人的文献本身影响力越高。",
+        "方向没有含义；中心是高被引核心，边缘是尚未被广泛引用的施引文献。",
         "书架上是本人论文，按主题再按年份排列；墨色描边的书脊是第一/末位/通讯作者论文。悬停或按 Tab 键可点亮引用它的方块，并画出每一条连线。",
         "可按作者、标题、期刊或年份搜索，或点“随机看一篇”。Esc 返回。",
       ]
     : [
         "Each square is one work that cites Ken's papers (OpenAlex, self-citations removed). Click one to open it in OpenAlex.",
-        `Ink: inside the ${fieldShelfMeta.homeTopicsLeadCount} home topics of Ken's lead papers. Light ember: a neighbouring topic (same subfield or field). Ember: further out (same domain, another domain, or no topic).`,
-        "Nearer the centre = closer to those topics. Direction means nothing.",
+        "Colour = that citing work's own citation count (log bins, ember → ink). Darker and nearer the centre = higher-impact papers that cite this research.",
+        "Direction means nothing; the centre is the high-impact core, the edge holds lightly cited citers.",
         "The shelf holds Ken's papers by theme, then year; ink-edged spines are first / last / corresponding-author papers. Hover or Tab to one to light its citers and draw a thin link from each.",
         "Search by author, title, venue or year, or press Show me one. Esc returns to rest.",
       ];
@@ -349,7 +338,7 @@ function FieldShelfTable({ view, tips, status, onLoad }: { view: FieldShelfView;
   const zh = language === "zh";
   const [rows, setRows] = useState(TABLE_PAGE);
   const order = useMemo(
-    () => view.squares.map((_, i) => i).sort((a, b) => view.squares[a].band - view.squares[b].band || (view.squares[b].year ?? 0) - (view.squares[a].year ?? 0) || (view.squares[a].id < view.squares[b].id ? -1 : 1)),
+    () => view.squares.map((_, i) => i).sort((a, b) => view.squares[b].citedBy - view.squares[a].citedBy || (view.squares[b].year ?? 0) - (view.squares[a].year ?? 0) || (view.squares[a].id < view.squares[b].id ? -1 : 1)),
     [view]
   );
   useEffect(() => onLoad(), [onLoad]);
@@ -362,7 +351,7 @@ function FieldShelfTable({ view, tips, status, onLoad }: { view: FieldShelfView;
       )}
       <table className="mt-3 w-full min-w-[720px] text-left text-sm">
         <caption className="sr-only">
-          {zh ? "施引文献表：标题、年份、第一作者、期刊、引用的本人论文、距离" : "Citing works: title, year, first author, venue, which of Ken's papers it cites, distance from the home topics"}
+          {zh ? "施引文献表：标题、年份、期刊、引用的本人论文、自身被引" : "Citing works: title, year, venue, which of Ken's papers it cites, own citation count"}
         </caption>
         <thead className="text-xs text-ink-faint">
           <tr>
@@ -370,7 +359,7 @@ function FieldShelfTable({ view, tips, status, onLoad }: { view: FieldShelfView;
             <th className="py-1 pr-3 text-right font-normal">{zh ? "年份" : "Year"}</th>
             <th className="py-1 pr-3 font-normal">{zh ? "期刊" : "Venue"}</th>
             <th className="py-1 pr-3 font-normal">{zh ? "引用本人论文" : "Builds on"}</th>
-            <th className="py-1 font-normal">{zh ? "距离" : "Distance"}</th>
+            <th className="py-1 text-right font-normal">{zh ? "自身被引" : "Citations"}</th>
           </tr>
         </thead>
         <tbody>
@@ -388,10 +377,9 @@ function FieldShelfTable({ view, tips, status, onLoad }: { view: FieldShelfView;
                 <td className="py-1.5 pr-3 text-right tabular-nums text-ink-muted">{sq.year ?? "—"}</td>
                 <td className="py-1.5 pr-3 text-ink-muted">{tip?.venue ?? ""}</td>
                 <td className="py-1.5 pr-3 text-ink-muted">{sq.papers.map((p) => fieldShelfPapers[p].label).join(", ")}</td>
-                <td className="py-1.5 whitespace-nowrap text-ink-muted">
-                  <span className="mr-1.5 inline-block h-2 w-2" style={{ background: BAND_COLORS[sq.band] }} aria-hidden="true" />
-                  {zh ? BAND_NAMES[sq.band].zh : BAND_NAMES[sq.band].en}
-                  {tip ? <span className="text-ink-faint"> · {distanceText(tip.d, zh)}</span> : null}
+                <td className="py-1.5 whitespace-nowrap text-right text-ink-muted">
+                  <span className="mr-1.5 inline-block h-2 w-2 align-middle" style={{ background: impactColor(sq.citedBy) }} aria-hidden="true" />
+                  <span className="tabular-nums">{fmt(sq.citedBy)}</span>
                 </td>
               </tr>
             );
@@ -408,10 +396,9 @@ function FieldShelfTable({ view, tips, status, onLoad }: { view: FieldShelfView;
 }
 
 /**
- * Section 01 of /reach: Field & Shelf (docs/reach/FIELD-SHELF-PLAN.md). Every work citing Ken's papers is
- * one square, packed by topic distance from the fixed home topics of his lead papers; his papers sit on a
- * shelf above. Hover a paper to light its citers and draw every citation link; hover a square for its card
- * and ≤ 4 lines back to the shelf; click to open it in OpenAlex. URL: ?shelf=<doi>&fs=<OpenAlex id>.
+ * Section 01 of /reach: Field & Shelf. Every work citing Ken's papers is one square, coloured and packed
+ * by that work's own OpenAlex cited_by_count (log bins; high → centre). Hover a paper to light its citers
+ * and draw every citation link; hover a square for its card and ≤ 4 lines; click → OpenAlex.
  */
 export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}) {
   const { lens } = useReachLens();
@@ -530,8 +517,8 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
 
   const N = view.totals.citingWorks;
   const canvasLabel = zh
-    ? `${fmt(N)} 个方块，每篇施引文献一个：核心 ${fmt(view.bands.core)}，邻近 ${fmt(view.bands.neighbour)}，较远 ${fmt(view.bands.further)}。完整列表见下方表格。`
-    : `${fmt(N)} squares, one per citing work: ${fmt(view.bands.core)} core, ${fmt(view.bands.neighbour)} neighbour, ${fmt(view.bands.further)} further. The table below lists them all.`;
+    ? `${fmt(N)} 个方块，每篇施引文献一个；颜色表示其自身被引次数，中心为高被引。≥100 次 ${fmt(view.totals.ge100)} 篇，≥1,000 次 ${fmt(view.totals.ge1000)} 篇。完整列表见下方表格。`
+    : `${fmt(N)} squares, one per citing work; colour is each work's own citation count, centre = higher impact. ${fmt(view.totals.ge100)} with ≥100 citations, ${fmt(view.totals.ge1000)} with ≥1,000. The table below lists them all.`;
   const readout =
     activeP !== null ? (
       <span className="font-medium text-ink">{paperReadout(fieldShelfPapers[activeP], zh)}</span>
@@ -556,8 +543,8 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
           </h2>
           <p className="mt-2 text-sm text-ink-muted">
             {zh
-              ? `${fmt(N)} 篇施引文献中 ${fmt(view.totals.outsideHome)} 篇在本人 ${getFieldShelf("lead").totals.leadPapers} 篇第一/通讯作者论文的 ${fieldShelfMeta.homeTopicsLeadCount} 个主题之外 · OpenAlex，${fieldShelfMeta.asOf} · 已剔除自引`
-              : `${fmt(view.totals.outsideHome)} of ${fmt(N)} citing works outside the ${fieldShelfMeta.homeTopicsLeadCount} home topics of Ken's ${getFieldShelf("lead").totals.leadPapers} lead papers · OpenAlex, ${fieldShelfMeta.asOf} · self-citations removed`}
+              ? `高被引施引 ≥100：${fmt(view.totals.ge100)} 篇 · ≥1,000：${fmt(view.totals.ge1000)} 篇 · OpenAlex，${fieldShelfMeta.asOf} · 已剔除自引`
+              : `${fmt(view.totals.ge100)} citing works with ≥100 citations of their own · ${fmt(view.totals.ge1000)} with ≥1,000 · OpenAlex, ${fieldShelfMeta.asOf} · self-citations removed`}
           </p>
         </header>
 
