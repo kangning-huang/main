@@ -165,7 +165,7 @@ export const POSTDOCS: LabPostdoc[] = [
   {
     name: "Aiyu Zheng",
     roleEn: "Postdoc · Co-advised with Mingzhen Lu",
-    roleZh: "博士后 · 与 Mingzhen Lu 联合指导",
+    roleZh: "博士后 · 由我与 Mingzhen Lu 联合指导",
   },
 ];
 

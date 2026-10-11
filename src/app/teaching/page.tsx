@@ -78,7 +78,7 @@ export default function TeachingPage() {
           <p className="mt-4 max-w-3xl text-xs leading-relaxed text-ink-faint">
             <T
               en="Course readings are distributed to enrolled students through Brightspace and are not posted here."
-              zh="课程阅读材料通过 Brightspace 向选课学生发放，不在本站公开。"
+              zh="我通过 Brightspace 向选课学生发放课程阅读材料，不在本站公开。"
             />
           </p>
 
@@ -106,10 +106,10 @@ export default function TeachingPage() {
           </p>
           <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <Link href="/advisees" className="link-underline font-medium text-ember">
-              <T en="Capstones & advisees →" zh="毕业论文与指导学生 →" />
+              <T en="Capstones & advisees →" zh="毕业项目与我指导的学生 →" />
             </Link>
             <Link href="/lab" className="link-underline font-medium text-ember">
-              <T en="CLUEs Lab →" zh="CLUEs 实验室 →" />
+              <T en="CLUEs Lab →" zh="CLimate and Urban Environments（CLUEs）实验室 →" />
             </Link>
           </p>
 
