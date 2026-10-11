@@ -15,8 +15,8 @@ const SITE_LINKS = [
 ];
 
 const EXTERNAL_LINKS = [
-  { en: "NYU Faculty", zh: "教师主页", href: LINKS.nyuFaculty },
-  { en: "CV (PDF)", zh: "简历 (PDF)", href: "/CV_Kangning_Huang.pdf" },
+  { en: "NYU Faculty", zh: "NYU 教师主页", href: LINKS.nyuFaculty },
+  { en: "CV (PDF)", zh: "简历（PDF）", href: "/CV_Kangning_Huang.pdf" },
   { en: "Google Scholar", zh: "谷歌学术", href: LINKS.googleScholar },
   { en: "GitHub", zh: "GitHub", href: LINKS.github },
   { en: "Substack", zh: "Substack", href: LINKS.substack },
@@ -38,7 +38,7 @@ export default function Footer() {
             <p className="mt-1 text-sm text-ink-muted">
               <T
                 en={<>{SITE.title}, {SITE.affiliation}</>}
-                zh="环境学助理教授，上海纽约大学"
+                zh="上海纽约大学环境学助理教授"
               />
             </p>
             <a
