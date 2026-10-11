@@ -355,11 +355,11 @@ function FieldShelfTable({ view, tips, status, onLoad }: { view: FieldShelfView;
         </caption>
         <thead className="text-xs text-ink-faint">
           <tr>
-            <th className="py-1 pr-3 font-normal">{zh ? "施引文献" : "Citing work"}</th>
+            <th className="py-1 pr-3 font-normal">{zh ? "引用我的文献" : "Citing work"}</th>
             <th className="py-1 pr-3 text-right font-normal">{zh ? "年份" : "Year"}</th>
-            <th className="py-1 pr-3 font-normal">{zh ? "期刊" : "Venue"}</th>
+            <th className="py-1 pr-3 font-normal">{zh ? "出处" : "Venue"}</th>
             <th className="py-1 pr-3 font-normal">{zh ? "引用我的论文" : "Builds on"}</th>
-            <th className="py-1 text-right font-normal">{zh ? "自身被引" : "Citations"}</th>
+            <th className="py-1 text-right font-normal">{zh ? "被引次数" : "Citations"}</th>
           </tr>
         </thead>
         <tbody>

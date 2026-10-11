@@ -141,7 +141,7 @@ export default function FieldShelfShelf({ view, active, pinned, cited, readout, 
             style={{ left: pc(x), top: m.countTop }}
             aria-hidden="true"
           >
-            {paper.citing === 0 ? (zh ? "0 暂无" : "0 yet") : fmt(paper.citing)}
+            {paper.citing === 0 ? (zh ? "目前为 0" : "0 yet") : fmt(paper.citing)}
           </span>
         );
       })}

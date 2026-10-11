@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 const LATER = [
   { id: "where", en: "Where", zh: "在哪里", Component: WhereMap },
   { id: "topics", en: "Topic cards", zh: "主题卡片", Component: AdaptiveTopics },
-  { id: "who", en: "Who uses it", zh: "谁在使用", Component: WhoUses },
+  { id: "who", en: "Who uses it", zh: "谁在用", Component: WhoUses },
   { id: "standing-on-it", en: "Standing on it", zh: "在此基础上", Component: StandingOnIt },
   { id: "growth", en: "Growth", zh: "增长", Component: Growth },
 ];
