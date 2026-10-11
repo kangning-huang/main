@@ -141,6 +141,10 @@ export default function AtlasExplorer() {
             points={points}
             selectedId={selectedId}
             onSelect={select}
+            onClearSelection={() => {
+              setSelectedId(null);
+              setCity(null);
+            }}
           />
           <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-ink-muted">
             <span className="text-ink-faint">
