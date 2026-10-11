@@ -4,13 +4,8 @@
 Classical operations only (Pillow): face-centred square crop, gentle levels,
 resize, encode. No generative edits.
 
-The live Scholar CDN only serves up to 256×171 (medium_photo). That file is
-byte-identical (MAE ≈ 3.5/255) to a Lanczos downscale of
-`_source/ken-panel-headshot-raw.jpg`, so we render from the full-res raw and
-keep the Scholar downloads in `_source/` for provenance.
-
 Usage:
-    python3 scripts/headshot/process.py [_source/ken-panel-headshot-raw.jpg]
+    python3 scripts/headshot/process.py [_source/ken-couple-headshot-raw.jpg]
 
 Writes public/headshot/headshot-square-{1x,2x}.{avif,webp,jpg}.
 See docs/headshot/TREATMENT.md.
@@ -25,12 +20,12 @@ import numpy as np
 from PIL import Image, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[2]
-SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "_source/ken-panel-headshot-raw.jpg"
+SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "_source/ken-couple-headshot-raw.jpg"
 OUT = ROOT / "public/headshot"
 
-# Face-centred square (source pixels). Matches the prior circle hero crop.
+# Face-centred square (source pixels) — Ken face from couple selfie (2026-10-12).
 CROPS = {
-    "square": (590, 135, 890, 435),  # 300 × 300
+    "square": (400, 75, 768, 443),  # 368 × 368
 }
 SIZES = {
     "square": {"1x": (160, 160), "2x": (300, 300)},
@@ -38,7 +33,7 @@ SIZES = {
 
 
 def gentle_grade(img: Image.Image) -> Image.Image:
-    """Light contrast + warmth only — keep Scholar's natural backdrop."""
+    """Light contrast + warmth only — keep natural backdrop."""
     a = np.asarray(img, np.float32)
     a = a * np.array([1.03, 1.0, 0.97], np.float32)  # slight warm
     a = (a - 128.0) * 1.04 + 128.0 + 2.0  # gentle contrast + lift
@@ -47,7 +42,6 @@ def gentle_grade(img: Image.Image) -> Image.Image:
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    # Remove prior editorial portrait exports so they are not shipped.
     for stale in OUT.glob("headshot-portrait-*"):
         stale.unlink()
         print(f"removed {stale.relative_to(ROOT)}")
