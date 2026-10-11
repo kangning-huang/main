@@ -70,8 +70,8 @@ export default function AtlasPage() {
           </p>
           <p className="mt-2 text-xs text-ink-faint animate-fade-up delay-2">
             <T
-              en="City key: GHSL Urban Centre Database 2015. Map: Natural Earth via world-atlas (no third-party tiles). "
-              zh="城市主键：GHSL 城市中心数据库 2015。底图：Natural Earth（world-atlas，无第三方瓦片）。"
+              en="City key: GHSL Urban Centre Database 2015. Basemap: CARTO Positron / Dark Matter (© OpenStreetMap contributors © CARTO); follows your browser light/dark preference. "
+              zh="城市主键：GHSL 城市中心数据库 2015。底图：CARTO Positron / Dark Matter（© OpenStreetMap contributors © CARTO）；随浏览器浅色/深色偏好切换。"
             />
             <Link href="/publications#nested-economies-of-scale-in-global-city-mass" className="text-ember hover:underline">
               <T en="Paper →" zh="论文 →" />

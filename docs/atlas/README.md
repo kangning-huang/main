@@ -4,7 +4,7 @@ Static city map for [kangning-huang.com/atlas](https://kangning-huang.com/atlas)
 
 ## What v1 includes
 
-- World map of **4,015** GHSL Urban Centres (2015), drawn with **d3-geo + canvas** over Natural Earth land (`world-atlas` land-110m). No third-party map tiles.
+- World map of **4,015** GHSL Urban Centres (2015) on a **MapLibre** map with **CARTO Positron / Dark Matter** vector basemaps (light/dark via `prefers-color-scheme`). City dots keep the paper-count palette; selecting a city zooms closer (~9° frame).
 - **Built mass / scaling** layer from `kangning-huang/nested-scaling-city-mass` (Nature Cities, in press). ~3,588 cities matched; match quality flagged when centroids disagree.
 - Search + click → city card with real values from `public/atlas/city/<id>.json`.
 - Paper link goes to the **publications** anchor (no Nature Cities DOI until it resolves).
@@ -35,6 +35,6 @@ Inputs are not committed. The script never invents values: unmatched cities stay
 | --- | --- |
 | `public/atlas/points.json` | Compact rows for the map |
 | `public/atlas/city/*.json` | Per-city detail for the card |
-| `public/atlas/land-110m.json` | Natural Earth land topology |
+| `public/atlas/land-110m.json` | Natural Earth land topology (kept for rebuild scripts; UI uses CARTO tiles) |
 | `public/atlas/pages.json` | Reserved for future static city pages (top 500) |
 | `public/atlas/crosswalk.json` | UCDB ↔ city-mass match log |
