@@ -203,7 +203,7 @@ function Stage({
             status={status}
             zh={zh}
             onRetry={onLoad}
-            hint={focusPinned ? undefined : zh ? "点击方块即可打开" : "click the square to open"}
+            hint={focusPinned ? undefined : zh ? "点击方块打开" : "click the square to open"}
           />
         </FieldShelfTooltip>
       )}
@@ -247,13 +247,13 @@ function FieldShelfLegend({ view }: { view: FieldShelfView }) {
       <div className="flex flex-wrap items-center gap-x-5 gap-y-1.5">
         <span className="flex items-center gap-1.5">
           <span className="inline-block h-3 w-2 rounded-[2px] border-[1.5px] border-ink" aria-hidden="true" />
-          {zh ? "第一 / 末位 / 通讯作者论文" : "First / last / corresponding-author paper"}
+          {zh ? "第一作者、末位作者或通讯作者的论文" : "First / last / corresponding-author paper"}
         </span>
         <span className="flex items-center gap-1.5">
           <span className="inline-block h-3 w-2 rounded-[2px] border border-rule" aria-hidden="true" />
           {zh ? "合作论文" : "Co-authored"}
         </span>
-        <span>{zh ? "书脊下的数字 = 该论文的非自引施引文献数。" : "Number under a spine = its non-self citing works."}</span>
+        <span>{zh ? "书脊下的数字表示引用这篇论文的文献数，不含自引。" : "Number under a spine = its non-self citing works."}</span>
       </div>
       <p>
         {view.lens === "all"
@@ -289,7 +289,7 @@ function worthALook(view: FieldShelfView, zh: boolean) {
   const byCiting = [...items].sort((a, b) => fieldShelfPapers[b].citing - fieldShelfPapers[a].citing);
   add(
     byCiting.find((p) => fieldShelfPapers[p].lens === "lead"),
-    zh ? "引用最多的第一/通讯作者论文" : "Most-cited lead paper",
+    zh ? "被引最多的第一/通讯作者论文" : "Most-cited lead paper",
     (x) => (zh ? `${x.short}，${fmt(x.citing)} 篇施引文献。` : `${x.short}: ${fmt(x.citing)} citing works.`)
   );
   add(byCiting[0], zh ? "书架上最大的一本" : "Largest on the shelf", (x) =>
@@ -297,7 +297,7 @@ function worthALook(view: FieldShelfView, zh: boolean) {
   );
   add(
     byCiting.find((p) => fieldShelfPapers[p].lens === "coauthor"),
-    zh ? "引用最多的合作论文" : "Most-cited co-authored paper",
+    zh ? "被引最多的合作论文" : "Most-cited co-authored paper",
     (x) => (zh ? `${x.short}，${fmt(x.citing)} 篇施引文献。` : `${x.short}: ${fmt(x.citing)} citing works.`)
   );
   return out;
@@ -501,7 +501,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
         setPinSq(v.squares[i].id);
         say(i, t);
       })
-      .catch(() => setAnnounce(zh ? "施引文献列表未能加载。" : "The list of citing works did not load."));
+      .catch(() => setAnnounce(zh ? "引用我研究的文献列表未能加载。" : "The list of citing works did not load."));
   };
   const reset = () => {
     keepCard();
@@ -524,7 +524,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
       <span className="font-medium text-ink">{paperReadout(fieldShelfPapers[activeP], zh)}</span>
     ) : focusI !== null ? null : (
       <span className="text-ink-faint">
-        {zh ? "悬停论文以点亮引用并画出全部连线，悬停方块查看详情" : "Hover a paper to light its citers and draw every link, or a square for its details"}
+        {zh ? "悬停在论文上，点亮引用它的文献并显示全部连线；悬停在方块上查看详情" : "Hover a paper to light its citers and draw every link, or a square for its details"}
       </span>
     );
   const callouts = worthALook(view, zh);
@@ -537,7 +537,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
     >
       <div className="grid gap-x-8 gap-y-5 lg:grid-cols-[minmax(0,1fr)_340px] lg:grid-rows-[auto_auto_1fr]">
         <header className="lg:col-start-2 lg:row-start-1">
-          <p className="text-xs uppercase tracking-[0.14em] text-ink-faint">01 · {zh ? "田野与书架 · 每篇施引一个方块" : "Field & Shelf · one square per citing work"}</p>
+          <p className="text-xs uppercase tracking-[0.14em] text-ink-faint">01 · {zh ? "田野与书架 · 每个方块代表一篇引用我研究的文献" : "Field & Shelf · one square per citing work"}</p>
           <h2 id="field-shelf-heading" className="mt-2 font-display text-3xl leading-tight text-ink md:text-[2.25rem] lg:text-[2rem]">
             {zh ? view.headline.zh : view.headline.en}
           </h2>

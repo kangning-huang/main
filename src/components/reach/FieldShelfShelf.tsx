@@ -219,13 +219,13 @@ export function PaperDetails({
             <dd className="tabular-nums text-ink">
               {fmt(paper.citing)} <span className="text-ink-muted">{zh ? "（非自引）" : "(non-self)"}</span>
             </dd>
-            <dt className="text-ink-faint">{zh ? "高被引施引（≥100）" : "High-impact citers (≥100)"}</dt>
+            <dt className="text-ink-faint">{zh ? "引用它的高被引文献（≥100）" : "High-impact citers (≥100)"}</dt>
             <dd className="tabular-nums text-ink">
               {fmt(view.squares.filter((sq) => sq.papers.includes(p) && sq.citedBy >= 100).length)}
             </dd>
           </dl>
           <div>
-            <h4 className="text-xs font-medium text-ink">{zh ? "被引最多的施引文献" : "Most-cited works citing it"}</h4>
+            <h4 className="text-xs font-medium text-ink">{zh ? "引用它且被引最多的文献" : "Most-cited works citing it"}</h4>
             {top ? (
               <ol className="mt-1.5 space-y-2">
                 {top.map((i) => {

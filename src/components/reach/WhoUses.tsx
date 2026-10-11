@@ -44,7 +44,7 @@ export default function WhoUses() {
           })}
         </ul>
         <p className="mt-3 text-xs text-ink-faint">
-          <T en="Government and nonprofit rows (ember) are a policy-relevance signal." zh="政府与非营利（赭色）反映政策相关引用。" />
+          <T en="Government and nonprofit rows (ember) are a policy-relevance signal." zh="政府与非营利机构所在行（赭色）提示研究与政策相关。" />
         </p>
       </figure>
 

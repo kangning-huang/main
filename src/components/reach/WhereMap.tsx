@@ -81,7 +81,7 @@ export default function WhereMap() {
           ))}
           <span className="inline-flex items-center gap-1.5">
             <svg width="12" height="12" aria-hidden="true"><rect width="12" height="12" rx="2" fill="url(#reach-hatch)" /></svg>
-            <T en={`1–${MIN_WORKS - 1} citing works`} zh={`1–${MIN_WORKS - 1} 篇施引文献`} />
+            <T en={`1–${MIN_WORKS - 1} citing works`} zh={`1–${MIN_WORKS - 1} 篇文献引用我的研究`} />
           </span>
           <span className="w-full text-ink-faint">
             <T

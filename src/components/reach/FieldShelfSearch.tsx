@@ -66,9 +66,9 @@ export default function FieldShelfSearch({ view, tips, status, onLoad, query, on
 
   const statusText = (() => {
     if (status === "error") return null;
-    if (query.trim().length < 2) return status === "loading" ? (zh ? "正在加载施引文献列表…" : "Loading the citing works…") : "";
+    if (query.trim().length < 2) return status === "loading" ? (zh ? "正在加载引用我研究的文献…" : "Loading the citing works…") : "";
     if (!tips) return zh ? "正在加载…" : "Loading…";
-    if (!hits || hits.length === 0) return zh ? "没有匹配的施引文献" : "No citing work matches";
+    if (!hits || hits.length === 0) return zh ? "没有匹配的文献" : "No citing work matches";
     return zh ? `找到 ${fmt(hits.length)} 篇匹配文献，已在图中以青色点亮` : `${fmt(hits.length)} match${hits.length === 1 ? "" : "es"}, lit in teal`;
   })();
 
@@ -88,7 +88,7 @@ export default function FieldShelfSearch({ view, tips, status, onLoad, query, on
             aria-autocomplete="list"
             aria-activedescendant={showList && active >= 0 ? `${listId}-${active}` : undefined}
             aria-label={zh ? "查找施引文献" : "Find a citing work"}
-            placeholder={zh ? "查找施引文献：作者、标题、期刊、年份" : "Find a citing work: author, title, venue, year"}
+            placeholder={zh ? "查找引用我研究的文献（作者、标题、发表来源、年份）" : "Find a citing work: author, title, venue, year"}
             value={query}
             onFocus={() => {
               onLoad();

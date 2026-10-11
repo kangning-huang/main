@@ -26,10 +26,10 @@ export const IMPACT_LABELS: Record<FieldShelfImpactBin, { en: string; zh: string
 };
 export const IMPACT_NOTES: Record<FieldShelfImpactBin, { en: string; zh: string }> = {
   0: { en: "not yet cited again", zh: "尚未被再次引用" },
-  1: { en: "lightly cited citing works", zh: "轻度被引的施引文献" },
+  1: { en: "lightly cited citing works", zh: "引用我研究的低被引文献" },
   2: { en: "moderately cited", zh: "中度被引" },
-  3: { en: "highly cited (≥100)", zh: "高被引（≥100）" },
-  4: { en: "very highly cited (≥1,000)", zh: "极高被引（≥1,000）" },
+  3: { en: "highly cited (≥100)", zh: "被引次数高（≥100）" },
+  4: { en: "very highly cited (≥1,000)", zh: "被引次数极高（≥1,000）" },
 };
 
 export const HIT_COLOR = "#0d7377";
@@ -57,7 +57,7 @@ export function citedByText(n: number, zh: boolean): string {
 /** @deprecated topic distance kept only for tip footnotes if present */
 export function distanceText(d: number | null, zh: boolean): string {
   const en = ["a home topic of Ken's lead papers", "same subfield as a home topic", "same field as a home topic", "same domain, different field", "another domain"];
-  const cn = ["本人第一/通讯作者论文的主题", "与本人主题同一子领域", "与本人主题同一领域", "同一大类，不同领域", "其他大类"];
+  const cn = ["本人第一/通讯作者论文的主题", "与我的第一/通讯作者论文主题同属一个子领域", "与本人主题同一领域", "同一大类，不同领域", "其他大类"];
   if (d === null) return zh ? "无 OpenAlex 主题" : "no OpenAlex topic";
   return (zh ? cn : en)[d] ?? String(d);
 }

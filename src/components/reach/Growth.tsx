@@ -68,7 +68,7 @@ export default function Growth() {
                   </div>
                 </div>
               ) : (
-                <p className="text-xs text-ink-faint"><T en="No established-paper citations yet." zh="尚无非早期论文的施引。" /></p>
+                <p className="text-xs text-ink-faint"><T en="No established-paper citations yet." zh="非早期论文暂无被引记录。" /></p>
               )}
             </div>
           );
@@ -85,7 +85,7 @@ export default function Growth() {
                   {p.short}
                 </a>
                 {" · "}
-                <T en={`${p.citingNonSelf} non-self citing works`} zh={`${p.citingNonSelf} 篇非自引施引`} />
+                <T en={`${p.citingNonSelf} non-self citing works`} zh={`被 ${p.citingNonSelf} 篇文献引用（不含自引）`} />
               </li>
             ))}
           </ul>

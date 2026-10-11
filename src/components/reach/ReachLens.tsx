@@ -72,12 +72,12 @@ export function ReachLensChip() {
           }`}
           aria-pressed={lens === "lead"}
         >
-          <T en="First / last / corresponding author" zh="第一 / 通讯作者" />
+          <T en="First / last / corresponding author" zh="第一/通讯作者" />
         </button>
       </div>
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-lg border border-rule bg-paper-warm/60 px-4 py-3 text-xs text-ink-muted">
         <span className="rounded bg-teal-light px-2 py-0.5 font-medium text-teal">
-          <T en="Source: OpenAlex" zh="来源：OpenAlex" />
+          <T en="Source: OpenAlex" zh="数据来自 OpenAlex" />
         </span>
         <span>
           <T en={`As of ${meta.asOf}`} zh={`截至 ${meta.asOf}`} />

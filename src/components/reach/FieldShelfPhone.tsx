@@ -90,7 +90,7 @@ export default function FieldShelfPhone({ view, lit, hits, pinPaper, onPinPaper,
       )}
 
       <div>
-        <h3 className="text-xs font-medium uppercase tracking-[0.14em] text-ink-faint">{zh ? "本人论文 · 点按以点亮施引文献" : "Ken's papers · tap to light their citers"}</h3>
+        <h3 className="text-xs font-medium uppercase tracking-[0.14em] text-ink-faint">{zh ? "我的论文 · 点按后点亮引用它们的文献" : "Ken's papers · tap to light their citers"}</h3>
         {groups.map(({ theme, items }) => (
           <section key={theme.id} className="mt-3" aria-label={zh ? theme.zh : theme.en}>
             <h4 className="text-xs text-ink-muted">{zh ? theme.zh : theme.en}</h4>
@@ -115,7 +115,7 @@ export default function FieldShelfPhone({ view, lit, hits, pinPaper, onPinPaper,
                       <span className="text-xs whitespace-nowrap tabular-nums text-ink-muted">
                         {paper.citing === 0
                           ? zh
-                            ? `${paper.year} · 0 暂无`
+                            ? `${paper.year} · 暂为 0`
                             : `${paper.year} · 0 yet`
                           : zh
                             ? `${fmt(paper.citing)} · ${pctOf(paper.outside, paper.citing)}% 主题外`

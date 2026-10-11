@@ -81,7 +81,7 @@ export function WorkDetails({
           <p className="line-clamp-3 text-[13px] font-medium leading-snug text-ink">{tip.title}</p>
         ) : status === "error" ? (
           <p className="text-[13px] text-ink-muted">
-            {zh ? "详细信息未能加载。" : "Details did not load."}{" "}
+            {zh ? "详情未能加载。" : "Details did not load."}{" "}
             <button type="button" onClick={onRetry} className="text-teal underline-offset-2 hover:underline">
               {zh ? "重试" : "Retry"}
             </button>

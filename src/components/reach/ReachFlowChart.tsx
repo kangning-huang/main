@@ -166,7 +166,7 @@ export default function ReachFlowChart() {
       </div>
 
       <p className="mt-4 text-xs text-ink-faint sm:hidden">
-        <T en="Scroll sideways for full chart →" zh="左右滑动查看完整图 →" />
+        <T en="Scroll sideways for full chart →" zh="左右滑动查看完整图表 →" />
       </p>
       <figure className="mt-3 overflow-x-auto rounded-xl border border-rule bg-paper-warm/30 p-3 sm:p-4">
         <svg
