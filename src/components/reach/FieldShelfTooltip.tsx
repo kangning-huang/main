@@ -3,17 +3,19 @@
 import { useCallback, useLayoutEffect, useRef, useSyncExternalStore, type ReactNode } from "react";
 import type { ReachLens } from "@/lib/influence";
 import {
-  BAND_COLORS,
-  BAND_NAMES,
-  distanceText,
+  IMPACT_COLORS,
+  IMPACT_LABELS,
+  citedByText,
   doiUrl,
   fieldShelfPapers,
   idleTips,
+  impactBin,
   loadFieldShelfTips,
   openAlexUrl,
   subscribeTips,
   tipsState,
   typeName,
+  type FieldShelfImpactBin,
   type FieldShelfTip,
   type FieldShelfView,
   type TipsStatus,
@@ -37,8 +39,8 @@ export function authorLine(tip: FieldShelfTip, zh: boolean) {
   return tip.authors > 1 ? `${tip.author}${zh ? " 等" : " et al."}` : tip.author;
 }
 
-export function BandSwatch({ band, size = 9 }: { band: 0 | 1 | 2; size?: number }) {
-  return <span className="inline-block shrink-0" style={{ width: size, height: size, background: BAND_COLORS[band] }} aria-hidden="true" />;
+export function ImpactSwatch({ bin, size = 9 }: { bin: FieldShelfImpactBin; size?: number }) {
+  return <span className="inline-block shrink-0" style={{ width: size, height: size, background: IMPACT_COLORS[bin] }} aria-hidden="true" />;
 }
 
 const ExternalMark = () => (
@@ -48,9 +50,9 @@ const ExternalMark = () => (
 );
 
 /**
- * What one square is: title, first author, venue, year, which of Ken's papers it builds on, and how far
- * its topic sits from the lead home topics. No citation-intent text (OpenAlex has none). Builds on and
- * the band come from the bundled layout, so they show even before (or without) the lazy payload.
+ * What one square is: title, first author, venue, year, which of Ken's papers it builds on, and how
+ * highly cited the citing work itself is. No citation-intent text (OpenAlex has none). Builds on and
+ * citedBy come from the bundled layout, so they show even before (or without) the lazy payload.
  */
 export function WorkDetails({
   view,
@@ -104,10 +106,10 @@ export function WorkDetails({
         </ul>
       </div>
       <div className="flex items-start gap-1.5">
-        <BandSwatch band={sq.band} />
+        <ImpactSwatch bin={impactBin(sq.citedBy)} />
         <p className="-mt-px text-ink-muted">
-          <span className="font-medium text-ink">{zh ? BAND_NAMES[sq.band].zh : BAND_NAMES[sq.band].en}</span>
-          {tip ? ` · ${distanceText(tip.d, zh)}` : ""}
+          <span className="font-medium text-ink">{citedByText(sq.citedBy, zh)}</span>
+          <span className="text-ink-faint"> · {zh ? IMPACT_LABELS[impactBin(sq.citedBy)].zh : IMPACT_LABELS[impactBin(sq.citedBy)].en}</span>
           {tip?.topic && (
             <span className="block text-ink-faint">
               {tip.topic.name}

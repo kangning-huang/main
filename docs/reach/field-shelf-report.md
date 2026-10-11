@@ -5,11 +5,11 @@ Every number below is recounted from the cached OpenAlex citing lists. This file
 
 ## Checks
 
-- PASS all: citing works 3,102 vs influence.json uniqueCitingWorks 3,102 (influence.json as of 2026-10-10, cache as of 2026-10-10)
+- PASS all: citing works 3,102 vs influence.json uniqueCitingWorks 3,102 (influence.json as of 2026-10-09, cache as of 2026-10-10)
 - PASS all: non-self citing links 3,333 vs influence.json 3,333
 - PASS all: self-citations removed 322 vs influence.json 322
 - PASS all: papers 24 (11 lead) vs influence.json 24 (11 lead)
-- PASS lead: citing works 573 vs influence.json uniqueCitingWorks 573 (influence.json as of 2026-10-10, cache as of 2026-10-10)
+- PASS lead: citing works 573 vs influence.json uniqueCitingWorks 573 (influence.json as of 2026-10-09, cache as of 2026-10-10)
 - PASS lead: non-self citing links 579 vs influence.json 579
 - PASS lead: self-citations removed 44 vs influence.json 44
 - PASS lead: papers 11 (11 lead) vs influence.json 11 (11 lead)
@@ -28,18 +28,22 @@ Every number below is recounted from the cached OpenAlex citing lists. This file
 - PASS lead: every paper of the view is on the shelf (11), including those with 0 citing works
 - PASS Lead squares ⊂ All squares
 - PASS Lead squares point only at lead papers
-- PASS no square changes band between All and Lead (fixed home set)
+- PASS no square changes citedBy between All and Lead
+- PASS every All square has integer citedBy ≥ 0
+- PASS most-cited square (citedBy 3839) near centre (dist 1.0px)
 - INFO lead papers with 0 non-self citing works (shown as "0 yet"): Discover Env 2024, npj ESS 2026, Sci Rep 2026
 - INFO constant density: Lead field 266×101px vs All 620×242px (linear ×0.42; √(573/3102) = 0.43)
+- WARN lead: theme name "methods" (en) estimated 66px over 52px of room
+- WARN lead: theme name "methods" (zh) estimated 55px over 52px of room
 
 ## Headlines
 
-- **All:** 3,102 works cite this research. Half sit outside the topics of Ken's lead papers. — 3,102 篇文献引用了这些研究，其中一半落在本人第一/通讯作者论文的主题之外。
-- **Lead:** 573 works cite Ken's 11 lead-author papers. More than one in three sit outside those papers' topics. — 573 篇文献引用了本人的 11 篇第一/通讯作者论文，其中超过三分之一落在这些论文的主题之外。
+- **All:** 3,102 works cite this research. 149 are themselves cited ≥100 times — 2 of them ≥1,000. — 3,102 篇文献引用了这些研究。其中 149 篇自身被引 ≥100 次，2 篇 ≥1,000 次。
+- **Lead:** 573 works cite Ken's 11 lead-author papers. 39 are themselves cited ≥100 times. — 573 篇文献引用了本人的 11 篇第一/通讯作者论文。其中 39 篇自身被引 ≥100 次。
 
 ## Fixed home topics (H_lead): 22 topics
 
-The union of OpenAlex `topics[]` (plus the assigned topic) on the 11 lead papers: 22 topics in 16 subfields, 6 fields and 2 domains. With 2 of OpenAlex's 4 domains at home, distances run 0–4. The same set colours both views.
+The union of OpenAlex `topics[]` (plus the assigned topic) on the 11 lead papers: 22 topics in 16 subfields, 6 fields and 2 domains. With 2 of OpenAlex's 4 domains at home, distances run 0–4. Distance is footnote-only; field colour is cited_by_count.
 
 | Topic | Subfield | Field | Domain | On lead papers |
 | --- | --- | --- | --- | --- |
@@ -66,7 +70,18 @@ The union of OpenAlex `topics[]` (plus the assigned topic) on the 11 lead papers
 | Human Mobility and Location-Based Analysis | Transportation | Social Sciences | Social Sciences | JAPA 2026 |
 | Urban and Rural Development Challenges | Urban Studies | Social Sciences | Social Sciences | npj ESS 2026 |
 
-## Bands and distances
+## Citation impact (field encoding)
+
+Colour and centre-packing use OpenAlex `cited_by_count` of each citing work (log bins). Topic bands below are footnote-only.
+
+| View | Citing works | 0 | 1–9 | 10–99 | 100–999 | ≥1,000 | ≥100 | ≥1,000 | max |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| all | 3,102 | 584 | 1,081 | 1,288 | 147 | 2 | 149 | 2 | 3,839 |
+| lead | 573 | 93 | 193 | 248 | 39 | 0 | 39 | 0 | 572 |
+
+Breaks: 0, 1, 10, 100, 1000 · colours: #cfc4b6, #b89a82, #dd9270, #c74b16, #141211.
+
+## Topic distance (footnote only — not field colour)
 
 | View | Citing works | Core (d 0) | Neighbour (d 1–2) | Further (d ≥ 3 or no topic) | Outside home (d ≠ 0) |
 | --- | ---: | ---: | ---: | ---: | ---: |
@@ -98,25 +113,25 @@ Co-author share: 2,529 of 3,102 All squares (81.5%) cite only co-authored papers
 | 3 | Nat Commun 2020 · SSP urban land projections | coauthor | expansion | 2020 | 799 | 317 (40%) | 482 / 256 / 61 |
 | 4 | Nat Sustain 2020 · global urban change 1985–2015 | coauthor | expansion | 2020 | 773 | 362 (47%) | 411 / 299 / 63 |
 | 5 | Nat Sustain 2020 · urban growth & biodiversity | coauthor | expansion | 2020 (OpenAlex 2019) | 569 | 325 (57%) | 244 / 251 / 74 |
-| 6 | IJGIS 2012 · MACO land-use allocation | coauthor | methods | 2012 | 133 | 55 (41%) | 78 / 49 / 6 |
-| 7 | IEEE TGRS 2013 · multisensor registration | coauthor | methods | 2013 | 94 | 86 (91%) | 8 / 85 / 1 |
-| 8 | JAPA 2026 · rhythmized urban parks | lead | methods | 2026 (OpenAlex 2025) | 1 | 0 (0%) | 1 / 0 / 0 |
-| 9 | RSE 2015 · snow depth retrieval | coauthor | flood | 2015 | 10 | 10 (100%) | 0 / 10 / 0 |
-| 10 | Discover Env 2024 · Belt and Road heat/flood | lead | flood | 2024 | 0 | 0 yet | 0 / 0 / 0 |
-| 11 | Remote Sensing 2025 · inundation mapping | lead | flood | 2025 | 2 | 1 (50%) | 1 / 1 / 0 |
-| 12 | Sci Rep 2026 · height-aware flood risk | lead | flood | 2026 | 0 | 0 yet | 0 / 0 / 0 |
-| 13 | JGR-A 2021 · nighttime heat stress | lead | heat-health | 2021 | 63 | 12 (19%) | 51 / 11 / 1 |
-| 14 | Urban Climate 2021 · urban climate forecasts | lead | heat-health | 2021 | 19 | 5 (26%) | 14 / 5 / 0 |
-| 15 | Nat Clim Change 2025 · urban overheating mortality | coauthor | heat-health | 2025 | 65 | 7 (11%) | 58 / 7 / 0 |
-| 16 | Nature Cities 2025 · urban browning heat stress | coauthor | heat-health | 2025 | 31 | 5 (16%) | 26 / 3 / 2 |
-| 17 | Sci Rep 2025 · urban density & heat | lead | heat-health | 2025 | 9 | 4 (44%) | 5 / 3 / 1 |
-| 18 | Nat Clim Change 2022 · urban forests | lead | cooling | 2022 | 14 | 5 (36%) | 9 / 5 / 0 |
-| 19 | ES&T 2024 · AC usage & indoor–outdoor heat | coauthor | cooling | 2024 | 7 | 0 (0%) | 7 / 0 / 0 |
-| 20 | ES&T 2025 · urban tree cooling | coauthor | cooling | 2025 | 53 | 7 (13%) | 46 / 6 / 1 |
-| 21 | npj ESS 2026 · demolition & cooling | lead | cooling | 2026 | 0 | 0 yet | 0 / 0 / 0 |
-| 22 | Atmos Environ 2018 · dust emissions | coauthor | air-dust | 2018 | 86 | 85 (99%) | 1 / 83 / 2 |
-| 23 | ES&T 2019 · road dust PM2.5 | coauthor | air-dust | 2019 | 131 | 131 (100%) | 0 / 128 / 3 |
-| 24 | Toxics 2025 · air pollution & anxiety visits | coauthor | air-dust | 2025 | 3 | 3 (100%) | 0 / 3 / 0 |
+| 6 | JGR-A 2021 · nighttime heat stress | lead | heat-health | 2021 | 63 | 12 (19%) | 51 / 11 / 1 |
+| 7 | Urban Climate 2021 · urban climate forecasts | lead | heat-health | 2021 | 19 | 5 (26%) | 14 / 5 / 0 |
+| 8 | Nat Clim Change 2025 · urban overheating mortality | coauthor | heat-health | 2025 | 65 | 7 (11%) | 58 / 7 / 0 |
+| 9 | Nature Cities 2025 · urban browning heat stress | coauthor | heat-health | 2025 | 31 | 5 (16%) | 26 / 3 / 2 |
+| 10 | Sci Rep 2025 · urban density & heat | lead | heat-health | 2025 | 9 | 4 (44%) | 5 / 3 / 1 |
+| 11 | Nat Clim Change 2022 · urban forests | lead | cooling | 2022 | 14 | 5 (36%) | 9 / 5 / 0 |
+| 12 | ES&T 2024 · AC usage & indoor–outdoor heat | coauthor | cooling | 2024 | 7 | 0 (0%) | 7 / 0 / 0 |
+| 13 | ES&T 2025 · urban tree cooling | coauthor | cooling | 2025 | 53 | 7 (13%) | 46 / 6 / 1 |
+| 14 | npj ESS 2026 · demolition & cooling | lead | cooling | 2026 | 0 | 0 yet | 0 / 0 / 0 |
+| 15 | Atmos Environ 2018 · dust emissions | coauthor | air-dust | 2018 | 86 | 85 (99%) | 1 / 83 / 2 |
+| 16 | ES&T 2019 · road dust PM2.5 | coauthor | air-dust | 2019 | 131 | 131 (100%) | 0 / 128 / 3 |
+| 17 | Toxics 2025 · air pollution & anxiety visits | coauthor | air-dust | 2025 | 3 | 3 (100%) | 0 / 3 / 0 |
+| 18 | IJGIS 2012 · MACO land-use allocation | coauthor | methods | 2012 | 133 | 55 (41%) | 78 / 49 / 6 |
+| 19 | IEEE TGRS 2013 · multisensor registration | coauthor | methods | 2013 | 94 | 86 (91%) | 8 / 85 / 1 |
+| 20 | JAPA 2026 · rhythmized urban parks | lead | methods | 2026 (OpenAlex 2025) | 1 | 0 (0%) | 1 / 0 / 0 |
+| 21 | RSE 2015 · snow depth retrieval | coauthor | flood | 2015 | 10 | 10 (100%) | 0 / 10 / 0 |
+| 22 | Discover Env 2024 · Belt and Road heat/flood | lead | flood | 2024 | 0 | 0 yet | 0 / 0 / 0 |
+| 23 | Remote Sensing 2025 · inundation mapping | lead | flood | 2025 | 2 | 1 (50%) | 1 / 1 / 0 |
+| 24 | Sci Rep 2026 · height-aware flood risk | lead | flood | 2026 | 0 | 0 yet | 0 / 0 / 0 |
 
 Lead papers with no non-self citing work yet (on the shelf as "0 yet", no squares): Discover Env 2024 · Belt and Road heat/flood; npj ESS 2026 · demolition & cooling; Sci Rep 2026 · height-aware flood risk.
 
@@ -133,14 +148,14 @@ Lead papers with no non-self citing work yet (on the shelf as "0 yet", no square
 | dissertation | 22 | 2 |
 | data-paper | 18 | 3 |
 | editorial | 5 | 4 |
-| reference-entry | 4 | 0 |
 | book | 4 | 0 |
 | report | 4 | 1 |
+| reference-entry | 4 | 0 |
 | other | 1 | 0 |
 | conference-abstract | 1 | 0 |
 | paratext | 1 | 0 |
 
-Without a venue: 111 (All) / 13 (Lead). Without a DOI: 3 / 1 (the tooltip then links OpenAlex only). "Show me one" draws from outside-home articles and reviews with a venue: 1,296 (All) / 160 (Lead).
+Without a venue: 111 (All) / 13 (Lead). Without a DOI: 3 / 1 (the tooltip then links OpenAlex only). "Show me one" draws from articles and reviews with a venue and ≥10 own citations: 1,394 (All) / 278 (Lead).
 
 ## Geometry
 
@@ -149,6 +164,6 @@ Without a venue: 111 (All) / 13 (Lead). Without a DOI: 3 / 1 (the tooltip then l
 
 ## Tooltip payloads (lazy)
 
-- `public/data/field-shelf-tooltips-all.json`: 1022 KB raw, 347 KB gzip (3,102 works).
-- `public/data/field-shelf-tooltips-lead.json`: 198 KB raw, 69 KB gzip (573 works).
+- `public/data/field-shelf-tooltips-all.json`: 1022 KB raw, 359 KB gzip (3,102 works).
+- `public/data/field-shelf-tooltips-lead.json`: 198 KB raw, 71 KB gzip (573 works).
 

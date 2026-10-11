@@ -8,7 +8,7 @@
  * the client stretches to its container; heights are not scaled (they hold text).
  */
 
-import { textWidth } from "./ripple-layout.mjs";
+import { textWidth } from "./text-metrics.mjs";
 
 export const FIELD = {
   pitch: 6, // grid step: one square per cell in every view, so density is constant and Lead shrinks

@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 /**
  * Field & Shelf builder (docs/reach/FIELD-SHELF-PLAN.md): one square per work citing Ken's papers,
- * packed by topic distance from the FIXED home topics of his lead papers, under a shelf of the papers.
+ * packed by the citing work's own OpenAlex cited_by_count (high → centre), coloured on a log-scale
+ * ember–ink ramp. Topic distance is still computed for optional footnotes, but no longer encodes the field.
  *
  * Input:   data/influence/dois.json          pinned papers, lens, short labels
  *          data/influence/fine-themes.json   paper → theme; theme labels and order
@@ -14,9 +15,9 @@
  * Usage:   node scripts/influence/build-field-shelf.mjs [--offline | --refresh] [--dry-run]
  * Env:     OPENALEX_API_KEY, OPENALEX_MAILTO (optional), OPENALEX_CACHE_MAX_AGE_HOURS
  *
- * Rules (Ken, 2026-10-11): home topics = OpenAlex topics on the lead papers only, computed once; a
- * square's colour never changes with the All / Lead chip, which only filters squares and shelf. Same
- * self-citation rule and record types as fetch-influence.mjs. No "how it cites" text.
+ * Rules (Ken, 2026-10-11 impact update): field colour + position = citing work cited_by_count (log bins,
+ * high at centre). All / Lead chip only filters squares and shelf (same citedBy ⇒ same colour). Same
+ * self-citation rule and record types as fetch-influence.mjs. No "how it cites" text. Never invent counts.
  */
 
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "fs";
@@ -50,6 +51,22 @@ const OPENALEX_DOMAINS = 4;
 const BANDS = ["core", "neighbour", "further"];
 /** core = a home topic (d 0); neighbour = same subfield or field (d 1–2); further = d ≥ 3 or no topic. */
 const bandOf = (d) => (d === 0 ? 0 : d === 1 || d === 2 ? 1 : 2);
+
+/** Log-ish citation bins for field colour (OpenAlex cited_by_count). Inclusive lower, exclusive upper except last. */
+const IMPACT_BREAKS = [0, 1, 10, 100, 1000]; // → bins: 0 | 1–9 | 10–99 | 100–999 | ≥1000
+const IMPACT_COLORS = ["#cfc4b6", "#b89a82", "#dd9270", "#c74b16", "#141211"]; // pale warm → light ember → ember → ink
+const IMPACT_LABELS = [
+  { en: "0 citations", zh: "0 次被引" },
+  { en: "1–9", zh: "1–9" },
+  { en: "10–99", zh: "10–99" },
+  { en: "100–999", zh: "100–999" },
+  { en: "≥1,000", zh: "≥1,000" },
+];
+const impactBin = (c) => {
+  const n = Number.isFinite(c) ? Math.max(0, Math.floor(c)) : 0;
+  for (let i = IMPACT_BREAKS.length - 1; i >= 0; i--) if (n >= IMPACT_BREAKS[i]) return i;
+  return 0;
+};
 /** "Show me one" prefers these record types (with a venue); every type is still a square. */
 const SHOWABLE_TYPES = new Set(["article", "review"]);
 /** Authors kept in the tooltip payload for search (the first one is also shown). */
@@ -89,17 +106,25 @@ function shareWords(share) {
   return { en: p, zh: p };
 }
 
-function headline(lens, outside, total, leadPapers) {
-  const w = shareWords(outside / total);
+function headline(lens, total, leadPapers, ge100, ge1000) {
+  const hot = ge1000 > 0
+    ? {
+        en: `${n0(ge100)} are themselves cited ≥100 times — ${n0(ge1000)} of them ≥1,000.`,
+        zh: `其中 ${n0(ge100)} 篇自身被引 ≥100 次，${n0(ge1000)} 篇 ≥1,000 次。`,
+      }
+    : {
+        en: `${n0(ge100)} are themselves cited ≥100 times.`,
+        zh: `其中 ${n0(ge100)} 篇自身被引 ≥100 次。`,
+      };
   if (lens === "all") {
     return {
-      en: `${n0(total)} works cite this research. ${w.en} sit outside the topics of Ken's lead papers.`,
-      zh: `${n0(total)} 篇文献引用了这些研究，其中${w.zh}落在本人第一/通讯作者论文的主题之外。`,
+      en: `${n0(total)} works cite this research. ${hot.en}`,
+      zh: `${n0(total)} 篇文献引用了这些研究。${hot.zh}`,
     };
   }
   return {
-    en: `${n0(total)} works cite Ken's ${leadPapers} lead-author papers. ${w.en} sit outside those papers' topics.`,
-    zh: `${n0(total)} 篇文献引用了本人的 ${leadPapers} 篇第一/通讯作者论文，其中${w.zh}落在这些论文的主题之外。`,
+    en: `${n0(total)} works cite Ken's ${leadPapers} lead-author papers. ${hot.en}`,
+    zh: `${n0(total)} 篇文献引用了本人的 ${leadPapers} 篇第一/通讯作者论文。${hot.zh}`,
   };
 }
 
@@ -210,7 +235,8 @@ async function main() {
     if (!f) {
       const topic = assignedTopic(w);
       const d = distance(topic);
-      f = { id: shortId(w.id), num: idNum(w.id), year: w.publication_year ?? null, d, band: bandOf(d), topic, work: w };
+      const citedBy = Number.isFinite(w.cited_by_count) ? Math.max(0, Math.floor(w.cited_by_count)) : 0;
+      f = { id: shortId(w.id), num: idNum(w.id), year: w.publication_year ?? null, d, band: bandOf(d), citedBy, topic, work: w };
       facts.set(w.id, f);
     }
     return f;
@@ -246,12 +272,12 @@ async function main() {
         e.cites.add(i);
       }
     }
-    // Sort by distance (no topic last), then year, then OpenAlex id: centre → edge of the field.
+    // Sort by cited_by_count DESC (high-impact → centre), then year, then OpenAlex id.
     const entries = [...corpus.values()].sort(
-      (a, b) => (a.f.d ?? 9) - (b.f.d ?? 9) || (a.f.year ?? 9999) - (b.f.year ?? 9999) || a.f.num - b.f.num
+      (a, b) => b.f.citedBy - a.f.citedBy || (a.f.year ?? 9999) - (b.f.year ?? 9999) || a.f.num - b.f.num
     );
     const field = packField(entries.length);
-    const squares = entries.map((e, k) => [e.f.num, field.squares[k].x, field.squares[k].y, e.f.band, e.f.year, [...e.cites].sort(byNum)]);
+    const squares = entries.map((e, k) => [e.f.num, field.squares[k].x, field.squares[k].y, e.f.citedBy, e.f.year, [...e.cites].sort(byNum)]);
 
     const order = shelfOrder(v.papers);
     const shelf = layoutShelf(
@@ -269,6 +295,15 @@ async function main() {
     const coauthorOnly = entries.filter((e) => [...e.cites].every((i) => papers[i].lens === "coauthor")).length;
     const outsideHome = entries.filter((e) => e.f.d !== 0).length;
     const N = entries.length;
+    const impactCounts = IMPACT_BREAKS.map(() => 0);
+    let maxCitedBy = 0;
+    for (const e of entries) {
+      impactCounts[impactBin(e.f.citedBy)]++;
+      if (e.f.citedBy > maxCitedBy) maxCitedBy = e.f.citedBy;
+    }
+    const ge100 = entries.filter((e) => e.f.citedBy >= 100).length;
+    const ge1000 = entries.filter((e) => e.f.citedBy >= 1000).length;
+    const leadPapersN = v.papers.filter((i) => papers[i].lens === "lead").length;
 
     views[v.id] = {
       field: { width: field.width, height: field.height, cx: field.cx, cy: field.cy, rx: field.rx, ry: field.ry, pitch: FIELD.pitch, cell: FIELD.cell },
@@ -285,17 +320,21 @@ async function main() {
         citingWorks: N,
         outsideHome,
         papers: v.papers.length,
-        leadPapers: v.papers.filter((i) => papers[i].lens === "lead").length,
+        leadPapers: leadPapersN,
         coauthorPapers: v.papers.filter((i) => papers[i].lens === "coauthor").length,
         citingLinksNonSelf: v.papers.reduce((s, i) => s + papers[i].citing, 0),
         selfCitationsRemoved: v.papers.reduce((s, i) => s + papers[i].selfRemoved, 0),
         coauthorOnly,
         maxPapersPerSquare: Math.max(...entries.map((e) => e.cites.size)),
+        ge100,
+        ge1000,
+        maxCitedBy,
       },
       bands,
+      impact: { counts: impactCounts, ge100, ge1000, maxCitedBy },
       distance: dist,
       multiCite: multi,
-      headline: headline(v.id, outsideHome, N, v.papers.filter((i) => papers[i].lens === "lead").length),
+      headline: headline(v.id, N, leadPapersN, ge100, ge1000),
       squares,
     };
     viewFacts[v.id] = { entries, field, shelf };
@@ -351,8 +390,16 @@ async function main() {
   const allIds = new Set(views.all.squares.map((q) => q[0]));
   check(views.lead.squares.every((q) => allIds.has(q[0])), "Lead squares ⊂ All squares");
   check(views.lead.squares.every((q) => q[5].every((i) => leadIdx.has(i))), "Lead squares point only at lead papers");
-  const allColour = new Map(views.all.squares.map((q) => [q[0], q[3]]));
-  check(views.lead.squares.every((q) => allColour.get(q[0]) === q[3]), "no square changes band between All and Lead (fixed home set)");
+  const allCited = new Map(views.all.squares.map((q) => [q[0], q[3]]));
+  check(views.lead.squares.every((q) => allCited.get(q[0]) === q[3]), "no square changes citedBy between All and Lead");
+  check(views.all.squares.every((q) => Number.isInteger(q[3]) && q[3] >= 0), "every All square has integer citedBy ≥ 0");
+  // Highest-cited square near the ellipse centre (first packed cell).
+  const top = views.all.squares.reduce((a, q) => (q[3] > a[3] ? q : a), views.all.squares[0]);
+  const cx = views.all.field.cx;
+  const cy = views.all.field.cy;
+  const half = FIELD.cell / 2;
+  const distTop = Math.hypot(top[1] + half - cx, top[2] + half - cy);
+  check(distTop < Math.min(views.all.field.rx, views.all.field.ry) * 0.35, `most-cited square (citedBy ${top[3]}) near centre (dist ${distTop.toFixed(1)}px)`);
   const zeroLead = papers.filter((p) => p.lens === "lead" && p.citing === 0).map((p) => p.label);
   checks.push(`INFO lead papers with 0 non-self citing works (shown as "0 yet"): ${zeroLead.length ? zeroLead.join(", ") : "none"}`);
   const linear = Math.sqrt(views.lead.field.width * views.lead.field.height) / Math.sqrt(views.all.field.width * views.all.field.height);
@@ -432,18 +479,28 @@ async function main() {
   const showable = {};
   for (const lens of ["all", "lead"]) {
     const ents = viewFacts[lens].entries;
-    showable[lens] = ents.filter((e) => e.f.band !== 0 && SHOWABLE_TYPES.has(e.f.work.type) && e.f.work.primary_location?.source?.display_name).length;
+    showable[lens] = ents.filter((e) => e.f.citedBy >= 10 && SHOWABLE_TYPES.has(e.f.work.type) && e.f.work.primary_location?.source?.display_name).length;
   }
   const output = {
     $comment:
-      "Generated by scripts/influence/build-field-shelf.mjs from OpenAlex (self-citations removed). Do not edit by hand; see docs/reach/FIELD-SHELF-PLAN.md. squares: [OpenAlex id number (prefix 'W'), x, y (top-left px in the field box), band (0 core · 1 neighbour · 2 further), publication year, paperIdxs (indexes into papers)].",
+      "Generated by scripts/influence/build-field-shelf.mjs from OpenAlex (self-citations removed). Do not edit by hand. squares: [OpenAlex id number (prefix 'W'), x, y (top-left px in the field box), citedBy (OpenAlex cited_by_count of the citing work), publication year, paperIdxs (indexes into papers)]. Field colour/position = citation impact (log bins); topic distance is footnote-only.",
     meta: {
       asOf,
-      schema: "field-shelf/v1",
+      schema: "field-shelf/v2",
       defaultView: "all",
+      encoding: "citing-work-cited-by-count",
+      encodingText:
+        "Each square is one citing work. Colour = that work's own OpenAlex cited_by_count on a log-ish sequential ember–ink ramp; nearer the centre = more cited. Direction means nothing. The All / Lead chip filters squares and shelf only.",
+      impact: {
+        breaks: IMPACT_BREAKS,
+        colors: IMPACT_COLORS,
+        labels: IMPACT_LABELS,
+        scale: "log-bins",
+        note: "Bins: 0 · 1–9 · 10–99 · 100–999 · ≥1000 (OpenAlex cited_by_count). Never invented.",
+      },
       homeTopicsRule: "lead-fixed",
       homeTopicsRuleText:
-        "Home topics = the OpenAlex topics (all listed topics plus the assigned one) on Ken's lead (first / last / corresponding) papers, computed once. A citing work's distance d compares its assigned topic with that set: 0 home topic, 1 same subfield, 2 same field, 3 same domain, 4 another domain. Bands: core d 0, neighbour d 1–2, further d ≥ 3 or no topic. The All / Lead chip filters squares and shelf; it never recolours.",
+        "Home topics = the OpenAlex topics (all listed topics plus the assigned one) on Ken's lead papers, computed once. Distance d is still computed for optional footnotes and show-me tooling, but does not colour or place the field (Ken, 2026-10-11).",
       homeTopicsLeadCount: H.size,
       homeSubfieldsLeadCount: Hsub.size,
       homeFieldsLeadCount: Hfield.size,
@@ -452,9 +509,9 @@ async function main() {
       maxDistance: maxD,
       bands: BANDS,
       density: "constant",
-      squareFields: ["id", "x", "y", "band", "year", "paperIdxs"],
+      squareFields: ["id", "x", "y", "citedBy", "year", "paperIdxs"],
       recordTypesNote:
-        "Same inclusion as the influence pipeline: every OpenAlex record that cites a pinned paper, minus self-citations (articles, preprints, chapters, peer reviews and more). 'Show me one' prefers articles and reviews with a venue.",
+        "Same inclusion as the influence pipeline: every OpenAlex record that cites a pinned paper, minus self-citations (articles, preprints, chapters, peer reviews and more). 'Show me one' prefers articles and reviews with a venue and ≥10 citations of their own.",
       showMeOneTypes: [...SHOWABLE_TYPES],
       showable,
       coauthorOnlyShare: Math.round((views.all.totals.coauthorOnly / views.all.totals.citingWorks) * 1000) / 1000,
@@ -545,7 +602,7 @@ function renderReport({ output, papers, homeTopics, checks, tipSizes, viewFacts,
   md.push("");
   md.push(
     `The union of OpenAlex \`topics[]\` (plus the assigned topic) on the ${views.lead.totals.leadPapers} lead papers: ${meta.homeTopicsLeadCount} topics in ${meta.homeSubfieldsLeadCount} subfields, ${meta.homeFieldsLeadCount} fields and ${meta.homeDomainsLeadCount} domains. ` +
-      `With ${meta.homeDomainsLeadCount} of OpenAlex's 4 domains at home, distances run 0–${maxD}. The same set colours both views.`
+      `With ${meta.homeDomainsLeadCount} of OpenAlex's 4 domains at home, distances run 0–${maxD}. Distance is footnote-only; field colour is cited_by_count.`
   );
   md.push("");
   md.push("| Topic | Subfield | Field | Domain | On lead papers |");
@@ -554,7 +611,27 @@ function renderReport({ output, papers, homeTopics, checks, tipSizes, viewFacts,
   for (const t of sortedTopics) md.push(`| ${t.name} | ${t.subfield ?? ""} | ${t.field ?? ""} | ${t.domain ?? ""} | ${t.papers.join(", ")} |`);
   md.push("");
 
-  md.push("## Bands and distances");
+  md.push("## Citation impact (field encoding)");
+  md.push("");
+  md.push("Colour and centre-packing use OpenAlex `cited_by_count` of each citing work (log bins). Topic bands below are footnote-only.");
+  md.push("");
+  md.push("| View | Citing works | 0 | 1–9 | 10–99 | 100–999 | ≥1,000 | ≥100 | ≥1,000 | max |");
+  md.push("| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |");
+  for (const lens of ["all", "lead"]) {
+    const v = views[lens];
+    const N = v.totals.citingWorks;
+    const c = v.impact.counts;
+    md.push(
+      `| ${lens} | ${n0(N)} | ${n0(c[0])} | ${n0(c[1])} | ${n0(c[2])} | ${n0(c[3])} | ${n0(c[4])} | ${n0(v.impact.ge100)} | ${n0(v.impact.ge1000)} | ${n0(v.impact.maxCitedBy)} |`
+    );
+    con.push(
+      `[${lens}] N ${N} · impact bins ${c.join("/")} · ≥100 ${v.impact.ge100} · ≥1000 ${v.impact.ge1000} · max ${v.impact.maxCitedBy}`
+    );
+  }
+  md.push("");
+  md.push(`Breaks: ${IMPACT_BREAKS.join(", ")} · colours: ${IMPACT_COLORS.join(", ")}.`);
+  md.push("");
+  md.push("## Topic distance (footnote only — not field colour)");
   md.push("");
   md.push("| View | Citing works | Core (d 0) | Neighbour (d 1–2) | Further (d ≥ 3 or no topic) | Outside home (d ≠ 0) |");
   md.push("| --- | ---: | ---: | ---: | ---: | ---: |");
@@ -563,9 +640,6 @@ function renderReport({ output, papers, homeTopics, checks, tipSizes, viewFacts,
     const N = v.totals.citingWorks;
     md.push(
       `| ${lens} | ${n0(N)} | ${n0(v.bands.core)} (${pct(v.bands.core / N)}) | ${n0(v.bands.neighbour)} (${pct(v.bands.neighbour / N)}) | ${n0(v.bands.further)} (${pct(v.bands.further / N)}) | ${n0(v.totals.outsideHome)} (${pct(v.totals.outsideHome / N)}) |`
-    );
-    con.push(
-      `[${lens}] N ${N} · core ${v.bands.core} (${pct(v.bands.core / N)}) · neighbour ${v.bands.neighbour} (${pct(v.bands.neighbour / N)}) · further ${v.bands.further} (${pct(v.bands.further / N)}) · outside ${v.totals.outsideHome} (${pct(v.totals.outsideHome / N)})`
     );
   }
   md.push("");
@@ -631,7 +705,7 @@ function renderReport({ output, papers, homeTopics, checks, tipSizes, viewFacts,
   const noDoi = (lens) => viewFacts[lens].entries.filter((e) => !e.f.work.doi).length;
   md.push(
     `Without a venue: ${noVenue("all")} (All) / ${noVenue("lead")} (Lead). Without a DOI: ${noDoi("all")} / ${noDoi("lead")} (the tooltip then links OpenAlex only). ` +
-      `"Show me one" draws from outside-home articles and reviews with a venue: ${n0(meta.showable.all)} (All) / ${meta.showable.lead} (Lead).`
+      `"Show me one" draws from articles and reviews with a venue and ≥10 own citations: ${n0(meta.showable.all)} (All) / ${meta.showable.lead} (Lead).`
   );
   md.push("");
 
