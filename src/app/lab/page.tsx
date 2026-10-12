@@ -14,9 +14,9 @@ const APPLY_SUBJECT = "[Join CLUEs]";
 // Every outcome below appears on /advisees (src/lib/advisees.tsx).
 const OUTCOMES: { en: string; zh: string }[] = [
   { en: "Erasmus Mundus International Master in Urban Studies", zh: "Erasmus Mundus 国际城市研究硕士项目" },
-  { en: "Yale School of Public Health (M.S.)", zh: "耶鲁大学公共卫生学院（硕士）" },
+  { en: "Yale School of Public Health (M.S.)", zh: "耶鲁大学公共卫生学院（理学硕士）" },
   { en: "Penn Master of City Planning", zh: "宾夕法尼亚大学城市规划硕士" },
-  { en: "Carnegie Mellon School of Computer Science (M.S.)", zh: "卡内基梅隆大学计算机科学学院（硕士）" },
+  { en: "Carnegie Mellon School of Computer Science (M.S.)", zh: "卡内基梅隆大学计算机科学学院（理学硕士）" },
   { en: "Clinton Global Initiative University Fellow", zh: "Clinton Global Initiative University（CGI U）Fellow" },
   { en: "Two Millennium Fellows", zh: "两名千禧年研究员" },
   { en: "Pingan Youth Inspiration Plan funding", zh: "平安青年励志计划资助" },
@@ -87,13 +87,13 @@ export default function LabPage() {
           <p className="mt-5 max-w-3xl text-[15px] leading-[1.75] text-ink-muted animate-fade-up delay-1">
             <T
               en="The CLUEs (CLimate and Urban Environments) Lab at NYU Shanghai studies cities as complex socio-ecological systems, the outcome of interactions between human and natural systems. We combine satellite data, climate models and causal inference across thousands of cities to ask how the amount, height and arrangement of what we build shapes who overheats, who floods, and how much material a city consumes."
-              zh="上海纽约大学 CLimate and Urban Environments（CLUEs）实验室研究城市这个复杂社会—生态系统，关注人与自然系统如何相互作用。我们结合卫星数据、气候模型与因果推断，分析全球数千座城市，研究建成环境总量、高度与布局如何决定谁承受高温、谁遭遇洪水，以及一座城市消耗多少材料。"
+              zh="城市是一个复杂社会—生态系统，人与自然在其中相互影响。上海纽约大学 CLimate and Urban Environments（CLUEs）实验室研究这些联系。建筑和基础设施建了多少、楼房有多高、怎样布局，会影响谁承受高温、谁遭遇洪水，也会影响城市消耗多少材料。我们结合卫星数据、气候模型与因果推断，分析全球数千座城市，想把这些关系弄清楚。"
             />
           </p>
 
           {/* ── Current members ── */}
           <h2 id="members" className="mt-14 scroll-mt-24 font-display text-2xl text-ink">
-            <T en="Current members" zh="现有成员" />
+            <T en="Current members" zh="当前成员" />
           </h2>
           <div className="mt-6 grid gap-5 md:grid-cols-3">
             {POSTDOCS.map((m) => (
@@ -193,7 +193,7 @@ export default function LabPage() {
           </ul>
           <p className="mt-4 text-sm">
             <Link href="/advisees" className="link-underline font-medium text-ember">
-              <T en="Full advisee list with projects and placements →" zh="查看我指导的全部学生、项目与去向 →" />
+              <T en="Full advisee list with projects and placements →" zh="查看全部指导学生、项目与去向 →" />
             </Link>
           </p>
 
@@ -204,13 +204,13 @@ export default function LabPage() {
             className="mt-16 scroll-mt-24 rounded-xl border border-rule bg-paper-warm p-6 md:p-8"
           >
             <h2 id="join-heading" className="font-display text-2xl text-ink">
-              <T en="Join us" zh="加入实验室" />
+              <T en="Join us" zh="加入我们" />
             </h2>
 
             <div className="mt-6 grid gap-8 md:grid-cols-2">
               <div>
                 <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
-                  <T en="Who we look for" zh="我们希望你" />
+                  <T en="Who we look for" zh="我们在找谁" />
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm leading-relaxed text-ink-muted">
                   <li className="flex items-start gap-2">
@@ -224,7 +224,7 @@ export default function LabPage() {
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
                     <T
                       en="You already use Google Earth Engine, Python, or causal inference, or you are ready to learn them on a real project."
-                      zh="你已经会用 Google Earth Engine、Python 或因果推断方法，或者愿意在实际项目中学习。"
+                      zh="你已经会用 Google Earth Engine、Python 或因果推断方法，或者愿意在实际项目中边做边学。"
                     />
                   </li>
                 </ul>
@@ -263,13 +263,13 @@ export default function LabPage() {
                   <li>
                     <T
                       en="A short note on the research questions you want to work on."
-                      zh="简单写几句，说明你想研究什么问题。"
+                      zh="用几句话说说你想研究的问题。"
                     />
                   </li>
                   <li>
                     <T
                       en="One sample of your work (code, writing, or a map)."
-                      zh="一份你的作品，可以是代码、文章或地图。"
+                      zh="一份你的作品，代码、文章或地图都可以。"
                     />
                   </li>
                 </ol>
@@ -279,7 +279,7 @@ export default function LabPage() {
             <p className="mt-6 text-sm text-ink-faint">
               <T
                 en="Funded openings are not listed on this page. Email to ask what is open now."
-                zh="这里不列出有资助的职位。想了解目前有哪些名额，请给我发邮件。"
+                zh="这里不列出有资助的职位。想了解目前有哪些名额，请给我们发邮件。"
               />
             </p>
           </section>
