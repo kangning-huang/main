@@ -10,7 +10,7 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
   "RoboTaxi Safety Tracker": {
     title: "自动驾驶出租车安全追踪",
     description:
-      "这个仪表板用 NHTSA 常规通用令碰撞数据跟踪特斯拉 Cybercab 安全表现，独立分析自动驾驶汽车安全指标。你可以查看每起事故对应的行驶里程等指标，比较安全表现，了解分析依据。",
+      "这个仪表板用 NHTSA 碰撞数据，独立追踪特斯拉 Cybercab 的安全表现。你可以比较平均行驶多少里程发生一次事故等安全指标，并查看分析依据。",
   },
 };
 
@@ -60,12 +60,12 @@ export default function TinkeringPage() {
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <h1 className="section-heading animate-fade-up">
-            <T en="Tinkering" zh="业余项目" />
+            <T en="Tinkering" zh="小项目" />
           </h1>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
               en="Public-interest data tools I build to learn new methods."
-              zh="我做这些公益数据工具，也借此学习新方法。"
+              zh="我做这些公益数据工具，也在制作过程中学习新方法。"
             />
           </p>
 
