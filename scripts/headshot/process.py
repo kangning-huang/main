@@ -6,11 +6,11 @@ resize, encode. No generative edits.
 
 The live Scholar CDN only serves up to 256×171 (medium_photo). That file is
 byte-identical (MAE ≈ 3.5/255) to a Lanczos downscale of
-`_source/ken-panel-headshot-raw.jpg`, so we render from the full-res raw and
+`_source/ken-panel-headshot-full-2026-10-12.jpg`, so we render from the full-res raw and
 keep the Scholar downloads in `_source/` for provenance.
 
 Usage:
-    python3 scripts/headshot/process.py [_source/ken-panel-headshot-raw.jpg]
+    python3 scripts/headshot/process.py [_source/ken-panel-headshot-full-2026-10-12.jpg]
 
 Writes public/headshot/headshot-square-{1x,2x}.{avif,webp,jpg}.
 See docs/headshot/TREATMENT.md.
@@ -25,12 +25,12 @@ import numpy as np
 from PIL import Image, ImageFilter
 
 ROOT = Path(__file__).resolve().parents[2]
-SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "_source/ken-panel-headshot-raw.jpg"
+SRC = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "_source/ken-panel-headshot-full-2026-10-12.jpg"
 OUT = ROOT / "public/headshot"
 
-# Face-centred square (source pixels). Matches the prior circle hero crop.
+# Face-centred square (source pixels). Full-height zoom-out on 2026-10-12 panel.
 CROPS = {
-    "square": (565, 110, 915, 460),  # 350 × 350 (~17% zoom-out from 300)
+    "square": (218, 0, 943, 725),  # 725 × 725 full-height panel (zoomed-out torso/mic)
 }
 SIZES = {
     "square": {"1x": (160, 160), "2x": (300, 300)},
