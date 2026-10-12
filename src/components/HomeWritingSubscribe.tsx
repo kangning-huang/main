@@ -24,7 +24,7 @@ export default function HomeWritingSubscribe({
         <div className="mt-6 flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-8">
           <div className="min-w-0 flex-1">
             <p className="text-ink-muted">
-              我在公众号「反直觉手记」写城市与气候，面向大众读者。
+              我在微信公众号「反直觉手记」写城市与气候，把研究中的问题和发现讲清楚。Substack 上也有我的文章。
             </p>
             <WeChatArticleList mode="featured" className="mt-4" />
             <Link

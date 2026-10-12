@@ -23,7 +23,7 @@ const HOME_DESCRIPTION =
 const FINDINGS = [
   {
     en: "Double a city's population and its built mass grows only about 87%; bigger cities need less material per person.",
-    zh: "城市人口翻倍，建成质量仅增长约87%；城市越大，人均所需材料越少。",
+    zh: "城市人口翻倍，建成质量只增加约 87%；城市越大，摊到每个人头上所需的材料就越少。",
     venue: "Nature Cities",
     year: "2026",
     // In press — link to the on-site entry, not a DOI
@@ -38,21 +38,21 @@ const FINDINGS = [
   },
   {
     en: "Cool roofs can't fix the night: about half the added nighttime heat stress from expansion persists.",
-    zh: "即使用上冷屋顶，城市扩张新增的夜间热压力仍有约一半无法消除。",
+    zh: "用上冷屋顶后，城市扩张新增的夜间热压力仍有约一半无法消除。",
     venue: "JGR: Atmospheres",
     year: "2021",
     href: "https://doi.org/10.1029/2020JD033831",
   },
   {
     en: "Counting building height and flood defenses shifts global flood damage toward Southeast Asia, 42% of the total versus 15%.",
-    zh: "把建筑高度和防洪标准算进去，东南亚占全球洪灾损失估算值的42%；传统方法估出的比例只有15%。",
+    zh: "把建筑高度和防洪标准算进去，东南亚在全球洪灾损失估算值中的占比会从 15% 升至 42%。",
     venue: "Scientific Reports",
     year: "2026",
     href: "https://doi.org/10.1038/s41598-026-70981-w",
   },
   {
     en: "Replacing informal settlements cooled surfaces by about 1.5 K, and how much depended on what was built next.",
-    zh: "拆除非正规住区使地表降温约1.5 K，降温幅度取决于拆除后建了什么。",
+    zh: "拆除非正规住区使地表降温约 1.5 K，降温幅度取决于拆除后建了什么。",
     venue: "npj Environmental Social Sciences",
     year: "2026",
     href: "https://doi.org/10.1038/s44432-026-00009-1",
@@ -65,27 +65,27 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
   "Nested Scaling of City Mass": {
     title: "全球城市建成质量的嵌套标度规律",
     description:
-      "交互地图与浏览器，展示 3000 多座城市建成质量的嵌套规模经济：建成质量如何随人口在城市与街区两级变化。",
+      "人口增加，建成质量会怎样变化？通过交互地图和数据浏览工具，查看全球 3000 多座城市的数据，了解城市与街区两级相互嵌套的规模经济。",
   },
   "Urban Expansion 2050": {
-    title: "2050年城市扩张",
+    title: "2050 年的城市扩张",
     description:
-      "查看到 2050 年全球城市用地可能如何扩张。预测基于 2019 年发表于 Environmental Research Letters 的研究，数据可在 WRI Resource Watch 获取。",
+      "到 2050 年，全球城市用地可能扩张到哪里？这里的预测基于 2019 年发表于 Environmental Research Letters 的研究，数据可在 WRI Resource Watch 获取。",
   },
   "3D Urban Flood Risk": {
     title: "三维城市洪水风险",
     description:
-      "把建筑高度和防洪标准纳入评估后，全球城市的三维洪水暴露会变成什么样。",
+      "把建筑高度和防洪标准算进去，看看全球城市的三维洪水暴露如何变化。",
   },
   "Urban Renewal Cooling DID": {
-    title: "城市更新能降温多少（双重差分 DID 分析）",
+    title: "城市更新能降温多少（双重差分）",
     description:
-      "双重差分结果：拆除非正规住区带来多少地表降温，以及重建方式如何改变这一信号。",
+      "用双重差分（DID）分析非正规住区拆除带来的地表降温，看看重建方式如何影响降温幅度。",
   },
   "URBANMOD-ZIPF": {
     title: "URBANMOD-ZIPF",
     description:
-      "这个开源工具展示不同情景下全球城市用地如何扩张，模拟过程保留齐普夫定律描述的城市规模分布。",
+      "用这个开源工具，查看不同情景下全球城市用地如何扩张。模拟过程中，城市规模的分布仍遵循齐普夫定律。",
   },
 };
 
@@ -190,13 +190,13 @@ export default async function Home() {
               <p className="animate-fade-up delay-1 mt-5 max-w-3xl font-display text-2xl italic leading-snug text-paper/85 md:text-[30px]">
                 <T
                   en="How the size and shape of cities decide their climate future."
-                  zh="城市的规模与形态如何决定其气候未来。"
+                  zh="城市是复杂社会—生态系统。它长多大、建成什么样，会怎样影响未来的气候？"
                 />
               </p>
               <p className="animate-fade-up delay-2 mt-4 text-sm text-paper/60">
                 <T
                   en="Assistant Professor of Environmental Studies · CLUEs Lab, NYU Shanghai"
-                  zh="环境学助理教授 · CLimate and Urban Environments（CLUEs）实验室，上海纽约大学"
+                  zh="上海纽约大学环境学助理教授 · CLimate and Urban Environments（CLUEs）实验室"
                 />
               </p>
               {reach && (
@@ -204,12 +204,12 @@ export default async function Home() {
                   <Link href="/reach" className="transition-colors hover:text-ember">
                     <T
                       en={`Cited in ${reach.countries} countries — from ${reach.from} to ${reach.to}`}
-                      zh={`来自 ${reach.countries} 个国家和地区的研究引用了我的工作，从「${reach.from}」到「${reach.to}」`}
+                      zh={`从「${reach.from}」到「${reach.to}」，来自 ${reach.countries} 个国家和地区的研究引用了我的工作。`}
                     />
                     <span className="ml-1.5 text-xs text-paper/40">
                       <T
                         en={`(OpenAlex, all papers with DOI, self-citations removed, ${reach.asOf}) →`}
-                        zh={`（OpenAlex，统计全部有 DOI 的论文，已剔除自引，截至 ${reach.asOf}）→`}
+                        zh={`（OpenAlex，统计全部有 DOI 的论文，剔除自引，截至 ${reach.asOf}）→`}
                       />
                     </span>
                   </Link>
