@@ -433,10 +433,12 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
 
   const onShelf = useMemo(() => new Set(view.shelf.items.map((it) => it.p)), [view]);
   const pinP = pinPaper !== null && onShelf.has(pinPaper) ? pinPaper : null;
-  const activeP = (hoverPaper !== null && onShelf.has(hoverPaper) ? hoverPaper : null) ?? pinP;
+  // Shelf hover/focus wins over any square card so one-to-many links aren't blocked.
+  const shelfHovering = hoverPaper !== null && onShelf.has(hoverPaper);
+  const activeP = (shelfHovering ? hoverPaper : null) ?? pinP;
   const pinI = pinSq !== null ? (view.index.get(pinSq) ?? null) : null;
   const hoverI = hoverSq !== null ? (view.index.get(hoverSq) ?? null) : null;
-  const focusI = hoverI ?? pinI;
+  const focusI = shelfHovering ? null : (hoverI ?? pinI);
 
   useEffect(() => {
     if (!ready) return;
@@ -473,10 +475,22 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
     if (closeTimer.current) window.clearTimeout(closeTimer.current);
     closeTimer.current = null;
   };
+  /** Hover/focus a shelf paper: drop any square tooltip + one-to-one link immediately. */
+  const hoverPaperTo = (p: number | null) => {
+    if (p !== null) {
+      keepCard();
+      setHoverSq(null);
+    }
+    setHoverPaper(p);
+  };
   const hoverSquare = (i: number | null) => {
     keepCard();
-    if (i !== null) setHoverSq(view.squares[i].id);
-    else closeTimer.current = window.setTimeout(() => setHoverSq(null), CLOSE_DELAY);
+    if (i !== null) {
+      // New square replaces any previous square card / linger.
+      setHoverSq(view.squares[i].id);
+    } else {
+      closeTimer.current = window.setTimeout(() => setHoverSq(null), CLOSE_DELAY);
+    }
   };
   const say = (i: number, t: FieldShelfTips | null) => {
     const sq = view.squares[i];
@@ -568,7 +582,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
               readout={readout}
               canvasLabel={canvasLabel}
               onLoad={load}
-              onHoverPaper={setHoverPaper}
+              onHoverPaper={hoverPaperTo}
               onPinPaper={pinPaperTo}
               onHoverSquare={hoverSquare}
               onPickSquare={(i) => {
