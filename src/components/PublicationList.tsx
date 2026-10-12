@@ -70,6 +70,43 @@ export default function PublicationList({
       </div>
 
       <div className="mt-8 space-y-14">
+        {shownInPress.length > 0 && (
+          <section>
+            <h2 className="font-display text-2xl text-ink">
+              <T en="In press" zh="待刊" />
+            </h2>
+            <div className="mt-4 space-y-1">
+              {shownInPress.map((pub) => (
+                <PublicationCard key={pub.title} pub={pub} />
+              ))}
+            </div>
+          </section>
+        )}
+
+        {shownUnderReview.length > 0 && (
+          <section>
+            <details open className="group/review">
+              <summary className="flex cursor-pointer list-none items-baseline gap-2 font-display text-2xl text-ink [&::-webkit-details-marker]:hidden">
+                <span
+                  className="inline-block text-sm text-ink-faint transition-transform duration-200 group-open/review:rotate-90"
+                  aria-hidden="true"
+                >
+                  ▶
+                </span>
+                <T en="Under review" zh="审稿中" />
+                <span className="font-sans text-sm text-ink-faint">
+                  ({shownUnderReview.length})
+                </span>
+              </summary>
+              <div className="mt-4 space-y-1">
+                {shownUnderReview.map((pub) => (
+                  <PublicationCard key={pub.title} pub={pub} />
+                ))}
+              </div>
+            </details>
+          </section>
+        )}
+
         {shownPublished.length > 0 && (
           <section>
             <h2 className="font-display text-2xl text-ink">
@@ -89,43 +126,6 @@ export default function PublicationList({
                 </div>
               ))}
             </div>
-          </section>
-        )}
-
-        {shownInPress.length > 0 && (
-          <section>
-            <h2 className="font-display text-2xl text-ink">
-              <T en="In press" zh="待刊" />
-            </h2>
-            <div className="mt-4 space-y-1">
-              {shownInPress.map((pub) => (
-                <PublicationCard key={pub.title} pub={pub} />
-              ))}
-            </div>
-          </section>
-        )}
-
-        {shownUnderReview.length > 0 && (
-          <section>
-            <details className="group/review">
-              <summary className="flex cursor-pointer list-none items-baseline gap-2 font-display text-2xl text-ink [&::-webkit-details-marker]:hidden">
-                <span
-                  className="inline-block text-sm text-ink-faint transition-transform duration-200 group-open/review:rotate-90"
-                  aria-hidden="true"
-                >
-                  ▶
-                </span>
-                <T en="Under review" zh="审稿中" />
-                <span className="font-sans text-sm text-ink-faint">
-                  ({shownUnderReview.length})
-                </span>
-              </summary>
-              <div className="mt-4 space-y-1">
-                {shownUnderReview.map((pub) => (
-                  <PublicationCard key={pub.title} pub={pub} />
-                ))}
-              </div>
-            </details>
           </section>
         )}
       </div>
