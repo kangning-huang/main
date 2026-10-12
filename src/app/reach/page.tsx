@@ -32,7 +32,7 @@ const LATER = [
   { id: "topics", en: "Topic cards", zh: "主题卡片", Component: AdaptiveTopics },
   { id: "who", en: "Who uses it", zh: "谁在用", Component: WhoUses },
   { id: "standing-on-it", en: "Standing on it", zh: "在此基础上", Component: StandingOnIt },
-  { id: "growth", en: "Growth", zh: "增长", Component: Growth },
+  { id: "growth", en: "Growth", zh: "引用增长", Component: Growth },
 ];
 
 export default function ReachPage() {
@@ -55,7 +55,7 @@ export default function ReachPage() {
             <p className="mt-3 max-w-2xl text-[15px] text-ink-muted">
               <T
                 en="Each square is one OpenAlex work that cites these papers. Colour tracks that citing work's own citation count, with higher-impact work toward the centre. Self-citations are removed."
-                zh="每个方块代表 OpenAlex 中一篇引用了这些论文的文献。颜色表示这篇文献自身被引用多少次，被引次数越高，位置越靠近中心。图中已剔除自引。"
+                zh="每个方块代表 OpenAlex 收录的一篇引用了这些论文的文献。颜色表示这篇文献自身的被引次数，被引越多，方块越靠近中心。自引已剔除。"
               />
             </p>
             <ReachLensChip />

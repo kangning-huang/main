@@ -15,7 +15,7 @@ export default function StandingOnIt() {
         <p className="mb-4 text-sm text-ink-muted">
           <T
             en={`The ten most-cited works (by their own OpenAlex citation count) that cite at least one paper in the ${lens === "lead" ? "first / last / corresponding" : "All"} view, self-citations removed.`}
-            zh="引用当前视角下至少一篇论文、且自身在 OpenAlex 被引最多的十篇文献，已剔除自引。"
+            zh="哪些文献引用了这些论文，又被更多人引用？这里从引用了当前视角下至少一篇论文的文献中，剔除自引文献，再选出自身在 OpenAlex 中被引最多的十篇。"
           />
         </p>
         <ol className="space-y-4">
@@ -29,11 +29,11 @@ export default function StandingOnIt() {
                     {w.title}
                   </a>
                   <div className="mt-1 text-xs text-ink-muted">
-                    {w.venue ? <em>{w.venue}</em> : <T en="(no venue in OpenAlex)" zh="（OpenAlex 无发表来源信息）" />} · {w.year} ·{" "}
+                    {w.venue ? <em>{w.venue}</em> : <T en="(no venue in OpenAlex)" zh="（OpenAlex 未记录发表来源）" />} · {w.year} ·{" "}
                     <T en={`cited ${w.openalexCitedByCount.toLocaleString()}× (OpenAlex)`} zh={`被引 ${w.openalexCitedByCount.toLocaleString()} 次（OpenAlex）`} />
                   </div>
                   <div className="mt-0.5 text-xs text-ink-faint">
-                    <T en="builds on: " zh="引用:" />
+                    <T en="builds on: " zh="基于以下研究" />
                     {w.builds_on.join("; ")}
                   </div>
                 </div>
@@ -42,7 +42,7 @@ export default function StandingOnIt() {
           })}
         </ol>
         <p className="mt-4 text-xs text-ink-faint">
-          <T en={`OpenAlex, as of ${meta.asOf}.`} zh={`OpenAlex，数据截至 ${meta.asOf}。`} />
+          <T en={`OpenAlex, as of ${meta.asOf}.`} zh={`数据来自 OpenAlex，截至 ${meta.asOf}。`} />
         </p>
       </div>
 
@@ -57,10 +57,10 @@ export default function StandingOnIt() {
                 <T en={u.en} zh={u.zh} />
               </p>
               <a href={u.url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-xs text-teal hover:text-ember">
-                <T en="View on Resource Watch →" zh="在 Resource Watch 查看 →" />
+                <T en="View on Resource Watch →" zh="前往 Resource Watch 查看 →" />
               </a>
               <p className="mt-2 text-[11px] text-ink-faint">
-                <T en={`Hand-curated; verified ${u.verified.on}. Not counted in any OpenAlex figure.`} zh={`人工整理，于 ${u.verified.on} 核实。不计入任何 OpenAlex 统计。`} />
+                <T en={`Hand-curated; verified ${u.verified.on}. Not counted in any OpenAlex figure.`} zh={`人工整理，于 ${u.verified.on} 核实，不计入本页任何 OpenAlex 统计。`} />
               </p>
             </li>
           ))}
