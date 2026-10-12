@@ -61,21 +61,21 @@ const THEMES: Theme[] = [
     findings: [
       {
         en: "Global urban land could expand by 0.6–1.3 million km² (78%–171%) between 2015 and 2050 across shared socioeconomic pathways.",
-        zh: "在不同共享社会经济路径下，2015 至 2050 年，全球城市用地可能增加 60 万至 130 万平方公里（78% 至 171%）。",
+        zh: "在不同的共享社会经济路径情景下，2015至2050年间，全球城市用地可能新增60万至130万平方公里，比2015年扩大78%至171%。",
         venue: "Environmental Research Letters",
         year: "2019",
         href: doiHref("10.1088/1748-9326/ab4b71"),
       },
       {
         en: "Tropical regions in the Southern Hemisphere face disproportionately high extreme-heat risk from compounding urbanization and climate warming.",
-        zh: "城市化与气候变暖叠加，让南半球热带地区面临格外高的极端高温风险。",
+        zh: "城市化与气候变暖的影响叠加，使南半球热带地区面临格外高的极端高温风险。",
         venue: "Environmental Research Letters",
         year: "2019",
         href: doiHref("10.1088/1748-9326/ab4b71"),
       },
       {
         en: "Roughly 50–63% of newly expanded urban land worldwide is projected to replace existing cropland.",
-        zh: "预计全球城市新增用地中，约50%至63%会占用现有耕地。",
+        zh: "全球城市向外扩张，新增的土地从哪里来？预计其中约50%至63%来自现有耕地。",
         venue: "Nature Communications",
         year: "2020",
         href: doiHref("10.1038/s41467-020-14386-x"),
@@ -103,7 +103,7 @@ const THEMES: Theme[] = [
       },
     ],
     apps: [
-      { en: "Urban Expansion 2050 map", zh: "2050年全球城市扩张地图", href: "/urban-expansion" },
+      { en: "Urban Expansion 2050 map", zh: "2050年城市扩张地图", href: "/urban-expansion" },
       {
         en: "URBANMOD-ZIPF model (GitHub)",
         zh: "URBANMOD-ZIPF 模型（GitHub）",
@@ -113,11 +113,11 @@ const THEMES: Theme[] = [
     openQuestions: [
       {
         en: "Will infrastructure reach the places where the next wave of urban residents will live?",
-        zh: "城市迎来下一波人口增长时，基础设施能覆盖新增居民将要居住的地方吗？",
+        zh: "下一轮城市人口增长到来时，基础设施能跟上，覆盖新增居民将要生活的地方吗？",
       },
       {
         en: "Which expansion pathways keep the cities of 2050 cooler and less exposed?",
-        zh: "怎样扩张，才能让2050年的城市更凉爽、暴露风险更低？",
+        zh: "怎样扩张，才能让2050年的城市更凉爽，减少高温暴露？",
       },
     ],
   },
@@ -131,7 +131,7 @@ const THEMES: Theme[] = [
     findings: [
       {
         en: "About half of the added nighttime outdoor heat stress from urban expansion persists even after large-scale cool-roof deployment.",
-        zh: "即使大规模推广冷屋顶，城市扩张新增的夜间室外热应力仍有约一半无法消除。",
+        zh: "即使大规模采用冷屋顶，城市扩张新增的夜间室外热应力仍会残留约一半。",
         venue: "JGR: Atmospheres",
         year: "2021",
         href: doiHref("10.1029/2020JD033831"),
@@ -145,7 +145,7 @@ const THEMES: Theme[] = [
       },
       {
         en: "A 100-metre increase in the scale of functionally homogeneous building clusters is associated with roughly 5% lower daytime urban heat island intensity.",
-        zh: "功能相同的建筑集群，尺度每增加100米，白天城市热岛强度约降低5%。",
+        zh: "功能相同的建筑集群，尺度每增加100米，对应的白天城市热岛强度约低5%。",
         venue: "PNAS",
         year: "2026",
         href: pubHref("Toward Cooler Cities by Larger Homogeneous Functional Clusters"),
@@ -198,7 +198,7 @@ const THEMES: Theme[] = [
       },
       {
         en: "When a neighborhood is rebuilt cooler, who ends up enjoying the benefit?",
-        zh: "一个街区改造后更凉快了，最后是谁受益？",
+        zh: "一个街区重建后更凉快了，最后是谁享受到了这份好处？",
       },
     ],
   },
@@ -212,21 +212,21 @@ const THEMES: Theme[] = [
     findings: [
       {
         en: "Counting building height and protection standards shifts global flood damage toward Southeast Asia: 42% of the total versus 15% under depth-only assessments.",
-        zh: "计入建筑高度与防洪标准后，东南亚占全球估计洪灾损失的 42%；若只看淹没深度，这一比例为 15%。",
+        zh: "只看淹没深度，东南亚占全球估计洪灾损失的15%。把建筑高度和防洪标准也算进去，这一比例升至42%。",
         venue: "Scientific Reports",
         year: "2026",
         href: doiHref("10.1038/s41598-026-70981-w"),
       },
       {
         en: "In Chinese cities, protection systems can reduce potential flood damage by more than 90%.",
-        zh: "在中国城市，防洪体系可将潜在洪灾损失降低90%以上。",
+        zh: "在中国城市，防洪体系可把潜在的洪灾损失减少90%以上。",
         venue: "Scientific Reports",
         year: "2026",
         href: doiHref("10.1038/s41598-026-70981-w"),
       },
       {
         en: "Pixel-level inundation probabilities from Sentinel-1 radar on Google Earth Engine enable rapid flood mapping with quantified uncertainty.",
-        zh: "在 Google Earth Engine 上处理 Sentinel-1 雷达数据，估算每个像元被淹没的概率，就能快速绘制洪水范围图，并量化结果有多大不确定性。",
+        zh: "在 Google Earth Engine 上用 Sentinel-1 雷达数据估算每个像元被淹的概率，可以快速绘制洪水范围图，也能量化结果的不确定性。",
         venue: "Remote Sensing",
         year: "2025",
         href: doiHref("10.3390/rs17101747"),
@@ -250,26 +250,26 @@ const THEMES: Theme[] = [
         venue: "Ecological Indicators",
         year: "2026",
         href: pubHref("Beyond land exposure: multidimensional assessment of future built-environment and material-stock impacts under coastal inundation"),
-        status: { en: "submitted; ongoing co-authored work", zh: "论文已投稿，合作研究仍在进行" },
+        status: { en: "submitted; ongoing co-authored work", zh: "已投稿；合作研究进行中" },
       },
     ],
     apps: [
       {
         en: "3D urban flood risk explorer",
-        zh: "三维城市洪水风险图",
+        zh: "三维城市洪水风险",
         href: "https://flood.kangning-huang.com/",
       },
     ],
     openQuestions: [
       {
         en: "What is at stake in coastal cities beyond the area of land that floods?",
-        zh: "沿海城市有多少土地会被淹？除此之外，还有什么面临风险？",
+        zh: "沿海城市遭遇洪水时，除了有多少土地被淹，还有什么面临风险？",
       },
     ],
   },
   {
     id: "scaling-form",
-    title: { en: "Scaling and form", zh: "标度规律与城市形态" },
+    title: { en: "Scaling and form", zh: "标度与形态" },
     question: {
       en: "How much material does a city need per person, and why do larger cities need less?",
       zh: "一座城市平均每人需要多少建筑材料？为什么城市越大，人均用量越少？",
@@ -284,7 +284,7 @@ const THEMES: Theme[] = [
       },
       {
         en: "Economies of scale intensify at finer resolution: neighborhood-level scaling (δ ≈ 0.75) is more sub-linear than city-level scaling (β ≈ 0.90).",
-        zh: "空间尺度越细，规模经济越明显。街区层面的标度指数（δ ≈ 0.75）低于城市层面（β ≈ 0.90）。",
+        zh: "把观察尺度从整座城市缩小到街区，规模经济就更明显。街区的标度指数（δ ≈ 0.75）低于城市的标度指数（β ≈ 0.90），意味着人口增加时，建成质量的增长相对更慢。",
         venue: "Nature Cities",
         year: "2026",
         href: pubHref("Nested economies of scale in global city mass"),
@@ -309,11 +309,11 @@ const THEMES: Theme[] = [
     openQuestions: [
       {
         en: "Which cities are over-built or under-built relative to their size, and why?",
-        zh: "考虑城市规模后，哪些城市建得过多，哪些建得不足？为什么？",
+        zh: "与人口规模相比，哪些城市建得偏多，哪些建得不足？为什么？",
       },
       {
         en: "How does building upward change the material and mobility costs of a growing city?",
-        zh: "城市不断长大，把楼建得更高，会怎样改变建材和出行成本？",
+        zh: "城市不断长大，把楼建得更高，会怎样改变建材和出行的成本？",
       },
     ],
     figure: {
@@ -380,7 +380,7 @@ export default function ResearchPage() {
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
               en="How the size and shape of cities decide their climate future. Four themes in the CLimate and Urban Environments (CLUEs) Lab: urban futures, heat, flood and coasts, and scaling and form."
-              zh="城市规模与形态如何决定未来气候？CLimate and Urban Environments（CLUEs）实验室围绕四个相互关联的主题研究这个问题。"
+              zh="城市是一个复杂社会—生态系统，人的活动、建筑和自然环境在其中相互影响。CLimate and Urban Environments（CLUEs）实验室围绕四个相互关联的主题，研究城市规模与形态怎样影响气候风险和资源消耗。"
             />
           </p>
 
