@@ -6,8 +6,9 @@ face retouching.
 ## Source
 
 - **Current (restored 2026-10-12):** full-res panel
-  `_source/ken-panel-headshot-raw.jpg` (1280×854) with Scholar-matching face
-  crop `(590, 135, 890, 435)` → 300×300.
+  `_source/ken-panel-headshot-raw.jpg` (1280×854) with face-centred
+  crop `(565, 110, 915, 460)` → 350×350 (~17% zoom-out from the prior
+  Scholar-matched 300×300 box at `(590, 135, 890, 435)`).
 - Google Scholar profile downloads (provenance; refreshed from CDN):
   - `_source/ken-scholar-profile-view.jpg` — `view_photo`
   - `_source/ken-scholar-profile-medium.jpg` — `medium_photo`
@@ -18,7 +19,7 @@ face retouching.
 
 The Scholar `medium_photo` is effectively a Lanczos downscale of the full-res
 raw (MAE ≈ 3.5 / 255), so outputs are rendered from the raw file for sharpness
-while matching Scholar’s framing / zoom.
+with a slightly wider framing than Scholar’s medium_photo zoom.
 
 ### Unused (kept on disk; not in the pipeline)
 
@@ -37,8 +38,8 @@ python3 scripts/headshot/process.py path/to/original.jpg
 
 1. Gentle grade (warm R×1.03 / B×0.97, contrast ×1.04, +2 lift). Backdrop is
    left as photographed — same look as Scholar, not a teal-bokeh mask.
-2. Face-centred square crop `(590, 135, 890, 435)` → 300×300 (matches Scholar
-   framing / zoom).
+2. Face-centred square crop `(565, 110, 915, 460)` → 350×350 (~17% zoom-out
+   from prior Scholar-matched `(590, 135, 890, 435)` / 300×300).
 3. Lanczos resize + light unsharp (r 0.8, 35%, threshold 2).
 4. Encode JPEG q84 progressive, WebP q80 m6, AVIF q60 speed 4.
 

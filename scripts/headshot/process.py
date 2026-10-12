@@ -30,7 +30,7 @@ OUT = ROOT / "public/headshot"
 
 # Face-centred square (source pixels). Matches the prior circle hero crop.
 CROPS = {
-    "square": (590, 135, 890, 435),  # 300 × 300
+    "square": (565, 110, 915, 460),  # 350 × 350 (~17% zoom-out from 300)
 }
 SIZES = {
     "square": {"1x": (160, 160), "2x": (300, 300)},
