@@ -32,7 +32,7 @@ const FILTERS: { key: LayerKey | null; en: string; zh: string }[] = [
   { key: "heat", en: "Heat-island trend", zh: "热岛趋势" },
   { key: "cooling", en: "Demolition cooling", zh: "拆除降温" },
   { key: "flood", en: "Flood damage", zh: "洪涝损失" },
-  { key: "expansion", en: "Expansion 2050", zh: "2050 年城市扩张" },
+  { key: "expansion", en: "Expansion 2050", zh: "2050 年扩张" },
   { key: "jgr", en: "Night heat stress", zh: "夜间热应激" },
 ];
 
@@ -99,7 +99,7 @@ export default function AtlasExplorer() {
         <CitySearch points={points} onSelect={select} />
         <div className="flex flex-wrap gap-2 text-sm">
           <span className="text-ink-faint">
-            <T en="Try:" zh="试试:" />
+            <T en="Try:" zh="试试" />
           </span>
           {SUGGESTED.map((slug) => {
             const p = bySlug.get(slug);
@@ -160,7 +160,7 @@ export default function AtlasExplorer() {
           />
           <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-ink-muted">
             <span className="text-ink-faint">
-              <T en="Papers covering city:" zh="覆盖此城市的论文：" />
+              <T en="Papers covering city:" zh="覆盖这座城市的论文" />
             </span>
             <Swatch color={PAPER_COUNT_COLORS[1]} en="1" zh="1" />
             <Swatch color={PAPER_COUNT_COLORS[2]} en="2" zh="2" />
@@ -173,7 +173,7 @@ export default function AtlasExplorer() {
               <span className="ml-auto">
                 <T
                   en={`${meta.counts.mapped.toLocaleString()} cities · ${multiCount.toLocaleString()} with 2+ papers`}
-                  zh={`${meta.counts.mapped.toLocaleString()} 座城市 · ${multiCount.toLocaleString()} 座有 2 篇及以上论文覆盖`}
+                  zh={`${meta.counts.mapped.toLocaleString()} 座城市 · ${multiCount.toLocaleString()} 座有至少 2 篇论文覆盖`}
                 />
               </span>
             )}
@@ -185,7 +185,7 @@ export default function AtlasExplorer() {
             <aside className="rounded-lg border border-dashed border-rule bg-paper-warm/40 p-5 text-sm text-ink-muted">
               <T
                 en="Click a city on the map, or search above, to see what each paper says about it. Dot color is how many papers cover that city."
-                zh="点击地图上的城市，或在上方搜索，就能查看各篇论文在这里发现了什么。圆点颜色表示有多少篇论文覆盖这座城市。"
+                zh="点击地图上的城市，或在上方搜索城市名，就能查看各篇论文在这里的研究结果。圆点颜色表示有多少篇论文覆盖这座城市。"
               />
             </aside>
           ) : (
