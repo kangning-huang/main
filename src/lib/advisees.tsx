@@ -19,7 +19,7 @@ export const ADVISEES: Advisee[] = [
     project:
       "Capstone replicating and extending the \"Nested economies of scale in global city mass\" analysis across four Chinese mega-cities.",
     projectZh:
-      "毕业论文复制并扩展《全球城市建成质量的嵌套规模经济》分析，应用于四个中国超大城市。",
+      "毕业论文复现并拓展《全球城市建成质量的嵌套规模经济》分析，应用于中国四座超大城市。",
     achievements: [],
     achievementsZh: [],
     linkedin: "https://www.linkedin.com/in/john-nabors",
@@ -30,7 +30,7 @@ export const ADVISEES: Advisee[] = [
     project:
       "Honors capstone on urban heat risks in Chongqing using remote sensing and spatial analysis.",
     projectZh:
-      "荣誉毕业论文，利用遥感和空间分析研究重庆城市高温风险。",
+      "荣誉毕业论文利用遥感和空间分析，研究重庆的城市高温风险。",
     achievements: [
       <>Admitted to <a href="https://shanghai.nyu.edu/news/nyu-shanghai-senior-wins-erasmus-mundus-scholarship" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Erasmus Mundus International Master in Urban Studies</a> (University of Glasgow, Universitat Autònoma de Barcelona, Kyoto University)</>,
     ],
@@ -45,7 +45,7 @@ export const ADVISEES: Advisee[] = [
     project:
       "Capstone extending urban scaling analysis with machine learning to identify factors explaining deviations from urban scaling patterns.",
     projectZh:
-      "毕业论文运用机器学习扩展城市标度分析，识别城市标度模式偏差的解释因素。",
+      "毕业论文用机器学习拓展城市标度分析，研究哪些因素与城市偏离标度规律有关。",
     achievements: [],
     achievementsZh: [],
     linkedin: "https://www.linkedin.com/in/conniehu25",
@@ -56,7 +56,7 @@ export const ADVISEES: Advisee[] = [
     project:
       "Research on extreme heat exposure and urban mobility in Shanghai.",
     projectZh:
-      "关于上海极端高温暴露与城市出行的研究。",
+      "研究上海的极端高温暴露与城市出行。",
     achievements: [
       "Secured Pingan Youth Inspiration Plan funding",
       "Best presentation award at NYU Shanghai symposium",
@@ -75,7 +75,7 @@ export const ADVISEES: Advisee[] = [
     project:
       "Capstone on pocket park accessibility and equitable green space distribution in Shanghai.",
     projectZh:
-      "毕业论文研究上海口袋公园可达性与绿地公平分配。",
+      "毕业论文研究上海的口袋公园是否方便到达，以及绿地分配是否公平。",
     achievements: [
       <>Admitted to <a href="https://www.design.upenn.edu/city-regional-planning/graduate/graduate-city-and-regional-planning-programs" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">University of Pennsylvania (Master of City Planning)</a></>,
     ],
@@ -90,13 +90,13 @@ export const ADVISEES: Advisee[] = [
     project:
       "Developed rapid flood monitoring algorithm using Sentinel-1 SAR data on Google Earth Engine.",
     projectZh:
-      "在Google Earth Engine上使用Sentinel-1 SAR数据开发快速洪水监测算法。",
+      "在 Google Earth Engine 上，利用 Sentinel-1 合成孔径雷达（SAR）数据开发快速洪水监测算法。",
     achievements: [
       'Co-authored published paper in Remote Sensing: "Rapid Probabilistic Inundation Mapping Using Local Thresholds and Sentinel-1 SAR Data on Google Earth Engine"',
       <>Admitted to <a href="https://www.cs.cmu.edu/academics/masters/programs" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Carnegie Mellon University School of Computer Science</a> (M.S.)</>,
     ],
     achievementsZh: [
-      '在Remote Sensing合著发表论文："Rapid Probabilistic Inundation Mapping Using Local Thresholds and Sentinel-1 SAR Data on Google Earth Engine"',
+      '在《Remote Sensing》合著发表论文："Rapid Probabilistic Inundation Mapping Using Local Thresholds and Sentinel-1 SAR Data on Google Earth Engine"',
       <>被<a href="https://www.cs.cmu.edu/academics/masters/programs" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">卡内基梅隆大学计算机科学学院</a>录取（硕士）</>,
     ],
     linkedin: "https://www.linkedin.com/in/lihan-feng-a04b46223/",
@@ -107,12 +107,12 @@ export const ADVISEES: Advisee[] = [
     project:
       "Research on low-carbon transport time penalties in Shanghai.",
     projectZh:
-      "关于上海低碳出行时间代价的研究。",
+      "研究在上海选择低碳出行需要付出多少时间。",
     achievements: [
       <>Selected as <a href="https://www.clintonfoundation.org/programs/leadership-public-service/clinton-global-initiative-university/" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Clinton Global Initiative University (CGI U)</a> Fellow</>,
     ],
     achievementsZh: [
-      <>入选<a href="https://www.clintonfoundation.org/programs/leadership-public-service/clinton-global-initiative-university/" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">克林顿全球倡议大学（CGI U）</a> 研究员</>,
+      <>入选<a href="https://www.clintonfoundation.org/programs/leadership-public-service/clinton-global-initiative-university/" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">克林顿全球倡议大学项目（CGI U）</a> 研究员</>,
     ],
   },
   {
@@ -121,7 +121,7 @@ export const ADVISEES: Advisee[] = [
     project:
       "Research on urban slum heat mitigation in Rio de Janeiro.",
     projectZh:
-      "关于里约热内卢城市贫民区高温缓解的研究。",
+      "研究如何缓解里约热内卢贫民区的高温。",
     achievements: [
       <>Selected as <a href="https://shanghai.nyu.edu/news/students-make-change-millennium-fellowship" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Millennium Fellow</a> (<a href="https://www.un.org/en/academic-impact/millennium-fellowship-class-2025-over-4000-young-leaders-making-sdgs-and-unai" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">United Nations Academic Impact</a>)</>,
       <>Most Popular Project, <a href="https://shanghai.nyu.edu/news/putting-research-focus-fall-2025-undergraduate-research-symposium" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Undergraduate Symposium</a>, NYU Shanghai (Fall 2025)</>,
@@ -138,7 +138,7 @@ export const ADVISEES: Advisee[] = [
     project:
       "Dean's Undergraduate Research Fund project.",
     projectZh:
-      "院长本科生研究基金项目。",
+      "院长本科生研究基金项目",
     achievements: [
       <>Selected as <a href="https://shanghai.nyu.edu/news/students-make-change-millennium-fellowship" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Millennium Fellow</a></>,
     ],
