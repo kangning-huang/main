@@ -14,22 +14,22 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
   "Urban Expansion 2050": {
     title: "2050年全球城市扩张",
     description:
-      "这个工具展示全球城市用地到2050年的扩张预测，依据是2019年发表于 Environmental Research Letters 的研究；数据也可在 WRI Resource Watch 获取。",
+      "到2050年，全球城市用地会扩张到哪里？这个工具展示的预测来自2019年发表于 Environmental Research Letters 的研究，数据也可在 WRI Resource Watch 获取。",
   },
   "3D Urban Flood Risk": {
     title: "三维城市洪水风险",
     description:
-      "这个网页工具展示全球城市三维洪水暴露，评估同时考虑建筑高度和防洪标准。",
+      "这个工具把建筑高度和防洪标准纳入评估，展示全球城市在三维空间中的洪水暴露情况。",
   },
   "Urban Renewal Cooling DID": {
     title: "城市更新降温的双重差分因果分析",
     description:
-      "非正规住区拆除会让城市降温吗？这个工具展示双重差分分析的关键结果，说明城市更新对降温的因果影响。",
+      "拆除非正规住区，会让城市变凉吗？这个工具展示双重差分分析的关键结果，用来评估城市更新对降温的因果影响。",
   },
   "URBANMOD-ZIPF": {
     title: "URBANMOD-ZIPF",
     description:
-      "这个开源模型模拟不同情景下全球城市用地扩张，保持齐普夫定律，呈现贴近现实的城市增长模式。",
+      "这个开源模型模拟不同情景下全球城市用地的扩张。模拟结果符合齐普夫定律，呈现贴近现实的城市增长模式。",
   },
 };
 
@@ -84,7 +84,7 @@ export default function ProjectsPage() {
         <p className="mt-2 text-ink-muted">
           <T
             en="Tools and maps from the papers."
-            zh="我把论文里的研究结果做成了工具和地图。"
+            zh="我把论文里的研究结果做成地图和工具，方便你自己探索。"
           />
         </p>
 
@@ -94,7 +94,7 @@ export default function ProjectsPage() {
         <p className="mt-1 text-sm text-ink-muted">
           <T
             en="Maps and explorers tied to specific results."
-            zh="这些地图和交互工具展示论文中的具体研究结果。"
+            zh="通过这些地图和交互工具，你可以进一步查看论文中的研究结果。"
           />
         </p>
         <ProjectGrid projects={PROJECTS.filter((p) => p.category === "academic")} />

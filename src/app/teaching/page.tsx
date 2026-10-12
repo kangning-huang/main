@@ -60,7 +60,7 @@ export default function TeachingPage() {
           <p className="mt-5 max-w-3xl text-[15px] leading-[1.75] text-ink-muted animate-fade-up delay-1">
             <T
               en="I teach environmental studies at NYU Shanghai in three courses: a debate-driven introduction to environmental thought, a systems-science gateway, and a course on the environmental challenges and opportunities of cities."
-              zh="我在上海纽约大学讲授三门环境研究课程。一门用辩论带学生认识环境思想，一门从系统科学入门，另一门讨论城市面临的环境挑战与机遇。"
+              zh="我在上海纽约大学教三门环境研究课程。学生会通过辩论认识不同的环境思想，从系统科学入门，也会讨论城市面临的环境挑战与机遇。"
             />
           </p>
 
@@ -78,7 +78,7 @@ export default function TeachingPage() {
           <p className="mt-4 max-w-3xl text-xs leading-relaxed text-ink-faint">
             <T
               en="Course readings are distributed to enrolled students through Brightspace and are not posted here."
-              zh="我通过 Brightspace 向选课学生发放课程阅读材料，不在本站公开。"
+              zh="课程阅读材料通过 Brightspace 发给选课学生，不在本站公开。"
             />
           </p>
 
@@ -89,7 +89,7 @@ export default function TeachingPage() {
           <p className="mt-2 max-w-3xl text-sm text-ink-faint">
             <T
               en="From the Environment and Society (SOCS-SHU 135) syllabus."
-              zh="摘自 Environment and Society（SOCS-SHU 135）课程大纲。"
+              zh="摘自《环境与社会》（Environment and Society，SOCS-SHU 135）课程大纲。"
             />
           </p>
           <SignatureMethods />
@@ -101,12 +101,12 @@ export default function TeachingPage() {
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted">
             <T
               en="Outside class I supervise undergraduate capstones and research through the CLUEs Lab. Projects, placements, and honors are on the lab and advisee pages."
-              zh="课外，我通过 CLUEs 实验室指导本科毕业论文与研究项目。学生做过哪些项目、后来去了哪里、获得哪些荣誉，可以在实验室和指导学生页面查看。"
+              zh="课外，我在 CLimate and Urban Environments（CLUEs）实验室指导本科毕业论文与研究项目。学生做过哪些项目、后来去了哪里、获得哪些荣誉，可以在实验室和指导学生页面查看。"
             />
           </p>
           <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <Link href="/advisees" className="link-underline font-medium text-ember">
-              <T en="Capstones & advisees →" zh="毕业项目与我指导的学生 →" />
+              <T en="Capstones & advisees →" zh="毕业项目与指导学生 →" />
             </Link>
             <Link href="/lab" className="link-underline font-medium text-ember">
               <T en="CLUEs Lab →" zh="CLimate and Urban Environments（CLUEs）实验室 →" />

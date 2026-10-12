@@ -43,7 +43,7 @@ export const COURSES: Course[] = [
     code: "SOCS-SHU 135",
     title: "Environment and Society",
     terms: { en: "Fall 2026", zh: "2026年秋季" },
-    tag: { en: "CORE STS gateway", zh: "CORE STS 通识入门课" },
+    tag: { en: "CORE STS gateway", zh: "CORE STS 入门课" },
     summary: {
       en: "Introduces environmental thought through six structured debate cycles on contested motions: nature, movements, population, the commons, values, and technological futures.",
       zh: "课程用六轮结构化辩论带学生认识环境思想。辩题围绕自然、环保运动、人口、公地、价值观与技术未来展开，每个议题都有值得讨论的分歧。",
@@ -51,7 +51,7 @@ export const COURSES: Course[] = [
     highlights: [
       {
         en: "Six two-week debate cycles with randomly assigned For/Against sides",
-        zh: "六轮辩论，每轮两周，正反方随机分配",
+        zh: "六轮辩论，每轮两周，随机分配正反方",
       },
       {
         en: "IPAT quantitative lab and a classroom Public Goods Game",
@@ -66,7 +66,7 @@ export const COURSES: Course[] = [
   {
     code: "SOCS-SHU 204",
     title: "Environmental System Science",
-    terms: { en: "2022–2025 · Fall 2026", zh: "2022–2025 · 2026年秋季" },
+    terms: { en: "2022–2025 · Fall 2026", zh: "2022至2025年 · 2026年秋季" },
     tag: { en: "Environmental Studies gateway", zh: "环境研究方向入门课" },
     summary: {
       en: "A systems-science survey of energy and material flows, dynamics, footprints, and environmental change: one of the two gateway courses in the Environmental Studies track.",
@@ -75,7 +75,7 @@ export const COURSES: Course[] = [
     highlights: [
       {
         en: "Six problem sets: population, prey–predator, S-curve growth, IPAT, personal energy footprint, resource-constrained growth",
-        zh: "六次习题，涵盖人口动态、捕食者与猎物、S 型增长、IPAT、个人能源足迹和资源约束下的增长",
+        zh: "六次习题，涵盖人口、捕食者与猎物、S 型增长、IPAT、个人能源足迹和资源约束下的增长",
       },
       {
         en: "Mid-term presentation on the climate, biome, and environmental change of a student's hometown",
@@ -83,7 +83,7 @@ export const COURSES: Course[] = [
       },
       {
         en: "Final presentation and report on a contemporary environmental challenge",
-        zh: "期末展示与书面报告，分析一项当代环境挑战",
+        zh: "期末展示与报告，分析一个当下的环境挑战",
       },
     ],
     syllabusUrl:
@@ -93,8 +93,8 @@ export const COURSES: Course[] = [
     code: "SOCS-SHU 208",
     title: "Cities at a Crossroads: Environmental Challenges and Opportunities in Cities",
     /** Chinese title as used on shanghai.nyu.edu/cn TEA coverage. */
-    titleZh: "城市十字路口：城市的环境挑战与机遇",
-    terms: { en: "2022–2025 · Spring 2026", zh: "2022–2025 · 2026年春季" },
+    titleZh: "城市十字路口（城市的环境挑战与机遇）",
+    terms: { en: "2022–2025 · Spring 2026", zh: "2022至2025年 · 2026年春季" },
     summary: {
       en: "Urban environmental challenges and opportunities across energy, heat, water, food, materials, and land, with spatial data skills and city-focused policy projects.",
       zh: "城市在能源、高温、水、食物、材料与土地上面临哪些环境挑战，又有哪些机遇？课程围绕这些问题展开，带学生练习处理空间数据，并完成以城市为对象的政策项目。",
@@ -111,7 +111,7 @@ export const COURSES: Course[] = [
       "https://docs.google.com/document/d/e/2PACX-1vTrhXo9OGMOFASQhge4gDUPwET_PLufDlfaA2kwZhVEZIc9VCMPkc0FkQl9ORC8Z2VgpaxWGg1gcrUW/pub",
     recognition: {
       en: "Shanghai City-Level Undergraduate Key Course (2025)",
-      zh: "上海高校市级重点课程（本科，2025）",
+      zh: "上海市本科重点课程（2025年）",
     },
   },
 ];
@@ -133,14 +133,14 @@ export const SIGNATURE_METHODS: { title: Bilingual; body: Bilingual }[] = [
     },
   },
   {
-    title: { en: "Device-free floor", zh: "无设备辩论现场" },
+    title: { en: "Device-free floor", zh: "无电子设备辩论" },
     body: {
       en: "Evidence decks freeze 24 hours before each debate, and the floor is device-free. Preparation may use any tool, including AI; performance is live and unassisted.",
       zh: "证据幻灯片在每场辩论前 24 小时定稿，此后不再修改。准备时可以使用任何工具，包括 AI；辩论现场不使用电子设备，发言与应辩须独立完成。",
     },
   },
   {
-    title: { en: "IPAT lab", zh: "IPAT 实验" },
+    title: { en: "IPAT lab", zh: "IPAT 实验课" },
     body: {
       en: "In pairs, students compute emissions for two countries and project them to 2050 under three scenarios. Their results become evidence for the population-and-consumption debate.",
       zh: "学生两人一组，计算两个国家的排放量，再按三种情景推算到 2050 年。计算结果直接用于“人口与消费”辩论，作为论证证据。",

@@ -21,19 +21,19 @@ export const NEWS: NewsItem[] = [
   {
     date: "2026-09",
     en: "“Toward Cooler Cities by Larger Homogeneous Functional Clusters” is in press at PNAS.",
-    zh: "我的论文《以更大的同质功能集群建设更凉爽的城市》已被 PNAS 接收，即将发表。",
+    zh: "论文《通过更大的同质功能集群建设更凉爽的城市》已获 PNAS 接收，待刊。",
     href: `/publications#${publicationSlug("Toward Cooler Cities by Larger Homogeneous Functional Clusters")}`,
   },
   {
     date: "2026-09",
     en: "Height-aware, protection-informed flood assessment published in Scientific Reports.",
-    zh: "我在洪水风险评估中纳入建筑高度与防洪标准，论文已发表于 Scientific Reports。",
+    zh: "将建筑高度和防洪标准纳入洪水评估的研究，已发表于 Scientific Reports。",
     href: "https://doi.org/10.1038/s41598-026-70981-w",
   },
   {
     date: "2026-07",
     en: "Informal settlement demolition and urban cooling published in npj Environmental Social Sciences.",
-    zh: "我研究非正规住区拆除与城市降温之间的因果关系，论文已发表于 npj Environmental Social Sciences。",
+    zh: "关于非正规住区拆除与城市降温的研究，已发表于 npj Environmental Social Sciences。",
     href: "https://doi.org/10.1038/s44432-026-00009-1",
   },
 ];
