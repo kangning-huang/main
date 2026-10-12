@@ -23,7 +23,7 @@ export default function Growth() {
       <p className="max-w-3xl text-[15px] leading-relaxed text-ink-muted">
         <T
           en={`Citing works per year, by theme, self-citations removed (OpenAlex). All panels share one scale. ${asOfYear} is a partial year (to ${meta.asOf}). Papers published from ${meta.earlyFromYear} on are listed as “early” instead of drawn as bars.`}
-          zh={`每年有多少文献引用这些论文，按主题统计并剔除自引（OpenAlex）。各图纵轴刻度相同。${asOfYear} 年数据仅截至 ${meta.asOf}。${meta.earlyFromYear} 年及以后发表的论文标为“早期”，不画柱状图。`}
+          zh={`每年有多少篇文献引用这些论文？这里按主题统计 OpenAlex 的记录，并剔除自引。各图的纵轴刻度相同，方便比较。${asOfYear} 年的数据仅截至 ${meta.asOf}。${meta.earlyFromYear} 年及以后发表的论文标为“早期”，不绘制柱状图。`}
         />
       </p>
 
@@ -77,7 +77,7 @@ export default function Growth() {
 
       {early.length > 0 && (
         <div className="mt-8 rounded-lg border border-rule bg-paper-warm/50 p-4 text-sm">
-          <h3 className="font-medium text-ink"><T en="Early papers (not charted)" zh="早期论文（未入图）" /></h3>
+          <h3 className="font-medium text-ink"><T en="Early papers (not charted)" zh="早期论文（未绘图）" /></h3>
           <ul className="mt-2 space-y-1 text-ink-muted">
             {early.map((p) => (
               <li key={p.doi}>
@@ -95,7 +95,7 @@ export default function Growth() {
         <p className="mt-3 text-xs text-ink-faint">
           <T
             en={`Growth drops ${view.growthDatesDropped} citing work(s) whose OpenAlex date is earlier than the paper it cites.`}
-            zh={`增长图已剔除 ${view.growthDatesDropped} 篇施引文献，它们在 OpenAlex 中记录的日期早于所引论文。`}
+            zh={`有 ${view.growthDatesDropped} 篇引用这些论文的文献，在 OpenAlex 中记录的发表日期早于被引用的论文，因此未计入增长图。`}
           />
         </p>
       )}
