@@ -36,7 +36,7 @@ Parent teaching folder: Drive `1MuwLO-ZLLSXgNrcBFhkWJZMCZh2uIbKe` (owner kh3657@
 - Local copy: `/workspace/teaching-materials/Syllabus_SOCS-SHU135_Fall2026_DRAFT.md`
 - Term evidenced: **Fall 2026** (NYU Shanghai CORE STS)
 - One-line: Introduces environmental thought through six structured debate cycles on contested motions (nature, movements, population, commons, values, technological futures).
-- Signature methods (from syllabus text only):
+- Debate-cycle methods (from syllabus text only; also listed under Signature methods):
   - Six two-week debate cycles; randomly assigned For/Against sides each cycle
   - Pre- and post-debate anonymous ballots (paper); device-free debate floor; evidence decks freeze 24h before
   - IPAT quantitative lab; classroom Public Goods Game; chart openers / one-minute closers
@@ -61,6 +61,19 @@ Parent teaching folder: Drive `1MuwLO-ZLLSXgNrcBFhkWJZMCZh2uIbKe` (owner kh3657@
 - One-line: Urban environmental challenges and opportunities across energy, heat, water, food, material, and land, with spatial data skills and city-focused policy projects.
 - Methods: weekly analytical reports; field-trip report; group final city policy report; Tableau / GEE optional tools.
 - This is the course named in the TEA classroom observation and the municipal key-course recognition.
+
+
+
+## Signature methods — cross-course (updated 2026-10-12)
+
+Public `/teaching` Signature methods are **not** limited to SOCS-SHU 135. Sources:
+
+1. **3rd Year Review - Teaching - v3** (Drive Doc `1xdqi39mf5CMiZ24agZhpoPUBZ5GCDONP8LjyOK0dh0A`): backward design; progressive scaffolds; systems-dynamics problem sets (204); analytical reports + fieldwork (208); device-minimal lecture segments; turn-and-share / assigned-roles participation.
+2. **Teaching_Statement_TEA_2026_vC_2pg** + TEA packet CV practices: scaffolded analytical reports; experiential field observation vs. AI descriptive claims; AI-aware scholarship (verify, cite, defend reasoning).
+3. **NYU Shanghai TEA interview** (https://shanghai.nyu.edu/is/ai-age-how-do-great-teachers-teach): motivation via fear *and* hope; systems / interdisciplinary thinking; oral defenses (~10 min, devices off) after assignments.
+4. Course syllabi 135 / 204 / 208 (debate stack, problem sets, weekly reports, field-trip report).
+
+Do not invent methods beyond these sources. Course tags on each method are attribution only.
 
 ## Publishability notes
 

@@ -16,6 +16,11 @@ export default function SignatureMethods() {
             <h3 className="font-display text-lg text-ink">
               <T en={m.title.en} zh={m.title.zh} />
             </h3>
+            {m.courses ? (
+              <p className="mt-0.5 text-xs tracking-wide text-ink-faint">
+                <T en={m.courses.en} zh={m.courses.zh} />
+              </p>
+            ) : null}
             <p className="mt-1 text-sm leading-relaxed text-ink-muted">
               <T en={m.body.en} zh={m.body.zh} />
             </p>
