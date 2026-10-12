@@ -137,14 +137,6 @@ export const SIGNATURE_METHODS: SignatureMethod[] = [
     },
   },
   {
-    title: { en: "Pre- and post-debate ballots", zh: "辩论前后匿名投票" },
-    courses: { en: "SOCS-SHU 135", zh: "SOCS-SHU 135" },
-    body: {
-      en: "Everyone records an honest position on paper, anonymously, before and after each debate. The side that moves the ballot “wins”; argument quality is graded separately by rubric.",
-      zh: "每场辩论前后，所有人都在纸上匿名写下自己的真实立场。哪一方让投票转向自己，哪一方就“获胜”；论证质量另按评分标准评定。",
-    },
-  },
-  {
     title: { en: "Device-free floor", zh: "无设备辩论现场" },
     courses: { en: "SOCS-SHU 135", zh: "SOCS-SHU 135" },
     body: {
@@ -185,30 +177,6 @@ export const SIGNATURE_METHODS: SignatureMethod[] = [
     body: {
       en: "Six problem sets move from exponential growth to resource-constrained feedbacks. Students build and run simple models, then carry that systems habit into mid-term and final analyses of real environmental change.",
       zh: "六次习题从指数增长走到资源约束下的反馈。学生搭建并运行简单模型，再把这种系统习惯带进期中与期末对现实环境变化的分析。",
-    },
-  },
-  {
-    title: { en: "IPAT lab", zh: "IPAT 实验课" },
-    courses: { en: "SOCS-SHU 135 · 204", zh: "SOCS-SHU 135 · 204" },
-    body: {
-      en: "In pairs, students compute emissions for two countries and project them to 2050 under three scenarios. Their results become evidence for the population-and-consumption debate.",
-      zh: "学生两人一组，计算两个国家的排放量，再按三种情景推算到 2050 年。计算结果直接用于“人口与消费”辩论，作为论证证据。",
-    },
-  },
-  {
-    title: { en: "Public Goods Game", zh: "公共物品博弈" },
-    courses: { en: "SOCS-SHU 135", zh: "SOCS-SHU 135" },
-    body: {
-      en: "A multi-round classroom game, first anonymous and then with communication. The class's own cooperation data feeds the debate on the commons.",
-      zh: "课堂博弈分多轮进行，先匿名，再允许交流。全班的合作数据会成为“公地”辩论的证据。",
-    },
-  },
-  {
-    title: { en: "Chart openers & one-minute closers", zh: "图表开场，一分钟收尾" },
-    courses: { en: "SOCS-SHU 135", zh: "SOCS-SHU 135" },
-    body: {
-      en: "Each class opens with an unlabeled environmental chart to guess, reveal, and critique, and closes with a one-sentence statement of where you now stand on the motion.",
-      zh: "每节课先看一张隐去标注的环境图表，猜它讲了什么，揭晓后再一起评析。下课前，每人用一句话写下自己对辩题的当前立场，以及是什么让自己改变了看法。",
     },
   },
   {
