@@ -77,6 +77,15 @@ export const PROJECTS: Project[] = [
     // imagePath: "/projects/nested-scaling-city-mass.jpg", // Run `npm run screenshots` to generate
   },
   {
+    title: "China City Mass Index Map",
+    description:
+      "Interactive map of city- and neighborhood-level material intensity for Chinese cities versus other upper-middle-income countries.",
+    url: "https://cmi.kangning-huang.com/",
+    tags: ["Urban Scaling", "Material Intensity", "Interactive Map"],
+    featured: true,
+    category: "academic",
+  },
+  {
     title: "Urban Expansion 2050",
     description:
       "Global urban land expansion through 2050, from the Environmental Research Letters (2019) projections; data also on WRI Resource Watch.",
