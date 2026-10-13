@@ -166,6 +166,10 @@ export const POSTDOCS: LabPostdoc[] = [
     name: "Aiyu Zheng",
     roleEn: "Postdoc · Co-advised with Mingzhen Lu",
     roleZh: "博士后 · 由我与 Mingzhen Lu 联合指导",
+    project:
+      "Research on urban vine canopies as a heat-adaptation solution (global meta-analysis of cooling performance).",
+    projectZh:
+      "研究城市藤本植物冠层作为高温适应方案（冷却效果的全球荟萃分析）。",
   },
 ];
 
