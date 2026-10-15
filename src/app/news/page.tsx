@@ -4,7 +4,7 @@ import { NEWS, formatNewsDate } from "@/lib/news";
 import T from "@/components/T";
 
 const DESCRIPTION =
-  "News from Kangning (Ken) Huang and the CLUEs Lab at NYU Shanghai: papers accepted, in press, and published.";
+  "News from Kangning (Ken) Huang and the CLUEs Lab at NYU Shanghai: awards, students, grants, talks, and papers.";
 
 export const metadata: Metadata = {
   title: "News",
@@ -54,8 +54,8 @@ export default function NewsPage() {
           </h1>
           <p className="mt-4 text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
-              en="Acceptance, in-press, and publication notes, newest first."
-              zh="这里记录我的论文从接收到发表的进展，最新消息排在前面。"
+              en="Awards, students, grants, talks, and publication notes, newest first."
+              zh="这里记录奖项、学生、资助、报告与论文进展，最新消息排在前面。"
             />
           </p>
 
