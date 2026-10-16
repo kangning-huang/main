@@ -18,6 +18,13 @@ export const NEWS: NewsItem[] = [
   },
   {
     date: "2026-10",
+    en: "“Toward Cooler Cities by Larger Homogeneous Functional Clusters” scheduled for publication the week of 19 Oct 2026 in PNAS.",
+    zh: "论文《通过更大的同质功能集群建设更凉爽的城市》定于 2026 年 10 月 19 日当周在 PNAS 发表。",
+    // Still in press — no DOI yet; link to on-site entry
+    href: `/publications#${publicationSlug("Toward Cooler Cities by Larger Homogeneous Functional Clusters")}`,
+  },
+  {
+    date: "2026-10",
     en: "Hosting Prof. Timon McPhearson (Urban Systems Lab / NYU) for a guest talk at NYU Shanghai.",
     zh: "在上海纽约大学邀请 Urban Systems Lab / NYU 的 Timon McPhearson 教授做学术报告。",
     href: "/news#mcphearson-2026",
