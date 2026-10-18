@@ -1,5 +1,5 @@
 {
-  "totalCitations": 5018,
+  "totalCitations": 5048,
   "hIndex": 22,
   "i10Index": 28,
   "citedByYears": {
@@ -13,29 +13,29 @@
     "2021": 478,
     "2022": 650,
     "2023": 742,
-    "2024": 817,
-    "2025": 978,
-    "2026": 879
+    "2024": 818,
+    "2025": 979,
+    "2026": 903
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 1122,
+      "citationCount": 1129,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 961,
+      "citationCount": 966,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 775,
+      "citationCount": 777,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 548,
+      "citationCount": 549,
       "year": 2019
     },
     {
@@ -50,12 +50,12 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 117,
+      "citationCount": 119,
       "year": 2024
     },
     {
       "title": "Quantifying contributions of natural and anthropogenic dust emission from different climatic regions",
-      "citationCount": 116,
+      "citationCount": 117,
       "year": 2018
     },
     {
@@ -70,18 +70,18 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 91,
+      "citationCount": 94,
       "year": 2025
     },
     {
-      "title": "High‐resolution gridded population projections for China under the shared socioeconomic pathways",
-      "citationCount": 83,
-      "year": 2020
+      "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
+      "citationCount": 84,
+      "year": 2021
     },
     {
-      "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 82,
-      "year": 2021
+      "title": "High‐resolution gridded population projections for China under the shared socioeconomic pathways",
+      "citationCount": 84,
+      "year": 2020
     },
     {
       "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
@@ -95,12 +95,12 @@
     },
     {
       "title": "Enhancing climate-driven urban tree cooling with targeted nonclimatic interventions",
-      "citationCount": 64,
+      "citationCount": 66,
       "year": 2025
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 47,
+      "citationCount": 50,
       "year": 2025
     },
     {
@@ -114,14 +114,14 @@
       "year": 2020
     },
     {
+      "title": "Mega-city development impact on hourly extreme rainfall over the South China Greater Bay Area under near-future climate warming",
+      "citationCount": 28,
+      "year": 2023
+    },
+    {
       "title": "Multi-sensor image registration by combining local self-similarity matching and mutual information",
       "citationCount": 28,
       "year": 2018
-    },
-    {
-      "title": "Mega-city development impact on hourly extreme rainfall over the South China Greater Bay Area under near-future climate warming",
-      "citationCount": 27,
-      "year": 2023
     },
     {
       "title": "Facilitating urban climate forecasts in rapidly urbanizing regions with land-use change modeling",
@@ -304,5 +304,5 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-10-11T04:36:32.634Z"
+  "lastUpdated": "2026-10-18T03:31:47.617Z"
 }
