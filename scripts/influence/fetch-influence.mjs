@@ -80,14 +80,18 @@ async function getJson(url, attempt = 1) {
 }
 
 async function getAllCiting(workId) {
+  // Page-based paging: OpenAlex now requires an API key for cursor= past page 1.
+  // page= works on the shared free pool without a key.
   const out = [];
-  let cursor = "*";
-  while (cursor) {
-    const url = `${API}/works?filter=cites:${workId}&per_page=200&cursor=${encodeURIComponent(cursor)}&select=${CITING_SELECT}`;
+  let pageNum = 1;
+  for (;;) {
+    const url = `${API}/works?filter=cites:${workId}&per_page=200&page=${pageNum}&select=${CITING_SELECT}`;
     const page = await getJson(url);
     out.push(...page.results);
-    cursor = page.meta.next_cursor;
-    if (page.results.length === 0) break;
+    const total = page.meta?.count ?? out.length;
+    if (page.results.length === 0 || out.length >= total || page.results.length < 200) break;
+    pageNum += 1;
+    if (pageNum > 50) throw new Error(`OpenAlex page cap for ${workId}`);
   }
   return out;
 }

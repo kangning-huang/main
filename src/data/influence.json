@@ -3,8 +3,8 @@
     "mode": "live",
     "source": "OpenAlex",
     "sourceUrl": "https://openalex.org",
-    "asOf": "2026-10-11",
-    "generatedAt": "2026-10-11T07:43:05.459Z",
+    "asOf": "2026-10-19",
+    "generatedAt": "2026-10-19T01:57:16.309Z",
     "schema": "reach-v2-c2-f5-h2",
     "defaultView": "all",
     "autoFlippedToLead": false,
@@ -55,20 +55,20 @@
     "papers": 27,
     "leadPapers": 15,
     "coauthorPapers": 12,
-    "openalexCitedByCountSum": 3789,
-    "citingLinksFetched": 3774,
-    "selfCitationsRemoved": 313,
+    "openalexCitedByCountSum": 3782,
+    "citingLinksFetched": 3766,
+    "selfCitationsRemoved": 309,
     "selfCitationsRemovedBy": {
-      "author-id": 254,
+      "author-id": 253,
       "orcid": 16,
-      "name": 43
+      "name": 40
     },
-    "citingLinksNonSelf": 3461,
-    "uniqueCitingWorks": 3224,
-    "citingWorksOutsideOwnField": 1036,
-    "citingWorksOutsideOwnTopics": 1097,
+    "citingLinksNonSelf": 3457,
+    "uniqueCitingWorks": 3217,
+    "citingWorksOutsideOwnField": 1033,
+    "citingWorksOutsideOwnTopics": 1093,
     "fieldsCount": 21,
-    "countriesCount": 116,
+    "countriesCount": 115,
     "leadCitingShare": 44
   },
   "papers": [
@@ -96,13 +96,13 @@
       "selfCitationsRemoved": 22,
       "citingNonSelf": 392,
       "byYear": {
-        "2020": 23,
+        "2020": 22,
         "2021": 40,
         "2022": 57,
         "2023": 73,
-        "2024": 62,
+        "2024": 61,
         "2025": 79,
-        "2026": 58
+        "2026": 60
       }
     },
     {
@@ -166,16 +166,16 @@
       },
       "openalexCitedByCount": 74,
       "citingFetched": 74,
-      "selfCitationsRemoved": 11,
-      "citingNonSelf": 63,
+      "selfCitationsRemoved": 10,
+      "citingNonSelf": 64,
       "byYear": {
         "2009": 1,
         "2021": 2,
-        "2022": 6,
-        "2023": 12,
+        "2022": 5,
+        "2023": 13,
         "2024": 14,
         "2025": 18,
-        "2026": 10
+        "2026": 11
       }
     },
     {
@@ -417,18 +417,18 @@
         "id": "T10226",
         "name": "Land Use and Ecosystem Services"
       },
-      "openalexCitedByCount": 874,
-      "citingFetched": 870,
+      "openalexCitedByCount": 873,
+      "citingFetched": 868,
       "selfCitationsRemoved": 71,
-      "citingNonSelf": 799,
+      "citingNonSelf": 797,
       "byYear": {
         "2020": 26,
-        "2021": 94,
-        "2022": 123,
-        "2023": 161,
+        "2021": 93,
+        "2022": 125,
+        "2023": 154,
         "2024": 148,
-        "2025": 158,
-        "2026": 89
+        "2025": 157,
+        "2026": 94
       }
     },
     {
@@ -450,19 +450,19 @@
         "id": "T10226",
         "name": "Land Use and Ecosystem Services"
       },
-      "openalexCitedByCount": 878,
-      "citingFetched": 872,
-      "selfCitationsRemoved": 99,
-      "citingNonSelf": 773,
+      "openalexCitedByCount": 875,
+      "citingFetched": 869,
+      "selfCitationsRemoved": 97,
+      "citingNonSelf": 772,
       "byYear": {
         "2002": 1,
         "2020": 19,
-        "2021": 86,
-        "2022": 136,
-        "2023": 141,
-        "2024": 162,
+        "2021": 85,
+        "2022": 135,
+        "2023": 140,
+        "2024": 159,
         "2025": 147,
-        "2026": 81
+        "2026": 86
       }
     },
     {
@@ -484,18 +484,18 @@
         "id": "T10226",
         "name": "Land Use and Ecosystem Services"
       },
-      "openalexCitedByCount": 606,
-      "citingFetched": 605,
-      "selfCitationsRemoved": 36,
-      "citingNonSelf": 569,
+      "openalexCitedByCount": 602,
+      "citingFetched": 601,
+      "selfCitationsRemoved": 35,
+      "citingNonSelf": 566,
       "byYear": {
         "2020": 21,
-        "2021": 56,
-        "2022": 73,
-        "2023": 92,
+        "2021": 54,
+        "2022": 75,
+        "2023": 87,
         "2024": 105,
         "2025": 121,
-        "2026": 101
+        "2026": 103
       }
     },
     {
@@ -517,20 +517,20 @@
         "id": "T10100",
         "name": "Metaheuristic Optimization Algorithms Research"
       },
-      "openalexCitedByCount": 142,
-      "citingFetched": 141,
+      "openalexCitedByCount": 140,
+      "citingFetched": 139,
       "selfCitationsRemoved": 8,
-      "citingNonSelf": 133,
+      "citingNonSelf": 131,
       "byYear": {
         "2012": 1,
         "2013": 2,
         "2014": 7,
         "2015": 12,
-        "2016": 9,
+        "2016": 8,
         "2017": 9,
         "2018": 11,
         "2019": 14,
-        "2020": 12,
+        "2020": 11,
         "2021": 12,
         "2022": 11,
         "2023": 8,
@@ -631,17 +631,17 @@
         "id": "T10347",
         "name": "Atmospheric aerosols and clouds"
       },
-      "openalexCitedByCount": 105,
-      "citingFetched": 105,
+      "openalexCitedByCount": 104,
+      "citingFetched": 104,
       "selfCitationsRemoved": 19,
-      "citingNonSelf": 86,
+      "citingNonSelf": 85,
       "byYear": {
         "2019": 7,
         "2020": 9,
         "2021": 7,
         "2022": 15,
         "2023": 7,
-        "2024": 17,
+        "2024": 16,
         "2025": 16,
         "2026": 8
       }
@@ -702,13 +702,13 @@
         "id": "T10766",
         "name": "Urban Heat Island Mitigation"
       },
-      "openalexCitedByCount": 60,
-      "citingFetched": 59,
+      "openalexCitedByCount": 62,
+      "citingFetched": 61,
       "selfCitationsRemoved": 6,
-      "citingNonSelf": 53,
+      "citingNonSelf": 55,
       "byYear": {
         "2025": 18,
-        "2026": 35
+        "2026": 37
       }
     },
     {
@@ -730,13 +730,13 @@
         "id": "T11244",
         "name": "Climate Change and Health Impacts"
       },
-      "openalexCitedByCount": 68,
-      "citingFetched": 68,
+      "openalexCitedByCount": 70,
+      "citingFetched": 70,
       "selfCitationsRemoved": 3,
-      "citingNonSelf": 65,
+      "citingNonSelf": 67,
       "byYear": {
         "2025": 22,
-        "2026": 43
+        "2026": 45
       }
     },
     {
@@ -758,13 +758,13 @@
         "id": "T10766",
         "name": "Urban Heat Island Mitigation"
       },
-      "openalexCitedByCount": 35,
-      "citingFetched": 34,
+      "openalexCitedByCount": 36,
+      "citingFetched": 35,
       "selfCitationsRemoved": 3,
-      "citingNonSelf": 31,
+      "citingNonSelf": 32,
       "byYear": {
         "2025": 11,
-        "2026": 20
+        "2026": 21
       }
     },
     {
@@ -843,15 +843,15 @@
         "id": "T10779",
         "name": "Coastal wetland ecosystem dynamics"
       },
-      "openalexCitedByCount": 59,
-      "citingFetched": 59,
+      "openalexCitedByCount": 58,
+      "citingFetched": 58,
       "selfCitationsRemoved": 3,
-      "citingNonSelf": 56,
+      "citingNonSelf": 55,
       "byYear": {
         "2020": 4,
         "2021": 10,
         "2022": 10,
-        "2023": 13,
+        "2023": 12,
         "2024": 9,
         "2025": 4,
         "2026": 6
@@ -930,20 +930,20 @@
         "papers": 27,
         "leadPapers": 15,
         "coauthorPapers": 12,
-        "openalexCitedByCountSum": 3789,
-        "citingLinksFetched": 3774,
-        "selfCitationsRemoved": 313,
+        "openalexCitedByCountSum": 3782,
+        "citingLinksFetched": 3766,
+        "selfCitationsRemoved": 309,
         "selfCitationsRemovedBy": {
-          "author-id": 254,
+          "author-id": 253,
           "orcid": 16,
-          "name": 43
+          "name": 40
         },
-        "citingLinksNonSelf": 3461,
-        "uniqueCitingWorks": 3224,
-        "citingWorksOutsideOwnField": 1036,
-        "citingWorksOutsideOwnTopics": 1097,
+        "citingLinksNonSelf": 3457,
+        "uniqueCitingWorks": 3217,
+        "citingWorksOutsideOwnField": 1033,
+        "citingWorksOutsideOwnTopics": 1093,
         "fieldsCount": 21,
-        "countriesCount": 116,
+        "countriesCount": 115,
         "leadCitingShare": 44
       },
       "adaptive": [
@@ -956,7 +956,7 @@
             "Global and Planetary Change",
             "Land Use and Ecosystem Services"
           ],
-          "citingWorks": 733,
+          "citingWorks": 730,
           "childrenOf": "subfields/2306",
           "share": 22.7,
           "examples": [
@@ -966,7 +966,7 @@
               "title": "Biodiversity impacts and conservation implications of urban land expansion projected to 2050",
               "year": 2022,
               "venue": "Proceedings of the National Academy of Sciences",
-              "openalexCitedByCount": 828
+              "openalexCitedByCount": 829
             },
             {
               "openalexId": "W4220943807",
@@ -974,7 +974,7 @@
               "title": "Global impacts of future urban expansion on terrestrial vertebrate diversity",
               "year": 2022,
               "venue": "Nature Communications",
-              "openalexCitedByCount": 514
+              "openalexCitedByCount": 511
             },
             {
               "openalexId": "W4287509770",
@@ -988,11 +988,11 @@
           "keywords": [
             {
               "name": "urban expansion",
-              "count": 200
+              "count": 198
             },
             {
               "name": "urbanization",
-              "count": 184
+              "count": 183
             },
             {
               "name": "land use change",
@@ -1000,11 +1000,11 @@
             },
             {
               "name": "land use and land cover change",
-              "count": 96
+              "count": 97
             },
             {
               "name": "ecosystem services",
-              "count": 92
+              "count": 93
             }
           ]
         },
@@ -1016,9 +1016,9 @@
             "Environmental Science",
             "Environmental Engineering"
           ],
-          "citingWorks": 514,
+          "citingWorks": 517,
           "childrenOf": "fields/23",
-          "share": 15.9,
+          "share": 16.1,
           "examples": [
             {
               "openalexId": "W4318685275",
@@ -1026,7 +1026,7 @@
               "title": "Cooling cities through urban green infrastructure: a health impact assessment of European cities",
               "year": 2023,
               "venue": "The Lancet",
-              "openalexCitedByCount": 562
+              "openalexCitedByCount": 558
             },
             {
               "openalexId": "W3159093802",
@@ -1034,7 +1034,7 @@
               "title": "LCZ Generator: A Web Application to Create Local Climate Zone Maps",
               "year": 2021,
               "venue": "Frontiers in Environmental Science",
-              "openalexCitedByCount": 328
+              "openalexCitedByCount": 325
             },
             {
               "openalexId": "W3164212919",
@@ -1042,21 +1042,21 @@
               "title": "Crowdsourced air temperatures contrast satellite measures of the urban heat island and its mechanisms",
               "year": 2021,
               "venue": "Science Advances",
-              "openalexCitedByCount": 320
+              "openalexCitedByCount": 319
             }
           ],
           "keywords": [
             {
               "name": "urban heat island",
-              "count": 228
+              "count": 231
             },
             {
               "name": "land surface temperature",
-              "count": 142
+              "count": 144
             },
             {
               "name": "urbanization",
-              "count": 89
+              "count": 91
             },
             {
               "name": "urban morphology",
@@ -1075,9 +1075,9 @@
           "path": [
             "Engineering"
           ],
-          "citingWorks": 270,
+          "citingWorks": 273,
           "childrenOf": null,
-          "share": 8.4,
+          "share": 8.5,
           "examples": [
             {
               "openalexId": "W3188524028",
@@ -1085,7 +1085,7 @@
               "title": "The 30 m annual land cover dataset and its dynamics in China from 1990 to 2019",
               "year": 2021,
               "venue": "Earth system science data",
-              "openalexCitedByCount": 3839
+              "openalexCitedByCount": 3851
             },
             {
               "openalexId": "W3092843175",
@@ -1093,7 +1093,7 @@
               "title": "The Sustainability of Artificial Intelligence: An Urbanistic Viewpoint from the Lens of Smart and Sustainable Cities",
               "year": 2020,
               "venue": "Sustainability",
-              "openalexCitedByCount": 335
+              "openalexCitedByCount": 334
             },
             {
               "openalexId": "W4363652090",
@@ -1101,7 +1101,7 @@
               "title": "A first Chinese building height estimate at 10 m resolution (CNBH-10 m) using multi-source earth observations and machine learning",
               "year": 2023,
               "venue": "Remote Sensing of Environment",
-              "openalexCitedByCount": 322
+              "openalexCitedByCount": 319
             }
           ],
           "keywords": [
@@ -1111,7 +1111,7 @@
             },
             {
               "name": "urbanization",
-              "count": 21
+              "count": 22
             },
             {
               "name": "urban morphology",
@@ -1135,7 +1135,7 @@
             "Environmental Science",
             "Ecology"
           ],
-          "citingWorks": 210,
+          "citingWorks": 208,
           "childrenOf": "fields/23",
           "share": 6.5,
           "examples": [
@@ -1145,7 +1145,7 @@
               "title": "Traits shaping urban tolerance in birds differ around the world",
               "year": 2023,
               "venue": "Current Biology",
-              "openalexCitedByCount": 135
+              "openalexCitedByCount": 134
             },
             {
               "openalexId": "W4311574907",
@@ -1153,7 +1153,7 @@
               "title": "Urbanization affects spatial variation and species similarity of bird diversity distribution",
               "year": 2022,
               "venue": "Science Advances",
-              "openalexCitedByCount": 113
+              "openalexCitedByCount": 114
             },
             {
               "openalexId": "W3192613089",
@@ -1161,13 +1161,13 @@
               "title": "The role of soil in the contribution of food and feed",
               "year": 2021,
               "venue": "Philosophical Transactions of the Royal Society B Biological Sciences",
-              "openalexCitedByCount": 104
+              "openalexCitedByCount": 106
             }
           ],
           "keywords": [
             {
               "name": "urbanization",
-              "count": 48
+              "count": 49
             },
             {
               "name": "urban birds",
@@ -1175,15 +1175,15 @@
             },
             {
               "name": "urban biodiversity",
-              "count": 20
+              "count": 18
             },
             {
               "name": "urban green space",
-              "count": 16
+              "count": 15
             },
             {
               "name": "habitat connectivity",
-              "count": 15
+              "count": 14
             }
           ]
         },
@@ -1194,7 +1194,7 @@
           "path": [
             "Earth and Planetary Sciences"
           ],
-          "citingWorks": 186,
+          "citingWorks": 185,
           "childrenOf": null,
           "share": 5.8,
           "examples": [
@@ -1204,7 +1204,7 @@
               "title": "Remote sensing of land change: A multifaceted perspective",
               "year": 2022,
               "venue": "Remote Sensing of Environment",
-              "openalexCitedByCount": 239
+              "openalexCitedByCount": 238
             },
             {
               "openalexId": "W3176953824",
@@ -1212,7 +1212,7 @@
               "title": "Road dust resuspension: A review",
               "year": 2021,
               "venue": "Atmospheric Research",
-              "openalexCitedByCount": 176
+              "openalexCitedByCount": 174
             },
             {
               "openalexId": "W2792886864",
@@ -1226,11 +1226,11 @@
           "keywords": [
             {
               "name": "PM2.5",
-              "count": 28
+              "count": 27
             },
             {
               "name": "PM10",
-              "count": 20
+              "count": 19
             },
             {
               "name": "urbanization",
@@ -1253,7 +1253,7 @@
           "path": [
             "Agricultural and Biological Sciences"
           ],
-          "citingWorks": 152,
+          "citingWorks": 150,
           "childrenOf": null,
           "share": 4.7,
           "examples": [
@@ -1263,7 +1263,7 @@
               "title": "The Impact of Population Growth on Natural Resources and Farmers’ Capacity to Adapt to Climate Change in Low-Income Countries",
               "year": 2021,
               "venue": "Earth Systems and Environment",
-              "openalexCitedByCount": 566
+              "openalexCitedByCount": 567
             },
             {
               "openalexId": "W3164105866",
@@ -1271,7 +1271,7 @@
               "title": "Exploring the multiple land degradation pathways across the planet",
               "year": 2021,
               "venue": "Earth-Science Reviews",
-              "openalexCitedByCount": 324
+              "openalexCitedByCount": 322
             },
             {
               "openalexId": "W4381599008",
@@ -1279,13 +1279,13 @@
               "title": "The effects of urbanization on pollinators and pollination: A meta‐analysis",
               "year": 2023,
               "venue": "Ecology Letters",
-              "openalexCitedByCount": 153
+              "openalexCitedByCount": 154
             }
           ],
           "keywords": [
             {
               "name": "urbanization",
-              "count": 51
+              "count": 50
             },
             {
               "name": "urban green space",
@@ -1313,7 +1313,7 @@
             "Environmental Science",
             "Health, Toxicology and Mutagenesis"
           ],
-          "citingWorks": 146,
+          "citingWorks": 145,
           "childrenOf": "fields/23",
           "share": 4.5,
           "examples": [
@@ -1323,7 +1323,7 @@
               "title": "Urban nature as a source of resilience during social distancing amidst the coronavirus pandemic",
               "year": 2020,
               "venue": null,
-              "openalexCitedByCount": 295
+              "openalexCitedByCount": 292
             },
             {
               "openalexId": "W3114366349",
@@ -1331,7 +1331,7 @@
               "title": "Urban street tree biodiversity and antidepressant prescriptions",
               "year": 2020,
               "venue": "Scientific Reports",
-              "openalexCitedByCount": 198
+              "openalexCitedByCount": 196
             },
             {
               "openalexId": "W4387609414",
@@ -1339,7 +1339,7 @@
               "title": "Improved human greenspace exposure equality during 21st century urbanization",
               "year": 2023,
               "venue": "Nature Communications",
-              "openalexCitedByCount": 195
+              "openalexCitedByCount": 193
             }
           ],
           "keywords": [
@@ -1372,7 +1372,7 @@
           "path": [
             "Social Sciences"
           ],
-          "citingWorks": 109,
+          "citingWorks": 108,
           "childrenOf": null,
           "share": 3.4,
           "examples": [
@@ -1382,7 +1382,7 @@
               "title": "The ecological and evolutionary consequences of systemic racism in urban environments",
               "year": 2020,
               "venue": "Science",
-              "openalexCitedByCount": 668
+              "openalexCitedByCount": 669
             },
             {
               "openalexId": "W4200121728",
@@ -1390,7 +1390,7 @@
               "title": "Modelling and quantifying tomorrow's risks from natural hazards",
               "year": 2021,
               "venue": "The Science of The Total Environment",
-              "openalexCitedByCount": 127
+              "openalexCitedByCount": 125
             },
             {
               "openalexId": "W2922331810",
@@ -1398,7 +1398,7 @@
               "title": "Multi-objective spatial reconstruction of rural settlements considering intervillage social connections",
               "year": 2019,
               "venue": "Journal of Rural Studies",
-              "openalexCitedByCount": 94
+              "openalexCitedByCount": 93
             }
           ],
           "keywords": [
@@ -1432,7 +1432,7 @@
             "Environmental Science",
             "Management, Monitoring, Policy and Law"
           ],
-          "citingWorks": 108,
+          "citingWorks": 107,
           "childrenOf": "fields/23",
           "share": 3.3,
           "examples": [
@@ -1442,7 +1442,7 @@
               "title": "Climate change increases global risk to urban forests",
               "year": 2022,
               "venue": "Nature Climate Change",
-              "openalexCitedByCount": 297
+              "openalexCitedByCount": 296
             },
             {
               "openalexId": "W3183777795",
@@ -1450,7 +1450,7 @@
               "title": "Multi-objective urban land use optimization using spatial data: A systematic review",
               "year": 2021,
               "venue": "Sustainable Cities and Society",
-              "openalexCitedByCount": 175
+              "openalexCitedByCount": 174
             },
             {
               "openalexId": "W4379208505",
@@ -1458,7 +1458,7 @@
               "title": "Analyzing “economy-society-environment” sustainability from the perspective of urban spatial structure: A case study of the Yangtze River delta urban agglomeration",
               "year": 2023,
               "venue": "Sustainable Cities and Society",
-              "openalexCitedByCount": 166
+              "openalexCitedByCount": 167
             }
           ],
           "keywords": [
@@ -1472,7 +1472,7 @@
             },
             {
               "name": "urbanization",
-              "count": 13
+              "count": 12
             },
             {
               "name": "urban green space",
@@ -1501,7 +1501,7 @@
               "title": "Robust Feature Matching for Remote Sensing Image Registration via Locally Linear Transforming",
               "year": 2015,
               "venue": "IEEE Transactions on Geoscience and Remote Sensing",
-              "openalexCitedByCount": 475
+              "openalexCitedByCount": 474
             },
             {
               "openalexId": "W4226219104",
@@ -1509,7 +1509,7 @@
               "title": "LNIFT: Locally Normalized Image for Rotation Invariant Multimodal Feature Matching",
               "year": 2022,
               "venue": "IEEE Transactions on Geoscience and Remote Sensing",
-              "openalexCitedByCount": 142
+              "openalexCitedByCount": 144
             },
             {
               "openalexId": "W4287729881",
@@ -1550,9 +1550,9 @@
           "path": [
             "Economics, Econometrics and Finance"
           ],
-          "citingWorks": 89,
+          "citingWorks": 88,
           "childrenOf": null,
-          "share": 2.8,
+          "share": 2.7,
           "examples": [
             {
               "openalexId": "W3119762449",
@@ -1560,7 +1560,15 @@
               "title": "Urbanization, land use change, and carbon emissions: Quantitative assessments for city-level carbon emissions in Beijing-Tianjin-Hebei region",
               "year": 2021,
               "venue": "Sustainable Cities and Society",
-              "openalexCitedByCount": 451
+              "openalexCitedByCount": 453
+            },
+            {
+              "openalexId": "W4385228868",
+              "doi": "10.1017/9781009157926.004",
+              "title": "Emissions Trends and Drivers",
+              "year": 2023,
+              "venue": "Cambridge University Press eBooks",
+              "openalexCitedByCount": 292
             },
             {
               "openalexId": "W2503984667",
@@ -1568,15 +1576,7 @@
               "title": "Understanding the relation between urbanization and the eco-environment in China's Yangtze River Delta using an improved EKC model and coupling analysis",
               "year": 2016,
               "venue": "The Science of The Total Environment",
-              "openalexCitedByCount": 265
-            },
-            {
-              "openalexId": "W3100934073",
-              "doi": "10.1016/j.jclepro.2020.125015",
-              "title": "Can the new energy demonstration city policy reduce environmental pollution? Evidence from a quasi-natural experiment in China",
-              "year": 2020,
-              "venue": "Journal of Cleaner Production",
-              "openalexCitedByCount": 265
+              "openalexCitedByCount": 264
             }
           ],
           "keywords": [
@@ -1590,7 +1590,7 @@
             },
             {
               "name": "urban agglomerations",
-              "count": 15
+              "count": 16
             },
             {
               "name": "CO2 emissions",
@@ -1609,7 +1609,7 @@
           "path": [
             "Other"
           ],
-          "citingWorks": 611,
+          "citingWorks": 610,
           "childrenOf": null,
           "share": 19,
           "examples": [
@@ -1619,7 +1619,7 @@
               "title": "Satellite imaging reveals increased proportion of population exposed to floods",
               "year": 2021,
               "venue": "Nature",
-              "openalexCitedByCount": 1474
+              "openalexCitedByCount": 1468
             },
             {
               "openalexId": "W3034880358",
@@ -1627,7 +1627,7 @@
               "title": "Mapping global urban boundaries from the global artificial impervious area (GAIA) data",
               "year": 2020,
               "venue": "Environmental Research Letters",
-              "openalexCitedByCount": 806
+              "openalexCitedByCount": 802
             },
             {
               "openalexId": "W3091948139",
@@ -1635,17 +1635,17 @@
               "title": "Flood susceptibility modelling using advanced ensemble machine learning models",
               "year": 2020,
               "venue": "Geoscience Frontiers",
-              "openalexCitedByCount": 572
+              "openalexCitedByCount": 571
             }
           ],
           "keywords": [
             {
               "name": "urbanization",
-              "count": 129
+              "count": 128
             },
             {
               "name": "urban expansion",
-              "count": 48
+              "count": 47
             },
             {
               "name": "nighttime lights",
@@ -1673,38 +1673,38 @@
         {
           "id": "fields/23",
           "name": "Environmental Science",
-          "citingWorks": 2216,
+          "citingWorks": 2212,
           "topSubfields": [
             {
               "name": "Global and Planetary Change",
-              "citingWorks": 1085
+              "citingWorks": 1082
             },
             {
               "name": "Environmental Engineering",
-              "citingWorks": 514
+              "citingWorks": 517
             },
             {
               "name": "Ecology",
-              "citingWorks": 210
+              "citingWorks": 208
             },
             {
               "name": "Health, Toxicology and Mutagenesis",
-              "citingWorks": 146
+              "citingWorks": 145
             },
             {
               "name": "Management, Monitoring, Policy and Law",
-              "citingWorks": 108
+              "citingWorks": 107
             }
           ]
         },
         {
           "id": "fields/22",
           "name": "Engineering",
-          "citingWorks": 270,
+          "citingWorks": 273,
           "topSubfields": [
             {
               "name": "Media Technology",
-              "citingWorks": 90
+              "citingWorks": 91
             },
             {
               "name": "Ocean Engineering",
@@ -1712,26 +1712,26 @@
             },
             {
               "name": "Building and Construction",
-              "citingWorks": 58
+              "citingWorks": 59
+            },
+            {
+              "name": "Aerospace Engineering",
+              "citingWorks": 14
             },
             {
               "name": "Civil and Structural Engineering",
               "citingWorks": 14
-            },
-            {
-              "name": "Aerospace Engineering",
-              "citingWorks": 13
             }
           ]
         },
         {
           "id": "fields/19",
           "name": "Earth and Planetary Sciences",
-          "citingWorks": 186,
+          "citingWorks": 185,
           "topSubfields": [
             {
               "name": "Atmospheric Science",
-              "citingWorks": 149
+              "citingWorks": 148
             },
             {
               "name": "Earth-Surface Processes",
@@ -1754,11 +1754,11 @@
         {
           "id": "fields/11",
           "name": "Agricultural and Biological Sciences",
-          "citingWorks": 152,
+          "citingWorks": 150,
           "topSubfields": [
             {
               "name": "Ecology, Evolution, Behavior and Systematics",
-              "citingWorks": 53
+              "citingWorks": 51
             },
             {
               "name": "Plant Science",
@@ -1781,7 +1781,7 @@
         {
           "id": "fields/33",
           "name": "Social Sciences",
-          "citingWorks": 109,
+          "citingWorks": 108,
           "topSubfields": [
             {
               "name": "Sociology and Political Science",
@@ -1797,7 +1797,7 @@
             },
             {
               "name": "Political Science and International Relations",
-              "citingWorks": 14
+              "citingWorks": 13
             },
             {
               "name": "Geography, Planning and Development",
@@ -1812,11 +1812,11 @@
           "topSubfields": [
             {
               "name": "Computer Vision and Pattern Recognition",
-              "citingWorks": 63
+              "citingWorks": 64
             },
             {
               "name": "Artificial Intelligence",
-              "citingWorks": 16
+              "citingWorks": 15
             },
             {
               "name": "Computational Theory and Mathematics",
@@ -1835,11 +1835,11 @@
         {
           "id": "fields/20",
           "name": "Economics, Econometrics and Finance",
-          "citingWorks": 89,
+          "citingWorks": 88,
           "topSubfields": [
             {
               "name": "Economics and Econometrics",
-              "citingWorks": 86
+              "citingWorks": 85
             },
             {
               "name": "Finance",
@@ -1850,11 +1850,11 @@
         {
           "id": "fields/13",
           "name": "Biochemistry, Genetics and Molecular Biology",
-          "citingWorks": 41,
+          "citingWorks": 42,
           "topSubfields": [
             {
               "name": "Genetics",
-              "citingWorks": 33
+              "citingWorks": 34
             },
             {
               "name": "Molecular Biology",
@@ -1869,11 +1869,11 @@
         {
           "id": "fields/27",
           "name": "Medicine",
-          "citingWorks": 18,
+          "citingWorks": 17,
           "topSubfields": [
             {
               "name": "Public Health, Environmental and Occupational Health",
-              "citingWorks": 12
+              "citingWorks": 11
             },
             {
               "name": "Physiology",
@@ -1896,11 +1896,11 @@
         {
           "id": "fields/18",
           "name": "Decision Sciences",
-          "citingWorks": 13,
+          "citingWorks": 12,
           "topSubfields": [
             {
               "name": "Management Science and Operations Research",
-              "citingWorks": 10
+              "citingWorks": 9
             },
             {
               "name": "Statistics, Probability and Uncertainty",
@@ -2072,32 +2072,32 @@
         {
           "theme": "urban-futures",
           "field": "fields/23",
-          "citingWorks": 1820
+          "citingWorks": 1814
         },
         {
           "theme": "urban-futures",
           "field": "fields/20",
-          "citingWorks": 84
+          "citingWorks": 83
         },
         {
           "theme": "urban-futures",
           "field": "fields/11",
-          "citingWorks": 147
+          "citingWorks": 145
         },
         {
           "theme": "heat",
           "field": "fields/23",
-          "citingWorks": 361
+          "citingWorks": 365
         },
         {
           "theme": "urban-futures",
           "field": "fields/33",
-          "citingWorks": 103
+          "citingWorks": 102
         },
         {
           "theme": "urban-futures",
           "field": "fields/22",
-          "citingWorks": 194
+          "citingWorks": 197
         },
         {
           "theme": "urban-futures",
@@ -2107,7 +2107,7 @@
         {
           "theme": "urban-futures",
           "field": "fields/27",
-          "citingWorks": 14
+          "citingWorks": 13
         },
         {
           "theme": "urban-futures",
@@ -2122,12 +2122,12 @@
         {
           "theme": "urban-futures",
           "field": "fields/13",
-          "citingWorks": 40
+          "citingWorks": 41
         },
         {
           "theme": "urban-futures",
           "field": "fields/19",
-          "citingWorks": 67
+          "citingWorks": 66
         },
         {
           "theme": "urban-futures",
@@ -2157,17 +2157,17 @@
         {
           "theme": "urban-futures",
           "field": "fields/18",
-          "citingWorks": 12
-        },
-        {
-          "theme": "heat",
-          "field": "fields/20",
-          "citingWorks": 3
+          "citingWorks": 11
         },
         {
           "theme": "heat",
           "field": "fields/22",
           "citingWorks": 18
+        },
+        {
+          "theme": "heat",
+          "field": "fields/20",
+          "citingWorks": 3
         },
         {
           "theme": "heat",
@@ -2222,7 +2222,7 @@
         {
           "theme": "flood-coasts",
           "field": "fields/23",
-          "citingWorks": 49
+          "citingWorks": 48
         },
         {
           "theme": "heat",
@@ -2286,12 +2286,12 @@
         },
         {
           "theme": "scaling-form",
-          "field": "fields/27",
+          "field": "fields/35",
           "citingWorks": 1
         },
         {
           "theme": "scaling-form",
-          "field": "fields/35",
+          "field": "fields/27",
           "citingWorks": 1
         },
         {
@@ -2303,43 +2303,43 @@
       "institutionTypes": [
         {
           "type": "education",
-          "citingWorks": 3036,
-          "institutions": 1860
+          "citingWorks": 3030,
+          "institutions": 1858
         },
         {
           "type": "facility",
-          "citingWorks": 1022,
-          "institutions": 485
+          "citingWorks": 1020,
+          "institutions": 487
         },
         {
           "type": "government",
-          "citingWorks": 827,
-          "institutions": 199
+          "citingWorks": 826,
+          "institutions": 197
         },
         {
           "type": "nonprofit",
-          "citingWorks": 185,
-          "institutions": 104
+          "citingWorks": 184,
+          "institutions": 103
         },
         {
           "type": "no-affiliation",
-          "citingWorks": 102,
+          "citingWorks": 101,
           "institutions": 0
         },
         {
           "type": "other",
-          "citingWorks": 100,
+          "citingWorks": 98,
           "institutions": 46
         },
         {
           "type": "company",
-          "citingWorks": 52,
-          "institutions": 51
+          "citingWorks": 53,
+          "institutions": 52
         },
         {
           "type": "archive",
-          "citingWorks": 46,
-          "institutions": 37
+          "citingWorks": 45,
+          "institutions": 36
         },
         {
           "type": "healthcare",
@@ -2348,7 +2348,7 @@
         },
         {
           "type": "funder",
-          "citingWorks": 22,
+          "citingWorks": 23,
           "institutions": 14
         }
       ],
@@ -2358,28 +2358,28 @@
           "name": "Chinese Academy of Sciences",
           "type": "government",
           "country": "CN",
-          "citingWorks": 388
+          "citingWorks": 387
         },
         {
           "id": "I4210160793",
           "name": "Institute of Geographic Sciences and Natural Resources Research",
           "type": "facility",
           "country": "CN",
-          "citingWorks": 144
+          "citingWorks": 143
         },
         {
           "id": "I211433327",
           "name": "Ministry of Natural Resources",
           "type": "government",
           "country": "CN",
-          "citingWorks": 74
+          "citingWorks": 75
         },
         {
           "id": "I1294671590",
           "name": "Centre National de la Recherche Scientifique",
           "type": "government",
           "country": "FR",
-          "citingWorks": 71
+          "citingWorks": 70
         },
         {
           "id": "I4210118728",
@@ -2428,7 +2428,7 @@
           "name": "State Key Laboratory of Remote Sensing Science",
           "type": "facility",
           "country": "CN",
-          "citingWorks": 27
+          "citingWorks": 26
         },
         {
           "id": "I4387153223",
@@ -2438,6 +2438,13 @@
           "citingWorks": 26
         },
         {
+          "id": "I141301092",
+          "name": "China Meteorological Administration",
+          "type": "government",
+          "country": "CN",
+          "citingWorks": 24
+        },
+        {
           "id": "I4210106526",
           "name": "Northwest Institute of Eco-Environment and Resources",
           "type": "facility",
@@ -2445,15 +2452,8 @@
           "citingWorks": 24
         },
         {
-          "id": "I141301092",
-          "name": "China Meteorological Administration",
-          "type": "government",
-          "country": "CN",
-          "citingWorks": 23
-        },
-        {
-          "id": "I4210119653",
-          "name": "Institute of Urban Environment",
+          "id": "I4210141657",
+          "name": "Jiangsu Center for Collaborative Innovation in Geographical Information Resource Development and Application",
           "type": "facility",
           "country": "CN",
           "citingWorks": 23
@@ -2462,224 +2462,224 @@
       "countries": [
         {
           "code": "CN",
-          "citingWorks": 1705,
-          "expected": 314.48,
-          "ratio": 5.42
+          "citingWorks": 1710,
+          "expected": 312,
+          "ratio": 5.48
         },
         {
           "code": "US",
-          "citingWorks": 533,
-          "expected": 274.97,
+          "citingWorks": 529,
+          "expected": 272.55,
           "ratio": 1.94
         },
         {
           "code": "DE",
           "citingWorks": 212,
-          "expected": 78.92,
-          "ratio": 2.69
+          "expected": 78.38,
+          "ratio": 2.7
         },
         {
           "code": "GB",
-          "citingWorks": 197,
-          "expected": 86.02,
-          "ratio": 2.29
+          "citingWorks": 194,
+          "expected": 85.48,
+          "ratio": 2.27
         },
         {
           "code": "IN",
-          "citingWorks": 157,
-          "expected": 86.39,
-          "ratio": 1.82
+          "citingWorks": 156,
+          "expected": 86.42,
+          "ratio": 1.81
         },
         {
           "code": "AU",
           "citingWorks": 129,
-          "expected": 54.24,
-          "ratio": 2.38
+          "expected": 53.81,
+          "ratio": 2.4
         },
         {
           "code": "HK",
-          "citingWorks": 126,
-          "expected": 11.15,
-          "ratio": 11.3
+          "citingWorks": 127,
+          "expected": 11.02,
+          "ratio": 11.53
         },
         {
           "code": "FR",
-          "citingWorks": 112,
-          "expected": 79.14,
-          "ratio": 1.42
+          "citingWorks": 110,
+          "expected": 78.87,
+          "ratio": 1.39
         },
         {
           "code": "CA",
-          "citingWorks": 102,
-          "expected": 55.59,
+          "citingWorks": 101,
+          "expected": 55.16,
           "ratio": 1.83
         },
         {
-          "code": "BR",
-          "citingWorks": 93,
-          "expected": 81.14,
-          "ratio": 1.15
+          "code": "IT",
+          "citingWorks": 92,
+          "expected": 49.01,
+          "ratio": 1.88
         },
         {
-          "code": "IT",
-          "citingWorks": 91,
-          "expected": 49.22,
-          "ratio": 1.85
+          "code": "BR",
+          "citingWorks": 92,
+          "expected": 80.89,
+          "ratio": 1.14
         },
         {
           "code": "NL",
-          "citingWorks": 91,
-          "expected": 29.96,
-          "ratio": 3.04
+          "citingWorks": 89,
+          "expected": 29.71,
+          "ratio": 3
         },
         {
           "code": "ES",
-          "citingWorks": 81,
-          "expected": 47.5,
-          "ratio": 1.71
+          "citingWorks": 80,
+          "expected": 47.25,
+          "ratio": 1.69
         },
         {
           "code": "JP",
-          "citingWorks": 72,
+          "citingWorks": 71,
           "expected": 62.21,
-          "ratio": 1.16
+          "ratio": 1.14
         },
         {
           "code": "CH",
           "citingWorks": 59,
-          "expected": 23.38,
-          "ratio": 2.52
+          "expected": 23.14,
+          "ratio": 2.55
         },
         {
           "code": "IR",
-          "citingWorks": 55,
-          "expected": 34.64,
-          "ratio": 1.59
+          "citingWorks": 54,
+          "expected": 34.56,
+          "ratio": 1.56
         },
         {
           "code": "SG",
-          "citingWorks": 52,
-          "expected": 8.04,
-          "ratio": 6.47
+          "citingWorks": 51,
+          "expected": 7.94,
+          "ratio": 6.43
         },
         {
           "code": "TR",
           "citingWorks": 43,
-          "expected": 23.69,
+          "expected": 23.66,
           "ratio": 1.82
         },
         {
           "code": "PL",
           "citingWorks": 42,
-          "expected": 25.88,
-          "ratio": 1.62
+          "expected": 25.79,
+          "ratio": 1.63
         },
         {
           "code": "AT",
           "citingWorks": 41,
-          "expected": 13.08,
-          "ratio": 3.13
+          "expected": 13.01,
+          "ratio": 3.15
         },
         {
           "code": "SE",
           "citingWorks": 40,
-          "expected": 21.36,
-          "ratio": 1.87
+          "expected": 21.21,
+          "ratio": 1.89
+        },
+        {
+          "code": "KR",
+          "citingWorks": 39,
+          "expected": 31.17,
+          "ratio": 1.25
         },
         {
           "code": "MX",
           "citingWorks": 39,
-          "expected": 19.79,
-          "ratio": 1.97
-        },
-        {
-          "code": "KR",
-          "citingWorks": 38,
-          "expected": 31.35,
-          "ratio": 1.21
+          "expected": 19.73,
+          "ratio": 1.98
         },
         {
           "code": "BE",
           "citingWorks": 37,
-          "expected": 18.2,
-          "ratio": 2.03
+          "expected": 18.11,
+          "ratio": 2.04
         },
         {
           "code": "NO",
           "citingWorks": 33,
-          "expected": 16.32,
-          "ratio": 2.02
+          "expected": 16.18,
+          "ratio": 2.04
         },
         {
           "code": "ZA",
-          "citingWorks": 31,
-          "expected": 18.05,
-          "ratio": 1.72
-        },
-        {
-          "code": "FI",
           "citingWorks": 30,
-          "expected": 12.86,
-          "ratio": 2.33
+          "expected": 17.95,
+          "ratio": 1.67
         },
         {
           "code": "DK",
           "citingWorks": 30,
-          "expected": 18.92,
-          "ratio": 1.59
+          "expected": 18.76,
+          "ratio": 1.6
+        },
+        {
+          "code": "FI",
+          "citingWorks": 29,
+          "expected": 12.75,
+          "ratio": 2.27
         },
         {
           "code": "PT",
           "citingWorks": 28,
-          "expected": 15.98,
-          "ratio": 1.75
+          "expected": 15.91,
+          "ratio": 1.76
         },
         {
           "code": "CL",
           "citingWorks": 28,
-          "expected": 8.58,
-          "ratio": 3.26
+          "expected": 8.54,
+          "ratio": 3.28
         },
         {
           "code": "MY",
+          "citingWorks": 25,
+          "expected": 19.2,
+          "ratio": 1.3
+        },
+        {
+          "code": "BD",
           "citingWorks": 24,
-          "expected": 19.21,
-          "ratio": 1.25
+          "expected": 7.78,
+          "ratio": 3.08
         },
         {
           "code": "AR",
           "citingWorks": 24,
-          "expected": 11.5,
+          "expected": 11.48,
           "ratio": 2.09
         },
         {
           "code": "ID",
           "citingWorks": 23,
-          "expected": 72.58,
+          "expected": 72.71,
           "ratio": 0.32
         },
         {
           "code": "GR",
           "citingWorks": 23,
-          "expected": 10.18,
-          "ratio": 2.26
-        },
-        {
-          "code": "BD",
-          "citingWorks": 22,
-          "expected": 7.85,
-          "ratio": 2.8
+          "expected": 10.15,
+          "ratio": 2.27
         },
         {
           "code": "CO",
           "citingWorks": 22,
-          "expected": 10.87,
-          "ratio": 2.02
+          "expected": 10.84,
+          "ratio": 2.03
         },
         {
           "code": "NG",
           "citingWorks": 22,
-          "expected": 16.34,
+          "expected": 16.3,
           "ratio": 1.35
         },
         {
@@ -2691,20 +2691,20 @@
         {
           "code": "CZ",
           "citingWorks": 19,
-          "expected": 11.56,
-          "ratio": 1.64
+          "expected": 11.51,
+          "ratio": 1.65
         },
         {
           "code": "EG",
           "citingWorks": 18,
-          "expected": 13.58,
+          "expected": 13.56,
           "ratio": 1.33
         },
         {
           "code": "ET",
           "citingWorks": 18,
-          "expected": 4.98,
-          "ratio": 3.62
+          "expected": 4.94,
+          "ratio": 3.65
         },
         {
           "code": "PK",
@@ -2715,74 +2715,74 @@
         {
           "code": "RU",
           "citingWorks": 16,
-          "expected": 46.22,
+          "expected": 46.27,
           "ratio": 0.35
         },
         {
           "code": "EC",
           "citingWorks": 16,
-          "expected": 4.97,
+          "expected": 4.98,
           "ratio": 3.22
         },
         {
           "code": "NZ",
           "citingWorks": 14,
-          "expected": 9.64,
-          "ratio": 1.45
+          "expected": 9.56,
+          "ratio": 1.46
         },
         {
           "code": "TH",
-          "citingWorks": 14,
-          "expected": 9.7,
-          "ratio": 1.44
+          "citingWorks": 13,
+          "expected": 10.02,
+          "ratio": 1.3
+        },
+        {
+          "code": "RO",
+          "citingWorks": 12,
+          "expected": 7.4,
+          "ratio": 1.62
         },
         {
           "code": "GH",
           "citingWorks": 12,
-          "expected": 3.15,
-          "ratio": 3.81
-        },
-        {
-          "code": "CY",
-          "citingWorks": 12,
-          "expected": 2.01,
-          "ratio": 5.96
+          "expected": 3.11,
+          "ratio": 3.86
         },
         {
           "code": "TW",
           "citingWorks": 12,
-          "expected": 13.26,
-          "ratio": 0.9
+          "expected": 13.19,
+          "ratio": 0.91
         },
         {
-          "code": "RO",
-          "citingWorks": 11,
-          "expected": 7.4,
-          "ratio": 1.49
+          "code": "HU",
+          "citingWorks": 12,
+          "expected": 5.88,
+          "ratio": 2.04
         },
         {
           "code": "MO",
           "citingWorks": 11,
-          "expected": 1.16,
-          "ratio": 9.46
+          "expected": 1.15,
+          "ratio": 9.56
         },
         {
-          "code": "HU",
+          "code": "CY",
           "citingWorks": 11,
-          "expected": 5.89,
-          "ratio": 1.87
+          "expected": 2,
+          "ratio": 5.49
         },
         {
           "code": "VN",
           "citingWorks": 10,
-          "expected": 8.32,
+          "expected": 8.3,
           "ratio": 1.2
         },
         {
           "code": "IL",
           "citingWorks": 9,
-          "expected": 6.76,
-          "ratio": 1.33
+          "expected": 6.68,
+          "ratio": 1.35
         },
         {
           "code": "IQ",
@@ -2793,74 +2793,74 @@
         {
           "code": "KE",
           "citingWorks": 8,
-          "expected": 4.96,
-          "ratio": 1.61
+          "expected": 4.92,
+          "ratio": 1.63
+        },
+        {
+          "code": "KZ",
+          "citingWorks": 8,
+          "expected": 3.13,
+          "ratio": 2.55
         },
         {
           "code": "IE",
           "citingWorks": 8,
-          "expected": 6.2,
-          "ratio": 1.29
+          "expected": 6.15,
+          "ratio": 1.3
         },
         {
           "code": "AE",
           "citingWorks": 7,
-          "expected": 3.81,
-          "ratio": 1.84
-        },
-        {
-          "code": "KZ",
-          "citingWorks": 7,
-          "expected": 3.13,
-          "ratio": 2.24
+          "expected": 3.79,
+          "ratio": 1.85
         },
         {
           "code": "PE",
           "citingWorks": 7,
-          "expected": 5.17,
-          "ratio": 1.35
+          "expected": 5.15,
+          "ratio": 1.36
         },
         {
           "code": "SI",
           "citingWorks": 6,
-          "expected": 2.99,
+          "expected": 2.98,
           "ratio": 2.01
         },
         {
           "code": "PR",
           "citingWorks": 6,
-          "expected": 0.94,
-          "ratio": 6.4
+          "expected": 0.93,
+          "ratio": 6.47
         },
         {
           "code": "PH",
           "citingWorks": 6,
-          "expected": 4.61,
-          "ratio": 1.3
+          "expected": 4.58,
+          "ratio": 1.31
         },
         {
           "code": "MA",
           "citingWorks": 6,
-          "expected": 5.28,
+          "expected": 5.26,
           "ratio": 1.14
         },
         {
           "code": "UA",
           "citingWorks": 5,
-          "expected": 16.59,
+          "expected": 16.62,
           "ratio": 0.3
         },
         {
           "code": "LT",
           "citingWorks": 5,
-          "expected": 2.24,
-          "ratio": 2.24
+          "expected": 2.23,
+          "ratio": 2.25
         },
         {
           "code": "BF",
           "citingWorks": 5,
           "expected": 0.64,
-          "ratio": 7.8
+          "ratio": 7.84
         },
         {
           "code": "DZ",
@@ -2871,13 +2871,13 @@
         {
           "code": "LU",
           "citingWorks": 5,
-          "expected": 1.23,
-          "ratio": 4.06
+          "expected": 1.25,
+          "ratio": 4.01
         },
         {
           "code": "JO",
           "citingWorks": 4,
-          "expected": 1.94,
+          "expected": 1.93,
           "ratio": 2.07
         },
         {
@@ -2889,32 +2889,32 @@
         {
           "code": "CI",
           "citingWorks": 4,
-          "expected": 1.39,
+          "expected": 1.38,
           "ratio": 2.89
         },
         {
           "code": "UZ",
           "citingWorks": 4,
-          "expected": 3.5,
-          "ratio": 1.14
+          "expected": 3.66,
+          "ratio": 1.09
         },
         {
           "code": "EE",
           "citingWorks": 4,
-          "expected": 2.2,
-          "ratio": 1.82
+          "expected": 2.19,
+          "ratio": 1.83
         },
         {
           "code": "QA",
           "citingWorks": 4,
-          "expected": 1.78,
-          "ratio": 2.25
+          "expected": 1.77,
+          "ratio": 2.26
         },
         {
           "code": "BO",
           "citingWorks": 4,
-          "expected": 0.79,
-          "ratio": 5.08
+          "expected": 0.78,
+          "ratio": 5.1
         },
         {
           "code": "BG",
@@ -2925,73 +2925,73 @@
         {
           "code": "LB",
           "citingWorks": 3,
-          "expected": 1.38,
-          "ratio": 2.18
+          "expected": 1.37,
+          "ratio": 2.19
         },
         {
           "code": "RS",
           "citingWorks": 3,
-          "expected": 4.18,
-          "ratio": 0.72
+          "expected": 4.2,
+          "ratio": 0.71
         },
         {
           "code": "VE",
           "citingWorks": 3,
-          "expected": 1.61,
-          "ratio": 1.86
+          "expected": 1.6,
+          "ratio": 1.87
         },
         {
           "code": "KG",
           "citingWorks": 3,
           "expected": 0.5,
-          "ratio": 6
+          "ratio": 6.03
         },
         {
           "code": "UY",
           "citingWorks": 3,
-          "expected": 1.36,
-          "ratio": 2.2
+          "expected": 1.35,
+          "ratio": 2.22
         },
         {
           "code": "SY",
           "citingWorks": 2,
           "expected": 0.37,
-          "ratio": 5.34
+          "ratio": 5.36
         },
         {
           "code": "TZ",
           "citingWorks": 2,
-          "expected": 2.13,
+          "expected": 2.12,
           "ratio": 0.94
         },
         {
           "code": "CU",
           "citingWorks": 2,
-          "expected": 1.8,
-          "ratio": 1.11
+          "expected": 1.79,
+          "ratio": 1.12
         },
         {
           "code": "BW",
           "citingWorks": 2,
           "expected": 0.61,
-          "ratio": 3.26
+          "ratio": 3.28
         },
         {
           "code": "IS",
           "citingWorks": 2,
-          "expected": 1.24,
-          "ratio": 1.61
+          "expected": 1.23,
+          "ratio": 1.62
         },
         {
           "code": "MN",
           "citingWorks": 2,
-          "expected": 0.73,
-          "ratio": 2.75
+          "expected": 0.74,
+          "ratio": 2.72
         },
         {
           "code": "CR",
           "citingWorks": 2,
-          "expected": 1.81,
+          "expected": 1.8,
           "ratio": 1.11
         },
         {
@@ -3004,25 +3004,25 @@
           "code": "TT",
           "citingWorks": 2,
           "expected": 0.35,
-          "ratio": 5.75
+          "ratio": 5.79
         },
         {
           "code": "GF",
           "citingWorks": 2,
           "expected": 0.26,
-          "ratio": 7.58
+          "ratio": 7.59
         },
         {
           "code": "PA",
           "citingWorks": 2,
           "expected": 1.38,
-          "ratio": 1.44
+          "ratio": 1.45
         },
         {
           "code": "NC",
           "citingWorks": 1,
           "expected": 0.62,
-          "ratio": 1.61
+          "ratio": 1.62
         },
         {
           "code": "RE",
@@ -3033,20 +3033,20 @@
         {
           "code": "LA",
           "citingWorks": 1,
-          "expected": 0.25,
-          "ratio": 3.96
+          "expected": 0.26,
+          "ratio": 3.91
         },
         {
           "code": "KH",
           "citingWorks": 1,
           "expected": 0.31,
-          "ratio": 3.21
+          "ratio": 3.2
         },
         {
           "code": "YE",
           "citingWorks": 1,
           "expected": 0.43,
-          "ratio": 2.34
+          "ratio": 2.35
         },
         {
           "code": "AL",
@@ -3063,32 +3063,32 @@
         {
           "code": "TN",
           "citingWorks": 1,
-          "expected": 4.06,
+          "expected": 4.08,
           "ratio": 0.25
         },
         {
           "code": "FJ",
           "citingWorks": 1,
-          "expected": 0.37,
-          "ratio": 2.74
+          "expected": 0.36,
+          "ratio": 2.77
         },
         {
           "code": "LR",
           "citingWorks": 1,
           "expected": 0.05,
-          "ratio": 19.69
+          "ratio": 19.75
         },
         {
           "code": "SO",
           "citingWorks": 1,
           "expected": 0.1,
-          "ratio": 10.52
+          "ratio": 10.34
         },
         {
           "code": "BZ",
           "citingWorks": 1,
           "expected": 0.04,
-          "ratio": 25.77
+          "ratio": 25.68
         },
         {
           "code": "BJ",
@@ -3099,8 +3099,8 @@
         {
           "code": "ZW",
           "citingWorks": 1,
-          "expected": 0.87,
-          "ratio": 1.15
+          "expected": 0.86,
+          "ratio": 1.16
         },
         {
           "code": "RW",
@@ -3112,49 +3112,43 @@
           "code": "GP",
           "citingWorks": 1,
           "expected": 0.4,
-          "ratio": 2.49
+          "ratio": 2.51
         },
         {
           "code": "DO",
           "citingWorks": 1,
           "expected": 0.17,
-          "ratio": 5.99
+          "ratio": 6.03
         },
         {
           "code": "SV",
           "citingWorks": 1,
           "expected": 0.16,
-          "ratio": 6.23
+          "ratio": 6.24
         },
         {
           "code": "GT",
           "citingWorks": 1,
           "expected": 0.33,
-          "ratio": 3.03
+          "ratio": 3.07
         },
         {
           "code": "HT",
           "citingWorks": 1,
           "expected": 0.07,
-          "ratio": 14.3
+          "ratio": 14.48
         },
         {
           "code": "NI",
           "citingWorks": 1,
           "expected": 0.26,
-          "ratio": 3.81
+          "ratio": 3.83
         },
         {
           "code": "KW",
           "citingWorks": 1,
           "expected": 1.01,
           "ratio": 0.99
-        },
-        {
-          "code": "BN",
-          "citingWorks": 1,
-          "expected": 0.56,
-          "ratio": 1.79
         }
       ],
       "topCitingWorks": [
@@ -3165,7 +3159,7 @@
           "year": 2021,
           "venue": "Earth system science data",
           "type": "article",
-          "openalexCitedByCount": 3839,
+          "openalexCitedByCount": 3851,
           "field": "Engineering",
           "subfield": "Media Technology",
           "topic": "Remote-Sensing Image Classification",
@@ -3180,7 +3174,7 @@
           "year": 2021,
           "venue": "Nature",
           "type": "article",
-          "openalexCitedByCount": 1474,
+          "openalexCitedByCount": 1468,
           "field": "Environmental Science",
           "subfield": "Global and Planetary Change",
           "topic": "Flood Risk Assessment and Management",
@@ -3195,7 +3189,7 @@
           "year": 2022,
           "venue": "Proceedings of the National Academy of Sciences",
           "type": "article",
-          "openalexCitedByCount": 828,
+          "openalexCitedByCount": 829,
           "field": "Environmental Science",
           "subfield": "Global and Planetary Change",
           "topic": "Land Use and Ecosystem Services",
@@ -3210,7 +3204,7 @@
           "year": 2020,
           "venue": "Environmental Research Letters",
           "type": "article",
-          "openalexCitedByCount": 806,
+          "openalexCitedByCount": 802,
           "field": "Environmental Science",
           "subfield": "Global and Planetary Change",
           "topic": "Impact of Light on Environment and Health",
@@ -3225,7 +3219,7 @@
           "year": 2020,
           "venue": "Science",
           "type": "article",
-          "openalexCitedByCount": 668,
+          "openalexCitedByCount": 669,
           "field": "Social Sciences",
           "subfield": "Sociology and Political Science",
           "topic": "Environmental Justice and Health Disparities",
@@ -3240,7 +3234,7 @@
           "year": 2020,
           "venue": "Geoscience Frontiers",
           "type": "article",
-          "openalexCitedByCount": 572,
+          "openalexCitedByCount": 571,
           "field": "Environmental Science",
           "subfield": "Global and Planetary Change",
           "topic": "Flood Risk Assessment and Management",
@@ -3255,7 +3249,7 @@
           "year": 2021,
           "venue": "Earth Systems and Environment",
           "type": "article",
-          "openalexCitedByCount": 566,
+          "openalexCitedByCount": 567,
           "field": "Agricultural and Biological Sciences",
           "subfield": "Ecology, Evolution, Behavior and Systematics",
           "topic": "Climate change impacts on agriculture",
@@ -3270,7 +3264,7 @@
           "year": 2023,
           "venue": "The Lancet",
           "type": "article",
-          "openalexCitedByCount": 562,
+          "openalexCitedByCount": 558,
           "field": "Environmental Science",
           "subfield": "Environmental Engineering",
           "topic": "Urban Heat Island Mitigation",
@@ -3285,7 +3279,7 @@
           "year": 2022,
           "venue": "Nature Communications",
           "type": "article",
-          "openalexCitedByCount": 514,
+          "openalexCitedByCount": 511,
           "field": "Environmental Science",
           "subfield": "Global and Planetary Change",
           "topic": "Land Use and Ecosystem Services",
@@ -3300,7 +3294,7 @@
           "year": 2015,
           "venue": "IEEE Transactions on Geoscience and Remote Sensing",
           "type": "article",
-          "openalexCitedByCount": 475,
+          "openalexCitedByCount": 474,
           "field": "Computer Science",
           "subfield": "Computer Vision and Pattern Recognition",
           "topic": "Advanced Image and Video Retrieval Techniques",
@@ -3315,27 +3309,27 @@
           "2013": 2,
           "2014": 14,
           "2015": 16,
-          "2016": 13,
+          "2016": 12,
           "2017": 13,
           "2018": 15,
           "2019": 20,
-          "2020": 95,
-          "2021": 278,
-          "2022": 382,
-          "2023": 442,
-          "2024": 458,
-          "2025": 471,
-          "2026": 317
+          "2020": 93,
+          "2021": 274,
+          "2022": 384,
+          "2023": 431,
+          "2024": 455,
+          "2025": 470,
+          "2026": 328
         },
         "heat": {
           "2019": 8,
           "2020": 24,
           "2021": 33,
-          "2022": 53,
-          "2023": 46,
-          "2024": 60,
+          "2022": 52,
+          "2023": 47,
+          "2024": 59,
           "2025": 54,
-          "2026": 38
+          "2026": 39
         },
         "flood-coasts": {
           "2015": 1,
@@ -3345,7 +3339,7 @@
           "2020": 9,
           "2021": 15,
           "2022": 18,
-          "2023": 24,
+          "2023": 23,
           "2024": 19,
           "2025": 12,
           "2026": 11
@@ -3374,18 +3368,18 @@
         "papers": 15,
         "leadPapers": 15,
         "coauthorPapers": 0,
-        "openalexCitedByCountSum": 1592,
-        "citingLinksFetched": 1587,
-        "selfCitationsRemoved": 120,
+        "openalexCitedByCountSum": 1590,
+        "citingLinksFetched": 1584,
+        "selfCitationsRemoved": 119,
         "selfCitationsRemovedBy": {
-          "author-id": 99,
+          "author-id": 100,
           "orcid": 8,
-          "name": 13
+          "name": 11
         },
-        "citingLinksNonSelf": 1467,
-        "uniqueCitingWorks": 1419,
+        "citingLinksNonSelf": 1465,
+        "uniqueCitingWorks": 1415,
         "citingWorksOutsideOwnField": 412,
-        "citingWorksOutsideOwnTopics": 464,
+        "citingWorksOutsideOwnTopics": 460,
         "fieldsCount": 19,
         "countriesCount": 98,
         "leadCitingShare": 100
@@ -3400,7 +3394,7 @@
             "Global and Planetary Change",
             "Land Use and Ecosystem Services"
           ],
-          "citingWorks": 409,
+          "citingWorks": 407,
           "childrenOf": "subfields/2306",
           "share": 28.8,
           "examples": [
@@ -3410,7 +3404,7 @@
               "title": "Biodiversity impacts and conservation implications of urban land expansion projected to 2050",
               "year": 2022,
               "venue": "Proceedings of the National Academy of Sciences",
-              "openalexCitedByCount": 828
+              "openalexCitedByCount": 829
             },
             {
               "openalexId": "W4225134151",
@@ -3426,7 +3420,7 @@
               "title": "Evaluating the potential impacts of land use changes on ecosystem service value under multiple scenarios in support of SDG reporting: A case study of the Wuhan urban agglomeration",
               "year": 2021,
               "venue": "Journal of Cleaner Production",
-              "openalexCitedByCount": 224
+              "openalexCitedByCount": 223
             }
           ],
           "keywords": [
@@ -3436,11 +3430,11 @@
             },
             {
               "name": "urban expansion",
-              "count": 101
+              "count": 100
             },
             {
               "name": "urbanization",
-              "count": 101
+              "count": 100
             },
             {
               "name": "land use and land cover change",
@@ -3460,7 +3454,7 @@
             "Environmental Science",
             "Environmental Engineering"
           ],
-          "citingWorks": 275,
+          "citingWorks": 274,
           "childrenOf": "fields/23",
           "share": 19.4,
           "examples": [
@@ -3470,7 +3464,7 @@
               "title": "Cooling cities through urban green infrastructure: a health impact assessment of European cities",
               "year": 2023,
               "venue": "The Lancet",
-              "openalexCitedByCount": 562
+              "openalexCitedByCount": 558
             },
             {
               "openalexId": "W3159093802",
@@ -3478,7 +3472,7 @@
               "title": "LCZ Generator: A Web Application to Create Local Climate Zone Maps",
               "year": 2021,
               "venue": "Frontiers in Environmental Science",
-              "openalexCitedByCount": 328
+              "openalexCitedByCount": 325
             },
             {
               "openalexId": "W3164212919",
@@ -3486,13 +3480,13 @@
               "title": "Crowdsourced air temperatures contrast satellite measures of the urban heat island and its mechanisms",
               "year": 2021,
               "venue": "Science Advances",
-              "openalexCitedByCount": 320
+              "openalexCitedByCount": 319
             }
           ],
           "keywords": [
             {
               "name": "urban heat island",
-              "count": 142
+              "count": 143
             },
             {
               "name": "land surface temperature",
@@ -3519,9 +3513,9 @@
           "path": [
             "Engineering"
           ],
-          "citingWorks": 96,
+          "citingWorks": 98,
           "childrenOf": null,
-          "share": 6.8,
+          "share": 6.9,
           "examples": [
             {
               "openalexId": "W3092843175",
@@ -3529,7 +3523,7 @@
               "title": "The Sustainability of Artificial Intelligence: An Urbanistic Viewpoint from the Lens of Smart and Sustainable Cities",
               "year": 2020,
               "venue": "Sustainability",
-              "openalexCitedByCount": 335
+              "openalexCitedByCount": 334
             },
             {
               "openalexId": "W3136652851",
@@ -3550,12 +3544,12 @@
           ],
           "keywords": [
             {
-              "name": "urban expansion",
+              "name": "urbanization",
               "count": 7
             },
             {
-              "name": "urbanization",
-              "count": 6
+              "name": "urban expansion",
+              "count": 7
             },
             {
               "name": "smart cities",
@@ -3588,7 +3582,7 @@
               "title": "The Impact of Population Growth on Natural Resources and Farmers’ Capacity to Adapt to Climate Change in Low-Income Countries",
               "year": 2021,
               "venue": "Earth Systems and Environment",
-              "openalexCitedByCount": 566
+              "openalexCitedByCount": 567
             },
             {
               "openalexId": "W3164105866",
@@ -3596,7 +3590,7 @@
               "title": "Exploring the multiple land degradation pathways across the planet",
               "year": 2021,
               "venue": "Earth-Science Reviews",
-              "openalexCitedByCount": 324
+              "openalexCitedByCount": 322
             },
             {
               "openalexId": "W4381599008",
@@ -3604,7 +3598,7 @@
               "title": "The effects of urbanization on pollinators and pollination: A meta‐analysis",
               "year": 2023,
               "venue": "Ecology Letters",
-              "openalexCitedByCount": 153
+              "openalexCitedByCount": 154
             }
           ],
           "keywords": [
@@ -3625,7 +3619,7 @@
               "count": 5
             },
             {
-              "name": "urban green space",
+              "name": "urban-rural gradient",
               "count": 5
             }
           ]
@@ -3637,9 +3631,9 @@
           "path": [
             "Economics, Econometrics and Finance"
           ],
-          "citingWorks": 58,
+          "citingWorks": 57,
           "childrenOf": null,
-          "share": 4.1,
+          "share": 4,
           "examples": [
             {
               "openalexId": "W3119762449",
@@ -3647,7 +3641,15 @@
               "title": "Urbanization, land use change, and carbon emissions: Quantitative assessments for city-level carbon emissions in Beijing-Tianjin-Hebei region",
               "year": 2021,
               "venue": "Sustainable Cities and Society",
-              "openalexCitedByCount": 451
+              "openalexCitedByCount": 453
+            },
+            {
+              "openalexId": "W4385228868",
+              "doi": "10.1017/9781009157926.004",
+              "title": "Emissions Trends and Drivers",
+              "year": 2023,
+              "venue": "Cambridge University Press eBooks",
+              "openalexCitedByCount": 292
             },
             {
               "openalexId": "W2503984667",
@@ -3655,15 +3657,7 @@
               "title": "Understanding the relation between urbanization and the eco-environment in China's Yangtze River Delta using an improved EKC model and coupling analysis",
               "year": 2016,
               "venue": "The Science of The Total Environment",
-              "openalexCitedByCount": 265
-            },
-            {
-              "openalexId": "W3100934073",
-              "doi": "10.1016/j.jclepro.2020.125015",
-              "title": "Can the new energy demonstration city policy reduce environmental pollution? Evidence from a quasi-natural experiment in China",
-              "year": 2020,
-              "venue": "Journal of Cleaner Production",
-              "openalexCitedByCount": 265
+              "openalexCitedByCount": 264
             }
           ],
           "keywords": [
@@ -3681,7 +3675,7 @@
             },
             {
               "name": "urban agglomerations",
-              "count": 7
+              "count": 8
             },
             {
               "name": "urban planning",
@@ -3706,7 +3700,7 @@
               "title": "Modelling and quantifying tomorrow's risks from natural hazards",
               "year": 2021,
               "venue": "The Science of The Total Environment",
-              "openalexCitedByCount": 127
+              "openalexCitedByCount": 125
             },
             {
               "openalexId": "W4280599005",
@@ -3714,7 +3708,7 @@
               "title": "Satellite monitoring of shrinking cities on the globe and containment solutions",
               "year": 2022,
               "venue": "iScience",
-              "openalexCitedByCount": 62
+              "openalexCitedByCount": 63
             },
             {
               "openalexId": "W4200295656",
@@ -3756,9 +3750,9 @@
             "Environmental Science",
             "Ecology"
           ],
-          "citingWorks": 51,
+          "citingWorks": 50,
           "childrenOf": "fields/23",
-          "share": 3.6,
+          "share": 3.5,
           "examples": [
             {
               "openalexId": "W3192613089",
@@ -3766,7 +3760,7 @@
               "title": "The role of soil in the contribution of food and feed",
               "year": 2021,
               "venue": "Philosophical Transactions of the Royal Society B Biological Sciences",
-              "openalexCitedByCount": 104
+              "openalexCitedByCount": 106
             },
             {
               "openalexId": "W3157819598",
@@ -3782,7 +3776,7 @@
               "title": "Variations in the diversity of the soil microbial community and structure under various categories of degraded wetland in Sanjiang Plain, northeastern China",
               "year": 2020,
               "venue": "Land Degradation and Development",
-              "openalexCitedByCount": 62
+              "openalexCitedByCount": 61
             }
           ],
           "keywords": [
@@ -3795,15 +3789,15 @@
               "count": 5
             },
             {
-              "name": "land use change",
-              "count": 5
-            },
-            {
               "name": "bird diversity",
               "count": 4
             },
             {
               "name": "NDVI",
+              "count": 4
+            },
+            {
+              "name": "land use change",
               "count": 4
             }
           ]
@@ -3816,9 +3810,9 @@
             "Environmental Science",
             "Health, Toxicology and Mutagenesis"
           ],
-          "citingWorks": 48,
+          "citingWorks": 47,
           "childrenOf": "fields/23",
-          "share": 3.4,
+          "share": 3.3,
           "examples": [
             {
               "openalexId": "W3032488597",
@@ -3826,7 +3820,7 @@
               "title": "Urban nature as a source of resilience during social distancing amidst the coronavirus pandemic",
               "year": 2020,
               "venue": null,
-              "openalexCitedByCount": 295
+              "openalexCitedByCount": 292
             },
             {
               "openalexId": "W4387609414",
@@ -3834,7 +3828,7 @@
               "title": "Improved human greenspace exposure equality during 21st century urbanization",
               "year": 2023,
               "venue": "Nature Communications",
-              "openalexCitedByCount": 195
+              "openalexCitedByCount": 193
             },
             {
               "openalexId": "W4388772553",
@@ -3842,7 +3836,7 @@
               "title": "Economic valuation of temperature-related mortality attributed to urban heat islands in European cities",
               "year": 2023,
               "venue": "Nature Communications",
-              "openalexCitedByCount": 149
+              "openalexCitedByCount": 148
             }
           ],
           "keywords": [
@@ -3886,7 +3880,7 @@
               "title": "Climate change increases global risk to urban forests",
               "year": 2022,
               "venue": "Nature Climate Change",
-              "openalexCitedByCount": 297
+              "openalexCitedByCount": 296
             },
             {
               "openalexId": "W3183777795",
@@ -3894,7 +3888,7 @@
               "title": "Multi-objective urban land use optimization using spatial data: A systematic review",
               "year": 2021,
               "venue": "Sustainable Cities and Society",
-              "openalexCitedByCount": 175
+              "openalexCitedByCount": 174
             },
             {
               "openalexId": "W4410878482",
@@ -3902,7 +3896,7 @@
               "title": "Global projections of future landslide susceptibility under climate change",
               "year": 2025,
               "venue": "Geoscience Frontiers",
-              "openalexCitedByCount": 38
+              "openalexCitedByCount": 39
             }
           ],
           "keywords": [
@@ -3947,7 +3941,7 @@
               "title": "Flood susceptibility modelling using advanced ensemble machine learning models",
               "year": 2020,
               "venue": "Geoscience Frontiers",
-              "openalexCitedByCount": 572
+              "openalexCitedByCount": 571
             },
             {
               "openalexId": "W4327694208",
@@ -3955,7 +3949,7 @@
               "title": "Flood susceptibility mapping using machine learning boosting algorithms techniques in Idukki district of Kerala India",
               "year": 2023,
               "venue": "Urban Climate",
-              "openalexCitedByCount": 106
+              "openalexCitedByCount": 105
             },
             {
               "openalexId": "W4387875065",
@@ -3963,7 +3957,7 @@
               "title": "Substantial increase in future fluvial flood risk projected in China’s major urban agglomerations",
               "year": 2023,
               "venue": "Communications Earth & Environment",
-              "openalexCitedByCount": 99
+              "openalexCitedByCount": 101
             }
           ],
           "keywords": [
@@ -4006,7 +4000,7 @@
               "title": "Effects of urbanization on the water cycle in the Shiyang River basin: based on a stable isotope method",
               "year": 2023,
               "venue": "Hydrology and earth system sciences",
-              "openalexCitedByCount": 98
+              "openalexCitedByCount": 96
             },
             {
               "openalexId": "W4322631023",
@@ -4022,7 +4016,7 @@
               "title": "Spatial heterogeneity for urban built-up footprint and its characterization using microwave remote sensing",
               "year": 2022,
               "venue": "Advances in Space Research",
-              "openalexCitedByCount": 20
+              "openalexCitedByCount": 19
             }
           ],
           "keywords": [
@@ -4032,18 +4026,18 @@
             },
             {
               "name": "RCP scenarios",
-              "count": 8
+              "count": 7
             },
             {
               "name": "tropical cyclones",
-              "count": 8
+              "count": 7
             },
             {
               "name": "urban expansion",
               "count": 6
             },
             {
-              "name": "reanalysis data",
+              "name": "climate change projections",
               "count": 5
             }
           ]
@@ -4065,7 +4059,7 @@
               "title": "Heat Waves: Physical Understanding and Scientific Challenges",
               "year": 2023,
               "venue": "Reviews of Geophysics",
-              "openalexCitedByCount": 397
+              "openalexCitedByCount": 400
             },
             {
               "openalexId": "W4295350358",
@@ -4081,7 +4075,7 @@
               "title": "Efficiency of construction land allocation in China: An econometric analysis of panel data",
               "year": 2018,
               "venue": "Land Use Policy",
-              "openalexCitedByCount": 230
+              "openalexCitedByCount": 229
             }
           ],
           "keywords": [
@@ -4119,23 +4113,23 @@
         {
           "id": "fields/23",
           "name": "Environmental Science",
-          "citingWorks": 1038,
+          "citingWorks": 1034,
           "topSubfields": [
             {
               "name": "Global and Planetary Change",
-              "citingWorks": 559
+              "citingWorks": 558
             },
             {
               "name": "Environmental Engineering",
-              "citingWorks": 275
+              "citingWorks": 274
             },
             {
               "name": "Ecology",
-              "citingWorks": 51
+              "citingWorks": 50
             },
             {
               "name": "Health, Toxicology and Mutagenesis",
-              "citingWorks": 48
+              "citingWorks": 47
             },
             {
               "name": "Management, Monitoring, Policy and Law",
@@ -4146,11 +4140,11 @@
         {
           "id": "fields/22",
           "name": "Engineering",
-          "citingWorks": 96,
+          "citingWorks": 98,
           "topSubfields": [
             {
               "name": "Building and Construction",
-              "citingWorks": 30
+              "citingWorks": 31
             },
             {
               "name": "Media Technology",
@@ -4200,11 +4194,11 @@
         {
           "id": "fields/20",
           "name": "Economics, Econometrics and Finance",
-          "citingWorks": 58,
+          "citingWorks": 57,
           "topSubfields": [
             {
               "name": "Economics and Econometrics",
-              "citingWorks": 57
+              "citingWorks": 56
             },
             {
               "name": "Finance",
@@ -4311,11 +4305,11 @@
         {
           "id": "fields/27",
           "name": "Medicine",
-          "citingWorks": 13,
+          "citingWorks": 12,
           "topSubfields": [
             {
               "name": "Public Health, Environmental and Occupational Health",
-              "citingWorks": 8
+              "citingWorks": 7
             },
             {
               "name": "Physiology",
@@ -4462,12 +4456,12 @@
         {
           "theme": "urban-futures",
           "field": "fields/23",
-          "citingWorks": 904
+          "citingWorks": 901
         },
         {
           "theme": "urban-futures",
           "field": "fields/20",
-          "citingWorks": 54
+          "citingWorks": 53
         },
         {
           "theme": "urban-futures",
@@ -4477,7 +4471,7 @@
         {
           "theme": "heat",
           "field": "fields/23",
-          "citingWorks": 92
+          "citingWorks": 93
         },
         {
           "theme": "urban-futures",
@@ -4487,7 +4481,7 @@
         {
           "theme": "urban-futures",
           "field": "fields/22",
-          "citingWorks": 69
+          "citingWorks": 71
         },
         {
           "theme": "urban-futures",
@@ -4497,7 +4491,7 @@
         {
           "theme": "urban-futures",
           "field": "fields/27",
-          "citingWorks": 11
+          "citingWorks": 10
         },
         {
           "theme": "urban-futures",
@@ -4551,13 +4545,13 @@
         },
         {
           "theme": "heat",
-          "field": "fields/20",
-          "citingWorks": 2
+          "field": "fields/22",
+          "citingWorks": 5
         },
         {
           "theme": "heat",
-          "field": "fields/22",
-          "citingWorks": 5
+          "field": "fields/20",
+          "citingWorks": 2
         },
         {
           "theme": "heat",
@@ -4602,7 +4596,7 @@
         {
           "theme": "flood-coasts",
           "field": "fields/23",
-          "citingWorks": 46
+          "citingWorks": 45
         },
         {
           "theme": "flood-coasts",
@@ -4636,12 +4630,12 @@
         },
         {
           "theme": "scaling-form",
-          "field": "fields/27",
+          "field": "fields/35",
           "citingWorks": 1
         },
         {
           "theme": "scaling-form",
-          "field": "fields/35",
+          "field": "fields/27",
           "citingWorks": 1
         },
         {
@@ -4653,18 +4647,18 @@
       "institutionTypes": [
         {
           "type": "education",
-          "citingWorks": 1335,
-          "institutions": 1186
+          "citingWorks": 1332,
+          "institutions": 1189
         },
         {
           "type": "facility",
-          "citingWorks": 438,
-          "institutions": 257
+          "citingWorks": 435,
+          "institutions": 256
         },
         {
           "type": "government",
           "citingWorks": 343,
-          "institutions": 102
+          "institutions": 104
         },
         {
           "type": "nonprofit",
@@ -4673,12 +4667,12 @@
         },
         {
           "type": "no-affiliation",
-          "citingWorks": 41,
+          "citingWorks": 40,
           "institutions": 0
         },
         {
           "type": "other",
-          "citingWorks": 38,
+          "citingWorks": 36,
           "institutions": 26
         },
         {
@@ -4708,21 +4702,21 @@
           "name": "Chinese Academy of Sciences",
           "type": "government",
           "country": "CN",
-          "citingWorks": 156
+          "citingWorks": 155
         },
         {
           "id": "I4210160793",
           "name": "Institute of Geographic Sciences and Natural Resources Research",
           "type": "facility",
           "country": "CN",
-          "citingWorks": 75
+          "citingWorks": 74
         },
         {
           "id": "I211433327",
           "name": "Ministry of Natural Resources",
           "type": "government",
           "country": "CN",
-          "citingWorks": 40
+          "citingWorks": 41
         },
         {
           "id": "I4391768099",
@@ -4736,7 +4730,7 @@
           "name": "Centre National de la Recherche Scientifique",
           "type": "government",
           "country": "FR",
-          "citingWorks": 25
+          "citingWorks": 24
         },
         {
           "id": "I142606810",
@@ -4781,13 +4775,6 @@
           "citingWorks": 11
         },
         {
-          "id": "I4210166112",
-          "name": "State Key Laboratory of Remote Sensing Science",
-          "type": "facility",
-          "country": "CN",
-          "citingWorks": 10
-        },
-        {
           "id": "I2801030728",
           "name": "German Centre for Integrative Biodiversity Research",
           "type": "facility",
@@ -4797,6 +4784,13 @@
         {
           "id": "I4210141657",
           "name": "Jiangsu Center for Collaborative Innovation in Geographical Information Resource Development and Application",
+          "type": "facility",
+          "country": "CN",
+          "citingWorks": 9
+        },
+        {
+          "id": "I4210166112",
+          "name": "State Key Laboratory of Remote Sensing Science",
           "type": "facility",
           "country": "CN",
           "citingWorks": 9
@@ -4812,237 +4806,237 @@
       "countries": [
         {
           "code": "CN",
-          "citingWorks": 746,
-          "expected": 134.05,
-          "ratio": 5.57
+          "citingWorks": 748,
+          "expected": 132.87,
+          "ratio": 5.63
         },
         {
           "code": "US",
-          "citingWorks": 261,
-          "expected": 118.47,
-          "ratio": 2.2
+          "citingWorks": 259,
+          "expected": 117.18,
+          "ratio": 2.21
         },
         {
           "code": "DE",
           "citingWorks": 96,
-          "expected": 33.06,
-          "ratio": 2.9
+          "expected": 32.78,
+          "ratio": 2.93
         },
         {
           "code": "GB",
-          "citingWorks": 90,
-          "expected": 37.18,
-          "ratio": 2.42
+          "citingWorks": 89,
+          "expected": 36.88,
+          "ratio": 2.41
         },
         {
           "code": "IN",
           "citingWorks": 73,
-          "expected": 37.43,
+          "expected": 37.41,
           "ratio": 1.95
         },
         {
           "code": "HK",
-          "citingWorks": 56,
-          "expected": 4.75,
-          "ratio": 11.78
+          "citingWorks": 57,
+          "expected": 4.7,
+          "ratio": 12.14
         },
         {
           "code": "AU",
           "citingWorks": 55,
-          "expected": 23.82,
-          "ratio": 2.31
+          "expected": 23.59,
+          "ratio": 2.33
         },
         {
           "code": "NL",
-          "citingWorks": 45,
-          "expected": 13.14,
-          "ratio": 3.42
+          "citingWorks": 44,
+          "expected": 13.01,
+          "ratio": 3.38
         },
         {
           "code": "JP",
-          "citingWorks": 45,
-          "expected": 25.47,
-          "ratio": 1.77
-        },
-        {
-          "code": "FR",
-          "citingWorks": 43,
-          "expected": 33.64,
-          "ratio": 1.28
+          "citingWorks": 44,
+          "expected": 25.45,
+          "ratio": 1.73
         },
         {
           "code": "CA",
           "citingWorks": 43,
-          "expected": 24.13,
-          "ratio": 1.78
+          "expected": 23.91,
+          "ratio": 1.8
+        },
+        {
+          "code": "FR",
+          "citingWorks": 42,
+          "expected": 33.5,
+          "ratio": 1.25
         },
         {
           "code": "IT",
           "citingWorks": 39,
-          "expected": 21.07,
-          "ratio": 1.85
+          "expected": 20.94,
+          "ratio": 1.86
         },
         {
           "code": "ES",
           "citingWorks": 32,
-          "expected": 20.73,
-          "ratio": 1.54
+          "expected": 20.59,
+          "ratio": 1.55
         },
         {
           "code": "CH",
-          "citingWorks": 28,
-          "expected": 9.99,
-          "ratio": 2.8
+          "citingWorks": 27,
+          "expected": 9.87,
+          "ratio": 2.74
         },
         {
           "code": "SG",
-          "citingWorks": 27,
-          "expected": 3.42,
-          "ratio": 7.9
+          "citingWorks": 26,
+          "expected": 3.37,
+          "ratio": 7.7
         },
         {
           "code": "TR",
           "citingWorks": 24,
-          "expected": 10.58,
+          "expected": 10.56,
           "ratio": 2.27
         },
         {
           "code": "BR",
           "citingWorks": 24,
-          "expected": 36.64,
-          "ratio": 0.65
+          "expected": 36.5,
+          "ratio": 0.66
         },
         {
           "code": "IR",
-          "citingWorks": 22,
-          "expected": 15.33,
-          "ratio": 1.44
+          "citingWorks": 21,
+          "expected": 15.28,
+          "ratio": 1.37
         },
         {
           "code": "SE",
           "citingWorks": 19,
-          "expected": 9.34,
-          "ratio": 2.03
+          "expected": 9.26,
+          "ratio": 2.05
+        },
+        {
+          "code": "KR",
+          "citingWorks": 16,
+          "expected": 13.31,
+          "ratio": 1.2
+        },
+        {
+          "code": "BD",
+          "citingWorks": 15,
+          "expected": 3.49,
+          "ratio": 4.3
         },
         {
           "code": "PT",
           "citingWorks": 15,
-          "expected": 7.03,
-          "ratio": 2.13
-        },
-        {
-          "code": "KR",
-          "citingWorks": 15,
-          "expected": 13.4,
-          "ratio": 1.12
+          "expected": 6.99,
+          "ratio": 2.15
         },
         {
           "code": "MX",
           "citingWorks": 15,
-          "expected": 8.81,
-          "ratio": 1.7
+          "expected": 8.77,
+          "ratio": 1.71
         },
         {
           "code": "SA",
           "citingWorks": 15,
-          "expected": 6.3,
+          "expected": 6.29,
           "ratio": 2.38
-        },
-        {
-          "code": "BD",
-          "citingWorks": 14,
-          "expected": 3.52,
-          "ratio": 3.98
         },
         {
           "code": "NO",
           "citingWorks": 14,
-          "expected": 6.93,
-          "ratio": 2.02
+          "expected": 6.86,
+          "ratio": 2.04
         },
         {
           "code": "PL",
           "citingWorks": 14,
-          "expected": 11.41,
+          "expected": 11.37,
           "ratio": 1.23
         },
         {
           "code": "BE",
           "citingWorks": 13,
-          "expected": 7.98,
-          "ratio": 1.63
+          "expected": 7.92,
+          "ratio": 1.64
         },
         {
           "code": "AT",
           "citingWorks": 13,
-          "expected": 5.61,
-          "ratio": 2.32
+          "expected": 5.57,
+          "ratio": 2.33
         },
         {
           "code": "ET",
           "citingWorks": 13,
-          "expected": 2.28,
-          "ratio": 5.69
+          "expected": 2.26,
+          "ratio": 5.75
         },
         {
           "code": "NG",
           "citingWorks": 12,
-          "expected": 7.48,
-          "ratio": 1.6
+          "expected": 7.45,
+          "ratio": 1.61
         },
         {
           "code": "MY",
           "citingWorks": 12,
-          "expected": 8.53,
+          "expected": 8.52,
           "ratio": 1.41
         },
         {
           "code": "ZA",
           "citingWorks": 11,
-          "expected": 7.75,
-          "ratio": 1.42
+          "expected": 7.7,
+          "ratio": 1.43
         },
         {
           "code": "CZ",
           "citingWorks": 11,
-          "expected": 5.01,
-          "ratio": 2.2
+          "expected": 4.98,
+          "ratio": 2.21
         },
         {
           "code": "DK",
           "citingWorks": 10,
-          "expected": 8.27,
-          "ratio": 1.21
+          "expected": 8.19,
+          "ratio": 1.22
         },
         {
           "code": "ID",
           "citingWorks": 10,
-          "expected": 32.87,
+          "expected": 32.93,
           "ratio": 0.3
         },
         {
           "code": "EG",
           "citingWorks": 10,
-          "expected": 5.98,
+          "expected": 5.97,
           "ratio": 1.67
         },
         {
           "code": "CL",
           "citingWorks": 9,
-          "expected": 3.79,
-          "ratio": 2.38
+          "expected": 3.76,
+          "ratio": 2.39
         },
         {
           "code": "FI",
           "citingWorks": 9,
-          "expected": 5.6,
-          "ratio": 1.61
+          "expected": 5.54,
+          "ratio": 1.62
         },
         {
           "code": "MO",
           "citingWorks": 8,
-          "expected": 0.49,
-          "ratio": 16.44
+          "expected": 0.48,
+          "ratio": 16.63
         },
         {
           "code": "RO",
@@ -5053,44 +5047,44 @@
         {
           "code": "CO",
           "citingWorks": 7,
-          "expected": 4.92,
-          "ratio": 1.42
+          "expected": 4.9,
+          "ratio": 1.43
         },
         {
           "code": "TW",
           "citingWorks": 7,
-          "expected": 5.61,
-          "ratio": 1.25
+          "expected": 5.57,
+          "ratio": 1.26
         },
         {
           "code": "VN",
           "citingWorks": 6,
-          "expected": 3.7,
-          "ratio": 1.62
+          "expected": 3.69,
+          "ratio": 1.63
         },
         {
           "code": "NZ",
           "citingWorks": 6,
-          "expected": 4.2,
-          "ratio": 1.43
+          "expected": 4.16,
+          "ratio": 1.44
         },
         {
           "code": "AE",
           "citingWorks": 6,
-          "expected": 1.64,
-          "ratio": 3.65
+          "expected": 1.63,
+          "ratio": 3.68
         },
         {
           "code": "TH",
           "citingWorks": 6,
-          "expected": 4.33,
-          "ratio": 1.39
+          "expected": 4.47,
+          "ratio": 1.34
         },
         {
           "code": "GH",
           "citingWorks": 6,
-          "expected": 1.46,
-          "ratio": 4.1
+          "expected": 1.44,
+          "ratio": 4.17
         },
         {
           "code": "EC",
@@ -5101,44 +5095,44 @@
         {
           "code": "IE",
           "citingWorks": 6,
-          "expected": 2.69,
-          "ratio": 2.23
+          "expected": 2.66,
+          "ratio": 2.25
         },
         {
           "code": "RU",
           "citingWorks": 5,
-          "expected": 19.43,
+          "expected": 19.45,
           "ratio": 0.26
         },
         {
           "code": "IQ",
           "citingWorks": 5,
-          "expected": 3.48,
+          "expected": 3.47,
           "ratio": 1.44
         },
         {
           "code": "GR",
           "citingWorks": 5,
-          "expected": 4.4,
+          "expected": 4.39,
           "ratio": 1.14
         },
         {
           "code": "PK",
           "citingWorks": 5,
-          "expected": 5.49,
+          "expected": 5.48,
           "ratio": 0.91
         },
         {
           "code": "SI",
           "citingWorks": 5,
-          "expected": 1.29,
-          "ratio": 3.88
+          "expected": 1.28,
+          "ratio": 3.9
         },
         {
           "code": "KZ",
           "citingWorks": 5,
           "expected": 1.39,
-          "ratio": 3.61
+          "ratio": 3.6
         },
         {
           "code": "UA",
@@ -5149,62 +5143,62 @@
         {
           "code": "AR",
           "citingWorks": 4,
-          "expected": 4.99,
+          "expected": 4.98,
           "ratio": 0.8
         },
         {
           "code": "CY",
           "citingWorks": 4,
-          "expected": 0.89,
-          "ratio": 4.5
+          "expected": 0.88,
+          "ratio": 4.53
         },
         {
           "code": "JO",
           "citingWorks": 3,
           "expected": 0.84,
-          "ratio": 3.57
+          "ratio": 3.58
         },
         {
           "code": "KE",
           "citingWorks": 3,
-          "expected": 2.31,
-          "ratio": 1.3
+          "expected": 2.29,
+          "ratio": 1.31
         },
         {
           "code": "HU",
           "citingWorks": 3,
-          "expected": 2.58,
-          "ratio": 1.16
+          "expected": 2.57,
+          "ratio": 1.17
         },
         {
           "code": "PH",
           "citingWorks": 3,
-          "expected": 2.08,
-          "ratio": 1.44
+          "expected": 2.07,
+          "ratio": 1.45
         },
         {
           "code": "UZ",
           "citingWorks": 3,
-          "expected": 1.6,
-          "ratio": 1.88
+          "expected": 1.67,
+          "ratio": 1.8
         },
         {
           "code": "KG",
           "citingWorks": 3,
           "expected": 0.22,
-          "ratio": 13.84
+          "ratio": 13.93
         },
         {
           "code": "LU",
           "citingWorks": 3,
-          "expected": 0.54,
-          "ratio": 5.55
+          "expected": 0.55,
+          "ratio": 5.49
         },
         {
           "code": "QA",
           "citingWorks": 3,
           "expected": 0.78,
-          "ratio": 3.83
+          "ratio": 3.85
         },
         {
           "code": "BG",
@@ -5216,7 +5210,7 @@
           "code": "LB",
           "citingWorks": 2,
           "expected": 0.61,
-          "ratio": 3.26
+          "ratio": 3.27
         },
         {
           "code": "SK",
@@ -5228,7 +5222,7 @@
           "code": "SY",
           "citingWorks": 2,
           "expected": 0.17,
-          "ratio": 12.01
+          "ratio": 12.06
         },
         {
           "code": "RS",
@@ -5239,14 +5233,14 @@
         {
           "code": "LT",
           "citingWorks": 2,
-          "expected": 1,
-          "ratio": 2
+          "expected": 0.99,
+          "ratio": 2.01
         },
         {
           "code": "BF",
           "citingWorks": 2,
-          "expected": 0.3,
-          "ratio": 6.77
+          "expected": 0.29,
+          "ratio": 6.81
         },
         {
           "code": "DZ",
@@ -5257,56 +5251,56 @@
         {
           "code": "CI",
           "citingWorks": 2,
-          "expected": 0.64,
-          "ratio": 3.15
+          "expected": 0.63,
+          "ratio": 3.16
         },
         {
           "code": "TZ",
           "citingWorks": 2,
-          "expected": 0.99,
-          "ratio": 2.03
+          "expected": 0.98,
+          "ratio": 2.04
         },
         {
           "code": "PR",
           "citingWorks": 2,
           "expected": 0.42,
-          "ratio": 4.77
+          "ratio": 4.82
         },
         {
           "code": "BW",
           "citingWorks": 2,
-          "expected": 0.28,
-          "ratio": 7.24
+          "expected": 0.27,
+          "ratio": 7.29
         },
         {
           "code": "NC",
           "citingWorks": 1,
-          "expected": 0.28,
-          "ratio": 3.63
+          "expected": 0.27,
+          "ratio": 3.66
         },
         {
           "code": "RE",
           "citingWorks": 1,
           "expected": 0.33,
-          "ratio": 3.03
+          "ratio": 3.04
         },
         {
           "code": "LA",
           "citingWorks": 1,
           "expected": 0.12,
-          "ratio": 8.55
+          "ratio": 8.45
         },
         {
           "code": "KH",
           "citingWorks": 1,
           "expected": 0.14,
-          "ratio": 6.97
+          "ratio": 6.96
         },
         {
           "code": "YE",
           "citingWorks": 1,
           "expected": 0.19,
-          "ratio": 5.34
+          "ratio": 5.37
         },
         {
           "code": "AL",
@@ -5318,85 +5312,85 @@
           "code": "AF",
           "citingWorks": 1,
           "expected": 0.14,
-          "ratio": 7.37
+          "ratio": 7.36
         },
         {
           "code": "TN",
           "citingWorks": 1,
-          "expected": 1.78,
+          "expected": 1.79,
           "ratio": 0.56
         },
         {
           "code": "FJ",
           "citingWorks": 1,
-          "expected": 0.17,
-          "ratio": 6.03
+          "expected": 0.16,
+          "ratio": 6.11
         },
         {
           "code": "VE",
           "citingWorks": 1,
           "expected": 0.72,
-          "ratio": 1.38
+          "ratio": 1.39
         },
         {
           "code": "CU",
           "citingWorks": 1,
-          "expected": 0.81,
-          "ratio": 1.24
+          "expected": 0.8,
+          "ratio": 1.25
         },
         {
           "code": "IL",
           "citingWorks": 1,
-          "expected": 2.89,
+          "expected": 2.85,
           "ratio": 0.35
         },
         {
           "code": "EE",
           "citingWorks": 1,
-          "expected": 0.95,
-          "ratio": 1.05
+          "expected": 0.94,
+          "ratio": 1.06
         },
         {
           "code": "IS",
           "citingWorks": 1,
           "expected": 0.51,
-          "ratio": 1.94
+          "ratio": 1.96
         },
         {
           "code": "LR",
           "citingWorks": 1,
           "expected": 0.02,
-          "ratio": 42.35
+          "ratio": 42.3
         },
         {
           "code": "PE",
           "citingWorks": 1,
-          "expected": 2.35,
+          "expected": 2.34,
           "ratio": 0.43
         },
         {
           "code": "SO",
           "citingWorks": 1,
           "expected": 0.05,
-          "ratio": 22.12
+          "ratio": 21.76
         },
         {
           "code": "MN",
           "citingWorks": 1,
-          "expected": 0.31,
-          "ratio": 3.19
+          "expected": 0.32,
+          "ratio": 3.17
         },
         {
           "code": "BZ",
           "citingWorks": 1,
           "expected": 0.02,
-          "ratio": 55.99
+          "ratio": 55.87
         },
         {
           "code": "UG",
           "citingWorks": 1,
           "expected": 0.69,
-          "ratio": 1.45
+          "ratio": 1.46
         }
       ],
       "topCitingWorks": [
@@ -5407,7 +5401,7 @@
           "year": 2022,
           "venue": "Proceedings of the National Academy of Sciences",
           "type": "article",
-          "openalexCitedByCount": 828,
+          "openalexCitedByCount": 829,
           "field": "Environmental Science",
           "subfield": "Global and Planetary Change",
           "topic": "Land Use and Ecosystem Services",
@@ -5422,7 +5416,7 @@
           "year": 2020,
           "venue": "Geoscience Frontiers",
           "type": "article",
-          "openalexCitedByCount": 572,
+          "openalexCitedByCount": 571,
           "field": "Environmental Science",
           "subfield": "Global and Planetary Change",
           "topic": "Flood Risk Assessment and Management",
@@ -5437,7 +5431,7 @@
           "year": 2021,
           "venue": "Earth Systems and Environment",
           "type": "article",
-          "openalexCitedByCount": 566,
+          "openalexCitedByCount": 567,
           "field": "Agricultural and Biological Sciences",
           "subfield": "Ecology, Evolution, Behavior and Systematics",
           "topic": "Climate change impacts on agriculture",
@@ -5452,7 +5446,7 @@
           "year": 2023,
           "venue": "The Lancet",
           "type": "article",
-          "openalexCitedByCount": 562,
+          "openalexCitedByCount": 558,
           "field": "Environmental Science",
           "subfield": "Environmental Engineering",
           "topic": "Urban Heat Island Mitigation",
@@ -5467,7 +5461,7 @@
           "year": 2021,
           "venue": "Sustainable Cities and Society",
           "type": "article",
-          "openalexCitedByCount": 451,
+          "openalexCitedByCount": 453,
           "field": "Economics, Econometrics and Finance",
           "subfield": "Economics and Econometrics",
           "topic": "Energy, Environment, Economic Growth",
@@ -5483,7 +5477,7 @@
           "year": 2023,
           "venue": "Reviews of Geophysics",
           "type": "article",
-          "openalexCitedByCount": 397,
+          "openalexCitedByCount": 400,
           "field": "Environmental Science",
           "subfield": "Global and Planetary Change",
           "topic": "Climate variability and models",
@@ -5498,7 +5492,7 @@
           "year": 2020,
           "venue": "Sustainability",
           "type": "article",
-          "openalexCitedByCount": 335,
+          "openalexCitedByCount": 334,
           "field": "Engineering",
           "subfield": "Media Technology",
           "topic": "Smart Cities and Technologies",
@@ -5513,7 +5507,7 @@
           "year": 2021,
           "venue": "Frontiers in Environmental Science",
           "type": "article",
-          "openalexCitedByCount": 328,
+          "openalexCitedByCount": 325,
           "field": "Environmental Science",
           "subfield": "Environmental Engineering",
           "topic": "Urban Heat Island Mitigation",
@@ -5528,7 +5522,7 @@
           "year": 2021,
           "venue": "Earth-Science Reviews",
           "type": "article",
-          "openalexCitedByCount": 324,
+          "openalexCitedByCount": 322,
           "field": "Agricultural and Biological Sciences",
           "subfield": "Soil Science",
           "topic": "Soil erosion and sediment transport",
@@ -5543,7 +5537,7 @@
           "year": 2021,
           "venue": "Science Advances",
           "type": "article",
-          "openalexCitedByCount": 320,
+          "openalexCitedByCount": 319,
           "field": "Environmental Science",
           "subfield": "Environmental Engineering",
           "topic": "Urban Heat Island Mitigation",
@@ -5561,27 +5555,27 @@
           "2017": 8,
           "2018": 7,
           "2019": 9,
-          "2020": 51,
-          "2021": 139,
-          "2022": 177,
-          "2023": 230,
-          "2024": 210,
-          "2025": 234,
-          "2026": 142
+          "2020": 50,
+          "2021": 138,
+          "2022": 179,
+          "2023": 223,
+          "2024": 209,
+          "2025": 233,
+          "2026": 148
         },
         "heat": {
           "2021": 3,
-          "2022": 10,
-          "2023": 18,
+          "2022": 9,
+          "2023": 19,
           "2024": 23,
           "2025": 28,
-          "2026": 13
+          "2026": 14
         },
         "flood-coasts": {
           "2020": 4,
           "2021": 10,
           "2022": 12,
-          "2023": 16,
+          "2023": 15,
           "2024": 12,
           "2025": 6,
           "2026": 8

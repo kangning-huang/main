@@ -128,14 +128,17 @@ export async function getCiting(workId) {
   const hit = readCache(path, CITING_SELECT);
   if (hit) return hit.results;
   if (stats.cacheMode === "offline") throw new Error(`offline: no cached citing list for ${workId} (${path})`);
+  // Page-based paging: cursor past page 1 needs an API key (OpenAlex 2026+).
   const results = [];
-  let cursor = "*";
-  while (cursor) {
-    const url = `${API}/works?filter=cites:${workId}&per_page=200&cursor=${encodeURIComponent(cursor)}&select=${CITING_SELECT}`;
+  let pageNum = 1;
+  for (;;) {
+    const url = `${API}/works?filter=cites:${workId}&per_page=200&page=${pageNum}&select=${CITING_SELECT}`;
     const page = await getJson(url);
     results.push(...page.results);
-    cursor = page.meta.next_cursor;
-    if (page.results.length === 0) break;
+    const total = page.meta?.count ?? results.length;
+    if (page.results.length === 0 || results.length >= total || page.results.length < 200) break;
+    pageNum += 1;
+    if (pageNum > 50) throw new Error(`OpenAlex page cap for ${workId}`);
   }
   writeCache(path, { workId, select: CITING_SELECT, fetchedAt: new Date().toISOString(), count: results.length, results });
   return results;
