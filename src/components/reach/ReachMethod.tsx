@@ -3,6 +3,7 @@
 import Link from "next/link";
 import T from "@/components/T";
 import { influence, THEMES, THEME_COLORS } from "@/lib/influence";
+import { isScholarFieldShelf } from "@/lib/field-shelf";
 import { useReachLens } from "./ReachLens";
 
 export default function ReachMethod() {
@@ -39,14 +40,30 @@ export default function ReachMethod() {
           </li>
           <li>
             <T
-              en="Field & Shelf (section 01): one square per non-self citing OpenAlex work. Colour and centre position encode that citing work's own OpenAlex cited_by_count on a log-ish ember–ink ramp (0 · 1–9 · 10–99 · 100–999 · ≥1,000); nearer the centre means more cited. Direction means nothing. Hover a shelf paper to light its citers and draw a thin link from each; hover a square to show up to four lines back to the papers it cites."
-              zh="在“领域与书架”（第 01 节）中，一个方块代表一篇 OpenAlex 收录的、引用我研究的文献，已剔除自引。方块的颜色和离中心的距离，表示这篇文献自身在 OpenAlex 中的被引次数（cited_by_count）。颜色从余烬色到墨色，近似按对数分档（0 · 1–9 · 10–99 · 100–999 · ≥1,000）；越靠近中心，被引次数越多，所在方向没有含义。把鼠标移到书架上的论文，引用它的文献就会亮起，并与它逐一连线；移到方块上，则最多显示 4 条连线，指向它引用的论文。"
+              en={
+                isScholarFieldShelf()
+                  ? "Field & Shelf (section 01, Google Scholar prototype): one square per citing work from Scholar (SerpAPI), including grey literature (IPCC, theses, SSRN, …). Colour and centre encode that work's own Scholar citation count on a log-ish ember–ink ramp (0 · 1–9 · 10–99 · 100–999 · ≥1,000). IPCC AR6 WGII Ch.6 cluster duplicates are merged to the highest Scholar citedBy. Sample covers 3 pinned papers — not the full corpus yet."
+                  : "Field & Shelf (section 01): one square per non-self citing OpenAlex work. Colour and centre position encode that citing work's own OpenAlex cited_by_count on a log-ish ember–ink ramp (0 · 1–9 · 10–99 · 100–999 · ≥1,000); nearer the centre means more cited. Direction means nothing. Hover a shelf paper to light its citers and draw a thin link from each; hover a square to show up to four lines back to the papers it cites."
+              }
+              zh={
+                isScholarFieldShelf()
+                  ? "在“领域与书架”（第 01 节，谷歌学术原型）中，一个方块代表一篇谷歌学术施引文献（经 SerpAPI），含灰色文献（IPCC、学位论文、SSRN 等）。颜色与离中心距离表示该文献自身的谷歌学术被引次数（0 · 1–9 · 10–99 · 100–999 · ≥1,000）。IPCC AR6 WGII 第 6 章的重复 cluster 合并为最高被引。当前样本覆盖 3 篇固定论文，尚未覆盖全部论文。"
+                  : "在“领域与书架”（第 01 节）中，一个方块代表一篇 OpenAlex 收录的、引用我研究的文献，已剔除自引。方块的颜色和离中心的距离，表示这篇文献自身在 OpenAlex 中的被引次数（cited_by_count）。颜色从余烬色到墨色，近似按对数分档（0 · 1–9 · 10–99 · 100–999 · ≥1,000）；越靠近中心，被引次数越多，所在方向没有含义。把鼠标移到书架上的论文，引用它的文献就会亮起，并与它逐一连线；移到方块上，则最多显示 4 条连线，指向它引用的论文。"
+              }
             />
           </li>
           <li>
             <T
-              en="Field colour is each citing work's own OpenAlex cited_by_count (same across All / Lead). Where is the observed÷expected country map; Topic cards / Who below use the adaptive OpenAlex taxonomy; any outside-home % elsewhere on the page is labelled with its topic rule."
-              zh="领域中的颜色表示引用我研究的文献自身在 OpenAlex 中的被引次数（cited_by_count）。所以，同一篇文献在“全部论文”和“第一/末位/通讯作者”视角下，颜色相同。“在哪里”地图显示各国实际引用文献数与预期文献数的比值。下方的主题卡片和“谁在用”按 OpenAlex 分类自动调整分组；页面其他位置若显示“主题外”占比，会注明所用的主题规则。"
+              en={
+                isScholarFieldShelf()
+                  ? "Field colour is each citing work's own Google Scholar citation count (same across All / Lead). Where (geography) and Topic cards / Who still use OpenAlex and are labelled as such."
+                  : "Field colour is each citing work's own OpenAlex cited_by_count (same across All / Lead). Where is the observed÷expected country map; Topic cards / Who below use the adaptive OpenAlex taxonomy; any outside-home % elsewhere on the page is labelled with its topic rule."
+              }
+              zh={
+                isScholarFieldShelf()
+                  ? "领域颜色表示施引文献自身的谷歌学术被引次数（全部 / 第一末位通讯视角下颜色相同）。“在哪里”地图与主题卡片 / “谁在用”仍用 OpenAlex，并会标明来源。"
+                  : "领域中的颜色表示引用我研究的文献自身在 OpenAlex 中的被引次数（cited_by_count）。所以，同一篇文献在“全部论文”和“第一/末位/通讯作者”视角下，颜色相同。“在哪里”地图显示各国实际引用文献数与预期文献数的比值。下方的主题卡片和“谁在用”按 OpenAlex 分类自动调整分组；页面其他位置若显示“主题外”占比，会注明所用的主题规则。"
+              }
             />
           </li>
           <li>
@@ -71,7 +88,15 @@ export default function ReachMethod() {
             <T
               en={
                 <>
-                  Every number on this page is from OpenAlex. Google Scholar counts are higher and are shown only on the{" "}
+                  {isScholarFieldShelf() ? (
+                    <>
+                      Field &amp; Shelf citation counts on this preview are from <strong>Google Scholar</strong> (via SerpAPI). Where / topics stay on OpenAlex. Profile totals on the{" "}
+                    </>
+                  ) : (
+                    <>
+                      Every number on this page is from OpenAlex. Google Scholar counts are higher and are shown only on the{" "}
+                    </>
+                  )}
                   <Link href="/publications" className="text-teal hover:text-ember">
                     Publications
                   </Link>{" "}
@@ -79,13 +104,23 @@ export default function ReachMethod() {
                 </>
               }
               zh={
-                <>
-                  本页所有数字均来自 OpenAlex。谷歌学术统计通常更高，仅在
-                  <Link href="/publications" className="text-teal hover:text-ember">
-                    学术论文
-                  </Link>
-                  页面展示，两者从不混用。
-                </>
+                isScholarFieldShelf() ? (
+                  <>
+                    本预览中“领域与书架”的被引次数来自<strong>谷歌学术</strong>（SerpAPI）；“在哪里”与主题仍用 OpenAlex。个人主页总量见
+                    <Link href="/publications" className="text-teal hover:text-ember">
+                      学术论文
+                    </Link>
+                    ，两者从不混用。
+                  </>
+                ) : (
+                  <>
+                    本页所有数字均来自 OpenAlex。谷歌学术统计通常更高，仅在
+                    <Link href="/publications" className="text-teal hover:text-ember">
+                      学术论文
+                    </Link>
+                    页面展示，两者从不混用。
+                  </>
+                )
               }
             />
           </li>

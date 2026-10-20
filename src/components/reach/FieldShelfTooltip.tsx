@@ -11,7 +11,8 @@ import {
   idleTips,
   impactBin,
   loadFieldShelfTips,
-  openAlexUrl,
+  isScholarFieldShelf,
+  workUrl,
   subscribeTips,
   tipsState,
   typeName,
@@ -92,6 +93,12 @@ export function WorkDetails({
         <p className="mt-0.5 text-ink-muted">
           {meta}
           {type && <span className="ml-1.5 rounded bg-paper-deep px-1 py-px text-[10px] text-ink-muted">{type}</span>}
+          {tip?.greyLit && (
+            <span className="ml-1.5 rounded bg-teal/15 px-1 py-px text-[10px] font-medium text-teal">
+              {zh ? "灰色文献" : "Grey lit"}
+              {tip.greyLitReasons?.[0] ? ` · ${tip.greyLitReasons[0]}` : ""}
+            </span>
+          )}
         </p>
       </div>
       <div>
@@ -109,7 +116,11 @@ export function WorkDetails({
         <ImpactSwatch bin={impactBin(sq.citedBy)} />
         <p className="-mt-px text-ink-muted">
           <span className="font-medium text-ink">{citedByText(sq.citedBy, zh)}</span>
-          <span className="text-ink-faint"> · {zh ? IMPACT_LABELS[impactBin(sq.citedBy)].zh : IMPACT_LABELS[impactBin(sq.citedBy)].en}</span>
+          <span className="text-ink-faint">
+            {" "}
+            · {zh ? IMPACT_LABELS[impactBin(sq.citedBy)].zh : IMPACT_LABELS[impactBin(sq.citedBy)].en}
+            {isScholarFieldShelf() ? (zh ? " · 谷歌学术" : " · Google Scholar") : ""}
+          </span>
           {tip?.topic && (
             <span className="block text-ink-faint">
               {tip.topic.name}
@@ -119,8 +130,8 @@ export function WorkDetails({
         </p>
       </div>
       <p className="flex flex-wrap items-center gap-x-3 gap-y-1">
-        <a href={openAlexUrl(sq.id)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-medium text-teal hover:text-ember">
-          OpenAlex <ExternalMark />
+        <a href={workUrl(sq.id, tip)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 font-medium text-teal hover:text-ember">
+          {isScholarFieldShelf() || sq.id.startsWith("GS_") ? (zh ? "谷歌学术" : "Google Scholar") : "OpenAlex"} <ExternalMark />
         </a>
         {tip?.doi && (
           <a href={doiUrl(tip.doi)} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-ink-muted hover:text-ember">
