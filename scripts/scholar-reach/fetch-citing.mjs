@@ -55,6 +55,10 @@ const GREY_RULES = [
   { re: /\bwg\s*i{1,3}\b/i, why: "IPCC WG" },
   { re: /\bwgii\b/i, why: "IPCC WGII" },
   { re: /\bwgiii\b/i, why: "IPCC WGIII" },
+  { re: /climate change 20\d{2}:\s*impacts,? adaptation/i, why: "IPCC AR6 WGII" },
+  { re: /contribution of working group/i, why: "IPCC WG" },
+  { re: /working group ii\b/i, why: "IPCC WGII" },
+  { re: /cities,? settlements and key infrastructure/i, why: "IPCC AR6 Ch.6" },
   { re: /\bspecial report\b/i, why: "special report" },
   { re: /\bsrex\b/i, why: "SREX" },
   { re: /\bsr\.?\s*1\.5\b/i, why: "SR1.5" },
@@ -198,8 +202,8 @@ function titlesSimilar(a, b) {
   return union.size > 0 && inter.length / union.size > 0.65;
 }
 
-function detectGrey(title, venue, typeHint) {
-  const blob = `${title || ""} ${venue || ""} ${typeHint || ""}`;
+function detectGrey(title, venue, typeHint, linkHint = "") {
+  const blob = `${title || ""} ${venue || ""} ${typeHint || ""} ${linkHint || ""}`;
   const reasons = [];
   const seen = new Set();
   for (const rule of GREY_RULES) {
@@ -230,7 +234,10 @@ function mapOrganic(r) {
   const parts = summary.split(" - ");
   if (parts.length >= 2) venue = parts[1].replace(/,?\s*(19|20)\d{2}.*$/, "").trim() || null;
   const title = r.title || "";
-  const grey = detectGrey(title, venue, summary);
+  const link = r.link || null;
+  const resources = (r.resources || []).map((x) => ({ title: x.title, link: x.link }));
+  const linkHint = [link, ...resources.map((x) => `${x.title || ""} ${x.link || ""}`)].join(" ");
+  const grey = detectGrey(title, venue, summary, linkHint);
   return {
     id: scholarIdFromResult(r),
     title,
@@ -240,8 +247,8 @@ function mapOrganic(r) {
     summary,
     scholarCitedBy: typeof cite.total === "number" ? cite.total : 0,
     citesId: cite.cites_id ? String(cite.cites_id) : null,
-    link: r.link || null,
-    resources: (r.resources || []).map((x) => ({ title: x.title, link: x.link })),
+    link,
+    resources,
     detectedGreyLit: grey.detected,
     greyLitReasons: grey.reasons,
     serpResultId: r.result_id || null,
@@ -457,6 +464,7 @@ function buildSquares(papers, citingByPaper) {
           title: c.title,
           year: c.year,
           venue: c.venue,
+          summary: c.summary || null,
           citedBy: c.scholarCitedBy,
           detectedGreyLit: c.detectedGreyLit,
           greyLitReasons: c.greyLitReasons || [],

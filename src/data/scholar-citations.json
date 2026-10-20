@@ -319,7 +319,7 @@
       "prototype": true,
       "mode": "prototype-deep-grey-lit",
       "squareCount": 298,
-      "greyLitSquares": 7,
+      "greyLitSquares": 10,
       "pagesByPaper": [
         {
           "short": "Nat Sustain 2020 · global urban change 1985–2015",
@@ -740,7 +740,9 @@
             }
           ]
         }
-      ]
+      ],
+      "reflaggedAt": "2026-10-20T08:40:25.652Z",
+      "reflagNote": "Local reflag after expanding IPCC link/title heuristics; citation counts unchanged."
     },
     "papers": [
       {
@@ -770,7 +772,7 @@
         "scholarCitesId": "14363677741339472861",
         "scholarCitationCount": 550,
         "citingFetched": 114,
-        "citingGreyLit": 3,
+        "citingGreyLit": 6,
         "pagesFetched": 17,
         "maxPages": 30,
         "stoppedReason": "deep-complete"
@@ -2823,8 +2825,13 @@
         "year": 2022,
         "venue": null,
         "citedBy": 0,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "IPCC AR6 WGII",
+          "IPCC WG",
+          "IPCC WGII",
+          "IPCC AR6 Ch.6"
+        ],
         "paperIdxs": [
           1
         ],
@@ -3168,7 +3175,8 @@
         "paperIdxs": [
           1
         ],
-        "link": null
+        "link": null,
+        "greyLitNote": "Restored: SerpAPI summary flagged dissertation; title alone lacks the word."
       },
       {
         "id": "GS_whtx4_FhLJ4J",
@@ -3594,8 +3602,10 @@
         "year": 2022,
         "venue": "Climate …",
         "citedBy": 46,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "IPCC AR6 Ch.6"
+        ],
         "paperIdxs": [
           1
         ],
@@ -3685,8 +3695,10 @@
         "year": 2023,
         "venue": null,
         "citedBy": 821,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "IPCC AR6 Ch.6"
+        ],
         "paperIdxs": [
           1
         ],
@@ -4691,6 +4703,7 @@
         "year": null,
         "venue": "Available at SSRN …",
         "citedBy": 0,
+        "detectedGreyLit": true,
         "greyLitReasons": [
           "SSRN"
         ],
@@ -4705,6 +4718,7 @@
         "year": null,
         "venue": "thesis.dial.uclouvain.be",
         "citedBy": 0,
+        "detectedGreyLit": true,
         "greyLitReasons": [
           "thesis"
         ],
@@ -4719,6 +4733,7 @@
         "year": null,
         "venue": "Available at SSRN …",
         "citedBy": 0,
+        "detectedGreyLit": true,
         "greyLitReasons": [
           "SSRN"
         ],
@@ -4733,6 +4748,7 @@
         "year": 2024,
         "venue": null,
         "citedBy": 0,
+        "detectedGreyLit": true,
         "greyLitReasons": [
           "thesis"
         ],
@@ -4742,18 +4758,38 @@
         "link": "https://thesis.eur.nl/pub/76120"
       },
       {
+        "id": "GS__loO69dkizkJ",
+        "title": "Cities, Settlements and Key Infrastructure. In: Climate Change 2022: Impacts, Adaptation, and Vulnerability. Contribution of Working Group II to the Sixth Assessment …",
+        "year": 2022,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "IPCC AR6 WGII",
+          "IPCC WG",
+          "IPCC WGII",
+          "IPCC AR6 Ch.6"
+        ],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F7F2254031F93B477EE4DD14277713C0/stamped-9781009325837c6_907-1040.pdf/cities-settlements-and-key-infrastructure.pdf"
+      },
+      {
         "id": "GS_P-LpozA_TigJ",
         "title": "Urban form, urban warming and time: from global regularities to local heterogeneities",
         "year": 2021,
         "venue": null,
         "citedBy": 3,
+        "detectedGreyLit": true,
         "greyLitReasons": [
           "dissertation"
         ],
         "paperIdxs": [
           1
         ],
-        "link": null
+        "link": null,
+        "greyLitNote": "Restored: SerpAPI summary flagged dissertation; title alone lacks the word."
       },
       {
         "id": "GS_ltl1GAgzqxcJ",
@@ -4761,6 +4797,7 @@
         "year": null,
         "venue": "thesis.unipd.it",
         "citedBy": 0,
+        "detectedGreyLit": true,
         "greyLitReasons": [
           "thesis"
         ],
@@ -4770,11 +4807,42 @@
         "link": "https://thesis.unipd.it/handle/20.500.12608/42003"
       },
       {
+        "id": "GS_lpc07I2AED4J",
+        "title": "Cities, settlements and key infrastructure.(2022)",
+        "year": 2022,
+        "venue": "Climate …",
+        "citedBy": 46,
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "IPCC AR6 Ch.6"
+        ],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?params=/context/cis_research/article/1032/&path_info=IPCC_AR6_WGII_Chapter06.pdf"
+      },
+      {
+        "id": "GS_qpLZPQvpQPEJ",
+        "title": "Cities, settlements and key infrastructure",
+        "year": 2023,
+        "venue": null,
+        "citedBy": 821,
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "IPCC AR6 Ch.6"
+        ],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://escholarship.org/content/qt81q9s1z4/qt81q9s1z4.pdf"
+      },
+      {
         "id": "GS_hIziTA2IEgUJ",
         "title": "The Role of Air Conditioning Waste Heat on Urban Hydroclimatic Extremes: Insights from Coastal Twin Cities",
         "year": null,
         "venue": "Available at SSRN 5056698",
         "citedBy": 1,
+        "detectedGreyLit": true,
         "greyLitReasons": [
           "SSRN"
         ],
