@@ -1,21 +1,5 @@
 export const PUBLICATIONS_A = [
 {
-    title: "Global potential and supply-chain constraints for solar-powered artificial intelligence",
-    authors: "Yimin Chen, Jing Qian, Yijing Wang, Xiaoping Liu, Ming Luo, Yutian Liang, Weilin Liao, Zhu Deng, Kangning Huang",
-    venue: "submitted to One Earth",
-    year: 2026,
-    citationCount: 0,
-    isLeadAuthor: true,
-    highlights: [
-      "Assesses where a 100 MW computing load could be supported year-round by solar across 121 countries, combining monthly solar yield, cooling demand, land suitability, transmission, and connectivity",
-      "Identifies 6,280 cells with sufficient energy in every month (8,657 TWh yr⁻¹ across 100 countries under within-month balancing), with middle-income countries holding 55% of that potential",
-      "Partitions solar-powered AI potential by dual supply-chain access to Chinese energy hardware and US-controlled accelerators into three groups (open to both 40%; hardware barriers with open chips 31%; open hardware with chip-licensing constraints 29%)",
-      "Finds that under the baseline coding no country faces both supply-chain constraints at once, so solar-powered AI is limited by two different chains rather than a single bottleneck",
-    ],
-    keywords: ["data centers", "solar energy", "artificial intelligence", "supply chains", "export controls", "One Earth"],
-  },
-
-{
     title: "Stage-dependent scaling of travel distance shaped by 3D urban form",
     authors: "Yangzi Che, Guangdong Li, Xiaoping Liu, Libang Ma, Kangning Huang",
     venue: "submitted to PNAS",
@@ -129,7 +113,7 @@ export const PUBLICATIONS_A = [
 {
     title: "Nested economies of scale in global city mass",
     authors: "Kangning Huang, Mingzhen Lu",
-    venue: "Nature Cities (in press)",
+    venue: "Nature Cities (in press); scheduled for the November issue",
     year: 2026,
     citationCount: 0,
     url: "https://arxiv.org/abs/2507.03960",

@@ -24,13 +24,6 @@ export const NEWS: NewsItem[] = [
   },
   {
     date: "2026-10",
-    en: "“Toward Cooler Cities by Larger Homogeneous Functional Clusters” scheduled for publication the week of 19 Oct 2026 in PNAS.",
-    zh: "论文《通过更大的同质功能集群建设更凉爽的城市》定于 2026 年 10 月 19 日当周在 PNAS 发表。",
-    // Still in press — no DOI yet; link to on-site entry
-    href: `/publications#${publicationSlug("Toward Cooler Cities by Larger Homogeneous Functional Clusters")}`,
-  },
-  {
-    date: "2026-10",
     en: "Hosting Prof. Timon McPhearson (Urban Systems Lab / NYU) for a guest talk at NYU Shanghai.",
     zh: "在上海纽约大学邀请 Urban Systems Lab / NYU 的 Timon McPhearson 教授做学术报告。",
     href: "/news#mcphearson-2026",
@@ -43,16 +36,10 @@ export const NEWS: NewsItem[] = [
   },
   {
     date: "2026-09",
-    en: "“Nested economies of scale in global city mass” is in press at Nature Cities.",
-    zh: "我的论文《全球城市建成质量的嵌套规模经济》已被 Nature Cities 接收，即将发表。",
+    en: "“Nested economies of scale in global city mass” is in press at Nature Cities, scheduled for the November issue.",
+    zh: "我的论文《全球城市建成质量的嵌套规模经济》已被 Nature Cities 接收，定于 11 月刊发表。",
     // In press — link to the on-site entry, not a DOI (doi.org still 404)
     href: `/publications#${publicationSlug("Nested economies of scale in global city mass")}`,
-  },
-  {
-    date: "2026-09",
-    en: "“Toward Cooler Cities by Larger Homogeneous Functional Clusters” is in press at PNAS.",
-    zh: "论文《通过更大的同质功能集群建设更凉爽的城市》已获 PNAS 接收，待刊。",
-    href: `/publications#${publicationSlug("Toward Cooler Cities by Larger Homogeneous Functional Clusters")}`,
   },
   {
     date: "2026-09",
