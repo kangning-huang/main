@@ -304,7 +304,7 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-10-20T08:29:42.510Z",
+  "lastUpdated": "2026-10-20T08:33:19.019Z",
   "reachScholarPrototype": {
     "$comment": "Scholar-backed Reach citing prototype embedded for GH Actions (workflow only commits this JSON). citedBy values are Google Scholar counts via SerpAPI — never invented. Deep grey-lit sweep via --prototype page budgets.",
     "asOf": "2026-10-20",
@@ -318,40 +318,40 @@
       "encoding": "citing-work-scholar-cited-by",
       "prototype": true,
       "mode": "prototype-deep-grey-lit",
-      "squareCount": 48,
-      "greyLitSquares": 0,
+      "squareCount": 298,
+      "greyLitSquares": 7,
       "pagesByPaper": [
         {
           "short": "Nat Sustain 2020 · global urban change 1985–2015",
           "scholarCitationCount": 967,
-          "pagesFetched": 2,
-          "maxPages": 25,
-          "citingFetched": 35,
-          "citingGreyLit": 0,
-          "stoppedReason": "serp-no-results-soft-stop"
+          "pagesFetched": 18,
+          "maxPages": 30,
+          "citingFetched": 150,
+          "citingGreyLit": 3,
+          "stoppedReason": "deep-complete"
         },
         {
           "short": "ERL 2019 · urban expansion to 2050",
           "scholarCitationCount": 550,
-          "pagesFetched": 1,
-          "maxPages": 25,
-          "citingFetched": 3,
-          "citingGreyLit": 0,
-          "stoppedReason": "short-final-page"
+          "pagesFetched": 17,
+          "maxPages": 30,
+          "citingFetched": 114,
+          "citingGreyLit": 3,
+          "stoppedReason": "deep-complete"
         },
         {
           "short": "JGR-A 2021 · nighttime heat stress",
           "scholarCitationCount": 84,
-          "pagesFetched": 1,
-          "maxPages": 5,
-          "citingFetched": 10,
-          "citingGreyLit": 0,
-          "stoppedReason": "short-final-page"
+          "pagesFetched": 11,
+          "maxPages": 12,
+          "citingFetched": 36,
+          "citingGreyLit": 1,
+          "stoppedReason": "deep-complete"
         }
       ],
       "fetchStatus": "ok",
-      "startedAt": "2026-10-20T08:29:42.848Z",
-      "finishedAt": "2026-10-20T08:30:07.399Z",
+      "startedAt": "2026-10-20T08:33:19.408Z",
+      "finishedAt": "2026-10-20T08:37:54.175Z",
       "papers": 3,
       "fetchStats": [
         {
@@ -359,33 +359,386 @@
           "short": "Nat Sustain 2020 · global urban change 1985–2015",
           "citesId": "5780519463719279942",
           "scholarCitationCount": 967,
-          "maxPages": 25,
-          "pagesFetched": 2,
-          "stoppedReason": "serp-no-results-soft-stop",
-          "fetched": 35,
-          "greyLit": 0
+          "maxPages": 30,
+          "pagesFetched": 18,
+          "stoppedReason": "deep-complete",
+          "fetched": 150,
+          "greyLit": 3,
+          "sliceLog": [
+            {
+              "label": "grey:IPCC:p0",
+              "got": 7,
+              "added": 7,
+              "greyAdded": 1,
+              "total": 7
+            },
+            {
+              "label": "grey:AR6 OR AR5:p0",
+              "got": 8,
+              "added": 7,
+              "greyAdded": 0,
+              "total": 14
+            },
+            {
+              "label": "grey:UNEP OR \"World Bank\" OR FAO OR UNDP OR WMO:p0",
+              "got": 10,
+              "added": 6,
+              "greyAdded": 0,
+              "total": 20
+            },
+            {
+              "label": "grey:thesis OR dissertation:p0",
+              "got": 20,
+              "added": 18,
+              "greyAdded": 1,
+              "total": 38
+            },
+            {
+              "label": "grey:thesis OR dissertation:p1",
+              "got": 12,
+              "added": 11,
+              "greyAdded": 0,
+              "total": 49
+            },
+            {
+              "label": "grey:\"working paper\" OR \"technical report\" OR \"policy brief\":p0",
+              "got": 4,
+              "added": 0,
+              "greyAdded": 0,
+              "total": 49
+            },
+            {
+              "label": "grey:报告 OR 学位论文 OR 白皮书:p0",
+              "got": 1,
+              "added": 0,
+              "greyAdded": 0,
+              "total": 49
+            },
+            {
+              "label": "grey:CNKI OR SSRN:p0",
+              "got": 16,
+              "added": 14,
+              "greyAdded": 1,
+              "total": 63
+            },
+            {
+              "label": "year:2020:p0",
+              "got": 9,
+              "added": 8,
+              "greyAdded": 0,
+              "total": 71
+            },
+            {
+              "label": "year:2021:p0",
+              "got": 2,
+              "added": 0,
+              "greyAdded": 0,
+              "total": 71
+            },
+            {
+              "label": "year:2022:p0",
+              "got": 4,
+              "added": 1,
+              "greyAdded": 0,
+              "total": 72
+            },
+            {
+              "label": "year:2023:p0",
+              "got": 20,
+              "added": 20,
+              "greyAdded": 0,
+              "total": 92
+            },
+            {
+              "label": "year:2023:p1",
+              "error": "SerpAPI error: Google hasn't returned any results for this query.",
+              "soft": true
+            },
+            {
+              "label": "year:2024:p0",
+              "got": 20,
+              "added": 19,
+              "greyAdded": 0,
+              "total": 111
+            },
+            {
+              "label": "year:2024:p1",
+              "got": 20,
+              "added": 17,
+              "greyAdded": 0,
+              "total": 128
+            },
+            {
+              "label": "year:2025:p0",
+              "got": 3,
+              "added": 1,
+              "greyAdded": 0,
+              "total": 129
+            },
+            {
+              "label": "year:2026:p0",
+              "got": 20,
+              "added": 15,
+              "greyAdded": 0,
+              "total": 144
+            },
+            {
+              "label": "year:2026:p1",
+              "got": 20,
+              "added": 6,
+              "greyAdded": 0,
+              "total": 150
+            },
+            {
+              "label": "year:2027:p0",
+              "got": 1,
+              "added": 0,
+              "greyAdded": 0,
+              "total": 150
+            }
+          ]
         },
         {
           "doi": "10.1088/1748-9326/ab4b71",
           "short": "ERL 2019 · urban expansion to 2050",
           "citesId": "14363677741339472861",
           "scholarCitationCount": 550,
-          "maxPages": 25,
-          "pagesFetched": 1,
-          "stoppedReason": "short-final-page",
-          "fetched": 3,
-          "greyLit": 0
+          "maxPages": 30,
+          "pagesFetched": 17,
+          "stoppedReason": "deep-complete",
+          "fetched": 114,
+          "greyLit": 3,
+          "sliceLog": [
+            {
+              "label": "grey:IPCC:p0",
+              "got": 10,
+              "added": 10,
+              "greyAdded": 1,
+              "total": 10
+            },
+            {
+              "label": "grey:AR6 OR AR5:p0",
+              "got": 5,
+              "added": 3,
+              "greyAdded": 0,
+              "total": 13
+            },
+            {
+              "label": "grey:UNEP OR \"World Bank\" OR FAO OR UNDP OR WMO:p0",
+              "got": 16,
+              "added": 10,
+              "greyAdded": 0,
+              "total": 23
+            },
+            {
+              "label": "grey:thesis OR dissertation:p0",
+              "got": 20,
+              "added": 19,
+              "greyAdded": 1,
+              "total": 42
+            },
+            {
+              "label": "grey:thesis OR dissertation:p1",
+              "got": 20,
+              "added": 10,
+              "greyAdded": 1,
+              "total": 52
+            },
+            {
+              "label": "grey:\"working paper\" OR \"technical report\" OR \"policy brief\":p0",
+              "got": 4,
+              "added": 0,
+              "greyAdded": 0,
+              "total": 52
+            },
+            {
+              "label": "grey:报告 OR 学位论文 OR 白皮书:p0",
+              "error": "SerpAPI error: Google hasn't returned any results for this query.",
+              "soft": true
+            },
+            {
+              "label": "grey:CNKI OR SSRN:p0",
+              "got": 9,
+              "added": 8,
+              "greyAdded": 0,
+              "total": 60
+            },
+            {
+              "label": "year:2019:p0",
+              "got": 1,
+              "added": 1,
+              "greyAdded": 0,
+              "total": 61
+            },
+            {
+              "label": "year:2020:p0",
+              "got": 1,
+              "added": 0,
+              "greyAdded": 0,
+              "total": 61
+            },
+            {
+              "label": "year:2021:p0",
+              "got": 1,
+              "added": 0,
+              "greyAdded": 0,
+              "total": 61
+            },
+            {
+              "label": "year:2022:p0",
+              "got": 14,
+              "added": 11,
+              "greyAdded": 0,
+              "total": 72
+            },
+            {
+              "label": "year:2023:p0",
+              "got": 20,
+              "added": 18,
+              "greyAdded": 0,
+              "total": 90
+            },
+            {
+              "label": "year:2023:p1",
+              "got": 20,
+              "added": 17,
+              "greyAdded": 0,
+              "total": 107
+            },
+            {
+              "label": "year:2024:p0",
+              "got": 4,
+              "added": 0,
+              "greyAdded": 0,
+              "total": 107
+            },
+            {
+              "label": "year:2025:p0",
+              "got": 1,
+              "added": 0,
+              "greyAdded": 0,
+              "total": 107
+            },
+            {
+              "label": "year:2026:p0",
+              "got": 14,
+              "added": 6,
+              "greyAdded": 0,
+              "total": 113
+            },
+            {
+              "label": "year:2027:p0",
+              "got": 3,
+              "added": 1,
+              "greyAdded": 0,
+              "total": 114
+            }
+          ]
         },
         {
           "doi": "10.1029/2020JD033831",
           "short": "JGR-A 2021 · nighttime heat stress",
           "citesId": "2649149592188866483",
           "scholarCitationCount": 84,
-          "maxPages": 5,
-          "pagesFetched": 1,
-          "stoppedReason": "short-final-page",
-          "fetched": 10,
-          "greyLit": 0
+          "maxPages": 12,
+          "pagesFetched": 11,
+          "stoppedReason": "deep-complete",
+          "fetched": 36,
+          "greyLit": 1,
+          "sliceLog": [
+            {
+              "label": "grey:IPCC:p0",
+              "got": 4,
+              "added": 4,
+              "greyAdded": 0,
+              "total": 4
+            },
+            {
+              "label": "grey:AR6 OR AR5:p0",
+              "got": 6,
+              "added": 4,
+              "greyAdded": 0,
+              "total": 8
+            },
+            {
+              "label": "grey:UNEP OR \"World Bank\" OR FAO OR UNDP OR WMO:p0",
+              "got": 2,
+              "added": 0,
+              "greyAdded": 0,
+              "total": 8
+            },
+            {
+              "label": "grey:thesis OR dissertation:p0",
+              "got": 3,
+              "added": 3,
+              "greyAdded": 0,
+              "total": 11
+            },
+            {
+              "label": "grey:\"working paper\" OR \"technical report\" OR \"policy brief\":p0",
+              "error": "SerpAPI error: Google hasn't returned any results for this query.",
+              "soft": true
+            },
+            {
+              "label": "grey:报告 OR 学位论文 OR 白皮书:p0",
+              "error": "SerpAPI error: Google hasn't returned any results for this query.",
+              "soft": true
+            },
+            {
+              "label": "grey:CNKI OR SSRN:p0",
+              "got": 2,
+              "added": 2,
+              "greyAdded": 1,
+              "total": 13
+            },
+            {
+              "label": "year:2021:p0",
+              "got": 1,
+              "added": 1,
+              "greyAdded": 0,
+              "total": 14
+            },
+            {
+              "label": "year:2022:p0",
+              "error": "SerpAPI error: Google hasn't returned any results for this query.",
+              "soft": true
+            },
+            {
+              "label": "year:2023:p0",
+              "got": 5,
+              "added": 5,
+              "greyAdded": 0,
+              "total": 19
+            },
+            {
+              "label": "year:2024:p0",
+              "got": 1,
+              "added": 1,
+              "greyAdded": 0,
+              "total": 20
+            },
+            {
+              "label": "year:2025:p0",
+              "got": 11,
+              "added": 11,
+              "greyAdded": 0,
+              "total": 31
+            },
+            {
+              "label": "year:2026:p0",
+              "got": 9,
+              "added": 4,
+              "greyAdded": 0,
+              "total": 35
+            },
+            {
+              "label": "year:2027:p0",
+              "got": 1,
+              "added": 1,
+              "greyAdded": 0,
+              "total": 36
+            }
+          ]
         }
       ]
     },
@@ -400,11 +753,11 @@
         "venue": "Nature Sustainability 3 (7), 564-570, 2020",
         "scholarCitesId": "5780519463719279942",
         "scholarCitationCount": 967,
-        "citingFetched": 35,
-        "citingGreyLit": 0,
-        "pagesFetched": 2,
-        "maxPages": 25,
-        "stoppedReason": "serp-no-results-soft-stop"
+        "citingFetched": 150,
+        "citingGreyLit": 3,
+        "pagesFetched": 18,
+        "maxPages": 30,
+        "stoppedReason": "deep-complete"
       },
       {
         "doi": "10.1088/1748-9326/ab4b71",
@@ -416,11 +769,11 @@
         "venue": "Environmental Research Letters 14 (11), 114037, 2019",
         "scholarCitesId": "14363677741339472861",
         "scholarCitationCount": 550,
-        "citingFetched": 3,
-        "citingGreyLit": 0,
-        "pagesFetched": 1,
-        "maxPages": 25,
-        "stoppedReason": "short-final-page"
+        "citingFetched": 114,
+        "citingGreyLit": 3,
+        "pagesFetched": 17,
+        "maxPages": 30,
+        "stoppedReason": "deep-complete"
       },
       {
         "doi": "10.1029/2020JD033831",
@@ -432,14 +785,749 @@
         "venue": "Journal of Geophysical Research: Atmospheres 126 (4), e2020JD033831, 2021",
         "scholarCitesId": "2649149592188866483",
         "scholarCitationCount": 84,
-        "citingFetched": 10,
-        "citingGreyLit": 0,
-        "pagesFetched": 1,
-        "maxPages": 5,
-        "stoppedReason": "short-final-page"
+        "citingFetched": 36,
+        "citingGreyLit": 1,
+        "pagesFetched": 11,
+        "maxPages": 12,
+        "stoppedReason": "deep-complete"
       }
     ],
     "squares": [
+      {
+        "id": "GS_-cyq1tjEXhIJ",
+        "title": "Rethinking urban growth for low-carbon development: How does the co-evolution of urban expansion and renewal reshape land-Use carbon emissions?",
+        "year": null,
+        "venue": "Available at SSRN …",
+        "citedBy": 0,
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "SSRN"
+        ],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7314979"
+      },
+      {
+        "id": "GS_TvXDmBDP5wwJ",
+        "title": "Anna M. Stewart Ibarra, Inter-American Institute for Global Change Research (IAI)",
+        "year": null,
+        "venue": "wellcome.org",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://wellcome.org/sites/default/files/2022-01/landscape-mapping-software-tools-CSID-modelling.pdf"
+      },
+      {
+        "id": "GS_PsYg2saAMksJ",
+        "title": "Dinâmica das mudanças climáticas em Botucatu-SP: uma análise temporal de 1971 a 2024",
+        "year": 2025,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://repositorio.unesp.br/bitstreams/f30f756e-3545-4855-b829-02afe32459a5/download"
+      },
+      {
+        "id": "GS_0WOALPiICx4J",
+        "title": "Modelling the performance and sustainability of urban vegetation as Nature-based Solutions in current and future climate",
+        "year": 2022,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://spiral.imperial.ac.uk/entities/publication/92fae8ac-d369-4c6f-8bef-f97475e446e0"
+      },
+      {
+        "id": "GS_qrkBen13LPoJ",
+        "title": "Land Use Change, Spillovers, and Transitions: Global Trends, Prospects, and Emerging Drivers",
+        "year": 2026,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://eartharxiv.org/repository/view/15443/"
+      },
+      {
+        "id": "GS__UPLje7MpTIJ",
+        "title": "Concern Modelling for Different Types of Users in Urban Waterlogging Emergency Scenes",
+        "year": 2026,
+        "venue": "Journal of Geo-Information …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciengine.com/doi/10.12082/dqxxkx.2026.260028"
+      },
+      {
+        "id": "GS_hyApT1pFaZIJ",
+        "title": "Divergent trajectories of global urbanization: Intra-national spatial inequality and structural mismatch across the Global North and South",
+        "year": 2026,
+        "venue": "Frontiers of Urban and Rural Planning",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s44243-026-00096-3"
+      },
+      {
+        "id": "GS_12tl-joMCcAJ",
+        "title": "How do trade-offs between urban expansion and ecological construction influence CO2 emissions? New evidence from China",
+        "year": 2022,
+        "venue": "Ecological Indicators",
+        "citedBy": 37,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S1470160X22005416"
+      },
+      {
+        "id": "GS_LMVSBvVHJwwJ",
+        "title": "Scenario-based simulation of carbon storage in Chengdu using MCCA–InVEST: land use change, spatial patterns, and driving mechanisms",
+        "year": 2025,
+        "venue": "Carbon Balance and Management",
+        "citedBy": 12,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1186/s13021-025-00328-x"
+      },
+      {
+        "id": "GS_6wH-OI-osikJ",
+        "title": "Samlet utbyggingsareal i Kommune-Norge: Historisk utvikling og framtidige scenarioer, 2000–2050",
+        "year": 2025,
+        "venue": "Kart og Plan",
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.scup.com/doi/abs/10.18261/kp.118.2.3"
+      },
+      {
+        "id": "GS_bxFyZ6zxeGEJ",
+        "title": "Learning from COVID-19 for climate-ready urban transformation",
+        "year": 2025,
+        "venue": null,
+        "citedBy": 9,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.cambridge.org/core/elements/learning-from-covid19-for-climateready-urban-transformation/3B01330DCDDA163C271ECE4A28AC68DB"
+      },
+      {
+        "id": "GS_5pm232Fpd7MJ",
+        "title": "30 m global impervious surface area dynamics and urban expansion pattern observed by Landsat satellites: From 1972 to 2019",
+        "year": 2021,
+        "venue": "Science China Earth Sciences",
+        "citedBy": 199,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s11430-020-9797-9"
+      },
+      {
+        "id": "GS_KXkOw_3dNUYJ",
+        "title": "A high-resolution global annual city and town boundaries dataset (2000–2022) derived from GLC_FCS30D product",
+        "year": 2025,
+        "venue": "Scientific Data",
+        "citedBy": 10,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.nature.com/articles/s41597-025-06368-9"
+      },
+      {
+        "id": "GS_ef4Y46E7mO4J",
+        "title": "Least-cost path model integration: a multidisciplinary approach to tackling urban nature deficit–evidence from Otavalo, an Andean city in Ecuador",
+        "year": 2026,
+        "venue": "… Journal of Urban …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.tandfonline.com/doi/abs/10.1080/19463138.2026.2643974"
+      },
+      {
+        "id": "GS_DpEV3nH6fHIJ",
+        "title": "A multi-source land cover product fusion method by harmonizing consistency and accuracy",
+        "year": null,
+        "venue": "Geomatics World",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.geores.com.cn/skxxxb/EN/PDF/10.20117/j.jsti.202504006"
+      },
+      {
+        "id": "GS_gO0v5vlFx5AJ",
+        "title": "Explaining urban density trends; a global assessment of the factors that steer changes in urban population density",
+        "year": 2027,
+        "venue": "Land Use Policy",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0,
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0264837726003868"
+      },
+      {
+        "id": "GS_jrpNjkFzV8YJ",
+        "title": "Triple-Coupling Impacts of Land-Use Change on Ecosystem Services in China's Major Grain-Producing Areas Under SSP-RCP Scenarios",
+        "year": 2026,
+        "venue": "Agriculture",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2077-0472/16/20/2199"
+      },
+      {
+        "id": "GS_WwX15bGRvHIJ",
+        "title": "Afforestation Partially Offsets Losses of Soil Conservation Services and Carbon Stock From Direct and Indirect Urban Expansion in China",
+        "year": 2026,
+        "venue": "Land Degradation & …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ldr.70863"
+      },
+      {
+        "id": "GS_U7rKm_jKFecJ",
+        "title": "Assessment of Land Use and Land Cover (LULC) Changes along the MRT-6 Corridor in Dhaka Using Multi-Temporal Satellite Data",
+        "year": null,
+        "venue": "duet.ac.bd",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.duet.ac.bd/storage/journal/volume-11-issue-1-june-2026(101-107)-1791093392.pdf"
+      },
+      {
+        "id": "GS_d5Hnsx-LNAoJ",
+        "title": "Long-term Remote Sensing for Investigating Forest Change across a Suburbanizing Landscape",
+        "year": 2022,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://search.proquest.com/openview/4c811b9aa7ff7ebb00ecb0548682f22f/1?pq-origsite=gscholar&cbl=18750&diss=y"
+      },
+      {
+        "id": "GS_uxLZ7w32OdIJ",
+        "title": "Advanced modeling of InSAR time series for ground displacement hazard assessment",
+        "year": 2024,
+        "venue": null,
+        "citedBy": 2,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.tdx.cat/handle/10803/691456"
+      },
+      {
+        "id": "GS_vMohkI_fXC4J",
+        "title": "An evaluation of species abundance, gene flow and genetic diversity in bumble bees (Hymenoptera: Apidae: Bombus) in relation to urban land cover",
+        "year": 2023,
+        "venue": null,
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://rave.ohiolink.edu/etdc/view?acc_num=osu1687784935455531"
+      },
+      {
+        "id": "GS_Oy6-3Lt5fKcJ",
+        "title": "Land cover change from National to global scales: A spatiotemporal assessment of trajectories, transitions and drivers",
+        "year": 2021,
+        "venue": null,
+        "citedBy": 2,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://search.proquest.com/openview/669f2c4316eda595f80162e32d77c79f/1?pq-origsite=gscholar&cbl=2026366"
+      },
+      {
+        "id": "GS_c_YSLTULJLQJ",
+        "title": "Transitioning urban water management regimes to facilitate water sensitive urban environments.",
+        "year": 2023,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://ir.canterbury.ac.nz/bitstreams/815c00f8-7a04-443c-9de4-6b7b118bd2cd/download"
+      },
+      {
+        "id": "GS_fy-qe_YHR8MJ",
+        "title": "Some Generalizations in Nonparametric Function Estimation for Temporal Spatial Multidimensional Data",
+        "year": 2024,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://search.proquest.com/openview/96f73aff8e7b95707ba31f32fad9cba1/1?pq-origsite=gscholar&cbl=18750&diss=y"
+      },
+      {
+        "id": "GS_od4azyQhsIkJ",
+        "title": "The ecology of urban wildlife: How do species respond to rapid environmental change?",
+        "year": 2022,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://mspace.lib.umanitoba.ca/bitstreams/abee84ab-1357-4021-acfa-d3ed1ea6fd1a/download"
+      },
+      {
+        "id": "GS_QOn0bZdFa7YJ",
+        "title": "Assessing the impact of global environmental change on mosquito-borne disease: a planetary health approach",
+        "year": 2022,
+        "venue": null,
+        "citedBy": 4,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://researchonline.lshtm.ac.uk/id/eprint/4668987"
+      },
+      {
+        "id": "GS_DM1u6MY5TlEJ",
+        "title": "Enhancing understanding of lake abundance and dynamics, and the interaction between water resources and human settlements",
+        "year": 2026,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://search.proquest.com/openview/b7b13826e155c0df5ba383a4a468b879/1?pq-origsite=gscholar&cbl=18750&diss=y"
+      },
+      {
+        "id": "GS_ABA_GSzhwVcJ",
+        "title": "Vulnerability of US River Basins to Water Shortage over the 21st Century",
+        "year": 2021,
+        "venue": null,
+        "citedBy": 3,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://search.proquest.com/openview/da5873a3fc142cad2fa291b15ff3723d/1?pq-origsite=gscholar&cbl=18750&diss=y"
+      },
+      {
+        "id": "GS_GlBjs7D0YV4J",
+        "title": "Spatio-temporal analysis and scenario-based future projection of urban sustainability indicators in coastal China",
+        "year": 2021,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://ir.library.osaka-u.ac.jp/repo/ouka/all/87730/32358_Abstract.pdf"
+      },
+      {
+        "id": "GS_fGr6KaXGdtUJ",
+        "title": "Assessing Land Use/Land Cover Change Detection Algorithms using Sentinel-2 Satellite Time Series from 2018 to 2022",
+        "year": null,
+        "venue": "thesis.dial.uclouvain.be",
+        "citedBy": 0,
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "thesis"
+        ],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://thesis.dial.uclouvain.be/bitstreams/f32554e5-0e49-4816-a4a1-8522a9f2c3a7/download"
+      },
+      {
+        "id": "GS_dAleF2XPqLgJ",
+        "title": "DEPARTMENT OF BIOLOGY FACULTY OF NATURAL SCIENCES UNIVERSITY OF PUERTO RICO, RIO PIEDRAS CAMPUS",
+        "year": 2025,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": null
+      },
+      {
+        "id": "GS_mLuxVkRvSgIJ",
+        "title": "Anthropogenic and climatic controls on surface water across the contiguous United States",
+        "year": 2022,
+        "venue": null,
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://amsdottorato.unibo.it/id/eprint/10199/"
+      },
+      {
+        "id": "GS_wN2xokIwccoJ",
+        "title": "Dynamic variations in anthropogenic heat flux: a model and its implications",
+        "year": 2021,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://centaur.reading.ac.uk/100067/"
+      },
+      {
+        "id": "GS_SYYpUBmHd6oJ",
+        "title": "Maintaining wildflower biodiversity in cities",
+        "year": 2020,
+        "venue": null,
+        "citedBy": 4,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.research-collection.ethz.ch/bitstreams/98ebb85f-9d4e-486f-9e05-ed8addb7efb9/download"
+      },
+      {
+        "id": "GS_C3d791QF5WYJ",
+        "title": "Machine learning methods and land use/land cover (LULC) in the coastal Pays de Brest",
+        "year": 2023,
+        "venue": null,
+        "citedBy": 4,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://theses.hal.science/tel-04217323/"
+      },
+      {
+        "id": "GS_lXU6KUupHPcJ",
+        "title": "A multi-dimensional characterization of settlements with Earth Observation data",
+        "year": 2021,
+        "venue": null,
+        "citedBy": 3,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://search.proquest.com/openview/c51c87fa7fa5fe9b8cf7c9a00f9e03da/1?pq-origsite=gscholar&cbl=2026366&diss=y"
+      },
+      {
+        "id": "GS_IopAWAUWMVAJ",
+        "title": "Review of urban land management based on bibliometrics",
+        "year": 2022,
+        "venue": "Land",
+        "citedBy": 23,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2073-445X/11/11/1968"
+      },
+      {
+        "id": "GS_jYLd93x3I9QJ",
+        "title": "Variations of Soil Organic and Inorganic Carbon Stock and Soil Aggregation due to Land Use Change to Urban Green Spaces of Arid Environment",
+        "year": 2026,
+        "venue": "Land Degradation & …",
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ldr.70665"
+      },
+      {
+        "id": "GS_FK69xk3C5OYJ",
+        "title": "Sustainability in a Changing Landscape: Identifying the Effects of Land Use on Vegetation and Mammal Communities",
+        "year": 2021,
+        "venue": null,
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://search.proquest.com/openview/04506be9dd320c0f0458cb121d0b71a4/1?pq-origsite=gscholar&cbl=18750&diss=y"
+      },
+      {
+        "id": "GS_aCPNZKx3YGEJ",
+        "title": "Effects of climate change and urbanization on spatiotemporal variations of lake surface water temperature",
+        "year": 2024,
+        "venue": "IEEE Journal of …",
+        "citedBy": 2,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://ieeexplore.ieee.org/abstract/document/10737462/"
+      },
+      {
+        "id": "GS_iXCtuvUVwMcJ",
+        "title": "Mediating effect and suppressing effect: Intermediate mechanism of urban land use efficiency and economic development",
+        "year": 2023,
+        "venue": "Land",
+        "citedBy": 11,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2073-445X/12/6/1148"
+      },
+      {
+        "id": "GS_duh-8iZpsAYJ",
+        "title": "Does the nature of floods matter in the risk perception of households? A comparative assessment among the rural households prone to flash and riverine …",
+        "year": 2023,
+        "venue": "Water",
+        "citedBy": 10,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2073-4441/15/3/504"
+      },
+      {
+        "id": "GS_wdp3DNkqB7YJ",
+        "title": "Seasonal water storage and release dynamics of bofedal wetlands in the Central Andes",
+        "year": 2023,
+        "venue": "Hydrological …",
+        "citedBy": 42,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/hyp.14940"
+      },
+      {
+        "id": "GS_Kpc8bx79HHcJ",
+        "title": "Translating Landscape Fragmentation into Benchmarks of Environmental Impact Assessments: Thresholds of Ecosystem Service Losses in Guanzhong …",
+        "year": 2026,
+        "venue": "Land",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2073-445X/15/8/1371"
+      },
+      {
+        "id": "GS_T78ZOZnpYoAJ",
+        "title": "A novel impervious surface extraction method based on automatically generating training samples from multisource remote sensing products: a case study of Wuhan …",
+        "year": 2022,
+        "venue": "IEEE Journal of …",
+        "citedBy": 17,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://ieeexplore.ieee.org/abstract/document/9854083/"
+      },
+      {
+        "id": "GS_khUCdN4aa7IJ",
+        "title": "Urban planning scenarios significantly shape future urban growth and landscape patterns in China's megacity, Shanghai",
+        "year": 2026,
+        "venue": "Earth Systems and …",
+        "citedBy": 3,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s41748-025-00687-y"
+      },
+      {
+        "id": "GS_dPxzyZ8kBWkJ",
+        "title": "Machine learning based land use land cover analysis and prediction in Google Earth Engine towards achieving sustainable development in Indian Western …",
+        "year": 2026,
+        "venue": "Discover Sustainability",
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s43621-026-02924-4"
+      },
+      {
+        "id": "GS_C9yrkoymXKkJ",
+        "title": "REPORT ON ASSESSMENT OF DRIVERS AND PRESSURES LEADING TO URBAN CHALLENGES, ACROSS THE ULLS, INCLUDING SPATIAL AND …",
+        "year": null,
+        "venue": "researchgate.net",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.researchgate.net/profile/David-Fletcher-18/publication/351231464_REGREEN_Deliverable_N21_REPORT_ON_ASSESSMENT_OF_DRIVERS_AND_PRESSURES_EADING_TO_URBAN_CHALLENGES_ACROSS_THE_ULLS_INCLUDING_SPATIAL_AND_TEMPORAL_COMPONENTS/links/608c338192851c490fa9d80a/REGREEN-Deliverable-N21-REPORT-ON-ASSESSMENT-OF-DRIVERS-AND-PRESSURES-EADING-TO-URBAN-CHALLENGES-ACROSS-THE-ULLS-INCLUDING-SPATIAL-AND-TEMPORAL-COMPONENTS.pdf"
+      },
+      {
+        "id": "GS_4bO5HRVo2CQJ",
+        "title": "An Improved Hybrid Model on Source-Exposure Risk of Polycyclic Aromatic Hydrocarbon in Soil of Megacities",
+        "year": null,
+        "venue": "Available at SSRN …",
+        "citedBy": 0,
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "SSRN"
+        ],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3949312"
+      },
+      {
+        "id": "GS_qM017eVRrdEJ",
+        "title": "考虑产流模式空间分布的流域-城市复合系统洪水预报模型",
+        "year": 2023,
+        "venue": "水科学进展",
+        "citedBy": 10,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "http://skxjz.nhri.cn/article/id/9205e6c9-243b-4723-80a3-402bd432798f"
+      },
+      {
+        "id": "GS_97KPd9ZocrkJ",
+        "title": "Reserve asset or empty promise? Revealing the role of new croplands for improving food production potential in China",
+        "year": 2026,
+        "venue": "Resources …",
+        "citedBy": 9,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S092134492500552X"
+      },
+      {
+        "id": "GS_o-yw9FYGNR4J",
+        "title": "Determining the impacts of climate change and urban expansion on net primary productivity using the spatio-temporal fusion of remote sensing data",
+        "year": 2021,
+        "venue": "Ecological Indicators",
+        "citedBy": 77,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S1470160X21004027"
+      },
+      {
+        "id": "GS_slnZJGEJnrUJ",
+        "title": "Construction and analysis of global world cultural heritage knowledge graph based on big earth data",
+        "year": 2021,
+        "venue": "National Remote Sensing …",
+        "citedBy": 6,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.ygxb.ac.cn/en/article/doi/10.11834/jrs.20211168/"
+      },
+      {
+        "id": "GS_KikIYK9ecQ4J",
+        "title": "The urgent need to develop a new grassland map in China: based on the consistency and accuracy of ten land cover products",
+        "year": 2023,
+        "venue": "Science China Life …",
+        "citedBy": 22,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s11427-021-2143-3"
+      },
+      {
+        "id": "GS_y-BG31TI8oIJ",
+        "title": "基于大数据的世界文化遗产属性深度融合与分析",
+        "year": 2021,
+        "venue": "遥感学报",
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.ygxb.ac.cn/zh/article/doi/10.11834/jrs.20211168/"
+      },
       {
         "id": "GS_9yPdjllVZYoJ",
         "title": "Substantial terrestrial carbon emissions from global expansion of impervious surface area",
@@ -454,225 +1542,524 @@
         "link": "https://www.nature.com/articles/s41467-024-50840-w"
       },
       {
-        "id": "GS_UZHQRevldM8J",
-        "title": "Scenario forecasting of carbon neutrality by combining the LEAP model and future land-use simulation: An empirical study of Shenzhen, China",
-        "year": 2025,
-        "venue": "Sustainable Cities and Society",
-        "citedBy": 46,
+        "id": "GS_S6vZH4KoH4kJ",
+        "title": "Urban transformation through transit: the case of Delhi metro",
+        "year": 2024,
+        "venue": "Discover Cities",
+        "citedBy": 30,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S2210670725002434"
+        "link": "https://link.springer.com/article/10.1007/s44327-024-00035-1"
       },
       {
-        "id": "GS_H1z9OwKyP3UJ",
-        "title": "Rapid rise in urban sprawl: Global hotspots and trends since 1990",
-        "year": 2022,
-        "venue": "PLOS Sustainability and …",
-        "citedBy": 164,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://journals.plos.org/sustainabilitytransformation/article?id=10.1371/journal.pstr.0000034"
-      },
-      {
-        "id": "GS_ZwLywpnlT_cJ",
-        "title": "The use of local climate zones in the urban environment: A systematic review of data sources, methods, and themes",
-        "year": 2022,
-        "venue": "Urban Climate",
-        "citedBy": 200,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S2212095522000384"
-      },
-      {
-        "id": "GS_zaYgXCMg6h8J",
-        "title": "Spatiotemporal evolution patterns of urban heat island and its relationship with urbanization in Guangdong-Hong Kong-Macao greater bay area of China from …",
-        "year": 2023,
-        "venue": "Ecological Indicators",
-        "citedBy": 128,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S1470160X22012900"
-      },
-      {
-        "id": "GS_fU9JuiI3lHMJ",
-        "title": "Linking spatiotemporal variations in urban land surface temperature to land use and land Cover: A case study in Hangzhou City, China",
-        "year": 2025,
-        "venue": "Ecological Indicators",
-        "citedBy": 44,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S1470160X25002675"
-      },
-      {
-        "id": "GS_iILalmXpwwEJ",
-        "title": "Seeing the System from Above: The Use and Potential of Remote Sensing for Studying Ecosystem Dynamics: C. Senf",
-        "year": 2022,
-        "venue": "Ecosystems",
-        "citedBy": 124,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://link.springer.com/article/10.1007/s10021-022-00777-2"
-      },
-      {
-        "id": "GS_3gp9tKg0H6cJ",
-        "title": "Change in land-use structure due to urbanisation in China",
+        "id": "GS_Hjb4jc9I1QsJ",
+        "title": "Telecoupling urbanization and mountain areas deforestation between 2000 and 2020: Evidence from Zhejiang Province, China",
         "year": 2021,
-        "venue": "Journal of Cleaner Production",
-        "citedBy": 161,
+        "venue": "Land Degradation & …",
+        "citedBy": 28,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S0959652621031772"
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ldr.4074"
       },
       {
-        "id": "GS_8BaEnDbjMr0J",
-        "title": "Globe230k: A benchmark dense-pixel annotation dataset for global land cover mapping",
-        "year": 2023,
-        "venue": "Journal of Remote Sensing",
-        "citedBy": 84,
+        "id": "GS_Ni5HVRE8pfwJ",
+        "title": "利用高分辨率森林覆盖影像实现高山林线的自动提取",
+        "year": 2022,
+        "venue": "遥感学报",
+        "citedBy": 1,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://spj.science.org/doi/abs/10.34133/remotesensing.0078"
+        "link": "https://www.ygxb.ac.cn/zh/article/doi/10.11834/jrs.20221370/"
       },
       {
-        "id": "GS_XsdMIs3yq_IJ",
-        "title": "A strong but uneven increase in urban tree cover in China over the recent decade",
+        "id": "GS_wCG_fkFvu2wJ",
+        "title": "Flood regulation as a multivariate challenge in the Anthropocene: a systematic modeling approach",
         "year": 2025,
-        "venue": "Nature Cities",
+        "venue": "Environmental Research Letters",
+        "citedBy": 2,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://iopscience.iop.org/article/10.1088/1748-9326/ae08ce/meta"
+      },
+      {
+        "id": "GS_CXA5IzXsx6oJ",
+        "title": "Evolution and driving mechanisms of eco-environmental quality across different urbanization stages",
+        "year": 2025,
+        "venue": "Scientific Reports",
         "citedBy": 34,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.nature.com/articles/s44284-025-00227-9"
+        "link": "https://www.nature.com/articles/s41598-025-06084-9"
       },
       {
-        "id": "GS_0fkwz0fu5KYJ",
-        "title": "Global mapping of three-dimensional urban structures reveals escalating utilization in the vertical dimension and pronounced building space inequality",
-        "year": 2025,
-        "venue": "Engineering",
-        "citedBy": 57,
+        "id": "GS_shhVyU9MqNsJ",
+        "title": "How does hillside urban expansion affect the surface urban heat island effect? empirical evidence from China",
+        "year": 2026,
+        "venue": "GIScience & Remote …",
+        "citedBy": 0,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S2095809924001346"
+        "link": "https://www.tandfonline.com/doi/abs/10.1080/15481603.2026.2742570"
       },
       {
-        "id": "GS_CsZ-Qzx75CEJ",
-        "title": "Global urban low-carbon transitions: Multiscale relationship between urban land and carbon emissions",
-        "year": 2023,
-        "venue": "Environmental Impact Assessment Review",
-        "citedBy": 89,
+        "id": "GS_c6Eqp1cXo6IJ",
+        "title": "The ecological and evolutionary consequences of systemic racism in urban environments",
+        "year": 2020,
+        "venue": "Science",
+        "citedBy": 911,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S0195925523000422"
+        "link": "https://www.science.org/doi/abs/10.1126/science.aay4497"
       },
       {
-        "id": "GS_9rlCcTRkLHkJ",
-        "title": "Rapid urbanization and meteorological changes are reshaping the urban vegetation pattern in urban core area: A national 315-city study in China",
+        "id": "GS_mT9TXnOLbYEJ",
+        "title": "Combining expert and crowd-sourced training data to map urban form and functions for the continental US",
+        "year": 2020,
+        "venue": "Scientific data",
+        "citedBy": 166,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.nature.com/articles/s41597-020-00605-z"
+      },
+      {
+        "id": "GS_8OpRdgkbPiQJ",
+        "title": "Exploring the relationship between urbanization and ecological environment using remote sensing images and statistical data: A case study in the Yangtze …",
+        "year": 2020,
+        "venue": "Sustainability",
+        "citedBy": 91,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2071-1050/12/14/5620"
+      },
+      {
+        "id": "GS_GkBjujPTWIsJ",
+        "title": "Co-evolution of emerging multi-cities: rates, patterns and driving policies revealed by continuous change detection and classification of landsat data",
+        "year": 2020,
+        "venue": "Remote Sensing",
+        "citedBy": 24,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2072-4292/12/18/2905"
+      },
+      {
+        "id": "GS_8CLVQWZE8s8J",
+        "title": "Empowering urban governance through urban science: Multi-scale dynamics of urban systems worldwide",
+        "year": 2020,
+        "venue": "Sustainability",
+        "citedBy": 21,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2071-1050/12/15/5954"
+      },
+      {
+        "id": "GS_OhwWfgJbE_EJ",
+        "title": "An analysis of spatio-temporal urbanization patterns in Northwest China",
+        "year": 2020,
+        "venue": "Land",
+        "citedBy": 11,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2073-445X/9/11/411"
+      },
+      {
+        "id": "GS_ZLwg-WviWngJ",
+        "title": "Genomic evidence for parallel adaptation to cities",
+        "year": 2020,
+        "venue": null,
+        "citedBy": 7,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1111/mec.15589"
+      },
+      {
+        "id": "GS_-9IiMhZWRnkJ",
+        "title": "SGD-SM: Generating Seamless Global Daily AMSR2 Soil Moisture Long-term Productions (2013–2019)",
+        "year": 2020,
+        "venue": "Earth System Science …",
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://essd.copernicus.org/articles/13/1385/2021/"
+      },
+      {
+        "id": "GS__DpNAhB539YJ",
+        "title": "Investigating the Structural and Functional Changes of Urban Neighborhoods in Transition: A Case Study on Southern Zone of District 6 of Tehran",
+        "year": 2022,
+        "venue": "Urban Structure and …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.researchgate.net/profile/Esmaeil-Aghaeizadeh/publication/363211024_Investigating_the_structural_and_functional_changes_of_urban_neighborhoods_in_transition_Case_Southern_Zone_of_District_6_of_Tehran/links/639662d5e42faa7e75b76d54/Investigating-the-structural-and-functional-changes-of-urban-neighborhoods-in-transition-Case-Southern-Zone-of-District-6-of-Tehran.pdf"
+      },
+      {
+        "id": "GS_np0CdolbXWcJ",
+        "title": "Effects of counter-urbanization on Mediterranean rural landscapes",
         "year": 2023,
-        "venue": "Science of the Total …",
+        "venue": "Landscape Ecology",
+        "citedBy": 44,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s10980-023-01756-1"
+      },
+      {
+        "id": "GS_z2j7rCOFuE0J",
+        "title": "A Chinese soil conservation dataset preventing soil water erosion from 1992 to 2019",
+        "year": 2023,
+        "venue": "Scientific Data",
+        "citedBy": 98,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.nature.com/articles/s41597-023-02246-4"
+      },
+      {
+        "id": "GS_QYXrA3QPrIIJ",
+        "title": "The local coupling and telecoupling of urbanization and ecological environment quality based on multisource remote sensing data",
+        "year": 2023,
+        "venue": "Journal of Environmental …",
+        "citedBy": 108,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S030147972202494X"
+      },
+      {
+        "id": "GS_V5T4NYjsZ_EJ",
+        "title": "Competition between biogeochemical drivers and land-cover changes determines urban greening or browning",
+        "year": 2023,
+        "venue": "Remote Sensing of …",
+        "citedBy": 74,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0034425723000329"
+      },
+      {
+        "id": "GS_1i9bUVz9sa8J",
+        "title": "Coastal development: Resilience, restoration and infrastructure requirements",
+        "year": 2023,
+        "venue": "The blue compendium …",
+        "citedBy": 102,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/chapter/10.1007/978-3-031-16277-0_7"
+      },
+      {
+        "id": "GS_IlWnxgO7qCIJ",
+        "title": "An adaptive synchronous extraction (ASE) method for estimating intensity and footprint of surface urban heat islands: A case study of 254 North American cities",
+        "year": 2023,
+        "venue": "Remote Sensing of …",
+        "citedBy": 35,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0034425723003280"
+      },
+      {
+        "id": "GS_MuJSNRRHqOcJ",
+        "title": "Urban growth in peri-urban, rural and urban areas: Mexico City",
+        "year": 2023,
+        "venue": "Buildings and …",
+        "citedBy": 37,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://reference-global.com/article/10.5334/bc.230"
+      },
+      {
+        "id": "GS_l3c-ZVOje0AJ",
+        "title": "Analysis of land use change drivers and simulation of different future scenarios: Taking Shanxi Province of China as an example",
+        "year": 2023,
+        "venue": "International Journal of …",
+        "citedBy": 29,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/1660-4601/20/2/1626"
+      },
+      {
+        "id": "GS_nU3C4hpBi4oJ",
+        "title": "Was the extreme rainfall that caused the August 2022 flood in Pakistan predictable?",
+        "year": 2023,
+        "venue": "Environmental Research …",
+        "citedBy": 24,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://iopscience.iop.org/article/10.1088/2752-5295/acfa1a/meta"
+      },
+      {
+        "id": "GS_AHaompH3TkQJ",
+        "title": "Monitoring urban expansion by coupling multi-temporal active remote sensing and landscape analysis: changes in the metropolitan area of Cordoba …",
+        "year": 2023,
+        "venue": "Remote Sensing",
+        "citedBy": 27,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2072-4292/15/2/336"
+      },
+      {
+        "id": "GS_NbUflKskSMoJ",
+        "title": "Spatiotemporal evolution of urban agglomeration and its impact on landscape patterns in the Pearl River Delta, China",
+        "year": 2023,
+        "venue": "Remote Sensing",
+        "citedBy": 23,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2072-4292/15/10/2520"
+      },
+      {
+        "id": "GS_lormVcNkcSIJ",
+        "title": "Neighbor impacts of environmental regulation: The case of low-carbon pilot program in China",
+        "year": 2023,
+        "venue": "Energy",
+        "citedBy": 22,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0360544223009039"
+      },
+      {
+        "id": "GS_eKYb54vktjAJ",
+        "title": "The prevalence of anthropogenic nest materials differs between two distinct populations of migratory birds in Europe",
+        "year": 2023,
+        "venue": "… Science and Pollution …",
+        "citedBy": 17,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s11356-023-27156-1"
+      },
+      {
+        "id": "GS_B2lx7s83Mo0J",
+        "title": "Spatio-temporal evolution of urban expansion based on a novel adjusted index and GEE: A case study of central plains urban agglomeration, China",
+        "year": 2023,
+        "venue": "Chinese Geographical …",
+        "citedBy": 15,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s11769-023-1369-6"
+      },
+      {
+        "id": "GS_iGZTr3thtbIJ",
+        "title": "Characterizing urban densification in the city of Wuhan using time-series building information",
+        "year": 2023,
+        "venue": "Landscape Ecology",
+        "citedBy": 17,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s10980-023-01718-7"
+      },
+      {
+        "id": "GS_Jr67E7Hykl4J",
+        "title": "Small urban fragments maintain complex food webs of litter-dwelling arthropods in a subtropical city in China",
+        "year": 2023,
+        "venue": "Soil Biology and …",
+        "citedBy": 11,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0038071723002122"
+      },
+      {
+        "id": "GS_OJeUaI0Q_NgJ",
+        "title": "Seasonal fluctuations of marsh wetlands in the headwaters of the Brahmaputra, Ganges, and Indus Rivers, Tibetan Plateau based on the adapted LandTrendr …",
+        "year": 2023,
+        "venue": "Ecological Indicators",
+        "citedBy": 14,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S1470160X23005022"
+      },
+      {
+        "id": "GS_k6jAwvNryPYJ",
+        "title": "MLC30: A new 30 m land cover dataset for Myanmar from 1990 to 2020 using training sample migration framework",
+        "year": 2023,
+        "venue": "IEEE Journal of Selected …",
+        "citedBy": 10,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://ieeexplore.ieee.org/abstract/document/10301604/"
+      },
+      {
+        "id": "GS_k1B-phislpQJ",
+        "title": "Socio‐ecological interactions promote outbreaks of a harmful invasive plant in an urban landscape",
+        "year": 2023,
+        "venue": "Ecological Solutions …",
+        "citedBy": 9,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://besjournals.onlinelibrary.wiley.com/doi/abs/10.1002/2688-8319.12247"
+      },
+      {
+        "id": "GS_eKYUP8W4QdcJ",
+        "title": "Prioritizing COVID-19 vaccine allocation in resource poor settings: Towards an Artificial Intelligence-enabled and Geospatial-assisted decision support framework",
+        "year": 2023,
+        "venue": "Plos one",
+        "citedBy": 6,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0275037"
+      },
+      {
+        "id": "GS_KwSrvLVf1S8J",
+        "title": "Advancements in high-resolution land surface satellite products: A comprehensive review of inversion algorithms, products and challenges",
+        "year": 2024,
+        "venue": "Science of Remote …",
         "citedBy": 66,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S0048969723058965"
+        "link": "https://www.sciencedirect.com/science/article/pii/S2666017224000361"
       },
       {
-        "id": "GS_z4Rw9eIYAm4J",
-        "title": "Socio-economic and climatic changes lead to contrasting global urban vegetation trends",
-        "year": 2021,
-        "venue": "Global Environmental …",
-        "citedBy": 127,
+        "id": "GS_tKD2Ms6FFzcJ",
+        "title": "Urbanization and the urban critical zone",
+        "year": 2024,
+        "venue": "Earth Critical Zone",
+        "citedBy": 78,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S0959378021001643"
+        "link": "https://www.sciencedirect.com/science/article/pii/S2950476724000114"
       },
       {
-        "id": "GS_PJ-Yuk8gTdkJ",
-        "title": "A global analysis of multifaceted urbanization patterns using Earth Observation data from 1975 to 2015",
-        "year": 2022,
-        "venue": "Landscape and Urban …",
-        "citedBy": 126,
+        "id": "GS_IZkepoJP_gwJ",
+        "title": "Impact of urban greenspace on the urban thermal environment: A case study of Shenzhen, China",
+        "year": 2024,
+        "venue": "Sustainable Cities and Society",
+        "citedBy": 42,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S0169204621002796"
+        "link": "https://www.sciencedirect.com/science/article/pii/S2210670724004165"
       },
       {
-        "id": "GS_PK4LBCnN23kJ",
-        "title": "The impact of urbanization and aging on food security in developing countries: The view from Northwest China",
-        "year": 2021,
+        "id": "GS_so3J_ivqnssJ",
+        "title": "Same planet but different worlds! Diverging convergence pattern of urban form typologies across 413 cities with million+ inhabitants and their sustainability trade-offs",
+        "year": 2024,
+        "venue": "Habitat International",
+        "citedBy": 43,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0197397524000249"
+      },
+      {
+        "id": "GS_nPsUfGxPRXYJ",
+        "title": "Quantifying landscape connectivity gaps between protected area and natural habitat",
+        "year": 2024,
         "venue": "Journal of Cleaner …",
-        "citedBy": 157,
+        "citedBy": 49,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S0959652621002870"
-      },
-      {
-        "id": "GS_8gOVqFfrsiEJ",
-        "title": "1 km land use/land cover change of China under comprehensive socioeconomic and climate scenarios for 2020–2100",
-        "year": 2022,
-        "venue": "Scientific data",
-        "citedBy": 113,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://www.nature.com/articles/s41597-022-01204-w"
-      },
-      {
-        "id": "GS_WyDQmhtQcxgJ",
-        "title": "An assessment of urbanization sustainability in China between 1990 and 2015 using land use efficiency indicators",
-        "year": 2021,
-        "venue": "Npj Urban …",
-        "citedBy": 134,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://www.nature.com/articles/s42949-021-00032-y"
+        "link": "https://www.sciencedirect.com/science/article/pii/S0959652624001768"
       },
       {
         "id": "GS_GOrVWrYp3YEJ",
@@ -688,43 +2075,17 @@
         "link": "https://ieeexplore.ieee.org/abstract/document/10551864/"
       },
       {
-        "id": "GS_sc6oO1ep5qMJ",
-        "title": "Rapid and large-scale mapping of flood inundation via integrating spaceborne synthetic aperture radar imagery with unsupervised deep learning",
-        "year": 2021,
-        "venue": "ISPRS journal of …",
-        "citedBy": 129,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S0924271621001520"
-      },
-      {
-        "id": "GS__LdII0PvSfgJ",
-        "title": "Machine learning based urban sprawl assessment using integrated multi-hazard and environmental-economic impact",
+        "id": "GS_pYqlcmCloFsJ",
+        "title": "Dynamic urban land extensification is projected to lead to imbalances in the global land-carbon equilibrium",
         "year": 2024,
-        "venue": "Scientific Reports",
-        "citedBy": 30,
+        "venue": "… Earth & Environment",
+        "citedBy": 36,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.nature.com/articles/s41598-024-62001-6"
-      },
-      {
-        "id": "GS_62zhzPpAhO4J",
-        "title": "Population and land cover projections under greyfield development: implications for densification, urban forest, water performance, and heat",
-        "year": 2025,
-        "venue": "Cities",
-        "citedBy": 6,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S0264275125006249"
+        "link": "https://www.nature.com/articles/s43247-024-01231-y"
       },
       {
         "id": "GS_nrHr2Urmo_sJ",
@@ -740,160 +2101,916 @@
         "link": "https://link.springer.com/article/10.1007/s10980-024-02012-w"
       },
       {
-        "id": "GS_W4mrvbcXChYJ",
-        "title": "Changes in spatio-temporal patterns of urban habitat quality and their associations with bird species diversity under China's rapid urban expansion",
-        "year": 2025,
-        "venue": "Landscape …",
-        "citedBy": 18,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://link.springer.com/article/10.1007/s10980-025-02147-4"
-      },
-      {
-        "id": "GS_xh1xi-MzL4oJ",
-        "title": "Nature futures for the urban century: Integrating multiple values into urban management",
-        "year": 2022,
-        "venue": "… Science & Policy",
-        "citedBy": 120,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S1462901122000193"
-      },
-      {
-        "id": "GS_VudtBi5BPqYJ",
-        "title": "Global observation of urban expansion and land-cover dynamics using satellite big-data",
-        "year": 2021,
-        "venue": "Sci. Bull",
-        "citedBy": 106,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://www.sciengine.com/parse/pdf/2095-9273/0F0735F1968A499CB0D928C5CC2C67AC.pdf"
-      },
-      {
-        "id": "GS_Wn8DMDoxIOQJ",
-        "title": "Time-series land cover mapping and urban expansion analysis using OpenStreetMap data and remote sensing big data: A case study of Guangdong-Hong …",
-        "year": 2022,
-        "venue": "International Journal of Applied …",
-        "citedBy": 59,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S156984322200190X"
-      },
-      {
-        "id": "GS_CXFHuk4yI3cJ",
-        "title": "Distinctive patterns and controls of nitrous oxide concentrations and fluxes from urban inland waters",
-        "year": 2021,
-        "venue": "Environmental …",
-        "citedBy": 95,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://pubs.acs.org/doi/abs/10.1021/acs.est.1c00647"
-      },
-      {
-        "id": "GS_AXwNkWa8XlsJ",
-        "title": "Ecosystem services potential is declining across European capital metropolitan areas",
+        "id": "GS_ysvmgHwI1QoJ",
+        "title": "Importance of urban green areas' connectivity for the conservation of pollinators",
         "year": 2024,
-        "venue": "Scientific Reports",
+        "venue": "Urban …",
+        "citedBy": 77,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s11252-023-01457-2"
+      },
+      {
+        "id": "GS_jIRtsmlpHqMJ",
+        "title": "Insights from 30 years of land use/land cover transitions in Jakarta, Indonesia, via intensity analysis",
+        "year": 2024,
+        "venue": "Land",
+        "citedBy": 35,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2073-445x/13/4/545"
+      },
+      {
+        "id": "GS_o2rdU9lElX4J",
+        "title": "Word2Scene: Efficient remote sensing image scene generation with only one word via hybrid intelligence and low-rank representation",
+        "year": 2024,
+        "venue": "ISPRS Journal of Photogrammetry and …",
+        "citedBy": 17,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0924271624004106"
+      },
+      {
+        "id": "GS_v-3OczZ2ntcJ",
+        "title": "Does urbanization exacerbate asymmetrical changes in precipitation at divergent time scales in China?",
+        "year": 2024,
+        "venue": "Earth's …",
+        "citedBy": 23,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2023EF004355"
+      },
+      {
+        "id": "GS_vdyn74Ex2ngJ",
+        "title": "Delineating urbanicity and rurality: impact on environmental exposure assessment",
+        "year": 2024,
+        "venue": "Environmental science & …",
+        "citedBy": 16,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11627196/"
+      },
+      {
+        "id": "GS_wgVVsB-D4dIJ",
+        "title": "Global inequality in built-up land per capita and its change trajectories between 1985 and 2020",
+        "year": 2024,
+        "venue": "Geography and Sustainability",
+        "citedBy": 24,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S2666683924000580"
+      },
+      {
+        "id": "GS_QDFYxbiR_vQJ",
+        "title": "Exploring Acoustic-Visual perception and satisfaction in urban Parks: Based on behavioral analysis",
+        "year": 2024,
+        "venue": "Ecological Indicators",
         "citedBy": 27,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.nature.com/articles/s41598-024-59333-8"
+        "link": "https://www.sciencedirect.com/science/article/pii/S1470160X24004795"
       },
       {
-        "id": "GS_L8g7M0F3QCoJ",
-        "title": "Assessing the impacts of historical and future land-use/cover change on habitat quality in the urbanizing Lhasa River Basin on the Tibetan Plateau",
-        "year": 2023,
-        "venue": "Ecological Indicators",
-        "citedBy": 53,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S1470160X23002893"
-      },
-      {
-        "id": "GS_hNTmMQ_V5S8J",
-        "title": "Patterns and distributions of urban expansion in global watersheds",
-        "year": 2021,
-        "venue": "Earth's …",
-        "citedBy": 69,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021EF002062"
-      },
-      {
-        "id": "GS_PTFF4lMiHPwJ",
-        "title": "Simulating the effects on carbon sinks caused by urban expansion using a coupled urban–ecological model",
-        "year": 2025,
-        "venue": "Journal of Cleaner Production",
-        "citedBy": 12,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S0959652625015343"
-      },
-      {
-        "id": "GS_NPnWJBUdYrwJ",
-        "title": "Extraction of built-up areas using Sentinel-1 and Sentinel-2 data with automated training data sampling and label noise robust cross-fusion neural networks",
-        "year": 2025,
-        "venue": "… Journal of Applied Earth Observation and …",
+        "id": "GS_-_c8S6-AoQ4J",
+        "title": "Projecting the future fine-resolution carbon dioxide emissions under the shared socioeconomic pathways for carbon peak evaluation",
+        "year": 2024,
+        "venue": "Applied Energy",
         "citedBy": 20,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S1569843225001712"
+        "link": "https://www.sciencedirect.com/science/article/pii/S0306261924006238"
       },
       {
-        "id": "GS__LAqv8kNRv4J",
-        "title": "Quantitative analysis of local coupling and telecoupling mechanism between urbanization and ecological environment quality based on multi-source remote …",
-        "year": 2025,
-        "venue": "Ecological Indicators",
-        "citedBy": 19,
+        "id": "GS_U1OXY1iHNjAJ",
+        "title": "Urban intensity gradients shape community structure, life‐history traits and performance in a multitrophic system",
+        "year": 2024,
+        "venue": "Insect conservation …",
+        "citedBy": 23,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S1470160X25002766"
+        "link": "https://resjournals.onlinelibrary.wiley.com/doi/abs/10.1111/icad.12728"
       },
       {
-        "id": "GS_ZSuPAwtABYoJ",
-        "title": "Quantifying urban land expansion using remote sensing data and multi-evaluation indices in the Lower Yellow River, China",
-        "year": 2025,
-        "venue": "Environmental and Sustainability …",
+        "id": "GS_JDVc8_DWLyMJ",
+        "title": "Comparing the driving mechanisms of different types of urban construction land expansion: A case study of the Beijing-Tianjin-Hebei region",
+        "year": 2024,
+        "venue": "Journal of Geographical Sciences",
+        "citedBy": 22,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s11442-023-2191-x"
+      },
+      {
+        "id": "GS_k2kEeK8puYUJ",
+        "title": "Tracking gain and loss of impervious surfaces by integrating continuous change detection and multitemporal classifications from 1985 to 2022 in Beijing",
+        "year": 2024,
+        "venue": "International Journal of …",
+        "citedBy": 10,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S1569843224006241"
+      },
+      {
+        "id": "GS_diMJSAML9eQJ",
+        "title": "Spatio-temporal classification of land use and land cover and its changes in Kerala using remote sensing and machine learning approach",
+        "year": 2024,
+        "venue": "Environmental monitoring and assessment",
+        "citedBy": 23,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s10661-024-12633-y"
+      },
+      {
+        "id": "GS_IAep7wHujZwJ",
+        "title": "Anthropogenic habitat modification causes nonlinear multiscale bird diversity declines",
+        "year": 2024,
+        "venue": "Ecography",
+        "citedBy": 29,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://nsojournals.onlinelibrary.wiley.com/doi/abs/10.1111/ecog.06759"
+      },
+      {
+        "id": "GS_ttVgZdXR49IJ",
+        "title": "Surface water monitoring from 1984 to 2021 based on Landsat time-series images and Google Earth Engine",
+        "year": 2024,
+        "venue": "Heliyon",
+        "citedBy": 20,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.cell.com/heliyon/fulltext/S2405-8440(24)12691-6"
+      },
+      {
+        "id": "GS_SRWpGN4soicJ",
+        "title": "Changes of ecological vulnerability in areas with different urban expansion patterns—A case study in the Yanhe river basin, China",
+        "year": 2024,
+        "venue": "Journal of Environmental …",
+        "citedBy": 17,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0301479724025933"
+      },
+      {
+        "id": "GS_r2QuOKvi2C4J",
+        "title": "The multiscale response of global cropland cropping intensity to urban expansion",
+        "year": 2024,
+        "venue": "Agricultural Systems",
+        "citedBy": 15,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0308521X24002889"
+      },
+      {
+        "id": "GS_Kf80XYvgp1YJ",
+        "title": "Human-driven global geomorphic change",
+        "year": 2024,
+        "venue": "Geomorphology",
+        "citedBy": 21,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0169555X24001831"
+      },
+      {
+        "id": "GS_btI0NrMm8v0J",
+        "title": "Dual effects on vegetation from urban expansion in the drylands of northern China: A multiscale investigation using the vegetation disturbance index",
+        "year": 2024,
+        "venue": "Science of the Total Environment",
+        "citedBy": 20,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0048969724026275"
+      },
+      {
+        "id": "GS_RhfdI9lb2NoJ",
+        "title": "Thriving under Salinity: Growth, Ecophysiology and Proteomic Insights into the Tolerance Mechanisms of Obligate Halophyte Suaeda fruticosa",
+        "year": 2024,
+        "venue": "Plants",
+        "citedBy": 17,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2223-7747/13/11/1529"
+      },
+      {
+        "id": "GS_X3V_VaKD6rMJ",
+        "title": "A global estimate of monthly vegetation and soil fractions from spatiotemporally adaptive spectral mixture analysis during 2001–2022",
+        "year": 2024,
+        "venue": "Earth system …",
+        "citedBy": 20,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://essd.copernicus.org/articles/16/1333/2024/"
+      },
+      {
+        "id": "GS_dBn4wfcGYVAJ",
+        "title": "Global 1 km land surface parameters for kilometer-scale Earth system modeling",
+        "year": 2024,
+        "venue": "Earth System Science Data",
+        "citedBy": 57,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://essd.copernicus.org/articles/16/2007/2024/"
+      },
+      {
+        "id": "GS_jFF8_yCyKsoJ",
+        "title": "Urban and agricultural land use led to niche differentiation of AOA, AOB and comammox along the Beiyun River continuum",
+        "year": 2024,
+        "venue": "Water Research",
+        "citedBy": 16,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0043135424003828"
+      },
+      {
+        "id": "GS_S4OvsW7WGLAJ",
+        "title": "Mapping decadal land cover dynamics in Sicily's coastal regions",
+        "year": 2024,
+        "venue": "Scientific Reports",
+        "citedBy": 10,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.nature.com/articles/s41598-024-73085-5"
+      },
+      {
+        "id": "GS_8shfDD7VcLkJ",
+        "title": "Building up a data engine for global urban mapping",
+        "year": 2024,
+        "venue": "Remote Sensing of Environment",
+        "citedBy": 17,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0034425724002608"
+      },
+      {
+        "id": "GS_E9qkne4BCz0J",
+        "title": "Evaluation of impervious surface extraction based on Qimingxing-1 nighttime light and point of interest data",
+        "year": 2024,
+        "venue": "International Journal of …",
+        "citedBy": 10,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.tandfonline.com/doi/abs/10.1080/17538947.2024.2430680"
+      },
+      {
+        "id": "GS_sLyfjnIVJ3gJ",
+        "title": "A synthesis of Global Streamflow Characteristics, Hydrometeorology, and Catchment Attributes (GSHA) for large sample river-centric studies",
+        "year": 2024,
+        "venue": "… system science data",
+        "citedBy": 30,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://essd.copernicus.org/articles/16/1559/2024/"
+      },
+      {
+        "id": "GS_2M0KX71QFMEJ",
+        "title": "Integrating cellular automata with long short-term memory neural network to simulate urban expansion using time-series data",
+        "year": 2024,
+        "venue": "… Journal of Applied Earth Observation and …",
+        "citedBy": 17,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S156984322400030X"
+      },
+      {
+        "id": "GS_JJDrEbUgCvQJ",
+        "title": "Morphology changes and the expansion of major port cities in the Philippines from 1990 to 2020",
+        "year": 2024,
+        "venue": "Cities",
         "citedBy": 14,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S2665972725000649"
+        "link": "https://www.sciencedirect.com/science/article/pii/S0264275124000325"
+      },
+      {
+        "id": "GS_HiYKgZix41cJ",
+        "title": "FlooDOT-based Analysis of Floods in Turkey and Spatial Comparison of Various Data Sources",
+        "year": 2025,
+        "venue": "TURKISH JOURNAL OF CIVIL …",
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://avesis.uludag.edu.tr/yayin/97e4002e-2b87-493a-9e1b-03b05db25a57/floodot-based-analysis-of-floods-in-turkey-and-spatial-comparison-of-various-data-sources"
+      },
+      {
+        "id": "GS_n_0dvSNOAksJ",
+        "title": "Temporary loss of social-ecological system resilience during rural to urban transition",
+        "year": 2026,
+        "venue": "Nature Cities",
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.nature.com/articles/s44284-026-00493-1"
+      },
+      {
+        "id": "GS_LSPDHKDhlK4J",
+        "title": "Three decades of urban densification reduced winter direct sunlight access across China's old urban cores",
+        "year": 2026,
+        "venue": "Proceedings of the National …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.pnas.org/doi/abs/10.1073/pnas.2624733123"
+      },
+      {
+        "id": "GS_uTgKGcpgWG8J",
+        "title": "Advancing global urban mapping with multimodal robustness and versatile applications",
+        "year": 2026,
+        "venue": "ISPRS Journal of Photogrammetry and Remote …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0924271626004417"
+      },
+      {
+        "id": "GS_jZTSoe3oAEsJ",
+        "title": "Nonlinear effects of urban green space spatial morphology on urban flood resilience: Insights from explainable machine learning",
+        "year": 2026,
+        "venue": "Journal of Cleaner Production",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0959652626015891"
+      },
+      {
+        "id": "GS_28cGHMpe-o0J",
+        "title": "Urban heat island effect in China: Multidimensional insights into urbanization's impact",
+        "year": 2026,
+        "venue": "Environment, Development and …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s10668-026-08087-6"
+      },
+      {
+        "id": "GS_0uvMdHhgrEwJ",
+        "title": "Bats in an urbanised mountain landscape: How vegetation from settlements to surrounding forests drives bat diversity",
+        "year": 2026,
+        "venue": "Global Ecology and …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S2351989426003537"
+      },
+      {
+        "id": "GS_vghRz60vVpwJ",
+        "title": "Integrating human multi-dimensional landscape perception into ecological restoration of urban green spaces: barriers and solutions",
+        "year": 2026,
+        "venue": "International Journal of …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.tandfonline.com/doi/abs/10.1080/13504509.2026.2729268"
+      },
+      {
+        "id": "GS_L31dc95_KE4J",
+        "title": "Intelligent simulation of urban vacant land: A coupled DLPD and improved NSGA-III model with dual-scale objectives",
+        "year": 2026,
+        "venue": "Sustainable Cities and …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S2210670726008000"
+      },
+      {
+        "id": "GS_SmR3JZ4haOAJ",
+        "title": "Generating Annual 10 m Land Cover Maps for 37 Chinese Metropolises Using Google Satellite Embeddings",
+        "year": 2026,
+        "venue": "Remote Sensing",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2072-4292/18/18/3233"
+      },
+      {
+        "id": "GS_AZ-LEYtGOXsJ",
+        "title": "Effects of Urban Growth Patterns on Production–Living–Ecological Functions: Performance Assessment and Comparative Analysis Based on Urban Scaling …",
+        "year": 2026,
+        "venue": "Land",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2073-445X/15/8/1386"
+      },
+      {
+        "id": "GS_uev8tB555voJ",
+        "title": "Spatial-temporal coupling coordination patterns between regional economic linkages and fine landscape resources utilization: a case of the Greater Bay Area, China",
+        "year": 2026,
+        "venue": "Geo-spatial …",
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.tandfonline.com/doi/abs/10.1080/10095020.2025.2540568"
+      },
+      {
+        "id": "GS_xkEOOIY3iDsJ",
+        "title": "Slope-Climbing Expansion of Impervious Surfaces in China's Capital Metropolitan Area: A Slope-Spectrum and IntPLUS Counterfactual Assessment",
+        "year": 2026,
+        "venue": "Land",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.mdpi.com/2073-445X/15/10/1866"
+      },
+      {
+        "id": "GS_nbBvMu5fpC4J",
+        "title": "On-Orbit Execution of a Geospatial Foundation Model",
+        "year": 2026,
+        "venue": "Remote …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.researchgate.net/profile/Fabrice-Marre/publication/415123508_On-Orbit_Execution_of_a_Geospatial_Foundation_Model/links/6abeea9bb43d142169d02d46/On-Orbit-Execution-of-a-Geospatial-Foundation-Model.pdf"
+      },
+      {
+        "id": "GS_BlHNgF_CPdsJ",
+        "title": "Urbanization Favors Parallel Evolution of a Mixed Reproductive System in a Herb Across Tropical Cities",
+        "year": 2026,
+        "venue": "Biotropica",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1111/btp.70242"
+      },
+      {
+        "id": "GS_U_ABlKhus-MJ",
+        "title": "Urban Trinidadian guppies evolve shorter guts",
+        "year": 2026,
+        "venue": "Biological Journal of …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://academic.oup.com/biolinnean/article-abstract/149/1/blag054/8786070"
+      },
+      {
+        "id": "GS_zAaLZJOuzlgJ",
+        "title": "Fine-grained attributes mapping of individual buildings from street-view and satellite imagery",
+        "year": 2026,
+        "venue": "Geo-spatial Information Science",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.tandfonline.com/doi/abs/10.1080/10095020.2026.2644093"
+      },
+      {
+        "id": "GS_qZR4qJsJhQQJ",
+        "title": "Impacts of rooftop photovoltaic systems on urban microclimate in arid and semi-arid regions: A case study of Lanzhou",
+        "year": 2026,
+        "venue": "Sustainable Energy Technologies and …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S2213138826003668"
+      },
+      {
+        "id": "GS_yWwqWWE47wQJ",
+        "title": "Generative models of scale-invariant systems of cities: Do they agree with or contradict theoretical and empirical expectations?",
+        "year": 2026,
+        "venue": "Environment and Planning B: Urban Analytics …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://journals.sagepub.com/doi/abs/10.1177/23998083251367201"
+      },
+      {
+        "id": "GS_sNCm8E_JIRsJ",
+        "title": "Spatiotemporal dynamics of ecological vulnerability and urbanization in the Greater Bay Area",
+        "year": 2026,
+        "venue": "Discover Environment",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s44274-026-01034-2"
+      },
+      {
+        "id": "GS_crW3pMI3YUQJ",
+        "title": "Geospatial analysis of spatio-temporal land transformation and urban expansion in Jammu city",
+        "year": 2026,
+        "venue": "Discover Cities",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s44327-026-00368-z"
+      },
+      {
+        "id": "GS_vkbw6ZnduAoJ",
+        "title": "Spatiotemporal dynamics and drivers of surface urban heat island intensity in Dhaka, Bangladesh using geospatial remote sensing",
+        "year": 2026,
+        "venue": "Discover …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s44288-026-00767-0"
+      },
+      {
+        "id": "GS_ELkluuyeyd4J",
+        "title": "Climate Change Adaptation Through Urban Planning in Coastal Cities: The Case of Badagry, Nigeria",
+        "year": 2027,
+        "venue": "Emerging Trends in …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.taylorfrancis.com/chapters/oa-edit/10.1201/9781003782254-126/climate-change-adaptation-urban-planning-coastal-cities-case-badagry-nigeria-odekunle-folasade-adebayo-olabisi-ajayi-kayode-adebayo-oluwatoyin-fadeyi-ayomipo-adewole-hakeem"
+      },
+      {
+        "id": "GS_HRmjePJUFG0J",
+        "title": "Land Use and Vegetation Changes Impact on Thermal Comfort in Urban Open Spaces of Nairobi City, Kenya",
+        "year": 2024,
+        "venue": null,
+        "citedBy": 6,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.researchgate.net/profile/Sharon-Onyango-2/publication/384016439_Land_Use_and_Vegetation_Change_Impact_on_Thermal_Comfort_in_Urban_Open_Spaces_of_Nairobi_City_Kenya/links/66e48c6ffa5e11512cb88ab2/Land-Use-and-Vegetation-Change-Impact-on-Thermal-Comfort-in-Urban-Open-Spaces-of-Nairobi-City-Kenya.pdf"
+      },
+      {
+        "id": "GS_Dxmgv8ydz9IJ",
+        "title": "Heatwaves and Everyday Heroines: Unveiling gendered adaptation strategies in korail slum, Bangladesh",
+        "year": 2024,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "thesis"
+        ],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://thesis.eur.nl/pub/76120"
+      },
+      {
+        "id": "GS_a9mA5h58TPAJ",
+        "title": "Carbon sequestration in the green open spaces along primary road of Pontianak City, West Kalimantan, Indonesia",
+        "year": 2024,
+        "venue": "… (Journal of Natural …",
+        "citedBy": 9,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://journal.ipb.ac.id/jpsl/article/view/49908"
+      },
+      {
+        "id": "GS_EzSnfOFIMdUJ",
+        "title": "Striving for Carbon Neutrality: Advancing from Nature-Based to Nature-Driven Urbanism",
+        "year": null,
+        "venue": "Urban Sustainability",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.1201/9781003518037-3&type=chapterpdf"
+      },
+      {
+        "id": "GS__loO69dkizkJ",
+        "title": "Cities, Settlements and Key Infrastructure. In: Climate Change 2022: Impacts, Adaptation, and Vulnerability. Contribution of Working Group II to the Sixth Assessment …",
+        "year": 2022,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/F7F2254031F93B477EE4DD14277713C0/stamped-9781009325837c6_907-1040.pdf/cities-settlements-and-key-infrastructure.pdf"
+      },
+      {
+        "id": "GS_6pWKuHv4CsoJ",
+        "title": "Cooling effects of urban blue-green spaces across China's climate zones: A dual-perspective and multi-factor analysis",
+        "year": 2026,
+        "venue": "Journal of Cleaner Production",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0959652626022638"
+      },
+      {
+        "id": "GS_fUKz0mGh7h8J",
+        "title": "VU Research Portal",
+        "year": null,
+        "venue": "research.vu.nl",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://research.vu.nl/ws/portalfiles/portal/505705485/hottopics%20-%206a8c5714be460.pdf"
+      },
+      {
+        "id": "GS_NnTRvqyEs2EJ",
+        "title": "A Major Advancement in Nighttime Light Remote Sensing: Applications and Prospects of SDGSAT-1 Data",
+        "year": 2026,
+        "venue": "Journal of Remote Sensing",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://spj.science.org/doi/abs/10.34133/remotesensing.1072"
+      },
+      {
+        "id": "GS_z7mE-6zSB2UJ",
+        "title": "Urbanization Drives Community Reorganization, Functional Filtering, and Pest Dominance in Tropical Termites",
+        "year": 2026,
+        "venue": "Biotropica",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1111/btp.70265"
+      },
+      {
+        "id": "GS_JKuGRL7Ku1kJ",
+        "title": "Rapid Urban Expansion and Ecosystem Degradation along an Unsustainable Trajectory: Spatiotemporal Analysis of Land Use/Land Cover Change in the …",
+        "year": 2026,
+        "venue": "Current Journal of Applied …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.researchgate.net/profile/Lamin-Mansaray/publication/405854435_Rapid_Urban_Expansion_and_Ecosystem_Degradation_along_an_Unsustainable_Trajectory_Spatiotemporal_Analysis_of_Land_UseLand_Cover_Change_in_the_Western_Area_Peninsula_Sierra_Leone/links/6a282603acb3fc46368c0c1f/Rapid-Urban-Expansion-and-Ecosystem-Degradation-along-an-Unsustainable-Trajectory-Spatiotemporal-Analysis-of-Land-Use-Land-Cover-Change-in-the-Western-Area-Peninsula-Sierra-Leone.pdf"
+      },
+      {
+        "id": "GS_I8XM05Xte-QJ",
+        "title": "Proyecto Fin de Grado Grado en Ingeniería de la Energía",
+        "year": null,
+        "venue": "idus.us.es",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://idus.us.es/bitstreams/a6b53fd8-5be8-40ed-9a5b-e5f04edce9f4/download"
+      },
+      {
+        "id": "GS_uizbC7BbGNEJ",
+        "title": "An approach to prioritize urban tree planting to mitigate heat and advance equity in New Haven",
+        "year": 2025,
+        "venue": "Urban Forestry & Urban …",
+        "citedBy": 4,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S1618866725003735"
+      },
+      {
+        "id": "GS_1SdfbymTooUJ",
+        "title": "Future urban worlds: Theories, models, scenarios, and observations of urban spatial expansion",
+        "year": 2023,
+        "venue": "Frontiers in Built Environment",
+        "citedBy": 24,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.frontiersin.org/journals/built-environment/articles/10.3389/fbuil.2023.1194813/full"
+      },
+      {
+        "id": "GS_rmt82xllvhAJ",
+        "title": "Understanding the linkage between urban growth and land surface temperature—A case study of Bangalore City, India",
+        "year": 2022,
+        "venue": "Remote Sensing",
+        "citedBy": 98,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.mdpi.com/2072-4292/14/17/4241"
+      },
+      {
+        "id": "GS_k_rIGu4gXA4J",
+        "title": "What is the impact of investing in construction and real estate?",
+        "year": 2021,
+        "venue": null,
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://assets.cdcgroup.com/wp-content/uploads/2021/01/25173530/Whats-the-impact-of-investing-in-construction-and-real-estate.pdf"
+      },
+      {
+        "id": "GS_KmxD-hQ55AcJ",
+        "title": "Understanding land use, land cover, and landscape patterns of the world's cities for sustainable biodiversity planning",
+        "year": 2023,
+        "venue": "Routledge handbook of …",
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://api.taylorfrancis.com/content/chapters/edit/download?identifierName=doi&identifierValue=10.4324/9781003016120-6&type=chapterpdf"
+      },
+      {
+        "id": "GS_-0gzBOem9iMJ",
+        "title": "Tag: sustainability",
+        "year": null,
+        "venue": "iiraorg.com",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://iiraorg.com/tag/sustainability/"
+      },
+      {
+        "id": "GS_HoPDGd7EmqEJ",
+        "title": "Urbanization, Landscape Dynamics, and Ecological Vulnerability in Kisangani and Its Surrounding Areas (Tshopo, DR Congo): Spatial and Prospective Approaches",
+        "year": 2025,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://search.proquest.com/openview/869fecfd65a7acf6e18bb2110d34a662/1?pq-origsite=gscholar&cbl=2026366&diss=y"
+      },
+      {
+        "id": "GS_BrglTRwd9r4J",
+        "title": "Assessing Urban Heat Island Effects and Mitigation Potential in Graz, Austria.",
+        "year": 2026,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://unipub.uni-graz.at/obvugrhs/content/titleinfo/14481962"
       },
       {
         "id": "GS_BwcFfIYwuP8J",
@@ -907,6 +3024,1116 @@
           1
         ],
         "link": "https://www.researchgate.net/profile/Karl-Samuelsson/publication/340686731_Urban_nature_as_a_source_of_resilience_during_social_distancing_amidst_the_coronavirus_pandemic/links/5e99826292851c2f52aa20d7/Urban-nature-as-a-source-of-resilience-during-social-distancing-amidst-the-coronavirus-pandemic.pdf"
+      },
+      {
+        "id": "GS_c_3PfXaCMhwJ",
+        "title": "Future Urban and Rural Built-Up Land Change and Implications for Biodiversity in China",
+        "year": 2026,
+        "venue": "ISPRS International Journal of Geo …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.mdpi.com/2220-9964/15/7/314"
+      },
+      {
+        "id": "GS_AZzlyZXxVZIJ",
+        "title": "Spatiotemporal patterns of urbanization during the last four decades in Switzerland and their impacts on urban heat islands",
+        "year": 2021,
+        "venue": null,
+        "citedBy": 2,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://infoscience.epfl.ch/entities/publication/b1d8e18d-df49-4aa6-9ac4-14edd659b570/files"
+      },
+      {
+        "id": "GS_ixxyn8f9nOIJ",
+        "title": "Balancing carbon in the expanding city: Assessing the viability of buildings as climate champions",
+        "year": 2025,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://aaltodoc.aalto.fi/items/753439a2-8fc3-4a34-beb6-02edb553d9a7"
+      },
+      {
+        "id": "GS_cOD7WR-KPx4J",
+        "title": "Evaluation of Machine Learning Methods for Flood Forecasting in Piedmont and Coastal Areas of North Carolina",
+        "year": 2025,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://search.proquest.com/openview/582e4b412ad7ef7d50c392006c5acf57/1?pq-origsite=gscholar&cbl=18750&diss=y"
+      },
+      {
+        "id": "GS_AQ3HC7azvOMJ",
+        "title": "The Impact of Street Canyon Geometry on Microclimate and Outdoor Thermal Comfort-The Case of\" Damac Hills 2\" Community",
+        "year": 2022,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://bspace.buid.ac.ae/items/1a7a5891-d77c-4c42-9549-00307984b158"
+      },
+      {
+        "id": "GS_LSaIgOvtfiMJ",
+        "title": "Spatial Patterns, Drivers, and Impacts of the Urban Land Expansion in Nigeria from 1985 to 2015",
+        "year": 2024,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://oaktrust.library.tamu.edu/bitstreams/8c0e6167-aac7-4b75-a52d-6c8d74736473/download"
+      },
+      {
+        "id": "GS_KWDkLjCNJj0J",
+        "title": "Spatial Equity, Climate Change, and Community Resilience",
+        "year": 2025,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://search.proquest.com/openview/2c3f6d7b2e54a20d48b6ee53039a2e5a/1?pq-origsite=gscholar&cbl=18750&diss=y"
+      },
+      {
+        "id": "GS_nkaEeKcCVLwJ",
+        "title": "VU Research Portal",
+        "year": 2018,
+        "venue": "Vision Research",
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://research.vu.nl/ws/portalfiles/portal/168511737/L%20%20Wang%20-%20thesis.pdf"
+      },
+      {
+        "id": "GS_c4mwnHLf9hcJ",
+        "title": "Drivers of urban pollinator communities in Bologna (Northern Italy): from landscapes and plants to people",
+        "year": 2026,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://amsdottorato.unibo.it/id/eprint/13057/"
+      },
+      {
+        "id": "GS_usD7u2zi7KYJ",
+        "title": "Insect pollinators in urban landscapes: impacts of city design and management on species abundance and occurrence",
+        "year": 2025,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://open.library.ubc.ca/soa/cIRcle/collections/ubctheses/24/items/1.0449441"
+      },
+      {
+        "id": "GS_P-LpozA_TigJ",
+        "title": "Urban form, urban warming and time: from global regularities to local heterogeneities",
+        "year": 2021,
+        "venue": null,
+        "citedBy": 3,
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "dissertation"
+        ],
+        "paperIdxs": [
+          1
+        ],
+        "link": null
+      },
+      {
+        "id": "GS_whtx4_FhLJ4J",
+        "title": "Macro-level estimation of present and future seismic loss by modelling spatio-temporal dynamics of exposure",
+        "year": 2020,
+        "venue": null,
+        "citedBy": 3,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": null
+      },
+      {
+        "id": "GS_sMRt_q7yKmQJ",
+        "title": "Heat waves risk assessment of historic urban areas: historic buildings and their urban environment",
+        "year": 2022,
+        "venue": null,
+        "citedBy": 2,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": null
+      },
+      {
+        "id": "GS_Z7RIAozig1oJ",
+        "title": "An Assessment of Tropical Urban Bee Communities in San Juan, Puerto Rico",
+        "year": 2025,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://search.proquest.com/openview/f47566f9187aad3a9fcf15e348fdb814/1?pq-origsite=gscholar&cbl=18750&diss=y"
+      },
+      {
+        "id": "GS_3lpV6nWzA2gJ",
+        "title": "Modeling to Evaluate the Contribution of the Built Environment on Heat Microenvironments and Analysis of the Efficiency and Efficacy of Electric Vehicle …",
+        "year": 2024,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://search.proquest.com/openview/83e6fc6008615ac9edd858c77cd9f035/1?pq-origsite=gscholar&cbl=18750&diss=y"
+      },
+      {
+        "id": "GS_6_YXZNj4h5EJ",
+        "title": "Urbanization, landscape dynamics, and ecological vulnerability in Kisangani and its surrounding areas (Tshopo, DR Congo): spatial and prospective approaches",
+        "year": 2026,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://orbi.uliege.be/handle/2268/343961"
+      },
+      {
+        "id": "GS_NhIiJlLed6wJ",
+        "title": "Ecological and Evolutionary Responses to Environmental Change in Two Large North American Mammals",
+        "year": 2026,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://stars.library.ucf.edu/gradstudies_etd_2026/216/"
+      },
+      {
+        "id": "GS_1OxIDFwl2uEJ",
+        "title": "Advancing Building Energy Consumption Estimates Through Incorporating the Effects of Urban Heat Island (UHI) Phenomenon",
+        "year": 2023,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://search.proquest.com/openview/16012ec6c5bcfecb93c628feaff8aef9/1?pq-origsite=gscholar&cbl=18750&diss=y"
+      },
+      {
+        "id": "GS_8CHol9O40S8J",
+        "title": "Influence of light pollution on threatened aquatic macrofauna species of Ganga River Basin, India: underlying mechanisms and mitigation strategies",
+        "year": 2025,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://helda.helsinki.fi/items/4ae1f05d-0df1-4bfb-9695-473d24bb8ede"
+      },
+      {
+        "id": "GS_XUKAnL2xDPYJ",
+        "title": "Understanding urban trees: form, function and vulnerability",
+        "year": 2025,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://etheses.whiterose.ac.uk/id/eprint/36712/"
+      },
+      {
+        "id": "GS_YEBNHTkLgdoJ",
+        "title": "A data-based framework for efficient urban green space management-contributions from socio-environmental sciences",
+        "year": 2025,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://gs.elaba.lt/object/elaba:226196466/"
+      },
+      {
+        "id": "GS_9QevUIb65awJ",
+        "title": "Local and landscape drivers of plant diversity and composition in urban greenspaces",
+        "year": 2023,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://ynu.repo.nii.ac.jp/record/12629/files/iwachido_yuki-review.pdf"
+      },
+      {
+        "id": "GS_Efp0FljR1skJ",
+        "title": "Urban Tree Stress in Socio-Ecological Systems",
+        "year": 2024,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://search.proquest.com/openview/16ec70fb69a435f162699ffbe35733b0/1?pq-origsite=gscholar&cbl=18750&diss=y"
+      },
+      {
+        "id": "GS_NiA_qVOjTUYJ",
+        "title": "Ten facts about land systems for sustainability",
+        "year": 2022,
+        "venue": "Proceedings of the National Academy of Sciences",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.academia.edu/download/94743697/e2109217118.full.pdf"
+      },
+      {
+        "id": "GS_ltl1GAgzqxcJ",
+        "title": "Is it possible to reduce wastewater to obtain sustainable cities? Some urban experiences",
+        "year": null,
+        "venue": "thesis.unipd.it",
+        "citedBy": 0,
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "thesis"
+        ],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://thesis.unipd.it/handle/20.500.12608/42003"
+      },
+      {
+        "id": "GS_wZgWp77CCVQJ",
+        "title": "Planet at the end of the city: how climate changes the nature of urban theory",
+        "year": 2026,
+        "venue": "International Journal of Urban and Regional Research",
+        "citedBy": 9,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1111/1468-2427.70010"
+      },
+      {
+        "id": "GS_lSYYRdNE9wwJ",
+        "title": "Geospatial Assessment of Land Use/Land Cover Change and Land Surface Temperature Dynamics Using Multi-Index Analysis and CA-Markov Modeling from 1990 …",
+        "year": 2026,
+        "venue": "SciNex Journal of …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://journalscinex.com/sjas/article/view/3"
+      },
+      {
+        "id": "GS_WAwxWcjMgyYJ",
+        "title": "ERZURUM KENTİ SÜRDÜRÜLEBİLİR ALAN KULLANIM UYUŞMAZLIKLARININ BELİRLENMESİ VE ÇÖZÜM ÖNERİLERİ",
+        "year": 2022,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": null
+      },
+      {
+        "id": "GS_vXXsBkHlznAJ",
+        "title": "Statistical Modelling of Urban Heat Islands Under Present and Future Climate",
+        "year": 2024,
+        "venue": null,
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://ueaeprints.uea.ac.uk/id/eprint/94873/"
+      },
+      {
+        "id": "GS_vTJpb_QsU-8J",
+        "title": "Sewage Irrigation Fields—From Relict Landscape to Blue-Green Urban Infrastructure",
+        "year": null,
+        "venue": "Water",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.academia.edu/download/123359736/pdf.pdf"
+      },
+      {
+        "id": "GS__LBGFL4flfIJ",
+        "title": "The Impact of Green Infrastructure on Mitigating Urban Heat Island Effect: Current Status, Trends, and Challenges",
+        "year": 2025,
+        "venue": "Forests",
+        "citedBy": 7,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.mdpi.com/1999-4907/16/9/1450"
+      },
+      {
+        "id": "GS_QHdIsF3ky6kJ",
+        "title": "Efficiency and greenness evaluation of urban land use change in the Yangtze River Economic Belt, China",
+        "year": 2024,
+        "venue": "Land Degradation & …",
+        "citedBy": 11,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1002/ldr.5171"
+      },
+      {
+        "id": "GS_rxcPU2hgnd0J",
+        "title": "Flood prediction based on feature selection and a hybrid deep learning network",
+        "year": 2024,
+        "venue": "Journal of Water and …",
+        "citedBy": 21,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://iwaponline.com/jwcc/article/15/3/1245/100391"
+      },
+      {
+        "id": "GS_0zBGH42UGPwJ",
+        "title": "Projections of heat-related mortality in Chinese cities: The roles of climate change, urbanization, socioeconomic adaptation, and landscape-level strategies",
+        "year": 2025,
+        "venue": "Environmental …",
+        "citedBy": 8,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12165738/"
+      },
+      {
+        "id": "GS_P8EpXfURGcwJ",
+        "title": "corrected Proof",
+        "year": 2024,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.researchgate.net/profile/Chenmin-Ni-2/publication/378850596_Flood_prediction_based_on_feature_selection_and_a_hybrid_deep_learning_network/links/65f69ad01f0aec67e29ebb46/Flood-prediction-based-on-feature-selection-and-a-hybrid-deep-learning-network.pdf"
+      },
+      {
+        "id": "GS_IYxfTMffMfIJ",
+        "title": "Urban and non-urban contributions to the social cost of carbon",
+        "year": null,
+        "venue": "sussex.figshare.com",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://sussex.figshare.com/articles/journal_contribution/Urban_and_non-urban_contributions_to_the_social_cost_of_carbon/28869194?file=54567428"
+      },
+      {
+        "id": "GS_UsJx9aqVS1gJ",
+        "title": "The evolution of city form",
+        "year": 2021,
+        "venue": "… from Satellite Data …",
+        "citedBy": 3,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://documents1.worldbank.org/curated/en/551511618021559759/pdf/The-Evolution-of-City-Form-Evidence-from-Satellite-Data.pdf"
+      },
+      {
+        "id": "GS_U8LbbMhNO2YJ",
+        "title": "Solar Geoengineering Modeling and Applications for Mitigating Global Warming: Assessing Key Parameters and the Urban Heat Island Influence",
+        "year": 2022,
+        "venue": "Frontiers in Climate",
+        "citedBy": 20,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.frontiersin.org/journals/climate/articles/10.3389/fclim.2022.870071/full"
+      },
+      {
+        "id": "GS_AD5J4_yn7GAJ",
+        "title": "Perceptions of climate shocks and gender vulnerabilities in the Upper Ganga Basin",
+        "year": 2019,
+        "venue": "Environmental Development",
+        "citedBy": 53,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S221146451830246X"
+      },
+      {
+        "id": "GS_4y3PF5VWT5YJ",
+        "title": "Building climate resilience through nature-based solutions in Europe: A review of enabling knowledge, finance and governance frameworks",
+        "year": 2022,
+        "venue": "Climate Risk …",
+        "citedBy": 187,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S2212096322000572"
+      },
+      {
+        "id": "GS_aEv57pclbbMJ",
+        "title": "Spatiotemporal change analysis and prediction of future land use and land cover changes using QGIS MOLUSCE plugin and remote sensing big data: A case …",
+        "year": 2022,
+        "venue": "Land",
+        "citedBy": 340,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.mdpi.com/2073-445X/11/3/419"
+      },
+      {
+        "id": "GS_-HPQpfGmu9AJ",
+        "title": "Geothermal energy as a means to decarbonize the energy mix of megacities",
+        "year": 2022,
+        "venue": "Communications Earth & …",
+        "citedBy": 112,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.nature.com/articles/s43247-022-00386-w"
+      },
+      {
+        "id": "GS_pytNRFWL4OIJ",
+        "title": "Quantitative-spatial relationships between air and surface temperature, a proxy for microclimate studies in fine-scale intra-urban areas?",
+        "year": 2022,
+        "venue": "Sustainable Cities and …",
+        "citedBy": 92,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S2210670721008490"
+      },
+      {
+        "id": "GS_lpc07I2AED4J",
+        "title": "Cities, settlements and key infrastructure.(2022)",
+        "year": 2022,
+        "venue": "Climate …",
+        "citedBy": 46,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?params=/context/cis_research/article/1032/&path_info=IPCC_AR6_WGII_Chapter06.pdf"
+      },
+      {
+        "id": "GS_fXBzYEQKzIsJ",
+        "title": "Population-environment dynamics across world's top 100 urban agglomerations: With implications for transitioning toward global urban sustainability",
+        "year": 2022,
+        "venue": "Journal of Environmental Management",
+        "citedBy": 37,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0301479722012038"
+      },
+      {
+        "id": "GS_IhVfWgVwytgJ",
+        "title": "Projected urban exposure to extreme precipitation over South Asia",
+        "year": 2022,
+        "venue": "Science of The Total …",
+        "citedBy": 32,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0048969722007562"
+      },
+      {
+        "id": "GS_e23wNGJ-n4sJ",
+        "title": "Integrating Gaussian mixture dual-clustering and DBSCAN for exploring heterogeneous characteristics of urban spatial agglomeration areas",
+        "year": 2022,
+        "venue": "Remote Sensing",
+        "citedBy": 25,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.mdpi.com/2072-4292/14/22/5689"
+      },
+      {
+        "id": "GS_18t_JC81WaoJ",
+        "title": "Review of key factors that affect the implementation of bio-receptive façades in a hot arid climate: Case study north Egypt",
+        "year": 2022,
+        "venue": "Building and …",
+        "citedBy": 32,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0360132322001652"
+      },
+      {
+        "id": "GS_RnuMbLU7AuoJ",
+        "title": "Ten facts about land systems for sustainability",
+        "year": 2022,
+        "venue": "… of the National …",
+        "citedBy": 2,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.research-collection.ethz.ch/items/36d8d689-39ad-4d1b-81d2-ff1cb7ed8ab0"
+      },
+      {
+        "id": "GS_i31HCb1gEGsJ",
+        "title": "여름철 주간 수목의 수형, 지엽밀도, 식재량에 따른 열환경 분석: 제주특별자치도 제주시를 대상으로",
+        "year": 2022,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://scienceon.kisti.re.kr/srch/selectPORSrchArticle.do?cn=DIKO0016072824"
+      },
+      {
+        "id": "GS_qpLZPQvpQPEJ",
+        "title": "Cities, settlements and key infrastructure",
+        "year": 2023,
+        "venue": null,
+        "citedBy": 821,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://escholarship.org/content/qt81q9s1z4/qt81q9s1z4.pdf"
+      },
+      {
+        "id": "GS_ua6RcDT3Ce8J",
+        "title": "The effects of urbanization on pollinators and pollination: A meta‐analysis",
+        "year": 2023,
+        "venue": "Ecology Letters",
+        "citedBy": 226,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://onlinelibrary.wiley.com/doi/abs/10.1111/ele.14277"
+      },
+      {
+        "id": "GS_NGigoFOOD_sJ",
+        "title": "Flood susceptibility mapping using machine learning boosting algorithms techniques in Idukki district of Kerala India",
+        "year": 2023,
+        "venue": "Urban Climate",
+        "citedBy": 124,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S2212095523000974"
+      },
+      {
+        "id": "GS_8OW9vy00rfAJ",
+        "title": "Simulating land use change for sustainable land management in rapid urbanization regions: A case study of the Yangtze River Delta region",
+        "year": 2023,
+        "venue": "Landscape …",
+        "citedBy": 72,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://link.springer.com/article/10.1007/s10980-023-01657-3"
+      },
+      {
+        "id": "GS_1XDP8xhF_bkJ",
+        "title": "Spatiotemporal impacts of urban structure upon urban land-use efficiency: Evidence from 280 cities in China",
+        "year": 2023,
+        "venue": "Habitat International",
+        "citedBy": 84,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0197397522002247"
+      },
+      {
+        "id": "GS_2D07Y8ZT6y0J",
+        "title": "The effects of urban land use on energy-related CO2 emissions in China",
+        "year": 2023,
+        "venue": "Science of the Total …",
+        "citedBy": 64,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0048969723004886"
+      },
+      {
+        "id": "GS_rkVnhWE3OFQJ",
+        "title": "Three-way decision-based conditional probabilities by opinion scores and Bayesian rules in circular-Pythagorean fuzzy sets for developing sustainable smart living …",
+        "year": 2023,
+        "venue": "Information …",
+        "citedBy": 50,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0020025523012665"
+      },
+      {
+        "id": "GS_0N0nbJbR_fkJ",
+        "title": "Urban mosquito distributions are modulated by socioeconomic status and environmental traits in the USA",
+        "year": 2023,
+        "venue": "Ecological …",
+        "citedBy": 40,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/eap.2869"
+      },
+      {
+        "id": "GS_3S7sp8HBV9YJ",
+        "title": "Land cover changes utilising landsat satellite imageries for the kumasi metropolis and its adjoining municipalities in ghana (1986–2022)",
+        "year": 2023,
+        "venue": "Sensors",
+        "citedBy": 25,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.mdpi.com/1424-8220/23/5/2644"
+      },
+      {
+        "id": "GS_Gwg_SPu7Q0AJ",
+        "title": "Anthropogenic effects on global soil nitrogen pools",
+        "year": 2023,
+        "venue": "Science of the Total Environment",
+        "citedBy": 19,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0048969723048635"
+      },
+      {
+        "id": "GS_3RoRPXwCxQgJ",
+        "title": "Normalized urban heat island (UHI) indicators: Classifying the temporal variation of UHI for building energy simulation (BES) applications",
+        "year": 2023,
+        "venue": "Building Simulation",
+        "citedBy": 21,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://link.springer.com/article/10.1007/s12273-023-1048-7"
+      },
+      {
+        "id": "GS_ZBpn6LkoNMMJ",
+        "title": "Spatial-temporal expansion and determinants of light pollution in India's riparian habitats",
+        "year": 2023,
+        "venue": "Environmental Impact …",
+        "citedBy": 22,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0195925522002189"
+      },
+      {
+        "id": "GS_heCDUmMaLewJ",
+        "title": "Urban greening as a response to climate-related heat risk: A Social–Geographical Review",
+        "year": 2023,
+        "venue": "Sustainability",
+        "citedBy": 18,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.mdpi.com/2071-1050/15/6/4996"
+      },
+      {
+        "id": "GS_DrXrbMwETJoJ",
+        "title": "Comparison of the thermal environment by local climate zones in summer: a case study in Suwon, Republic of Korea",
+        "year": 2023,
+        "venue": "Sustainability",
+        "citedBy": 11,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.mdpi.com/2071-1050/15/3/2620"
+      },
+      {
+        "id": "GS_vJxDFIxlCPYJ",
+        "title": "Impact of urban expansion on grain production in the Japan Sea Rim region",
+        "year": 2023,
+        "venue": "Frontiers in Earth …",
+        "citedBy": 10,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2022.1025069/full"
+      },
+      {
+        "id": "GS_SQv_0A8-tOwJ",
+        "title": "Modelling global urban land-use change process using spherical cellular automata",
+        "year": 2023,
+        "venue": "GeoJournal",
+        "citedBy": 10,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://link.springer.com/article/10.1007/s10708-022-10776-4"
+      },
+      {
+        "id": "GS_hhQH42PIxdoJ",
+        "title": "Urban Spatial Pattern and Expansion Characteristics in Countries along the Belt and Road under Shared Socioeconomic Pathways.",
+        "year": 2023,
+        "venue": "Geography & Geographic …",
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://openurl.ebsco.com/contentitem/gcd:174386428?sid=ebsco:plink:crawler-gcd&id=ebsco:gcd:174386428&crl=c&jrnl=16720504"
+      },
+      {
+        "id": "GS_qguR9S-nW5MJ",
+        "title": "Heat Waves: Physical Understanding and Scientific Challenges",
+        "year": 2023,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.lareferencia.info/vufind/Record/ES_5be70cfefdf1f7c71279796b930fbe23"
+      },
+      {
+        "id": "GS_00WVA-HygoMJ",
+        "title": "A remote sensing method to assess the future multi-hazard exposure of urban areas",
+        "year": 2023,
+        "venue": "Remote Sensing",
+        "citedBy": 17,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.mdpi.com/2072-4292/15/17/4288"
+      },
+      {
+        "id": "GS_Rs1QDcS6KfsJ",
+        "title": "Spatial matrices of urban expansion in Lafia, north-Central Nigeria",
+        "year": 2023,
+        "venue": null,
+        "citedBy": 18,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "http://irepo.futminna.edu.ng:8080/jspui/handle/123456789/25055"
+      },
+      {
+        "id": "GS_CG3uZOT_a90J",
+        "title": "The landscape ecological view of vertebrate species richness in urban areas across biogeographic realms",
+        "year": 2023,
+        "venue": "Scientific reports",
+        "citedBy": 11,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.nature.com/articles/s41598-023-43896-z"
+      },
+      {
+        "id": "GS_lkApsMdjYawJ",
+        "title": "Urban CO2 imprints on carbon isotope and growth of Chinese pine in the Beijing metropolitan region",
+        "year": 2023,
+        "venue": "Science of the Total …",
+        "citedBy": 15,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0048969723000049"
+      },
+      {
+        "id": "GS_RPMpm01dcBIJ",
+        "title": "Population dynamics shifts by climate change: High-resolution future mid-century trends for South America",
+        "year": 2023,
+        "venue": "Global and Planetary …",
+        "citedBy": 12,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0921818123001285"
+      },
+      {
+        "id": "GS_-_OVo7WX61oJ",
+        "title": "Detecting urban form using remote sensing: spatiotemporal research gaps for sustainable environment and human health",
+        "year": 2023,
+        "venue": "Earth Data Analytics for Planetary …",
+        "citedBy": 14,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1,
+          2
+        ],
+        "link": "https://link.springer.com/chapter/10.1007/978-981-19-8765-6_10"
+      },
+      {
+        "id": "GS_04nqbosLqKEJ",
+        "title": "Citizen and machine learning-aided high-resolution mapping of urban heat exposure and stress",
+        "year": 2023,
+        "venue": "… Research: Infrastructure and …",
+        "citedBy": 22,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://iopscience.iop.org/article/10.1088/2634-4505/acef57/meta"
+      },
+      {
+        "id": "GS_Ko1U99Cqi80J",
+        "title": "People's reasons not to participate in community gardens in disadvantaged neighborhoods of Roanoke, Virginia",
+        "year": 2023,
+        "venue": "… -Journal of Architecture Engineering and Fine …",
+        "citedBy": 10,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://dergipark.org.tr/en/pub/artgrid/article/1332871"
+      },
+      {
+        "id": "GS_Jcq8pJSG1EsJ",
+        "title": "Integrated high-resolution, continental-scale land change forecasting",
+        "year": 2023,
+        "venue": "… Modelling & Software",
+        "citedBy": 10,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S1364815223001354"
+      },
+      {
+        "id": "GS_7fx7Cf5fNc4J",
+        "title": "Frekans oranı ve Shannon entropisi yöntemi kullanarak Ezine Çayı havzası taşkın duyarlılık analizi (Kastamonu-Bozkurt)",
+        "year": 2023,
+        "venue": "Jeomorfolojik Araştırmalar Dergisi",
+        "citedBy": 15,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://dergipark.org.tr/en/pub/jader/article/1358845"
+      },
+      {
+        "id": "GS_XouiQBLqfygJ",
+        "title": "Assessing the impacts of future urban expansion on multiple ecosystem services in the transnational area of Changbai Mountain",
+        "year": 2023,
+        "venue": "Frontiers in Earth Science",
+        "citedBy": 7,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.frontiersin.org/journals/earth-science/articles/10.3389/feart.2023.1163224/full"
+      },
+      {
+        "id": "GS_3Etj9KILvE8J",
+        "title": "Spatio-temporal Investigation of the urban thermal comfort in Khulna City and surrounding areas",
+        "year": 2023,
+        "venue": "Remote Sensing in …",
+        "citedBy": 6,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://link.springer.com/article/10.1007/s41976-023-00088-7"
+      },
+      {
+        "id": "GS_hdgnGAyC_JsJ",
+        "title": "Investigation of the Effect of Urban Street Canyon Materials on Microclimate by CFD in Shiraz",
+        "year": 2023,
+        "venue": "Karafan …",
+        "citedBy": 6,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://karafan.tvu.ac.ir/article_166080.html?lang=en"
+      },
+      {
+        "id": "GS_BTrAUCrpGtMJ",
+        "title": "Public infrastructural decay as an impediment to effective performance",
+        "year": 2023,
+        "venue": "Journal of Governance",
+        "citedBy": 4,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.researchgate.net/profile/Iyiola-Akindele/publication/372410199_Public_Infrastructural_Decay_as_An_Impediment_to_Effective_Performance/links/64b55393c41fb852dd7d737e/Public-Infrastructural-Decay-as-An-Impediment-to-Effective-Performance.pdf"
+      },
+      {
+        "id": "GS_O9ebGQLKBkgJ",
+        "title": "Green Heart Louisville: intra-urban, hyperlocal land-use regression modeling of nitrogen oxides and ozone",
+        "year": 2023,
+        "venue": "medRxiv",
+        "citedBy": 3,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.medrxiv.org/content/10.1101/2023.03.03.23286765.abstract"
+      },
+      {
+        "id": "GS_RuRMd3dB8XoJ",
+        "title": "Air temperature change manifestation at the Zhytomyr territory",
+        "year": 2023,
+        "venue": "Visnyk of VN Karazin …",
+        "citedBy": 2,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://periodicals.karazin.ua/ecology/article/view/22638"
+      },
+      {
+        "id": "GS_E-GEDsRUyhYJ",
+        "title": "Vulnerability assessment of historic areas to heat waves. The case study of Bilbao",
+        "year": 2023,
+        "venue": "… on Structural Analysis of …",
+        "citedBy": 2,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://link.springer.com/chapter/10.1007/978-3-031-39450-8_89"
       },
       {
         "id": "GS_w5M3h12KzmsJ",
@@ -935,95 +4162,69 @@
         "link": "https://www.sciencedirect.com/science/article/pii/S0378778826014325"
       },
       {
-        "id": "GS_v9X6eFTeDvgJ",
-        "title": "Structural determinants of urban heat stress outcomes: A systematic review of health, productivity and equity",
+        "id": "GS_QztaFJ0YBBoJ",
+        "title": "A smart humidity-control window for moisture management and energy saving: System design, modeling and validation in tropical regions",
         "year": 2026,
-        "venue": "Sustainable Cities and …",
-        "citedBy": 1,
+        "venue": "Applied Energy",
+        "citedBy": 0,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
-          2
+          1
         ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S2210670726007948"
+        "link": "https://www.sciencedirect.com/science/article/pii/S0306261926013607"
       },
       {
-        "id": "GS_v5i17fpvEeMJ",
-        "title": "Parks as behavioral climate adaptation infrastructure: mechanisms and limits under extreme heat",
+        "id": "GS_3cTLPuAz8r4J",
+        "title": "How influential are the parameters affecting plant species selection on designer choices?",
+        "year": 2026,
+        "venue": "Landscape and Ecological Engineering",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://link.springer.com/article/10.1007/s11355-026-00743-3"
+      },
+      {
+        "id": "GS_X1zf_3bDOkkJ",
+        "title": "Urban green space patchiness hinders a keystone pollinator functional group and pollination effectiveness in Western Europe",
+        "year": 2026,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.researchsquare.com/article/rs-9223706/latest"
+      },
+      {
+        "id": "GS_EJgxk09H2RwJ",
+        "title": "Exploring the efficacy of different variants of long short-term memory networks in daily streamflow forecasting",
+        "year": 2026,
+        "venue": "Advances in Chemical …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://ui.adsabs.harvard.edu/abs/2026ACPEM..15..131K/abstract"
+      },
+      {
+        "id": "GS_Dt9VXN5f1UIJ",
+        "title": "Asymmetric effects of the urban heat island–population aging compound factor on future temperature-related mortality",
         "year": 2027,
-        "venue": "Landscape and Urban Planning",
+        "venue": "Environmental Impact Assessment Review",
         "citedBy": 0,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
-          2
+          1
         ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S0169204626002215"
-      },
-      {
-        "id": "GS_Wnp9i-eKMw4J",
-        "title": "Remote Sensing-Based Assessment of Urban Heat Island Effects: A Case Study from Three Major Cities of Alabama, USA",
-        "year": 2026,
-        "venue": "Advances in Remote …",
-        "citedBy": 2,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          2
-        ],
-        "link": "https://www.scirp.org/journal/paperinformation?paperid=152132"
-      },
-      {
-        "id": "GS_S4cjXdU6JQIJ",
-        "title": "Temporally Weighted Land Surface Temperature: From Multiyear Observations to a Target-Year-Referenced Thermal Surface",
-        "year": 2026,
-        "venue": "ISPRS International Journal of …",
-        "citedBy": 0,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          2
-        ],
-        "link": "https://www.mdpi.com/2220-9964/15/8/359"
-      },
-      {
-        "id": "GS_xdFEiXgQDCgJ",
-        "title": "Anthropogenic attribution and constrained projections of summer wet-bulb globe temperature over global land areas",
-        "year": 2026,
-        "venue": "Global and Planetary Change",
-        "citedBy": 0,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          2
-        ],
-        "link": "https://www.sciencedirect.com/science/article/pii/S0921818126004583"
-      },
-      {
-        "id": "GS_aKbCsM7kdfkJ",
-        "title": "Seasonal and Geographical Differences in the Marine Thermal Influence on US Coastal Air Temperatures",
-        "year": 2026,
-        "venue": "Journal of Applied Meteorology and …",
-        "citedBy": 0,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          2
-        ],
-        "link": "https://journals.ametsoc.org/view/journals/apme/65/9/JAMC-D-25-0211.1.xml"
-      },
-      {
-        "id": "GS_SY9C4UGEPtwJ",
-        "title": "Spatiotemporal heterogeneity of temperature with other climate variables in Pakistan: a study from 1981 to 2023",
-        "year": 2026,
-        "venue": "Computational Geosciences",
-        "citedBy": 0,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          2
-        ],
-        "link": "https://link.springer.com/article/10.1007/s10596-026-10475-w"
+        "link": "https://www.sciencedirect.com/science/article/pii/S0195925526003641"
       },
       {
         "id": "GS_KV4gorAiHugJ",
@@ -1039,17 +4240,30 @@
         "link": "https://jkwra.or.kr/articles/xml/PqAB/"
       },
       {
-        "id": "GS_Rn-FZBD2HgUJ",
-        "title": "Urban expansion will unevenly amplify heat hazard and exposure within future cities",
+        "id": "GS_aKbCsM7kdfkJ",
+        "title": "Seasonal and Geographical Differences in the Marine Thermal Influence on US Coastal Air Temperatures",
         "year": 2026,
-        "venue": null,
+        "venue": "Journal of Applied Meteorology and …",
         "citedBy": 0,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           2
         ],
-        "link": "https://www.researchsquare.com/article/rs-10694573/latest"
+        "link": "https://journals.ametsoc.org/view/journals/apme/65/9/JAMC-D-25-0211.1.xml"
+      },
+      {
+        "id": "GS_xdFEiXgQDCgJ",
+        "title": "Anthropogenic attribution and constrained projections of summer wet-bulb globe temperature over global land areas",
+        "year": 2026,
+        "venue": "Global and Planetary Change",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0921818126004583"
       },
       {
         "id": "GS_VGdvMOdkkecJ",
@@ -1063,8 +4277,512 @@
           2
         ],
         "link": "https://www.researchsquare.com/article/rs-10247754/latest"
+      },
+      {
+        "id": "GS_eKXW5Bh5xpoJ",
+        "title": "Exploring the global research trends of cities and climate change based on a bibliometric analysis",
+        "year": 2022,
+        "venue": "Sustainability",
+        "citedBy": 15,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.mdpi.com/2071-1050/14/19/12302"
+      },
+      {
+        "id": "GS_kIg38TCLDOMJ",
+        "title": "Changes in thermal stress in Korea using climate-based indicators: present-day and future projections from 1 km high resolution scenarios",
+        "year": 2023,
+        "venue": "International Journal of …",
+        "citedBy": 6,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.mdpi.com/1660-4601/20/17/6694"
+      },
+      {
+        "id": "GS_8vWJs3GJbiAJ",
+        "title": "Intensifying urban imprint on land surface warming: Insights from local to global scale",
+        "year": 2024,
+        "venue": "IScience",
+        "citedBy": 23,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.cell.com/iscience/fulltext/S2589-0042(24)00331-6"
+      },
+      {
+        "id": "GS_jc70SYMCiSYJ",
+        "title": "Urban cooling potential and cost comparison of heat mitigation techniques for their impact on the lower atmosphere",
+        "year": 2023,
+        "venue": "Computational Urban …",
+        "citedBy": 39,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://link.springer.com/article/10.1007/s43762-023-00101-1"
+      },
+      {
+        "id": "GS_Si2oMirORmsJ",
+        "title": "Untapped geothermal energy an active negotiation between incumbents and challengers",
+        "year": 2023,
+        "venue": null,
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://search.proquest.com/openview/b84ce74bd90c5c91ee0c4085fa7f9607/1?pq-origsite=gscholar&cbl=18750&diss=y"
+      },
+      {
+        "id": "GS_22dLPhRi0bYJ",
+        "title": "Numerical Simulations of the Urban Microclimate",
+        "year": 2023,
+        "venue": null,
+        "citedBy": 4,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://search.proquest.com/openview/d5d15a0da99f00fb1dd09d5fe9216707/1?pq-origsite=gscholar&cbl=2026366&diss=y"
+      },
+      {
+        "id": "GS_Wnp9i-eKMw4J",
+        "title": "Remote Sensing-Based Assessment of Urban Heat Island Effects: A Case Study from Three Major Cities of Alabama, USA",
+        "year": 2026,
+        "venue": "Advances in Remote …",
+        "citedBy": 2,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.scirp.org/journal/paperinformation?paperid=152132"
+      },
+      {
+        "id": "GS_hIziTA2IEgUJ",
+        "title": "The Role of Air Conditioning Waste Heat on Urban Hydroclimatic Extremes: Insights from Coastal Twin Cities",
+        "year": null,
+        "venue": "Available at SSRN 5056698",
+        "citedBy": 1,
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "SSRN"
+        ],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5056698"
+      },
+      {
+        "id": "GS_wtSBv0fEn1sJ",
+        "title": "Conceptual framework for climate change adaptation through sustainable housing models in Nigeria",
+        "year": 2023,
+        "venue": "Shodhshauryam Int Sci …",
+        "citedBy": 25,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://shisrrj.com/paper/SHISRRJ236534.pdf"
+      },
+      {
+        "id": "GS_XKFk-7kJRM4J",
+        "title": "Increasing human‐perceived heat stress risks exacerbated by urbanization in China: A comparative study based on multiple metrics",
+        "year": 2021,
+        "venue": "Earth's Future",
+        "citedBy": 162,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2020ef001848"
+      },
+      {
+        "id": "GS_Znueo8_ZeiwJ",
+        "title": "Residential segregation and outdoor urban moist heat stress disparities in the United States",
+        "year": 2023,
+        "venue": "One Earth",
+        "citedBy": 112,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.cell.com/one-earth/fulltext/S2590-3322(23)00250-6"
+      },
+      {
+        "id": "GS_DorzwrKRYIoJ",
+        "title": "Connecting the dots between urban morphology and the air quality of cities under a changing climate: A bibliometric analysis",
+        "year": 2023,
+        "venue": "Sustainability",
+        "citedBy": 18,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.mdpi.com/2071-1050/16/1/18"
+      },
+      {
+        "id": "GS_Hc8vhd5-uOYJ",
+        "title": "Enhanced nighttime heatwaves over African urban clusters",
+        "year": 2023,
+        "venue": "Environmental Research Letters",
+        "citedBy": 25,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://iopscience.iop.org/article/10.1088/1748-9326/aca920/meta"
+      },
+      {
+        "id": "GS_L_dtsYW_iDUJ",
+        "title": "Summertime climatic effects of urbanization and their impacts on human thermal comfort in Xiangjiang watershed, South-Central China",
+        "year": 2023,
+        "venue": "Urban Climate",
+        "citedBy": 14,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S2212095523001761"
+      },
+      {
+        "id": "GS_vDRU2LVW2McJ",
+        "title": "Comparing the warming effects of different urban forms under projected climate change in China's Guangdong-Hong Kong-Macau Greater Bay Area",
+        "year": 2024,
+        "venue": "Urban Climate",
+        "citedBy": 14,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S2212095524000208"
+      },
+      {
+        "id": "GS_n4cavm-NWbEJ",
+        "title": "Global assessment in the effect of urban built-up environment on cooling efficiency of green spaces",
+        "year": 2025,
+        "venue": "Communications Earth & …",
+        "citedBy": 21,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.nature.com/articles/s43247-025-02925-7"
+      },
+      {
+        "id": "GS_c-LIAei8B9UJ",
+        "title": "Walking smart in the heat: A dynamic shade-oriented pathfinding approach to enhance pedestrian comfort in arid cities",
+        "year": 2025,
+        "venue": "… Environment and Urban …",
+        "citedBy": 20,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0198971525000900"
+      },
+      {
+        "id": "GS_0zAT-xvoxGQJ",
+        "title": "Exploring the potential relationship between cooling green space and built-up area: Analysis of community green space characteristics based on GWPCA",
+        "year": 2025,
+        "venue": "Building and Environment",
+        "citedBy": 17,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0360132324010321"
+      },
+      {
+        "id": "GS_IFakOdeOZvMJ",
+        "title": "Urban comfort dynamics in major megacities in the middle East: A Spatiotemporal assessment and linkage to weather types",
+        "year": 2025,
+        "venue": "Urban Climate",
+        "citedBy": 11,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S2212095525000252"
+      },
+      {
+        "id": "GS_Cv5hh469I-kJ",
+        "title": "Revealing the impact of urban morphology evolution on the urban heat island effect in the main urban area of Guangzhou: Insights from local climate zones",
+        "year": 2025,
+        "venue": "Remote Sensing",
+        "citedBy": 4,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.mdpi.com/2072-4292/17/17/2959"
+      },
+      {
+        "id": "GS_XSOYfGtM1SEJ",
+        "title": "Urban Expansion in China: Identification, Spatiotemporal Characteristics and Influencing Factors",
+        "year": 2025,
+        "venue": "Applied Spatial Analysis and Policy",
+        "citedBy": 3,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://link.springer.com/article/10.1007/s12061-025-09770-3"
+      },
+      {
+        "id": "GS_CWjj1q2jcqkJ",
+        "title": "Assessing summer humid heat in Europe: Trends, extremes, and drivers",
+        "year": 2025,
+        "venue": "International Journal of Climatology",
+        "citedBy": 6,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://rmets.onlinelibrary.wiley.com/doi/abs/10.1002/joc.8913"
+      },
+      {
+        "id": "GS_O2mg8yfEC40J",
+        "title": "Strategies to mitigate urban heat: Effects on overheating and cloud formation",
+        "year": 2025,
+        "venue": "Urban Climate",
+        "citedBy": 4,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S2212095525002305"
+      },
+      {
+        "id": "GS_xWtZJyUWkREJ",
+        "title": "The role of air conditioning waste heat in shaping short-duration intense rainfall: Insights from coastal twin cities",
+        "year": 2025,
+        "venue": "Atmospheric Research",
+        "citedBy": 2,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0169809525004016"
+      },
+      {
+        "id": "GS_HFsjTDuY8GEJ",
+        "title": "Decrease in urban-rural differences of nighttime humid heatwaves in the Yangtze River Delta, China",
+        "year": 2025,
+        "venue": "Atmospheric …",
+        "citedBy": 4,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0169809525000481"
+      },
+      {
+        "id": "GS_3YYz8p4V8DIJ",
+        "title": "Integrating Bio-Based Materials in Buildings for Urban Heat Island Mitigation",
+        "year": 2025,
+        "venue": "… Conference on Bio …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://link.springer.com/chapter/10.1007/978-3-031-92777-5_64"
+      },
+      {
+        "id": "GS_v9X6eFTeDvgJ",
+        "title": "Structural determinants of urban heat stress outcomes: A systematic review of health, productivity and equity",
+        "year": 2026,
+        "venue": "Sustainable Cities and …",
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S2210670726007948"
+      },
+      {
+        "id": "GS_S4cjXdU6JQIJ",
+        "title": "Temporally Weighted Land Surface Temperature: From Multiyear Observations to a Target-Year-Referenced Thermal Surface",
+        "year": 2026,
+        "venue": "ISPRS International Journal of …",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.mdpi.com/2220-9964/15/8/359"
+      },
+      {
+        "id": "GS_SY9C4UGEPtwJ",
+        "title": "Spatiotemporal heterogeneity of temperature with other climate variables in Pakistan: a study from 1981 to 2023",
+        "year": 2026,
+        "venue": "Computational Geosciences",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://link.springer.com/article/10.1007/s10596-026-10475-w"
+      },
+      {
+        "id": "GS_Rn-FZBD2HgUJ",
+        "title": "Urban expansion will unevenly amplify heat hazard and exposure within future cities",
+        "year": 2026,
+        "venue": null,
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.researchsquare.com/article/rs-10694573/latest"
+      },
+      {
+        "id": "GS_v5i17fpvEeMJ",
+        "title": "Parks as behavioral climate adaptation infrastructure: mechanisms and limits under extreme heat",
+        "year": 2027,
+        "venue": "Landscape and Urban Planning",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0169204626002215"
       }
     ],
-    "greyLitSample": []
+    "greyLitSample": [
+      {
+        "id": "GS_-cyq1tjEXhIJ",
+        "title": "Rethinking urban growth for low-carbon development: How does the co-evolution of urban expansion and renewal reshape land-Use carbon emissions?",
+        "year": null,
+        "venue": "Available at SSRN …",
+        "citedBy": 0,
+        "greyLitReasons": [
+          "SSRN"
+        ],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7314979"
+      },
+      {
+        "id": "GS_fGr6KaXGdtUJ",
+        "title": "Assessing Land Use/Land Cover Change Detection Algorithms using Sentinel-2 Satellite Time Series from 2018 to 2022",
+        "year": null,
+        "venue": "thesis.dial.uclouvain.be",
+        "citedBy": 0,
+        "greyLitReasons": [
+          "thesis"
+        ],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://thesis.dial.uclouvain.be/bitstreams/f32554e5-0e49-4816-a4a1-8522a9f2c3a7/download"
+      },
+      {
+        "id": "GS_4bO5HRVo2CQJ",
+        "title": "An Improved Hybrid Model on Source-Exposure Risk of Polycyclic Aromatic Hydrocarbon in Soil of Megacities",
+        "year": null,
+        "venue": "Available at SSRN …",
+        "citedBy": 0,
+        "greyLitReasons": [
+          "SSRN"
+        ],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3949312"
+      },
+      {
+        "id": "GS_Dxmgv8ydz9IJ",
+        "title": "Heatwaves and Everyday Heroines: Unveiling gendered adaptation strategies in korail slum, Bangladesh",
+        "year": 2024,
+        "venue": null,
+        "citedBy": 0,
+        "greyLitReasons": [
+          "thesis"
+        ],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://thesis.eur.nl/pub/76120"
+      },
+      {
+        "id": "GS_P-LpozA_TigJ",
+        "title": "Urban form, urban warming and time: from global regularities to local heterogeneities",
+        "year": 2021,
+        "venue": null,
+        "citedBy": 3,
+        "greyLitReasons": [
+          "dissertation"
+        ],
+        "paperIdxs": [
+          1
+        ],
+        "link": null
+      },
+      {
+        "id": "GS_ltl1GAgzqxcJ",
+        "title": "Is it possible to reduce wastewater to obtain sustainable cities? Some urban experiences",
+        "year": null,
+        "venue": "thesis.unipd.it",
+        "citedBy": 0,
+        "greyLitReasons": [
+          "thesis"
+        ],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://thesis.unipd.it/handle/20.500.12608/42003"
+      },
+      {
+        "id": "GS_hIziTA2IEgUJ",
+        "title": "The Role of Air Conditioning Waste Heat on Urban Hydroclimatic Extremes: Insights from Coastal Twin Cities",
+        "year": null,
+        "venue": "Available at SSRN 5056698",
+        "citedBy": 1,
+        "greyLitReasons": [
+          "SSRN"
+        ],
+        "paperIdxs": [
+          2
+        ],
+        "link": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5056698"
+      }
+    ]
   }
 }
