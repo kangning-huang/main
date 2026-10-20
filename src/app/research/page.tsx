@@ -148,7 +148,7 @@ const THEMES: Theme[] = [
         zh: "功能相同的建筑集群，尺度每增加100米，对应的白天城市热岛强度约低5%。",
         venue: "PNAS",
         year: "2026",
-        href: pubHref("Toward Cooler Cities by Larger Homogeneous Functional Clusters"),
+        href: doiHref("10.1073/pnas.2617717123"),
       },
     ],
     papers: [
@@ -180,8 +180,7 @@ const THEMES: Theme[] = [
         title: "Toward Cooler Cities by Larger Homogeneous Functional Clusters",
         venue: "PNAS",
         year: "2026",
-        href: pubHref("Toward Cooler Cities by Larger Homogeneous Functional Clusters"),
-        status: IN_PRESS,
+        href: doiHref("10.1073/pnas.2617717123"),
       },
     ],
     apps: [

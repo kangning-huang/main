@@ -74,6 +74,7 @@ Writing in Nature Climate Change (2022), Kangning Huang analyzed climate risks t
 - Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation (Journal of Geophysical Research: Atmospheres, 2021)
 - Urban forests facing climate risks (Nature Climate Change, 2022)
 - Declining urban density attenuates rising population exposure to surface heat extremes (Scientific Reports, 2025)
+- Toward Cooler Cities by Larger Homogeneous Functional Clusters (PNAS, 2026; DOI 10.1073/pnas.2617717123)
 - Nested economies of scale in global city mass (Nature Cities, in press 2026)
 - Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution (Scientific Reports, 2026; DOI 10.1038/s41598-026-70981-w)
 
@@ -82,6 +83,6 @@ CLUEs (CLimate and Urban Environments) Lab at NYU Shanghai. Members, alumni outc
 
 ## News
 - Sep 2026 — "Nested economies of scale in global city mass" in press at Nature Cities
-- Oct 2026 — "Toward Cooler Cities by Larger Homogeneous Functional Clusters" in press at PNAS (forthcoming week of 19 Oct 2026)
+- Oct 2026 — "Toward Cooler Cities by Larger Homogeneous Functional Clusters" published in PNAS (DOI 10.1073/pnas.2617717123)
 - Sep 2026 — "Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution" published in Scientific Reports (DOI 10.1038/s41598-026-70981-w)
 - Jul 2026 — "Unveiling the causal link between informal settlement demolition and urban cooling" published in npj Environmental Social Sciences (DOI 10.1038/s44432-026-00009-1)

@@ -289,9 +289,10 @@ export const PUBLICATIONS_A = [
 {
     title: "Toward Cooler Cities by Larger Homogeneous Functional Clusters",
     authors: "Xucai Zhang, Xiaobing Wei, Xiaoping Liu, Honghong Wei, Yue Zheng, Hongkai Gu, Yangzi Che, Yeran Sun, Ming Luo, Weilin Liao, Haosheng Huang, Kangning Huang",
-    venue: "PNAS (in press; forthcoming week of 19 Oct 2026)",
+    venue: "PNAS",
     year: 2026,
     citationCount: 0,
+    doi: "10.1073/pnas.2617717123",
     isLeadAuthor: true,
     highlights: [
       "Introduces the Urban Homogeneous Scale (UHS) metric — the spatial scale of functionally homogeneous building clusters — as a novel urban morphology measure for understanding urban heat island effects",
