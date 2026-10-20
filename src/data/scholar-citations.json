@@ -304,7 +304,7 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-10-20T08:13:17.423Z",
+  "lastUpdated": "2026-10-20T08:25:47.850Z",
   "reachScholarPrototype": {
     "$comment": "Scholar-backed Reach citing prototype embedded for GH Actions (workflow only commits this JSON). citedBy values are Google Scholar counts via SerpAPI — never invented.",
     "asOf": "2026-10-20",
