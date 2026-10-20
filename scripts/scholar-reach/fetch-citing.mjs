@@ -104,7 +104,16 @@ function getApiKey() {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-async function serp(params) {
+function isTransientSerpError(msg) {
+  const s = String(msg || "");
+  return (
+    /hasn.?t returned any results/i.test(s) ||
+    /timed?\s*out/i.test(s) ||
+    /ECONNRESET|ETIMEDOUT|fetch failed|503|502|429/i.test(s)
+  );
+}
+
+async function serpOnce(params) {
   const key = getApiKey();
   if (!key) {
     throw new Error(
@@ -129,8 +138,30 @@ async function serp(params) {
     throw new Error(`SerpAPI ${res.status}: ${json.error || text.slice(0, 200)}`);
   }
   if (json.error) throw new Error(`SerpAPI error: ${json.error}`);
-  await sleep(SLEEP_MS);
   return json;
+}
+
+/** SerpAPI + rate limit; retries transient empty/timeout errors. */
+async function serp(params, { retries = 4 } = {}) {
+  let lastErr;
+  for (let attempt = 0; attempt <= retries; attempt++) {
+    try {
+      const json = await serpOnce(params);
+      await sleep(SLEEP_MS);
+      return json;
+    } catch (err) {
+      lastErr = err;
+      const msg = String(err?.message || err);
+      if (attempt < retries && isTransientSerpError(msg)) {
+        const backoff = SLEEP_MS * Math.pow(2, attempt); // 1.2s, 2.4s, 4.8s, 9.6s
+        console.warn(`  SerpAPI transient (${attempt + 1}/${retries}): ${msg.slice(0, 120)} — retry in ${backoff}ms`);
+        await sleep(backoff);
+        continue;
+      }
+      throw err;
+    }
+  }
+  throw lastErr;
 }
 
 function normTitle(t) {
@@ -256,13 +287,25 @@ async function fetchCitingPages(citesId, maxPages) {
   let stoppedReason = "max-pages";
   for (let page = 0; page < maxPages; page++) {
     const start = page * PAGE_SIZE;
-    const data = await serp({
-      engine: "google_scholar",
-      cites: citesId,
-      hl: "en",
-      start,
-      num: PAGE_SIZE,
-    });
+    let data;
+    try {
+      data = await serp({
+        engine: "google_scholar",
+        cites: citesId,
+        hl: "en",
+        start,
+        num: PAGE_SIZE,
+      });
+    } catch (err) {
+      const msg = String(err?.message || err);
+      // If Google/SerpAPI returns "no results" after we already have pages, stop softly.
+      if (out.length > 0 && /hasn.?t returned any results/i.test(msg)) {
+        console.warn(`  soft-stop at page ${page}: ${msg.slice(0, 100)}`);
+        stoppedReason = "serp-no-results-soft-stop";
+        break;
+      }
+      throw err;
+    }
     pagesFetched++;
     const organic = data.organic_results || [];
     if (!organic.length) {
@@ -424,42 +467,59 @@ async function main() {
     console.log(
       `Fetching citers for ${m.short} cites=${citesId} scholarCites=${citeCount} (max ${maxPages} pages)…`
     );
-    const { citers, pagesFetched, stoppedReason } = await fetchCitingPages(citesId, maxPages);
-    citingByPaper[citesId] = citers;
-    const greyN = citers.filter((c) => c.detectedGreyLit).length;
-    const stat = {
-      doi: m.doi,
-      short: m.short,
-      citesId,
-      scholarCitationCount: citeCount,
-      maxPages,
-      pagesFetched,
-      stoppedReason,
-      fetched: citers.length,
-      greyLit: greyN,
-    };
-    fetchStats.push(stat);
-    writeFileSync(
-      join(OUT, `citing-${citesId}.json`),
-      JSON.stringify(
-        {
-          meta: {
-            ...stat,
-            asOf: new Date().toISOString(),
+    try {
+      const { citers, pagesFetched, stoppedReason } = await fetchCitingPages(citesId, maxPages);
+      citingByPaper[citesId] = citers;
+      const greyN = citers.filter((c) => c.detectedGreyLit).length;
+      const stat = {
+        doi: m.doi,
+        short: m.short,
+        citesId,
+        scholarCitationCount: citeCount,
+        maxPages,
+        pagesFetched,
+        stoppedReason,
+        fetched: citers.length,
+        greyLit: greyN,
+      };
+      fetchStats.push(stat);
+      writeFileSync(
+        join(OUT, `citing-${citesId}.json`),
+        JSON.stringify(
+          {
+            meta: {
+              ...stat,
+              asOf: new Date().toISOString(),
+            },
+            citing: citers,
           },
-          citing: citers,
-        },
-        null,
-        2
-      )
-    );
-    console.log(
-      `  pages=${pagesFetched}/${maxPages} (${stoppedReason}) → ${citers.length} citers, greyLit=${greyN}`
-    );
-    if (citeCount > 50 && citers.length < Math.min(20, citeCount * 0.05)) {
-      console.warn(
-        `  WARNING: fetched only ${citers.length} citers for a paper with ${citeCount} Scholar cites — check cites_id / SerpAPI.`
+          null,
+          2
+        )
       );
+      console.log(
+        `  pages=${pagesFetched}/${maxPages} (${stoppedReason}) → ${citers.length} citers, greyLit=${greyN}`
+      );
+      if (citeCount > 50 && citers.length < Math.min(20, citeCount * 0.05)) {
+        console.warn(
+          `  WARNING: fetched only ${citers.length} citers for a paper with ${citeCount} Scholar cites — check cites_id / SerpAPI.`
+        );
+      }
+    } catch (err) {
+      const msg = String(err?.message || err);
+      console.error(`  FAILED ${m.short}: ${msg}`);
+      citingByPaper[citesId] = citingByPaper[citesId] || [];
+      fetchStats.push({
+        doi: m.doi,
+        short: m.short,
+        citesId,
+        scholarCitationCount: citeCount,
+        maxPages,
+        error: msg.slice(0, 300),
+        fetched: (citingByPaper[citesId] || []).length,
+        greyLit: 0,
+      });
+      // Continue other papers — do not abort the whole sweep.
     }
   }
 
@@ -528,18 +588,22 @@ async function main() {
   writeFileSync(join(OUT, "sample-field-shelf.json"), JSON.stringify(sample, null, 2));
 
   meta.finishedAt = new Date().toISOString();
-  meta.status = "ok";
+  const anyFetched = papers.some((p) => (p.citingFetched || 0) > 0);
+  const anyError = fetchStats.some((s) => s.error);
+  meta.status = !anyFetched && anyError ? "error" : anyError ? "partial" : "ok";
   meta.papers = papers.length;
   meta.squares = squares.length;
   meta.greyLitSquares = greyLitSquares.length;
   meta.fetchStats = fetchStats;
   writeFileSync(join(OUT, "meta.json"), JSON.stringify(meta, null, 2));
   console.log("Done.", {
+    status: meta.status,
     papers: meta.papers,
     squares: meta.squares,
     greyLitSquares: meta.greyLitSquares,
     fetchStats,
   });
+  if (meta.status === "error") process.exit(1);
 }
 
 main().catch((err) => {
