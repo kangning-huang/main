@@ -35,9 +35,9 @@ const PAGE_SIZE = 20;
 // Deep sweep for grey lit (IPCC etc.): enough pages to cover high-cite papers.
 // Prior run with max 2 pages found 0 grey-lit and ERL stalled at 3 citers
 // because pagination stopped on a missing `next` link.
-const PROTOTYPE_MAX_PAGES_HIGH = 25; // ≤500 citers for ≥400-cite papers
-const PROTOTYPE_MAX_PAGES_MID = 15; // ≤300 citers
-const PROTOTYPE_MAX_PAGES_LOW = 5; // ≤100 citers (covers JGR ~84)
+const PROTOTYPE_MAX_PAGES_HIGH = 30; // grey queries + year slices for ≥400-cite papers
+const PROTOTYPE_MAX_PAGES_MID = 20; // grey + years
+const PROTOTYPE_MAX_PAGES_LOW = 12; // grey-first for lower-cite papers
 const FULL_MAX_PAGES = 50;
 const SLEEP_MS = 1200;
 
@@ -94,6 +94,18 @@ const GREY_RULES = [
   { re: /\b白皮书\b/, why: "白皮书" },
   { re: /\b专著\b/, why: "专著" },
 ];
+
+/** Search-within-citing queries (SerpAPI cites + q) to surface grey lit. */
+const GREY_QUERIES = [
+  "IPCC",
+  "AR6 OR AR5",
+  "UNEP OR \"World Bank\" OR FAO OR UNDP OR WMO",
+  "thesis OR dissertation",
+  "\"working paper\" OR \"technical report\" OR \"policy brief\"",
+  "报告 OR 学位论文 OR 白皮书",
+  "CNKI OR SSRN",
+];
+
 
 function getApiKey() {
   if (process.env.SERP_API_KEY) return process.env.SERP_API_KEY.trim();
@@ -276,52 +288,139 @@ async function fetchAuthorPubs() {
 }
 
 /**
- * Paginate Scholar "Cited by" results.
- * Do NOT stop solely because serpapi_pagination.next is missing — prior runs
- * stalled ERL at 3 citers and JGR at 10 that way. Keep requesting until an
- * empty page or maxPages.
+ * One SerpAPI cites page → mapped rows. Returns null organic on soft empty.
  */
-async function fetchCitingPages(citesId, maxPages) {
-  const out = [];
+async function fetchCitesPage(citesId, extra = {}) {
+  const data = await serp({
+    engine: "google_scholar",
+    cites: citesId,
+    hl: "en",
+    num: PAGE_SIZE,
+    ...extra,
+  });
+  return {
+    organic: data.organic_results || [],
+    next: data.serpapi_pagination?.next || null,
+  };
+}
+
+/**
+ * Deep citing crawl for grey lit:
+ * 1) cites+q grey-keyword searches (IPCC, reports, theses, …)
+ * 2) year-sliced cites (as_ylo/as_yhi) — bypasses SerpAPI’s shallow unfiltered pagination
+ * 3) unfiltered pages as filler if still thin
+ *
+ * Dedupes by Scholar result id. Respects maxPages total SerpAPI calls.
+ */
+async function fetchCitingPages(citesId, maxPages, { paperYear = null, deep = false } = {}) {
+  const byId = new Map();
   let pagesFetched = 0;
   let stoppedReason = "max-pages";
-  for (let page = 0; page < maxPages; page++) {
-    const start = page * PAGE_SIZE;
-    let data;
+  const sliceLog = [];
+
+  function addOrganic(organic, label) {
+    let added = 0;
+    let greyAdded = 0;
+    for (const r of organic) {
+      const m = mapOrganic(r);
+      if (!byId.has(m.id)) {
+        byId.set(m.id, m);
+        added++;
+        if (m.detectedGreyLit) greyAdded++;
+      }
+    }
+    sliceLog.push({
+      label,
+      got: organic.length,
+      added,
+      greyAdded,
+      total: byId.size,
+    });
+    return { added, greyAdded };
+  }
+
+  async function onePage(extra, label) {
+    if (pagesFetched >= maxPages) return { stop: true };
     try {
-      data = await serp({
-        engine: "google_scholar",
-        cites: citesId,
-        hl: "en",
-        start,
-        num: PAGE_SIZE,
-      });
+      const { organic, next } = await fetchCitesPage(citesId, extra);
+      pagesFetched++;
+      addOrganic(organic, label);
+      return { organic, next, stop: false };
     } catch (err) {
       const msg = String(err?.message || err);
-      // If Google/SerpAPI returns "no results" after we already have pages, stop softly.
-      if (out.length > 0 && /hasn.?t returned any results/i.test(msg)) {
-        console.warn(`  soft-stop at page ${page}: ${msg.slice(0, 100)}`);
-        stoppedReason = "serp-no-results-soft-stop";
-        break;
+      if (byId.size > 0 && /hasn.?t returned any results/i.test(msg)) {
+        console.warn(`  soft-skip ${label}: ${msg.slice(0, 100)}`);
+        sliceLog.push({ label, error: msg.slice(0, 160), soft: true });
+        return { organic: [], next: null, stop: false, softError: true };
       }
       throw err;
     }
-    pagesFetched++;
-    const organic = data.organic_results || [];
-    if (!organic.length) {
-      stoppedReason = page === 0 ? "empty-first-page" : "empty-page";
-      break;
+  }
+
+  if (deep) {
+    // ── 1) Grey-lit keyword hunt within citing articles ──
+    for (const q of GREY_QUERIES) {
+      if (pagesFetched >= maxPages) break;
+      // Up to 2 pages per grey query
+      for (let page = 0; page < 2; page++) {
+        if (pagesFetched >= maxPages) break;
+        const res = await onePage({ q, start: page * PAGE_SIZE }, `grey:${q}:p${page}`);
+        if (res.stop) break;
+        if (res.softError || !res.organic?.length) break;
+        if (res.organic.length < PAGE_SIZE && !res.next) break;
+      }
     }
-    for (const r of organic) out.push(mapOrganic(r));
-    const next = data.serpapi_pagination?.next;
-    // Prefer continuing when a next link exists OR the page was full.
-    // Only treat a short page with no next as terminal.
-    if (organic.length < PAGE_SIZE && !next) {
-      stoppedReason = "short-final-page";
-      break;
+
+    // ── 2) Year slices (paper year → current+1) ──
+    const y0 = paperYear && paperYear >= 1990 ? paperYear : 2018;
+    const y1 = new Date().getFullYear() + 1;
+    const pagesLeftHint = maxPages - pagesFetched;
+    const yearCount = Math.max(1, y1 - y0 + 1);
+    // Spread remaining budget across years (at least 1 page/year when possible)
+    const perYear = Math.max(1, Math.min(3, Math.floor(pagesLeftHint / yearCount) || 1));
+    for (let y = y0; y <= y1; y++) {
+      if (pagesFetched >= maxPages) break;
+      for (let page = 0; page < perYear; page++) {
+        if (pagesFetched >= maxPages) break;
+        const res = await onePage(
+          { as_ylo: y, as_yhi: y, start: page * PAGE_SIZE },
+          `year:${y}:p${page}`
+        );
+        if (res.stop) break;
+        if (res.softError || !res.organic?.length) break;
+        if (res.organic.length < PAGE_SIZE && !res.next) break;
+      }
+    }
+    stoppedReason = pagesFetched >= maxPages ? "max-pages" : "deep-complete";
+  } else {
+    // Shallow unfiltered pagination (non-prototype / full mode filler)
+    for (let page = 0; page < maxPages; page++) {
+      const res = await onePage({ start: page * PAGE_SIZE }, `all:p${page}`);
+      if (res.stop) {
+        stoppedReason = "max-pages";
+        break;
+      }
+      if (res.softError) {
+        stoppedReason = "serp-no-results-soft-stop";
+        break;
+      }
+      if (!res.organic?.length) {
+        stoppedReason = page === 0 ? "empty-first-page" : "empty-page";
+        break;
+      }
+      if (res.organic.length < PAGE_SIZE && !res.next) {
+        stoppedReason = "short-final-page";
+        break;
+      }
     }
   }
-  return { citers: out, pagesFetched, stoppedReason };
+
+  return {
+    citers: [...byId.values()],
+    pagesFetched,
+    stoppedReason,
+    sliceLog,
+  };
 }
 
 function loadPinned() {
@@ -468,7 +567,11 @@ async function main() {
       `Fetching citers for ${m.short} cites=${citesId} scholarCites=${citeCount} (max ${maxPages} pages)…`
     );
     try {
-      const { citers, pagesFetched, stoppedReason } = await fetchCitingPages(citesId, maxPages);
+      const { citers, pagesFetched, stoppedReason, sliceLog } = await fetchCitingPages(
+        citesId,
+        maxPages,
+        { paperYear: m.year || m.scholarMatch?.year || null, deep: PROTOTYPE }
+      );
       citingByPaper[citesId] = citers;
       const greyN = citers.filter((c) => c.detectedGreyLit).length;
       const stat = {
@@ -481,6 +584,7 @@ async function main() {
         stoppedReason,
         fetched: citers.length,
         greyLit: greyN,
+        sliceLog: (sliceLog || []).slice(0, 80),
       };
       fetchStats.push(stat);
       writeFileSync(
