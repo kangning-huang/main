@@ -18,6 +18,12 @@ export const NEWS: NewsItem[] = [
   },
   {
     date: "2026-10",
+    en: "“Toward Cooler Cities by Larger Homogeneous Functional Clusters” published online in PNAS.",
+    zh: "论文《通过更大的同质功能集群建设更凉爽的城市》已在 PNAS 在线发表。",
+    href: "https://doi.org/10.1073/pnas.2617717123",
+  },
+  {
+    date: "2026-10",
     en: "“Toward Cooler Cities by Larger Homogeneous Functional Clusters” scheduled for publication the week of 19 Oct 2026 in PNAS.",
     zh: "论文《通过更大的同质功能集群建设更凉爽的城市》定于 2026 年 10 月 19 日当周在 PNAS 发表。",
     // Still in press — no DOI yet; link to on-site entry

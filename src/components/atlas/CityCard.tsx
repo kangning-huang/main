@@ -388,8 +388,8 @@ export default function CityCard({ city, loading, onClose }: Props) {
         <ComingRow
           en="Functional clusters & cooling (101 cities)"
           zh="功能集群与降温（101 座城市）"
-          noteEn="Coming — PNAS paper in press."
-          noteZh="即将上线 — PNAS 论文即将发表。"
+          noteEn="Coming — PNAS paper online (DOI 10.1073/pnas.2617717123)."
+          noteZh="即将上线 — PNAS 论文已在线发表（DOI 10.1073/pnas.2617717123）。"
         />
         <ComingRow
           en="SSA infrastructure"
