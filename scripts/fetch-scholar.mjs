@@ -363,10 +363,13 @@ function runReachScholarPrototype(citationData) {
       ? JSON.parse(readFileSync(metaPath, 'utf-8'))
       : {};
     const squares = sample.squares || [];
-    const greyLit = squares.filter((s) => s.detectedGreyLit);
+    const greyLit =
+      Array.isArray(sample.greyLitSample) && sample.greyLitSample.length
+        ? sample.greyLitSample
+        : squares.filter((s) => s.detectedGreyLit);
     citationData.reachScholarPrototype = {
       $comment:
-        'Scholar-backed Reach citing prototype embedded for GH Actions (workflow only commits this JSON). citedBy values are Google Scholar counts via SerpAPI — never invented.',
+        'Scholar-backed Reach citing prototype embedded for GH Actions (workflow only commits this JSON). citedBy values are Google Scholar counts via SerpAPI — never invented. Deep grey-lit sweep via --prototype page budgets.',
       asOf: sample.meta?.asOf || new Date().toISOString().slice(0, 10),
       source: sample.meta?.source || 'Google Scholar (SerpAPI)',
       encoding: sample.meta?.encoding || 'citing-work-scholar-cited-by',
@@ -379,11 +382,12 @@ function runReachScholarPrototype(citationData) {
         squareCount: squares.length,
         greyLitSquares: greyLit.length,
         papers: (sample.papers || []).length,
+        fetchStats: meta.fetchStats || null,
       },
       papers: sample.papers || [],
-      // Keep full square list for local/CI inspection (prototype is already capped).
+      // Full square list for inspection (deep prototype may be hundreds of citers).
       squares,
-      greyLitSample: greyLit.slice(0, 20),
+      greyLitSample: greyLit,
     };
     console.log(
       `Embedded reachScholarPrototype: ${(sample.papers || []).length} papers, ${squares.length} squares, ${greyLit.length} grey-lit.`

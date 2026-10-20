@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Prototype: fetch Google Scholar citing works for pinned Reach papers.
+ * Fetch Google Scholar citing works for pinned Reach papers.
  *
  * Source of truth for citation *counts of citing works*: Scholar
  * (SerpAPI `inline_links.cited_by.total`), never OpenAlex.
@@ -9,7 +9,7 @@
  *
  * Usage:
  *   node scripts/scholar-reach/fetch-citing.mjs
- *   node scripts/scholar-reach/fetch-citing.mjs --prototype   # 3 lead papers, few pages
+ *   node scripts/scholar-reach/fetch-citing.mjs --prototype   # 3 lead papers, deep grey-lit sweep
  *   node scripts/scholar-reach/fetch-citing.mjs --dry-run
  *
  * Outputs under data/scholar-reach/:
@@ -32,32 +32,67 @@ const AUTHOR_ID = "s_domssAAAAJ";
 const PROTOTYPE = process.argv.includes("--prototype");
 const DRY_RUN = process.argv.includes("--dry-run");
 const PAGE_SIZE = 20;
-const PROTOTYPE_MAX_PAGES = 2; // 40 citers / paper max in prototype
-const SLEEP_MS = 1100;
+// Deep sweep for grey lit (IPCC etc.): enough pages to cover high-cite papers.
+// Prior run with max 2 pages found 0 grey-lit and ERL stalled at 3 citers
+// because pagination stopped on a missing `next` link.
+const PROTOTYPE_MAX_PAGES_HIGH = 25; // ≤500 citers for ≥400-cite papers
+const PROTOTYPE_MAX_PAGES_MID = 15; // ≤300 citers
+const PROTOTYPE_MAX_PAGES_LOW = 5; // ≤100 citers (covers JGR ~84)
+const FULL_MAX_PAGES = 50;
+const SLEEP_MS = 1200;
 
 const PROTOTYPE_DOIS = [
-  "10.1088/1748-9326/ab4b71", // ERL 2019
-  "10.1038/s41893-020-0521-x", // Nat Sustain 2020 (if pinned)
-  "10.1029/2020JD033831", // JGR-A 2021 heat
+  "10.1088/1748-9326/ab4b71", // ERL 2019 (~550 Scholar cites)
+  "10.1038/s41893-020-0521-x", // Nat Sustain 2020 (~967)
+  "10.1029/2020JD033831", // JGR-A 2021 heat (~84)
 ];
 
-const GREY_HINTS = [
-  /ipcc/i,
-  /\breport\b/i,
-  /\bthesis\b/i,
-  /\bdissertation\b/i,
-  /\bworking paper\b/i,
-  /\bpreprint\b/i,
-  /\barxiv\b/i,
-  /\bssrn\b/i,
-  /\bcnki\b/i,
-  /\b政策\b/,
-  /\b报告\b/,
-  /\b学位论文\b/,
-  /\b白皮书\b/,
-  /\bunep\b/i,
-  /\bworld bank\b/i,
-  /\bfao\b/i,
+/** Grey-lit / policy / report heuristics — return matching reason labels. */
+const GREY_RULES = [
+  { re: /\bipcc\b/i, why: "IPCC" },
+  { re: /\bar6\b/i, why: "AR6" },
+  { re: /\bar5\b/i, why: "AR5" },
+  { re: /\bwg\s*i{1,3}\b/i, why: "IPCC WG" },
+  { re: /\bwgii\b/i, why: "IPCC WGII" },
+  { re: /\bwgiii\b/i, why: "IPCC WGIII" },
+  { re: /\bspecial report\b/i, why: "special report" },
+  { re: /\bsrex\b/i, why: "SREX" },
+  { re: /\bsr\.?\s*1\.5\b/i, why: "SR1.5" },
+  { re: /\bunep\b/i, why: "UNEP" },
+  { re: /\bunited nations environment\b/i, why: "UNEP" },
+  { re: /\bworld bank\b/i, why: "World Bank" },
+  { re: /\bfao\b/i, why: "FAO" },
+  { re: /\bundp\b/i, why: "UNDP" },
+  { re: /\bwmo\b/i, why: "WMO" },
+  { re: /\biucn\b/i, why: "IUCN" },
+  { re: /\boecd\b/i, why: "OECD" },
+  { re: /\biea\b/i, why: "IEA" },
+  { re: /\bwho\b/i, why: "WHO" },
+  { re: /\bun[- ]habitat\b/i, why: "UN-Habitat" },
+  { re: /\btechnical report\b/i, why: "technical report" },
+  { re: /\btech\.?\s*report\b/i, why: "technical report" },
+  { re: /\bworking paper\b/i, why: "working paper" },
+  { re: /\bdiscussion paper\b/i, why: "discussion paper" },
+  { re: /\bwhite paper\b/i, why: "white paper" },
+  { re: /\bpolicy brief\b/i, why: "policy brief" },
+  { re: /\bpolicy report\b/i, why: "policy report" },
+  { re: /\bgovernment report\b/i, why: "government report" },
+  { re: /\bnational report\b/i, why: "national report" },
+  { re: /\bassessment report\b/i, why: "assessment report" },
+  { re: /\b\w+\s+report\b/i, why: "report" },
+  { re: /\bthesis\b/i, why: "thesis" },
+  { re: /\bdissertation\b/i, why: "dissertation" },
+  { re: /\bph\.?\s*d\.?\s*thesis\b/i, why: "thesis" },
+  { re: /\bmaster'?s thesis\b/i, why: "thesis" },
+  { re: /\bpreprint\b/i, why: "preprint" },
+  { re: /\barxiv\b/i, why: "arXiv" },
+  { re: /\bssrn\b/i, why: "SSRN" },
+  { re: /\bcnki\b/i, why: "CNKI" },
+  { re: /\b政策\b/, why: "政策" },
+  { re: /\b报告\b/, why: "报告" },
+  { re: /\b学位论文\b/, why: "学位论文" },
+  { re: /\b白皮书\b/, why: "白皮书" },
+  { re: /\b专著\b/, why: "专著" },
 ];
 
 function getApiKey() {
@@ -122,11 +157,18 @@ function titlesSimilar(a, b) {
 
 function detectGrey(title, venue, typeHint) {
   const blob = `${title || ""} ${venue || ""} ${typeHint || ""}`;
-  return GREY_HINTS.some((re) => re.test(blob));
+  const reasons = [];
+  const seen = new Set();
+  for (const rule of GREY_RULES) {
+    if (rule.re.test(blob) && !seen.has(rule.why)) {
+      seen.add(rule.why);
+      reasons.push(rule.why);
+    }
+  }
+  return { detected: reasons.length > 0, reasons };
 }
 
 function scholarIdFromResult(r) {
-  // Prefer result_id; else hash of title+year
   if (r.result_id) return `GS_${r.result_id}`;
   const h = createHash("sha1")
     .update(`${r.title || ""}|${r.year || ""}`)
@@ -141,11 +183,11 @@ function mapOrganic(r) {
   const summary = pub.summary || "";
   const yearMatch = summary.match(/\b(19|20)\d{2}\b/);
   const year = yearMatch ? Number(yearMatch[0]) : null;
-  // venue heuristic: last segment of "Authors - Venue, Year - Publisher"
   let venue = null;
   const parts = summary.split(" - ");
   if (parts.length >= 2) venue = parts[1].replace(/,?\s*(19|20)\d{2}.*$/, "").trim() || null;
   const title = r.title || "";
+  const grey = detectGrey(title, venue, summary);
   return {
     id: scholarIdFromResult(r),
     title,
@@ -157,9 +199,18 @@ function mapOrganic(r) {
     citesId: cite.cites_id ? String(cite.cites_id) : null,
     link: r.link || null,
     resources: (r.resources || []).map((x) => ({ title: x.title, link: x.link })),
-    detectedGreyLit: detectGrey(title, venue, summary),
+    detectedGreyLit: grey.detected,
+    greyLitReasons: grey.reasons,
     serpResultId: r.result_id || null,
   };
+}
+
+function pagesForPaper(citationCount, prototype) {
+  if (!prototype) return FULL_MAX_PAGES;
+  const n = citationCount || 0;
+  if (n >= 400) return PROTOTYPE_MAX_PAGES_HIGH;
+  if (n >= 100) return PROTOTYPE_MAX_PAGES_MID;
+  return PROTOTYPE_MAX_PAGES_LOW;
 }
 
 async function fetchAuthorPubs() {
@@ -193,8 +244,16 @@ async function fetchAuthorPubs() {
   return pubs;
 }
 
+/**
+ * Paginate Scholar "Cited by" results.
+ * Do NOT stop solely because serpapi_pagination.next is missing — prior runs
+ * stalled ERL at 3 citers and JGR at 10 that way. Keep requesting until an
+ * empty page or maxPages.
+ */
 async function fetchCitingPages(citesId, maxPages) {
   const out = [];
+  let pagesFetched = 0;
+  let stoppedReason = "max-pages";
   for (let page = 0; page < maxPages; page++) {
     const start = page * PAGE_SIZE;
     const data = await serp({
@@ -204,12 +263,22 @@ async function fetchCitingPages(citesId, maxPages) {
       start,
       num: PAGE_SIZE,
     });
+    pagesFetched++;
     const organic = data.organic_results || [];
+    if (!organic.length) {
+      stoppedReason = page === 0 ? "empty-first-page" : "empty-page";
+      break;
+    }
     for (const r of organic) out.push(mapOrganic(r));
     const next = data.serpapi_pagination?.next;
-    if (!organic.length || !next) break;
+    // Prefer continuing when a next link exists OR the page was full.
+    // Only treat a short page with no next as terminal.
+    if (organic.length < PAGE_SIZE && !next) {
+      stoppedReason = "short-final-page";
+      break;
+    }
   }
-  return out;
+  return { citers: out, pagesFetched, stoppedReason };
 }
 
 function loadPinned() {
@@ -218,8 +287,6 @@ function loadPinned() {
 }
 
 function matchPubToPinned(pubs, pinned) {
-  // Match by fuzzy title from publications pages if available; else leave unmatched.
-  // We only have DOI + short label in dois.json — pull titles from influence.json if present.
   let titlesByDoi = {};
   const inflPath = join(ROOT, "src", "data", "influence.json");
   if (existsSync(inflPath)) {
@@ -233,60 +300,6 @@ function matchPubToPinned(pubs, pinned) {
     const hit = pubs.find((s) => titlesSimilar(s.title, want));
     return { ...p, scholarTitle: want, scholarMatch: hit || null };
   });
-}
-
-function buildSampleFieldShelf(matched) {
-  // Minimal Field & Shelf–compatible sketch: papers + citing records with Scholar citedBy.
-  const papers = [];
-  const citingByPaper = {};
-  for (const m of matched) {
-    if (!m.scholarMatch?.citesId) continue;
-    const citers = citingByPaper[m.scholarMatch.citesId] || [];
-    papers.push({
-      doi: m.doi,
-      short: m.short,
-      year: m.year,
-      theme: m.theme,
-      lens: m.lens,
-      title: m.scholarMatch.title,
-      venue: m.scholarMatch.publication || null,
-      scholarCitesId: m.scholarMatch.citesId,
-      scholarCitationCount: m.scholarMatch.citationCount,
-      citingFetched: citers.length,
-      citingGreyLit: citers.filter((c) => c.detectedGreyLit).length,
-    });
-  }
-  // Flatten unique citers for a prototype "squares" list
-  const seen = new Map();
-  const paperIdx = new Map(papers.map((p, i) => [p.scholarCitesId, i]));
-  for (const m of matched) {
-    const cid = m.scholarMatch?.citesId;
-    if (!cid) continue;
-    const citers = citingByPaper[cid] || [];
-    const pi = paperIdx.get(cid);
-    for (const c of citers) {
-      if (!seen.has(c.id)) {
-        seen.set(c.id, {
-          id: c.id,
-          title: c.title,
-          year: c.year,
-          venue: c.venue,
-          citedBy: c.scholarCitedBy, // SCHOLAR count
-          detectedGreyLit: c.detectedGreyLit,
-          paperIdxs: pi == null ? [] : [pi],
-          link: c.link,
-        });
-      } else {
-        const row = seen.get(c.id);
-        if (pi != null && !row.paperIdxs.includes(pi)) row.paperIdxs.push(pi);
-      }
-    }
-  }
-  // attach citers map into builder via closure — filled by caller
-  return { papers, squaresBuilder: (map) => {
-    Object.assign(citingByPaper, map);
-    // rebuild squares after map filled — caller uses buildSquares
-  }, citingByPaper };
 }
 
 function buildSquares(papers, citingByPaper) {
@@ -304,6 +317,7 @@ function buildSquares(papers, citingByPaper) {
           venue: c.venue,
           citedBy: c.scholarCitedBy,
           detectedGreyLit: c.detectedGreyLit,
+          greyLitReasons: c.greyLitReasons || [],
           paperIdxs: [pi],
           link: c.link,
         });
@@ -327,18 +341,34 @@ async function main() {
     hasSerpKey: Boolean(key),
     source: "Google Scholar via SerpAPI",
     encoding: "citing-work-scholar-cited-by",
+    mode: PROTOTYPE ? "prototype-deep-grey-lit" : "full",
+    pageBudgets: PROTOTYPE
+      ? {
+          highCite: PROTOTYPE_MAX_PAGES_HIGH,
+          midCite: PROTOTYPE_MAX_PAGES_MID,
+          lowCite: PROTOTYPE_MAX_PAGES_LOW,
+          pageSize: PAGE_SIZE,
+        }
+      : { maxPages: FULL_MAX_PAGES, pageSize: PAGE_SIZE },
   };
 
   if (!key) {
-    writeFileSync(join(OUT, "meta.json"), JSON.stringify({
-      ...meta,
-      status: "blocked-no-serp-key",
-      next: [
-        "Add config/SerpApi-key.txt or SERP_API_KEY",
-        "Or run .github/workflows/scholar-reach-prototype.yml (uses secrets.SERP_API_KEY)",
-        "Or follow NEED_BROWSER.md for residential/GUI scrape",
-      ],
-    }, null, 2));
+    writeFileSync(
+      join(OUT, "meta.json"),
+      JSON.stringify(
+        {
+          ...meta,
+          status: "blocked-no-serp-key",
+          next: [
+            "Add config/SerpApi-key.txt or SERP_API_KEY",
+            "Or run Update Google Scholar Citations workflow (uses secrets.SERP_API_KEY)",
+            "Or follow NEED_BROWSER.md for residential/GUI scrape",
+          ],
+        },
+        null,
+        2
+      )
+    );
     console.error("No SERP_API_KEY — wrote data/scholar-reach/meta.json and exiting 2.");
     process.exit(2);
   }
@@ -351,54 +381,93 @@ async function main() {
 
   console.log("Fetching author publications…");
   const pubs = await fetchAuthorPubs();
-  writeFileSync(join(OUT, "author-pubs.json"), JSON.stringify({
-    meta: { asOf: new Date().toISOString(), count: pubs.length },
-    publications: pubs,
-  }, null, 2));
+  writeFileSync(
+    join(OUT, "author-pubs.json"),
+    JSON.stringify(
+      {
+        meta: { asOf: new Date().toISOString(), count: pubs.length },
+        publications: pubs,
+      },
+      null,
+      2
+    )
+  );
   console.log(`  ${pubs.length} pubs`);
 
   let pinned = loadPinned();
   if (PROTOTYPE) {
     const want = new Set(PROTOTYPE_DOIS.map((d) => d.toLowerCase()));
     const filtered = pinned.filter((p) => want.has(p.doi.toLowerCase()));
-    // If Nat Sustain DOI not in pin list, keep whatever matched of the three
     pinned = filtered.length ? filtered : pinned.filter((p) => p.lens === "lead").slice(0, 3);
   }
 
-  const matched = matchPubToPinned(pubs, pinned);
+  let matched = matchPubToPinned(pubs, pinned);
+  // Deep-sweep priority: highest Scholar cites first (Nat Sustain, ERL, then JGR).
+  matched = matched.slice().sort((a, b) => {
+    const ca = a.scholarMatch?.citationCount || 0;
+    const cb = b.scholarMatch?.citationCount || 0;
+    return cb - ca;
+  });
+
   const citingByPaper = {};
-  const maxPages = PROTOTYPE ? PROTOTYPE_MAX_PAGES : 50;
+  const fetchStats = [];
 
   for (const m of matched) {
     const citesId = m.scholarMatch?.citesId;
     if (!citesId) {
       console.warn(`  no Scholar match for ${m.doi} (${m.short})`);
+      fetchStats.push({ doi: m.doi, short: m.short, error: "no-scholar-match" });
       continue;
     }
-    console.log(`Fetching citers for ${m.short} cites=${citesId} (max ${maxPages} pages)…`);
-    const citers = await fetchCitingPages(citesId, maxPages);
+    const citeCount = m.scholarMatch.citationCount || 0;
+    const maxPages = pagesForPaper(citeCount, PROTOTYPE);
+    console.log(
+      `Fetching citers for ${m.short} cites=${citesId} scholarCites=${citeCount} (max ${maxPages} pages)…`
+    );
+    const { citers, pagesFetched, stoppedReason } = await fetchCitingPages(citesId, maxPages);
     citingByPaper[citesId] = citers;
+    const greyN = citers.filter((c) => c.detectedGreyLit).length;
+    const stat = {
+      doi: m.doi,
+      short: m.short,
+      citesId,
+      scholarCitationCount: citeCount,
+      maxPages,
+      pagesFetched,
+      stoppedReason,
+      fetched: citers.length,
+      greyLit: greyN,
+    };
+    fetchStats.push(stat);
     writeFileSync(
       join(OUT, `citing-${citesId}.json`),
-      JSON.stringify({
-        meta: {
-          doi: m.doi,
-          short: m.short,
-          citesId,
-          fetched: citers.length,
-          asOf: new Date().toISOString(),
-          greyLit: citers.filter((c) => c.detectedGreyLit).length,
+      JSON.stringify(
+        {
+          meta: {
+            ...stat,
+            asOf: new Date().toISOString(),
+          },
+          citing: citers,
         },
-        citing: citers,
-      }, null, 2)
+        null,
+        2
+      )
     );
-    console.log(`  ${citers.length} citers, greyLit≈${citers.filter((c) => c.detectedGreyLit).length}`);
+    console.log(
+      `  pages=${pagesFetched}/${maxPages} (${stoppedReason}) → ${citers.length} citers, greyLit=${greyN}`
+    );
+    if (citeCount > 50 && citers.length < Math.min(20, citeCount * 0.05)) {
+      console.warn(
+        `  WARNING: fetched only ${citers.length} citers for a paper with ${citeCount} Scholar cites — check cites_id / SerpAPI.`
+      );
+    }
   }
 
   const papers = matched
     .filter((m) => m.scholarMatch?.citesId)
     .map((m) => {
       const citers = citingByPaper[m.scholarMatch.citesId] || [];
+      const stat = fetchStats.find((s) => s.citesId === m.scholarMatch.citesId) || {};
       return {
         doi: m.doi,
         short: m.short,
@@ -411,24 +480,50 @@ async function main() {
         scholarCitationCount: m.scholarMatch.citationCount,
         citingFetched: citers.length,
         citingGreyLit: citers.filter((c) => c.detectedGreyLit).length,
+        pagesFetched: stat.pagesFetched ?? null,
+        maxPages: stat.maxPages ?? null,
+        stoppedReason: stat.stoppedReason ?? null,
       };
     });
 
   const squares = buildSquares(papers, citingByPaper);
+  const greyLitSquares = squares.filter((s) => s.detectedGreyLit);
+  const greyLitSample = greyLitSquares.map((s) => ({
+    id: s.id,
+    title: s.title,
+    year: s.year,
+    venue: s.venue,
+    citedBy: s.citedBy,
+    greyLitReasons: s.greyLitReasons || [],
+    paperIdxs: s.paperIdxs,
+    link: s.link,
+  }));
+
   const sample = {
     $comment:
-      "Prototype Scholar-backed Field & Shelf payload. citedBy = Google Scholar citation count of the citing work. Not layout-ready (no x,y). Grey literature flagged via heuristics.",
+      "Scholar-backed Field & Shelf payload. citedBy = Google Scholar citation count of the citing work. Not layout-ready (no x,y). Grey literature flagged via heuristics; see greyLitSample.",
     meta: {
       schema: "field-shelf/scholar-v0",
       asOf: new Date().toISOString().slice(0, 10),
       source: "Google Scholar (SerpAPI)",
       encoding: "citing-work-scholar-cited-by",
       prototype: PROTOTYPE,
+      mode: meta.mode,
       squareCount: squares.length,
-      greyLitSquares: squares.filter((s) => s.detectedGreyLit).length,
+      greyLitSquares: greyLitSquares.length,
+      pagesByPaper: papers.map((p) => ({
+        short: p.short,
+        scholarCitationCount: p.scholarCitationCount,
+        pagesFetched: p.pagesFetched,
+        maxPages: p.maxPages,
+        citingFetched: p.citingFetched,
+        citingGreyLit: p.citingGreyLit,
+        stoppedReason: p.stoppedReason,
+      })),
     },
     papers,
     squares,
+    greyLitSample,
   };
   writeFileSync(join(OUT, "sample-field-shelf.json"), JSON.stringify(sample, null, 2));
 
@@ -436,9 +531,15 @@ async function main() {
   meta.status = "ok";
   meta.papers = papers.length;
   meta.squares = squares.length;
-  meta.greyLitSquares = sample.meta.greyLitSquares;
+  meta.greyLitSquares = greyLitSquares.length;
+  meta.fetchStats = fetchStats;
   writeFileSync(join(OUT, "meta.json"), JSON.stringify(meta, null, 2));
-  console.log("Done.", meta);
+  console.log("Done.", {
+    papers: meta.papers,
+    squares: meta.squares,
+    greyLitSquares: meta.greyLitSquares,
+    fetchStats,
+  });
 }
 
 main().catch((err) => {
