@@ -1,0 +1,54 @@
+name: Scholar Reach prototype (SerpAPI)
+
+on:
+  workflow_dispatch:
+    inputs:
+      prototype:
+        description: 'Limit to 3 lead papers / 2 pages each'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fetch Scholar citing sample
+        env:
+          SERP_API_KEY: ${{ secrets.SERP_API_KEY }}
+        run: |
+          if [ -z "$SERP_API_KEY" ]; then
+            echo "SERP_API_KEY secret missing"
+            exit 1
+          fi
+          if [ "${{ inputs.prototype }}" = "true" ]; then
+            node scripts/scholar-reach/fetch-citing.mjs --prototype
+          else
+            node scripts/scholar-reach/fetch-citing.mjs
+          fi
+
+      - name: Upload sample artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: scholar-reach-sample
+          path: data/scholar-reach/
+
+      - name: Commit sample if changed
+        run: |
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git add data/scholar-reach
+          if git diff --cached --quiet; then
+            echo "No data changes"
+          else
+            git commit -m "data(scholar-reach): prototype citing sample from SerpAPI [automated]"
+            git push
+          fi
