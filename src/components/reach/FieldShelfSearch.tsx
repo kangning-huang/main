@@ -2,7 +2,7 @@
 
 import { useId, useState, type KeyboardEvent } from "react";
 import { useLanguage } from "@/lib/language-context";
-import { workUrl, type FieldShelfTips, type FieldShelfView, type TipsStatus } from "@/lib/field-shelf";
+import { openAlexUrl, type FieldShelfTips, type FieldShelfView, type TipsStatus } from "@/lib/field-shelf";
 import { authorLine } from "./FieldShelfTooltip";
 
 const fmt = (n: number) => n.toLocaleString("en-US");
@@ -55,7 +55,7 @@ export default function FieldShelfSearch({ view, tips, status, onLoad, query, on
       move(active - 1);
     } else if (e.key === "Enter") {
       e.preventDefault();
-      if (active >= 0 && listed[active] !== undefined) window.open(workUrl(view.squares[listed[active]].id), "_blank", "noopener,noreferrer");
+      if (active >= 0 && listed[active] !== undefined) window.open(openAlexUrl(view.squares[listed[active]].id), "_blank", "noopener,noreferrer");
       else move(0);
     } else if (e.key === "Escape") {
       e.stopPropagation();

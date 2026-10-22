@@ -7,8 +7,6 @@ import {
   fieldShelfPapers,
   fieldShelfThemes,
   openAlexUrl,
-  isScholarFieldShelf,
-  workUrl,
   topCiters,
   type FieldShelfPaper,
   type FieldShelfTips,
@@ -204,19 +202,15 @@ export function PaperDetails({
             <a href={doiUrl(paper.doi)} target="_blank" rel="noopener noreferrer" className="text-teal hover:text-ember">
               DOI ↗
             </a>
-            {paper.openalex ? (
-              <a href={openAlexUrl(paper.openalex)} target="_blank" rel="noopener noreferrer" className="text-teal hover:text-ember">
-                OpenAlex ↗
-              </a>
-            ) : null}
+            <a href={openAlexUrl(paper.openalex)} target="_blank" rel="noopener noreferrer" className="text-teal hover:text-ember">
+              OpenAlex ↗
+            </a>
           </p>
         </div>
       )}
       {paper.citing === 0 ? (
         <p className="leading-snug text-ink-muted">
-          {zh
-            ? `发表于 ${paper.year} 年。${isScholarFieldShelf() ? "谷歌学术样本中" : "OpenAlex 目前"}还没有收录引用它的文献，所以没有方块亮起。`
-            : `Published ${paper.year}; no citing work in the ${isScholarFieldShelf() ? "Google Scholar sample" : "OpenAlex set"} yet, so no squares light up.`}
+          {zh ? `发表于 ${paper.year} 年。OpenAlex 目前还没有收录引用它的文献（不含自引），所以没有方块亮起。` : `Published ${paper.year}; no non-self citing work in OpenAlex yet, so no squares light up.`}
         </p>
       ) : (
         <>
@@ -241,7 +235,7 @@ export function PaperDetails({
                   return (
                     <li key={sq.id} className="leading-snug">
                       <a
-                        href={workUrl(sq.id, tip)}
+                        href={openAlexUrl(sq.id)}
                         target="_blank"
                         rel="noopener noreferrer"
                         onPointerEnter={(e) => e.pointerType === "mouse" && onPreview?.(i)}
@@ -254,7 +248,7 @@ export function PaperDetails({
                       </a>
                       <span className="block text-xs text-ink-faint">
                         {[authorLine(tip, zh), tip.venue, tip.year].filter(Boolean).join(" · ")}
-                        {zh ? ` · 自身被引 ${fmt(tip.citedBy)} 次（${isScholarFieldShelf() ? "谷歌学术" : "OpenAlex"}）` : ` · cited by ${fmt(tip.citedBy)} (${isScholarFieldShelf() ? "Google Scholar" : "OpenAlex"})`}
+                        {zh ? ` · 自身被引 ${fmt(tip.citedBy)} 次（OpenAlex）` : ` · cited by ${fmt(tip.citedBy)} (OpenAlex)`}
                       </span>
                     </li>
                   );
