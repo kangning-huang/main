@@ -52,14 +52,7 @@ export default function NewsPage() {
           <h1 className="section-heading animate-fade-up">
             <T en="News" zh="动态" />
           </h1>
-          <p className="mt-4 text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
-            <T
-              en="Awards, students, grants, talks, and publication notes, newest first."
-              zh="这里记录奖项、学生、资助、报告与论文进展，最新消息排在前面。"
-            />
-          </p>
-
-          <ol className="mt-10 border-l border-rule animate-fade-up delay-2">
+          <ol className="mt-10 border-l border-rule animate-fade-up delay-1">
             {NEWS.map((item) => {
               const external = item.href.startsWith("http");
               const date = formatNewsDate(item.date);

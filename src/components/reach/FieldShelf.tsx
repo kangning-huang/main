@@ -303,33 +303,6 @@ function worthALook(view: FieldShelfView, zh: boolean) {
   return out;
 }
 
-function ReadingGuide() {
-  const { language } = useLanguage();
-  const zh = language === "zh";
-  const items = zh
-    ? [
-        "每个方块是一篇引用本人论文的文献（OpenAlex，已剔除自引）。点击方块在 OpenAlex 中打开。",
-        "颜色 = 该施引文献自身的被引次数（对数分段，余烬→墨色）。越深、越靠中心，说明引用本人的文献本身影响力越高。",
-        "方向没有含义；中心是高被引核心，边缘是尚未被广泛引用的施引文献。",
-        "书架上是本人论文，按主题再按年份排列；墨色描边的书脊是第一/末位/通讯作者论文。悬停或按 Tab 键可点亮引用它的方块，并画出每一条连线。",
-        "可按作者、标题、期刊或年份搜索，或点“随机看一篇”。Esc 返回。",
-      ]
-    : [
-        "Each square is one work that cites these papers (OpenAlex, self-citations removed). Click a square to open it in OpenAlex.",
-        "Colour is the citing work's own citation count (log bins, ember to ink). Darker and nearer the centre means that citing paper is itself more cited.",
-        "Direction on the field means nothing. The centre holds high-impact citers; the edge holds lightly cited ones.",
-        "The shelf is Ken's papers by theme, then year. Ink-edged spines mark first-, last-, or corresponding-author papers. Hover or Tab a spine to light its citers and draw a thin link from each.",
-        "Search by author, title, venue, or year, or press Show me one. Esc returns to rest.",
-      ];
-  return (
-    <ul className="space-y-1.5 text-sm leading-snug text-ink-muted">
-      {items.map((s) => (
-        <li key={s}>{s}</li>
-      ))}
-    </ul>
-  );
-}
-
 const TABLE_PAGE = 100;
 
 /** The field as a table: every square, no hover needed. Titles come with the lazy payload; ids, years, papers and bands are always there. */
@@ -531,16 +504,12 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
 
   const N = view.totals.citingWorks;
   const canvasLabel = zh
-    ? `图中有 ${fmt(N)} 个方块，每个代表一篇引用我论文的文献。颜色表示这篇文献自身被引多少次；越靠近中心，被引越多。其中 ${fmt(view.totals.ge100)} 篇被引 ≥100 次，${fmt(view.totals.ge1000)} 篇 ≥1,000 次。下表可以查看全部文献。`
-    : `${fmt(N)} squares, one per citing work; colour is each work's own citation count, centre = higher impact. ${fmt(view.totals.ge100)} with ≥100 citations, ${fmt(view.totals.ge1000)} with ≥1,000. The table below lists them all.`;
+    ? `图中有 ${fmt(N)} 个方块，每个代表一篇引用我论文的文献。颜色表示这篇文献自身被引多少次；越靠近中心，被引越多。下表可以查看全部文献。`
+    : `${fmt(N)} squares, one per citing work; colour is each work's own citation count, centre = higher impact. The table below lists them all.`;
   const readout =
     activeP !== null ? (
       <span className="font-medium text-ink">{paperReadout(fieldShelfPapers[activeP], zh)}</span>
-    ) : focusI !== null ? null : (
-      <span className="text-ink-faint">
-        {zh ? "把鼠标移到书架上的论文，就会点亮引用它的文献，并画出全部连线；移到方块上，可以查看文献详情" : "Hover a paper to light its citers and draw every link, or a square for its details"}
-      </span>
-    );
+    ) : null;
   const callouts = worthALook(view, zh);
 
   return (
@@ -551,14 +520,13 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
     >
       <div className="grid gap-x-8 gap-y-5 lg:grid-cols-[minmax(0,1fr)_340px] lg:grid-rows-[auto_auto_1fr]">
         <header className="lg:col-start-2 lg:row-start-1">
-          <p className="text-xs uppercase tracking-[0.14em] text-ink-faint">01 · {zh ? "领域与书架 · 每个方块是一篇引用我论文的文献" : "Field & Shelf · one square per citing work"}</p>
-          <h2 id="field-shelf-heading" className="mt-2 font-display text-3xl leading-tight text-ink md:text-[2.25rem] lg:text-[2rem]">
+          <h2 id="field-shelf-heading" className="font-display text-3xl leading-tight text-ink md:text-[2.25rem] lg:text-[2rem]">
             {zh ? view.headline.zh : view.headline.en}
           </h2>
           <p className="mt-2 text-sm text-ink-muted">
             {zh
-              ? `引用我论文的文献中，${fmt(view.totals.ge100)} 篇自身被引 ≥100 次 · ${fmt(view.totals.ge1000)} 篇 ≥1,000 次 · OpenAlex，${fieldShelfMeta.asOf} · 已剔除自引`
-              : `${fmt(view.totals.ge100)} citing works with ≥100 citations of their own · ${fmt(view.totals.ge1000)} with ≥1,000 · OpenAlex, ${fieldShelfMeta.asOf} · self-citations removed`}
+              ? `OpenAlex，${fieldShelfMeta.asOf} · 已剔除自引`
+              : `OpenAlex, ${fieldShelfMeta.asOf} · self-citations removed`}
           </p>
         </header>
 
@@ -650,14 +618,6 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
                   </ol>
                 </div>
               )}
-              <div>
-                <h3 className="text-xs font-medium uppercase tracking-[0.14em] text-ink-faint">
-                  <T en="How to read it" zh="怎么读" />
-                </h3>
-                <div className="mt-2">
-                  <ReadingGuide />
-                </div>
-              </div>
             </div>
           )}
         </aside>

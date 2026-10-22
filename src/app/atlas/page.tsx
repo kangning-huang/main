@@ -66,8 +66,8 @@ export default function AtlasPage() {
           </h1>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
-              en="One map of the cities in my datasets. Click a city for what each paper reports there: built mass and scaling (Nature Cities, in press); surface heat-island trends, 2003–2020 (Sci Rep 2025); cooling after informal-settlement demolition (npj Envi Soc Sci 2026); height-aware flood damage with protection (Sci Rep 2026); urban land by 2050 (ERL 2019); and nighttime heat-stress change in China, India, and Nigeria (JGR 2021). Dot color is how many of those papers cover the city; filter chips isolate one study."
-              zh="城市是复杂社会—生态系统。要了解一座城市，我们可以把不同研究中的发现放在一起看。这张地图汇集了我数据集中的所有城市，点击一座，就能查看各篇论文在这里发现了什么。研究包括建成质量与标度（Nature Cities，即将发表）、2003–2020 年地表热岛趋势（Scientific Reports 2025）、城中村拆除后的降温（npj 2026）、计入建筑高度与防洪标准的洪涝损失（Scientific Reports 2026）、2050 年城市用地（ERL 2019），以及中国、印度和尼日利亚的夜间热应激变化（JGR 2021）。圆点颜色表示有多少篇论文覆盖这座城市；选中一项研究，就能突出显示它覆盖的城市。"
+              en="One map of the cities in my datasets; filter chips isolate a study, and a city opens what each paper reports there."
+              zh="一张图汇集了我数据集中的城市；用筛选标签查看单篇研究，点击城市即可看到各篇论文在当地的结果。"
             />
           </p>
           <p className="mt-2 text-xs text-ink-faint animate-fade-up delay-2">

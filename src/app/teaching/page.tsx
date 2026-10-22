@@ -86,12 +86,6 @@ export default function TeachingPage() {
           <h2 id="methods" className="mt-16 scroll-mt-24 font-display text-2xl text-ink">
             <T en="Signature methods" zh="教学方法" />
           </h2>
-          <p className="mt-2 max-w-3xl text-sm text-ink-faint">
-            <T
-              en="Practices I use across Environment and Society, Environmental System Science, and Cities at a Crossroads—drawn from those syllabi, my third-year review teaching statement, and the NYU Shanghai Teaching Excellence Award interview."
-              zh="贯穿《环境与社会》《环境系统科学》与《城市十字路口》的做法，依据各课大纲、三年期中评估教学陈述，以及上海纽约大学卓越教学奖专访。"
-            />
-          </p>
           <SignatureMethods />
 
           {/* ── Student work ── */}

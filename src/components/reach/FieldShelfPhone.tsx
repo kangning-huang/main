@@ -90,7 +90,7 @@ export default function FieldShelfPhone({ view, lit, hits, pinPaper, onPinPaper,
       )}
 
       <div>
-        <h3 className="text-xs font-medium uppercase tracking-[0.14em] text-ink-faint">{zh ? "我的论文 · 点按一篇，点亮引用它的文献" : "Ken's papers · tap to light their citers"}</h3>
+        <h3 className="text-xs font-medium uppercase tracking-[0.14em] text-ink-faint">{zh ? "我的论文" : "Ken's papers"}</h3>
         {groups.map(({ theme, items }) => (
           <section key={theme.id} className="mt-3" aria-label={zh ? theme.zh : theme.en}>
             <h4 className="text-xs text-ink-muted">{zh ? theme.zh : theme.en}</h4>

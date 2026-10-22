@@ -52,12 +52,6 @@ export default function ReachPage() {
             <h1 className="font-display text-4xl text-ink md:text-5xl">
               <T en="Who have cited my works" zh="谁引用了我的研究成果" />
             </h1>
-            <p className="mt-3 max-w-2xl text-[15px] text-ink-muted">
-              <T
-                en="Each square is one OpenAlex work that cites these papers. Colour tracks that citing work's own citation count, with higher-impact work toward the centre. Self-citations are removed."
-                zh="每个方块代表 OpenAlex 收录的一篇引用了这些论文的文献。颜色表示这篇文献自身的被引次数，被引越多，方块越靠近中心。自引已剔除。"
-              />
-            </p>
             <ReachLensChip />
           </div>
         </section>
@@ -71,8 +65,7 @@ export default function ReachPage() {
         {LATER.map(({ id, en, zh, Component }, i) => (
           <section key={id} id={id} aria-labelledby={`${id}-heading`} className={`scroll-mt-20 border-t border-rule-faint py-14 ${i % 2 === 1 ? "bg-paper-warm/50" : ""}`}>
             <div className="mx-auto max-w-6xl px-6 lg:px-8">
-              <p className="text-xs uppercase tracking-[0.14em] text-ink-faint">{String(i + 2).padStart(2, "0")}</p>
-              <h2 id={`${id}-heading`} className="mt-1 mb-6 font-display text-3xl text-ink">
+              <h2 id={`${id}-heading`} className="mb-6 font-display text-3xl text-ink">
                 <T en={en} zh={zh} />
               </h2>
               <Component />

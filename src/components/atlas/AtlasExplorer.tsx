@@ -181,14 +181,7 @@ export default function AtlasExplorer() {
         </div>
 
         <div className="lg:sticky lg:top-24 lg:self-start">
-          {selectedId == null && !loadingCity ? (
-            <aside className="rounded-lg border border-dashed border-rule bg-paper-warm/40 p-5 text-sm text-ink-muted">
-              <T
-                en="Click a city on the map, or search above, to see what each paper says about it. Dot color is how many papers cover that city."
-                zh="点击地图上的城市，或在上方搜索城市名，就能查看各篇论文在这里的研究结果。圆点颜色表示有多少篇论文覆盖这座城市。"
-              />
-            </aside>
-          ) : (
+          {selectedId != null || loadingCity ? (
             <CityCard
               city={city}
               loading={loadingCity}
@@ -197,7 +190,7 @@ export default function AtlasExplorer() {
                 setCity(null);
               }}
             />
-          )}
+          ) : null}
         </div>
       </div>
     </div>
