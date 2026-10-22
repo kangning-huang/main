@@ -47,3 +47,6 @@ node_modules/
 .next/
 out/
 .cache/
+
+# Scholar Reach raw caches (keep committed samples)
+data/scholar-reach/raw/

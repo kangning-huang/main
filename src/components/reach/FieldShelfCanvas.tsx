@@ -53,9 +53,15 @@ function prepare(view: FieldShelfView): Prepared {
   const byBand: number[][] = [[], [], [], [], []];
   view.squares.forEach((q, i) => byBand[impactBin(q.citedBy)].push(i));
   const order = view.squares.map((_, i) => i);
-  const num = (i: number) => Number(view.squares[i].id.slice(1));
+  const idKey = (i: number) => {
+    const id = view.squares[i].id;
+    if (id.startsWith("W") && /^\d+$/.test(id.slice(1))) return Number(id.slice(1));
+    let h = 0;
+    for (let c = 0; c < id.length; c++) h = (Math.imul(31, h) + id.charCodeAt(c)) | 0;
+    return h >>> 0;
+  };
   // Entrance: most-cited first (centre fills first), then year, then id.
-  order.sort((a, b) => view.squares[b].citedBy - view.squares[a].citedBy || (view.squares[a].year ?? 9999) - (view.squares[b].year ?? 9999) || num(a) - num(b));
+  order.sort((a, b) => view.squares[b].citedBy - view.squares[a].citedBy || (view.squares[a].year ?? 9999) - (view.squares[b].year ?? 9999) || idKey(a) - idKey(b));
   const rank = new Int32Array(order.length);
   order.forEach((i, r) => (rank[i] = r));
   const buckets = new Map<number, number[]>();

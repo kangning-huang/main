@@ -12,6 +12,7 @@
 import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'fs';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
+import { spawnSync } from 'child_process';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -130,6 +131,9 @@ async function main() {
 
   const outputPath = join(outputDir, 'scholar-citations.json');
 
+  // Keep any prior Reach prototype if this run's citing step fails later.
+  preserveExistingReachPrototype(citationData);
+
   if (!hasValidMetrics) {
     console.log('\nCitation metrics are invalid (0) — keeping existing cached file.');
   } else if (citationData.publications.length === 0) {
@@ -144,6 +148,24 @@ async function main() {
 
   // ── 5. Missing-publication check ────────────────────────
   checkMissingPublications(allPubs);
+
+  // ── 6. Reach citing prototype (best-effort; uses same SERP_API_KEY) ──
+  // Only after a successful profile fetch. Writes data/scholar-reach/* locally
+  // and embeds a copy under citationData.reachScholarPrototype so the Sunday
+  // workflow commit of scholar-citations.json carries real Scholar citing data.
+  if (hasValidMetrics && citationData.publications.length > 0) {
+    try {
+      runReachScholarPrototype(citationData);
+      // Re-save JSON so the embedded prototype is committed by the workflow.
+      writeFileSync(outputPath, JSON.stringify(citationData, null, 2));
+      console.log(`Re-saved citation data with reachScholarPrototype: ${outputPath}`);
+    } catch (err) {
+      console.warn('Reach citing prototype failed (non-fatal):', err.message || err);
+      preserveExistingReachPrototype(citationData);
+    }
+  } else {
+    console.log('Skipping Reach citing prototype — profile metrics invalid or empty.');
+  }
 
   return citationData;
 }
@@ -274,6 +296,105 @@ function checkMissingPublications(scholarPubs) {
       '\nReview the list above. Journal articles should be added to'
     );
     console.log('CURATED_PUBLICATIONS in src/lib/constants.ts.');
+  }
+}
+
+
+// ── Reach Scholar citing prototype (SerpAPI) ────────────────
+/**
+ * After a successful profile fetch, run the Reach citing prototype and
+ * embed a compact copy under citationData.reachScholarPrototype so the
+ * Sunday workflow (which only commits scholar-citations.json) carries
+ * real Scholar citing samples + grey-lit flags. Failures are logged and
+ * do not fail the CV/profile update.
+ */
+function preserveExistingReachPrototype(citationData) {
+  const outputPath = join(__dirname, '..', 'src', 'data', 'scholar-citations.json');
+  if (!existsSync(outputPath)) return;
+  try {
+    const prev = JSON.parse(readFileSync(outputPath, 'utf-8'));
+    if (prev.reachScholarPrototype && !citationData.reachScholarPrototype) {
+      citationData.reachScholarPrototype = prev.reachScholarPrototype;
+    }
+  } catch (err) {
+    console.warn('Could not preserve prior reachScholarPrototype:', err.message);
+  }
+}
+
+function runReachScholarPrototype(citationData) {
+  console.log('\n── Reach Scholar citing prototype ──');
+  const scriptPath = join(__dirname, 'scholar-reach', 'fetch-citing.mjs');
+  if (!existsSync(scriptPath)) {
+    console.warn('scripts/scholar-reach/fetch-citing.mjs missing — skipping citing prototype.');
+    preserveExistingReachPrototype(citationData);
+    return;
+  }
+
+  const result = spawnSync(process.execPath, [scriptPath, '--prototype'], {
+    cwd: join(__dirname, '..'),
+    env: process.env,
+    encoding: 'utf-8',
+    maxBuffer: 20 * 1024 * 1024,
+  });
+
+  if (result.stdout) process.stdout.write(result.stdout);
+  if (result.stderr) process.stderr.write(result.stderr);
+
+  if (result.status !== 0) {
+    console.warn(
+      `Reach citing prototype exited ${result.status}${result.error ? ` (${result.error.message})` : ''} — continuing without failing CV update.`
+    );
+    preserveExistingReachPrototype(citationData);
+    return;
+  }
+
+  const reachDir = join(__dirname, '..', 'data', 'scholar-reach');
+  const samplePath = join(reachDir, 'sample-field-shelf.json');
+  const metaPath = join(reachDir, 'meta.json');
+  if (!existsSync(samplePath)) {
+    console.warn('Prototype finished but sample-field-shelf.json missing — skipping embed.');
+    preserveExistingReachPrototype(citationData);
+    return;
+  }
+
+  try {
+    const sample = JSON.parse(readFileSync(samplePath, 'utf-8'));
+    const meta = existsSync(metaPath)
+      ? JSON.parse(readFileSync(metaPath, 'utf-8'))
+      : {};
+    const squares = sample.squares || [];
+    const greyLit =
+      Array.isArray(sample.greyLitSample) && sample.greyLitSample.length
+        ? sample.greyLitSample
+        : squares.filter((s) => s.detectedGreyLit);
+    citationData.reachScholarPrototype = {
+      $comment:
+        'Scholar-backed Reach citing prototype embedded for GH Actions (workflow only commits this JSON). citedBy values are Google Scholar counts via SerpAPI — never invented. Deep grey-lit sweep via --prototype page budgets.',
+      asOf: sample.meta?.asOf || new Date().toISOString().slice(0, 10),
+      source: sample.meta?.source || 'Google Scholar (SerpAPI)',
+      encoding: sample.meta?.encoding || 'citing-work-scholar-cited-by',
+      prototype: true,
+      meta: {
+        ...(sample.meta || {}),
+        fetchStatus: meta.status || 'ok',
+        startedAt: meta.startedAt || null,
+        finishedAt: meta.finishedAt || null,
+        squareCount: squares.length,
+        greyLitSquares: greyLit.length,
+        papers: (sample.papers || []).length,
+        fetchStats: meta.fetchStats || null,
+      },
+      papers: sample.papers || [],
+      // Full square list for inspection (deep prototype may be hundreds of citers).
+      squares,
+      greyLitSample: greyLit,
+    };
+    console.log(
+      `Embedded reachScholarPrototype: ${(sample.papers || []).length} papers, ${squares.length} squares, ${greyLit.length} grey-lit.`
+    );
+  } catch (err) {
+    console.warn('Failed to embed reachScholarPrototype:', err.message);
+    preserveExistingReachPrototype(citationData);
   }
 }
 

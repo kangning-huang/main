@@ -10,9 +10,11 @@ import WhereMap from "@/components/reach/WhereMap";
 import StandingOnIt from "@/components/reach/StandingOnIt";
 import Growth from "@/components/reach/Growth";
 import ReachMethod from "@/components/reach/ReachMethod";
+import { isScholarFieldShelf } from "@/lib/field-shelf";
 
-const DESCRIPTION =
-  "Research citing Kangning Huang's papers (OpenAlex, self-citations removed): one square per citing work, more-cited work toward the centre.";
+const DESCRIPTION = isScholarFieldShelf()
+  ? "Research citing Kangning Huang's papers (Google Scholar prototype via SerpAPI, grey lit included): one square per citing work, more-cited work toward the centre. Where/topics remain OpenAlex."
+  : "Research citing Kangning Huang's papers (OpenAlex, self-citations removed): one square per citing work, more-cited work toward the centre.";
 
 export const metadata: Metadata = {
   title: "Reach",
@@ -54,8 +56,16 @@ export default function ReachPage() {
             </h1>
             <p className="mt-3 max-w-2xl text-[15px] text-ink-muted">
               <T
-                en="Each square is one OpenAlex work that cites these papers. Colour tracks that citing work's own citation count, with higher-impact work toward the centre. Self-citations are removed."
-                zh="每个方块代表 OpenAlex 收录的一篇引用了这些论文的文献。颜色表示这篇文献自身的被引次数，被引越多，方块越靠近中心。自引已剔除。"
+                en={
+                  isScholarFieldShelf()
+                    ? "Each square is one Google Scholar citing work (prototype sample; grey literature included). Colour tracks that work's own Scholar citation count, with higher-impact work toward the centre. Where and topic cards below still use OpenAlex."
+                    : "Each square is one OpenAlex work that cites these papers. Colour tracks that citing work's own citation count, with higher-impact work toward the centre. Self-citations are removed."
+                }
+                zh={
+                  isScholarFieldShelf()
+                    ? "每个方块代表一篇谷歌学术施引文献（原型样本，含灰色文献）。颜色表示该文献自身的谷歌学术被引次数，被引越多越靠近中心。下方的“在哪里”与主题卡片仍使用 OpenAlex。"
+                    : "每个方块代表 OpenAlex 收录的一篇引用了这些论文的文献。颜色表示这篇文献自身的被引次数，被引越多，方块越靠近中心。自引已剔除。"
+                }
               />
             </p>
             <ReachLensChip />

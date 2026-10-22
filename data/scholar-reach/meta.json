@@ -1,0 +1,15 @@
+{
+  "startedAt": "2026-10-20T08:10:05.837Z",
+  "authorId": "s_domssAAAAJ",
+  "prototype": true,
+  "dryRun": false,
+  "hasSerpKey": false,
+  "source": "Google Scholar via SerpAPI",
+  "encoding": "citing-work-scholar-cited-by",
+  "status": "blocked-no-serp-key",
+  "next": [
+    "Add config/SerpApi-key.txt or SERP_API_KEY",
+    "Or run .github/workflows/scholar-reach-prototype.yml (uses secrets.SERP_API_KEY)",
+    "Or follow NEED_BROWSER.md for residential/GUI scrape"
+  ]
+}

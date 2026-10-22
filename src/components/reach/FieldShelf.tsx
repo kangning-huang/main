@@ -16,7 +16,8 @@ import {
   impactBin,
   impactColor,
   loadFieldShelfTips,
-  openAlexUrl,
+  isScholarFieldShelf,
+  workUrl,
   citersOfPaper,
   pickOne,
   searchSquares,
@@ -236,8 +237,12 @@ function FieldShelfLegend({ view }: { view: FieldShelfView }) {
       </div>
       <p>
         {zh
-          ? "颜色表示施引文献自身在 OpenAlex 的被引次数，按对数分段。越靠近中心，被引越多；方向没有含义。"
-          : "Colour = the citing work's own OpenAlex citation count (log bins). Nearer the centre = more cited. Direction means nothing."}
+          ? (isScholarFieldShelf()
+              ? "颜色表示施引文献自身在谷歌学术的被引次数，按对数分段。越靠近中心，被引越多；方向没有含义。灰色文献（IPCC、学位论文、SSRN 等）已纳入。"
+              : "颜色表示施引文献自身在 OpenAlex 的被引次数，按对数分段。越靠近中心，被引越多；方向没有含义。")
+          : (isScholarFieldShelf()
+              ? "Colour = the citing work's own Google Scholar citation count (log bins). Nearer the centre = more cited. Direction means nothing. Grey literature (IPCC, theses, SSRN, …) is included."
+              : "Colour = the citing work's own OpenAlex citation count (log bins). Nearer the centre = more cited. Direction means nothing.")}
       </p>
       <p className="tabular-nums">
         {zh
@@ -258,16 +263,28 @@ function FieldShelfLegend({ view }: { view: FieldShelfView }) {
       <p>
         {view.lens === "all"
           ? zh
-            ? `图中有 ${fmt(t.citingWorks)} 个方块，每个代表一篇引用这些论文的 OpenAlex 文献。在“全部”视角下，约${fourInFive ? "五分之四" : `${Math.round(share * 100)}%`}的文献（${(share * 100).toFixed(1)}%）只引用合作论文；切换到“第一/末位/通讯作者”可以缩小范围。`
-            : `${fmt(t.citingWorks)} squares — one per OpenAlex work that cites this corpus. ${fourInFive ? "About four in five" : `${Math.round(share * 100)}% of`} All squares (${(share * 100).toFixed(1)}%) cite only co-authored papers; use First / last / corresponding to narrow.`
+            ? (isScholarFieldShelf()
+                ? `图中有 ${fmt(t.citingWorks)} 个方块，每个代表一篇谷歌学术施引文献（样本）。在“全部”视角下，约${fourInFive ? "五分之四" : `${Math.round(share * 100)}%`}的文献（${(share * 100).toFixed(1)}%）只引用合作论文；切换到“第一/末位/通讯作者”可以缩小范围。`
+                : `图中有 ${fmt(t.citingWorks)} 个方块，每个代表一篇引用这些论文的 OpenAlex 文献。在“全部”视角下，约${fourInFive ? "五分之四" : `${Math.round(share * 100)}%`}的文献（${(share * 100).toFixed(1)}%）只引用合作论文；切换到“第一/末位/通讯作者”可以缩小范围。`)
+            : (isScholarFieldShelf()
+                ? `${fmt(t.citingWorks)} squares — one per Google Scholar citing work (prototype sample). ${fourInFive ? "About four in five" : `${Math.round(share * 100)}% of`} All squares (${(share * 100).toFixed(1)}%) cite only co-authored papers; use First / last / corresponding to narrow.`
+                : `${fmt(t.citingWorks)} squares — one per OpenAlex work that cites this corpus. ${fourInFive ? "About four in five" : `${Math.round(share * 100)}% of`} All squares (${(share * 100).toFixed(1)}%) cite only co-authored papers; use First / last / corresponding to narrow.`)
           : zh
-            ? `这里的 ${fmt(t.citingWorks)} 个方块，每个代表一篇 OpenAlex 文献，引用了我担任第一、末位或通讯作者的 ${t.leadPapers} 篇论文中的至少一篇。方块密度与“全部”视角相同，数量少了，图也就小了；切换视角时，同一篇文献颜色不变。`
-            : `${fmt(t.citingWorks)} squares — one per OpenAlex work citing Ken's ${t.leadPapers} first / last / corresponding-author papers. Same density as All, so the field is smaller; a work keeps its colour across lenses.`}
+            ? (isScholarFieldShelf()
+                ? `这里的 ${fmt(t.citingWorks)} 个方块，每个代表一篇谷歌学术施引文献，引用了我担任第一、末位或通讯作者的 ${t.leadPapers} 篇论文中的至少一篇（样本）。方块密度与“全部”视角相同；切换视角时，同一篇文献颜色不变。`
+                : `这里的 ${fmt(t.citingWorks)} 个方块，每个代表一篇 OpenAlex 文献，引用了我担任第一、末位或通讯作者的 ${t.leadPapers} 篇论文中的至少一篇。方块密度与“全部”视角相同，数量少了，图也就小了；切换视角时，同一篇文献颜色不变。`)
+            : (isScholarFieldShelf()
+                ? `${fmt(t.citingWorks)} squares — one per Google Scholar work citing Ken's ${t.leadPapers} first / last / corresponding-author papers (sample). Same density as All; a work keeps its colour across lenses.`
+                : `${fmt(t.citingWorks)} squares — one per OpenAlex work citing Ken's ${t.leadPapers} first / last / corresponding-author papers. Same density as All, so the field is smaller; a work keeps its colour across lenses.`)}
       </p>
       <p className="text-ink-faint">
         {zh
-          ? `被引次数直接来自 OpenAlex cited_by_count（${meta.asOf}），没有编造数值。纳入统计的各类文献都用方块表示；“随机看一篇”优先选取自身被引较多的期刊论文和综述。`
-          : `Citation counts are OpenAlex cited_by_count (${meta.asOf}), never invented. Every record type the pipeline counts is a square; “Show me one” prefers higher-cited articles and reviews.`}
+          ? (isScholarFieldShelf()
+              ? `被引次数直接来自谷歌学术（${meta.asOf}，SerpAPI），没有编造数值。灰色文献（IPCC、学位论文、SSRN 等）已纳入；“随机看一篇”优先选取自身被引较多的文献。`
+              : `被引次数直接来自 OpenAlex cited_by_count（${meta.asOf}），没有编造数值。纳入统计的各类文献都用方块表示；“随机看一篇”优先选取自身被引较多的期刊论文和综述。`)
+          : (isScholarFieldShelf()
+              ? `Citation counts are Google Scholar (${meta.asOf}, via SerpAPI), never invented. Grey literature (IPCC, theses, SSRN, …) is included; “Show me one” prefers higher-cited works.`
+              : `Citation counts are OpenAlex cited_by_count (${meta.asOf}), never invented. Every record type the pipeline counts is a square; “Show me one” prefers higher-cited articles and reviews.`)}
       </p>
     </div>
   );
@@ -308,14 +325,14 @@ function ReadingGuide() {
   const zh = language === "zh";
   const items = zh
     ? [
-        "每个方块是一篇引用本人论文的文献（OpenAlex，已剔除自引）。点击方块在 OpenAlex 中打开。",
+        isScholarFieldShelf() ? "每个方块是一篇引用本人论文的文献（谷歌学术样本；含灰色文献）。点击方块打开来源链接。" : "每个方块是一篇引用本人论文的文献（OpenAlex，已剔除自引）。点击方块在 OpenAlex 中打开。",
         "颜色 = 该施引文献自身的被引次数（对数分段，余烬→墨色）。越深、越靠中心，说明引用本人的文献本身影响力越高。",
         "方向没有含义；中心是高被引核心，边缘是尚未被广泛引用的施引文献。",
         "书架上是本人论文，按主题再按年份排列；墨色描边的书脊是第一/末位/通讯作者论文。悬停或按 Tab 键可点亮引用它的方块，并画出每一条连线。",
         "可按作者、标题、期刊或年份搜索，或点“随机看一篇”。Esc 返回。",
       ]
     : [
-        "Each square is one work that cites these papers (OpenAlex, self-citations removed). Click a square to open it in OpenAlex.",
+        isScholarFieldShelf() ? "Each square is one work that cites these papers (Google Scholar sample; grey lit included). Click a square to open its source." : "Each square is one work that cites these papers (OpenAlex, self-citations removed). Click a square to open it in OpenAlex.",
         "Colour is the citing work's own citation count (log bins, ember to ink). Darker and nearer the centre means that citing paper is itself more cited.",
         "Direction on the field means nothing. The centre holds high-impact citers; the edge holds lightly cited ones.",
         "The shelf is Ken's papers by theme, then year. Ink-edged spines mark first-, last-, or corresponding-author papers. Hover or Tab a spine to light its citers and draw a thin link from each.",
@@ -369,7 +386,7 @@ function FieldShelfTable({ view, tips, status, onLoad }: { view: FieldShelfView;
             return (
               <tr key={sq.id} className="border-t border-rule-faint align-baseline">
                 <td className="py-1.5 pr-3">
-                  <a href={openAlexUrl(sq.id)} target="_blank" rel="noopener noreferrer" className="text-ink hover:text-ember">
+                  <a href={workUrl(sq.id)} target="_blank" rel="noopener noreferrer" className="text-ink hover:text-ember">
                     {tip?.title ?? sq.id}
                   </a>
                   {tip?.author && <span className="block text-xs text-ink-faint">{authorLine(tip, zh)}</span>}
@@ -557,8 +574,12 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
           </h2>
           <p className="mt-2 text-sm text-ink-muted">
             {zh
-              ? `引用我论文的文献中，${fmt(view.totals.ge100)} 篇自身被引 ≥100 次 · ${fmt(view.totals.ge1000)} 篇 ≥1,000 次 · OpenAlex，${fieldShelfMeta.asOf} · 已剔除自引`
-              : `${fmt(view.totals.ge100)} citing works with ≥100 citations of their own · ${fmt(view.totals.ge1000)} with ≥1,000 · OpenAlex, ${fieldShelfMeta.asOf} · self-citations removed`}
+              ? (isScholarFieldShelf()
+                  ? `引用我论文的文献中，${fmt(view.totals.ge100)} 篇自身被引 ≥100 次 · ${fmt(view.totals.ge1000)} 篇 ≥1,000 次 · 谷歌学术，${fieldShelfMeta.asOf} · 样本（含灰色文献）`
+                  : `引用我论文的文献中，${fmt(view.totals.ge100)} 篇自身被引 ≥100 次 · ${fmt(view.totals.ge1000)} 篇 ≥1,000 次 · OpenAlex，${fieldShelfMeta.asOf} · 已剔除自引`)
+              : (isScholarFieldShelf()
+                  ? `${fmt(view.totals.ge100)} citing works with ≥100 citations of their own · ${fmt(view.totals.ge1000)} with ≥1,000 · Google Scholar, ${fieldShelfMeta.asOf} · prototype sample (grey lit included)`
+                  : `${fmt(view.totals.ge100)} citing works with ≥100 citations of their own · ${fmt(view.totals.ge1000)} with ≥1,000 · OpenAlex, ${fieldShelfMeta.asOf} · self-citations removed`)}
           </p>
         </header>
 
@@ -592,7 +613,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
                 }
                 const id = view.squares[i].id;
                 setPinSq(id);
-                window.open(openAlexUrl(id), "_blank", "noopener,noreferrer");
+                window.open(workUrl(id), "_blank", "noopener,noreferrer");
               }}
               onKeepCard={keepCard}
               onClosePin={() => setPinSq(null)}

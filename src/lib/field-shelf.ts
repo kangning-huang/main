@@ -1,14 +1,16 @@
 /**
  * Accessors for Field & Shelf (docs/reach/FIELD-SHELF-PLAN.md):
- * src/data/field-shelf.json (scripts/influence/build-field-shelf.mjs) is bundled with the page; the
- * tooltip payloads in public/data/field-shelf-tooltips-{all,lead}.json are fetched on first hover,
- * search or "Show me one". One square per work citing Ken's papers. Colour and centre position encode
- * that citing work's own OpenAlex cited_by_count (log bins); the All / Lead chip only filters.
+ * src/data/field-shelf.json is bundled with the page; tooltip payloads in
+ * public/data/field-shelf-tooltips-{all,lead}.json load on first hover / search / "Show me one".
+ * On branch reach/google-scholar the layout is built from Google Scholar (SerpAPI) via
+ * scripts/scholar-reach/build-field-shelf-from-scholar.mjs — citedBy is Scholar, never invented.
+ * Production main still uses OpenAlex (scripts/influence/build-field-shelf.mjs).
+ * Colour and centre position encode the citing work's own citation count (log bins); All / Lead filters.
  */
 import fieldShelfData from "@/data/field-shelf.json";
 import type { ReachLens } from "@/lib/influence";
 
-/** Log-ish citation bins: 0 · 1–9 · 10–99 · 100–999 · ≥1000 (OpenAlex cited_by_count). */
+/** Log-ish citation bins: 0 · 1–9 · 10–99 · 100–999 · ≥1000 (Scholar or OpenAlex cited_by). */
 export type FieldShelfImpactBin = 0 | 1 | 2 | 3 | 4;
 
 /**
@@ -115,12 +117,12 @@ export interface FieldShelfTheme {
 }
 
 export interface FieldShelfSquare {
-  /** OpenAlex short id, e.g. "W4220718869". */
+  /** OpenAlex short id (W…) or Google Scholar id (GS_…). */
   id: string;
   /** Top-left corner in the view's field box, px. */
   x: number;
   y: number;
-  /** OpenAlex cited_by_count of this citing work (never invented). */
+  /** Citation count of this citing work (Scholar or OpenAlex — never invented). */
   citedBy: number;
   year: number | null;
   /** Indexes into fieldShelf.papers: the pinned papers of this view it cites (1–4). */
@@ -166,13 +168,16 @@ export interface FieldShelfView {
   index: Map<string, number>;
 }
 
-type RawSquare = [number, number, number, number, number | null, number[]];
+type RawSquare = [number | string, number, number, number, number | null, number[]];
 type RawView = Omit<FieldShelfView, "lens" | "squares" | "index"> & { squares: RawSquare[] };
 interface RawData {
   meta: {
     asOf: string;
     schema?: string;
+    source?: string;
     encoding?: string;
+    encodingText?: string;
+    greyLitSquares?: number;
     homeTopicsLeadCount: number;
     homeTopicsLead: { id: string; name: string; subfield: string | null; field: string | null; domain: string | null }[];
     maxDistance: number;
@@ -199,9 +204,35 @@ export const fieldShelfMeta = raw.meta;
 export const fieldShelfPapers: FieldShelfPaper[] = raw.papers;
 export const fieldShelfThemes: FieldShelfTheme[] = raw.themes;
 
+/** True when Field & Shelf squares use Google Scholar ids (GS_…). */
+export function isScholarFieldShelf(): boolean {
+  const m = fieldShelfMeta as { source?: string; schema?: string };
+  return m.source?.includes("Scholar") === true || String(m.schema || "").includes("scholar");
+}
+
+/** Landing URL for a square: Scholar/result link from tooltip, else OpenAlex for W… ids. */
+export function workUrl(id: string, tip?: { url?: string | null; doi?: string | null } | null): string {
+  if (tip?.url) return tip.url;
+  if (tip?.doi) return doiUrl(tip.doi);
+  if (id.startsWith("W") && /^W\d+$/.test(id)) return openAlexUrl(id);
+  if (id.startsWith("GS_")) {
+    const rid = id.slice(3);
+    return `https://scholar.google.com/scholar?cluster=${encodeURIComponent(rid)}&hl=en`;
+  }
+  return openAlexUrl(id);
+}
+
+
 function decode(lens: ReachLens): FieldShelfView {
   const v = raw.views[lens];
-  const squares = v.squares.map(([n, x, y, citedBy, year, papers]) => ({ id: `W${n}`, x, y, citedBy, year, papers }));
+  const squares = v.squares.map(([n, x, y, citedBy, year, papers]) => ({
+    id: typeof n === "string" ? n : `W${n}`,
+    x,
+    y,
+    citedBy,
+    year,
+    papers,
+  }));
   return { ...v, lens, squares, index: new Map(squares.map((s, i) => [s.id, i])) };
 }
 
@@ -230,6 +261,11 @@ export interface FieldShelfTip {
   topic: { name: string; subfield: string | null; field: string | null; domain: string | null } | null;
   type: string | null;
   citedBy: number;
+  /** Landing URL from Scholar (or elsewhere); preferred over OpenAlex for GS_ ids. */
+  url: string | null;
+  /** Grey literature heuristic (IPCC, thesis, SSRN, …). */
+  greyLit: boolean;
+  greyLitReasons: string[];
   /** Lower-case, accent-free title + authors + venue + year, for search. */
   haystack: string;
 }
@@ -238,7 +274,25 @@ export type FieldShelfTips = Map<string, FieldShelfTip>;
 interface RawTips {
   venues: string[];
   topics: [string, string | null, string | null, string | null][];
-  works: Record<string, { t: string; a: string | null; n: number; s?: string; v: number; y: number | null; doi?: string; d: number | null; tp: number; ty: string | null; c: number }>;
+  works: Record<
+    string,
+    {
+      t: string;
+      a: string | null;
+      n: number;
+      s?: string;
+      v: number;
+      y: number | null;
+      doi?: string;
+      d: number | null;
+      tp: number;
+      ty: string | null;
+      c: number;
+      url?: string;
+      g?: boolean;
+      gr?: string[];
+    }
+  >;
 }
 
 /** Lower case, accents and punctuation folded, for matching typed queries (Latin, Greek, Cyrillic, CJK, Hangul kept). */
@@ -266,7 +320,10 @@ function decodeTips(json: RawTips): FieldShelfTips {
       topic: t ? { name: t[0], subfield: t[1], field: t[2], domain: t[3] } : null,
       type: w.ty,
       citedBy: w.c,
-      haystack: ` ${fold([w.t, w.a ?? "", w.s ?? "", venue ?? "", w.y ?? ""].join(" "))} `,
+      url: w.url ?? null,
+      greyLit: !!w.g,
+      greyLitReasons: w.gr ?? [],
+      haystack: ` ${fold([w.t, w.a ?? "", w.s ?? "", venue ?? "", w.y ?? "", ...(w.gr ?? [])].join(" "))} `,
     });
   }
   return out;
