@@ -77,11 +77,11 @@ export const PROJECTS: Project[] = [
     // imagePath: "/projects/nested-scaling-city-mass.jpg", // Run `npm run screenshots` to generate
   },
   {
-    title: "China City Mass Index Map",
+    title: "NimbleMap",
     description:
-      "Interactive map of city- and neighborhood-level material intensity for Chinese cities versus other upper-middle-income countries.",
-    url: "https://cmi.kangning-huang.com/",
-    tags: ["Urban Scaling", "Material Intensity", "Interactive Map"],
+      "Free desktop app that opens downloaded map data (Shapefile, GeoPackage, NetCDF, GeoTIFF, and more) as a map in seconds — no GIS training.",
+    url: "https://nimblemap.com/",
+    tags: ["Interactive Map", "Desktop App", "Open Data"],
     featured: true,
     category: "academic",
   },

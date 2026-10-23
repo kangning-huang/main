@@ -11,6 +11,11 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
     description:
       "城市人口增加时，建成质量怎样变化？这个工具展示3000多个城市的人口与建成质量之间的非线性标度关系，以及其中的嵌套规模经济。",
   },
+  "NimbleMap": {
+    title: "凌波微图",
+    description:
+      "免费桌面应用：把下载的地图数据（Shapefile、GeoPackage、NetCDF、GeoTIFF 等）几秒内打开成地图，无需 GIS 培训。",
+  },
   "Urban Expansion 2050": {
     title: "2050年全球城市扩张",
     description:
