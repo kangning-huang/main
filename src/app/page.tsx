@@ -67,6 +67,11 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
     description:
       "人口增加，建成质量会怎样变化？通过交互地图和数据浏览工具，查看全球 3000 多座城市的数据，了解城市与街区两级相互嵌套的规模经济。",
   },
+  "NimbleMap": {
+    title: "凌波微图",
+    description:
+      "免费桌面应用：把下载的地图数据（Shapefile、GeoPackage、NetCDF、GeoTIFF 等）几秒内打开成地图，无需 GIS 培训。",
+  },
   "Urban Expansion 2050": {
     title: "2050 年的城市扩张",
     description:
