@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
 import { LINKS, SITE, COAUTHOR_LINKS } from "@/lib/constants";
 import type { Publication } from "@/lib/constants";
-import { getScholarCitationCount, ERL_2019_TITLE } from "@/lib/publications";
+import {
+  getScholarCitationCount,
+  ERL_2019_TITLE,
+  isInPress,
+  isUnderReview,
+} from "@/lib/publications";
 
 const FALLBACK_SITE_URL = "https://kangning-huang.com";
 
@@ -116,6 +121,7 @@ export function personSchema() {
       LINKS.twitter,
       LINKS.substack,
       LINKS.nyuFaculty,
+      LINKS.orcid,
     ],
     url: canonicalUrl("/"),
   };
@@ -246,23 +252,55 @@ export function webPageSchema({
 }
 
 export function scholarlyArticleSchema(pub: Publication) {
+  const personId = `${canonicalUrl("/")}#person`;
+  const underReview = isUnderReview(pub);
+  const inPress = isInPress(pub);
+
   const article: Record<string, unknown> = {
     "@type": "ScholarlyArticle",
     headline: pub.title,
     author: pub.authors.split(", ").map((name) => {
       const trimmed = name.trim();
+      // Site owner — link every appearance to the Person entity
+      if (/^Kangning Huang$/i.test(trimmed) || /^Kangning \(Ken\) Huang$/i.test(trimmed)) {
+        return { "@id": personId };
+      }
       const person: Record<string, string> = { "@type": "Person", name: trimmed };
       const url = COAUTHOR_LINKS[trimmed];
       if (url) person.url = url;
       return person;
     }),
-    datePublished: `${pub.year}`,
-    isPartOf: pub.venue
-      ? { "@type": "Periodical", name: pub.venue }
-      : undefined,
   };
-  if (pub.doi) article.sameAs = `https://doi.org/${pub.doi}`;
+
+  // Do not assert a published journal date for submitted / under-review / in-press items.
+  if (underReview) {
+    article.creativeWorkStatus = /submitted/i.test(pub.venue)
+      ? "Submitted"
+      : "UnderReview";
+  } else if (inPress) {
+    article.creativeWorkStatus = "InPress";
+    // Keep the target periodical, but omit datePublished until the issue is out.
+    const venueName = pub.venue.replace(/\s*\(in press\).*$/i, "").replace(/\s*;.*$/, "").trim();
+    if (venueName) {
+      article.isPartOf = { "@type": "Periodical", name: venueName };
+    }
+  } else {
+    article.datePublished = `${pub.year}`;
+    if (pub.venue) {
+      article.isPartOf = { "@type": "Periodical", name: pub.venue };
+    }
+  }
+
+  const sameAs: string[] = [];
+  if (pub.doi) sameAs.push(`https://doi.org/${pub.doi}`);
+  if (pub.url && /^https?:\/\//.test(pub.url)) sameAs.push(pub.url);
+  if (pub.preprint && /^https?:\/\//.test(pub.preprint)) sameAs.push(pub.preprint);
+  if (sameAs.length === 1) article.sameAs = sameAs[0];
+  else if (sameAs.length > 1) article.sameAs = sameAs;
+
   if (pub.url) article.url = pub.url;
+  else if (pub.doi) article.url = `https://doi.org/${pub.doi}`;
+
   if (pub.keywords && pub.keywords.length > 0) article.keywords = pub.keywords.join(", ");
   if (pub.highlights && pub.highlights.length > 0) article.abstract = pub.highlights.join(". ");
   if (pub.citationCount > 0) {

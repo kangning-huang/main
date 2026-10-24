@@ -62,12 +62,26 @@ export default function TinkeringPage() {
           <h1 className="section-heading animate-fade-up">
             <T en="Tinkering" zh="小项目" />
           </h1>
-          <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
-            <T
-              en="Public-interest data tools I build to learn new methods."
-              zh="我做这些公益数据工具，也在制作过程中学习新方法。"
-            />
-          </p>
+          <div className="mt-4 max-w-3xl space-y-3 text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
+            <p>
+              <T
+                en="Public-interest data tools I build to learn new methods. They sit outside the CLUEs Lab papers, but they use the same habits: open data, a clear question, and a check anyone can re-run."
+                zh="这些是我为学习新方法而做的公益数据工具。它们不在 CLUEs 实验室论文主线上，但习惯一样：公开数据、问题说清楚、别人也能复核。"
+              />
+            </p>
+            <p>
+              <T
+                en="The first tool here is the RoboTaxi Safety Tracker. It reads NHTSA Standing General Order crash data for Tesla Cybercab / robotaxi reports and shows miles-per-incident style comparisons so the published safety claims have an independent public check. Numbers update when NHTSA releases new filings; methodology notes live on the tracker site."
+                zh="目前第一个工具是自动驾驶出租车安全追踪（RoboTaxi Safety Tracker）。它读取 NHTSA Standing General Order 中与特斯拉 Cybercab／robotaxi 相关的碰撞数据，用「平均多少英里发生一次事故」一类指标做对照，让公开安全声明有一份可独立查看的核对。NHTSA 有新申报时数字会更新；方法说明在追踪站点上。"
+              />
+            </p>
+            <p>
+              <T
+                en="I keep this page short on purpose: each card links out to the live tool. If you have a dataset that should be watched the same way, tell me what breaks."
+                zh="这个页面刻意写短：每张卡片链到线上工具。如果你有同样值得盯着的数据，告诉我哪里会坏。"
+              />
+            </p>
+          </div>
 
           <div className="mt-10 grid gap-5 md:grid-cols-2 animate-fade-up delay-2">
             {sideProjects.map((project) => {

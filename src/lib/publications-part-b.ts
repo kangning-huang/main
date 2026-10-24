@@ -128,6 +128,7 @@ export const PUBLICATIONS_B = [
     authors: "Yimin Chen, Xia Li, Kangning Huang, Ming Luo, Minyi Gao",
     venue: "Earth's Future",
     year: 2020,
+    doi: "10.1029/2020EF001491",
     citationCount: 77,
     isLeadAuthor: false,
     highlights: [
@@ -157,6 +158,7 @@ export const PUBLICATIONS_B = [
     authors: "Wenhao Xu, Gongqin Wang, Shaoda Liu, ... Kangning Huang, ... Xinghui Xia",
     venue: "Nature Sustainability",
     year: 2024,
+    doi: "10.1038/s41893-024-01358-y",
     citationCount: 69,
     isLeadAuthor: false,
     highlights: [
@@ -261,6 +263,7 @@ export const PUBLICATIONS_B = [
     authors: "Yangzi Che, Xuecao Li, Xiaoping Liu, Xiaocong Xu, Kangning Huang, ... Xia Li",
     venue: "The Innovation Geoscience",
     year: 2024,
+    doi: "10.59717/j.xinn-geo.2024.100069",
     citationCount: 10,
     isLeadAuthor: false,
     highlights: [
