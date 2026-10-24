@@ -26,7 +26,6 @@ export default function HeroHeadshot() {
           width={SIZE.w}
           height={SIZE.h}
           alt={ALT[language]}
-          fetchPriority="high"
           decoding="async"
           className="block h-24 w-24 rounded-full object-cover shadow-[0_12px_28px_-12px_rgba(0,0,0,0.75)] ring-1 ring-paper/25 sm:h-28 sm:w-28 md:h-32 md:w-32"
         />

@@ -19,6 +19,7 @@ export const LINKS = {
   substack: "https://kangninghuang.substack.com",
   nyuFaculty:
     "https://shanghai.nyu.edu/academics/faculty/directory/kangning-ken-huang",
+  orcid: "https://orcid.org/0000-0001-6877-9442",
   lab: "https://knhuang.weebly.com",
 };
 

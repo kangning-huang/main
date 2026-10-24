@@ -174,13 +174,27 @@ export default async function Home() {
       />
       {/* ── Hero ── */}
       <section className="relative overflow-hidden">
-        {/* Background image */}
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src="/hero-nyu-shanghai.jpg"
-          alt="NYU Shanghai campus in Pudong, Shanghai"
-          className="absolute inset-0 h-full w-full object-cover"
-        />
+        {/* Background image — LCP candidate: high fetch priority + modern formats */}
+        <picture className="absolute inset-0 block h-full w-full">
+          <source type="image/avif" srcSet="/hero-nyu-shanghai.avif" />
+          <source
+            type="image/webp"
+            srcSet="/hero-nyu-shanghai-640.webp 640w, /hero-nyu-shanghai-1024.webp 1024w"
+            sizes="100vw"
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/hero-nyu-shanghai.jpg"
+            srcSet="/hero-nyu-shanghai-640.jpg 640w, /hero-nyu-shanghai-1024.jpg 1024w"
+            sizes="100vw"
+            width={1024}
+            height={768}
+            alt="NYU Shanghai campus in Pudong, Shanghai"
+            fetchPriority="high"
+            decoding="async"
+            className="h-full w-full object-cover"
+          />
+        </picture>
         {/* Dark overlay for text legibility */}
         <div className="absolute inset-0 bg-ink/70" />
         {/* Subtle grain texture on top */}
@@ -429,6 +443,62 @@ export default async function Home() {
         </div>
       </section>
 
+
+      {/* ── FAQ (visible copy matching FAQPage JSON-LD) ── */}
+      <section className="border-t border-rule-faint py-16 md:py-20" aria-labelledby="faq-heading">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <h2 id="faq-heading" className="section-heading animate-fade-up">
+            <T en="FAQ" zh="常见问题" />
+          </h2>
+          <dl className="mt-8 max-w-3xl space-y-6 animate-fade-up delay-1">
+            <div>
+              <dt className="font-display text-lg text-ink">
+                <T en="What does Kangning Huang research?" zh="黄康宁的研究方向是什么？" />
+              </dt>
+              <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
+                <T
+                  en="Kangning (Ken) Huang researches how urbanization and climate change together affect vulnerability to environmental hazards. His work spans urban expansion modeling, urban heat island dynamics, climate adaptation trade-offs, and urban scaling laws. He develops global-scale urbanization scenarios to explore possible urban climate futures."
+                  zh="黄康宁研究城市化与气候变化如何共同影响人对环境灾害的脆弱性。工作涵盖城市扩张模拟、城市热岛、气候适应权衡与城市标度律，并用全球城市化情景探讨可能的城市气候未来。"
+                />
+              </dd>
+            </div>
+            <div>
+              <dt className="font-display text-lg text-ink">
+                <T en="Where does Kangning Huang work?" zh="黄康宁在哪里任职？" />
+              </dt>
+              <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
+                <T
+                  en="Kangning Huang is an Assistant Professor of Environmental Studies at NYU Shanghai, where he leads the CLUEs (CLimate and Urban Environments) Lab. He received his PhD from Yale University's School of the Environment and was a postdoctoral fellow at the National Center for Atmospheric Research (NCAR)."
+                  zh="黄康宁是上海纽约大学环境学助理教授，主持 CLUEs（CLimate and Urban Environments）实验室。他在耶鲁大学环境学院获博士学位，并曾在美国国家大气研究中心（NCAR）做博士后。"
+                />
+              </dd>
+            </div>
+            <div>
+              <dt className="font-display text-lg text-ink">
+                <T en="What is urban heat island research?" zh="什么是城市热岛研究？" />
+              </dt>
+              <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
+                <T
+                  en="Urban heat islands occur when cities become significantly warmer than surrounding rural areas due to built surfaces absorbing and re-emitting heat. Kangning Huang's research shows that global urban expansion through 2050 could intensify urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally), with nighttime heat stress persisting even when mitigation measures reduce daytime heat islands."
+                  zh="城市热岛指建成地表吸热再放热，使城市显著暖于周边乡村。黄康宁的研究表明，到 2050 年全球城市扩张可能使热岛平均增强 0.5–0.7 °C（局地可达约 3 °C）；即便白天热岛被缓解，夜间热压力仍可能持续。"
+                />
+              </dd>
+            </div>
+            <div>
+              <dt className="font-display text-lg text-ink">
+                <T en="How much will cities expand by 2050?" zh="到 2050 年城市会扩张多少？" />
+              </dt>
+              <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
+                <T
+                  en="According to research published in Environmental Research Letters (2019), global urban land area is projected to increase by 78%–171% (0.6–1.3 million km²) between 2015 and 2050, intensifying urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally) and increasing extreme heat risk for about half of the future urban population."
+                  zh="据 2019 年发表于 Environmental Research Letters 的研究，2015–2050 年全球城市用地预计增加 78%–171%（60–130 万 km²），热岛平均增强 0.5–0.7 °C（局地约 3 °C），约半数未来城市人口的极端高温风险会上升。"
+                />
+              </dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
       {/* ── Projects ── */}
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
@@ -481,6 +551,10 @@ export default async function Home() {
                   <img
                     src={featuredPosts[0].coverImage}
                     alt={featuredPosts[0].title}
+                    width={832}
+                    height={454}
+                    loading="lazy"
+                    decoding="async"
                     className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                   />
                 </div>

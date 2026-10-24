@@ -85,6 +85,7 @@ export const PUBLICATIONS_A = [
     authors: "Kangning Huang, Jiye Leng, Yong Xu, Xinwei Li, Meng Cai, Ran Wang, Chao Ren",
     venue: "Urban Climate",
     year: 2021,
+    doi: "10.1016/j.uclim.2021.100806",
     citationCount: 24,
     isLeadAuthor: true,
     highlights: [
@@ -100,6 +101,7 @@ export const PUBLICATIONS_A = [
     authors: "Kangning Huang",
     venue: "Nature Climate Change",
     year: 2022,
+    doi: "10.1038/s41558-022-01481-8",
     citationCount: 17,
     isLeadAuthor: true,
     highlights: [
@@ -219,6 +221,7 @@ export const PUBLICATIONS_A = [
     authors: "Yaolin Pei, Xiang Qi, Gen Li, Weiming Tang, Kangning Huang, Brian J. Hall, Bei Wu",
     venue: "Journal of Community Psychology",
     year: 2025,
+    doi: "10.1002/jcop.23177",
     citationCount: 2,
     isLeadAuthor: false,
     highlights: [
@@ -248,6 +251,7 @@ export const PUBLICATIONS_A = [
     authors: "Jiayong Liang, Maria Adele Carrai, Ammar A. Malik, Xi Gao, Xuyan Gao, Lihan Feng, Kangning Huang",
     venue: "Discover Environment",
     year: 2024,
+    doi: "10.1007/s44274-024-00148-9",
     citationCount: 1,
     isLeadAuthor: true,
     highlights: [
@@ -263,6 +267,7 @@ export const PUBLICATIONS_A = [
     authors: "Chenxi Hu, Chi-Yung Tam, Xinwei Li, Kangning Huang, Chao Ren, Kwun Yip Fung, Ziqian Wang",
     venue: "Urban Climate",
     year: 2023,
+    doi: "10.1016/j.uclim.2022.101389",
     citationCount: 21,
     isLeadAuthor: false,
     highlights: [
@@ -277,6 +282,7 @@ export const PUBLICATIONS_A = [
     authors: "Pak Shing Yeung, Jimmy Chi-Hung Fung, Chao Ren, Yong Xu, Kangning Huang, Jiye Leng, Michael Mau-Fong Wong",
     venue: "Atmosphere",
     year: 2020,
+    doi: "10.3390/atmos11070771",
     citationCount: 26,
     isLeadAuthor: false,
     highlights: [
