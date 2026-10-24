@@ -158,7 +158,7 @@ async function main() {
       runReachScholarPrototype(citationData);
       // Re-save JSON so the embedded prototype is committed by the workflow.
       writeFileSync(outputPath, JSON.stringify(citationData, null, 2));
-      console.log(`Re-saved citation data with reachScholarPrototype: ${outputPath}`);
+      console.log(`Re-saved citation data with Reach Scholar embed: ${outputPath}`);
     } catch (err) {
       console.warn('Reach citing prototype failed (non-fatal):', err.message || err);
       preserveExistingReachPrototype(citationData);
@@ -322,7 +322,12 @@ function preserveExistingReachPrototype(citationData) {
 }
 
 function runReachScholarPrototype(citationData) {
-  console.log('\n── Reach Scholar citing prototype ──');
+  // Branch reach/google-scholar-full: FULL citing fetch for all dois.json papers.
+  // Live Field & Shelf on main stays OpenAlex until square coverage ≥ ~3217.
+  // reach/google-scholar-full branch: always run FULL citing (all 27 shelf papers).
+  // Do not merge this branch's fetch-scholar.mjs to main until cutover is approved.
+  const FULL = true;
+  console.log(FULL ? '\n── Reach Scholar citing FULL (all shelf papers) ──' : '\n── Reach Scholar citing prototype ──');
   const scriptPath = join(__dirname, 'scholar-reach', 'fetch-citing.mjs');
   if (!existsSync(scriptPath)) {
     console.warn('scripts/scholar-reach/fetch-citing.mjs missing — skipping citing prototype.');
@@ -330,11 +335,12 @@ function runReachScholarPrototype(citationData) {
     return;
   }
 
-  const result = spawnSync(process.execPath, [scriptPath, '--prototype'], {
+  const args = FULL ? [scriptPath] : [scriptPath, '--prototype'];
+  const result = spawnSync(process.execPath, args, {
     cwd: join(__dirname, '..'),
     env: process.env,
     encoding: 'utf-8',
-    maxBuffer: 20 * 1024 * 1024,
+    maxBuffer: 200 * 1024 * 1024,
   });
 
   if (result.stdout) process.stdout.write(result.stdout);
@@ -367,13 +373,18 @@ function runReachScholarPrototype(citationData) {
       Array.isArray(sample.greyLitSample) && sample.greyLitSample.length
         ? sample.greyLitSample
         : squares.filter((s) => s.detectedGreyLit);
-    citationData.reachScholarPrototype = {
-      $comment:
-        'Scholar-backed Reach citing prototype embedded for GH Actions (workflow only commits this JSON). citedBy values are Google Scholar counts via SerpAPI — never invented. Deep grey-lit sweep via --prototype page budgets.',
+    const embedKey = FULL ? 'reachScholarFull' : 'reachScholarPrototype';
+    // For full runs, keep squares in data/scholar-reach/ (committed separately);
+    // embed summary + papers + greyLitSample here to avoid multi‑MB scholar-citations.json.
+    citationData[embedKey] = {
+      $comment: FULL
+        ? 'Scholar-backed Reach citing FULL fetch (all dois.json shelf papers). citedBy = Google Scholar via SerpAPI — never invented. DO NOT merge to live Field & Shelf until squareCount ≥ OpenAlex (~3217). Full squares live in data/scholar-reach/sample-field-shelf.json.'
+        : 'Scholar-backed Reach citing prototype embedded for GH Actions. citedBy = Google Scholar via SerpAPI — never invented.',
       asOf: sample.meta?.asOf || new Date().toISOString().slice(0, 10),
       source: sample.meta?.source || 'Google Scholar (SerpAPI)',
       encoding: sample.meta?.encoding || 'citing-work-scholar-cited-by',
-      prototype: true,
+      prototype: !FULL,
+      full: FULL,
       meta: {
         ...(sample.meta || {}),
         fetchStatus: meta.status || 'ok',
@@ -383,14 +394,18 @@ function runReachScholarPrototype(citationData) {
         greyLitSquares: greyLit.length,
         papers: (sample.papers || []).length,
         fetchStats: meta.fetchStats || null,
+        openAlexBenchmarkSquares: 3217,
+        coverageVsOpenAlex: squares.length / 3217,
       },
       papers: sample.papers || [],
-      // Full square list for inspection (deep prototype may be hundreds of citers).
+      // Full square list committed via scholar-citations.json (workflow only
+      // commits this path on main's update-scholar.yml).
       squares,
       greyLitSample: greyLit,
+      squaresPath: 'data/scholar-reach/sample-field-shelf.json',
     };
     console.log(
-      `Embedded reachScholarPrototype: ${(sample.papers || []).length} papers, ${squares.length} squares, ${greyLit.length} grey-lit.`
+      `Embedded ${embedKey}: ${(sample.papers || []).length} papers, ${squares.length} squares, ${greyLit.length} grey-lit.`
     );
   } catch (err) {
     console.warn('Failed to embed reachScholarPrototype:', err.message);

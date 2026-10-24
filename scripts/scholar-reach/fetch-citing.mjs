@@ -38,7 +38,7 @@ const PAGE_SIZE = 20;
 const PROTOTYPE_MAX_PAGES_HIGH = 30; // grey queries + year slices for ≥400-cite papers
 const PROTOTYPE_MAX_PAGES_MID = 20; // grey + years
 const PROTOTYPE_MAX_PAGES_LOW = 12; // grey-first for lower-cite papers
-const FULL_MAX_PAGES = 50;
+const FULL_MAX_PAGES = 60;
 const SLEEP_MS = 1200;
 
 const PROTOTYPE_DOIS = [
@@ -578,7 +578,7 @@ async function main() {
       const { citers, pagesFetched, stoppedReason, sliceLog } = await fetchCitingPages(
         citesId,
         maxPages,
-        { paperYear: m.year || m.scholarMatch?.year || null, deep: PROTOTYPE }
+        { paperYear: m.year || m.scholarMatch?.year || null, deep: true }
       );
       citingByPaper[citesId] = citers;
       const greyN = citers.filter((c) => c.detectedGreyLit).length;
