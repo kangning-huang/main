@@ -1,0 +1,119 @@
+{
+ "heat": {
+  "rows": 988,
+  "fuaExact": 930,
+  "fuaAmbiguous": 58,
+  "fuaUnmatched": [],
+  "noAtlasCentre": 0,
+  "centres": 1362
+ },
+ "cooling": {
+  "centres": 3,
+  "cities": [
+   "Beijing",
+   "Guangzhou",
+   "Shanghai"
+  ]
+ },
+ "flood": {
+  "rows": 614,
+  "uniqueFua": 565,
+  "skippedNoDmg": 15,
+  "uniqueUcIds": 1307,
+  "centres": 867,
+  "exact": 862,
+  "flagged": 5,
+  "ucNotInAtlas": 440,
+  "examples": {
+   "Shanghai": {
+    "quality": "exact",
+    "fua": {
+     "id": 10097,
+     "name": "Shanghai",
+     "centres": 7
+    },
+    "dmgPct": 7.36,
+    "dmgProtPct": 0.98,
+    "protYears": 179,
+    "heightM": 7.7
+   },
+   "Beijing": {
+    "quality": "exact",
+    "fua": {
+     "id": 7704,
+     "name": "Beijing",
+     "centres": 6
+    },
+    "dmgPct": 4.76,
+    "dmgProtPct": 1.69,
+    "protYears": 20,
+    "heightM": 6.8
+   },
+   "New York": {
+    "quality": "exact",
+    "fua": {
+     "id": 7244,
+     "name": "New York",
+     "centres": 6
+    },
+    "dmgPct": 5.8,
+    "dmgProtPct": 0.11,
+    "protYears": 500,
+    "heightM": 5.8
+   },
+   "Jakarta": {
+    "quality": "flagged",
+    "fua": {
+     "id": 4897,
+     "name": "Jakarta",
+     "centres": 1
+    },
+    "dmgPct": 4.29,
+    "dmgProtPct": 0.63,
+    "protYears": 100,
+    "heightM": 4.6
+   },
+   "Wuhan": null
+  }
+ },
+ "expansion": {
+  "centres": 3947,
+  "exact": 3482,
+  "flagged": 465,
+  "source": "Huang_2019 urban_areas.csv + urb_cluster.gpkg spatial join"
+ },
+ "jgr": {
+  "centres": 1527,
+  "source": "del_wbgt_ssp5_night_proj.tif (+ cool-roof) sampled at UCDB centroids; paper Data Availability figshare",
+  "examples": {
+   "Shanghai": {
+    "quality": "exact",
+    "dNightC": 0.7,
+    "dNightCoolRoofC": -0.01
+   },
+   "Beijing": {
+    "quality": "exact",
+    "dNightC": 2.08,
+    "dNightCoolRoofC": 0.94
+   },
+   "Lagos": {
+    "quality": "exact",
+    "dNightC": 0.5,
+    "dNightCoolRoofC": 0.15
+   },
+   "Port Harcourt": {
+    "quality": "exact",
+    "dNightC": 0.81,
+    "dNightCoolRoofC": 0.47
+   }
+  }
+ },
+ "uhs": {
+  "centres": 0,
+  "mode": "link-only",
+  "paper": "Zhang et al., Toward Cooler Cities by Larger Homogeneous Functional Clusters, PNAS 2026",
+  "doi": "10.1073/pnas.2617717123",
+  "dataUrl": "https://figshare.com/articles/dataset/UHS_for_all_101_cities/33027635",
+  "note": "Figshare UHS_All_Continents.zip (~513 MB) not joined to UCDB; city card exposes DOI + dataset links only."
+ }
+}

@@ -12,6 +12,7 @@ import {
   PAPER_COUNT_COLORS,
   ATLAS_DOT_GREY,
   colorForCount,
+  colorForUhs,
 } from "@/lib/atlas-colors";
 import T from "@/components/T";
 
@@ -180,6 +181,22 @@ export default function MapCanvas({
     hitRef.current = [];
     let drawn = 0;
 
+    // Quantile breaks for Cooler Cities median UHS (5 classes across the 101).
+    let uhsBreaks: number[] = [];
+    if (layerFilter === "uhs") {
+      const vals = pts
+        .map((p) => p.uhs)
+        .filter((v): v is number => v != null && Number.isFinite(v))
+        .sort((a, b) => a - b);
+      if (vals.length >= 5) {
+        uhsBreaks = [0.2, 0.4, 0.6, 0.8].map(
+          (q) => vals[Math.min(vals.length - 1, Math.floor(q * vals.length))],
+        );
+      } else if (vals.length > 0) {
+        uhsBreaks = [vals[0]];
+      }
+    }
+
     const drawOne = (p: AtlasPoint, emphasize: boolean) => {
       const xy = project(p.lon, p.lat);
       if (!xy) return;
@@ -188,9 +205,13 @@ export default function MapCanvas({
 
       const n = paperCount(p);
       const passes = !layerFilter || hasLayer(p, layerFilter);
-      const r = emphasize ? DOT_R_SEL : DOT_R;
+      const r = emphasize ? DOT_R_SEL : (layerFilter === "uhs" && passes ? DOT_R + 1.4 : DOT_R);
 
-      const fill = passes ? colorForCount(n) : GREY;
+      const fill = !passes
+        ? GREY
+        : layerFilter === "uhs"
+          ? colorForUhs(p.uhs, uhsBreaks)
+          : colorForCount(n);
       if (emphasize) {
         // Outer cream halo so the pick reads clearly at city zoom.
         ctx.beginPath();
@@ -205,11 +226,17 @@ export default function MapCanvas({
       ctx.beginPath();
       ctx.arc(x, y, r, 0, Math.PI * 2);
       ctx.fillStyle = fill;
-      ctx.globalAlpha = emphasize ? 1 : passes && n > 0 ? 0.92 : 0.4;
+      ctx.globalAlpha = emphasize ? 1 : passes ? (layerFilter === "uhs" ? 0.95 : n > 0 ? 0.92 : 0.4) : 0.28;
       ctx.fill();
       ctx.globalAlpha = 1;
-      ctx.lineWidth = emphasize ? 2.75 : 0.85;
-      ctx.strokeStyle = emphasize ? selStroke : stroke;
+      if (layerFilter === "uhs" && passes && !emphasize) {
+        // Ring so the 101 study cities read at world zoom.
+        ctx.lineWidth = 1.6;
+        ctx.strokeStyle = dark ? "rgba(255,252,247,0.75)" : "rgba(40,28,20,0.55)";
+      } else {
+        ctx.lineWidth = emphasize ? 2.75 : 0.85;
+        ctx.strokeStyle = emphasize ? selStroke : stroke;
+      }
       ctx.stroke();
 
       hitRef.current.push({ p, x, y });

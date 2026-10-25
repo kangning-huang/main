@@ -20,3 +20,20 @@ export function colorForCount(n: number): string {
   if (n >= 6) return PAPER_COUNT_COLORS[6];
   return PAPER_COUNT_COLORS[n];
 }
+
+/** Sequential median-UHS fill for the Cooler Cities · 101 filter (quantile classes). */
+export const UHS_COLORS: string[] = [
+  "rgb(237, 224, 212)", // smallest blocks
+  "rgb(196, 181, 162)",
+  "rgb(140, 190, 188)",
+  "rgb(58, 155, 152)",
+  "rgb(8, 70, 78)", // largest blocks
+];
+
+/** Map a median UHS (m) into a 5-class color using fixed breaks (metres). */
+export function colorForUhs(m: number | null | undefined, breaks: number[]): string {
+  if (m == null || !Number.isFinite(m)) return ATLAS_DOT_GREY;
+  let i = 0;
+  while (i < breaks.length && m >= breaks[i]) i += 1;
+  return UHS_COLORS[Math.min(i, UHS_COLORS.length - 1)];
+}

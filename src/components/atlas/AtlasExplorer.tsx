@@ -34,6 +34,7 @@ const FILTERS: { key: LayerKey | null; en: string; zh: string }[] = [
   { key: "flood", en: "Flood damage", zh: "洪涝损失" },
   { key: "expansion", en: "Expansion 2050", zh: "2050 年扩张" },
   { key: "jgr", en: "Night heat stress", zh: "夜间热应激" },
+  { key: "uhs", en: "Cooler Cities · 101", zh: "更凉爽城市 · 101" },
 ];
 
 const SUGGESTED = ["lagos", "shanghai", "new-york", "jakarta", "nairobi"];
@@ -159,6 +160,18 @@ export default function AtlasExplorer() {
             }}
           />
           <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-ink-muted">
+            {filter === "uhs" ? (
+              <>
+                <span className="text-ink-faint">
+                  <T en="Median block scale (UHS):" zh="中位同质功能区尺度（UHS）：" />
+                </span>
+                <Swatch color="rgb(237, 224, 212)" en="smaller" zh="较小" />
+                <Swatch color="rgb(140, 190, 188)" en="mid" zh="中等" />
+                <Swatch color="rgb(8, 70, 78)" en="larger" zh="较大" />
+                <Swatch color={PAPER_COUNT_COLORS[0]} en="Not in 101" zh="不在 101 城样本" />
+              </>
+            ) : (
+              <>
             <span className="text-ink-faint">
               <T en="Papers covering city:" zh="覆盖这座城市的论文" />
             </span>
@@ -167,8 +180,10 @@ export default function AtlasExplorer() {
             <Swatch color={PAPER_COUNT_COLORS[3]} en="3" zh="3" />
             <Swatch color={PAPER_COUNT_COLORS[4]} en="4" zh="4" />
             <Swatch color={PAPER_COUNT_COLORS[5]} en="5" zh="5" />
-            <Swatch color={PAPER_COUNT_COLORS[6]} en="6" zh="6" />
+            <Swatch color={PAPER_COUNT_COLORS[6]} en="6+" zh="6+" />
             <Swatch color={PAPER_COUNT_COLORS[0]} en="None" zh="无" />
+              </>
+            )}
             {meta && (
               <span className="ml-auto">
                 <T
