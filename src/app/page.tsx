@@ -22,26 +22,26 @@ const HOME_DESCRIPTION =
 // Each finding is taken from the linked paper's highlights in publications-part-a.ts.
 const FINDINGS = [
   {
-    en: "Double a city's population and its built mass grows only about 87%; bigger cities need less material per person.",
-    zh: "城市人口翻倍，建成质量只增加约 87%；城市越大，摊到每个人头上所需的材料就越少。",
+    en: "At the neighborhood scale, doubling population density raises built mass by only about 68% — economies of scale intensify inside the city.",
+    zh: "在街区尺度上，人口密度翻倍，建成质量只增加约 68%；规模经济在城市内部更强。",
     venue: "Nature Cities",
     year: "2026",
     // In press — link to the on-site entry, not a DOI
     href: `/publications#${publicationSlug("Nested economies of scale in global city mass")}`,
   },
   {
-    en: "By 2050, urban expansion alone could warm cities 0.5–0.7 °C on average, locally rivaling greenhouse-gas warming.",
-    zh: "到 2050 年，单是城市扩张就可能让城市平均升温 0.5–0.7 °C。在一些地方，这一幅度可与温室气体带来的增温相当。",
-    venue: "Environmental Research Letters",
-    year: "2019",
-    href: "https://doi.org/10.1088/1748-9326/ab4b71",
+    en: "Every extra 100 m of homogeneous building-block scale cuts daytime surface heat islands by about 0.16 °C (~5%).",
+    zh: "功能均质建筑街区的尺度每增加 100 m，白天地表热岛强度约降低 0.16 °C（约 5%）。",
+    venue: "PNAS",
+    year: "2026",
+    href: "https://doi.org/10.1073/pnas.2617717123",
   },
   {
-    en: "Cool roofs can't fix the night: about half the added nighttime heat stress from expansion persists.",
-    zh: "用上冷屋顶后，城市扩张新增的夜间热压力仍有约一半无法消除。",
-    venue: "JGR: Atmospheres",
-    year: "2021",
-    href: "https://doi.org/10.1029/2020JD033831",
+    en: "Across the 1,000 largest cities, densifying places see sharper rises in who is exposed to extreme surface heat than sprawling ones.",
+    zh: "在全球 1000 座最大城市中，正在加密的城市，人口加权的极端地表热暴露上升得比蔓延扩张的城市更明显。",
+    venue: "Scientific Reports",
+    year: "2025",
+    href: "https://doi.org/10.1038/s41598-025-96045-z",
   },
   {
     en: "Counting building height and flood defenses shifts global flood damage toward Southeast Asia, 42% of the total versus 15%.",
@@ -127,9 +127,9 @@ export default async function Home() {
   const selectedTitles = [
     "Nested economies of scale in global city mass",
     "Toward Cooler Cities by Larger Homogeneous Functional Clusters",
+    "Declining urban density attenuates rising population exposure to surface heat extremes",
     "Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution",
-    "Projecting global urban land expansion and heat island intensification through 2050",
-    "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
+    "Unveiling the causal link between informal settlement demolition and urban cooling",
   ];
   const titleSet = new Set(selectedTitles.map((t) => t.toLowerCase()));
   const featuredPubs = allPublications
@@ -351,12 +351,12 @@ export default async function Home() {
             <T
               en={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
-                  We have shown that larger cities need less built mass per person (<i>Nature Cities</i>, 2026), that urban expansion can locally rival greenhouse-gas warming by 2050 (<i>ERL</i>, 2019), and that taller, better-protected cities change where flood damage lands (<i>Scientific Reports</i>, 2026).
+                  We have shown that denser neighborhoods need disproportionately less built mass (<i>Nature Cities</i>, 2026), that larger homogeneous building clusters cool daytime heat islands (<i>PNAS</i>, 2026), and that taller, better-protected cities change where flood damage lands (<i>Scientific Reports</i>, 2026).
                 </p>
               }
               zh={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
-                  我们的研究表明：城市越大，人均建成质量越少（<i>Nature Cities</i>，2026）；到2050年，城市扩张带来的局地增温可与温室气体增温相当（<i>ERL</i>，2019）；更高、防护更完善的城市会改变洪灾损失的空间分布（<i>Scientific Reports</i>，2026）。
+                  我们的研究表明：更密的街区所需建成质量不成比例地更少（<i>Nature Cities</i>，2026）；更大的均质功能建筑街区能降低白天热岛（<i>PNAS</i>，2026）；更高、防护更完善的城市会改变洪灾损失的空间分布（<i>Scientific Reports</i>，2026）。
                 </p>
               }
             />
