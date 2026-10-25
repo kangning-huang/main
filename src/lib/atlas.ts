@@ -10,18 +10,19 @@ export type AtlasPoint = {
   lon: number;
   pop15: number;
   coverage: CoverageCode;
+  /** Built mass per person (t/person) from Nature Cities nested mass; null if no mass layer. */
   massPerCapT: number | null;
   slug: string;
   /** Population-weighted daytime SUHI-extreme trend, °C per decade (Sci Rep 2025). */
   heatDayP: number | null;
-  /** 1 if covered by the informal-settlement cooling study (npj 2026). */
-  cool: 0 | 1;
-  /** 1 if covered by the height-aware flood study (Sci Rep 2026). */
-  flood: 0 | 1;
-  /** 1 if covered by ERL 2019 urban expansion (Huang_2019 clump). */
-  expansion: 0 | 1;
-  /** 1 if covered by JGR 2021 nighttime ΔWBGT sample. */
-  jgr: 0 | 1;
+  /** Site cooling DID effect (K) from npj 2026 informal-settlement demolition; null if not covered. */
+  coolK: number | null;
+  /** Height-aware flood damage share without protection (% of footprints); null if not covered. */
+  floodDmg: number | null;
+  /** Projected urban land by 2050 under SSP5 (km², ERL 2019); null if not covered. */
+  expansionSsp5: number | null;
+  /** Nighttime ΔWBGT (°C) from urban expansion to 2050 (JGR 2021); null if not covered. */
+  jgrNight: number | null;
   /** Median UHS (m) at 500 m aggregation for PNAS Cooler Cities 101-city sample; null if not covered. */
   uhs: number | null;
 };
@@ -31,24 +32,35 @@ export type LayerKey = "mass" | "heat" | "cooling" | "flood" | "expansion" | "jg
 /** How many mapped studies have a result for this city. */
 export function paperCount(p: AtlasPoint): number {
   let n = 0;
-  if (p.coverage !== 0 && p.massPerCapT != null) n += 1;
+  if (p.massPerCapT != null) n += 1;
   if (p.heatDayP != null) n += 1;
-  if (p.cool === 1) n += 1;
-  if (p.flood === 1) n += 1;
-  if (p.expansion === 1) n += 1;
-  if (p.jgr === 1) n += 1;
+  if (p.coolK != null) n += 1;
+  if (p.floodDmg != null) n += 1;
+  if (p.expansionSsp5 != null) n += 1;
+  if (p.jgrNight != null) n += 1;
   if (p.uhs != null) n += 1;
   return n;
 }
 
 export function hasLayer(p: AtlasPoint, layer: LayerKey): boolean {
-  if (layer === "mass") return p.coverage !== 0 && p.massPerCapT != null;
+  if (layer === "mass") return p.massPerCapT != null;
   if (layer === "heat") return p.heatDayP != null;
-  if (layer === "cooling") return p.cool === 1;
-  if (layer === "flood") return p.flood === 1;
-  if (layer === "expansion") return p.expansion === 1;
+  if (layer === "cooling") return p.coolK != null;
+  if (layer === "flood") return p.floodDmg != null;
+  if (layer === "expansion") return p.expansionSsp5 != null;
   if (layer === "uhs") return p.uhs != null;
-  return p.jgr === 1;
+  return p.jgrNight != null;
+}
+
+/** Continuous metric used to choropleth a study filter (null = uncovered). */
+export function layerValue(p: AtlasPoint, layer: LayerKey): number | null {
+  if (layer === "mass") return p.massPerCapT;
+  if (layer === "heat") return p.heatDayP;
+  if (layer === "cooling") return p.coolK;
+  if (layer === "flood") return p.floodDmg;
+  if (layer === "expansion") return p.expansionSsp5;
+  if (layer === "uhs") return p.uhs;
+  return p.jgrNight;
 }
 
 export type AtlasPointsFile = {
@@ -203,6 +215,13 @@ export const POINT_FIELDS = [
   "slug",
 ] as const;
 
+
+function numOrNull(v: string | number | null | undefined): number | null {
+  if (v === null || v === undefined || v === "") return null;
+  const n = Number(v);
+  return Number.isFinite(n) ? n : null;
+}
+
 export function parsePoints(file: AtlasPointsFile): AtlasPoint[] {
   return file.rows.map((row) => {
     const obj: Record<string, string | number | null> = {};
@@ -217,21 +236,14 @@ export function parsePoints(file: AtlasPointsFile): AtlasPoint[] {
       lon: Number(obj.lon),
       pop15: Number(obj.pop15),
       coverage: Number(obj.coverage) as CoverageCode,
-      massPerCapT:
-        obj.massPerCapT === null || obj.massPerCapT === undefined
-          ? null
-          : Number(obj.massPerCapT),
+      massPerCapT: numOrNull(obj.massPerCapT),
       slug: String(obj.slug),
-      heatDayP:
-        obj.heatDayP === null || obj.heatDayP === undefined ? null : Number(obj.heatDayP),
-      cool: Number(obj.cool ?? 0) === 1 ? 1 : 0,
-      flood: Number(obj.flood ?? 0) === 1 ? 1 : 0,
-      expansion: Number(obj.expansion ?? 0) === 1 ? 1 : 0,
-      jgr: Number(obj.jgr ?? 0) === 1 ? 1 : 0,
-      uhs:
-        obj.uhs === null || obj.uhs === undefined || obj.uhs === ""
-          ? null
-          : Number(obj.uhs),
+      heatDayP: numOrNull(obj.heatDayP),
+      coolK: numOrNull(obj.coolK),
+      floodDmg: numOrNull(obj.floodDmg),
+      expansionSsp5: numOrNull(obj.expansionSsp5),
+      jgrNight: numOrNull(obj.jgrNight),
+      uhs: numOrNull(obj.uhs),
     };
   });
 }

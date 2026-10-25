@@ -5,6 +5,7 @@ import type { Map as MapLibreMap } from "maplibre-gl";
 import {
   paperCount,
   hasLayer,
+  layerValue,
   type AtlasPoint,
   type LayerKey,
 } from "@/lib/atlas";
@@ -12,7 +13,11 @@ import {
   PAPER_COUNT_COLORS,
   ATLAS_DOT_GREY,
   colorForCount,
-  colorForUhs,
+  colorFromBreaks,
+  quantileBreaks,
+  SEQ_TEAL,
+  SEQ_COOLING,
+  DIV_HEAT,
 } from "@/lib/atlas-colors";
 import T from "@/components/T";
 
@@ -28,6 +33,14 @@ type Props = {
   /** When set, only cities covered by this study are drawn in color; others stay faint grey. */
   filter?: LayerKey | null;
 };
+
+
+/** Palette + direction for each study choropleth. */
+function paletteForLayer(layer: LayerKey): string[] {
+  if (layer === "cooling") return SEQ_COOLING;
+  if (layer === "heat" || layer === "jgr") return DIV_HEAT;
+  return SEQ_TEAL; // mass, flood, expansion, uhs
+}
 
 const GREY = ATLAS_DOT_GREY;
 const DOT_R = 3.2;
@@ -181,20 +194,15 @@ export default function MapCanvas({
     hitRef.current = [];
     let drawn = 0;
 
-    // Quantile breaks for Cooler Cities median UHS (5 classes across the 101).
-    let uhsBreaks: number[] = [];
-    if (layerFilter === "uhs") {
+    // Quantile breaks for the active study filter (5 classes among covered cities).
+    let metricBreaks: number[] = [];
+    let metricColors: string[] = SEQ_TEAL;
+    if (layerFilter) {
       const vals = pts
-        .map((p) => p.uhs)
-        .filter((v): v is number => v != null && Number.isFinite(v))
-        .sort((a, b) => a - b);
-      if (vals.length >= 5) {
-        uhsBreaks = [0.2, 0.4, 0.6, 0.8].map(
-          (q) => vals[Math.min(vals.length - 1, Math.floor(q * vals.length))],
-        );
-      } else if (vals.length > 0) {
-        uhsBreaks = [vals[0]];
-      }
+        .map((p) => layerValue(p, layerFilter))
+        .filter((v): v is number => v != null && Number.isFinite(v));
+      metricBreaks = quantileBreaks(vals, 5);
+      metricColors = paletteForLayer(layerFilter);
     }
 
     const drawOne = (p: AtlasPoint, emphasize: boolean) => {
@@ -205,12 +213,13 @@ export default function MapCanvas({
 
       const n = paperCount(p);
       const passes = !layerFilter || hasLayer(p, layerFilter);
-      const r = emphasize ? DOT_R_SEL : (layerFilter === "uhs" && passes ? DOT_R + 1.4 : DOT_R);
+      const studyMode = layerFilter != null;
+      const r = emphasize ? DOT_R_SEL : studyMode && passes ? DOT_R + 1.4 : DOT_R;
 
       const fill = !passes
         ? GREY
-        : layerFilter === "uhs"
-          ? colorForUhs(p.uhs, uhsBreaks)
+        : studyMode
+          ? colorFromBreaks(layerValue(p, layerFilter), metricBreaks, metricColors)
           : colorForCount(n);
       if (emphasize) {
         // Outer cream halo so the pick reads clearly at city zoom.
@@ -226,11 +235,19 @@ export default function MapCanvas({
       ctx.beginPath();
       ctx.arc(x, y, r, 0, Math.PI * 2);
       ctx.fillStyle = fill;
-      ctx.globalAlpha = emphasize ? 1 : passes ? (layerFilter === "uhs" ? 0.95 : n > 0 ? 0.92 : 0.4) : 0.28;
+      ctx.globalAlpha = emphasize
+        ? 1
+        : passes
+          ? studyMode
+            ? 0.95
+            : n > 0
+              ? 0.92
+              : 0.4
+          : 0.28;
       ctx.fill();
       ctx.globalAlpha = 1;
-      if (layerFilter === "uhs" && passes && !emphasize) {
-        // Ring so the 101 study cities read at world zoom.
+      if (studyMode && passes && !emphasize) {
+        // Ring so study cities read at world zoom.
         ctx.lineWidth = 1.6;
         ctx.strokeStyle = dark ? "rgba(255,252,247,0.75)" : "rgba(40,28,20,0.55)";
       } else {
@@ -571,7 +588,7 @@ export default function MapCanvas({
     <div
       ref={wrapRef}
       role="img"
-      aria-label="World map of cities colored by how many papers cover each city"
+      aria-label="World map of cities colored by paper coverage or by each study's city-level result"
       className="relative isolate z-0 h-[min(62vw,520px)] min-h-[360px] w-full overflow-hidden rounded-lg border border-rule bg-paper-warm [&_.maplibregl-ctrl-attrib]:text-[10px] [&_.maplibregl-ctrl-attrib]:leading-tight"
     >
       {/* z-0 + isolate: contain WebGL compositing so the overlay can sit above */}

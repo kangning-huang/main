@@ -9,12 +9,19 @@ import {
   fetchAtlasPoints,
   parsePoints,
   paperCount,
+  hasLayer,
   type AtlasPoint,
   type AtlasPointsFile,
   type CityDetail,
   type LayerKey,
 } from "@/lib/atlas";
-import { PAPER_COUNT_COLORS } from "@/lib/atlas-colors";
+import {
+  PAPER_COUNT_COLORS,
+  SEQ_TEAL,
+  SEQ_COOLING,
+  DIV_HEAT,
+  ATLAS_DOT_GREY,
+} from "@/lib/atlas-colors";
 
 /** MapLibre stays in its own chunk; explorer + points.json are not blocked on it. */
 const MapCanvas = dynamic(() => import("./MapCanvas"), {
@@ -36,6 +43,94 @@ const FILTERS: { key: LayerKey | null; en: string; zh: string }[] = [
   { key: "jgr", en: "Night heat stress", zh: "夜间热应激" },
   { key: "uhs", en: "Cooler Cities · 101", zh: "更凉爽城市 · 101" },
 ];
+
+type LegendSpec = {
+  titleEn: string;
+  titleZh: string;
+  swatches: { color: string; en: string; zh: string }[];
+  notEn: string;
+  notZh: string;
+};
+
+const LAYER_LEGENDS: Record<LayerKey, LegendSpec> = {
+  mass: {
+    titleEn: "Mass per person",
+    titleZh: "人均建成质量",
+    swatches: [
+      { color: SEQ_TEAL[0], en: "lower", zh: "较低" },
+      { color: SEQ_TEAL[2], en: "mid", zh: "中等" },
+      { color: SEQ_TEAL[4], en: "higher", zh: "较高" },
+    ],
+    notEn: "Not in study",
+    notZh: "不在研究中",
+  },
+  heat: {
+    titleEn: "Daytime heat-island trend (°C/decade)",
+    titleZh: "白天热岛趋势（°C/十年）",
+    swatches: [
+      { color: DIV_HEAT[0], en: "cooling", zh: "降温" },
+      { color: DIV_HEAT[2], en: "near 0", zh: "接近 0" },
+      { color: DIV_HEAT[4], en: "warming", zh: "升温" },
+    ],
+    notEn: "Not in study",
+    notZh: "不在研究中",
+  },
+  cooling: {
+    titleEn: "Site cooling (DID)",
+    titleZh: "地块降温（DID）",
+    swatches: [
+      { color: SEQ_COOLING[0], en: "stronger", zh: "更强" },
+      { color: SEQ_COOLING[2], en: "mid", zh: "中等" },
+      { color: SEQ_COOLING[4], en: "weaker", zh: "较弱" },
+    ],
+    notEn: "Not in study",
+    notZh: "不在研究中",
+  },
+  flood: {
+    titleEn: "Flood damage share",
+    titleZh: "洪涝损失占比",
+    swatches: [
+      { color: SEQ_TEAL[0], en: "lower", zh: "较低" },
+      { color: SEQ_TEAL[2], en: "mid", zh: "中等" },
+      { color: SEQ_TEAL[4], en: "higher", zh: "较高" },
+    ],
+    notEn: "Not in study",
+    notZh: "不在研究中",
+  },
+  expansion: {
+    titleEn: "Urban land 2050 (SSP5)",
+    titleZh: "2050 城市用地（SSP5）",
+    swatches: [
+      { color: SEQ_TEAL[0], en: "smaller", zh: "较小" },
+      { color: SEQ_TEAL[2], en: "mid", zh: "中等" },
+      { color: SEQ_TEAL[4], en: "larger", zh: "较大" },
+    ],
+    notEn: "Not in study",
+    notZh: "不在研究中",
+  },
+  jgr: {
+    titleEn: "Night ΔWBGT",
+    titleZh: "夜间 ΔWBGT",
+    swatches: [
+      { color: DIV_HEAT[0], en: "cooler", zh: "变凉" },
+      { color: DIV_HEAT[2], en: "near 0", zh: "接近 0" },
+      { color: DIV_HEAT[4], en: "warmer", zh: "变热" },
+    ],
+    notEn: "Not in study",
+    notZh: "不在研究中",
+  },
+  uhs: {
+    titleEn: "Median block scale (UHS)",
+    titleZh: "中位同质功能区尺度（UHS）",
+    swatches: [
+      { color: SEQ_TEAL[0], en: "smaller", zh: "较小" },
+      { color: SEQ_TEAL[2], en: "mid", zh: "中等" },
+      { color: SEQ_TEAL[4], en: "larger", zh: "较大" },
+    ],
+    notEn: "Not in 101",
+    notZh: "不在 101 城样本",
+  },
+};
 
 const SUGGESTED = ["lagos", "shanghai", "new-york", "jakarta", "nairobi"];
 
@@ -78,6 +173,11 @@ export default function AtlasExplorer() {
     [points],
   );
 
+  const filterCount = useMemo(() => {
+    if (!filter) return 0;
+    return points.filter((p) => hasLayer(p, filter)).length;
+  }, [points, filter]);
+
   const select = useCallback(async (id: number) => {
     setSelectedId(id);
     setLoadingCity(true);
@@ -93,6 +193,8 @@ export default function AtlasExplorer() {
       setLoadingCity(false);
     }
   }, []);
+
+  const legend = filter ? LAYER_LEGENDS[filter] : null;
 
   return (
     <div className="space-y-5">
@@ -160,36 +262,43 @@ export default function AtlasExplorer() {
             }}
           />
           <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-ink-muted">
-            {filter === "uhs" ? (
+            {legend ? (
               <>
                 <span className="text-ink-faint">
-                  <T en="Median block scale (UHS):" zh="中位同质功能区尺度（UHS）：" />
+                  <T en={`${legend.titleEn}:`} zh={`${legend.titleZh}：`} />
                 </span>
-                <Swatch color="rgb(237, 224, 212)" en="smaller" zh="较小" />
-                <Swatch color="rgb(140, 190, 188)" en="mid" zh="中等" />
-                <Swatch color="rgb(8, 70, 78)" en="larger" zh="较大" />
-                <Swatch color={PAPER_COUNT_COLORS[0]} en="Not in 101" zh="不在 101 城样本" />
+                {legend.swatches.map((s) => (
+                  <Swatch key={s.en} color={s.color} en={s.en} zh={s.zh} />
+                ))}
+                <Swatch color={ATLAS_DOT_GREY} en={legend.notEn} zh={legend.notZh} />
               </>
             ) : (
               <>
-            <span className="text-ink-faint">
-              <T en="Papers covering city:" zh="覆盖这座城市的论文" />
-            </span>
-            <Swatch color={PAPER_COUNT_COLORS[1]} en="1" zh="1" />
-            <Swatch color={PAPER_COUNT_COLORS[2]} en="2" zh="2" />
-            <Swatch color={PAPER_COUNT_COLORS[3]} en="3" zh="3" />
-            <Swatch color={PAPER_COUNT_COLORS[4]} en="4" zh="4" />
-            <Swatch color={PAPER_COUNT_COLORS[5]} en="5" zh="5" />
-            <Swatch color={PAPER_COUNT_COLORS[6]} en="6+" zh="6+" />
-            <Swatch color={PAPER_COUNT_COLORS[0]} en="None" zh="无" />
+                <span className="text-ink-faint">
+                  <T en="Papers covering city:" zh="覆盖这座城市的论文" />
+                </span>
+                <Swatch color={PAPER_COUNT_COLORS[1]} en="1" zh="1" />
+                <Swatch color={PAPER_COUNT_COLORS[2]} en="2" zh="2" />
+                <Swatch color={PAPER_COUNT_COLORS[3]} en="3" zh="3" />
+                <Swatch color={PAPER_COUNT_COLORS[4]} en="4" zh="4" />
+                <Swatch color={PAPER_COUNT_COLORS[5]} en="5" zh="5" />
+                <Swatch color={PAPER_COUNT_COLORS[6]} en="6+" zh="6+" />
+                <Swatch color={PAPER_COUNT_COLORS[0]} en="None" zh="无" />
               </>
             )}
             {meta && (
               <span className="ml-auto">
-                <T
-                  en={`${meta.counts.mapped.toLocaleString()} cities · ${multiCount.toLocaleString()} with 2+ papers`}
-                  zh={`${meta.counts.mapped.toLocaleString()} 座城市 · ${multiCount.toLocaleString()} 座有至少 2 篇论文覆盖`}
-                />
+                {filter ? (
+                  <T
+                    en={`${filterCount.toLocaleString()} cities in this study`}
+                    zh={`本项研究覆盖 ${filterCount.toLocaleString()} 座城市`}
+                  />
+                ) : (
+                  <T
+                    en={`${meta.counts.mapped.toLocaleString()} cities · ${multiCount.toLocaleString()} with 2+ papers`}
+                    zh={`${meta.counts.mapped.toLocaleString()} 座城市 · ${multiCount.toLocaleString()} 座有至少 2 篇论文覆盖`}
+                  />
+                )}
               </span>
             )}
           </div>
