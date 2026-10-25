@@ -8,13 +8,14 @@ Static city map for [kangning-huang.com/atlas](https://kangning-huang.com/atlas)
 - **Built mass / scaling** layer from `kangning-huang/nested-scaling-city-mass` (Nature Cities, in press). ~3,588 cities matched; match quality flagged when centroids disagree.
 - Search + click → city card with real values from `public/atlas/city/<id>.json`.
 - Paper link goes to the **publications** anchor (no Nature Cities DOI until it resolves).
-- Greyed placeholders for urban expansion (ERL 2019) and SSA infrastructure (Nat Comms, in revision).
+- City-card panel for **PNAS Cooler Cities / UHS** (Zhang et al. 2026): paper DOI + Figshare dataset link; no per-city UHS values on map dots yet.
+- Greyed placeholder for SSA infrastructure (Nat Comms, in revision).
 
 ## What v1 deliberately skips
 
 - Per-city static `/atlas/<slug>` pages (keeps the static export fast; cards load JSON on demand).
 - Expansion (ERL 2019) and nighttime heat stress (JGR 2021) layers shipped.
-- PNAS cooling-clusters / SSA infrastructure layers (later PRs).
+- Per-city UHS values joined to UCDB dots (needs city-summary table or Figshare extract); SSA infrastructure layer (later PRs).
 - Expansion layer numbers (crosswalk not built in this export).
 
 ## Regenerate

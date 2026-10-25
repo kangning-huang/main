@@ -275,6 +275,15 @@ export const JGR_PAPER = {
   doiUrl: "https://doi.org/10.1029/2020JD033831",
 } as const;
 
+export const UHS_PAPER = {
+  title: "Toward Cooler Cities by Larger Homogeneous Functional Clusters",
+  venue: "PNAS",
+  year: 2026,
+  doiUrl: "https://doi.org/10.1073/pnas.2617717123",
+  dataUrl: "https://figshare.com/articles/dataset/UHS_for_all_101_cities/33027635",
+  authors: "Zhang et al.",
+} as const;
+
 export const GLOBAL_SLOPE = 0.8995; // from points.json sources.cityMass.globalCitySlope
 
 /** Format population compactly. */

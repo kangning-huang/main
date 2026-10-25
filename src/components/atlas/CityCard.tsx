@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import type { CityDetail } from "@/lib/atlas";
-import { MASS_PAPER, HEAT_PAPER, COOLING_PAPER, FLOOD_PAPER, EXPANSION_PAPER, JGR_PAPER, formatPop, formatMassT } from "@/lib/atlas";
+import { MASS_PAPER, HEAT_PAPER, COOLING_PAPER, FLOOD_PAPER, EXPANSION_PAPER, JGR_PAPER, UHS_PAPER, formatPop, formatMassT } from "@/lib/atlas";
 import T from "@/components/T";
 
 type Props = {
@@ -383,14 +383,28 @@ export default function CityCard({ city, loading, onClose }: Props) {
         )}
       </section>
 
+      {/* PNAS Cooler Cities / UHS — paper + Figshare dataset (no per-city join yet) */}
+      <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
+        <PanelHead
+          en="Homogeneous functional clusters & cooling"
+          zh="均质功能集群与降温"
+          venue={`${UHS_PAPER.venue} ${UHS_PAPER.year}`}
+        />
+        <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
+          <T
+            en="Zhang et al. show that larger homogeneous functional clusters (Urban Homogeneous Scale, UHS) are linked to cooler cities across 101 cities worldwide. City-level UHS values are not yet joined to these map dots — the open Figshare release holds the full UHS dataset for that sample."
+            zh="Zhang 等人基于全球 101 座城市发现：更大的均质功能集群（城市均质尺度 UHS）与更凉爽的城市相关。逐城 UHS 数值尚未接到这张图的城市点上；完整数据集已在 Figshare 公开。"
+          />
+        </p>
+        <Not
+          en="What this card is not: a per-city UHS number for the selected GHSL urban centre. Open the paper and the Figshare dataset for the 101-city sample and spatial layers."
+          zh="这张卡片不提供所选 GHSL 城市中心的逐城 UHS 数值。请打开论文与 Figshare 数据集，查看 101 城样本与空间图层。"
+        />
+        <Links doi={UHS_PAPER.doiUrl} data={UHS_PAPER.dataUrl} />
+      </section>
+
       {/* Coming layers */}
       <div className="mt-4 space-y-2">
-        <ComingRow
-          en="Functional clusters & cooling (101 cities)"
-          zh="功能集群与降温（101 座城市）"
-          noteEn="Coming — PNAS paper online (DOI 10.1073/pnas.2617717123)."
-          noteZh="即将上线 — PNAS 论文已在线发表（DOI 10.1073/pnas.2617717123）。"
-        />
         <ComingRow
           en="SSA infrastructure"
           zh="撒哈拉以南非洲基础设施"
@@ -495,12 +509,17 @@ function Not({ en, zh }: { en: string; zh: string }) {
   );
 }
 
-function Links({ doi, app }: { doi: string; app?: string }) {
+function Links({ doi, app, data }: { doi: string; app?: string; data?: string }) {
   return (
     <div className="mt-3 flex flex-wrap gap-3 text-sm">
       <a href={doi} target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">
         <T en="Paper →" zh="查看论文 →" />
       </a>
+      {data && (
+        <a href={data} target="_blank" rel="noopener noreferrer" className="text-teal hover:underline">
+          <T en="Dataset →" zh="数据集 →" />
+        </a>
+      )}
       {app && (
         <a href={app} target="_blank" rel="noopener noreferrer" className="text-teal hover:underline">
           <T en="Full app →" zh="完整应用 →" />

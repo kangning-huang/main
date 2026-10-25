@@ -107,5 +107,13 @@
     "dNightCoolRoofC": 0.47
    }
   }
+ },
+ "uhs": {
+  "centres": 0,
+  "mode": "link-only",
+  "paper": "Zhang et al., Toward Cooler Cities by Larger Homogeneous Functional Clusters, PNAS 2026",
+  "doi": "10.1073/pnas.2617717123",
+  "dataUrl": "https://figshare.com/articles/dataset/UHS_for_all_101_cities/33027635",
+  "note": "Figshare UHS_All_Continents.zip (~513 MB) not joined to UCDB; city card exposes DOI + dataset links only."
  }
 }
