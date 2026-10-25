@@ -2,7 +2,7 @@ export const PUBLICATIONS_A = [
 {
     title: "Global potential and supply-chain constraints for solar-powered artificial intelligence",
     authors: "Yimin Chen, Jing Qian, Yijing Wang, Xiaoping Liu, Ming Luo, Yutian Liang, Weilin Liao, Zhu Deng, Kangning Huang",
-    venue: "submitted to Cell Reports Sustainability",
+    venue: "submitted to Cell Reports Sustainability (MSID CR-SUSTAINABILITY-D-26-00510)",
     year: 2026,
     citationCount: 0,
     isLeadAuthor: true,
