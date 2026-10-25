@@ -4,7 +4,7 @@ import T from "./T";
 import FooterWeChatNote from "./FooterWeChatNote";
 
 const SITE_LINKS = [
-  { en: "Atlas", zh: "图集", href: "/atlas" },
+  { en: "Atlas", zh: "地图集", href: "/atlas" },
   { en: "Research", zh: "研究", href: "/research" },
   { en: "Publications", zh: "论文", href: "/publications" },
   { en: "Reach", zh: "影响", href: "/reach" },
