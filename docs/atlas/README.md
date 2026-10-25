@@ -8,13 +8,14 @@ Static city map for [kangning-huang.com/atlas](https://kangning-huang.com/atlas)
 - **Built mass / scaling** layer from `kangning-huang/nested-scaling-city-mass` (Nature Cities, in press). ~3,588 cities matched; match quality flagged when centroids disagree.
 - Search + click → city card with real values from `public/atlas/city/<id>.json`.
 - Paper link goes to the **publications** anchor (no Nature Cities DOI until it resolves).
-- Greyed placeholders for urban expansion (ERL 2019) and SSA infrastructure (Nat Comms, in revision).
+- City-card panel + map filter for **PNAS Cooler Cities / UHS** (Zhang et al. 2026): per-city median and range of 500 m mean UHS inside GHSL UCDB 2015; IQR heat illustration from the paper’s pooled slope (−0.156 °C / +100 m daytime). DOI + Figshare links. Credit Zhang et al.
+- Greyed placeholder for SSA infrastructure (Nat Comms, in revision).
 
 ## What v1 deliberately skips
 
 - Per-city static `/atlas/<slug>` pages (keeps the static export fast; cards load JSON on demand).
 - Expansion (ERL 2019) and nighttime heat stress (JGR 2021) layers shipped.
-- PNAS cooling-clusters / SSA infrastructure layers (later PRs).
+- SSA infrastructure layer (later PRs). Optional: COG/PMTiles UHS raster overlay.
 - Expansion layer numbers (crosswalk not built in this export).
 
 ## Regenerate
@@ -38,3 +39,15 @@ Inputs are not committed. The script never invents values: unmatched cities stay
 | `public/atlas/land-110m.json` | Natural Earth land topology (kept for rebuild scripts; UI uses CARTO tiles) |
 | `public/atlas/pages.json` | Reserved for future static city pages (top 500) |
 | `public/atlas/crosswalk.json` | UCDB ↔ city-mass match log |
+
+## Cooler Cities / UHS stats
+
+Offline (workstation) build from Figshare `UHS_All_Continents.zip`:
+
+```bash
+# on a machine with rasterio + geopandas; zip kept outside the repo
+python3 -I scripts/atlas/build_uhs_citystats.py   # emits out/uhs.json
+python3 -I scripts/atlas/merge_uhs.py --uhs public/atlas/layers/uhs.json --out public/atlas
+```
+
+Aggregation matches the paper: 10 m UHS → 500 m mean of valid (UHS>0) pixels, then city percentiles inside the UCDB polygon. Do not rank cities by median×slope.

@@ -22,9 +22,11 @@ export type AtlasPoint = {
   expansion: 0 | 1;
   /** 1 if covered by JGR 2021 nighttime ΔWBGT sample. */
   jgr: 0 | 1;
+  /** Median UHS (m) at 500 m aggregation for PNAS Cooler Cities 101-city sample; null if not covered. */
+  uhs: number | null;
 };
 
-export type LayerKey = "mass" | "heat" | "cooling" | "flood" | "expansion" | "jgr";
+export type LayerKey = "mass" | "heat" | "cooling" | "flood" | "expansion" | "jgr" | "uhs";
 
 /** How many mapped studies have a result for this city. */
 export function paperCount(p: AtlasPoint): number {
@@ -35,6 +37,7 @@ export function paperCount(p: AtlasPoint): number {
   if (p.flood === 1) n += 1;
   if (p.expansion === 1) n += 1;
   if (p.jgr === 1) n += 1;
+  if (p.uhs != null) n += 1;
   return n;
 }
 
@@ -44,6 +47,7 @@ export function hasLayer(p: AtlasPoint, layer: LayerKey): boolean {
   if (layer === "cooling") return p.cool === 1;
   if (layer === "flood") return p.flood === 1;
   if (layer === "expansion") return p.expansion === 1;
+  if (layer === "uhs") return p.uhs != null;
   return p.jgr === 1;
 }
 
@@ -150,6 +154,22 @@ export type CityJgrLayer = {
   dNightCoolRoofC?: number;
 };
 
+/** PNAS Cooler Cities / UHS (Zhang et al. 2026). Stats are percentiles of 500 m mean UHS (m). */
+export type CityUhsLayer = {
+  quality: "exact" | "flagged" | "review";
+  p10: number;
+  p25: number;
+  p50: number;
+  p75: number;
+  p90: number;
+  mean?: number;
+  /** Share of UCDB polygon area with valid UHS (>0) at 10 m. */
+  coverage?: number | null;
+  n500?: number;
+  tifName?: string;
+  match?: { sourceName: string; nameSim?: number; method?: string };
+};
+
 export type CityDetail = {
   id: number;
   slug: string;
@@ -167,6 +187,7 @@ export type CityDetail = {
     flood?: CityFloodLayer;
     expansion?: CityExpansionLayer;
     jgr?: CityJgrLayer;
+    uhs?: CityUhsLayer;
   };
 };
 
@@ -207,6 +228,10 @@ export function parsePoints(file: AtlasPointsFile): AtlasPoint[] {
       flood: Number(obj.flood ?? 0) === 1 ? 1 : 0,
       expansion: Number(obj.expansion ?? 0) === 1 ? 1 : 0,
       jgr: Number(obj.jgr ?? 0) === 1 ? 1 : 0,
+      uhs:
+        obj.uhs === null || obj.uhs === undefined || obj.uhs === ""
+          ? null
+          : Number(obj.uhs),
     };
   });
 }
@@ -273,6 +298,15 @@ export const JGR_PAPER = {
   venue: "JGR Atmospheres",
   year: 2021,
   doiUrl: "https://doi.org/10.1029/2020JD033831",
+} as const;
+
+export const UHS_PAPER = {
+  title: "Toward Cooler Cities by Larger Homogeneous Functional Clusters",
+  venue: "PNAS",
+  year: 2026,
+  doiUrl: "https://doi.org/10.1073/pnas.2617717123",
+  dataUrl: "https://figshare.com/articles/dataset/UHS_for_all_101_cities/33027635",
+  authors: "Zhang et al.",
 } as const;
 
 export const GLOBAL_SLOPE = 0.8995; // from points.json sources.cityMass.globalCitySlope

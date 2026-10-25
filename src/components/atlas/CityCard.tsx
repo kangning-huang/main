@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import type { CityDetail } from "@/lib/atlas";
-import { MASS_PAPER, HEAT_PAPER, COOLING_PAPER, FLOOD_PAPER, EXPANSION_PAPER, JGR_PAPER, formatPop, formatMassT } from "@/lib/atlas";
+import { MASS_PAPER, HEAT_PAPER, COOLING_PAPER, FLOOD_PAPER, EXPANSION_PAPER, JGR_PAPER, UHS_PAPER, formatPop, formatMassT } from "@/lib/atlas";
 import T from "@/components/T";
 
 type Props = {
@@ -29,8 +29,9 @@ export default function CityCard({ city, loading, onClose }: Props) {
   const flood = city.layers.flood;
   const expansion = city.layers.expansion;
   const jgr = city.layers.jgr;
-  const nLayers = [mass, heat, cooling, flood, expansion, jgr].filter(Boolean).length;
-  const nMapped = 6;
+  const uhs = city.layers.uhs;
+  const nLayers = [mass, heat, cooling, flood, expansion, jgr, uhs].filter(Boolean).length;
+  const nMapped = 7;
 
   return (
     <aside
@@ -383,14 +384,80 @@ export default function CityCard({ city, loading, onClose }: Props) {
         )}
       </section>
 
+      {/* PNAS Cooler Cities / UHS — per-city 500 m stats when in the 101 */}
+      <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
+        <PanelHead
+          en="Homogeneous block scale & cooling"
+          zh="同质功能区尺度与降温"
+          venue={`${UHS_PAPER.venue} ${UHS_PAPER.year}`}
+        />
+        {!uhs ? (
+          <>
+            <NotCovered
+              en="Not one of the 101 study cities in Zhang et al. (PNAS 2026). Paper and open UHS dataset linked below."
+              zh="不在 Zhang 等（PNAS 2026）的 101 座研究城市样本中。下方仍提供论文与公开 UHS 数据集链接。"
+            />
+            <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
+              <T
+                en="Zhang et al. show that larger homogeneous functional clusters (Urban Homogeneous Scale, UHS — block scale) are linked to cooler surface temperatures across 101 cities."
+                zh="Zhang 等人基于全球 101 座城市发现：更大的均质功能集群（城市均质尺度 UHS，即同质功能区尺度）与更低的地表温度相关。"
+              />
+            </p>
+            <Links doi={UHS_PAPER.doiUrl} data={UHS_PAPER.dataUrl} />
+          </>
+        ) : (
+          <>
+            {(uhs.quality === "flagged" || uhs.quality === "review") && (
+              <p className="mt-2 rounded bg-ember-light px-2 py-1 text-xs text-ember-dark">
+                <T
+                  en={`Match flagged (${uhs.match?.method ?? "join"}): raster “${uhs.tifName ?? uhs.match?.sourceName ?? "UHS"}” ↔ ${city.name}.`}
+                  zh={`匹配存疑（${uhs.match?.method ?? "join"}）：栅格 “${uhs.tifName ?? uhs.match?.sourceName ?? "UHS"}” ↔ ${city.name}。`}
+                />
+              </p>
+            )}
+            <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
+              <Stat
+                en="Median block scale (UHS)"
+                zh="中位同质功能区尺度（UHS）"
+                value={`${Math.round(uhs.p50)} m`}
+                big
+              />
+              <Stat
+                en="Within-city IQR (P25–P75)"
+                zh="城内四分位距（P25–P75）"
+                value={`${Math.round(uhs.p25)}–${Math.round(uhs.p75)} m`}
+                big
+              />
+            </dl>
+            <UhsRangeBar p10={uhs.p10} p25={uhs.p25} p50={uhs.p50} p75={uhs.p75} p90={uhs.p90} />
+            <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
+              <T
+                en={uhsHeatSentenceEn(city.name, uhs)}
+                zh={uhsHeatSentenceZh(city.name, uhs)}
+              />
+            </p>
+            <Not
+              en="Illustration from the paper’s pooled estimate across 101 cities — not a city-specific causal effect. Surface temperature (LST UHI), not air temperature."
+              zh="这是论文在 101 座城市上的合并估计所作的示意，不是这座城市自己的因果效应；对应地表温度（LST 热岛），不是气温。"
+            />
+            {uhs.coverage != null && (
+              <p className="mt-2 text-xs text-ink-faint">
+                <T
+                  en={`UHS covers about ${(uhs.coverage * 100).toFixed(0)}% of this urban extent (GHSL UCDB 2015). Stats use 500 m means of the 10 m UHS surface, matching the paper’s analysis grid.`}
+                  zh={`UHS 有效像元约占该城市范围（GHSL UCDB 2015）的 ${(uhs.coverage * 100).toFixed(0)}%。统计基于 10 m UHS 在 500 m 网格上的均值，与论文分析单元一致。`}
+                />
+              </p>
+            )}
+            <Links doi={UHS_PAPER.doiUrl} data={UHS_PAPER.dataUrl} />
+            <p className="mt-2 text-[11px] text-ink-faint">
+              <T en="Credit: Zhang et al." zh="数据与论文：Zhang 等。" />
+            </p>
+          </>
+        )}
+      </section>
+
       {/* Coming layers */}
       <div className="mt-4 space-y-2">
-        <ComingRow
-          en="Functional clusters & cooling (101 cities)"
-          zh="功能集群与降温（101 座城市）"
-          noteEn="Coming — PNAS paper online (DOI 10.1073/pnas.2617717123)."
-          noteZh="即将上线 — PNAS 论文已在线发表（DOI 10.1073/pnas.2617717123）。"
-        />
         <ComingRow
           en="SSA infrastructure"
           zh="撒哈拉以南非洲基础设施"
@@ -417,6 +484,68 @@ function floodReadingZh(flood: NonNullable<CityDetail["layers"]["flood"]>): stri
   }
   const cut = flood.dmgPct > 0 ? (1 - flood.dmgProtPct / flood.dmgPct) * 100 : 0;
   return `无保护时约 ${flood.dmgPct.toFixed(2)}% 的建筑足迹估计受损；按模型约 ${flood.protYears ?? "—"} 年一遇防洪标准后降至 ${flood.dmgProtPct.toFixed(2)}%（约减少 ${cut.toFixed(0)}%）。情景范围，不是预测。`;
+}
+
+
+const UHS_SLOPE_DAY = 0.156; // °C cooler daytime surface per +100 m UHS (paper pooled)
+const UHS_SLOPE_NIGHT = 0.085;
+
+function uhsHeatSentenceEn(name: string, uhs: NonNullable<CityDetail["layers"]["uhs"]>): string {
+  const iqr = Math.max(0, uhs.p75 - uhs.p25);
+  const day = (iqr / 100) * UHS_SLOPE_DAY;
+  const night = (iqr / 100) * UHS_SLOPE_NIGHT;
+  return `Across 101 cities, +100 m UHS ≈ ${UHS_SLOPE_DAY.toFixed(3)} °C cooler daytime surface (≈${UHS_SLOPE_NIGHT.toFixed(3)} °C at night). In ${name}, the gap between its smaller- and larger-block quarters (P25→P75, Δ ≈ ${Math.round(iqr)} m) corresponds to about ${day.toFixed(2)} °C by day (≈${night.toFixed(2)} °C at night), using that average estimate.`;
+}
+
+function uhsHeatSentenceZh(name: string, uhs: NonNullable<CityDetail["layers"]["uhs"]>): string {
+  const iqr = Math.max(0, uhs.p75 - uhs.p25);
+  const day = (iqr / 100) * UHS_SLOPE_DAY;
+  const night = (iqr / 100) * UHS_SLOPE_NIGHT;
+  return `在 101 座城市的合并估计中，UHS 每增加 100 m，白天地表约凉 ${UHS_SLOPE_DAY.toFixed(3)} °C（夜间约 ${UHS_SLOPE_NIGHT.toFixed(3)} °C）。在${name}，较小与较大同质街区四分位之间的差距（P25→P75，Δ ≈ ${Math.round(iqr)} m）按该平均估计约对应白天 ${day.toFixed(2)} °C（夜间约 ${night.toFixed(2)} °C）。`;
+}
+
+function UhsRangeBar({
+  p10,
+  p25,
+  p50,
+  p75,
+  p90,
+}: {
+  p10: number;
+  p25: number;
+  p50: number;
+  p75: number;
+  p90: number;
+}) {
+  const lo = 0;
+  const hi = Math.max(p90 * 1.05, p50 * 1.5, 50);
+  const pct = (v: number) => `${(Math.min(Math.max(v, lo), hi) / hi) * 100}%`;
+  return (
+    <div className="mt-3" aria-hidden>
+      <div className="relative h-3 w-full rounded-full bg-paper">
+        <div
+          className="absolute top-1/2 h-1 -translate-y-1/2 rounded-full bg-teal/30"
+          style={{ left: pct(p10), width: `calc(${pct(p90)} - ${pct(p10)})` }}
+        />
+        <div
+          className="absolute top-1/2 h-2.5 -translate-y-1/2 rounded-full bg-teal/70"
+          style={{ left: pct(p25), width: `calc(${pct(p75)} - ${pct(p25)})` }}
+        />
+        <div
+          className="absolute top-0 h-3 w-0.5 bg-ink"
+          style={{ left: pct(p50) }}
+          title={`median ${Math.round(p50)} m`}
+        />
+      </div>
+      <div className="mt-1 flex justify-between text-[10px] text-ink-faint">
+        <span>0</span>
+        <span>
+          <T en="P10–P90 thin · P25–P75 thick · median tick" zh="细线 P10–P90 · 粗条 P25–P75 · 竖线中位数" />
+        </span>
+        <span>{Math.round(hi)} m</span>
+      </div>
+    </div>
+  );
 }
 
 function ComingRow({
@@ -495,12 +624,17 @@ function Not({ en, zh }: { en: string; zh: string }) {
   );
 }
 
-function Links({ doi, app }: { doi: string; app?: string }) {
+function Links({ doi, app, data }: { doi: string; app?: string; data?: string }) {
   return (
     <div className="mt-3 flex flex-wrap gap-3 text-sm">
       <a href={doi} target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">
         <T en="Paper →" zh="查看论文 →" />
       </a>
+      {data && (
+        <a href={data} target="_blank" rel="noopener noreferrer" className="text-teal hover:underline">
+          <T en="Dataset →" zh="数据集 →" />
+        </a>
+      )}
       {app && (
         <a href={app} target="_blank" rel="noopener noreferrer" className="text-teal hover:underline">
           <T en="Full app →" zh="完整应用 →" />
