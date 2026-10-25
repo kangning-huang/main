@@ -172,6 +172,23 @@ def match_city(tif: dict, lon: float, lat: float, ucdb: gpd.GeoDataFrame, points
     """Spatial PIP first; name as check. Prefer atlas points that are inside same polygon."""
     from shapely.geometry import Point
 
+    forced = FORCED_UCDB.get(tif["stem"]) or FORCED_UCDB.get(tif["name"])
+    if forced is not None:
+        row = ucdb[ucdb.ucdb_id == int(forced)]
+        if not row.empty:
+            r = row.iloc[0]
+            return {
+                "ucdb_id": int(r.ucdb_id),
+                "ucdb_name": r.ucdb_name,
+                "match": "forced",
+                "name_sim": name_sim(tif["name"], r.ucdb_name),
+                "tif_name": tif["name"],
+                "tif_stem": tif["stem"],
+                "continent": tif["continent"],
+                "lon": lon,
+                "lat": lat,
+            }
+
     pt = Point(lon, lat)
     hits = ucdb[ucdb.contains(pt)]
     best = None
