@@ -244,7 +244,7 @@ export default async function Home() {
                   href="/atlas"
                   className="rounded-md bg-ember px-5 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ember-dark"
                 >
-                  <T en="Explore the Atlas" zh="查看图集" />
+                  <T en="Explore the Atlas" zh="查看地图集" />
                 </Link>
                 <Link
                   href="/lab#join"
