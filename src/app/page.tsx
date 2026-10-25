@@ -339,12 +339,12 @@ export default async function Home() {
             <T
               en={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
-                  I study cities as complex socio-ecological systems, the outcome of interactions between human and natural systems. At <a href="https://shanghai.nyu.edu" target="_blank" rel="noopener noreferrer" className={extLink}>NYU Shanghai</a> I lead the CLimate and Urban Environments (CLUEs) Lab. We combine satellite data, climate models, and causal inference across thousands of cities, and ask how the amount, height, and arrangement of what we build shapes who overheats, who floods, and how much material a city consumes.
+                  I study cities as complex socio-ecological systems, the outcome of interactions between human and natural systems. At <a href={LINKS.nyuFaculty} target="_blank" rel="noopener noreferrer" className={extLink}>New York University Shanghai</a> I lead the CLimate and Urban Environments (CLUEs) Lab. We combine satellite data, climate models, and causal inference across thousands of cities, and ask how the amount, height, and arrangement of what we build shapes who overheats, who floods, and how much material a city consumes.
                 </p>
               }
               zh={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
-                  我把城市当作复杂的社会-生态系统来研究——它产生于人与自然系统的相互作用。我的课题组——<a href="https://shanghai.nyu.edu" target="_blank" rel="noopener noreferrer" className={extLink}>上海纽约大学</a>CLUEs（CLimate and Urban Environments）实验室——结合卫星数据、气候模型与因果推断，对全球数千座城市开展分析。我们关注的问题是：建成环境的总量、高度与布局，如何决定谁会遭受高温、谁会被洪水侵袭，以及一座城市要消耗多少材料。
+                  我把城市当作复杂的社会-生态系统来研究——它产生于人与自然系统的相互作用。我的课题组——<a href="https://shanghai.nyu.edu/cn/academics/faculty/directory/kangning-ken-huang" target="_blank" rel="noopener noreferrer" className={extLink}>上海纽约大学</a>CLUEs（CLimate and Urban Environments）实验室——结合卫星数据、气候模型与因果推断，对全球数千座城市开展分析。我们关注的问题是：建成环境的总量、高度与布局，如何决定谁会遭受高温、谁会被洪水侵袭，以及一座城市要消耗多少材料。
                 </p>
               }
             />
@@ -363,12 +363,12 @@ export default async function Home() {
             <T
               en={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
-                  Before NYU Shanghai, I was an <a href="https://edec.ucar.edu/advanced-study-program/postdoctoral-fellowship-program" target="_blank" rel="noopener noreferrer" className={extLink}>Advanced Study Program Postdoctoral Fellow</a> at NCAR. I earned my PhD at the <a href="https://environment.yale.edu/" target="_blank" rel="noopener noreferrer" className={extLink}>Yale School of the Environment</a>.
+                  Before <a href={LINKS.nyuFaculty} target="_blank" rel="noopener noreferrer" className={extLink}>New York University Shanghai</a>, I was an <a href="https://edec.ucar.edu/advanced-study-program/postdoctoral-fellowship-program" target="_blank" rel="noopener noreferrer" className={extLink}>Advanced Study Program Postdoctoral Fellow</a> at NCAR. I earned my PhD at the <a href="https://environment.yale.edu/" target="_blank" rel="noopener noreferrer" className={extLink}>Yale School of the Environment</a>.
                 </p>
               }
               zh={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
-                  加入上海纽约大学之前，我在美国国家大气研究中心（NCAR）担任<a href="https://edec.ucar.edu/advanced-study-program/postdoctoral-fellowship-program" target="_blank" rel="noopener noreferrer" className={extLink}>高级研究项目（ASP）</a>博士后研究员。我在<a href="https://environment.yale.edu/" target="_blank" rel="noopener noreferrer" className={extLink}>耶鲁大学环境学院</a>获得博士学位。
+                  加入<a href="https://shanghai.nyu.edu/cn/academics/faculty/directory/kangning-ken-huang" target="_blank" rel="noopener noreferrer" className={extLink}>上海纽约大学</a>之前，我在美国国家大气研究中心（NCAR）担任<a href="https://edec.ucar.edu/advanced-study-program/postdoctoral-fellowship-program" target="_blank" rel="noopener noreferrer" className={extLink}>高级研究项目（ASP）</a>博士后研究员。我在<a href="https://environment.yale.edu/" target="_blank" rel="noopener noreferrer" className={extLink}>耶鲁大学环境学院</a>获得博士学位。
                 </p>
               }
             />
