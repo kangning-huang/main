@@ -589,7 +589,7 @@ export default function MapCanvas({
       ref={wrapRef}
       role="img"
       aria-label="World map of cities colored by paper coverage or by each study's city-level result"
-      className="relative isolate z-0 h-[min(62vw,520px)] min-h-[360px] w-full overflow-hidden rounded-lg border border-rule bg-paper-warm [&_.maplibregl-ctrl-attrib]:text-[10px] [&_.maplibregl-ctrl-attrib]:leading-tight"
+      className="relative isolate z-0 h-[min(42vw,460px)] min-h-[300px] w-full overflow-hidden rounded-lg border border-rule bg-paper-warm [&_.maplibregl-ctrl-attrib]:text-[10px] [&_.maplibregl-ctrl-attrib]:leading-tight"
     >
       {/* z-0 + isolate: contain WebGL compositing so the overlay can sit above */}
       <div
