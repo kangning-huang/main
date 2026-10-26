@@ -1,5 +1,5 @@
 {
-  "$comment": "Pinned DOI list for the /reach pipeline. Edit by hand; never populate from OpenAlex author search. lens lead = first/last/corresponding (hand-pinned; OpenAlex is_corresponding is unreliable). lens coauthor = other papers with resolving DOIs. Papers without a published DOI and Nature Cities Nested economies (embargo DOI 404) are intentionally absent. Acta Sunyatseni 2010 GeoSOS has no resolving DOI/OpenAlex work — publications lead only, not Reach-pinned.",
+  "$comment": "Pinned DOI list for the /reach pipeline. Edit by hand; never populate from OpenAlex author search. lens lead = first/last/corresponding (hand-pinned; OpenAlex is_corresponding is unreliable). lens coauthor = other papers with resolving DOIs. Nature Cities Nested economies (embargo DOI 404) and other entries without a published/resolving DOI are intentionally absent. Acta Sunyatseni 2010 GeoSOS has no resolving DOI/OpenAlex work — publications lead only, not Reach-pinned. PNAS 2026 Cooler Cities (10.1073/pnas.2617717123) added 2026-10-26 after DOI resolved.",
   "themes": [
     {
       "id": "urban-futures",
@@ -98,6 +98,15 @@
     {
       "doi": "10.1038/s44432-026-00009-1",
       "short": "npj ESS 2026 · demolition & cooling",
+      "year": 2026,
+      "theme": "heat",
+      "themeSource": "research-page",
+      "lens": "lead",
+      "doiSource": "src/lib/publications-part-a.ts"
+    },
+    {
+      "doi": "10.1073/pnas.2617717123",
+      "short": "PNAS 2026 · Cooler Cities / UHS",
       "year": 2026,
       "theme": "heat",
       "themeSource": "research-page",

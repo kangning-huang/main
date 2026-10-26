@@ -812,7 +812,7 @@ async function main() {
         natureCitiesNestedEconomies:
           "DOI 10.1038/s44284-026-00532-x intentionally omitted (embargo 404 until ~13 Nov 2026).",
         inPressOrNoDoi:
-          "Cooler Cities (PNAS in press), SSA infrastructure, Nested economies, and other entries without a resolving DOI in publications-part-*.ts are omitted.",
+          "SSA infrastructure, Nature Cities Nested economies (embargo), and other entries without a resolving DOI in publications-part-*.ts are omitted. PNAS 2026 Cooler Cities is pinned (DOI live 2026-10).",
       },
     },
     // Back-compat top-level totals = default view (for any leftover readers)
