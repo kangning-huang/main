@@ -4,19 +4,19 @@
     "source": "OpenAlex",
     "sourceUrl": "https://openalex.org",
     "asOf": "2026-10-26",
-    "generatedAt": "2026-10-26T01:54:40.065Z",
+    "generatedAt": "2026-10-26T06:17:20.633Z",
     "schema": "reach-v2-c2-f5-h2",
     "defaultView": "all",
     "autoFlippedToLead": false,
     "coauthorOnlyCitingShare": 56,
     "lens": "views.all = all pinned DOIs; views.lead = first/last/corresponding (hand-pinned lens). Corresponding is never taken from OpenAlex alone.",
-    "doisFileSha256": "7de584c2605fe299",
+    "doisFileSha256": "b67cf85f2dabf237",
     "selfCitationRule": "A citing work is removed if it shares any author with the cited paper (OpenAlex author ID, ORCID, or normalized full name). Applied per cited paper; unique citing works for headlines.",
     "adaptiveRule": "Start at OpenAlex field; split any node holding more than 30% of citing works into children (field → subfield → topic) until no node exceeds that share. Nodes under 2% may fold into Other.",
     "outsideOwnTopicsRule": "Home topics = OpenAlex topics on Ken's own papers in the active view. A citing work is 'outside' if its assigned topic id is not in that set (or it has no topic).",
     "countryBaseline": "Expected citing works per country ≈ sum over citing fields of (country's share of OpenAlex works in that field × citing works in that field), 2012–2026.",
     "earlyFromYear": 2025,
-    "homeTopicCount": 45,
+    "homeTopicCount": 47,
     "homeSubfields": [
       "Aerospace Engineering",
       "Artificial Intelligence",
@@ -45,15 +45,15 @@
       "Transportation",
       "Urban Studies"
     ],
-    "requests": 107,
+    "requests": 109,
     "skipped": {
       "natureCitiesNestedEconomies": "DOI 10.1038/s44284-026-00532-x intentionally omitted (embargo 404 until ~13 Nov 2026).",
-      "inPressOrNoDoi": "Cooler Cities (PNAS in press), SSA infrastructure, Nested economies, and other entries without a resolving DOI in publications-part-*.ts are omitted."
+      "inPressOrNoDoi": "SSA infrastructure, Nature Cities Nested economies (embargo), and other entries without a resolving DOI in publications-part-*.ts are omitted. PNAS 2026 Cooler Cities is pinned (DOI live 2026-10)."
     }
   },
   "totals": {
-    "papers": 27,
-    "leadPapers": 15,
+    "papers": 28,
+    "leadPapers": 16,
     "coauthorPapers": 12,
     "openalexCitedByCountSum": 3798,
     "citingLinksFetched": 3782,
@@ -66,7 +66,7 @@
     "citingLinksNonSelf": 3472,
     "uniqueCitingWorks": 3230,
     "citingWorksOutsideOwnField": 1039,
-    "citingWorksOutsideOwnTopics": 1100,
+    "citingWorksOutsideOwnTopics": 1066,
     "fieldsCount": 21,
     "countriesCount": 115,
     "leadCitingShare": 44
@@ -328,6 +328,31 @@
       "venue": "npj Environmental Social Sciences",
       "year": 2026,
       "short": "npj ESS 2026 · demolition & cooling",
+      "theme": "heat",
+      "themeSource": "research-page",
+      "lens": "lead",
+      "early": true,
+      "ownField": {
+        "id": "fields/23",
+        "name": "Environmental Science"
+      },
+      "ownTopic": {
+        "id": "T10766",
+        "name": "Urban Heat Island Mitigation"
+      },
+      "openalexCitedByCount": 0,
+      "citingFetched": 0,
+      "selfCitationsRemoved": 0,
+      "citingNonSelf": 0,
+      "byYear": {}
+    },
+    {
+      "doi": "10.1073/pnas.2617717123",
+      "openalexId": "W7222941381",
+      "title": "Toward cooler cities by larger homogeneous functional clusters",
+      "venue": "Proceedings of the National Academy of Sciences",
+      "year": 2026,
+      "short": "PNAS 2026 · Cooler Cities / UHS",
       "theme": "heat",
       "themeSource": "research-page",
       "lens": "lead",
@@ -927,8 +952,8 @@
     "all": {
       "label": "all",
       "totals": {
-        "papers": 27,
-        "leadPapers": 15,
+        "papers": 28,
+        "leadPapers": 16,
         "coauthorPapers": 12,
         "openalexCitedByCountSum": 3798,
         "citingLinksFetched": 3782,
@@ -941,7 +966,7 @@
         "citingLinksNonSelf": 3472,
         "uniqueCitingWorks": 3230,
         "citingWorksOutsideOwnField": 1039,
-        "citingWorksOutsideOwnTopics": 1100,
+        "citingWorksOutsideOwnTopics": 1066,
         "fieldsCount": 21,
         "countriesCount": 115,
         "leadCitingShare": 44
@@ -3365,8 +3390,8 @@
     "lead": {
       "label": "lead",
       "totals": {
-        "papers": 15,
-        "leadPapers": 15,
+        "papers": 16,
+        "leadPapers": 16,
         "coauthorPapers": 0,
         "openalexCitedByCountSum": 1595,
         "citingLinksFetched": 1589,
@@ -3379,7 +3404,7 @@
         "citingLinksNonSelf": 1470,
         "uniqueCitingWorks": 1420,
         "citingWorksOutsideOwnField": 415,
-        "citingWorksOutsideOwnTopics": 464,
+        "citingWorksOutsideOwnTopics": 449,
         "fieldsCount": 19,
         "countriesCount": 98,
         "leadCitingShare": 100
