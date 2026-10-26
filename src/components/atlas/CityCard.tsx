@@ -1,20 +1,23 @@
 "use client";
 
 import Link from "next/link";
-import type { CityDetail } from "@/lib/atlas";
+import type { CityDetail, LayerKey } from "@/lib/atlas";
 import { MASS_PAPER, HEAT_PAPER, COOLING_PAPER, FLOOD_PAPER, EXPANSION_PAPER, JGR_PAPER, UHS_PAPER, formatPop, formatMassT } from "@/lib/atlas";
 import T from "@/components/T";
+import type { ReactNode } from "react";
 
 type Props = {
   city: CityDetail | null;
   loading: boolean;
+  /** When set, show only that study’s panel; null = all seven. */
+  filter?: LayerKey | null;
   onClose: () => void;
 };
 
-export default function CityCard({ city, loading, onClose }: Props) {
+export default function CityCard({ city, loading, filter = null, onClose }: Props) {
   if (loading) {
     return (
-      <aside className="rounded-lg border border-rule bg-paper p-5 shadow-sm">
+      <aside className="rounded-lg border border-rule bg-paper p-4 shadow-sm">
         <p className="text-sm text-ink-muted">
           <T en="Loading city…" zh="正在加载城市数据…" />
         </p>
@@ -32,56 +35,15 @@ export default function CityCard({ city, loading, onClose }: Props) {
   const uhs = city.layers.uhs;
   const nLayers = [mass, heat, cooling, flood, expansion, jgr, uhs].filter(Boolean).length;
   const nMapped = 7;
+  const show = (key: LayerKey) => filter == null || filter === key;
 
-  return (
-    <aside
-      className="rounded-lg border border-rule bg-paper p-5 shadow-sm"
-      aria-label={`${city.name} city card`}
-    >
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <h2 className="font-display text-2xl text-ink">{city.name}</h2>
-          <p className="mt-0.5 text-sm text-ink-muted">
-            {city.country}
-            {city.region ? ` · ${city.region}` : ""}
-          </p>
-        </div>
-        <button
-          type="button"
-          onClick={onClose}
-          className="rounded px-2 py-1 text-xs text-ink-faint hover:bg-paper-warm hover:text-ink"
-          aria-label="Close"
-        >
-          ✕
-        </button>
-      </div>
+  const panels: { key: LayerKey; node: ReactNode }[] = [];
 
-      <dl className="mt-4 grid grid-cols-2 gap-3 text-sm">
-        <div>
-          <dt className="text-xs uppercase tracking-wide text-ink-faint">
-            <T en="Population (2015)" zh="人口（2015 年）" />
-          </dt>
-          <dd className="mt-0.5 font-medium text-ink">{formatPop(city.ucdb.pop15)}</dd>
-        </div>
-        <div>
-          <dt className="text-xs uppercase tracking-wide text-ink-faint">
-            <T en="Urban extent" zh="城市范围" />
-          </dt>
-          <dd className="mt-0.5 font-medium text-ink">
-            {city.ucdb.areaKm2.toLocaleString()} km²
-          </dd>
-        </div>
-      </dl>
-
-      <p className="mt-4 text-xs text-ink-faint">
-        <T
-          en={`Covered by ${nLayers} of ${nMapped} mapped studies.`}
-          zh={`地图已收录 ${nMapped} 项研究，其中 ${nLayers} 项覆盖这座城市。`}
-        />
-      </p>
-
-      {/* Built mass panel */}
-      <section className="mt-5 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
+  if (show("mass")) {
+    panels.push({
+      key: "mass",
+      node: (
+      <section className="flex h-full flex-col rounded-md border border-rule-faint bg-paper-warm/60 p-3">
         <div className="flex items-center justify-between gap-2">
           <h3 className="text-sm font-medium text-ink">
             <T en="Built mass & scaling" zh="建成质量与标度" />
@@ -109,15 +71,21 @@ export default function CityCard({ city, loading, onClose }: Props) {
               </p>
             )}
 
-            <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
-              <div>
-                <dt className="text-xs text-ink-faint">
-                  <T en="Mass per person" zh="人均建成质量" />
-                </dt>
-                <dd className="mt-0.5 text-lg font-medium text-ink">
-                  {mass.massPerCapT.toLocaleString()} t
-                </dd>
-              </div>
+            <div className="mt-3">
+              <p className="text-xs uppercase tracking-wide text-ink-faint">
+                <T en="Mass per person" zh="人均建成质量" />
+              </p>
+              <p className="mt-0.5 text-2xl font-medium tabular-nums text-ink">
+                {mass.massPerCapT.toLocaleString()} t
+              </p>
+              <p className="mt-1 text-xs text-ink-faint">
+                <T
+                  en={`Total ${formatMassT(mass.massT)} · dataset pop ${formatPop(mass.pop)}`}
+                  zh={`总量 ${formatMassT(mass.massT)} · 数据集人口 ${formatPop(mass.pop)}`}
+                />
+              </p>
+            </div>
+            <dl className="mt-3 text-sm">
               <div>
                 <dt className="text-xs text-ink-faint">
                   <T en="vs. scaling line" zh="与标度线相比" />
@@ -126,18 +94,6 @@ export default function CityCard({ city, loading, onClose }: Props) {
                   {mass.vsScaling >= 1 ? "+" : ""}
                   {((mass.vsScaling - 1) * 100).toFixed(0)}%
                 </dd>
-              </div>
-              <div>
-                <dt className="text-xs text-ink-faint">
-                  <T en="Total built mass" zh="建成质量总量" />
-                </dt>
-                <dd className="mt-0.5 font-medium text-ink">{formatMassT(mass.massT)}</dd>
-              </div>
-              <div>
-                <dt className="text-xs text-ink-faint">
-                  <T en="Dataset population" zh="数据集人口数" />
-                </dt>
-                <dd className="mt-0.5 font-medium text-ink">{formatPop(mass.pop)}</dd>
               </div>
             </dl>
 
@@ -182,9 +138,15 @@ export default function CityCard({ city, loading, onClose }: Props) {
           </>
         )}
       </section>
+      ),
+    });
+  }
 
-      {/* Heat-island trend panel */}
-      <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
+  if (show("heat")) {
+    panels.push({
+      key: "heat",
+      node: (
+      <section className="flex h-full flex-col rounded-md border border-rule-faint bg-paper-warm/60 p-3">
         <PanelHead en="Surface heat-island trend, 2003–2020" zh="地表热岛趋势（2003–2020）" venue={`${HEAT_PAPER.venue} ${HEAT_PAPER.year}`} />
         {!heat ? (
           <NotCovered en="Not covered by this study (it covers the ~1,000 largest functional urban areas)." zh="这项研究未覆盖这座城市。研究范围是规模最大的约 1,000 个功能城市区。" />
@@ -207,7 +169,7 @@ export default function CityCard({ city, loading, onClose }: Props) {
             <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
               <T
                 en={`From 2003 to 2020, the daytime heat-island extreme where residents live ${trendWord(heat.dayP, "en")} (area average: ${fmtTrend(heat.dayA)}).`}
-                zh={`夜间 · 面积平均`}
+                zh={`从 2003 到 2020 年，居民所在地白天热岛极端值${trendWord(heat.dayP, "zh")}（面积平均：${fmtTrend(heat.dayA)}）。`}
               />
             </p>
             <Not
@@ -218,9 +180,15 @@ export default function CityCard({ city, loading, onClose }: Props) {
           </>
         )}
       </section>
+      ),
+    });
+  }
 
-      {/* Informal-settlement cooling panel */}
-      <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
+  if (show("cooling")) {
+    panels.push({
+      key: "cooling",
+      node: (
+      <section className="flex h-full flex-col rounded-md border border-rule-faint bg-paper-warm/60 p-3">
         <PanelHead en="Cooling after informal-settlement demolition" zh="非正规住区拆除后的降温" venue={`npj ${COOLING_PAPER.year}`} />
         {!cooling ? (
           <NotCovered en="Not covered by this study (Beijing, Shanghai and Guangzhou only)." zh="这项研究未覆盖这座城市，仅研究了北京、上海和广州。" />
@@ -244,9 +212,15 @@ export default function CityCard({ city, loading, onClose }: Props) {
           </>
         )}
       </section>
+      ),
+    });
+  }
 
-      {/* Height-aware flood panel */}
-      <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
+  if (show("flood")) {
+    panels.push({
+      key: "flood",
+      node: (
+      <section className="flex h-full flex-col rounded-md border border-rule-faint bg-paper-warm/60 p-3">
         <PanelHead
           en="Flood damage with building height & protection"
           zh="洪涝损失（计入建筑高度与防洪标准）"
@@ -307,9 +281,15 @@ export default function CityCard({ city, loading, onClose }: Props) {
           </>
         )}
       </section>
+      ),
+    });
+  }
 
-      {/* ERL 2019 urban expansion */}
-      <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
+  if (show("expansion")) {
+    panels.push({
+      key: "expansion",
+      node: (
+      <section className="flex h-full flex-col rounded-md border border-rule-faint bg-paper-warm/60 p-3">
         <PanelHead
           en="Urban land by 2050 (urban cluster)"
           zh="2050 年城市用地（城市集群）"
@@ -348,9 +328,15 @@ export default function CityCard({ city, loading, onClose }: Props) {
           </>
         )}
       </section>
+      ),
+    });
+  }
 
-      {/* JGR 2021 nighttime WBGT */}
-      <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
+  if (show("jgr")) {
+    panels.push({
+      key: "jgr",
+      node: (
+      <section className="flex h-full flex-col rounded-md border border-rule-faint bg-paper-warm/60 p-3">
         <PanelHead
           en="Nighttime heat-stress change (WBGT)"
           zh="夜间热应激变化（WBGT）"
@@ -383,9 +369,15 @@ export default function CityCard({ city, loading, onClose }: Props) {
           </>
         )}
       </section>
+      ),
+    });
+  }
 
-      {/* PNAS Cooler Cities / UHS — per-city 500 m stats when in the 101 */}
-      <section className="mt-4 rounded-md border border-rule-faint bg-paper-warm/60 p-4">
+  if (show("uhs")) {
+    panels.push({
+      key: "uhs",
+      node: (
+      <section className="flex h-full flex-col rounded-md border border-rule-faint bg-paper-warm/60 p-3">
         <PanelHead
           en="Homogeneous block scale & cooling"
           zh="同质功能区尺度与降温"
@@ -455,16 +447,81 @@ export default function CityCard({ city, loading, onClose }: Props) {
           </>
         )}
       </section>
+      ),
+    });
+  }
 
-      {/* Coming layers */}
-      <div className="mt-4 space-y-2">
-        <ComingRow
-          en="SSA infrastructure"
-          zh="撒哈拉以南非洲基础设施"
-          noteEn="Coming — Nature Communications paper in revision."
-          noteZh="即将上线 — Nature Communications 论文修订中。"
-        />
+  return (
+    <aside
+      className="rounded-lg border border-rule bg-paper p-4 shadow-sm"
+      aria-label={`${city.name} city card`}
+    >
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div className="min-w-0 flex-1">
+          <div className="flex flex-wrap items-baseline gap-x-3 gap-y-0.5">
+            <h2 className="font-display text-xl text-ink sm:text-2xl">{city.name}</h2>
+            <p className="text-sm text-ink-muted">
+              {city.country}
+              {city.region ? ` · ${city.region}` : ""}
+            </p>
+          </div>
+          <dl className="mt-2 flex flex-wrap gap-x-6 gap-y-1 text-sm">
+            <div className="flex items-baseline gap-2">
+              <dt className="text-xs uppercase tracking-wide text-ink-faint">
+                <T en="Population (2015)" zh="人口（2015 年）" />
+              </dt>
+              <dd className="font-medium text-ink">{formatPop(city.ucdb.pop15)}</dd>
+            </div>
+            <div className="flex items-baseline gap-2">
+              <dt className="text-xs uppercase tracking-wide text-ink-faint">
+                <T en="Urban extent" zh="城市范围" />
+              </dt>
+              <dd className="font-medium text-ink">
+                {city.ucdb.areaKm2.toLocaleString()} km²
+              </dd>
+            </div>
+          </dl>
+          <p className="mt-1.5 text-xs text-ink-faint">
+            <T
+              en={`Covered by ${nLayers} of ${nMapped} mapped studies.`}
+              zh={`地图已收录 ${nMapped} 项研究，其中 ${nLayers} 项覆盖这座城市。`}
+            />
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={onClose}
+          className="rounded px-2 py-1 text-xs text-ink-faint hover:bg-paper-warm hover:text-ink"
+          aria-label="Close"
+        >
+          ✕
+        </button>
       </div>
+
+      <div
+        className={
+          filter
+            ? "mt-4 grid grid-cols-1 gap-3 md:max-w-2xl"
+            : "mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4"
+        }
+      >
+        {panels.map((p) => (
+          <div key={p.key} className="min-w-0">
+            {p.node}
+          </div>
+        ))}
+      </div>
+
+      {filter == null && (
+        <div className="mt-3">
+          <ComingRow
+            en="SSA infrastructure"
+            zh="撒哈拉以南非洲基础设施"
+            noteEn="Coming — Nature Communications paper in revision."
+            noteZh="即将上线 — Nature Communications 论文修订中。"
+          />
+        </div>
+      )}
     </aside>
   );
 }

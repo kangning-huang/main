@@ -27,7 +27,7 @@ import {
 const MapCanvas = dynamic(() => import("./MapCanvas"), {
   ssr: false,
   loading: () => (
-    <div className="flex h-[min(62vw,520px)] min-h-[360px] w-full items-center justify-center rounded-lg border border-rule bg-paper-warm text-xs text-ink-muted">
+    <div className="flex h-[min(42vw,460px)] min-h-[300px] w-full items-center justify-center rounded-lg border border-rule bg-paper-warm text-xs text-ink-muted">
       <T en="Loading map…" zh="正在加载地图…" />
     </div>
   ),
@@ -227,96 +227,93 @@ export default function AtlasExplorer() {
         </p>
       )}
 
-      <div className="grid gap-5 lg:grid-cols-[1fr_340px]">
-        <div>
-          <div
-            role="radiogroup"
-            aria-label="Filter by study"
-            className="mb-3 flex flex-wrap gap-2 text-sm"
-          >
-            {FILTERS.map((f) => (
-              <button
-                key={String(f.key)}
-                type="button"
-                role="radio"
-                aria-checked={filter === f.key}
-                onClick={() => setFilter(f.key)}
-                className={
-                  filter === f.key
-                    ? "rounded-full border border-ember bg-ember-light px-3 py-1 text-ember-dark"
-                    : "rounded-full border border-rule px-3 py-1 text-ink-muted hover:border-ember hover:text-ember"
-                }
-              >
-                <T en={f.en} zh={f.zh} />
-              </button>
-            ))}
-          </div>
-          <MapCanvas
-            filter={filter}
-            points={points}
-            selectedId={selectedId}
-            onSelect={select}
-            onClearSelection={() => {
-              setSelectedId(null);
-              setCity(null);
-            }}
-          />
-          <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-ink-muted">
-            {legend ? (
-              <>
-                <span className="text-ink-faint">
-                  <T en={`${legend.titleEn}:`} zh={`${legend.titleZh}：`} />
-                </span>
-                {legend.swatches.map((s) => (
-                  <Swatch key={s.en} color={s.color} en={s.en} zh={s.zh} />
-                ))}
-                <Swatch color={ATLAS_DOT_GREY} en={legend.notEn} zh={legend.notZh} />
-              </>
-            ) : (
-              <>
-                <span className="text-ink-faint">
-                  <T en="Papers covering city:" zh="覆盖这座城市的论文" />
-                </span>
-                <Swatch color={PAPER_COUNT_COLORS[1]} en="1" zh="1" />
-                <Swatch color={PAPER_COUNT_COLORS[2]} en="2" zh="2" />
-                <Swatch color={PAPER_COUNT_COLORS[3]} en="3" zh="3" />
-                <Swatch color={PAPER_COUNT_COLORS[4]} en="4" zh="4" />
-                <Swatch color={PAPER_COUNT_COLORS[5]} en="5" zh="5" />
-                <Swatch color={PAPER_COUNT_COLORS[6]} en="6+" zh="6+" />
-                <Swatch color={PAPER_COUNT_COLORS[0]} en="None" zh="无" />
-              </>
-            )}
-            {meta && (
-              <span className="ml-auto">
-                {filter ? (
-                  <T
-                    en={`${filterCount.toLocaleString()} cities in this study`}
-                    zh={`本项研究覆盖 ${filterCount.toLocaleString()} 座城市`}
-                  />
-                ) : (
-                  <T
-                    en={`${meta.counts.mapped.toLocaleString()} cities · ${multiCount.toLocaleString()} with 2+ papers`}
-                    zh={`${meta.counts.mapped.toLocaleString()} 座城市 · ${multiCount.toLocaleString()} 座有至少 2 篇论文覆盖`}
-                  />
-                )}
-              </span>
-            )}
-          </div>
+      <div>
+        <div
+          role="radiogroup"
+          aria-label="Filter by study"
+          className="mb-3 flex flex-wrap gap-2 text-sm"
+        >
+          {FILTERS.map((f) => (
+            <button
+              key={String(f.key)}
+              type="button"
+              role="radio"
+              aria-checked={filter === f.key}
+              onClick={() => setFilter(f.key)}
+              className={
+                filter === f.key
+                  ? "rounded-full border border-ember bg-ember-light px-3 py-1 text-ember-dark"
+                  : "rounded-full border border-rule px-3 py-1 text-ink-muted hover:border-ember hover:text-ember"
+              }
+            >
+              <T en={f.en} zh={f.zh} />
+            </button>
+          ))}
         </div>
-
-        <div className="lg:sticky lg:top-24 lg:self-start">
-          {selectedId != null || loadingCity ? (
-            <CityCard
-              city={city}
-              loading={loadingCity}
-              onClose={() => {
-                setSelectedId(null);
-                setCity(null);
-              }}
-            />
-          ) : null}
+        <MapCanvas
+          filter={filter}
+          points={points}
+          selectedId={selectedId}
+          onSelect={select}
+          onClearSelection={() => {
+            setSelectedId(null);
+            setCity(null);
+          }}
+        />
+        <div className="mt-3 flex flex-wrap items-center gap-3 text-xs text-ink-muted">
+          {legend ? (
+            <>
+              <span className="text-ink-faint">
+                <T en={`${legend.titleEn}:`} zh={`${legend.titleZh}：`} />
+              </span>
+              {legend.swatches.map((s) => (
+                <Swatch key={s.en} color={s.color} en={s.en} zh={s.zh} />
+              ))}
+              <Swatch color={ATLAS_DOT_GREY} en={legend.notEn} zh={legend.notZh} />
+            </>
+          ) : (
+            <>
+              <span className="text-ink-faint">
+                <T en="Papers covering city:" zh="覆盖这座城市的论文" />
+              </span>
+              <Swatch color={PAPER_COUNT_COLORS[1]} en="1" zh="1" />
+              <Swatch color={PAPER_COUNT_COLORS[2]} en="2" zh="2" />
+              <Swatch color={PAPER_COUNT_COLORS[3]} en="3" zh="3" />
+              <Swatch color={PAPER_COUNT_COLORS[4]} en="4" zh="4" />
+              <Swatch color={PAPER_COUNT_COLORS[5]} en="5" zh="5" />
+              <Swatch color={PAPER_COUNT_COLORS[6]} en="6+" zh="6+" />
+              <Swatch color={PAPER_COUNT_COLORS[0]} en="None" zh="无" />
+            </>
+          )}
+          {meta && (
+            <span className="ml-auto">
+              {filter ? (
+                <T
+                  en={`${filterCount.toLocaleString()} cities in this study`}
+                  zh={`本项研究覆盖 ${filterCount.toLocaleString()} 座城市`}
+                />
+              ) : (
+                <T
+                  en={`${meta.counts.mapped.toLocaleString()} cities · ${multiCount.toLocaleString()} with 2+ papers`}
+                  zh={`${meta.counts.mapped.toLocaleString()} 座城市 · ${multiCount.toLocaleString()} 座有至少 2 篇论文覆盖`}
+                />
+              )}
+            </span>
+          )}
         </div>
       </div>
+
+      {selectedId != null || loadingCity ? (
+        <CityCard
+          city={city}
+          loading={loadingCity}
+          filter={filter}
+          onClose={() => {
+            setSelectedId(null);
+            setCity(null);
+          }}
+        />
+      ) : null}
     </div>
   );
 }
