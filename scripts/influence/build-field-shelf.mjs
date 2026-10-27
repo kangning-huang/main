@@ -45,8 +45,8 @@ const REPORT_PATH = join(ROOT, "docs", "reach", "field-shelf-report.md");
 const INFLUENCE_PATH = join(ROOT, "src", "data", "influence.json");
 const readJson = (rel) => JSON.parse(readFileSync(join(ROOT, rel), "utf8"));
 
-// Never pinned while embargoed: Nature Cities "Nested economies of scale" (DOI 404s until publication).
-const EMBARGOED_DOIS = ["10.1038/s44284-026-00532-x"];
+// Previously embargoed DOIs (keep empty unless a new embargo returns).
+const EMBARGOED_DOIS = [];
 const OPENALEX_DOMAINS = 4;
 const BANDS = ["core", "neighbour", "further"];
 /** core = a home topic (d 0); neighbour = same subfield or field (d 1–2); further = d ≥ 3 or no topic. */

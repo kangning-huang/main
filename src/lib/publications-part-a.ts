@@ -131,10 +131,10 @@ export const PUBLICATIONS_A = [
 {
     title: "Nested economies of scale in global city mass",
     authors: "Kangning Huang, Mingzhen Lu",
-    venue: "Nature Cities (in press); scheduled for the November issue",
+    venue: "Nature Cities",
     year: 2026,
     citationCount: 0,
-    url: "https://arxiv.org/abs/2507.03960",
+    doi: "10.1038/s44284-026-00532-x",
     isLeadAuthor: true,
     webUrl: "https://city-mass.nested-complexity.net",
     highlightVideo: "/videos/nested-economies-demo.mp4",
@@ -143,8 +143,8 @@ export const PUBLICATIONS_A = [
     highlightVideoUploadDate: "2026-10-02",
     highlightVideoDuration: "PT1M13S",
     highlights: [
+      "At the neighborhood scale, doubling population density only increases built mass by about 68% (δ ≈ 0.75) — economies of scale intensify inside the city versus city-level scaling (β ≈ 0.90)",
       "Analyzes over 3,000 cities globally to reveal universal sub-linear scaling of built mass with population, with a city-level scaling exponent of β ≈ 0.90 meaning larger cities use less built mass per capita",
-      "Finds that neighborhood-level scaling exhibits an even smaller exponent (δ ≈ 0.75) than city-level scaling (β ≈ 0.90), demonstrating that economies of scale in built mass intensify at finer spatial resolutions",
       "Proposes a theoretical framework showing that city-level sub-linear scaling emerges from the aggregation of within-city neighborhood-level disparities, establishing a nested multi-scale scaling relationship",
       "Redefines 'over-built' and 'under-built' conditions as deviations from expected scaling patterns, linking excess built mass to environmental impact and deficient built mass to inadequate living standards",
     ],

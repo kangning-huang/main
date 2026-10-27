@@ -24,6 +24,12 @@ export const NEWS: NewsItem[] = [
   },
   {
     date: "2026-10",
+    en: "“Nested economies of scale in global city mass” published in Nature Cities (open access).",
+    zh: "论文《全球城市建成质量的嵌套规模经济》已在 Nature Cities 发表（开放获取）。",
+    href: "https://doi.org/10.1038/s44284-026-00532-x",
+  },
+  {
+    date: "2026-10",
     en: "Hosting Prof. Timon McPhearson (Urban Systems Lab / NYU) for a guest talk at NYU Shanghai.",
     zh: "在上海纽约大学邀请 Urban Systems Lab / NYU 的 Timon McPhearson 教授做学术报告。",
     href: "/news#mcphearson-2026",
@@ -38,7 +44,7 @@ export const NEWS: NewsItem[] = [
     date: "2026-09",
     en: "“Nested economies of scale in global city mass” is in press at Nature Cities, scheduled for the November issue.",
     zh: "我的论文《全球城市建成质量的嵌套规模经济》已被 Nature Cities 接收，定于 11 月刊发表。",
-    // In press — link to the on-site entry, not a DOI (doi.org still 404)
+    // Historical in-press note (kept); published DOI is the Oct 2026 news item above
     href: `/publications#${publicationSlug("Nested economies of scale in global city mass")}`,
   },
   {

@@ -21,8 +21,8 @@ export default function ReachMethod() {
         <ul className="mt-4 max-w-3xl list-disc space-y-2 pl-5">
           <li>
             <T
-              en="Papers: a pinned DOI list synced from the Publications pages. No author-name search (OpenAlex disambiguation splits and merges profiles). In-press papers without a resolving DOI, and Nature Cities Nested economies (embargo DOI), are omitted."
-              zh="这里收录的论文，以“学术论文”页同步的固定 DOI 清单为准。OpenAlex 的作者档案有时会被拆分或合并，因此用 DOI 确认论文，不按姓名检索。尚无可解析 DOI 的待刊论文，以及 DOI 尚未开放的 Nature Cities 论文 Nested economies，暂不纳入。"
+              en="Papers: a pinned DOI list synced from the Publications pages. No author-name search (OpenAlex disambiguation splits and merges profiles). In-press papers without a resolving DOI are omitted until the DOI resolves (OpenAlex may lag Crossref)."
+              zh="这里收录的论文，以“学术论文”页同步的固定 DOI 清单为准。OpenAlex 的作者档案有时会被拆分或合并，因此用 DOI 确认论文，不按姓名检索。尚无可解析 DOI 的待刊论文暂不纳入（OpenAlex 入库可能晚于 Crossref）。"
             />
           </li>
           <li>

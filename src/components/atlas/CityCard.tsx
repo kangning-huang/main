@@ -120,12 +120,14 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
             </p>
 
             <div className="mt-3 flex flex-wrap gap-3 text-sm">
-              <Link
-                href={MASS_PAPER.publicationsHref}
+              <a
+                href={MASS_PAPER.doiUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-ember hover:underline"
               >
-                <T en="Paper (in press) →" zh="论文（即将发表）→" />
-              </Link>
+                <T en="Paper →" zh="论文 →" />
+              </a>
               <a
                 href={MASS_PAPER.appUrl}
                 target="_blank"

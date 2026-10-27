@@ -26,8 +26,7 @@ const FINDINGS = [
     zh: "在街区尺度上，人口密度翻倍，建成质量只增加约 68%；规模经济在城市内部更强。",
     venue: "Nature Cities",
     year: "2026",
-    // In press — link to the on-site entry, not a DOI
-    href: `/publications#${publicationSlug("Nested economies of scale in global city mass")}`,
+    href: "https://doi.org/10.1038/s44284-026-00532-x",
   },
   {
     en: "Every extra 100 m of homogeneous building-block scale cuts daytime surface heat islands by about 0.16 °C (~5%).",

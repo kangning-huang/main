@@ -809,10 +809,8 @@ async function main() {
       homeSubfields: [...homeSubfieldNames].sort(),
       requests: requestCount,
       skipped: {
-        natureCitiesNestedEconomies:
-          "DOI 10.1038/s44284-026-00532-x intentionally omitted (embargo 404 until ~13 Nov 2026).",
         inPressOrNoDoi:
-          "Cooler Cities (PNAS in press), SSA infrastructure, Nested economies, and other entries without a resolving DOI in publications-part-*.ts are omitted.",
+          "SSA infrastructure and other entries without a resolving DOI in publications-part-*.ts are omitted. Nature Cities Nested economies and PNAS Cooler Cities are pinned when their DOIs resolve (OpenAlex may lag Crossref).",
       },
     },
     // Back-compat top-level totals = default view (for any leftover readers)

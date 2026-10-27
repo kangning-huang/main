@@ -75,7 +75,7 @@ All aggregation runs on the filtered set of citing works. OpenAlex `group_by` on
 
 - Never mix Google Scholar numbers into `/reach`. The Scholar chart stays on `/publications`.
 - Never populate `dois.json` from OpenAlex author search.
-- Don't add DOIs for in-press papers until the DOI resolves. In particular, don't add the Nature Cities paper ("Nested economies of scale in global city mass") before it is live.
+- Don't add DOIs for in-press papers until the DOI resolves. Nature Cities Nested economies (`10.1038/s44284-026-00532-x`) is pinned (live 2026-10-26); OpenAlex indexing may lag.
 - Sample mode: if `meta.mode` is ever `"sample"`, the page shows a red "SAMPLE DATA" banner and the homepage line disappears. No sample fixture is committed, because the real pipeline works.
 
 ## Adding a paper
@@ -89,5 +89,5 @@ All aggregation runs on the filtered set of citing works. OpenAlex `group_by` on
 - UI filter always defaults to **All** (auto-flip removed per Ken, 2026-10-09); co-author-only share (81.5%) is still recorded in meta.
 - Adaptive 30% taxonomy (field → subfield → topic) powers the main cards; theme→field Sankey is secondary.
 - Homepage: `Cited in M countries — from A to B` using the **All** view distant subfields outside Ken’s home OpenAlex subfields.
-- Nature Cities Nested economies DOI deliberately omitted; AC usage DOI corrected to `10.1021/acs.est.4c00424` (publications list had a 404 DOI).
+- Nature Cities Nested economies DOI pinned 2026-10-26; AC usage DOI corrected to `10.1021/acs.est.4c00424` (publications list had a 404 DOI).
 - Regenerate: `OPENALEX_MAILTO=kh3657@nyu.edu node scripts/influence/fetch-influence.mjs`
