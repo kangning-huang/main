@@ -275,18 +275,18 @@ const THEMES: Theme[] = [
     },
     findings: [
       {
+        en: "At the neighborhood scale, doubling population density raises built mass by only about 68% — economies of scale intensify inside the city.",
+        zh: "在街区尺度上，人口密度翻倍，建成质量只增加约 68%；规模经济在城市内部更强。",
+        venue: "Nature Cities",
+        year: "2026",
+        href: "https://doi.org/10.1038/s44284-026-00532-x",
+      },
+      {
         en: "Double a city's population and its built mass grows only about 87%; bigger cities need less material per person.",
         zh: "城市人口翻倍，建成质量仅增长约87%；城市越大，人均所需的建筑材料越少。",
         venue: "Nature Cities",
         year: "2026",
-        href: pubHref("Nested economies of scale in global city mass"),
-      },
-      {
-        en: "Economies of scale intensify at finer resolution: neighborhood-level scaling (δ ≈ 0.75) is more sub-linear than city-level scaling (β ≈ 0.90).",
-        zh: "把观察尺度从整座城市缩小到街区，规模经济就更明显。街区的标度指数（δ ≈ 0.75）低于城市的标度指数（β ≈ 0.90），意味着人口增加时，建成质量的增长相对更慢。",
-        venue: "Nature Cities",
-        year: "2026",
-        href: pubHref("Nested economies of scale in global city mass"),
+        href: "https://doi.org/10.1038/s44284-026-00532-x",
       },
     ],
     papers: [
@@ -294,8 +294,7 @@ const THEMES: Theme[] = [
         title: "Nested economies of scale in global city mass",
         venue: "Nature Cities",
         year: "2026",
-        href: pubHref("Nested economies of scale in global city mass"),
-        status: IN_PRESS,
+        href: "https://doi.org/10.1038/s44284-026-00532-x",
       },
     ],
     apps: [

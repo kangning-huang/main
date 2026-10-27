@@ -1,5 +1,5 @@
 {
-  "$comment": "Pinned DOI list for the /reach pipeline. Edit by hand; never populate from OpenAlex author search. lens lead = first/last/corresponding (hand-pinned; OpenAlex is_corresponding is unreliable). lens coauthor = other papers with resolving DOIs. Papers without a published DOI and Nature Cities Nested economies (embargo DOI 404) are intentionally absent. Acta Sunyatseni 2010 GeoSOS has no resolving DOI/OpenAlex work — publications lead only, not Reach-pinned.",
+  "$comment": "Pinned DOI list for the /reach pipeline. Edit by hand; never populate from OpenAlex author search. lens lead = first/last/corresponding (hand-pinned; OpenAlex is_corresponding is unreliable). lens coauthor = other papers with resolving DOIs. Papers without a published DOI are intentionally absent. Acta Sunyatseni 2010 GeoSOS has no resolving DOI/OpenAlex work — publications lead only, not Reach-pinned.",
   "themes": [
     {
       "id": "urban-futures",
@@ -121,6 +121,15 @@
       "themeSource": "reach-agent",
       "lens": "lead",
       "doiSource": "src/lib/publications-part-a.ts"
+    },
+    {
+      "doi": "10.1038/s44284-026-00532-x",
+      "short": "Nature Cities 2026 · Nested economies / city mass",
+      "year": 2026,
+      "theme": "scaling-form",
+      "themeSource": "research-page",
+      "lens": "lead",
+      "doiSource": "src/lib/publications-part-a.ts; equal first with Mingzhen Lu; DOI live 2026-10-26"
     },
     {
       "doi": "10.1038/s41467-020-14386-x",

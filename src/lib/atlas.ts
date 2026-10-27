@@ -263,11 +263,12 @@ export function fetchAtlasPoints(): Promise<AtlasPointsFile> {
   return atlasPointsPromise;
 }
 
-/** Nature Cities paper is in press — link the publications entry, never the DOI. */
+/** Nature Cities Nested economies — published 26 Oct 2026 (open access). */
 export const MASS_PAPER = {
   title: "Nested economies of scale in global city mass",
-  venue: "Nature Cities (in press)",
+  venue: "Nature Cities",
   year: 2026,
+  doiUrl: "https://doi.org/10.1038/s44284-026-00532-x",
   publicationsHref: "/publications#nested-economies-of-scale-in-global-city-mass",
   appUrl: "https://city-mass.nested-complexity.net",
 } as const;
