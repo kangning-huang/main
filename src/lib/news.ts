@@ -30,6 +30,12 @@ export const NEWS: NewsItem[] = [
   },
   {
     date: "2026-10",
+    en: "NYU News covered our Nature Cities paper “Nested economies of scale in global city mass”: “Cities’ Infrastructure Grows More Slowly Than Their Populations Do.”",
+    zh: "纽约大学新闻报道了我关于全球城市建成质量嵌套规模经济的 Nature Cities 论文：《城市基础设施的增长速度慢于人口》。",
+    href: "https://www.nyu.edu/about/news-publications/news/2026/october/cities--infrastructure-grows-more-slowly-than-their-populations-.html",
+  },
+  {
+    date: "2026-10",
     en: "Hosting Prof. Timon McPhearson (Urban Systems Lab / NYU) for a guest talk at NYU Shanghai.",
     zh: "在上海纽约大学邀请 Urban Systems Lab / NYU 的 Timon McPhearson 教授做学术报告。",
     href: "/news#mcphearson-2026",
