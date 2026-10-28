@@ -151,6 +151,16 @@ export const PUBLICATIONS_A = [
     keywords: ["urban scaling laws", "Zipf's law", "city size distribution", "built mass", "urban allometry", "urban economics"],
   },
 {
+    title: "Social media as a sensor: unraveling nonlinear drivers of perceived thermal comfort in Shanghai",
+    authors: "Hongping Sun, Chengwei Li, Kangning Huang, Ying Li, ChengHe Guan",
+    venue: "Landscape and Urban Planning",
+    year: 2026,
+    citationCount: 0,
+    doi: "10.1016/j.landurbplan.2026.105636",
+    isLeadAuthor: false,
+    keywords: ["perceived thermal comfort", "social media", "Shanghai", "urban heat", "Landscape and Urban Planning"],
+  },
+{
     title: "Rapid Probabilistic Inundation Mapping Using Local Thresholds and Sentinel-1 SAR Data on Google Earth Engine",
     authors: "Jiayong Liang, Desheng Liu, Lihan Feng, Kangning Huang",
     venue: "Remote Sensing",
