@@ -15,7 +15,7 @@ export interface Advisee {
 export const ADVISEES: Advisee[] = [
   {
     name: "John Nabors",
-    classYear: 2024,
+    classYear: 2025,
     project:
       "Capstone replicating and extending the \"Nested economies of scale in global city mass\" analysis across four Chinese mega-cities.",
     projectZh:
@@ -103,7 +103,7 @@ export const ADVISEES: Advisee[] = [
   },
   {
     name: "Mingya Zhang",
-    classYear: 2026,
+    classYear: 2027,
     project:
       "Research on low-carbon transport time penalties in Shanghai.",
     projectZh:
@@ -133,7 +133,7 @@ export const ADVISEES: Advisee[] = [
     linkedin: "https://www.linkedin.com/in/gabriel-fernandes-26a1651b4/",
   },
   {
-    name: "Xi Bingxin",
+    name: "Bingxin Xi",
     classYear: 2028,
     project:
       "Dean's Undergraduate Research Fund project.",
