@@ -44,6 +44,27 @@ interface Theme {
   apps: AppLink[];
   openQuestions: Bilingual[];
   figure?: { src: string; alt: string; caption: Bilingual };
+  banner: Banner;
+}
+
+/**
+ * Section banner, 1090 × 406, faded into the section title at the bottom.
+ * Illustrations in the look of the Nature Cities nested-hex banner
+ * (scaling-form); the other three come from scripts/research-banners/make_banners.py.
+ */
+interface Banner {
+  src: string;
+  src2x?: string;
+  alt: string;
+  /** Optional key, shown over the banner's top-right corner. */
+  legend?: LegendItem[];
+}
+
+interface LegendItem {
+  /** "swatch" = solid square, "ramp" = low-to-high gradient bar, "line" = outline stroke. */
+  kind: "swatch" | "ramp" | "line";
+  color: string;
+  label: Bilingual;
 }
 
 const IN_PRESS: Bilingual = { en: "in press", zh: "待刊" };
@@ -53,6 +74,20 @@ const IN_PRESS: Bilingual = { en: "in press", zh: "待刊" };
 const THEMES: Theme[] = [
   {
     id: "urban-futures",
+    banner: {
+      src: "/research/urban-futures.jpg",
+      src2x: "/research/urban-futures@2x.jpg",
+      alt: "Manhattan aerial as a night map, overlaid with a raster grid: today's urban land in white, and surrounding cells shaded navy-grey to yellow by their probability of becoming urban by 2050",
+      legend: [
+        { kind: "swatch", color: "#cee4f2", label: { en: "Urban land today", zh: "现有城市用地" } },
+        {
+          kind: "ramp",
+          color: "linear-gradient(to right, #31446b, #666970, #958f78, #cbba69, #ffea46)",
+          label: { en: "Chance of becoming urban by 2050: low → high", zh: "2050 年前成为城市的概率：低 → 高" },
+        },
+        { kind: "line", color: "#6edeec", label: { en: "Most likely expansion", zh: "最可能的扩张区" } },
+      ],
+    },
     title: { en: "Urban futures", zh: "城市未来" },
     question: {
       en: "How much will cities grow by mid-century, where, and what will that growth commit us to?",
@@ -123,6 +158,11 @@ const THEMES: Theme[] = [
   },
   {
     id: "heat",
+    banner: {
+      src: "/research/heat.jpg",
+      src2x: "/research/heat@2x.jpg",
+      alt: "Manhattan aerial as a night map, overlaid with a heat field in plum, red, orange and yellow, ringed by isotherm contours around a yellow-white hot core",
+    },
     title: { en: "Heat", zh: "高温" },
     question: {
       en: "How does the way we build cities change who overheats, by day and by night?",
@@ -203,6 +243,16 @@ const THEMES: Theme[] = [
   },
   {
     id: "flood-coasts",
+    banner: {
+      src: "/research/flood-coasts.jpg",
+      src2x: "/research/flood-coasts@2x.jpg",
+      alt: "Manhattan aerial as a night map, with 10-, 100- and 500-year flood extents spreading inland from a river as stacked translucent blue sheets",
+      legend: [
+        { kind: "swatch", color: "#62c6e8", label: { en: "10-year flood", zh: "十年一遇洪水" } },
+        { kind: "swatch", color: "#2f7fd0", label: { en: "100-year flood", zh: "百年一遇洪水" } },
+        { kind: "swatch", color: "#1b3f8f", label: { en: "500-year flood", zh: "五百年一遇洪水" } },
+      ],
+    },
     title: { en: "Flood and coasts", zh: "洪水与海岸" },
     question: {
       en: "Where does flood damage really land once we count building height and flood defenses?",
@@ -268,6 +318,10 @@ const THEMES: Theme[] = [
   },
   {
     id: "scaling-form",
+    banner: {
+      src: "/research/scaling-form.jpg",
+      alt: "Manhattan aerial as a night map, overlaid with nested hexagonal grids of neighbourhood density",
+    },
     title: { en: "Scaling and form", zh: "标度与形态" },
     question: {
       en: "How much material does a city need per person, and why do larger cities need less?",
@@ -318,8 +372,8 @@ const THEMES: Theme[] = [
       src: "/videos/nested-economies-demo-poster.jpg",
       alt: "Still from the animated summary of “Nested economies of scale in global city mass”",
       caption: {
-        en: "From the animated summary of the Nature Cities paper (in press).",
-        zh: "摘自 Nature Cities 待刊论文的动画摘要。",
+        en: "From the animated summary of the Nature Cities paper.",
+        zh: "摘自 Nature Cities 论文的动画摘要。",
       },
     },
   },
@@ -402,15 +456,56 @@ export default function ResearchPage() {
                 className="scroll-mt-24 border-t border-rule-faint pt-10"
                 aria-labelledby={`${theme.id}-heading`}
               >
-                <p className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
-                  {String(i + 1).padStart(2, "0")}
-                </p>
-                <h2 id={`${theme.id}-heading`} className="mt-1 font-display text-3xl text-ink">
-                  <T en={theme.title.en} zh={theme.title.zh} />
-                </h2>
-                <p className="mt-3 max-w-3xl font-display text-xl italic leading-snug text-ink-muted">
-                  <T en={theme.question.en} zh={theme.question.zh} />
-                </p>
+                <header className="relative">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={theme.banner.src}
+                    srcSet={theme.banner.src2x ? `${theme.banner.src} 1x, ${theme.banner.src2x} 2x` : undefined}
+                    alt={theme.banner.alt}
+                    width={1090}
+                    height={406}
+                    loading={i === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                    className="aspect-[1090/406] w-full rounded-t-xl object-cover [mask-image:linear-gradient(to_bottom,#000_0%,#000_44%,rgba(0,0,0,0.32)_66%,rgba(0,0,0,0.06)_82%,transparent_94%)]"
+                  />
+                  {theme.banner.legend && (
+                    <ul className="absolute right-3 top-3 hidden space-y-1.5 rounded-lg bg-[rgba(11,16,42,0.72)] px-3 py-2.5 text-xs font-medium text-white shadow-lg backdrop-blur-sm sm:block">
+                      {theme.banner.legend.map((item) => (
+                        <li key={item.label.en} className="flex items-center gap-2">
+                          <span
+                            aria-hidden="true"
+                            className={
+                              item.kind === "ramp"
+                                ? "h-2.5 w-8 shrink-0 rounded-sm"
+                                : item.kind === "line"
+                                  ? "h-3 w-3 shrink-0 rounded-[2px] border-2"
+                                  : "h-3 w-3 shrink-0 rounded-[2px]"
+                            }
+                            style={
+                              item.kind === "ramp"
+                                ? { backgroundImage: item.color }
+                                : item.kind === "line"
+                                  ? { borderColor: item.color }
+                                  : { backgroundColor: item.color }
+                            }
+                          />
+                          <T en={item.label.en} zh={item.label.zh} />
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  <div className="relative -mt-[12%] px-1 sm:-mt-[10%] sm:px-2">
+                    <h2 id={`${theme.id}-heading`} className="flex items-baseline gap-3 font-display text-4xl font-semibold text-ink sm:text-5xl">
+                      <span className="font-sans text-base font-bold tracking-[0.15em] text-ember sm:text-lg">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <T en={theme.title.en} zh={theme.title.zh} />
+                    </h2>
+                    <p className="mt-3 max-w-3xl font-display text-xl font-medium italic leading-snug text-ink sm:text-2xl">
+                      <T en={theme.question.en} zh={theme.question.zh} />
+                    </p>
+                  </div>
+                </header>
 
                 <div className="mt-8 grid gap-10 lg:grid-cols-[3fr_2fr]">
                   <div>
