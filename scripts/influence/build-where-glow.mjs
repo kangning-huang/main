@@ -17,6 +17,7 @@ import { deflateSync } from "zlib";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import { createHash } from "crypto";
+import { getCiting } from "./lib/openalex.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..", "..");
@@ -28,10 +29,6 @@ const CACHE_PATH = join(ROOT, "data", "influence", "where-affiliations-cache.jso
 const USE_CACHE = process.argv.includes("--cache") || process.argv.includes("--from-cache");
 
 const API = "https://api.openalex.org";
-const CITING_SELECT = [
-  "id", "doi", "title", "publication_year", "cited_by_count", "type",
-  "primary_topic", "topics", "keywords", "authorships", "primary_location",
-].join(",");
 
 // Equal Earth — must match scripts/influence/build-world-map.mjs
 const A1 = 1.340264, A2 = -0.081106, A3 = 0.000893, A4 = 0.003796;
@@ -110,20 +107,6 @@ async function getJson(url, attempt = 1) {
   if (typeof json?.meta?.cost_usd === "number") costUsd += json.meta.cost_usd;
   await sleep(100);
   return json;
-}
-
-async function getAllCiting(workId) {
-  const out = [];
-  let cursor = "*";
-  while (cursor) {
-    const page = await getJson(
-      `${API}/works?filter=cites:${workId}&per_page=200&cursor=${encodeURIComponent(cursor)}&select=${CITING_SELECT}`
-    );
-    out.push(...(page.results ?? []));
-    cursor = page.meta?.next_cursor;
-    if (!page.results?.length) break;
-  }
-  return out;
 }
 
 const shortId = (id) => (id ? String(id).replace("https://openalex.org/", "") : null);
@@ -385,7 +368,7 @@ async function main() {
       continue;
     }
     const keys = authorKeys(work);
-    const citing = await getAllCiting(shortId(work.id));
+    const citing = await getCiting(shortId(work.id), p.doi);
     const kept = [];
     let removed = 0;
     for (const c of citing) {

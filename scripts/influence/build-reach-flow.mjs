@@ -6,6 +6,7 @@
 import { readFileSync, writeFileSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
+import { getCiting } from "./lib/openalex.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..", "..");
@@ -13,7 +14,6 @@ const influence = JSON.parse(readFileSync(join(ROOT, "src/data/influence.json"),
 const OUT = join(ROOT, "src/data/reach-flow.json");
 
 const API = "https://api.openalex.org";
-const CITING_SELECT = "id,publication_year,primary_topic,topics,keywords,authorships";
 const AS_OF = influence.meta.asOf;
 
 const themeConfig = JSON.parse(
@@ -54,20 +54,6 @@ async function getJson(url, attempt = 1) {
   if (!res.ok) throw new Error(`${res.status} ${url}`);
   await sleep(100);
   return res.json();
-}
-
-async function getAllCiting(workId) {
-  const out = [];
-  let cursor = "*";
-  while (cursor) {
-    const page = await getJson(
-      `${API}/works?filter=cites:${workId}&per_page=200&cursor=${encodeURIComponent(cursor)}&select=${CITING_SELECT}`
-    );
-    out.push(...page.results);
-    cursor = page.meta.next_cursor;
-    if (!page.results.length) break;
-  }
-  return out;
 }
 
 function nameKey(name) {
@@ -194,7 +180,7 @@ async function main() {
       continue;
     }
     const keys = authorKeys(work);
-    const citing = await getAllCiting(shortId(work.id));
+    const citing = await getCiting(shortId(work.id), p.doi);
     let kept = 0;
     for (const c of citing) {
       if (isSelf(c, keys)) continue;

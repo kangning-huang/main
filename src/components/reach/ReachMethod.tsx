@@ -71,7 +71,11 @@ export default function ReachMethod() {
             <T
               en={
                 <>
-                  Every number on this page is from OpenAlex. Google Scholar counts are higher and are shown only on the{" "}
+                  Citing works are OpenAlex citation links plus works that Semantic Scholar lists as citing a pinned paper but
+                  OpenAlex has not linked (looked up in OpenAlex by DOI). Every work&apos;s metadata — topic, institutions,
+                  countries, its own citation count — is from OpenAlex, and every work passes the same self-citation rule.
+                  OpenAlex open-discussion replies (record type peer-review) are excluded. Google Scholar counts are higher
+                  and are shown only on the{" "}
                   <Link href="/publications" className="text-teal hover:text-ember">
                     Publications
                   </Link>{" "}
@@ -80,7 +84,7 @@ export default function ReachMethod() {
               }
               zh={
                 <>
-                  本页所有数字均来自 OpenAlex。谷歌学术统计通常更高，仅在
+                  施引文献包括 OpenAlex 的引用记录，以及 Semantic Scholar 显示引用了清单论文、但 OpenAlex 尚未关联的文献（按 DOI 在 OpenAlex 中查到）。每篇文献的主题、机构、国家和自身被引次数都取自 OpenAlex，并按同一规则剔除自引。OpenAlex 中的公开讨论回复（类型为 peer-review）不计入。谷歌学术统计通常更高，仅在
                   <Link href="/publications" className="text-teal hover:text-ember">
                     学术论文
                   </Link>

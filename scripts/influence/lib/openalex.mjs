@@ -13,6 +13,7 @@
  */
 
 import { existsSync, mkdirSync, readFileSync, renameSync, writeFileSync } from "fs";
+import { createHash } from "crypto";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 
@@ -122,8 +123,25 @@ export async function getWork(doi) {
   return work;
 }
 
-/** Every work citing an OpenAlex work id, self-citations included (cached). */
-export async function getCiting(workId) {
+/**
+ * Every work citing a pinned paper, self-citations included: OpenAlex `cites:`
+ * links plus the Semantic Scholar extras for `citedDoi` (see below), minus
+ * OpenAlex `peer-review` records (Copernicus open-discussion replies). Every
+ * record is an OpenAlex work, so the self-citation rule, topics and
+ * affiliations apply unchanged.
+ */
+export async function getCiting(workId, citedDoi) {
+  const own = (await getOpenalexCiting(workId)).filter((w) => !EXCLUDED_TYPES.has(w.type));
+  if (!citedDoi) return own;
+  const extras = (await getS2Extras(workId, citedDoi, own)).filter((w) => !EXCLUDED_TYPES.has(w.type));
+  return extras.length ? [...own, ...extras] : own;
+}
+
+/** OpenAlex record types that are not citing works. */
+export const EXCLUDED_TYPES = new Set(["peer-review"]);
+
+/** OpenAlex `cites:` list for a work id, as returned (cached). */
+async function getOpenalexCiting(workId) {
   const path = join(CACHE_DIR, "citing", `${safeName(workId)}.json`);
   const hit = readCache(path, CITING_SELECT);
   if (hit) return hit.results;
@@ -142,6 +160,80 @@ export async function getCiting(workId) {
   }
   writeCache(path, { workId, select: CITING_SELECT, fetchedAt: new Date().toISOString(), count: results.length, results });
   return results;
+}
+
+// ── Semantic Scholar extras ────────────────────────────────────────────────
+// data/s2-reach/latest.json (scripts/semantic-scholar/fetch-s2-citations.mjs)
+// lists the works S2 says cite each pinned DOI. Those whose DOI is not already
+// among OpenAlex's citing works are looked up in OpenAlex by DOI and added,
+// tagged `via: "semantic-scholar"`. S2 works without a DOI, or with no OpenAlex
+// record, are counted in stats.s2 but never added: the page needs OpenAlex
+// topics and affiliations for every square.
+
+export const S2_PATH = join(ROOT, "data", "s2-reach", "latest.json");
+const S2_DISABLED = process.argv.includes("--no-s2") || process.env.REACH_S2 === "off";
+
+stats.s2 = { enabled: !S2_DISABLED, asOf: null, citingDois: 0, extrasAdded: 0, notInOpenalex: 0, noDoi: 0 };
+
+let s2Index = null;
+function s2CitingDois(citedDoi) {
+  if (!s2Index) {
+    s2Index = new Map();
+    if (!S2_DISABLED && existsSync(S2_PATH)) {
+      const s2 = JSON.parse(readFileSync(S2_PATH, "utf8"));
+      stats.s2.asOf = s2.meta.fetchedAt.slice(0, 10);
+      const doiOf = new Map(s2.papers.map((p) => [p.idx, p.doi.toLowerCase()]));
+      for (const w of s2.works) {
+        for (const c of w.cites) {
+          const d = doiOf.get(c.paper);
+          if (!s2Index.has(d)) s2Index.set(d, { dois: new Set(), noDoi: 0 });
+          if (w.doi) s2Index.get(d).dois.add(w.doi.toLowerCase());
+          else s2Index.get(d).noDoi++;
+        }
+      }
+    }
+  }
+  return s2Index.get(citedDoi.toLowerCase()) ?? { dois: new Set(), noDoi: 0 };
+}
+
+const titleKey = (t) => (t || "").normalize("NFKD").toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+
+async function getS2Extras(workId, citedDoi, openalexCiting) {
+  const { dois, noDoi } = s2CitingDois(citedDoi);
+  if (!dois.size) return [];
+  const haveDoi = new Set(openalexCiting.map((w) => stripDoi(w.doi)).filter(Boolean));
+  const haveId = new Set(openalexCiting.map((w) => w.id));
+  // Same work under another DOI (e.g. preprint vs. article): skip on title + year.
+  const haveTitle = new Set(openalexCiting.map((w) => `${titleKey(w.title)}|${w.publication_year}`));
+  // Commas and pipes would break the OpenAlex filter syntax.
+  const wanted = [...dois].filter((d) => !haveDoi.has(d) && !/[,|]/.test(d)).sort();
+
+  const path = join(CACHE_DIR, "s2-extras", `${safeName(workId)}.json`);
+  const key = `${CITING_SELECT}|${createHash("sha1").update(wanted.join("\n")).digest("hex")}`;
+  let found = readCache(path, key)?.results;
+  if (!found) {
+    if (stats.cacheMode === "offline") throw new Error(`offline: no cached S2 extras for ${workId} (${path})`);
+    found = [];
+    for (let i = 0; i < wanted.length; i += 50) {
+      const batch = wanted.slice(i, i + 50).map(encodeURIComponent).join("|");
+      const page = await getJson(`${API}/works?filter=doi:${batch}&per_page=50&select=${CITING_SELECT}`);
+      found.push(...page.results);
+    }
+    writeCache(path, { workId, citedDoi, select: key, fetchedAt: new Date().toISOString(), requested: wanted.length, results: found });
+  }
+
+  const extras = [];
+  const seen = new Set();
+  for (const w of found) {
+    if (haveId.has(w.id) || seen.has(w.id) || haveTitle.has(`${titleKey(w.title)}|${w.publication_year}`)) continue;
+    seen.add(w.id);
+    extras.push({ ...w, via: "semantic-scholar" });
+  }
+  stats.s2.citingDois += dois.size;
+  stats.s2.extrasAdded += extras.length;
+  stats.s2.notInOpenalex += wanted.length - found.length;
+  stats.s2.noDoi += noDoi;
+  return extras;
 }
 
 /** Date (YYYY-MM-DD) of the oldest work or citing list used so far, or today if none. */

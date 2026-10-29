@@ -20,6 +20,7 @@ import { readFileSync, writeFileSync, mkdirSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import { createHash } from "crypto";
+import { getCiting, stats as libStats } from "./lib/openalex.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, "..", "..");
@@ -35,10 +36,6 @@ const ADAPTIVE_MAX_SHARE = 0.3;
 const OTHER_MIN_SHARE = 0.02;
 const TOPIC_SCORE_MIN = 0.5;
 const AUTO_FLIP_COAUTHOR_SHARE = 0.5; // reported only; default is always All
-const CITING_SELECT = [
-  "id", "doi", "title", "publication_year", "cited_by_count", "type",
-  "primary_topic", "topics", "keywords", "authorships", "primary_location",
-].join(",");
 
 let requestCount = 0;
 let costUsd = 0;
@@ -77,23 +74,6 @@ async function getJson(url, attempt = 1) {
   if (typeof json?.meta?.cost_usd === "number") costUsd += json.meta.cost_usd;
   await sleep(120);
   return json;
-}
-
-async function getAllCiting(workId) {
-  // Page-based paging: OpenAlex now requires an API key for cursor= past page 1.
-  // page= works on the shared free pool without a key.
-  const out = [];
-  let pageNum = 1;
-  for (;;) {
-    const url = `${API}/works?filter=cites:${workId}&per_page=200&page=${pageNum}&select=${CITING_SELECT}`;
-    const page = await getJson(url);
-    out.push(...page.results);
-    const total = page.meta?.count ?? out.length;
-    if (page.results.length === 0 || out.length >= total || page.results.length < 200) break;
-    pageNum += 1;
-    if (pageNum > 50) throw new Error(`OpenAlex page cap for ${workId}`);
-  }
-  return out;
 }
 
 const shortId = (id) => (id ? id.replace("https://openalex.org/", "") : null);
@@ -659,7 +639,7 @@ async function main() {
       continue;
     }
     const keys = authorKeys(work);
-    const citing = await getAllCiting(shortId(work.id));
+    const citing = await getCiting(shortId(work.id), p.doi);
     const kept = [];
     let removed = 0;
     for (const c of citing) {
@@ -671,7 +651,7 @@ async function main() {
       } else kept.push(c);
     }
     console.log(
-      `  OpenAlex cited_by_count=${work.cited_by_count} fetched=${citing.length} self-removed=${removed} kept=${kept.length}`
+      `  OpenAlex cited_by_count=${work.cited_by_count} fetched=${citing.length} (S2 extras ${citing.filter((c) => c.via).length}) self-removed=${removed} kept=${kept.length}`
     );
 
     const ownField = fieldOf(work);
@@ -705,6 +685,7 @@ async function main() {
       citingFetched: citing.length,
       selfCitationsRemoved: removed,
       citingNonSelf: kept.length,
+      citingNonSelfViaSemanticScholar: kept.filter((c) => c.via === "semantic-scholar").length,
       byYear,
     });
 
@@ -787,8 +768,17 @@ async function main() {
   const output = {
     meta: {
       mode: "live",
-      source: "OpenAlex",
+      source: libStats.s2.asOf ? "OpenAlex + Semantic Scholar" : "OpenAlex",
       sourceUrl: "https://openalex.org",
+      sources: {
+        rule:
+          "Citing works = OpenAlex cites: links, plus works Semantic Scholar lists as citing a pinned DOI that OpenAlex has not linked. Those extras are looked up in OpenAlex by DOI, so every work carries OpenAlex topics and affiliations and passes the same self-citation rule. OpenAlex peer-review records (open-discussion replies) are excluded.",
+        semanticScholarAsOf: libStats.s2.asOf,
+        semanticScholarExtrasFetched: libStats.s2.extrasAdded,
+        semanticScholarNotInOpenalex: libStats.s2.notInOpenalex,
+        semanticScholarNoDoi: libStats.s2.noDoi,
+        excludedTypes: ["peer-review"],
+      },
       asOf,
       generatedAt: new Date().toISOString(),
       schema: "reach-v2-c2-f5-h2",
@@ -825,7 +815,8 @@ async function main() {
   console.log(
     `\nSummary ALL: ${viewAll.totals.uniqueCitingWorks} works, ${viewAll.totals.countriesCount} countries, ${viewAll.adaptive.length} adaptive nodes` +
       `\nSummary LEAD: ${viewLead.totals.uniqueCitingWorks} works, ${viewLead.totals.countriesCount} countries` +
-      `\n${requestCount} requests, ~$${costUsd.toFixed(4)}`
+      `\n${requestCount} requests, ~$${costUsd.toFixed(4)}; lib ${libStats.requests} requests, ~$${libStats.costUsd.toFixed(4)}` +
+      `\nSemantic Scholar extras: ${libStats.s2.extrasAdded} added, ${libStats.s2.notInOpenalex} not in OpenAlex, ${libStats.s2.noDoi} without DOI (S2 as of ${libStats.s2.asOf ?? "—"})`
   );
   console.log(
     `Homepage distant (All): from "${viewAll.homepageDistant.a}" to "${viewAll.homepageDistant.b}"`

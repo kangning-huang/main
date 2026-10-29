@@ -1,0 +1,5857 @@
+{
+ "summary": {
+  "scholarProfile": "s_domssAAAAJ",
+  "source": "Google Scholar 'Cited by' pages, crawled from a logged-in browser session",
+  "latestFetch": "2026-10-28T08:17:40.382Z",
+  "builtAt": "2026-10-28T09:07:21.474Z",
+  "citedPapers": 41,
+  "profileCitationSum": 5076,
+  "fetchedRows": 145,
+  "uniqueCitingWorks": 145,
+  "uniqueCitingWorksExSelf": 145,
+  "uniqueCitingLeadExSelf": 145,
+  "greyLit": {
+   "book": 2,
+   "preprint": 5,
+   "thesis": 2
+  }
+ },
+ "works": [
+  {
+   "id": "GS_2156307166805757147",
+   "scholarClusterId": "2156307166805757147",
+   "scholarCid": "2wwWkPG97B0J",
+   "title": "Understanding the drivers of sustainable land expansion using a patch-generating land use simulation (PLUS) model: A case study in Wuhan, China",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "X Liang",
+    "Q Guan",
+    "KC Clarke",
+    "S Liu",
+    "B Wang"
+   ],
+   "authorsTruncated": true,
+   "venue": "… , Environment and Urban …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "X Liang, Q Guan, KC Clarke, S Liu, B Wang… - … , Environment and Urban …, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "X Liang",
+     "id": "sIZG1mkAAAAJ"
+    },
+    {
+     "name": "Q Guan",
+     "id": "6WOeTvQAAAAJ"
+    },
+    {
+     "name": "KC Clarke",
+     "id": "fjZMW1oAAAAJ"
+    }
+   ],
+   "citedBy": 2105,
+   "scholarCitesId": "2156307166805757147",
+   "versions": 5,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0198971520303021",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0198971520303021",
+   "snippet": "Cellular Automata (CA) are widely used to model the dynamics within complex land use and land cover (LULC) systems. Past CA model research has focused on improving the technical …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "X Liang"
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_6058325679364559229",
+   "scholarClusterId": "6058325679364559229",
+   "scholarCid": "fdEmZBt_E1QJ",
+   "title": "The impact of population growth on natural resources and farmers' capacity to adapt to climate change in low-income countries",
+   "type": null,
+   "authors": [
+    "MM Maja",
+    "SF Ayano"
+   ],
+   "authorsTruncated": false,
+   "venue": "Earth Systems and Environment",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Springer",
+   "byline": "MM Maja, SF Ayano - Earth Systems and Environment, 2021 - Springer",
+   "scholarAuthorIds": [
+    {
+     "name": "MM Maja",
+     "id": "QNdUhnkAAAAJ"
+    }
+   ],
+   "citedBy": 796,
+   "scholarCitesId": "6058325679364559229",
+   "versions": 6,
+   "url": "https://link.springer.com/article/10.1007/s41748-021-00209-6",
+   "fullText": "https://link.springer.com/content/pdf/10.1007/s41748-021-00209-6.pdf",
+   "snippet": "Population growth and natural resources are intricately linked and play role in climate disruption and farmers' ability to adapt to climate change especially in developing countries …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_8902958594200074505",
+   "scholarClusterId": "8902958594200074505",
+   "scholarCid": "CXlO6aupjXsJ",
+   "title": "Coordination engineering of single‐atom catalysts for the oxygen reduction reaction: a review",
+   "type": null,
+   "authors": [
+    "J Zhang",
+    "H Yang",
+    "B Liu"
+   ],
+   "authorsTruncated": false,
+   "venue": "Advanced Energy Materials",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Wiley Online Library",
+   "byline": "J Zhang, H Yang, B Liu - Advanced Energy Materials, 2021 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "H Yang",
+     "id": "HD1s2f0AAAAJ"
+    },
+    {
+     "name": "B Liu",
+     "id": "F4EkvTUAAAAJ"
+    }
+   ],
+   "citedBy": 506,
+   "scholarCitesId": "8902958594200074505",
+   "versions": 8,
+   "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/aenm.202002473",
+   "fullText": "https://advanced.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/aenm.202002473",
+   "snippet": "Future renewable energy supplies and a sustainable environment rely on many important catalytic processes. Single‐atom catalysts (SACs) are attractive because of their maximum …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_9154569032680711400",
+   "scholarClusterId": "9154569032680711400",
+   "scholarCid": "6KS5QAiQC38J",
+   "title": "Anthropogenic emissions and urbanization increase risk of compound hot extremes in cities",
+   "type": null,
+   "authors": [
+    "J Wang",
+    "Y Chen",
+    "W Liao",
+    "G He",
+    "SFB Tett",
+    "Z Yan"
+   ],
+   "authorsTruncated": true,
+   "venue": "Nature Climate …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "nature.com",
+   "byline": "J Wang, Y Chen, W Liao, G He, SFB Tett, Z Yan… - Nature Climate …, 2021 - nature.com",
+   "scholarAuthorIds": [
+    {
+     "name": "W Liao",
+     "id": "F7gMUF8AAAAJ"
+    },
+    {
+     "name": "SFB Tett",
+     "id": "kWCe0nsAAAAJ"
+    }
+   ],
+   "citedBy": 502,
+   "scholarCitesId": "9154569032680711400",
+   "versions": 9,
+   "url": "https://www.nature.com/articles/s41558-021-01196-2",
+   "fullText": "https://www.nature.com/articles/s41558-021-01196-2.pdf",
+   "snippet": "Urban areas are experiencing strongly increasing hot temperature extremes. However, these urban heat events have seldom been the focus of traditional detection and attribution …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "Y Chen",
+     "W Liao"
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_3103059491519586056",
+   "scholarClusterId": "3103059491519586056",
+   "scholarCid": "CN_ttCpIECsJ",
+   "title": "Urbanization, land use change, and carbon emissions: Quantitative assessments for city-level carbon emissions in Beijing-Tianjin-Hebei region",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "Y Zhou",
+    "M Chen",
+    "Z Tang",
+    "Z Mei"
+   ],
+   "authorsTruncated": false,
+   "venue": "Sustainable Cities and Society",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "Y Zhou, M Chen, Z Tang, Z Mei - Sustainable Cities and Society, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "M Chen",
+     "id": "QzkGxugAAAAJ"
+    }
+   ],
+   "citedBy": 498,
+   "scholarCitesId": "3103059491519586056",
+   "versions": 2,
+   "url": "https://www.sciencedirect.com/science/article/pii/S221067072030915X",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S221067072030915X",
+   "snippet": "Globally, urbanization has dramatically changed land cover, causing a rapid growth in carbon emissions and related risk of climate change. This study estimated city-level land use …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_12587077179206681894",
+   "scholarClusterId": "12587077179206681894",
+   "scholarCid": "JkUKWwFIrq4J",
+   "title": "The sustainability of artificial intelligence: An urbanistic viewpoint from the lens of smart and sustainable cities",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "T Yigitcanlar",
+    "F Cugurullo"
+   ],
+   "authorsTruncated": false,
+   "venue": "Sustainability",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "mdpi.com",
+   "byline": "T Yigitcanlar, F Cugurullo - Sustainability, 2020 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "T Yigitcanlar",
+     "id": "p2DUYJAAAAAJ"
+    },
+    {
+     "name": "F Cugurullo",
+     "id": "2wGt2RkAAAAJ"
+    }
+   ],
+   "citedBy": 471,
+   "scholarCitesId": "12587077179206681894",
+   "versions": 12,
+   "url": "https://www.mdpi.com/2071-1050/12/20/8548",
+   "fullText": "https://www.mdpi.com/2071-1050/12/20/8548",
+   "snippet": "The popularity and application of artificial intelligence (AI) are increasing rapidly all around the world—where, in simple terms, AI is a technology which mimics the behaviors commonly …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_4202562193107272286",
+   "scholarClusterId": "4202562193107272286",
+   "scholarCid": "XkKlagyAUjoJ",
+   "title": "LCZ Generator: a web application to create Local Climate Zone maps",
+   "type": null,
+   "authors": [
+    "M Demuzere",
+    "J Kittner",
+    "B Bechtel"
+   ],
+   "authorsTruncated": false,
+   "venue": "Frontiers in Environmental Science",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "frontiersin.org",
+   "byline": "M Demuzere, J Kittner, B Bechtel - Frontiers in Environmental Science, 2021 - frontiersin.org",
+   "scholarAuthorIds": [
+    {
+     "name": "M Demuzere",
+     "id": "Q4OH4IkAAAAJ"
+    },
+    {
+     "name": "J Kittner",
+     "id": "H9XJhAwAAAAJ"
+    },
+    {
+     "name": "B Bechtel",
+     "id": "eg6G3Y4AAAAJ"
+    }
+   ],
+   "citedBy": 432,
+   "scholarCitesId": "4202562193107272286",
+   "versions": 9,
+   "url": "https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2021.637455/full",
+   "fullText": "https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2021.637455/pdf",
+   "snippet": "Since their introduction in 2012, Local Climate Zones (LCZs) emerged as a new standard for characterizing urban landscapes, providing a holistic classification approach that takes into …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_9900357131057565755",
+   "scholarClusterId": "9900357131057565755",
+   "scholarCid": "OxAxOlsiZYkJ",
+   "title": "Exploring the multiple land degradation pathways across the planet",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "R Prăvălie"
+   ],
+   "authorsTruncated": false,
+   "venue": "Earth-Science Reviews",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "R Prăvălie - Earth-Science Reviews, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "R Prăvălie",
+     "id": "lDD2IH0AAAAJ"
+    }
+   ],
+   "citedBy": 411,
+   "scholarCitesId": "9900357131057565755",
+   "versions": 4,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0012825221001902",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0012825221001902",
+   "snippet": "Land degradation has become one of the biggest environmental challenges human society is currently facing, which is why understanding the global pattern of this land crisis is …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_11900086819605530036",
+   "scholarClusterId": "11900086819605530036",
+   "scholarCid": "tEXlvumZJaUJ",
+   "title": "Tin oxide electron‐selective layers for efficient, stable, and scalable perovskite solar cells",
+   "type": null,
+   "authors": [
+    "C Altinkaya",
+    "E Aydin",
+    "E Ugur",
+    "FH Isikgor"
+   ],
+   "authorsTruncated": true,
+   "venue": "Advanced …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Wiley Online Library",
+   "byline": "C Altinkaya, E Aydin, E Ugur, FH Isikgor… - Advanced …, 2021 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "C Altinkaya",
+     "id": "jKiO7WIAAAAJ"
+    },
+    {
+     "name": "E Aydin",
+     "id": "dJkUdYoAAAAJ"
+    },
+    {
+     "name": "E Ugur",
+     "id": "fXAcN5oAAAAJ"
+    },
+    {
+     "name": "FH Isikgor",
+     "id": "EWIO4xAAAAAJ"
+    }
+   ],
+   "citedBy": 390,
+   "scholarCitesId": "11900086819605530036",
+   "versions": 15,
+   "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adma.202005504",
+   "fullText": "https://advanced.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adma.202005504",
+   "snippet": "Perovskite solar cells (PSCs) have become a promising photovoltaic (PV) technology, where the evolution of the electron‐selective layers (ESLs), an integral part of any PV device, has …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_11965169156993729621",
+   "scholarClusterId": "11965169156993729621",
+   "scholarCid": "VUQSQPTRDKYJ",
+   "title": "Urban heat island: Causes, consequences, and mitigation measures with emphasis on reflective and permeable pavements",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "S Vujovic",
+    "B Haddad",
+    "H Karaky",
+    "N Sebaibi",
+    "M Boutouil"
+   ],
+   "authorsTruncated": false,
+   "venue": "CivilEng",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "S Vujovic, B Haddad, H Karaky, N Sebaibi, M Boutouil - CivilEng, 2021 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "B Haddad",
+     "id": "RCZ2ozsAAAAJ"
+    },
+    {
+     "name": "H Karaky",
+     "id": "tPYfMbAAAAAJ"
+    },
+    {
+     "name": "N Sebaibi",
+     "id": "EfZ4s1wAAAAJ"
+    },
+    {
+     "name": "M Boutouil",
+     "id": "2f9wRGEAAAAJ"
+    }
+   ],
+   "citedBy": 374,
+   "scholarCitesId": "11965169156993729621",
+   "versions": 9,
+   "url": "https://www.mdpi.com/2673-4109/2/2/26",
+   "fullText": "https://www.mdpi.com/2673-4109/2/2/26",
+   "snippet": "Economic and social development of urban and rural areas continues in parallel with the increase of the human population, especially in developing countries, which leads to …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_10691446021368163712",
+   "scholarClusterId": "10691446021368163712",
+   "scholarCid": "gK3pvoKlX5QJ",
+   "title": "Unveiling role of sulfate ion in nickel‐iron (oxy) hydroxide with enhanced oxygen‐evolving performance",
+   "type": null,
+   "authors": [
+    "H Liao",
+    "T Luo",
+    "P Tan",
+    "K Chen",
+    "L Lu"
+   ],
+   "authorsTruncated": true,
+   "venue": "Advanced Functional …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Wiley Online Library",
+   "byline": "H Liao, T Luo, P Tan, K Chen, L Lu… - Advanced Functional …, 2021 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "P Tan",
+     "id": "Q42ZoLoAAAAJ"
+    }
+   ],
+   "citedBy": 360,
+   "scholarCitesId": "10691446021368163712",
+   "versions": 4,
+   "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adfm.202102772",
+   "fullText": "https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/adfm.202102772",
+   "snippet": "The rational design of effective catalysts for sluggish oxygen evolution reactions (OERs) is desired but challenging. Nickel‐iron (NiFe)(oxy) hydroxides are promising pre …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_4553719591086717237",
+   "scholarClusterId": "4553719591086717237",
+   "scholarCid": "Nfl1adcPMj8J",
+   "title": "Cancer nanotechnology: current status and perspectives",
+   "type": null,
+   "authors": [
+    "JA Kemp",
+    "YJ Kwon"
+   ],
+   "authorsTruncated": false,
+   "venue": "Nano convergence",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Springer",
+   "byline": "JA Kemp, YJ Kwon - Nano convergence, 2021 - Springer",
+   "scholarAuthorIds": [
+    {
+     "name": "YJ Kwon",
+     "id": "7sQYRJYAAAAJ"
+    }
+   ],
+   "citedBy": 317,
+   "scholarCitesId": "4553719591086717237",
+   "versions": 14,
+   "url": "https://link.springer.com/article/10.1186/s40580-021-00282-7",
+   "fullText": "https://link.springer.com/content/pdf/10.1186/s40580-021-00282-7.pdf",
+   "snippet": "Modern medicine has been waging a war on cancer for nearly a century with no tangible end in sight. Cancer treatments have significantly progressed, but the need to increase …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_17295965877123418293",
+   "scholarClusterId": "17295965877123418293",
+   "scholarCid": "tQg4yVOdB_AJ",
+   "title": "The influence of urban form on surface urban heat island and its planning implications: Evidence from 1288 urban clusters in China",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "H Liu",
+    "B Huang",
+    "Q Zhan",
+    "S Gao",
+    "R Li",
+    "Z Fan"
+   ],
+   "authorsTruncated": false,
+   "venue": "Sustainable cities and society",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "H Liu, B Huang, Q Zhan, S Gao, R Li, Z Fan - Sustainable cities and society, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "B Huang",
+     "id": "UCzVB4MAAAAJ"
+    },
+    {
+     "name": "Q Zhan",
+     "id": "iT8dxr8AAAAJ"
+    },
+    {
+     "name": "R Li",
+     "id": "0ZZ_ar0AAAAJ"
+    }
+   ],
+   "citedBy": 284,
+   "scholarCitesId": "17295965877123418293",
+   "versions": 5,
+   "url": "https://www.sciencedirect.com/science/article/pii/S2210670721002730",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S2210670721002730",
+   "snippet": "There is a growing demand for urban form optimization to mitigate urban heat island (UHI) effect. Nevertheless, how UHI responds to various urban morphological patterns is still …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_14356829117337205798",
+   "scholarClusterId": "14356829117337205798",
+   "scholarCid": "JnzeNwS0PccJ",
+   "title": "Advanced materials and systems for biodegradable, transient electronics",
+   "type": null,
+   "authors": [
+    "WB Han",
+    "JH Lee",
+    "JW Shin",
+    "SW Hwang"
+   ],
+   "authorsTruncated": false,
+   "venue": "Advanced Materials",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "Wiley Online Library",
+   "byline": "WB Han, JH Lee, JW Shin, SW Hwang - Advanced Materials, 2020 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "WB Han",
+     "id": "BygVaEAAAAAJ"
+    },
+    {
+     "name": "JH Lee",
+     "id": "6ansJwkAAAAJ"
+    },
+    {
+     "name": "JW Shin",
+     "id": "V3IiHp8AAAAJ"
+    },
+    {
+     "name": "SW Hwang",
+     "id": "J4T3_FsAAAAJ"
+    }
+   ],
+   "citedBy": 268,
+   "scholarCitesId": "14356829117337205798",
+   "versions": 7,
+   "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adma.202002211",
+   "fullText": "https://advanced.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adma.202002211",
+   "snippet": "Transient electronics refers to an emerging class of advanced technology, defined by an ability to chemically or physically dissolve, disintegrate, and degrade in actively or passively …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_5711728339055955866",
+   "scholarClusterId": "5711728339055955866",
+   "scholarCid": "mk_2jqkiRE8J",
+   "title": "Projections of land use changes under the plant functional type classification in different SSP-RCP scenarios in China",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "W Liao",
+    "X Liu",
+    "X Xu",
+    "G Chen",
+    "X Liang",
+    "H Zhang",
+    "X Li"
+   ],
+   "authorsTruncated": false,
+   "venue": "Science Bulletin",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "Elsevier",
+   "byline": "W Liao, X Liu, X Xu, G Chen, X Liang, H Zhang, X Li - Science Bulletin, 2020 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "W Liao",
+     "id": "F7gMUF8AAAAJ"
+    },
+    {
+     "name": "X Liu",
+     "id": "jOMIkDkAAAAJ"
+    },
+    {
+     "name": "G Chen",
+     "id": "K2HvVzwAAAAJ"
+    },
+    {
+     "name": "X Liang",
+     "id": "sIZG1mkAAAAJ"
+    },
+    {
+     "name": "X Li",
+     "id": "Rxgr5rYAAAAJ"
+    }
+   ],
+   "citedBy": 252,
+   "scholarCitesId": "5711728339055955866",
+   "versions": 9,
+   "url": "https://www.sciencedirect.com/science/article/pii/S2095927320304710",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S2095927320304710",
+   "snippet": "Land use projections are crucial for climate models to forecast the impacts of land use changes on the Earth's system. However, the spatial resolution of existing global land use …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "G Chen",
+     "X Li",
+     "X Liu",
+     "X Liang",
+     "X Xu",
+     "W Liao"
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_15977798833168937689",
+   "scholarClusterId": "15977798833168937689",
+   "scholarCid": "2XKvf2KLvN0J",
+   "title": "Frankenstein urbanism",
+   "type": "[BOOK][B] [BOOK]",
+   "authors": [
+    "F Cugurullo"
+   ],
+   "authorsTruncated": false,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "academia.edu",
+   "byline": "F Cugurullo - 2021 - academia.edu",
+   "scholarAuthorIds": [
+    {
+     "name": "F Cugurullo",
+     "id": "2wGt2RkAAAAJ"
+    }
+   ],
+   "citedBy": 247,
+   "scholarCitesId": "15977798833168937689",
+   "versions": 6,
+   "url": "https://www.academia.edu/download/67472567/PREVIEW_Frankenstein_Urbanism_Cugurullo.pdf",
+   "fullText": "https://www.academia.edu/download/67472567/PREVIEW_Frankenstein_Urbanism_Cugurullo.pdf",
+   "snippet": "This book tells the story of visionary urban experiments, shedding light on the theories that preceded their development and on the monsters that followed and might be the end of our …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": "book"
+  },
+  {
+   "id": "GS_4890166914324061745",
+   "scholarClusterId": "4890166914324061745",
+   "scholarCid": "MV6nPOZc3UMJ",
+   "title": "A research agenda for urban biodiversity in the global extinction crisis",
+   "type": null,
+   "authors": [
+    "S Knapp",
+    "MFJ Aronson",
+    "E Carpenter"
+   ],
+   "authorsTruncated": true,
+   "venue": "…",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "academic.oup.com",
+   "byline": "S Knapp, MFJ Aronson, E Carpenter… - …, 2021 - academic.oup.com",
+   "scholarAuthorIds": [
+    {
+     "name": "MFJ Aronson",
+     "id": "uNmQ_C8AAAAJ"
+    }
+   ],
+   "citedBy": 228,
+   "scholarCitesId": "4890166914324061745",
+   "versions": 21,
+   "url": "https://academic.oup.com/bioscience/article-abstract/71/3/268/6009693",
+   "fullText": "https://academic.oup.com/bioscience/article-pdf/71/3/268/36413291/biaa141.pdf",
+   "snippet": "Rapid urbanization and the global loss of biodiversity necessitate the development of a research agenda that addresses knowledge gaps in urban ecology that will inform policy …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_5262267970264226581",
+   "scholarClusterId": "5262267970264226581",
+   "scholarCid": "FduDmNZUB0kJ",
+   "title": "Understanding land-use change conflict: A systematic review of case studies",
+   "type": null,
+   "authors": [
+    "L De Jong",
+    "S De Bruin",
+    "J Knoop"
+   ],
+   "authorsTruncated": true,
+   "venue": "Journal of Land Use …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Taylor & Francis",
+   "byline": "L De Jong, S De Bruin, J Knoop… - Journal of Land Use …, 2021 - Taylor & Francis",
+   "scholarAuthorIds": [
+    {
+     "name": "S De Bruin",
+     "id": "4-78F28AAAAJ"
+    }
+   ],
+   "citedBy": 200,
+   "scholarCitesId": "5262267970264226581",
+   "versions": 9,
+   "url": "https://www.tandfonline.com/doi/abs/10.1080/1747423X.2021.1933226",
+   "fullText": "https://www.tandfonline.com/doi/pdf/10.1080/1747423X.2021.1933226",
+   "snippet": "The growing demand for food, water, and shelter change the way people use land. These changes have affected or even caused conflict in several locations. However, conflicts do …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_16430053771154618633",
+   "scholarClusterId": "16430053771154618633",
+   "scholarCid": "Cfk8ztpGA-QJ",
+   "title": "Global urban growth between 1870 and 2100 from integrated high resolution mapped data and urban dynamic modeling",
+   "type": null,
+   "authors": [
+    "X Li",
+    "Y Zhou",
+    "M Hejazi",
+    "M Wise",
+    "C Vernon"
+   ],
+   "authorsTruncated": true,
+   "venue": "… Earth & Environment",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "nature.com",
+   "byline": "X Li, Y Zhou, M Hejazi, M Wise, C Vernon… - … Earth & Environment, 2021 - nature.com",
+   "scholarAuthorIds": [
+    {
+     "name": "X Li",
+     "id": "r2p47SEAAAAJ"
+    },
+    {
+     "name": "Y Zhou",
+     "id": "ahBe45sAAAAJ"
+    },
+    {
+     "name": "M Hejazi",
+     "id": "puXDdRwAAAAJ"
+    },
+    {
+     "name": "M Wise",
+     "id": "VogbE2sAAAAJ"
+    },
+    {
+     "name": "C Vernon",
+     "id": "jD7woNAAAAAJ"
+    }
+   ],
+   "citedBy": 195,
+   "scholarCitesId": "16430053771154618633",
+   "versions": 8,
+   "url": "https://www.nature.com/articles/s43247-021-00273-w",
+   "fullText": "https://www.nature.com/articles/s43247-021-00273-w.pdf",
+   "snippet": "Long term, global records of urban extent can help evaluate environmental impacts of anthropogenic activities. Remotely sensed observations can provide insights into historical …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "X Li"
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_4320691083456909167",
+   "scholarClusterId": "4320691083456909167",
+   "scholarCid": "b4-l_aUt9jsJ",
+   "title": "Mixed-cell cellular automata: A new approach for simulating the spatio-temporal dynamics of mixed land use structures",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "X Liang",
+    "Q Guan",
+    "KC Clarke",
+    "G Chen",
+    "S Guo"
+   ],
+   "authorsTruncated": true,
+   "venue": "Landscape and Urban …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "X Liang, Q Guan, KC Clarke, G Chen, S Guo… - Landscape and Urban …, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "X Liang",
+     "id": "sIZG1mkAAAAJ"
+    },
+    {
+     "name": "Q Guan",
+     "id": "6WOeTvQAAAAJ"
+    },
+    {
+     "name": "KC Clarke",
+     "id": "fjZMW1oAAAAJ"
+    },
+    {
+     "name": "G Chen",
+     "id": "K2HvVzwAAAAJ"
+    }
+   ],
+   "citedBy": 194,
+   "scholarCitesId": "4320691083456909167",
+   "versions": 7,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0169204620314432",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0169204620314432",
+   "snippet": "When used for land use change modeling, Cellular Automata (CA) usually assume that each cell has only one land use type at each time step, ignoring the mixed land use structures that …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "G Chen",
+     "X Liang"
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_5883394006530321012",
+   "scholarClusterId": "5883394006530321012",
+   "scholarCid": "dOrmaK0DplEJ",
+   "title": "Monitoring global land-use efficiency in the context of the UN 2030 Agenda for Sustainable Development",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "RC Estoque",
+    "M Ooba",
+    "T Togawa",
+    "Y Hijioka"
+   ],
+   "authorsTruncated": true,
+   "venue": "Habitat International",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "RC Estoque, M Ooba, T Togawa, Y Hijioka… - Habitat International, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "RC Estoque",
+     "id": "DhbJXSQAAAAJ"
+    },
+    {
+     "name": "Y Hijioka",
+     "id": "Hyj3bGsAAAAJ"
+    }
+   ],
+   "citedBy": 187,
+   "scholarCitesId": "5883394006530321012",
+   "versions": 5,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0197397521000928",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0197397521000928",
+   "snippet": "Tracking progress toward the Sustainable Development Goals (SDGs) requires monitoring of various social-ecological indicators over space and time, including the ratio of land …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_5360945065993603384",
+   "scholarClusterId": "5360945065993603384",
+   "scholarCid": "OInuTiLnZUoJ",
+   "title": "Simulating land use/land cover change in an arid region with the coupling models",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "Q Wang",
+    "Q Guan",
+    "J Lin",
+    "H Luo",
+    "Z Tan",
+    "Y Ma"
+   ],
+   "authorsTruncated": false,
+   "venue": "Ecological Indicators",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "Q Wang, Q Guan, J Lin, H Luo, Z Tan, Y Ma - Ecological Indicators, 2021 - Elsevier",
+   "scholarAuthorIds": [],
+   "citedBy": 185,
+   "scholarCitesId": "5360945065993603384",
+   "versions": 5,
+   "url": "https://www.sciencedirect.com/science/article/pii/S1470160X20311705",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S1470160X20311705",
+   "snippet": "The rapid development of productivity and economy has led to a substantial change in global land use/land cover (LULC), which has caused a series of environmental problems …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_9705191607273356961",
+   "scholarClusterId": "9705191607273356961",
+   "scholarCid": "oX6htFjEr4YJ",
+   "title": "The role of soil in the contribution of food and feed",
+   "type": null,
+   "authors": [
+    "WL Silver",
+    "T Perez",
+    "A Mayer"
+   ],
+   "authorsTruncated": true,
+   "venue": "… Transactions of the …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "pmc.ncbi.nlm.nih.gov",
+   "byline": "WL Silver, T Perez, A Mayer… - … Transactions of the …, 2021 - pmc.ncbi.nlm.nih.gov",
+   "scholarAuthorIds": [
+    {
+     "name": "WL Silver",
+     "id": "G5aPitMAAAAJ"
+    },
+    {
+     "name": "T Perez",
+     "id": "8RQiYL8AAAAJ"
+    },
+    {
+     "name": "A Mayer",
+     "id": "_3zLBTYAAAAJ"
+    }
+   ],
+   "citedBy": 153,
+   "scholarCitesId": "9705191607273356961",
+   "versions": 11,
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8349637/",
+   "fullText": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8349637/pdf/rstb.2020.0181.pdf",
+   "snippet": "Soils play a critical role in the production of food and feed for a growing global population. Here, we review global patterns in soil characteristics, agricultural production and the fate of …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_4382034342651592563",
+   "scholarClusterId": "4382034342651592563",
+   "scholarCid": "c39PgwQd0DwJ",
+   "title": "Spatial heterogeneity analysis and driving forces exploring of built-up land development intensity in Chinese prefecture-level cities and implications for future …",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "P Zhang",
+    "D Yang",
+    "M Qin",
+    "W Jing"
+   ],
+   "authorsTruncated": false,
+   "venue": "Land use policy",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "Elsevier",
+   "byline": "P Zhang, D Yang, M Qin, W Jing - Land use policy, 2020 - Elsevier",
+   "scholarAuthorIds": [],
+   "citedBy": 138,
+   "scholarCitesId": "4382034342651592563",
+   "versions": 7,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0264837720300259",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0264837720300259",
+   "snippet": "Economic growth is inseparable from the input of land elements, and built-up land is the most important category of land elements. Its spatial distribution and influencing factors play …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_18419648637486669132",
+   "scholarClusterId": "18419648637486669132",
+   "scholarCid": "TJ3mJNi8n_8J",
+   "title": "Urban forests as main regulator of the evaporative cooling effect in cities",
+   "type": null,
+   "authors": [
+    "A Paschalis",
+    "TC Chakraborty",
+    "S Fatichi",
+    "N Meili"
+   ],
+   "authorsTruncated": true,
+   "venue": "AGU …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Wiley Online Library",
+   "byline": "A Paschalis, TC Chakraborty, S Fatichi, N Meili… - AGU …, 2021 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "A Paschalis",
+     "id": "Y16p08AAAAAJ"
+    },
+    {
+     "name": "TC Chakraborty",
+     "id": "enb3jK4AAAAJ"
+    },
+    {
+     "name": "S Fatichi",
+     "id": "J1Mbr7UAAAAJ"
+    },
+    {
+     "name": "N Meili",
+     "id": "2-RDq-wAAAAJ"
+    }
+   ],
+   "citedBy": 137,
+   "scholarCitesId": "18419648637486669132",
+   "versions": 13,
+   "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2020AV000303",
+   "fullText": "https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2020AV000303",
+   "snippet": "Higher temperatures in urban areas expose a large fraction of the human population to potentially dangerous heat stress. Green spaces are promoted worldwide as local and city …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_6818243667965693068",
+   "scholarClusterId": "6818243667965693068",
+   "scholarCid": "jMwmzX1En14J",
+   "title": "Hotspots of land-use change in global biodiversity hotspots",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "X Kong",
+    "Z Zhou",
+    "L Jiao"
+   ],
+   "authorsTruncated": false,
+   "venue": "Resources, Conservation and Recycling",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "X Kong, Z Zhou, L Jiao - Resources, Conservation and Recycling, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "Z Zhou",
+     "id": "6LwvM_8AAAAJ"
+    }
+   ],
+   "citedBy": 127,
+   "scholarCitesId": "6818243667965693068",
+   "versions": 5,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0921344921003797",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0921344921003797",
+   "snippet": "Land-use conversion from natural areas to agriculture and human settlements is causing global biodiversity loss. We proposed a human land-use disturbance index (LDI) to assess …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_10064337557410776352",
+   "scholarClusterId": "10064337557410776352",
+   "scholarCid": "IIUXca-1q4sJ",
+   "title": "How does land urbanization promote urban eco-efficiency? The mediating effect of industrial structure advancement",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "M Tang",
+    "Z Li",
+    "F Hu",
+    "B Wu"
+   ],
+   "authorsTruncated": false,
+   "venue": "Journal of Cleaner Production",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "Elsevier",
+   "byline": "M Tang, Z Li, F Hu, B Wu - Journal of Cleaner Production, 2020 - Elsevier",
+   "scholarAuthorIds": [],
+   "citedBy": 125,
+   "scholarCitesId": "10064337557410776352",
+   "versions": 5,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0959652620328432",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0959652620328432",
+   "snippet": "Coordination between land urbanization and urban eco-efficiency can lead to sustainable economic growth. However, insufficient attention has been paid to the mechanism by which …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_7215374893821970955",
+   "scholarClusterId": "7215374893821970955",
+   "scholarCid": "C8qHuzwpImQJ",
+   "title": "2D materials inks toward smart flexible electronics",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "OA Moses",
+    "L Gao",
+    "H Zhao",
+    "Z Wang",
+    "ML Adam",
+    "Z Sun"
+   ],
+   "authorsTruncated": true,
+   "venue": "Materials Today",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "OA Moses, L Gao, H Zhao, Z Wang, ML Adam, Z Sun… - Materials Today, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "OA Moses",
+     "id": "P7lFOOUAAAAJ"
+    },
+    {
+     "name": "L Gao",
+     "id": "9nnXkp4AAAAJ"
+    },
+    {
+     "name": "H Zhao",
+     "id": "-7LXk7gAAAAJ"
+    },
+    {
+     "name": "Z Wang",
+     "id": "gexMfOYAAAAJ"
+    },
+    {
+     "name": "ML Adam",
+     "id": "faeO2UEAAAAJ"
+    },
+    {
+     "name": "Z Sun",
+     "id": "Gc4LhWQAAAAJ"
+    }
+   ],
+   "citedBy": 124,
+   "scholarCitesId": "7215374893821970955",
+   "versions": 6,
+   "url": "https://www.sciencedirect.com/science/article/pii/S1369702121002960",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S1369702121002960",
+   "snippet": "The significant advancement in 2D materials fabrications has ushered a paradigm shift in material chemistry, which in turn has greatly influenced the manufacturing industries, in …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_19898183820883993",
+   "scholarClusterId": "19898183820883993",
+   "scholarCid": "GbhR8kqxRgAJ",
+   "title": "High-performance perovskite solar cell using photonic–plasmonic nanostructure",
+   "type": null,
+   "authors": [
+    "A Tooghi",
+    "D Fathi",
+    "M Eskandari"
+   ],
+   "authorsTruncated": false,
+   "venue": "Scientific Reports",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "nature.com",
+   "byline": "A Tooghi, D Fathi, M Eskandari - Scientific Reports, 2020 - nature.com",
+   "scholarAuthorIds": [
+    {
+     "name": "A Tooghi",
+     "id": "yuAYAb8AAAAJ"
+    },
+    {
+     "name": "D Fathi",
+     "id": "-jK7A6gAAAAJ"
+    },
+    {
+     "name": "M Eskandari",
+     "id": "g3Exdm4AAAAJ"
+    }
+   ],
+   "citedBy": 115,
+   "scholarCitesId": "19898183820883993",
+   "versions": 9,
+   "url": "https://www.nature.com/articles/s41598-020-67741-9",
+   "fullText": "https://www.nature.com/articles/s41598-020-67741-9.pdf",
+   "snippet": "In this paper, a coupled optical-electrical modeling method is applied to simulate perovskite solar cells (PSCs) to find ways to improve light absorption by the active layer and ensure that …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_12116384674330365907",
+   "scholarClusterId": "12116384674330365907",
+   "scholarCid": "089ye6oLJqgJ",
+   "title": "Disclosing the future food security risk of China based on crop production and water scarcity under diverse socioeconomic and climate scenarios",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "L Chen",
+    "J Chang",
+    "Y Wang",
+    "A Guo",
+    "Y Liu"
+   ],
+   "authorsTruncated": true,
+   "venue": "Science of The Total …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "L Chen, J Chang, Y Wang, A Guo, Y Liu… - Science of The Total …, 2021 - Elsevier",
+   "scholarAuthorIds": [],
+   "citedBy": 115,
+   "scholarCitesId": "12116384674330365907",
+   "versions": 8,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0048969721031818",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0048969721031818",
+   "snippet": "Climate change and human development may lead to a serious crisis in food security in China, especially in areas with both water shortages and large grain production. Thus, the …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_8161995647336587896",
+   "scholarClusterId": "8161995647336587896",
+   "scholarCid": "eCLIEcw7RXEJ",
+   "title": "A review of driving factors, scenarios, and topics in urban land change models",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "Y Kim",
+    "G Newman",
+    "B Güneralp"
+   ],
+   "authorsTruncated": false,
+   "venue": "Land",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "mdpi.com",
+   "byline": "Y Kim, G Newman, B Güneralp - Land, 2020 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "Y Kim",
+     "id": "t73xROEAAAAJ"
+    },
+    {
+     "name": "G Newman",
+     "id": "NWRrbEoAAAAJ"
+    },
+    {
+     "name": "B Güneralp",
+     "id": "s9EZaMoAAAAJ"
+    }
+   ],
+   "citedBy": 113,
+   "scholarCitesId": "8161995647336587896",
+   "versions": 15,
+   "url": "https://www.mdpi.com/2073-445X/9/8/246",
+   "fullText": "https://www.mdpi.com/2073-445X/9/8/246",
+   "snippet": "Due to the increase in future uncertainty caused by rapid environmental, societal, and technological change, exploring multiple scenarios has become increasingly important in …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_12027571684119068467",
+   "scholarClusterId": "12027571684119068467",
+   "scholarCid": "M792zriE6qYJ",
+   "title": "Future urban development exacerbates coastal exposure in the Mediterranean",
+   "type": null,
+   "authors": [
+    "C Wolff",
+    "T Nikoletopoulos",
+    "J Hinkel",
+    "AT Vafeidis"
+   ],
+   "authorsTruncated": false,
+   "venue": "Scientific reports",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "nature.com",
+   "byline": "C Wolff, T Nikoletopoulos, J Hinkel, AT Vafeidis - Scientific reports, 2020 - nature.com",
+   "scholarAuthorIds": [
+    {
+     "name": "J Hinkel",
+     "id": "5kHQ1xsAAAAJ"
+    },
+    {
+     "name": "AT Vafeidis",
+     "id": "YezMy38AAAAJ"
+    }
+   ],
+   "citedBy": 111,
+   "scholarCitesId": "12027571684119068467",
+   "versions": 11,
+   "url": "https://www.nature.com/articles/s41598-020-70928-9",
+   "fullText": "https://www.nature.com/articles/s41598-020-70928-9.pdf",
+   "snippet": "Abstract Changes in the spatial patterns and rate of urban development will be one of the main determinants of future coastal flood risk. Existing spatial projections of urban extent …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_595827426691699460",
+   "scholarClusterId": "595827426691699460",
+   "scholarCid": "BNNkQ-PNRAgJ",
+   "title": "Global 1-km present and future hourly anthropogenic heat flux",
+   "type": null,
+   "authors": [
+    "ACG Varquez",
+    "S Kiyomoto",
+    "DN Khanh",
+    "M Kanda"
+   ],
+   "authorsTruncated": false,
+   "venue": "Scientific Data",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "nature.com",
+   "byline": "ACG Varquez, S Kiyomoto, DN Khanh, M Kanda - Scientific Data, 2021 - nature.com",
+   "scholarAuthorIds": [
+    {
+     "name": "ACG Varquez",
+     "id": "ZjIC2ZoAAAAJ"
+    },
+    {
+     "name": "DN Khanh",
+     "id": "S-CRARMAAAAJ"
+    }
+   ],
+   "citedBy": 106,
+   "scholarCitesId": "595827426691699460",
+   "versions": 11,
+   "url": "https://www.nature.com/articles/s41597-021-00850-w",
+   "fullText": "https://www.nature.com/articles/s41597-021-00850-w.pdf",
+   "snippet": "Numerical weather prediction models are progressively used to downscale future climate in cities at increasing spatial resolutions. Boundary conditions representing rapidly growing …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_14088046433777465543",
+   "scholarClusterId": "14088046433777465543",
+   "scholarCid": "x7iDAJfLgsMJ",
+   "title": "Assessing potential ecosystem service dynamics driven by urbanization in the Yangtze River Economic Belt, China",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "D Chen",
+    "P Jiang",
+    "M Li"
+   ],
+   "authorsTruncated": false,
+   "venue": "Journal of Environmental Management",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "D Chen, P Jiang, M Li - Journal of Environmental Management, 2021 - Elsevier",
+   "scholarAuthorIds": [],
+   "citedBy": 105,
+   "scholarCitesId": "14088046433777465543",
+   "versions": 5,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0301479721007969",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0301479721007969",
+   "snippet": "Ecosystem services (ESs) link natural and social processes and play an important role in sustaining ecological security, human well-being, and sustainable development. However …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_16956306577936978193",
+   "scholarClusterId": "16956306577936978193",
+   "scholarCid": "EZGNiP7mUOsJ",
+   "title": "Spatially-explicit modeling and intensity analysis of China's land use change 2000–2050",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "Y Feng",
+    "Z Lei",
+    "X Tong",
+    "C Gao",
+    "S Chen",
+    "J Wang"
+   ],
+   "authorsTruncated": true,
+   "venue": "Journal of …",
+   "venueTruncated": true,
+   "year": 2020,
+   "source": "Elsevier",
+   "byline": "Y Feng, Z Lei, X Tong, C Gao, S Chen, J Wang… - Journal of …, 2020 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "Y Feng",
+     "id": "Q2OGyyYAAAAJ"
+    },
+    {
+     "name": "X Tong",
+     "id": "Kxn4zKEAAAAJ"
+    }
+   ],
+   "citedBy": 101,
+   "scholarCitesId": "16956306577936978193",
+   "versions": 9,
+   "url": "https://www.sciencedirect.com/science/article/pii/S030147972030342X",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S030147972030342X",
+   "snippet": "Land use change affected by wide ranges of human activities is a key driver of global climate change. In the last three decades, China has experienced unprecedented land use …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_4106745155193500886",
+   "scholarClusterId": "4106745155193500886",
+   "scholarCid": "1nRdzvUW_jgJ",
+   "title": "Ultrasound‐powered implants: a critical review of piezoelectric material selection and applications",
+   "type": null,
+   "authors": [
+    "BL Turner",
+    "S Senevirathne",
+    "K Kilgour"
+   ],
+   "authorsTruncated": true,
+   "venue": "Advanced …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Wiley Online Library",
+   "byline": "BL Turner, S Senevirathne, K Kilgour… - Advanced …, 2021 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "BL Turner",
+     "id": "S-ueaVAAAAAJ"
+    },
+    {
+     "name": "K Kilgour",
+     "id": "_ezHS5kAAAAJ"
+    }
+   ],
+   "citedBy": 98,
+   "scholarCitesId": "4106745155193500886",
+   "versions": 7,
+   "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adhm.202100986",
+   "fullText": "https://advanced.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adhm.202100986",
+   "snippet": "Ultrasound‐powered implants (UPIs) represent cutting edge power sources for implantable medical devices (IMDs), as their powering strategy allows for extended functional lifetime …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_3190385014322306752",
+   "scholarClusterId": "3190385014322306752",
+   "scholarCid": "wB5pY0SGRiwJ",
+   "title": "Quantitative assessment of the relative impacts of climate change and human activity on flood susceptibility based on a cloud model",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "S Li",
+    "Z Wang",
+    "C Lai",
+    "G Lin"
+   ],
+   "authorsTruncated": false,
+   "venue": "Journal of hydrology",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "Elsevier",
+   "byline": "S Li, Z Wang, C Lai, G Lin - Journal of hydrology, 2020 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "S Li",
+     "id": "qgRF8D4AAAAJ"
+    },
+    {
+     "name": "G Lin",
+     "id": "CFyvn9sAAAAJ"
+    }
+   ],
+   "citedBy": 96,
+   "scholarCitesId": "3190385014322306752",
+   "versions": 5,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0022169420305114",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0022169420305114",
+   "snippet": "Floods are generally considered to be the most common natural disaster worldwide. Climate change and human activity are two key driving factors of flood formation, and it is difficult to …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_1540415939547813398",
+   "scholarClusterId": "1540415939547813398",
+   "scholarCid": "FtYYsyKoYBUJ",
+   "title": "Land use optimization modelling with ecological priority perspective for large-scale spatial planning",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "W Wang",
+    "L Jiao",
+    "Q Jia",
+    "J Liu",
+    "W Mao",
+    "Z Xu"
+   ],
+   "authorsTruncated": true,
+   "venue": "Sustainable Cities and …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "W Wang, L Jiao, Q Jia, J Liu, W Mao, Z Xu… - Sustainable Cities and …, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "W Wang",
+     "id": "dm-sONMAAAAJ"
+    },
+    {
+     "name": "Z Xu",
+     "id": "nSmzz_sAAAAJ"
+    }
+   ],
+   "citedBy": 93,
+   "scholarCitesId": "1540415939547813398",
+   "versions": 3,
+   "url": "https://www.sciencedirect.com/science/article/pii/S2210670720307939",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S2210670720307939",
+   "snippet": "Land-use optimization model provides an effective means of finding solutions to mitigate ecological impacts resulting from land use and land cover changes (LUCCs). However …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_t64",
+   "scholarClusterId": null,
+   "scholarCid": "5fYYzfg-xkIJ",
+   "title": "Simulating urban expansion by incorporating an integrated gravitational field model into a demand-driven random forest-cellular automata model",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "J Lv",
+    "Y Wang",
+    "X Liang",
+    "Y Yao",
+    "T Ma",
+    "Q Guan"
+   ],
+   "authorsTruncated": false,
+   "venue": "Cities",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "J Lv, Y Wang, X Liang, Y Yao, T Ma, Q Guan - Cities, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "Y Wang",
+     "id": "x8KIHUAAAAAJ"
+    },
+    {
+     "name": "X Liang",
+     "id": "sIZG1mkAAAAJ"
+    },
+    {
+     "name": "Y Yao",
+     "id": "JZ9U7ZIAAAAJ"
+    },
+    {
+     "name": "Q Guan",
+     "id": "6WOeTvQAAAAJ"
+    }
+   ],
+   "citedBy": 90,
+   "scholarCitesId": "4811602490205730533",
+   "versions": 0,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0264275120313925",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0264275120313925",
+   "snippet": "Interactions among cities are playing an increasingly significant role in driving urban expansion in urban agglomerations. Many studies have combined the gravitational field …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "X Liang"
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_11975451690013710072",
+   "scholarClusterId": "11975451690013710072",
+   "scholarCid": "-FYeCN1ZMaYJ",
+   "title": "The future urban heat-wave challenge in Africa: Exploratory analysis",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "PJ Marcotullio",
+    "C Keßler",
+    "BM Fekete"
+   ],
+   "authorsTruncated": false,
+   "venue": "Global Environmental Change",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "PJ Marcotullio, C Keßler, BM Fekete - Global Environmental Change, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "PJ Marcotullio",
+     "id": "YWPKT7wAAAAJ"
+    },
+    {
+     "name": "C Keßler",
+     "id": "trKFvMcAAAAJ"
+    },
+    {
+     "name": "BM Fekete",
+     "id": "o9kQiw8AAAAJ"
+    }
+   ],
+   "citedBy": 88,
+   "scholarCitesId": "11975451690013710072",
+   "versions": 8,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0959378020307731",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0959378020307731",
+   "snippet": "Urbanization and climate change are among the most important global trends affecting human well-being during the twenty-first century. One region expected to undergo enormous …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_12302646278661132460",
+   "scholarClusterId": "12302646278661132460",
+   "scholarCid": "rNDgtJvHu6oJ",
+   "title": "Cellular automata modeling for urban and regional planning",
+   "type": null,
+   "authors": [
+    "AGO Yeh",
+    "X Li",
+    "C Xia"
+   ],
+   "authorsTruncated": false,
+   "venue": "Urban informatics",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Springer",
+   "byline": "AGO Yeh, X Li, C Xia - Urban informatics, 2021 - Springer",
+   "scholarAuthorIds": [
+    {
+     "name": "AGO Yeh",
+     "id": "0zhn9YUAAAAJ"
+    },
+    {
+     "name": "X Li",
+     "id": "Rxgr5rYAAAAJ"
+    },
+    {
+     "name": "C Xia",
+     "id": "yQpTUg0AAAAJ"
+    }
+   ],
+   "citedBy": 83,
+   "scholarCitesId": "12302646278661132460",
+   "versions": 3,
+   "url": "https://link.springer.com/chapter/10.1007/978-981-15-8983-6_45",
+   "fullText": "https://link.springer.com/content/pdf/10.1007/978-981-15-8983-6_45.pdf",
+   "snippet": "In recent decades, cellular automata (CA) have become popular for evaluating and forecasting urban transformation over time and space, especially in rapidly developing …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "X Li"
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_14344777500543407412",
+   "scholarClusterId": "14344777500543407412",
+   "scholarCid": "NNXnhSLjEscJ",
+   "title": "A global analysis of the relationship between urbanization and fatalities in earthquake-prone areas",
+   "type": null,
+   "authors": [
+    "C He",
+    "Q Huang",
+    "X Bai",
+    "DT Robinson",
+    "P Shi"
+   ],
+   "authorsTruncated": true,
+   "venue": "International journal of …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Springer",
+   "byline": "C He, Q Huang, X Bai, DT Robinson, P Shi… - International journal of …, 2021 - Springer",
+   "scholarAuthorIds": [
+    {
+     "name": "C He",
+     "id": "7o3D7F4AAAAJ"
+    },
+    {
+     "name": "Q Huang",
+     "id": "uOxCebIAAAAJ"
+    },
+    {
+     "name": "X Bai",
+     "id": "j5H5lBYAAAAJ"
+    },
+    {
+     "name": "DT Robinson",
+     "id": "J7n0UQoAAAAJ"
+    }
+   ],
+   "citedBy": 82,
+   "scholarCitesId": "14344777500543407412",
+   "versions": 13,
+   "url": "https://link.springer.com/article/10.1007/S13753-021-00385-Z",
+   "fullText": "https://link.springer.com/content/pdf/10.1007/s13753-021-00385-z.pdf",
+   "snippet": "Urbanization can be a challenge and an opportunity for earthquake risk mitigation. However, little is known about the changes in exposure (for example, population and urban land) to …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_2176652965445692579",
+   "scholarClusterId": "2176652965445692579",
+   "scholarCid": "o-yw9FYGNR4J",
+   "title": "Determining the impacts of climate change and urban expansion on net primary productivity using the spatio-temporal fusion of remote sensing data",
+   "type": null,
+   "authors": [
+    "Y Yan",
+    "C Wu",
+    "Y Wen"
+   ],
+   "authorsTruncated": false,
+   "venue": "Ecological Indicators",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "Y Yan, C Wu, Y Wen - Ecological Indicators, 2021 - Elsevier",
+   "scholarAuthorIds": [],
+   "citedBy": 77,
+   "scholarCitesId": "2176652965445692579",
+   "versions": 6,
+   "url": "https://www.sciencedirect.com/science/article/pii/S1470160X21004027",
+   "fullText": "https://www.sciencedirect.com/science/article/am/pii/S1470160X21004027",
+   "snippet": "Climate change (CLC) and urban expansion (URE) have profoundly altered the terrestrial net primary productivity (NPP). Many studies have determined the effects of CLC and URE …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_16083853150485770494",
+   "scholarClusterId": "16083853150485770494",
+   "scholarCid": "_nBAdjlTNd8J",
+   "title": "Future “local climate zone” spatial change simulation in Greater Bay Area under the shared socioeconomic pathways and ecological control line",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "G Chen",
+    "J Xie",
+    "W Li",
+    "X Li",
+    "LCH Chung",
+    "C Ren"
+   ],
+   "authorsTruncated": true,
+   "venue": "Building and …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "G Chen, J Xie, W Li, X Li, LCH Chung, C Ren… - Building and …, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "G Chen",
+     "id": "K2HvVzwAAAAJ"
+    },
+    {
+     "name": "J Xie",
+     "id": "SF85E3gAAAAJ"
+    },
+    {
+     "name": "C Ren",
+     "id": "efH_RqkAAAAJ"
+    }
+   ],
+   "citedBy": 76,
+   "scholarCitesId": "16083853150485770494",
+   "versions": 5,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0360132321004790",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0360132321004790",
+   "snippet": "Scenario-based land use/land cover change (LUCC) simulation can explore different possibilities in the future for decision-making on city development. However, the current …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "G Chen",
+     "X Li"
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_13368047032569367309",
+   "scholarClusterId": "13368047032569367309",
+   "scholarCid": "DQsD_fLXhLkJ",
+   "title": "Silicon naphthalocyanine tetraimides: cathode interlayer materials for highly efficient organic solar cells",
+   "type": null,
+   "authors": [
+    "C Cai",
+    "J Yao",
+    "L Chen",
+    "Z Yuan",
+    "ZG Zhang"
+   ],
+   "authorsTruncated": true,
+   "venue": "Angewandte Chemie …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Wiley Online Library",
+   "byline": "C Cai, J Yao, L Chen, Z Yuan, ZG Zhang… - Angewandte Chemie …, 2021 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "ZG Zhang",
+     "id": "If_a2Y8AAAAJ"
+    }
+   ],
+   "citedBy": 75,
+   "scholarCitesId": "13368047032569367309",
+   "versions": 8,
+   "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.202106364",
+   "fullText": "https://onlinelibrary.wiley.com/doi/pdf/10.1002/anie.202106364",
+   "snippet": "Naphthalocyanine derivatives (SiNcTI‐N and SiNcTI‐Br) were firstly used as excellent cathode interlayer materials (CIMs) in organic solar cells, via introducing four electron …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_8993752364250185344",
+   "scholarClusterId": "8993752364250185344",
+   "scholarCid": "gD721B860HwJ",
+   "title": "Incorporating the implementation intensity of returning farmland to lakes into policymaking and ecosystem management: A case study of the Jianghuai …",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "S Ma",
+    "YP Qiao",
+    "J Jiang",
+    "LJ Wang",
+    "JC Zhang"
+   ],
+   "authorsTruncated": false,
+   "venue": "Journal of Cleaner …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "S Ma, YP Qiao, J Jiang, LJ Wang, JC Zhang - Journal of Cleaner …, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "LJ Wang",
+     "id": "80tRXFQAAAAJ"
+    },
+    {
+     "name": "JC Zhang",
+     "id": "Kfc6HnYAAAAJ"
+    }
+   ],
+   "citedBy": 73,
+   "scholarCitesId": "8993752364250185344",
+   "versions": 5,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0959652621015031",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0959652621015031",
+   "snippet": "Implementing the policy of returning farmland to lakes (RFL) led to land use/land cover (LULC) changes and affected ecosystem service trade-offs. Consequently, the …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_4186258937130687851",
+   "scholarClusterId": "4186258937130687851",
+   "scholarCid": "a5161VKUGDoJ",
+   "title": "Future impacts of land use change on ecosystem services under different scenarios in the ecological conservation area, Beijing, China",
+   "type": null,
+   "authors": [
+    "Z Li",
+    "X Cheng",
+    "H Han"
+   ],
+   "authorsTruncated": false,
+   "venue": "Forests",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "mdpi.com",
+   "byline": "Z Li, X Cheng, H Han - Forests, 2020 - mdpi.com",
+   "scholarAuthorIds": [],
+   "citedBy": 72,
+   "scholarCitesId": "4186258937130687851",
+   "versions": 11,
+   "url": "https://www.mdpi.com/1999-4907/11/5/584",
+   "fullText": "https://www.mdpi.com/1999-4907/11/5/584/pdf",
+   "snippet": "Ecosystem services (ES), defined as benefits provided by the ecosystem to society, are essential to human well-being. However, it remains unclear how they will be affected by land …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_3862375004785300026",
+   "scholarClusterId": "3862375004785300026",
+   "scholarCid": "OlKTZZrpmTUJ",
+   "title": "A framework for understanding how biodiversity patterns unfold across multiple spatial scales in urban ecosystems",
+   "type": null,
+   "authors": [
+    "CM Swan",
+    "B Brown",
+    "D Borowy",
+    "J Cavender‐Bares"
+   ],
+   "authorsTruncated": true,
+   "venue": "…",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Wiley Online Library",
+   "byline": "CM Swan, B Brown, D Borowy, J Cavender‐Bares… - …, 2021 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "CM Swan",
+     "id": "NNfHt5YAAAAJ"
+    },
+    {
+     "name": "B Brown",
+     "id": "1QBm_PEAAAAJ"
+    },
+    {
+     "name": "J Cavender‐Bares",
+     "id": "CtxI-i0AAAAJ"
+    }
+   ],
+   "citedBy": 70,
+   "scholarCitesId": "3862375004785300026",
+   "versions": 29,
+   "url": "https://esajournals.onlinelibrary.wiley.com/doi/abs/10.1002/ecs2.3650",
+   "fullText": "https://esajournals.onlinelibrary.wiley.com/doi/pdf/10.1002/ecs2.3650",
+   "snippet": "Whether cities are more or less diverse than surrounding environments, and the extent to which non‐native species in cities impact regional species pools, remain two fundamental …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_4395957193591111226",
+   "scholarClusterId": "4395957193591111226",
+   "scholarCid": "Oj7S28aTAT0J",
+   "title": "Downscaling SSP-consistent global spatial urban land projections from 1/8-degree to 1-km resolution 2000–2100",
+   "type": null,
+   "authors": [
+    "J Gao",
+    "M Pesaresi"
+   ],
+   "authorsTruncated": false,
+   "venue": "Scientific Data",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "nature.com",
+   "byline": "J Gao, M Pesaresi - Scientific Data, 2021 - nature.com",
+   "scholarAuthorIds": [
+    {
+     "name": "M Pesaresi",
+     "id": "D_R5z8MAAAAJ"
+    }
+   ],
+   "citedBy": 68,
+   "scholarCitesId": "4395957193591111226",
+   "versions": 10,
+   "url": "https://www.nature.com/articles/s41597-021-01052-0",
+   "fullText": "https://www.nature.com/articles/s41597-021-01052-0.pdf",
+   "snippet": "Long-term, spatial urban land projections that simultaneously offer global coverage and local-scale empirical accuracy are rare. Recently a set of such projections was produced …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_12567704322813677317",
+   "scholarClusterId": "12567704322813677317",
+   "scholarCid": "BU9zu350aa4J",
+   "title": "Settlement changes after peak population: Land system projections for China until 2050",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "Y Wang",
+    "J van Vliet",
+    "N Debonne",
+    "L Pu"
+   ],
+   "authorsTruncated": true,
+   "venue": "Landscape and Urban …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "Y Wang, J van Vliet, N Debonne, L Pu… - Landscape and Urban …, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "J van Vliet",
+     "id": "DPnpq6EAAAAJ"
+    },
+    {
+     "name": "N Debonne",
+     "id": "7Fc58pkAAAAJ"
+    }
+   ],
+   "citedBy": 68,
+   "scholarCitesId": "12567704322813677317",
+   "versions": 8,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0169204621000086",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0169204621000086",
+   "snippet": "China has experienced unprecedented urbanization in the past few decades, fueled by population growth, economic development, and rural to urban migration. In the future …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_5890837823962131880",
+   "scholarClusterId": "5890837823962131880",
+   "scholarCid": "qK2yNsp1wFEJ",
+   "title": "Modeling the response of ecological service value to land use change through deep learning simulation in Lanzhou, China",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "J Liu",
+    "B Xiao",
+    "J Jiao",
+    "Y Li",
+    "X Wang"
+   ],
+   "authorsTruncated": false,
+   "venue": "Science of the Total Environment",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "J Liu, B Xiao, J Jiao, Y Li, X Wang - Science of the Total Environment, 2021 - Elsevier",
+   "scholarAuthorIds": [],
+   "citedBy": 67,
+   "scholarCitesId": "5890837823962131880",
+   "versions": 6,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0048969721040535",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0048969721040535",
+   "snippet": "Land use (LU) changes caused by urbanization, climate, and anthropogenic activities alter the supply of ecosystem services (ES), which affects the ecological service value (ESV) of a …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_13457704660365452222",
+   "scholarClusterId": "13457704660365452222",
+   "scholarCid": "vqMzLRZfw7oJ",
+   "title": "Influence of farmland marginalization in mountainous and hilly areas on land use changes at the county level",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "Y Tan",
+    "H Chen",
+    "W Xiao",
+    "F Meng",
+    "T He"
+   ],
+   "authorsTruncated": false,
+   "venue": "Science of the Total Environment",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "Y Tan, H Chen, W Xiao, F Meng, T He - Science of the Total Environment, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "H Chen",
+     "id": "5lPDBhkAAAAJ"
+    },
+    {
+     "name": "W Xiao",
+     "id": "oEArFNcAAAAJ"
+    },
+    {
+     "name": "T He",
+     "id": "OH1Dax4AAAAJ"
+    }
+   ],
+   "citedBy": 66,
+   "scholarCitesId": "13457704660365452222",
+   "versions": 8,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0048969721046519",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0048969721046519",
+   "snippet": "Agricultural works alter earth's surface at the largest scale among human-driven activities. Previous studies have focused more on the reclamation of natural land, however, farmland …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_7136304711375421814",
+   "scholarClusterId": "7136304711375421814",
+   "scholarCid": "doF6QlM_CWMJ",
+   "title": "Multichannel piezo‐ultrasound implant with hybrid waterborne acoustic metastructure for selective wireless energy transfer at megahertz frequencies",
+   "type": null,
+   "authors": [
+    "L Jiang",
+    "G Lu",
+    "Y Yang",
+    "Y Xu",
+    "F Qi",
+    "J Li",
+    "B Zhu"
+   ],
+   "authorsTruncated": true,
+   "venue": "Advanced …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Wiley Online Library",
+   "byline": "L Jiang, G Lu, Y Yang, Y Xu, F Qi, J Li, B Zhu… - Advanced …, 2021 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "L Jiang",
+     "id": "IeG2uzwAAAAJ"
+    },
+    {
+     "name": "G Lu",
+     "id": "T3y6wTAAAAAJ"
+    },
+    {
+     "name": "Y Yang",
+     "id": "2aqu0VMAAAAJ"
+    },
+    {
+     "name": "Y Xu",
+     "id": "exFgNfwAAAAJ"
+    },
+    {
+     "name": "F Qi",
+     "id": "5l9EzXAAAAAJ"
+    },
+    {
+     "name": "J Li",
+     "id": "FCPWEKcAAAAJ"
+    },
+    {
+     "name": "B Zhu",
+     "id": "R4FzTB8AAAAJ"
+    }
+   ],
+   "citedBy": 59,
+   "scholarCitesId": "7136304711375421814",
+   "versions": 5,
+   "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adma.202104251",
+   "fullText": "https://advanced.onlinelibrary.wiley.com/doi/pdf/10.1002/adma.202104251",
+   "snippet": "Ultrasound energy transfer (UET) is developed and integrated into various bioelectronics with diagnostic, therapeutic, and monitoring capabilities. However, existing UET platforms …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_10298235521304135137",
+   "scholarClusterId": "10298235521304135137",
+   "scholarCid": "4YWk7KSu6o4J",
+   "title": "The need for urban‐resolving climate modeling across scales",
+   "type": null,
+   "authors": [
+    "A Sharma",
+    "DJ Wuebbles",
+    "R Kotamarthi"
+   ],
+   "authorsTruncated": false,
+   "venue": "AGU Advances",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Wiley Online Library",
+   "byline": "A Sharma, DJ Wuebbles, R Kotamarthi - AGU Advances, 2021 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "A Sharma",
+     "id": "JlSZCaoAAAAJ"
+    },
+    {
+     "name": "DJ Wuebbles",
+     "id": "ADwK3uYAAAAJ"
+    },
+    {
+     "name": "R Kotamarthi",
+     "id": "fbyKxxsAAAAJ"
+    }
+   ],
+   "citedBy": 59,
+   "scholarCitesId": "10298235521304135137",
+   "versions": 7,
+   "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2020AV000271",
+   "fullText": "https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2020AV000271",
+   "snippet": "Increasing urbanization, evolving urban landscapes, and growing populations require an accurate representation of urban areas and urban processes at microscale, regional, and …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_1535163006730924482",
+   "scholarClusterId": "1535163006730924482",
+   "scholarCid": "wnGE-J7-TRUJ",
+   "title": "A data-driven machine learning-based approach for urban land cover change modeling: A case of Khulna City Corporation area",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "MD Islam",
+    "KS Islam",
+    "R Ahasan",
+    "MR Mia"
+   ],
+   "authorsTruncated": true,
+   "venue": "… Applications: Society and …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "MD Islam, KS Islam, R Ahasan, MR Mia… - … Applications: Society and …, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "MD Islam",
+     "id": "MvKr4agAAAAJ"
+    },
+    {
+     "name": "KS Islam",
+     "id": "W1Mcl6kAAAAJ"
+    },
+    {
+     "name": "R Ahasan",
+     "id": "SDBFKlsAAAAJ"
+    },
+    {
+     "name": "MR Mia",
+     "id": "WjJDc3oAAAAJ"
+    }
+   ],
+   "citedBy": 57,
+   "scholarCitesId": "1535163006730924482",
+   "versions": 4,
+   "url": "https://www.sciencedirect.com/science/article/pii/S2352938521001701",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S2352938521001701",
+   "snippet": "Land use and land cover (LULC) changes have significant consequences on habitat and the environment. Past studies developed several LULC change models to identify the factors …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_14981862610554502239",
+   "scholarClusterId": "14981862610554502239",
+   "scholarCid": "X7zOv6pE6s8J",
+   "title": "Artificial light at night advances spring phenology in the United States",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "Q Zheng",
+    "HC Teo",
+    "LP Koh"
+   ],
+   "authorsTruncated": false,
+   "venue": "Remote Sensing",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "Q Zheng, HC Teo, LP Koh - Remote Sensing, 2021 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "Q Zheng",
+     "id": "azf48tgAAAAJ"
+    },
+    {
+     "name": "HC Teo",
+     "id": "Mzd4W1wAAAAJ"
+    },
+    {
+     "name": "LP Koh",
+     "id": "KR3AV20AAAAJ"
+    }
+   ],
+   "citedBy": 55,
+   "scholarCitesId": "14981862610554502239",
+   "versions": 9,
+   "url": "https://www.mdpi.com/2072-4292/13/3/399",
+   "fullText": "https://www.mdpi.com/2072-4292/13/3/399",
+   "snippet": "Plant phenology is closely related to light availability as diurnal and seasonal cycles are essential environmental cues for organizing bio-ecological processes. The natural cycles of …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_12986576643383663072",
+   "scholarClusterId": "12986576643383663072",
+   "scholarCid": "4JlEvaaWObQJ",
+   "title": "Spatial distribution recast for organic bulk heterojunctions for high‐performance all‐inorganic perovskite/organic integrated solar cells",
+   "type": null,
+   "authors": [
+    "W Chen",
+    "D Li",
+    "S Chen",
+    "S Liu",
+    "Y Shen"
+   ],
+   "authorsTruncated": true,
+   "venue": "Advanced Energy …",
+   "venueTruncated": true,
+   "year": 2020,
+   "source": "Wiley Online Library",
+   "byline": "W Chen, D Li, S Chen, S Liu, Y Shen… - Advanced Energy …, 2020 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "W Chen",
+     "id": "IKR8b9QAAAAJ"
+    },
+    {
+     "name": "D Li",
+     "id": "syV3kn8AAAAJ"
+    },
+    {
+     "name": "S Chen",
+     "id": "brGKgfoAAAAJ"
+    }
+   ],
+   "citedBy": 51,
+   "scholarCitesId": "12986576643383663072",
+   "versions": 7,
+   "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/aenm.202000851",
+   "fullText": "https://advanced.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/aenm.202000851",
+   "snippet": "All‐inorganic CsPbIBr2 perovskite solar cells (pero‐SCs) exhibit excellent overall stability, but their power conversion efficiencies (PCEs) are greatly limited by their wide bandgaps …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_13062312008208521222",
+   "scholarClusterId": "13062312008208521222",
+   "scholarCid": "BpiWepCnRrUJ",
+   "title": "Land use change induced by the implementation of ecological restoration Programs increases future terrestrial ecosystem carbon sequestration in red soil …",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "K Ning",
+    "J Chen",
+    "Z Li",
+    "C Liu",
+    "X Nie",
+    "Y Liu",
+    "L Wang"
+   ],
+   "authorsTruncated": true,
+   "venue": "Ecological Indicators",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "K Ning, J Chen, Z Li, C Liu, X Nie, Y Liu, L Wang… - Ecological Indicators, 2021 - Elsevier",
+   "scholarAuthorIds": [],
+   "citedBy": 49,
+   "scholarCitesId": "13062312008208521222",
+   "versions": 4,
+   "url": "https://www.sciencedirect.com/science/article/pii/S1470160X21010748",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S1470160X21010748",
+   "snippet": "Abstract Ecological Restoration Programs (ERP) is an effective approach to increase carbon sequestration in terrestrial ecosystems to mitigate climate change, but it's still controversial …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_12775377504302519921",
+   "scholarClusterId": "12775377504302519921",
+   "scholarCid": "cdZ3PydCS7EJ",
+   "title": "Analyzing land-use change scenarios for ecosystem services and their trade-offs in the ecological conservation area in Beijing, China",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "Z Li",
+    "X Cheng",
+    "H Han"
+   ],
+   "authorsTruncated": false,
+   "venue": "… Journal of Environmental Research and Public …",
+   "venueTruncated": true,
+   "year": 2020,
+   "source": "mdpi.com",
+   "byline": "Z Li, X Cheng, H Han - … Journal of Environmental Research and Public …, 2020 - mdpi.com",
+   "scholarAuthorIds": [],
+   "citedBy": 48,
+   "scholarCitesId": "12775377504302519921",
+   "versions": 11,
+   "url": "https://www.mdpi.com/1660-4601/17/22/8632",
+   "fullText": "https://www.mdpi.com/1660-4601/17/22/8632",
+   "snippet": "It is generally believed that land-use changes can affect a variety of ecosystem services (ES), but the relationships involved remain unclear due to a lack of systematic knowledge …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_3336593114444767971",
+   "scholarClusterId": "3336593114444767971",
+   "scholarCid": "46J-csL1TS4J",
+   "title": "Quantitative recognition and characteristic analysis of production-living-ecological space evolution for five resource-based cities: Zululand, Xuzhou, Lota, Surf …",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "Y Tao",
+    "Q Wang"
+   ],
+   "authorsTruncated": false,
+   "venue": "Remote Sensing",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "Y Tao, Q Wang - Remote Sensing, 2021 - mdpi.com",
+   "scholarAuthorIds": [],
+   "citedBy": 48,
+   "scholarCitesId": "3336593114444767971",
+   "versions": 7,
+   "url": "https://www.mdpi.com/2072-4292/13/8/1563",
+   "fullText": "https://www.mdpi.com/2072-4292/13/8/1563",
+   "snippet": "The accurate identification of PLES changes and the discovery of their evolution characteristics is a key issue to improve the ability of the sustainable development for …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_6817243197250439546",
+   "scholarClusterId": "6817243197250439546",
+   "scholarCid": "eomPj5G2m14J",
+   "title": "Forecasting spatio-temporal dynamics on the land surface using earth observation data—A review",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "J Koehler",
+    "C Kuenzer"
+   ],
+   "authorsTruncated": false,
+   "venue": "Remote Sensing",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "mdpi.com",
+   "byline": "J Koehler, C Kuenzer - Remote Sensing, 2020 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "J Koehler",
+     "id": "0QrvfjEAAAAJ"
+    },
+    {
+     "name": "C Kuenzer",
+     "id": "37PKZCEAAAAJ"
+    }
+   ],
+   "citedBy": 47,
+   "scholarCitesId": "6817243197250439546",
+   "versions": 13,
+   "url": "https://www.mdpi.com/2072-4292/12/21/3513",
+   "fullText": "https://www.mdpi.com/2072-4292/12/21/3513",
+   "snippet": "Reliable forecasts on the impacts of global change on the land surface are vital to inform the actions of policy and decision makers to mitigate consequences and secure livelihoods …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_6592189129149129284",
+   "scholarClusterId": "6592189129149129284",
+   "scholarCid": "RCIgBxYpfFsJ",
+   "title": "Landscape pattern change simulations in Tibet based on the combination of the SSP-RCP scenarios",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "H Liu",
+    "Y Liu",
+    "C Wang",
+    "W Zhao",
+    "S Liu"
+   ],
+   "authorsTruncated": false,
+   "venue": "Journal of Environmental …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "H Liu, Y Liu, C Wang, W Zhao, S Liu - Journal of Environmental …, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "W Zhao",
+     "id": "zkqCwlsAAAAJ"
+    },
+    {
+     "name": "S Liu",
+     "id": "m4NelVAAAAAJ"
+    }
+   ],
+   "citedBy": 47,
+   "scholarCitesId": "6592189129149129284",
+   "versions": 7,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0301479721008458",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0301479721008458",
+   "snippet": "Monitoring landscape pattern change can provide spatial explicit basis for future landscape management. The future socioeconomic and climate change drivers should be …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_17589600484308097419",
+   "scholarClusterId": "17589600484308097419",
+   "scholarCid": "ixk5YHLQGvQJ",
+   "title": "China's urbanization SD modelling and simulation based on land use",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "Q CAO",
+    "C GU",
+    "W GUAN"
+   ],
+   "authorsTruncated": false,
+   "venue": "Journal of Natural Resources",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "jnr.ac.cn",
+   "byline": "Q CAO, C GU, W GUAN - Journal of Natural Resources, 2021 - jnr.ac.cn",
+   "scholarAuthorIds": [],
+   "citedBy": 47,
+   "scholarCitesId": "17589600484308097419",
+   "versions": 2,
+   "url": "https://www.jnr.ac.cn/EN/abstract/article/1000-3037/49543",
+   "fullText": "https://www.jnr.ac.cn/EN/abstract/article/1000-3037/49543",
+   "snippet": "China is still experiencing the process of rapid urbanization. How will cultivated land and ecological land, such as woodland, grassland, and water body change? Will construction …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_226057161252258064",
+   "scholarClusterId": "226057161252258064",
+   "scholarCid": "EMFfW8odIwMJ",
+   "title": "Assessment of land cover dynamics and drivers of urban expansion using geospatial and logistic regression approach in Wa municipality, Ghana",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "M Asempah",
+    "W Sahwan",
+    "B Schütt"
+   ],
+   "authorsTruncated": false,
+   "venue": "Land",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "M Asempah, W Sahwan, B Schütt - Land, 2021 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "M Asempah",
+     "id": "qP0Qiu0AAAAJ"
+    },
+    {
+     "name": "W Sahwan",
+     "id": "8im0iocAAAAJ"
+    },
+    {
+     "name": "B Schütt",
+     "id": "bdRCtPEAAAAJ"
+    }
+   ],
+   "citedBy": 45,
+   "scholarCitesId": "226057161252258064",
+   "versions": 17,
+   "url": "https://www.mdpi.com/2073-445X/10/11/1251?utm_source=releaseissue&utm_medium=email&utm_campaign=releaseissue_land&utm_term=titlelink9&recipient=gramariani@gmail.com&subject=Land,%20Volume%2010,%20Issue%2011%20(November%202021)%20Table%20of%20Contents&campaign=ReleaseIssue",
+   "fullText": "https://www.mdpi.com/2073-445X/10/11/1251?utm_source=releaseissue&utm_medium=email&utm_campaign=releaseissue_land&utm_term=titlelink9&recipient=gramariani@gmail.com&subject=Land,%20Volume%2010,%20Issue%2011%20(November%202021)%20Table%20of%20Contents&campaign=ReleaseIssue",
+   "snippet": "The current trends of land use dynamics have revealed a significant transformation of settlement spaces. In the Wa Municipality of Ghana, the changes in land use and land cover …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_11346255030731110652",
+   "scholarClusterId": "11346255030731110652",
+   "scholarCid": "_Hi33dX-dZ0J",
+   "title": "Future socio-political scenarios for aquatic resources in Europe: a common framework based on shared-socioeconomic-pathways (SSPs)",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "JK Pinnegar",
+    "KG Hamon",
+    "CM Kreiss"
+   ],
+   "authorsTruncated": true,
+   "venue": "Frontiers in Marine …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "frontiersin.org",
+   "byline": "JK Pinnegar, KG Hamon, CM Kreiss… - Frontiers in Marine …, 2021 - frontiersin.org",
+   "scholarAuthorIds": [
+    {
+     "name": "JK Pinnegar",
+     "id": "nqCvi0wAAAAJ"
+    },
+    {
+     "name": "KG Hamon",
+     "id": "ag2QY9AAAAAJ"
+    }
+   ],
+   "citedBy": 45,
+   "scholarCitesId": "11346255030731110652",
+   "versions": 25,
+   "url": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2020.568219/full",
+   "fullText": "https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2020.568219/full",
+   "snippet": "It has proven extremely challenging for researchers to predict with confidence how human societies might develop in the future, yet managers and industries need to make projections …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_16724492478600284281",
+   "scholarClusterId": "16724492478600284281",
+   "scholarCid": "eYipk0xVGegJ",
+   "title": "Sub‐picosecond nanodiodes for low‐power ultrafast electronics",
+   "type": null,
+   "authors": [
+    "N Li",
+    "B Zhang",
+    "Y He",
+    "Y Luo"
+   ],
+   "authorsTruncated": false,
+   "venue": "Advanced Materials",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Wiley Online Library",
+   "byline": "N Li, B Zhang, Y He, Y Luo - Advanced Materials, 2021 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "Y Luo",
+     "id": "PzmT8J4AAAAJ"
+    }
+   ],
+   "citedBy": 44,
+   "scholarCitesId": "16724492478600284281",
+   "versions": 4,
+   "url": "https://advanced.onlinelibrary.wiley.com/doi/abs/10.1002/adma.202100874",
+   "fullText": "https://advanced.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/adma.202100874",
+   "snippet": "The tradeoff between ultrahigh speed and low power is a dominant challenge in continuously improving modern electronics. Fundamental electronic devices with ultrafast …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_12776327831636273183",
+   "scholarClusterId": "12776327831636273183",
+   "scholarCid": "H-idkniiTrEJ",
+   "title": "Integration of artificial intelligence–based LULC mapping and prediction for estimating ecosystem services for urban sustainability: past to future perspective",
+   "type": null,
+   "authors": [
+    "AA Bindajam",
+    "J Mallick",
+    "S Talukdar",
+    "ARMT Islam"
+   ],
+   "authorsTruncated": true,
+   "venue": "Arabian Journal of …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Springer",
+   "byline": "AA Bindajam, J Mallick, S Talukdar, ARMT Islam… - Arabian Journal of …, 2021 - Springer",
+   "scholarAuthorIds": [
+    {
+     "name": "AA Bindajam",
+     "id": "-frZETkAAAAJ"
+    },
+    {
+     "name": "J Mallick",
+     "id": "ujIG8r8AAAAJ"
+    },
+    {
+     "name": "ARMT Islam",
+     "id": "y4guQoUAAAAJ"
+    }
+   ],
+   "citedBy": 43,
+   "scholarCitesId": "12776327831636273183",
+   "versions": 4,
+   "url": "https://link.springer.com/article/10.1007/s12517-021-08251-4",
+   "fullText": "https://link.springer.com/content/pdf/10.1007/s12517-021-08251-4.pdf",
+   "snippet": "The present study aims to investigate the dynamics of land use and land cover (LULC) and their relationship with ecosystem services value (ESV) from the past to the future (1990 …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_11102284571415333031",
+   "scholarClusterId": "11102284571415333031",
+   "scholarCid": "p8iCyv48E5oJ",
+   "title": "High-resolution urban change modeling and flood exposure estimation at a national scale using open geospatial data: A case study of the Philippines",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "BA Johnson",
+    "RC Estoque",
+    "X Li",
+    "P Kumar"
+   ],
+   "authorsTruncated": true,
+   "venue": "… Environment and Urban …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "BA Johnson, RC Estoque, X Li, P Kumar… - … Environment and Urban …, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "BA Johnson",
+     "id": "U7oZcFAAAAAJ"
+    },
+    {
+     "name": "RC Estoque",
+     "id": "DhbJXSQAAAAJ"
+    },
+    {
+     "name": "X Li",
+     "id": "r2p47SEAAAAJ"
+    },
+    {
+     "name": "P Kumar",
+     "id": "aInjMLsAAAAJ"
+    }
+   ],
+   "citedBy": 41,
+   "scholarCitesId": "11102284571415333031",
+   "versions": 4,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0198971521001113",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0198971521001113",
+   "snippet": "Many developing countries in Asia are experiencing rapid urban expansion in climate hazard prone areas. To support climate resilient urban planning efforts, here we present an …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "X Li"
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_17998813314584004169",
+   "scholarClusterId": "17998813314584004169",
+   "scholarCid": "ScZZClmhyPkJ",
+   "title": "Urbanisation's contribution to climate warming in Great Britain",
+   "type": null,
+   "authors": [
+    "R Bassett",
+    "PJ Young",
+    "GS Blair",
+    "XM Cai"
+   ],
+   "authorsTruncated": true,
+   "venue": "Environmental …",
+   "venueTruncated": true,
+   "year": 2020,
+   "source": "iopscience.iop.org",
+   "byline": "R Bassett, PJ Young, GS Blair, XM Cai… - Environmental …, 2020 - iopscience.iop.org",
+   "scholarAuthorIds": [
+    {
+     "name": "PJ Young",
+     "id": "TpegchcAAAAJ"
+    },
+    {
+     "name": "GS Blair",
+     "id": "TQj5qo0AAAAJ"
+    },
+    {
+     "name": "XM Cai",
+     "id": "HgL5PPsAAAAJ"
+    }
+   ],
+   "citedBy": 39,
+   "scholarCitesId": "17998813314584004169",
+   "versions": 13,
+   "url": "https://iopscience.iop.org/article/10.1088/1748-9326/abbb51/meta",
+   "fullText": "https://iopscience.iop.org/article/10.1088/1748-9326/abbb51/pdf",
+   "snippet": "Urbanisation is changing the climate of the world we live in. In Great Britain (GB) 5.8% of the total land area is covered by artificial surfaces, increasing from 4.3% in 1975. Aside from …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_11069720539851621911",
+   "scholarClusterId": "11069720539851621911",
+   "scholarCid": "F4azXC6Mn5kJ",
+   "title": "Simulating the impact of future climate change and ecological restoration on trade-offs and synergies of ecosystem services in two ecological shelters and …",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "LJ Wang",
+    "S Ma",
+    "YP Qiao",
+    "JC Zhang"
+   ],
+   "authorsTruncated": false,
+   "venue": "International Journal of …",
+   "venueTruncated": true,
+   "year": 2020,
+   "source": "mdpi.com",
+   "byline": "LJ Wang, S Ma, YP Qiao, JC Zhang - International Journal of …, 2020 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "LJ Wang",
+     "id": "80tRXFQAAAAJ"
+    },
+    {
+     "name": "JC Zhang",
+     "id": "Kfc6HnYAAAAJ"
+    }
+   ],
+   "citedBy": 38,
+   "scholarCitesId": "11069720539851621911",
+   "versions": 11,
+   "url": "https://www.mdpi.com/1660-4601/17/21/7849",
+   "fullText": "https://www.mdpi.com/1660-4601/17/21/7849",
+   "snippet": "Development of suitable ecological protection and restoration policies for sustainable management needs to assess the potential impacts of future land use and climate change …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_788066298445320229",
+   "scholarClusterId": "788066298445320229",
+   "scholarCid": "JVBKgh_G7woJ",
+   "title": "Urban expansion simulation from the perspective of land acquisition-based on bargaining model and ant colony optimization",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "D Tang",
+    "H Liu",
+    "E Song",
+    "S Chang"
+   ],
+   "authorsTruncated": false,
+   "venue": "Computers, Environment and Urban …",
+   "venueTruncated": true,
+   "year": 2020,
+   "source": "Elsevier",
+   "byline": "D Tang, H Liu, E Song, S Chang - Computers, Environment and Urban …, 2020 - Elsevier",
+   "scholarAuthorIds": [],
+   "citedBy": 37,
+   "scholarCitesId": "788066298445320229",
+   "versions": 3,
+   "url": "https://www.sciencedirect.com/science/article/pii/S0198971520302374",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S0198971520302374",
+   "snippet": "As a major method to serve the demand for land requirement in Chinese urban construction, land acquisition has been intensified since the speeding up of urbanization. However …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_15540046541613643338",
+   "scholarClusterId": "15540046541613643338",
+   "scholarCid": "Sjbrsf5VqdcJ",
+   "title": "Predation and scavenging in the city: a review of spatio-temporal trends in research",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "A Luna",
+    "P Romero-Vidal",
+    "E Arrondo"
+   ],
+   "authorsTruncated": false,
+   "venue": "Diversity",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "A Luna, P Romero-Vidal, E Arrondo - Diversity, 2021 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "A Luna",
+     "id": "GHF0pe4AAAAJ"
+    },
+    {
+     "name": "P Romero-Vidal",
+     "id": "1kiBiK0AAAAJ"
+    },
+    {
+     "name": "E Arrondo",
+     "id": "oQblWLAAAAAJ"
+    }
+   ],
+   "citedBy": 37,
+   "scholarCitesId": "15540046541613643338",
+   "versions": 8,
+   "url": "https://www.mdpi.com/1424-2818/13/2/46",
+   "fullText": "https://www.mdpi.com/1424-2818/13/2/46",
+   "snippet": "Many researchers highlight the role of urban ecology in a rapidly urbanizing world. Despite the ecological and conservation implications relating to carnivores in cities, our general …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_14140263578136834237",
+   "scholarClusterId": "14140263578136834237",
+   "scholarCid": "vXA9Vc5OPMQJ",
+   "title": "Realizing spatiotemporal effective media for acoustic metamaterials",
+   "type": null,
+   "authors": [
+    "X Wen",
+    "X Zhu",
+    "HW Wu",
+    "J Li"
+   ],
+   "authorsTruncated": false,
+   "venue": "Physical Review B",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "APS",
+   "byline": "X Wen, X Zhu, HW Wu, J Li - Physical Review B, 2021 - APS",
+   "scholarAuthorIds": [
+    {
+     "name": "X Wen",
+     "id": "GrGwyzoAAAAJ"
+    },
+    {
+     "name": "X Zhu",
+     "id": "6CnbHQ4AAAAJ"
+    },
+    {
+     "name": "HW Wu",
+     "id": "LaBzNDwAAAAJ"
+    },
+    {
+     "name": "J Li",
+     "id": "XRRcwYQAAAAJ"
+    }
+   ],
+   "citedBy": 36,
+   "scholarCitesId": "14140263578136834237",
+   "versions": 5,
+   "url": "https://journals.aps.org/prb/abstract/10.1103/PhysRevB.104.L060304",
+   "fullText": "https://link.aps.org/pdf/10.1103/PhysRevB.104.L060304",
+   "snippet": "The effective medium representation is fundamental in providing a performance-to-design approach for many devices based on metamaterials. While there are recent works in …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_267944728834299069",
+   "scholarClusterId": "267944728834299069",
+   "scholarCid": "vVSbrU_utwMJ",
+   "title": "Frequency selective wave beaming in nonreciprocal acoustic phased arrays",
+   "type": null,
+   "authors": [
+    "R Adlakha",
+    "M Moghaddaszadeh",
+    "MA Attarzadeh"
+   ],
+   "authorsTruncated": true,
+   "venue": "Scientific reports",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "nature.com",
+   "byline": "R Adlakha, M Moghaddaszadeh, MA Attarzadeh… - Scientific reports, 2020 - nature.com",
+   "scholarAuthorIds": [
+    {
+     "name": "R Adlakha",
+     "id": "B5I2HaoAAAAJ"
+    },
+    {
+     "name": "M Moghaddaszadeh",
+     "id": "6Kq6IlcAAAAJ"
+    },
+    {
+     "name": "MA Attarzadeh",
+     "id": "RlrcRhYAAAAJ"
+    }
+   ],
+   "citedBy": 32,
+   "scholarCitesId": "267944728834299069",
+   "versions": 11,
+   "url": "https://www.nature.com/articles/s41598-020-77489-x",
+   "fullText": "https://www.nature.com/articles/s41598-020-77489-x.pdf",
+   "snippet": "Acoustic phased arrays are capable of steering and focusing a beam of sound via selective coordination of the spatial distribution of phase angles between multiple sound emitters …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_16162032808381812482",
+   "scholarClusterId": "16162032808381812482",
+   "scholarCid": "Ao_OhzUTS-AJ",
+   "title": "Stationary entanglement between light and microwave via ferromagnetic magnons",
+   "type": null,
+   "authors": [
+    "Q Cai",
+    "J Liao",
+    "Q Zhou"
+   ],
+   "authorsTruncated": false,
+   "venue": "Annalen der Physik",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "Wiley Online Library",
+   "byline": "Q Cai, J Liao, Q Zhou - Annalen der Physik, 2020 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "Q Zhou",
+     "id": "Lks7MHEAAAAJ"
+    }
+   ],
+   "citedBy": 32,
+   "scholarCitesId": "16162032808381812482",
+   "versions": 8,
+   "url": "https://onlinelibrary.wiley.com/doi/abs/10.1002/andp.202000250",
+   "fullText": "https://onlinelibrary.wiley.com/doi/full/10.1002/andp.202000250",
+   "snippet": "It is shown how to generate stationary entanglement between light and microwave in a hybrid opto‐electro‐magnonical system which mainly consists of a microwave cavity, a …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_11747344098510893554",
+   "scholarClusterId": "11747344098510893554",
+   "scholarCid": "8vEFrjfzBqMJ",
+   "title": "Urban expansion simulated by integrated cellular automata and agent-based models; an example of Tallinn, Estonia",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "N Mozaffaree Pour",
+    "T Oja"
+   ],
+   "authorsTruncated": false,
+   "venue": "Urban Science",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "N Mozaffaree Pour, T Oja - Urban Science, 2021 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "N Mozaffaree Pour",
+     "id": "X3CCtmQAAAAJ"
+    },
+    {
+     "name": "T Oja",
+     "id": "lDVcx9YAAAAJ"
+    }
+   ],
+   "citedBy": 32,
+   "scholarCitesId": "11747344098510893554",
+   "versions": 5,
+   "url": "https://www.mdpi.com/2413-8851/5/4/85",
+   "fullText": "https://www.mdpi.com/2413-8851/5/4/85",
+   "snippet": "From 1990 to 2018, built-up areas in Tallinn, Estonia's capital city, increased by 25.03%, while its population decreased by− 10.19%. Investigating the factors affecting urban …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_13138100506900572572",
+   "scholarClusterId": "13138100506900572572",
+   "scholarCid": "nCkwac3oU7YJ",
+   "title": "Spatial dynamic modelling for urban scenario planning: A case study of Nanjing, China",
+   "type": null,
+   "authors": [
+    "Z Cai",
+    "B Wang",
+    "C Cong"
+   ],
+   "authorsTruncated": true,
+   "venue": "… and Planning B: Urban …",
+   "venueTruncated": true,
+   "year": 2020,
+   "source": "journals.sagepub.com",
+   "byline": "Z Cai, B Wang, C Cong… - … and Planning B: Urban …, 2020 - journals.sagepub.com",
+   "scholarAuthorIds": [
+    {
+     "name": "Z Cai",
+     "id": "6SCDDpgAAAAJ"
+    },
+    {
+     "name": "B Wang",
+     "id": "ljUlj0cAAAAJ"
+    },
+    {
+     "name": "C Cong",
+     "id": "0W8bqssAAAAJ"
+    }
+   ],
+   "citedBy": 31,
+   "scholarCitesId": "13138100506900572572",
+   "versions": 7,
+   "url": "https://journals.sagepub.com/doi/abs/10.1177/2399808320934818",
+   "fullText": "https://journals.sagepub.com/doi/pdf/10.1177/2399808320934818",
+   "snippet": "Although urban scenario planning is widely applied for exploring various directions of urban development, it often has high requirements on the medium of quantitative information …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_14704969170168778078",
+   "scholarClusterId": "14704969170168778078",
+   "scholarCid": "Xg37zIyLEswJ",
+   "title": "基于土地利用的中国城镇化 SD 模型与模拟",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "曹祺文， 顾朝林， 管卫华"
+   ],
+   "authorsTruncated": false,
+   "venue": "自然资源学报",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "jnr.ac.cn",
+   "byline": "曹祺文， 顾朝林， 管卫华 - 自然资源学报, 2021 - jnr.ac.cn",
+   "scholarAuthorIds": [],
+   "citedBy": 30,
+   "scholarCitesId": "14704969170168778078",
+   "versions": 4,
+   "url": "https://www.jnr.ac.cn/CN/PDF/10.31497/zrzyxb.20210419",
+   "fullText": "https://www.jnr.ac.cn/CN/PDF/10.31497/zrzyxb.20210419",
+   "snippet": "中国正处在快速推进的城镇化进程中, 耕地与林地, 牧草地和水域等生态用地将如何变化, 以及建设用地是否仍将快速增长? 这不仅是国家宏观政策制定者关心的问题 …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "... "
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_13974545583425219961",
+   "scholarClusterId": "13974545583425219961",
+   "scholarCid": "eW2Q9SqP78EJ",
+   "title": "Cropland abandonment and influencing factors in Chongqing, china",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "H Li",
+    "W Song"
+   ],
+   "authorsTruncated": false,
+   "venue": "Land",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "H Li, W Song - Land, 2021 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "W Song",
+     "id": "6-YshuQAAAAJ"
+    }
+   ],
+   "citedBy": 29,
+   "scholarCitesId": "13974545583425219961",
+   "versions": 14,
+   "url": "https://www.mdpi.com/2073-445X/10/11/1206",
+   "fullText": "https://www.mdpi.com/2073-445X/10/11/1206",
+   "snippet": "Cropland abandonment occurs frequently in many countries and regions around the world, particularly in those with poor environmental conditions, such as mountainous regions. In …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_15363961937260218656",
+   "scholarClusterId": "15363961937260218656",
+   "scholarCid": "IIkE7frBN9UJ",
+   "title": "Applying plant disturbance indicators to reveal the hemeroby of soil macrofauna species",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "NV Yorkina",
+    "SM Podorozhniy",
+    "LG Velcheva"
+   ],
+   "authorsTruncated": true,
+   "venue": "Biosystems …",
+   "venueTruncated": true,
+   "year": 2020,
+   "source": "cyberleninka.ru",
+   "byline": "NV Yorkina, SM Podorozhniy, LG Velcheva… - Biosystems …, 2020 - cyberleninka.ru",
+   "scholarAuthorIds": [
+    {
+     "name": "NV Yorkina",
+     "id": "Oc9-EEYAAAAJ"
+    }
+   ],
+   "citedBy": 28,
+   "scholarCitesId": "15363961937260218656",
+   "versions": 9,
+   "url": "https://cyberleninka.ru/article/n/applying-plant-disturbance-indicators-to-reveal-the-hemeroby-of-soil-macrofauna-species",
+   "fullText": "https://cyberleninka.ru/article/n/applying-plant-disturbance-indicators-to-reveal-the-hemeroby-of-soil-macrofauna-species",
+   "snippet": "Hemeroby is an integrated indicator for measuring human impacts on environmental systems. Hemeroby has a complex nature and a variety of mechanisms to affect ecosystems …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_9936079737225645354",
+   "scholarClusterId": "9936079737225645354",
+   "scholarCid": "Ko1KneAL5IkJ",
+   "title": "Shades of grey: host phenotype dependent effect of urbanization on the bacterial microbiome of a wild mammal",
+   "type": null,
+   "authors": [
+    "MR Stothart",
+    "AEM Newman"
+   ],
+   "authorsTruncated": false,
+   "venue": "Animal microbiome",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Springer",
+   "byline": "MR Stothart, AEM Newman - Animal microbiome, 2021 - Springer",
+   "scholarAuthorIds": [
+    {
+     "name": "MR Stothart",
+     "id": "1zDm_RwAAAAJ"
+    },
+    {
+     "name": "AEM Newman",
+     "id": "TzNE64UAAAAJ"
+    }
+   ],
+   "citedBy": 28,
+   "scholarCitesId": "9936079737225645354",
+   "versions": 11,
+   "url": "https://link.springer.com/article/10.1186/s42523-021-00105-4",
+   "fullText": "https://link.springer.com/content/pdf/10.1186/s42523-021-00105-4.pdf",
+   "snippet": "Background Host-associated microbiota are integral to the ecology of their host and may help wildlife species cope with rapid environmental change. Urbanization is a globally …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_10754437050239146037",
+   "scholarClusterId": "10754437050239146037",
+   "scholarCid": "NdjNioRvP5UJ",
+   "title": "城市下垫面空间特征对地表产汇流过程的 影响研究综述.",
+   "type": null,
+   "authors": [
+    "梅超， 刘家宏， 王浩， 王佳， 罗佳杭"
+   ],
+   "authorsTruncated": true,
+   "venue": "Advances in Water …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "openurl.ebsco.com",
+   "byline": "梅超， 刘家宏， 王浩， 王佳， 罗佳杭… - Advances in Water …, 2021 - openurl.ebsco.com",
+   "scholarAuthorIds": [],
+   "citedBy": 28,
+   "scholarCitesId": "10754437050239146037",
+   "versions": 5,
+   "url": "https://openurl.ebsco.com/contentitem/gcd:153485122?sid=ebsco:plink:crawler-gcd&id=ebsco:gcd:153485122&crl=c&jrnl=10016791",
+   "fullText": null,
+   "snippet": "快速城市化显著改变了城市下垫面空间特征, 对地表产汇流过程产生了重要影响. 综述城市下垫面空间特征对地表产汇流过程的影响研究进展, 以下垫面空间特征对产汇流过程的 …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "... "
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_15204512917602607508",
+   "scholarClusterId": "15204512917602607508",
+   "scholarCid": "lKGKDPFHAdMJ",
+   "title": "Revisiting spatiotemporal changes in global urban expansion during 1995 to 2015",
+   "type": null,
+   "authors": [
+    "Y Zhang",
+    "H Wang",
+    "P Xie",
+    "Y Rao",
+    "Q He"
+   ],
+   "authorsTruncated": false,
+   "venue": "Complexity",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "Wiley Online Library",
+   "byline": "Y Zhang, H Wang, P Xie, Y Rao, Q He - Complexity, 2020 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "Q He",
+     "id": "g3M_L0MAAAAJ"
+    }
+   ],
+   "citedBy": 27,
+   "scholarCitesId": "15204512917602607508",
+   "versions": 8,
+   "url": "https://onlinelibrary.wiley.com/doi/abs/10.1155/2020/6139158",
+   "fullText": "https://onlinelibrary.wiley.com/doi/pdf/10.1155/2020/6139158",
+   "snippet": "This study used global land‐use data interpreted from remote sensing images to quantitatively analyze the spatial and temporal changes in global urban expansion over the …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_821307563243014651",
+   "scholarClusterId": "821307563243014651",
+   "scholarCid": "-wlxluDeZQsJ",
+   "title": "Incubation Behavior Differences in Urban and Rural House Wrens, Troglodytes aedon",
+   "type": null,
+   "authors": [
+    "JJ Heppner",
+    "JQ Ouyang"
+   ],
+   "authorsTruncated": false,
+   "venue": "Frontiers in Ecology and Evolution",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "frontiersin.org",
+   "byline": "JJ Heppner, JQ Ouyang - Frontiers in Ecology and Evolution, 2021 - frontiersin.org",
+   "scholarAuthorIds": [
+    {
+     "name": "JJ Heppner",
+     "id": "ppoUwIkAAAAJ"
+    },
+    {
+     "name": "JQ Ouyang",
+     "id": "hHFWDGMAAAAJ"
+    }
+   ],
+   "citedBy": 27,
+   "scholarCitesId": "821307563243014651",
+   "versions": 5,
+   "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2021.590069/full",
+   "fullText": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2021.590069/pdf",
+   "snippet": "As global land surfaces are being converted to urban areas at an alarming rate, understanding how individuals respond to urbanization is a key focus for behavioral …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_3711061160317198251",
+   "scholarClusterId": "3711061160317198251",
+   "scholarCid": "q590mHZWgDMJ",
+   "title": "How Does Land Urbanization Promote CO2 Emissions Reduction? Evidence From Chinese Prefectural-Level Cities",
+   "type": null,
+   "authors": [
+    "M Tang",
+    "F Hu"
+   ],
+   "authorsTruncated": false,
+   "venue": "Frontiers in Environmental Science",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "frontiersin.org",
+   "byline": "M Tang, F Hu - Frontiers in Environmental Science, 2021 - frontiersin.org",
+   "scholarAuthorIds": [],
+   "citedBy": 26,
+   "scholarCitesId": "3711061160317198251",
+   "versions": 6,
+   "url": "https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2021.766839/full",
+   "fullText": "https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2021.766839/pdf",
+   "snippet": "The process of land urbanization may result in a great change in land use structure, land use intensity, and efficiency, which could further lead to an increase in carbon dioxide (CO2) …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_2115116110551420320",
+   "scholarClusterId": "2115116110551420320",
+   "scholarCid": "oI0fbOVmWh0J",
+   "title": "Designing successful monodentate N-heterocyclic carbene ligands for asymmetric metal catalysis",
+   "type": null,
+   "authors": [
+    "D Foster",
+    "SM Borhanuddin",
+    "R Dorta"
+   ],
+   "authorsTruncated": false,
+   "venue": "Dalton Transactions",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "pubs.rsc.org",
+   "byline": "D Foster, SM Borhanuddin, R Dorta - Dalton Transactions, 2021 - pubs.rsc.org",
+   "scholarAuthorIds": [
+    {
+     "name": "SM Borhanuddin",
+     "id": "tTVaEswAAAAJ"
+    },
+    {
+     "name": "R Dorta",
+     "id": "wCvO8_cAAAAJ"
+    }
+   ],
+   "citedBy": 26,
+   "scholarCitesId": "2115116110551420320",
+   "versions": 6,
+   "url": "https://pubs.rsc.org/dt/article-abstract/50/47/17467/725823",
+   "fullText": "https://pubs.rsc.org/dt/article-pdf/50/47/17467/7846298/d1dt02951g.pdf",
+   "snippet": "Chiral ligands are of particular importance in asymmetric transition-metal catalysis. Although the development of effective chiral monodentate N-heterocyclic carbenes (NHCs) has been …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_863693093923026586",
+   "scholarClusterId": "863693093923026586",
+   "scholarCid": "mnY9-kp0_AsJ",
+   "title": "Saving the ground beneath our feet: Establishing priorities and criteria for governing soil use and protection",
+   "type": null,
+   "authors": [
+    "L Peake",
+    "C Robb"
+   ],
+   "authorsTruncated": false,
+   "venue": "Royal Society Open Science",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "pmc.ncbi.nlm.nih.gov",
+   "byline": "L Peake, C Robb - Royal Society Open Science, 2021 - pmc.ncbi.nlm.nih.gov",
+   "scholarAuthorIds": [
+    {
+     "name": "L Peake",
+     "id": "nxKc9_IAAAAJ"
+    }
+   ],
+   "citedBy": 26,
+   "scholarCitesId": "863693093923026586",
+   "versions": 12,
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8613628/",
+   "fullText": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8613628/pdf/rsos.201994.pdf",
+   "snippet": "The continual loss and impairment of soil ecosystem services (SES) across the globe calls for a fundamental reconsideration of soil governance mechanisms. This critical synthesis …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_6346641969201948731",
+   "scholarClusterId": "6346641969201948731",
+   "scholarCid": "Oyjeuj7NE1gJ",
+   "title": "Multi-scenario prediction of intra-urban land use change using a cellular automata-random forest model",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "H Liu",
+    "R Homma",
+    "Q Liu",
+    "C Fang"
+   ],
+   "authorsTruncated": false,
+   "venue": "ISPRS International Journal of Geo …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "H Liu, R Homma, Q Liu, C Fang - ISPRS International Journal of Geo …, 2021 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "H Liu",
+     "id": "F1YPRZgAAAAJ"
+    },
+    {
+     "name": "R Homma",
+     "id": "hLSHu2YAAAAJ"
+    },
+    {
+     "name": "Q Liu",
+     "id": "LY1IXGcAAAAJ"
+    },
+    {
+     "name": "C Fang",
+     "id": "e4WAg_oAAAAJ"
+    }
+   ],
+   "citedBy": 26,
+   "scholarCitesId": "6346641969201948731",
+   "versions": 10,
+   "url": "https://www.mdpi.com/2220-9964/10/8/503",
+   "fullText": "https://www.mdpi.com/2220-9964/10/8/503",
+   "snippet": "The simulation of future land use can provide decision support for urban planners and decision makers, which is important for sustainable urban development. Using a cellular …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_8800538437547937247",
+   "scholarClusterId": "8800538437547937247",
+   "scholarCid": "30036hTLIXoJ",
+   "title": "Linking urban sprawl and surface urban heat island in the Teresina–Timon conurbation area in Brazil",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "E Carneiro",
+    "W Lopes",
+    "G Espindola"
+   ],
+   "authorsTruncated": false,
+   "venue": "Land",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "E Carneiro, W Lopes, G Espindola - Land, 2021 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "E Carneiro",
+     "id": "9m0S3mUAAAAJ"
+    },
+    {
+     "name": "W Lopes",
+     "id": "G1UzwR8AAAAJ"
+    },
+    {
+     "name": "G Espindola",
+     "id": "Mt__oyYAAAAJ"
+    }
+   ],
+   "citedBy": 26,
+   "scholarCitesId": "8800538437547937247",
+   "versions": 8,
+   "url": "https://www.mdpi.com/2073-445X/10/5/516",
+   "fullText": "https://www.mdpi.com/2073-445X/10/5/516",
+   "snippet": "Negative consequences of urban growing disparities usually lead to impressive levels of segregation, marginalization, and injustices, particularly in the context of climate change …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_11686417157213091730",
+   "scholarClusterId": "11686417157213091730",
+   "scholarCid": "kne3uHx-LqIJ",
+   "title": "The Direct and Spillover Effect of Multi-Dimensional Urbanization on PM2.5 Concentrations: A Case Study from the Chengdu-Chongqing Urban …",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "S Wang",
+    "P Sun",
+    "F Sun",
+    "S Jiang",
+    "Z Zhang"
+   ],
+   "authorsTruncated": true,
+   "venue": "International Journal of …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "S Wang, P Sun, F Sun, S Jiang, Z Zhang… - International Journal of …, 2021 - mdpi.com",
+   "scholarAuthorIds": [],
+   "citedBy": 24,
+   "scholarCitesId": "11686417157213091730",
+   "versions": 11,
+   "url": "https://www.mdpi.com/1660-4601/18/20/10609",
+   "fullText": "https://www.mdpi.com/1660-4601/18/20/10609",
+   "snippet": "The Chengdu-Chongqing urban agglomeration (CUA) faces considerable air quality concerns, although the situation has improved in the past 15 years. The driving effects of …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_4696942200777765361",
+   "scholarClusterId": "4696942200777765361",
+   "scholarCid": "8XHmzwvkLkEJ",
+   "title": "Estimation of oceanic and land carbon sinks based on the most recent oxygen budget",
+   "type": null,
+   "authors": [
+    "C Li",
+    "J Huang",
+    "L Ding",
+    "X Liu",
+    "D Han",
+    "J Huang"
+   ],
+   "authorsTruncated": false,
+   "venue": "Earth's Future",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Wiley Online Library",
+   "byline": "C Li, J Huang, L Ding, X Liu, D Han, J Huang - Earth's Future, 2021 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "C Li",
+     "id": "NnEDft0AAAAJ"
+    },
+    {
+     "name": "J Huang",
+     "id": "1OFMwwkAAAAJ"
+    },
+    {
+     "name": "X Liu",
+     "id": "_cQXFJMAAAAJ"
+    }
+   ],
+   "citedBy": 23,
+   "scholarCitesId": "4696942200777765361",
+   "versions": 11,
+   "url": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2021EF002124",
+   "fullText": "https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2021EF002124",
+   "snippet": "Robust assessments of global carbon uptake are important for understanding Earth's carbon cycle and its response to human impacts. Here, based on the most recent oxygen budget …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "X Liu"
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_2470883364288076865",
+   "scholarClusterId": "2470883364288076865",
+   "scholarCid": "QRzQGVRXSiIJ",
+   "title": "A multiscale evaluation of the coupling relationship between urban land and carbon emissions: A case study of Chongqing, China",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "C Li",
+    "Y Li",
+    "K Shi",
+    "Q Yang"
+   ],
+   "authorsTruncated": false,
+   "venue": "… Journal of Environmental Research and Public …",
+   "venueTruncated": true,
+   "year": 2020,
+   "source": "mdpi.com",
+   "byline": "C Li, Y Li, K Shi, Q Yang - … Journal of Environmental Research and Public …, 2020 - mdpi.com",
+   "scholarAuthorIds": [],
+   "citedBy": 22,
+   "scholarCitesId": "2470883364288076865",
+   "versions": 11,
+   "url": "https://www.mdpi.com/1660-4601/17/10/3416",
+   "fullText": "https://www.mdpi.com/1660-4601/17/10/3416",
+   "snippet": "Exploring the coupling relationship between urban land and carbon emissions (CE) is one of the important premises for coordinating the urban development and the ecological …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_15505422975282717716",
+   "scholarClusterId": "15505422975282717716",
+   "scholarCid": "FCTodQtULtcJ",
+   "title": "Scaling-up nature-based solutions for mainstreaming resilience in Indian cities",
+   "type": null,
+   "authors": [
+    "S Dhyani",
+    "R Majumdar",
+    "H Santhanam"
+   ],
+   "authorsTruncated": false,
+   "venue": "Ecosystem-based disaster and …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Springer",
+   "byline": "S Dhyani, R Majumdar, H Santhanam - Ecosystem-based disaster and …, 2021 - Springer",
+   "scholarAuthorIds": [
+    {
+     "name": "S Dhyani",
+     "id": "alsuByQAAAAJ"
+    },
+    {
+     "name": "R Majumdar",
+     "id": "raVjQQYAAAAJ"
+    },
+    {
+     "name": "H Santhanam",
+     "id": "BQjHNd0AAAAJ"
+    }
+   ],
+   "citedBy": 22,
+   "scholarCitesId": "15505422975282717716",
+   "versions": 5,
+   "url": "https://link.springer.com/chapter/10.1007/978-981-16-4815-1_12",
+   "fullText": null,
+   "snippet": "Rapid growth of urban areas has attracted foremost global attention in the last few decades. By 2050, India is expected to be the center of urbanization with 68 Indian cities having …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_15866942276266888329",
+   "scholarClusterId": "15866942276266888329",
+   "scholarCid": "iQyEAO-zMtwJ",
+   "title": "Depletion of soil water-extractable organic matter with long-term coverage by impervious surfaces",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "Y Wang",
+    "Q Zhang",
+    "H Majidzadeh",
+    "C He"
+   ],
+   "authorsTruncated": true,
+   "venue": "Frontiers in …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "frontiersin.org",
+   "byline": "Y Wang, Q Zhang, H Majidzadeh, C He… - Frontiers in …, 2021 - frontiersin.org",
+   "scholarAuthorIds": [
+    {
+     "name": "Q Zhang",
+     "id": "jwDlmXcAAAAJ"
+    },
+    {
+     "name": "H Majidzadeh",
+     "id": "JDcPbgYAAAAJ"
+    }
+   ],
+   "citedBy": 22,
+   "scholarCitesId": "15866942276266888329",
+   "versions": 7,
+   "url": "https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2021.714311/full",
+   "fullText": "https://www.frontiersin.org/journals/environmental-science/articles/10.3389/fenvs.2021.714311/full",
+   "snippet": "Water-extractable organic matter (WEOM) in soil is the critical substrate that fuels microbial-driven biogeochemical cycles. However, questions remain regarding whether and how …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_16506832122978796501",
+   "scholarClusterId": "16506832122978796501",
+   "scholarCid": "1YMo4VsMFOUJ",
+   "title": "Landsat-based monitoring of the heat effects of urbanization directions and types in Hangzhou City from 2000 to 2020",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "L Chen",
+    "B Zhou",
+    "W Man",
+    "M Liu"
+   ],
+   "authorsTruncated": false,
+   "venue": "Remote Sensing",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "L Chen, B Zhou, W Man, M Liu - Remote Sensing, 2021 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "L Chen",
+     "id": "-A15fv4AAAAJ"
+    },
+    {
+     "name": "W Man",
+     "id": "-8uQU1MAAAAJ"
+    }
+   ],
+   "citedBy": 21,
+   "scholarCitesId": "16506832122978796501",
+   "versions": 9,
+   "url": "https://www.mdpi.com/2072-4292/13/21/4268",
+   "fullText": "https://www.mdpi.com/2072-4292/13/21/4268",
+   "snippet": "Rapid urbanization has produced serious heat effects worldwide. However, the literature lacks a detailed study on heat effects based on the directions and types of urban expansion …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_5190336745872059632",
+   "scholarClusterId": "5190336745872059632",
+   "scholarCid": "8GxcUsXHB0gJ",
+   "title": "Optimization of a novel urban growth simulation model integrating an artificial fish swarm algorithm and cellular automata for a smart city",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "X Huang",
+    "G Xu",
+    "F Xiao"
+   ],
+   "authorsTruncated": false,
+   "venue": "Sustainability",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "X Huang, G Xu, F Xiao - Sustainability, 2021 - mdpi.com",
+   "scholarAuthorIds": [],
+   "citedBy": 20,
+   "scholarCitesId": "5190336745872059632",
+   "versions": 7,
+   "url": "https://www.mdpi.com/2071-1050/13/4/2338",
+   "fullText": "https://www.mdpi.com/2071-1050/13/4/2338",
+   "snippet": "As one of the 17 Sustainable Development Goals, it is sensible to analysis historical urban land use characteristics and project the potentials of urban sustainable development for a …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_8998807781137332361",
+   "scholarClusterId": "8998807781137332361",
+   "scholarCid": "iTi2zP8v4nwJ",
+   "title": "Minimal model for the onset of slip pulses in frictional rupture",
+   "type": null,
+   "authors": [
+    "K Thøgersen",
+    "E Aharonov",
+    "F Barras",
+    "F Renard"
+   ],
+   "authorsTruncated": false,
+   "venue": "Physical Review E",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "APS",
+   "byline": "K Thøgersen, E Aharonov, F Barras, F Renard - Physical Review E, 2021 - APS",
+   "scholarAuthorIds": [
+    {
+     "name": "K Thøgersen",
+     "id": "-ZGQ_2wAAAAJ"
+    },
+    {
+     "name": "E Aharonov",
+     "id": "TMpWUf8AAAAJ"
+    },
+    {
+     "name": "F Barras",
+     "id": "ySYsQO8AAAAJ"
+    },
+    {
+     "name": "F Renard",
+     "id": "6gPpAlsAAAAJ"
+    }
+   ],
+   "citedBy": 17,
+   "scholarCitesId": "8998807781137332361",
+   "versions": 7,
+   "url": "https://journals.aps.org/pre/abstract/10.1103/PhysRevE.103.052802",
+   "fullText": "https://link.aps.org/pdf/10.1103/PhysRevE.103.052802",
+   "snippet": "We present a minimal one-dimensional continuum model for the transition from cracklike to pulselike propagation of frictional rupture. In its nondimensional form, the model depends on …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_3666370007848719994",
+   "scholarClusterId": "3666370007848719994",
+   "scholarCid": "ehb4zBiQ4TIJ",
+   "title": "Ecosystem services monitoring in the Muthurajawela marsh and Negombo lagoon, Sri Lanka, for sustainable landscape planning",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "D Athukorala",
+    "RC Estoque",
+    "Y Murayama",
+    "B Matsushita"
+   ],
+   "authorsTruncated": false,
+   "venue": "Sustainability",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "D Athukorala, RC Estoque, Y Murayama, B Matsushita - Sustainability, 2021 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "D Athukorala",
+     "id": "3Au77eQAAAAJ"
+    },
+    {
+     "name": "RC Estoque",
+     "id": "DhbJXSQAAAAJ"
+    },
+    {
+     "name": "Y Murayama",
+     "id": "d6PcILwAAAAJ"
+    }
+   ],
+   "citedBy": 17,
+   "scholarCitesId": "3666370007848719994",
+   "versions": 12,
+   "url": "https://www.mdpi.com/2071-1050/13/20/11463",
+   "fullText": "https://www.mdpi.com/2071-1050/13/20/11463",
+   "snippet": "In this study, we examined the impacts of urbanization on the natural landscape and ecosystem services of the Muthurajawela Marsh and Negombo Lagoon (MMNL) located in …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_17840297987385249023",
+   "scholarClusterId": "17840297987385249023",
+   "scholarCid": "_8w2YX94lfcJ",
+   "title": "The imprint of built-up land expansion on cropland distribution and productivity in Shandong Province",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "M Wang",
+    "Q Xu",
+    "Z Fan",
+    "X Sun"
+   ],
+   "authorsTruncated": false,
+   "venue": "Land",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "M Wang, Q Xu, Z Fan, X Sun - Land, 2021 - mdpi.com",
+   "scholarAuthorIds": [],
+   "citedBy": 17,
+   "scholarCitesId": "17840297987385249023",
+   "versions": 9,
+   "url": "https://www.mdpi.com/2073-445X/10/6/639",
+   "fullText": "https://www.mdpi.com/2073-445X/10/6/639",
+   "snippet": "Grain self-sufficiency is a national food security target of China. The way that built-up land expansion impacts upon cropland loss and food provision needs to be explored in the major …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_15977345005704853962",
+   "scholarClusterId": "15977345005704853962",
+   "scholarCid": "yjnmjqHuut0J",
+   "title": "Projecting Land use change with neural network and GIS in northern Melbourne for 2014–2050",
+   "type": null,
+   "authors": [
+    "MR Rahnama",
+    "R Wyatt"
+   ],
+   "authorsTruncated": false,
+   "venue": "Australian Geographer",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Taylor & Francis",
+   "byline": "MR Rahnama, R Wyatt - Australian Geographer, 2021 - Taylor & Francis",
+   "scholarAuthorIds": [
+    {
+     "name": "MR Rahnama",
+     "id": "4pGuoKQAAAAJ"
+    }
+   ],
+   "citedBy": 16,
+   "scholarCitesId": "15977345005704853962",
+   "versions": 7,
+   "url": "https://www.tandfonline.com/doi/abs/10.1080/00049182.2021.1920088",
+   "fullText": "https://www.tandfonline.com/doi/pdf/10.1080/00049182.2021.1920088",
+   "snippet": "Melbourne is one of the most livable cities in the world and it is expected to become a global city of opportunities by 2050. These features along with some of the challenges Melbourne …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_6230356187461036611",
+   "scholarClusterId": "6230356187461036611",
+   "scholarCid": "Q6rFUfGrdlYJ",
+   "title": "Genetic identification and characterization of chromosomal regions for kernel length and width increase from tetraploid wheat",
+   "type": null,
+   "authors": [
+    "J Zhou",
+    "C Li",
+    "J You",
+    "H Tang",
+    "Y Mu",
+    "Q Jiang",
+    "Y Liu"
+   ],
+   "authorsTruncated": true,
+   "venue": "BMC genomics",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Springer",
+   "byline": "J Zhou, C Li, J You, H Tang, Y Mu, Q Jiang, Y Liu… - BMC genomics, 2021 - Springer",
+   "scholarAuthorIds": [
+    {
+     "name": "Q Jiang",
+     "id": "GQq2gDkAAAAJ"
+    }
+   ],
+   "citedBy": 16,
+   "scholarCitesId": "6230356187461036611",
+   "versions": 12,
+   "url": "https://link.springer.com/article/10.1186/s12864-021-08024-z",
+   "fullText": "https://link.springer.com/content/pdf/10.1186/s12864-021-08024-z.pdf",
+   "snippet": "Background Improvement of wheat gerc Triticum aestivum L.) yield could relieve global food shortages. Kernel size, as an important component of 1000-kernel weight (TKW), is always a …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_8238477533638678284",
+   "scholarClusterId": "8238477533638678284",
+   "scholarCid": "DNeR4qrzVHIJ",
+   "title": "Vigilance response of a key prey species to anthropogenic and natural threats in Detroit",
+   "type": null,
+   "authors": [
+    "SL Lima",
+    "S Gámez",
+    "N Arringdale"
+   ],
+   "authorsTruncated": true,
+   "venue": "Frontiers in Ecology and …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "frontiersin.org",
+   "byline": "SL Lima, S Gámez, N Arringdale… - Frontiers in Ecology and …, 2021 - frontiersin.org",
+   "scholarAuthorIds": [
+    {
+     "name": "SL Lima",
+     "id": "FTjd7ZwAAAAJ"
+    },
+    {
+     "name": "S Gámez",
+     "id": "48SRmjQAAAAJ"
+    }
+   ],
+   "citedBy": 16,
+   "scholarCitesId": "8238477533638678284",
+   "versions": 5,
+   "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2021.570734/full",
+   "fullText": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2021.570734/pdf",
+   "snippet": "Rapid urbanization coupled with increased human activity induces pressures that affect predator-prey relations through a suite of behavioral mechanisms, including alteration of …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_15849577843908716540",
+   "scholarClusterId": "15849577843908716540",
+   "scholarCid": "_KcUChMD9dsJ",
+   "title": "城市化对流域水文过程的影响模拟与预测研究",
+   "type": null,
+   "authors": [
+    "陈佩琪， 王兆礼， 曾照洋， 陈晓宏"
+   ],
+   "authorsTruncated": false,
+   "venue": "水力发电学报",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "slfdxb.cn",
+   "byline": "陈佩琪， 王兆礼， 曾照洋， 陈晓宏 - 水力发电学报, 2020 - slfdxb.cn",
+   "scholarAuthorIds": [],
+   "citedBy": 14,
+   "scholarCitesId": "15849577843908716540",
+   "versions": 3,
+   "url": "http://www.slfdxb.cn/CN/abstract/abstract2088.shtml",
+   "fullText": "http://www.slfdxb.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=2088",
+   "snippet": "随着城市化进程的进一步加快, 城市暴雨洪涝灾害频发, 居民的生命财产安全受到严重的威胁. 以粤港澳大湾区典型流域车陂涌为例, 结合研究区快速城市化的特点构建了城市暴雨洪涝模型 …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "... "
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_91935335996648976",
+   "scholarClusterId": "91935335996648976",
+   "scholarCid": "EO5idLOeRgEJ",
+   "title": "分形城市研究进展: 从几何形态到网络关联",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "张红， 蓝天， 李志林"
+   ],
+   "authorsTruncated": false,
+   "venue": "地球信息科学学报",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "researching.cn",
+   "byline": "张红， 蓝天， 李志林 - 地球信息科学学报, 2020 - researching.cn",
+   "scholarAuthorIds": [],
+   "citedBy": 13,
+   "scholarCitesId": "91935335996648976",
+   "versions": 3,
+   "url": "https://www.researching.cn/ArticlePdf/m30024/2020/22/4/04000827.pdf",
+   "fullText": "https://www.researching.cn/ArticlePdf/m30024/2020/22/4/04000827.pdf",
+   "snippet": "城市是人类文明最主要的聚集地, 也是一个开放复杂演化巨系统, 认识其空间复杂性成为城市科学研究的热点和前沿. 城市研究正呈现“从位置和场所向关联和流, 从物质空间向城市网络空间” …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "... "
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_18295320651670997109",
+   "scholarClusterId": "18295320651670997109",
+   "scholarCid": "dci3LjMJ5v0J",
+   "title": "Exploring the structural fractality of urban road networks by different representations",
+   "type": null,
+   "authors": [
+    "H Zhang",
+    "P Gao",
+    "T Lan",
+    "C Liu"
+   ],
+   "authorsTruncated": false,
+   "venue": "The Professional Geographer",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Taylor & Francis",
+   "byline": "H Zhang, P Gao, T Lan, C Liu - The Professional Geographer, 2021 - Taylor & Francis",
+   "scholarAuthorIds": [
+    {
+     "name": "P Gao",
+     "id": "lVOmRTQAAAAJ"
+    },
+    {
+     "name": "T Lan",
+     "id": "OWF5r18AAAAJ"
+    },
+    {
+     "name": "C Liu",
+     "id": "VU1dBDgAAAAJ"
+    }
+   ],
+   "citedBy": 12,
+   "scholarCitesId": "18295320651670997109",
+   "versions": 7,
+   "url": "https://www.tandfonline.com/doi/abs/10.1080/00330124.2021.1871765",
+   "fullText": "https://www.tandfonline.com/doi/pdf/10.1080/00330124.2021.1871765",
+   "snippet": "Organisms and other living things grow as fractals, helping to maximize space-filling ability and transmit flow efficiently. In recent years, many studies on fractals have been carried out …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_6441923517823413414",
+   "scholarClusterId": "6441923517823413414",
+   "scholarCid": "pmwZBk9PZlkJ",
+   "title": "Human–wildlife interaction networks at urban blue spaces",
+   "type": null,
+   "authors": [
+    "L Duke",
+    "CD Soulsbury"
+   ],
+   "authorsTruncated": false,
+   "venue": "Area",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Wiley Online Library",
+   "byline": "L Duke, CD Soulsbury - Area, 2021 - Wiley Online Library",
+   "scholarAuthorIds": [
+    {
+     "name": "CD Soulsbury",
+     "id": "4IAXZDEAAAAJ"
+    }
+   ],
+   "citedBy": 11,
+   "scholarCitesId": "6441923517823413414",
+   "versions": 5,
+   "url": "https://rgs-ibg.onlinelibrary.wiley.com/doi/abs/10.1111/area.12683",
+   "fullText": "https://rgs-ibg.onlinelibrary.wiley.com/doi/pdfdirect/10.1111/area.12683",
+   "snippet": "Human–wildlife interactions in urban areas are known to be important as they can promote nature connectedness and improve human well‐being. Most work has looked at human …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_12670919392888488703",
+   "scholarClusterId": "12670919392888488703",
+   "scholarCid": "_wK67g0m2K8J",
+   "title": "Decline of three farmland pest species in rapidly urbanizing landscapes",
+   "type": null,
+   "authors": [
+    "NF Wan",
+    "M Dainese",
+    "F Zhu",
+    "LB Xiao",
+    "W Zhang",
+    "J Ma"
+   ],
+   "authorsTruncated": true,
+   "venue": "IScience",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "cell.com",
+   "byline": "NF Wan, M Dainese, F Zhu, LB Xiao, W Zhang, J Ma… - IScience, 2021 - cell.com",
+   "scholarAuthorIds": [
+    {
+     "name": "M Dainese",
+     "id": "xcjIlEYAAAAJ"
+    }
+   ],
+   "citedBy": 10,
+   "scholarCitesId": "12670919392888488703",
+   "versions": 16,
+   "url": "https://www.cell.com/iscience/fulltext/S2589-0042(21)00970-6",
+   "fullText": "https://www.cell.com/iscience/pdf/S2589-0042(21)00970-6.pdf",
+   "snippet": "Urbanization is a pressing challenge for earth's humans because it is changing not only natural environments but also agricultural lands. Yet, the consequences of cropland loss on …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_14367484420462408885",
+   "scholarClusterId": "14367484420462408885",
+   "scholarCid": "tfSeTfWOY8cJ",
+   "title": "Consistent, accurate, high resolution, long time-series mapping of built-up land in the North China Plain",
+   "type": null,
+   "authors": [
+    "J Wang",
+    "M Hadjikakou",
+    "BA Bryan"
+   ],
+   "authorsTruncated": false,
+   "venue": "GIScience & Remote Sensing",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Taylor & Francis",
+   "byline": "J Wang, M Hadjikakou, BA Bryan - GIScience & Remote Sensing, 2021 - Taylor & Francis",
+   "scholarAuthorIds": [
+    {
+     "name": "J Wang",
+     "id": "HnfAuQ4AAAAJ"
+    },
+    {
+     "name": "M Hadjikakou",
+     "id": "fzD-Hz4AAAAJ"
+    },
+    {
+     "name": "BA Bryan",
+     "id": "r7hKP0aOxMoC"
+    }
+   ],
+   "citedBy": 9,
+   "scholarCitesId": "14367484420462408885",
+   "versions": 7,
+   "url": "https://www.tandfonline.com/doi/abs/10.1080/15481603.2021.1948275",
+   "fullText": "https://www.tandfonline.com/doi/pdf/10.1080/15481603.2021.1948275",
+   "snippet": "Accurate, long time-series, high-resolution mapping of built-up land dynamics is essential for understanding urbanization and its environmental impacts. Despite advances in remote …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_11560861292353800994",
+   "scholarClusterId": "11560861292353800994",
+   "scholarCid": "IstP5BducKAJ",
+   "title": "Spatial expansion of urban activities and agricultural lands encroachment in Makurdi metropolis",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "ET Iortyom"
+   ],
+   "authorsTruncated": false,
+   "venue": "European Journal of Environment and Earth Sciences",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "academia.edu",
+   "byline": "ET Iortyom - European Journal of Environment and Earth Sciences, 2020 - academia.edu",
+   "scholarAuthorIds": [
+    {
+     "name": "ET Iortyom",
+     "id": "HzquGXMAAAAJ"
+    }
+   ],
+   "citedBy": 8,
+   "scholarCitesId": "11560861292353800994",
+   "versions": 4,
+   "url": "https://www.academia.edu/download/96594581/52.pdf",
+   "fullText": "https://www.academia.edu/download/96594581/52.pdf",
+   "snippet": "This study assessed spatial expansion of urban activities and agricultural lands in Makurdi metropolis, Benue State-Nigeria between the period of 1999 and 2012. The study employed …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_13218479344376718170",
+   "scholarClusterId": "13218479344376718170",
+   "scholarCid": "WqNp4O14cbcJ",
+   "title": "机器学习在城市空间演化模拟中的应用与 新趋势.",
+   "type": null,
+   "authors": [
+    "陈逸敏， 黎夏"
+   ],
+   "authorsTruncated": false,
+   "venue": "Geomatics & Information Science of Wuhan …",
+   "venueTruncated": true,
+   "year": 2020,
+   "source": "openurl.ebsco.com",
+   "byline": "陈逸敏， 黎夏 - Geomatics & Information Science of Wuhan …, 2020 - openurl.ebsco.com",
+   "scholarAuthorIds": [
+    {
+     "name": "陈逸敏",
+     "id": "rpLGwAQAAAAJ"
+    }
+   ],
+   "citedBy": 8,
+   "scholarCitesId": "13218479344376718170",
+   "versions": 3,
+   "url": "https://openurl.ebsco.com/contentitem/gcd:147721718?sid=ebsco:plink:crawler-gcd&id=ebsco:gcd:147721718&crl=c&jrnl=16718860",
+   "fullText": null,
+   "snippet": "城市模拟自20 世纪七八十年代兴起后, 已成为城市研究的一种新范式, 体现了计算思维对于城市研究的深刻影响. 城市模拟方法建立在元胞自动机(cellular automata, CA) 和机器学习基础上 …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "... "
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_15058766693459703475",
+   "scholarClusterId": "15058766693459703475",
+   "scholarCid": "szYm34V8-9AJ",
+   "title": "Water and food nexus: Role of socio-economic status on water–food nexus in an urban agglomeration hyderabad, India using consumption water footprint",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "SK Regonda",
+    "C Dornadula"
+   ],
+   "authorsTruncated": false,
+   "venue": "Water",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "SK Regonda, C Dornadula - Water, 2021 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "SK Regonda",
+     "id": "cTXdUlUAAAAJ"
+    }
+   ],
+   "citedBy": 8,
+   "scholarCitesId": "15058766693459703475",
+   "versions": 8,
+   "url": "https://www.mdpi.com/2073-4441/13/5/637",
+   "fullText": "https://www.mdpi.com/2073-4441/13/5/637",
+   "snippet": "Cities are complex and evolving systems with various factors playing key roles, eg, population increase, the migration of population, the availability of resources, and the …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_14467877420832123411",
+   "scholarClusterId": "14467877420832123411",
+   "scholarCid": "E-qXMtw5yMgJ",
+   "title": "Marginal abatement cost of carbon emissions under different shared socioeconomic pathways",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "N Liu",
+    "F Song"
+   ],
+   "authorsTruncated": false,
+   "venue": "Sustainability",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "N Liu, F Song - Sustainability, 2021 - mdpi.com",
+   "scholarAuthorIds": [],
+   "citedBy": 8,
+   "scholarCitesId": "14467877420832123411",
+   "versions": 7,
+   "url": "https://www.mdpi.com/2071-1050/13/24/13693",
+   "fullText": "https://www.mdpi.com/2071-1050/13/24/13693",
+   "snippet": "Future emissions scenarios have served as a primary basis for assessing climate change and formulating climate policies. To explore the impact of uncertainty in future emissions …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_5195511144242155066",
+   "scholarClusterId": "5195511144242155066",
+   "scholarCid": "Og4j09spGkgJ",
+   "title": "The evolution of built-up areas in Ghana since 1975",
+   "type": null,
+   "authors": [
+    "M Fafchamps",
+    "F Shilpi"
+   ],
+   "authorsTruncated": false,
+   "venue": "Plos one",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "journals.plos.org",
+   "byline": "M Fafchamps, F Shilpi - Plos one, 2021 - journals.plos.org",
+   "scholarAuthorIds": [
+    {
+     "name": "M Fafchamps",
+     "id": "UkyUstUAAAAJ"
+    },
+    {
+     "name": "F Shilpi",
+     "id": "L9WloxMAAAAJ"
+    }
+   ],
+   "citedBy": 8,
+   "scholarCitesId": "5195511144242155066",
+   "versions": 16,
+   "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0250847",
+   "fullText": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0250847&type=printable",
+   "snippet": "We use high resolution satellite data on the proportion of buildings in a 250x250 meter cell to study the evolution of human settlement in Ghana over a 40 year period. We find a strong …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_12149982195222959127",
+   "scholarClusterId": "12149982195222959127",
+   "scholarCid": "F9SV5W5onagJ",
+   "title": "Identifying potential cropland losses when conserving 30% and 50% earth with different approaches and spatial scales",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "J Zhao",
+    "Y Cao",
+    "L Yu",
+    "X Liu",
+    "Y Shi",
+    "X Liu",
+    "R Yang"
+   ],
+   "authorsTruncated": true,
+   "venue": "Land",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "mdpi.com",
+   "byline": "J Zhao, Y Cao, L Yu, X Liu, Y Shi, X Liu, R Yang… - Land, 2021 - mdpi.com",
+   "scholarAuthorIds": [
+    {
+     "name": "J Zhao",
+     "id": "vfdTpYIAAAAJ"
+    },
+    {
+     "name": "Y Cao",
+     "id": "Nwv5JgkAAAAJ"
+    },
+    {
+     "name": "L Yu",
+     "id": "7cvzRTIAAAAJ"
+    },
+    {
+     "name": "X Liu",
+     "id": "VjXx-JYAAAAJ"
+    },
+    {
+     "name": "Y Shi",
+     "id": "njnuTTsAAAAJ"
+    },
+    {
+     "name": "X Liu",
+     "id": "H8vOyBIAAAAJ"
+    }
+   ],
+   "citedBy": 7,
+   "scholarCitesId": "12149982195222959127",
+   "versions": 15,
+   "url": "https://www.mdpi.com/2073-445X/10/7/704",
+   "fullText": "https://www.mdpi.com/2073-445X/10/7/704",
+   "snippet": "Biodiversity conservation is the cornerstone for sustainable development. Bold conservation targets provide the last opportunities to halt the human-driven mass extinction. Recently …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "X Liu"
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_t121",
+   "scholarClusterId": null,
+   "scholarCid": "te_epctR_REJ",
+   "title": "Investigation of the structural, electronic, optical, elastic, and thermodynamic properties of the zinc blende Ga1-xAlxAs1-yPy quaternary alloys: A DFT-Based …",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "R Moussa",
+    "A Abdiche",
+    "R Khenata",
+    "R Ahmed"
+   ],
+   "authorsTruncated": true,
+   "venue": "Materials Science in …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "Elsevier",
+   "byline": "R Moussa, A Abdiche, R Khenata, R Ahmed… - Materials Science in …, 2021 - Elsevier",
+   "scholarAuthorIds": [
+    {
+     "name": "R Moussa",
+     "id": "JPBrXD4AAAAJ"
+    },
+    {
+     "name": "A Abdiche",
+     "id": "dx2OAwoAAAAJ"
+    },
+    {
+     "name": "R Khenata",
+     "id": "4FYHetYAAAAJ"
+    },
+    {
+     "name": "R Ahmed",
+     "id": "oCEs-GwAAAAJ"
+    }
+   ],
+   "citedBy": 7,
+   "scholarCitesId": "1296282202855632821",
+   "versions": 0,
+   "url": "https://www.sciencedirect.com/science/article/pii/S136980012031581X",
+   "fullText": "https://www.sciencedirect.com/science/article/pii/S136980012031581X",
+   "snippet": "In this work, the effect of the composition on the structural, electronic, elastic, optical and thermodynamic properties of the Ga 1-x Al x As 1-y P y quaternary alloys are investigated …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_6206654799958655510",
+   "scholarClusterId": "6206654799958655510",
+   "scholarCid": "FkICA6h3IlYJ",
+   "title": "Leveraging materials in topology optimization: Inspiration from design, fashion, art, and architecture",
+   "type": null,
+   "authors": [
+    "N Vermaak",
+    "J Daviy",
+    "V San Fratello"
+   ],
+   "authorsTruncated": false,
+   "venue": "Jom",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "Springer",
+   "byline": "N Vermaak, J Daviy, V San Fratello - Jom, 2021 - Springer",
+   "scholarAuthorIds": [
+    {
+     "name": "N Vermaak",
+     "id": "A7n39SYAAAAJ"
+    }
+   ],
+   "citedBy": 5,
+   "scholarCitesId": "6206654799958655510",
+   "versions": 5,
+   "url": "https://link.springer.com/article/10.1007/s11837-021-04729-4",
+   "fullText": "https://link.springer.com/content/pdf/10.1007/s11837-021-04729-4.pdf",
+   "snippet": "Topology optimization offers a mathematical framework to determine the most efficient material layout and shape for prescribed objectives, constraints, material behaviors, and …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_t124",
+   "scholarClusterId": null,
+   "scholarCid": "-2gK7qWKCE0J",
+   "title": "Analysis on the change of net primary productivity in the east and west of China bounded by “The Hu Huanyong Line”",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "L Zhou",
+    "S Zheng",
+    "J Yin",
+    "Y Zhang",
+    "W Huang"
+   ],
+   "authorsTruncated": true,
+   "venue": "Remote Sensing …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "rsta.ac.cn",
+   "byline": "L Zhou, S Zheng, J Yin, Y Zhang, W Huang… - Remote Sensing …, 2021 - rsta.ac.cn",
+   "scholarAuthorIds": [],
+   "citedBy": 3,
+   "scholarCitesId": "5550838986002032891",
+   "versions": 0,
+   "url": "http://www.rsta.ac.cn/EN/PDF/10.11873/j.issn.1004-0323.2021.4.0916",
+   "fullText": "http://www.rsta.ac.cn/EN/PDF/10.11873/j.issn.1004-0323.2021.4.0916",
+   "snippet": "Promoting regional balanced, coordinated and sustainable development is one of the most important strategies in China. Net Primary Productivity (NPP) plays a significant role in …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_16652298759068060756",
+   "scholarClusterId": "16652298759068060756",
+   "scholarCid": "VAzuY37ZGOcJ",
+   "title": "Predation by a Brown Widow Spider, Latrodectus geometricus (Koch, 1841), on a Common Dwarf Gecko, Lygodactylus capensis (Smith, 1849), with a review of the …",
+   "type": null,
+   "authors": [
+    "D van Blerk",
+    "J Measey",
+    "J Baxter-Gilbert"
+   ],
+   "authorsTruncated": false,
+   "venue": "Herpetology Notes",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "biotaxa.org",
+   "byline": "D van Blerk, J Measey, J Baxter-Gilbert - Herpetology Notes, 2021 - biotaxa.org",
+   "scholarAuthorIds": [
+    {
+     "name": "J Measey",
+     "id": "9xc5tecAAAAJ"
+    },
+    {
+     "name": "J Baxter-Gilbert",
+     "id": "OrIiykcAAAAJ"
+    }
+   ],
+   "citedBy": 3,
+   "scholarCitesId": "16652298759068060756",
+   "versions": 4,
+   "url": "https://www.biotaxa.org/hn/article/download/64759/65251/0",
+   "fullText": "https://www.researchgate.net/profile/James-Baxter-Gilbert/publication/349237670_Predation_by_a_Brown_Widow_Spider_Latrodectus_geometricus_Koch_1841_on_a_Common_Dwarf_Gecko_Lygodactylus_capensis_Smith_1849_with_a_review_of_the_herpetofaunal_diet_of_Latrodectus_spiders/links/602622bea6fdcc37a81d6c50/Predation-by-a-Brown-Widow-Spider-Latrodectus-geometricus-Koch-1841-on-a-Common-Dwarf-Gecko-Lygodactylus-capensis-Smith-1849-with-a-review-of-the-herpetofaunal-diet-of-Latrodectus-spiders.pdf",
+   "snippet": "In general, spiders of the genus Latrodectus have a global reputation for feeding on vertebrate prey, including a variety of herpetofauna–encompassing frogs, lizards, and …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_1688457070186984236",
+   "scholarClusterId": "1688457070186984236",
+   "scholarCid": "LPP9bsKabhcJ",
+   "title": "Addressing data limitations and uncertainties in broad-scale coastal flood-risk assessments",
+   "type": null,
+   "authors": [
+    "C Wolff"
+   ],
+   "authorsTruncated": false,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "macau.uni-kiel.de",
+   "byline": "C Wolff - 2021 - macau.uni-kiel.de",
+   "scholarAuthorIds": [],
+   "citedBy": 3,
+   "scholarCitesId": "1688457070186984236",
+   "versions": 4,
+   "url": "https://macau.uni-kiel.de/receive/macau_mods_00001266?lang=de",
+   "fullText": "https://macau.uni-kiel.de/servlets/MCRFileNodeServlet/macau_derivate_00002317/PhD_thesis_ClaudiaWolff_final_bib_v2.pdf",
+   "snippet": "Coastal flooding constitutes a major risk to all low-lying coastal areas around the world. This risk is expected to increase during the 21st century with rising sea-levels and future societal …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_t33",
+   "scholarClusterId": null,
+   "scholarCid": "9tLgLJfqmvsJ",
+   "title": "Understanding the drivers of sustainable land expansion using a patch-level simulation model: A case study in Wuhan, China",
+   "type": "[CITATION][C] [CITATION]",
+   "authors": [
+    "X Liang",
+    "QF Guan",
+    "KC Clarke",
+    "S Liu",
+    "B Wang",
+    "Y Yao"
+   ],
+   "authorsTruncated": false,
+   "venue": "ArXiv abs/2010.11541",
+   "venueTruncated": false,
+   "year": 2010,
+   "source": null,
+   "byline": "X Liang, QF Guan, KC Clarke, S Liu, B Wang, Y Yao - ArXiv abs/2010.11541, 2020",
+   "scholarAuthorIds": [
+    {
+     "name": "QF Guan",
+     "id": "6WOeTvQAAAAJ"
+    },
+    {
+     "name": "KC Clarke",
+     "id": "fjZMW1oAAAAJ"
+    },
+    {
+     "name": "Y Yao",
+     "id": "JZ9U7ZIAAAAJ"
+    }
+   ],
+   "citedBy": 2,
+   "scholarCitesId": "18130061184947245814",
+   "versions": 0,
+   "url": null,
+   "fullText": null,
+   "snippet": null,
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "X Liang"
+    ]
+   },
+   "greyLit": "preprint"
+  },
+  {
+   "id": "GS_14803748181321160886",
+   "scholarClusterId": "14803748181321160886",
+   "scholarCid": "tpj7i4l6cc0J",
+   "title": "Mapping built-up land with high accuracy using Fourier transformation and temporal correction",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "J Wang",
+    "M Hadjikakou",
+    "B Bryan"
+   ],
+   "authorsTruncated": false,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "preprints.org",
+   "byline": "J Wang, M Hadjikakou, B Bryan - 2020 - preprints.org",
+   "scholarAuthorIds": [
+    {
+     "name": "J Wang",
+     "id": "HnfAuQ4AAAAJ"
+    },
+    {
+     "name": "M Hadjikakou",
+     "id": "fzD-Hz4AAAAJ"
+    },
+    {
+     "name": "B Bryan",
+     "id": "r7hKP0aOxMoC"
+    }
+   ],
+   "citedBy": 1,
+   "scholarCitesId": "14803748181321160886",
+   "versions": 5,
+   "url": "https://www.preprints.org/frontend/manuscript/73a81ac935f5433be691491c6fb3ef0b/download_pub",
+   "fullText": "https://www.preprints.org/frontend/manuscript/73a81ac935f5433be691491c6fb3ef0b/download_pub",
+   "snippet": "Long-term, high-accuracy mapping of built-up land dynamics is essential for understanding urbanization and its consequences for the environment. Despite advances in remote …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": "preprint"
+  },
+  {
+   "id": "GS_15902813248131020272",
+   "scholarClusterId": "15902813248131020272",
+   "scholarCid": "8LU5eGQkstwJ",
+   "title": "Geography and Sustainability",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "Y Wang",
+    "Z Liu",
+    "C He",
+    "P Xia",
+    "Z Liu",
+    "H Liu"
+   ],
+   "authorsTruncated": false,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "researchgate.net",
+   "byline": "Y Wang, Z Liu, C He, P Xia, Z Liu, H Liu - 2020 - researchgate.net",
+   "scholarAuthorIds": [
+    {
+     "name": "Y Wang",
+     "id": "j66T-UYAAAAJ"
+    },
+    {
+     "name": "C He",
+     "id": "7o3D7F4AAAAJ"
+    },
+    {
+     "name": "P Xia",
+     "id": "OtMizVAAAAAJ"
+    },
+    {
+     "name": "H Liu",
+     "id": "qPYa8_YAAAAJ"
+    }
+   ],
+   "citedBy": 1,
+   "scholarCitesId": "15902813248131020272",
+   "versions": 14,
+   "url": "https://www.researchgate.net/profile/Haoyu-Wang-44/publication/383266006_Gap_dynamics_in_the_US_between_urban_areas_in_the_current_trend_and_in_sustainable_scenario/links/6781dd448210a977a181f006/Gap-dynamics-in-the-US-between-urban-areas-in-the-current-trend-and-in-sustainable-scenario.pdf",
+   "fullText": "https://www.researchgate.net/profile/Haoyu-Wang-44/publication/383266006_Gap_dynamics_in_the_US_between_urban_areas_in_the_current_trend_and_in_sustainable_scenario/links/6781dd448210a977a181f006/Gap-dynamics-in-the-US-between-urban-areas-in-the-current-trend-and-in-sustainable-scenario.pdf",
+   "snippet": "abstract The gap between the projected urban areas in the current trend (UAC) and those in the sustainable scenario (UAS) is a critical factor in understanding whether cities can fulfill …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_16644232994345098041",
+   "scholarClusterId": "16644232994345098041",
+   "scholarCid": "OZvGMrkx_OYJ",
+   "title": "The Future of Maine's Forests Under alternative Socioeconomic, Climate and Conservation Pathways",
+   "type": "[BOOK][B] [BOOK]",
+   "authors": [
+    "J Zhao"
+   ],
+   "authorsTruncated": false,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "search.proquest.com",
+   "byline": "J Zhao - 2020 - search.proquest.com",
+   "scholarAuthorIds": [
+    {
+     "name": "J Zhao",
+     "id": "01nTSbcAAAAJ"
+    }
+   ],
+   "citedBy": 1,
+   "scholarCitesId": "16644232994345098041",
+   "versions": 4,
+   "url": "https://search.proquest.com/openview/118e493560d84420bee043fb5eb8cbc7/1?pq-origsite=gscholar&cbl=18750&diss=y",
+   "fullText": "https://search.proquest.com/openview/118e493560d84420bee043fb5eb8cbc7/1?pq-origsite=gscholar&cbl=18750&diss=y",
+   "snippet": "Maine is a historically important timber supply region in North America and understanding the potential change in forestlands and their product industries affected by climate change …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": "book"
+  },
+  {
+   "id": "GS_2665096561970021003",
+   "scholarClusterId": "2665096561970021003",
+   "scholarCid": "i4JW7DNT_CQJ",
+   "title": "Towards a comprehensive assessment of exposure to sea-level rise at continental scale",
+   "type": null,
+   "authors": [
+    "L Reimann"
+   ],
+   "authorsTruncated": false,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "macau.uni-kiel.de",
+   "byline": "L Reimann - 2021 - macau.uni-kiel.de",
+   "scholarAuthorIds": [
+    {
+     "name": "L Reimann",
+     "id": "nPTE30EAAAAJ"
+    }
+   ],
+   "citedBy": 1,
+   "scholarCitesId": "2665096561970021003",
+   "versions": 6,
+   "url": "https://macau.uni-kiel.de/receive/macau_mods_00001360?lang=de",
+   "fullText": "https://macau.uni-kiel.de/servlets/MCRFileNodeServlet/macau_derivate_00002407/Lena_Reimann_Volltext.pdf",
+   "snippet": "Coastal areas are increasingly at risk from coastal hazards due to sea-level rise (SLR), which will accelerate in the 21st century driven by anthropogenic climate change. Future …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_15518285614987084038",
+   "scholarClusterId": "15518285614987084038",
+   "scholarCid": "BgFcJIwGXNcJ",
+   "title": "Market force and planning constraint in non-conforming urban expansion.",
+   "type": null,
+   "authors": [
+    "S Xiaoqiang"
+   ],
+   "authorsTruncated": false,
+   "venue": "China Population Resources & Environment",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "openurl.ebsco.com",
+   "byline": "S Xiaoqiang - China Population Resources & Environment, 2021 - openurl.ebsco.com",
+   "scholarAuthorIds": [],
+   "citedBy": 1,
+   "scholarCitesId": "15518285614987084038",
+   "versions": 2,
+   "url": "https://openurl.ebsco.com/contentitem/gcd:152611969?sid=ebsco:plink:crawler-gcd&id=ebsco:gcd:152611969&crl=c&jrnl=10022104",
+   "fullText": null,
+   "snippet": "Why is urban development frequently and commonly non-conforming to spatial plans even though zoning maps are endowed with statutory force and urban growth boundaries are …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_11638893633015931377",
+   "scholarClusterId": "11638893633015931377",
+   "scholarCid": "8WF4_heohaEJ",
+   "title": "以 “胡焕庸线” 为界的中国东西部净初级生产力变化分析",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "周雷雷， 郑诗军， 尹捷， 张雅琼， 黄文江， 王心源， 王岩"
+   ],
+   "authorsTruncated": true,
+   "venue": "遥感技术与应用",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "rsta.ac.cn",
+   "byline": "周雷雷， 郑诗军， 尹捷， 张雅琼， 黄文江， 王心源， 王岩… - 遥感技术与应用, 2021 - rsta.ac.cn",
+   "scholarAuthorIds": [],
+   "citedBy": 1,
+   "scholarCitesId": "11638893633015931377",
+   "versions": 3,
+   "url": "http://www.rsta.ac.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=3403",
+   "fullText": "http://www.rsta.ac.cn/CN/article/downloadArticleFile.do?attachType=PDF&id=3403",
+   "snippet": "摘要推动区域均衡协调与可持续发展是我国的重大战略之一, 植被净初级生产力(NPP) 对生态环境是否可持续发展起着重要作用. 以“胡焕庸线” 为界把我国分为东, 西部 …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "... "
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_18262988758384798766",
+   "scholarClusterId": "18262988758384798766",
+   "scholarCid": "Lmx6qIMrc_0J",
+   "title": "Vigilance response of a key prey species to anthropogenic and naturogenic threats in Detroit",
+   "type": null,
+   "authors": [
+    "S Lima",
+    "S Gámez",
+    "N Arringdale",
+    "NC Harris"
+   ],
+   "authorsTruncated": false,
+   "venue": "bioRxiv",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "biorxiv.org",
+   "byline": "S Lima, S Gámez, N Arringdale, NC Harris - bioRxiv, 2020 - biorxiv.org",
+   "scholarAuthorIds": [
+    {
+     "name": "S Lima",
+     "id": "FTjd7ZwAAAAJ"
+    },
+    {
+     "name": "S Gámez",
+     "id": "48SRmjQAAAAJ"
+    }
+   ],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 2,
+   "url": "https://www.biorxiv.org/content/10.1101/2020.06.09.142992.abstract",
+   "fullText": "https://www.biorxiv.org/content/10.1101/2020.06.09.142992.full.pdf",
+   "snippet": "Rapid urbanization coupled with increased human influence induces pressures that affect predator-prey relations through a suite of behavioral mechanisms, including alteration of …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": "preprint"
+  },
+  {
+   "id": "GS_1647299130969026272",
+   "scholarClusterId": "1647299130969026272",
+   "scholarCid": "4O439NRh3BYJ",
+   "title": "Diversity",
+   "type": null,
+   "authors": [
+    "NV Yorkina",
+    "SM Podorozhniy",
+    "LG Velcheva"
+   ],
+   "authorsTruncated": true,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "ceeol.com",
+   "byline": "NV Yorkina, SM Podorozhniy, LG Velcheva… - 2020 - ceeol.com",
+   "scholarAuthorIds": [
+    {
+     "name": "NV Yorkina",
+     "id": "Oc9-EEYAAAAJ"
+    }
+   ],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 4,
+   "url": "https://www.ceeol.com/search/article-detail?id=904741",
+   "fullText": "https://www.researchgate.net/profile/Olexander-Zhukov/publication/343342452_Applying_plant_disturbance_indicators_to_reveal_the_hemeroby_of_soil_macrofauna_species/links/5f282cf3299bf134049d4b54/Applying-plant-disturbance-indicators-to-reveal-the-hemeroby-of-soil-macrofauna-species.pdf",
+   "snippet": "Hemeroby is an integrated indicator for measuring human impacts on environmental systems. Hemeroby has a complex nature and a variety of mechanisms to affect ecosystems …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_15088324449255954666",
+   "scholarClusterId": "15088324449255954666",
+   "scholarCid": "6hi-LSV_ZNEJ",
+   "title": "Гемеробія ґрунтової макрофауни: просторово-екологічна трансформація угруповання на рівні екосистеми",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "NV Yorkina",
+    "VS Budakova"
+   ],
+   "authorsTruncated": false,
+   "venue": "Agrology",
+   "venueTruncated": false,
+   "year": 2020,
+   "source": "scholar.archive.org",
+   "byline": "NV Yorkina, VS Budakova - Agrology, 2020 - scholar.archive.org",
+   "scholarAuthorIds": [
+    {
+     "name": "NV Yorkina",
+     "id": "Oc9-EEYAAAAJ"
+    }
+   ],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 2,
+   "url": "https://scholar.archive.org/work/4cupudx3djfx5aeaxm3pkx6fry/access/wayback/http://ojs.dsau.dp.ua/index.php/agrology/article/download/2442/2368",
+   "fullText": "https://scholar.archive.org/work/4cupudx3djfx5aeaxm3pkx6fry/access/wayback/http://ojs.dsau.dp.ua/index.php/agrology/article/download/2442/2368",
+   "snippet": "The concept of hemeroby was used to explain the transformation patterns of the technosol soil macrofauna under the influence of recreation. The following hypotheses have been …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_t34",
+   "scholarClusterId": null,
+   "scholarCid": "55mcIzpX6yYJ",
+   "title": "Quantitative assessment of the relative impacts of climate change and human activity on flood susceptibility based on a cloud model",
+   "type": "[CITATION][C] [CITATION]",
+   "authors": [
+    "S Lia",
+    "Z Wanga",
+    "C Laia",
+    "G Linb"
+   ],
+   "authorsTruncated": false,
+   "venue": null,
+   "venueTruncated": false,
+   "year": null,
+   "source": null,
+   "byline": "S Lia, Z Wanga, C Laia, G Linb",
+   "scholarAuthorIds": [],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 0,
+   "url": null,
+   "fullText": null,
+   "snippet": null,
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_14173187025986647614",
+   "scholarClusterId": "14173187025986647614",
+   "scholarCid": "PvYb44FGscQJ",
+   "title": "Butterfly biodiversity in the city is driven by the interaction of the urban landscape and species traits: a call for contextualised management",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "CPNC Stefanescu",
+    "JPFJ Cabrero-Sanudo"
+   ],
+   "authorsTruncated": true,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "academia.edu",
+   "byline": "CPNC Stefanescu, JPFJ Cabrero-Sanudo… - 2021 - academia.edu",
+   "scholarAuthorIds": [],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 3,
+   "url": "https://www.academia.edu/download/110971627/s10980-021-01347-y.pdf",
+   "fullText": "https://www.academia.edu/download/110971627/s10980-021-01347-y.pdf",
+   "snippet": "Context Urbanisation is an environmental filter for many species that leads to community homogenisation, with a few species inhabiting isolated patches (eg public and private …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_8477423226196613780",
+   "scholarClusterId": "8477423226196613780",
+   "scholarCid": "lFoYSILbpXUJ",
+   "title": "Spatial-Temporal Distribution and Key Drivers of Inequalities in the Gap Between Health-Adjusted Life Expectancy and Life Expectancy: Evidence from a …",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "J Xi",
+    "Y Chen",
+    "Y Zhang",
+    "A Luo",
+    "Z Du",
+    "B Liang",
+    "H Dong"
+   ],
+   "authorsTruncated": true,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "pdfs.semanticscholar.org",
+   "byline": "J Xi, Y Chen, Y Zhang, A Luo, Z Du, B Liang, H Dong… - 2021 - pdfs.semanticscholar.org",
+   "scholarAuthorIds": [
+    {
+     "name": "J Xi",
+     "id": "toxoyjcAAAAJ"
+    },
+    {
+     "name": "Z Du",
+     "id": "YY3hrW4AAAAJ"
+    }
+   ],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 4,
+   "url": "https://pdfs.semanticscholar.org/74a4/3623fc8f034bb58581f5310b93664261d3d8.pdf",
+   "fullText": "https://pdfs.semanticscholar.org/74a4/3623fc8f034bb58581f5310b93664261d3d8.pdf",
+   "snippet": "Purpose The improvement of the quality of life (QoL) is re ected in the narrowing of the GAP between health-adjusted life expectancy (HALE) and life expectancy (LE). Less is known …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {
+    "0": [
+     "Y Chen"
+    ]
+   },
+   "greyLit": null
+  },
+  {
+   "id": "GS_18287484919233592801",
+   "scholarClusterId": "18287484919233592801",
+   "scholarCid": "4T07jqQyyv0J",
+   "title": "Land use cover change has non-trivial and potentially dominant impact on global gross primary productivity (2000-2100)",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "H Hou",
+    "BB Zhou",
+    "F Pei",
+    "G Hu",
+    "Z Su",
+    "Y Zeng"
+   ],
+   "authorsTruncated": true,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "assets-eu.researchsquare.com",
+   "byline": "H Hou, BB Zhou, F Pei, G Hu, Z Su, Y Zeng… - 2021 - assets-eu.researchsquare.com",
+   "scholarAuthorIds": [
+    {
+     "name": "F Pei",
+     "id": "wBU7ydoAAAAJ"
+    },
+    {
+     "name": "G Hu",
+     "id": "xswlP8kAAAAJ"
+    },
+    {
+     "name": "Z Su",
+     "id": "rLYvZ8gAAAAJ"
+    },
+    {
+     "name": "Y Zeng",
+     "id": "f7EIKQcAAAAJ"
+    }
+   ],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 3,
+   "url": "https://assets-eu.researchsquare.com/files/rs-902420/v1/ce369092-81d5-4bd0-998b-af13d33eb5f4.pdf",
+   "fullText": "https://assets-eu.researchsquare.com/files/rs-902420/v1/ce369092-81d5-4bd0-998b-af13d33eb5f4.pdf",
+   "snippet": "Anthropogenic land use/cover (LULC) change alters terrestrial gross primary productivity (GPP), which is a major atmospheric carbon sink. Identifying the impacts of future LULC …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_t132",
+   "scholarClusterId": null,
+   "scholarCid": "4bO5HRVo2CQJ",
+   "title": "An Improved Hybrid Model on Source-Exposure Risk of Polycyclic Aromatic Hydrocarbon in Soil of Megacities",
+   "type": null,
+   "authors": [
+    "Y Li",
+    "Y Li",
+    "Y Huang",
+    "T He",
+    "R Jin",
+    "M Han",
+    "Y He"
+   ],
+   "authorsTruncated": true,
+   "venue": "Available at SSRN …",
+   "venueTruncated": true,
+   "year": null,
+   "source": "papers.ssrn.com",
+   "byline": "Y Li, Y Li, Y Huang, T He, R Jin, M Han, Y He… - Available at SSRN … - papers.ssrn.com",
+   "scholarAuthorIds": [],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 0,
+   "url": "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3949312",
+   "fullText": "https://papers.ssrn.com/sol3/Delivery.cfm?abstractid=3949312",
+   "snippet": "Comprehensive analysis of the source, exposure and risks of polycyclic aromatic hydrocarbons (PAHs) is very important for formulating regional soil pollution mitigation …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": "preprint"
+  },
+  {
+   "id": "GS_7159458594718722072",
+   "scholarClusterId": "7159458594718722072",
+   "scholarCid": "GKhT0qiBW2MJ",
+   "title": "Behavioral Adaptations to Life in the City",
+   "type": null,
+   "authors": [
+    "D Luther",
+    "EP Derrberry"
+   ],
+   "authorsTruncated": false,
+   "venue": "Frontiers in Ecology and Evolution",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "frontiersin.org",
+   "byline": "D Luther, EP Derrberry - Frontiers in Ecology and Evolution, 2021 - frontiersin.org",
+   "scholarAuthorIds": [
+    {
+     "name": "D Luther",
+     "id": "MNXYLMUAAAAJ"
+    },
+    {
+     "name": "EP Derrberry",
+     "id": "vhpEhSwAAAAJ"
+    }
+   ],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 5,
+   "url": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2021.716713/full",
+   "fullText": "https://www.frontiersin.org/journals/ecology-and-evolution/articles/10.3389/fevo.2021.716713/pdf",
+   "snippet": "Humans have drastically transformed the planet and recent estimates indicate that only 3% of terrestrial ecosystems remain ecologically intact (Plumtre et al. 2021). A fundamental …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_5574754721928344708",
+   "scholarClusterId": "5574754721928344708",
+   "scholarCid": "hHR4HuKBXU0J",
+   "title": "Scales of Effect for Urban Mammals Vary Among Species and Environmental Attributes",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "B MacDougall",
+    "HA Sander"
+   ],
+   "authorsTruncated": false,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "pdfs.semanticscholar.org",
+   "byline": "B MacDougall, HA Sander - 2021 - pdfs.semanticscholar.org",
+   "scholarAuthorIds": [],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 2,
+   "url": "https://pdfs.semanticscholar.org/7b6c/59b66e48719821e869490cf3b855fefe6194.pdf",
+   "fullText": "https://pdfs.semanticscholar.org/7b6c/59b66e48719821e869490cf3b855fefe6194.pdf",
+   "snippet": "Objectives. Better-understanding scales of effect for urban species could improve urban conservation by identifying areal extents to target in management. We sought to identify …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_t136",
+   "scholarClusterId": null,
+   "scholarCid": "gv9LCqwn4jEJ",
+   "title": "Global 1-km present and future hourly anthropogenic heat flux",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "VAC Galang",
+    "K Shota",
+    "K Do Ngoc",
+    "K Manabu"
+   ],
+   "authorsTruncated": false,
+   "venue": "Scientific Data",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "search.proquest.com",
+   "byline": "VAC Galang, K Shota, K Do Ngoc, K Manabu - Scientific Data, 2021 - search.proquest.com",
+   "scholarAuthorIds": [
+    {
+     "name": "K Do Ngoc",
+     "id": "S-CRARMAAAAJ"
+    }
+   ],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 0,
+   "url": "https://search.proquest.com/openview/09e3819930169b3e8b80b3ee519da167/1?pq-origsite=gscholar&cbl=2041912",
+   "fullText": "https://search.proquest.com/openview/09e3819930169b3e8b80b3ee519da167/1?pq-origsite=gscholar&cbl=2041912",
+   "snippet": "Numerical weather prediction models are progressively used to downscale future climate in cities at increasing spatial resolutions. Boundary conditions representing rapidly growing …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": "thesis"
+  },
+  {
+   "id": "GS_9864324674295146518",
+   "scholarClusterId": "9864324674295146518",
+   "scholarCid": "Fqh7IAcf5YgJ",
+   "title": "Ecological land conservation strategies explained by urban growth and climate change",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "S Zhao",
+    "Q Shao"
+   ],
+   "authorsTruncated": false,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "assets-eu.researchsquare.com",
+   "byline": "S Zhao, Q Shao - 2021 - assets-eu.researchsquare.com",
+   "scholarAuthorIds": [],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 3,
+   "url": "https://assets-eu.researchsquare.com/files/rs-230596/v1_covered.pdf",
+   "fullText": "https://assets-eu.researchsquare.com/files/rs-230596/v1_covered.pdf",
+   "snippet": "Rising urban population throughout the world have boosted land use demand, intensifying pressure of ecological land resources linked with climate change. By incorporating risk into …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_17752938727649206651",
+   "scholarClusterId": "17752938727649206651",
+   "scholarCid": "e2HOtLYbX_YJ",
+   "title": "Shades of grey: Coat-colour dependent effect of urbanization on the bacterial microbiome of a wild mammal",
+   "type": null,
+   "authors": [
+    "MR Stothart",
+    "AEM Newman"
+   ],
+   "authorsTruncated": false,
+   "venue": "bioRxiv",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "biorxiv.org",
+   "byline": "MR Stothart, AEM Newman - bioRxiv, 2021 - biorxiv.org",
+   "scholarAuthorIds": [
+    {
+     "name": "MR Stothart",
+     "id": "1zDm_RwAAAAJ"
+    },
+    {
+     "name": "AEM Newman",
+     "id": "TzNE64UAAAAJ"
+    }
+   ],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 3,
+   "url": "https://www.biorxiv.org/content/10.1101/2021.02.16.431540.abstract",
+   "fullText": "https://www.biorxiv.org/content/biorxiv/early/2021/02/17/2021.02.16.431540.full.pdf",
+   "snippet": "Background Host-associated microbiota can be fundamental to the ecology of their host and may even help wildlife species colonize novel niches or cope with rapid environmental …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": "preprint"
+  },
+  {
+   "id": "GS_9891741795285536649",
+   "scholarClusterId": "9891741795285536649",
+   "scholarCid": "iQ_hDcGGRokJ",
+   "title": "Predation and Scavenging in the City: A Review of Spatio-Temporal Trends in Research. Diversity 2021, 13, 46",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "Á Luna",
+    "P Romero-Vidal",
+    "E Arrondo"
+   ],
+   "authorsTruncated": false,
+   "venue": "Ecology of Predation and …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "academia.edu",
+   "byline": "Á Luna, P Romero-Vidal, E Arrondo - Ecology of Predation and …, 2021 - academia.edu",
+   "scholarAuthorIds": [],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 4,
+   "url": "https://www.academia.edu/download/132166266/pdf.pdf",
+   "fullText": "https://www.academia.edu/download/132166266/pdf.pdf",
+   "snippet": "Many researchers highlight the role of urban ecology in a rapidly urbanizing world. Despite the ecological and conservation implications relating to carnivores in cities, our general …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_t140",
+   "scholarClusterId": null,
+   "scholarCid": "GWWE3i3VnCQJ",
+   "title": "Artificial Light at Night Advances Spring Phenology in the United States. Remote Sens. 2021, 13, 399",
+   "type": null,
+   "authors": [
+    "Q Zheng",
+    "HC Teo",
+    "LP Koh"
+   ],
+   "authorsTruncated": false,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "search.proquest.com",
+   "byline": "Q Zheng, HC Teo, LP Koh - 2021 - search.proquest.com",
+   "scholarAuthorIds": [
+    {
+     "name": "HC Teo",
+     "id": "Mzd4W1wAAAAJ"
+    }
+   ],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 0,
+   "url": "https://search.proquest.com/openview/3819a45064f2678ccbe0fecdc95c81c6/1?pq-origsite=gscholar&cbl=2032338",
+   "fullText": null,
+   "snippet": "Plant phenology is closely related to light availability as diurnal and seasonal cycles are essential environmental cues for organizing bio-ecological processes. The natural cycles of …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": "thesis"
+  },
+  {
+   "id": "GS_t141",
+   "scholarClusterId": null,
+   "scholarCid": "pftl0QtIaMEJ",
+   "title": "Linking Urban Sprawl and Surface Urban Heat Island in the Teresina–Timon Conurbation Area in Brazil. Land 2021, 10, 516",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "E Carneiro",
+    "W Lopes",
+    "G Espindola"
+   ],
+   "authorsTruncated": false,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "academia.edu",
+   "byline": "E Carneiro, W Lopes, G Espindola - 2021 - academia.edu",
+   "scholarAuthorIds": [
+    {
+     "name": "W Lopes",
+     "id": "G1UzwR8AAAAJ"
+    },
+    {
+     "name": "G Espindola",
+     "id": "Mt__oyYAAAAJ"
+    }
+   ],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 0,
+   "url": "https://www.academia.edu/download/74018470/pdf.pdf",
+   "fullText": "https://www.academia.edu/download/74018470/pdf.pdf",
+   "snippet": "Negative consequences of urban growing disparities usually lead to impressive levels of segregation, marginalization, and injustices, particularly in the context of climate change …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_t142",
+   "scholarClusterId": null,
+   "scholarCid": "ynIM02hRuJkJ",
+   "title": "The far-reaching impacts of urbanisation on ecosystem services and how we can tackle them",
+   "type": "[PDF][PDF] [PDF]",
+   "authors": [
+    "TB Elliot"
+   ],
+   "authorsTruncated": false,
+   "venue": null,
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "scholar.tecnico.ulisboa.pt",
+   "byline": "TB Elliot - 2021 - scholar.tecnico.ulisboa.pt",
+   "scholarAuthorIds": [
+    {
+     "name": "TB Elliot",
+     "id": "xLM5FD0AAAAJ"
+    }
+   ],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 0,
+   "url": "https://scholar.tecnico.ulisboa.pt/api/records/GMWYMcX9H7KIzz4rzvwlb1sWnXpYCwjwosIq/file/78e6346af498b95a3eb7706fcd2d8d520ea90a0c752125a28b83aee096d52436.pdf",
+   "fullText": "https://scholar.tecnico.ulisboa.pt/api/records/GMWYMcX9H7KIzz4rzvwlb1sWnXpYCwjwosIq/file/78e6346af498b95a3eb7706fcd2d8d520ea90a0c752125a28b83aee096d52436.pdf",
+   "snippet": "Cities are complex and dynamic systems in continuous evolution, whose metabolism can generate massive impacts on the environment and human health. The challenges are to …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_t143",
+   "scholarClusterId": null,
+   "scholarCid": "AulGKLJrv9UJ",
+   "title": "การ อำนวย กระบวนการ เรียน รู้ เพื่อ การ เปลี่ยนแปลง สำหรับ การ พัฒนา ชุมชน และ เมือง แบบ สอด ประสาน",
+   "type": null,
+   "authors": [
+    "A Metasuk",
+    "A Silksuk"
+   ],
+   "authorsTruncated": false,
+   "venue": "Journal of Community Development …",
+   "venueTruncated": true,
+   "year": 2021,
+   "source": "journal.nu.ac.th",
+   "byline": "A Metasuk, A Silksuk - Journal of Community Development …, 2021 - journal.nu.ac.th",
+   "scholarAuthorIds": [],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 0,
+   "url": "https://www.journal.nu.ac.th/JCDR/article/view/Vol-14-No-3-2021-140-171",
+   "fullText": "https://www.journal.nu.ac.th/JCDR/article/download/Vol-14-No-3-2021-140-171/1948",
+   "snippet": "Abstract การ มี ส่วน ร่วม ของ ประชาชน และ องค์กร ที่ หลากหลาย ใน การ พัฒนา ชุมชน และ เมือง เป็น สิ่ง ซึ่ง มี ความ จำเป็น มาก ยิ่ง ขึ้น โดย เฉพาะ อย่าง ยิ่ง เมื่อ บริบท ทาง สังคม วัฒนธรรม เศรษฐกิจ และ …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  },
+  {
+   "id": "GS_1878527445023125577",
+   "scholarClusterId": "1878527445023125577",
+   "scholarCid": "SfBsJcLeERoJ",
+   "title": "Pourquoi les villes continuent-elles à s' étendre?",
+   "type": "[HTML][HTML] [HTML]",
+   "authors": [
+    "C Liotta",
+    "V Viguié"
+   ],
+   "authorsTruncated": false,
+   "venue": "Regards croisés sur l'économie",
+   "venueTruncated": false,
+   "year": 2021,
+   "source": "shs.cairn.info",
+   "byline": "C Liotta, V Viguié - Regards croisés sur l'économie, 2021 - shs.cairn.info",
+   "scholarAuthorIds": [
+    {
+     "name": "C Liotta",
+     "id": "MNG_-64AAAAJ"
+    },
+    {
+     "name": "V Viguié",
+     "id": "iElc2G8AAAAJ"
+    }
+   ],
+   "citedBy": 0,
+   "scholarCitesId": null,
+   "versions": 6,
+   "url": "https://shs.cairn.info/revue-regards-croises-sur-l-economie-2021-1-page-178?tab=texte-integral",
+   "fullText": "https://shs.cairn.info/revue-regards-croises-sur-l-economie-2021-1-page-178?tab=texte-integral",
+   "snippet": "Bien que le phénomène d'étalement urbain ait été étudié depuis le début du xxesiècle, et que ses conséquences environnementales soient connues, les politiques publiques qui …",
+   "cites": [
+    0
+   ],
+   "selfCitationOf": [],
+   "sharedAuthorInitials": {},
+   "greyLit": null
+  }
+ ]
+}
