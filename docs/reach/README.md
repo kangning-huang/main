@@ -1,6 +1,6 @@
 # Reach (`/reach`) — who builds on Ken's work
 
-The `/reach` page and the homepage one-liner show the fields, institutions and countries of the works that cite Ken's **lead-author** papers. All of it comes from **OpenAlex**, with self-citations removed. The page is static: it renders at build time from `src/data/influence.json`.
+The `/reach` page and the homepage one-liner show the fields, institutions and countries of the works that cite Ken's **lead-author** papers. Citing works come from **OpenAlex** citation links plus **Semantic Scholar** extras (see below); every work's metadata comes from OpenAlex, and self-citations are removed. The page is static: it renders at build time from `src/data/influence.json`.
 
 ## Files
 
@@ -13,6 +13,18 @@ The `/reach` page and the homepage one-liner show the fields, institutions and c
 | `data/influence/YYYY-MM-DD.json` | Dated monthly snapshots (identical format). These become the growth series for the dossier. |
 | `scripts/influence/build-world-map.mjs` → `src/data/world-map.json` | One-off: Natural Earth 1:110m countries, pre-projected (Equal Earth) to SVG paths. Re-run only to change the basemap. |
 | `docs/reach/influence.workflow.yml` | Monthly run (1st of month, 03:00 UTC) + manual dispatch. **Not yet active** — see below. |
+
+## Semantic Scholar extras (since 2026-10-29)
+
+`lib/openalex.mjs` `getCiting(workId, doi)` is the one citing-list source for `fetch-influence.mjs`, `build-field-shelf.mjs`, `build-reach-flow.mjs` and `build-where-glow.mjs`. For each pinned paper it returns:
+
+1. the OpenAlex `cites:` list, plus
+2. the works `data/s2-reach/latest.json` lists as citing that DOI whose DOI is not already in (1). These are looked up in OpenAlex by DOI (`filter=doi:…`, 50 per request), so they carry OpenAlex topics, affiliations and `cited_by_count`. They are skipped if the OpenAlex ID or title + year is already in (1), as happens with a preprint and its article. Added records are tagged `via: "semantic-scholar"`, minus
+3. OpenAlex `peer-review` records (Copernicus open-discussion replies, "Reply on RC1"), which are not citing works.
+
+The usual self-citation rule then runs on everything. S2 works without a DOI, or with no OpenAlex record, are counted in `meta.sources` but not added, because every square needs OpenAlex metadata. Per paper, `papers[].citingNonSelfViaSemanticScholar` gives the non-self extras.
+
+Refresh order: `node scripts/semantic-scholar/fetch-s2-citations.mjs` (set `S2_API_KEY` if possible; the anonymous pool rate-limits hard), then the OpenAlex scripts. To run without S2, pass `--no-s2` or set `REACH_S2=off`. Background: `docs/reach/S2-DB.md`.
 
 ## Enabling the monthly workflow (one-time)
 
@@ -73,7 +85,7 @@ All aggregation runs on the filtered set of citing works. OpenAlex `group_by` on
 
 ## Rules
 
-- Never mix Google Scholar numbers into `/reach`. The Scholar chart stays on `/publications`.
+- Never mix Google Scholar numbers into `/reach` (Semantic Scholar extras are fine: they enter as OpenAlex records). The Scholar chart stays on `/publications`.
 - Never populate `dois.json` from OpenAlex author search.
 - Don't add DOIs for in-press papers until the DOI resolves. Nature Cities Nested economies (`10.1038/s44284-026-00532-x`) is pinned (live 2026-10-26); OpenAlex indexing may lag.
 - Sample mode: if `meta.mode` is ever `"sample"`, the page shows a red "SAMPLE DATA" banner and the homepage line disappears. No sample fixture is committed, because the real pipeline works.

@@ -525,8 +525,8 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
           </h2>
           <p className="mt-2 text-sm text-ink-muted">
             {zh
-              ? `OpenAlex，${fieldShelfMeta.asOf} · 已剔除自引`
-              : `OpenAlex, ${fieldShelfMeta.asOf} · self-citations removed`}
+              ? `OpenAlex + Semantic Scholar，${fieldShelfMeta.asOf} · 已剔除自引`
+              : `OpenAlex + Semantic Scholar, ${fieldShelfMeta.asOf} · self-citations removed`}
           </p>
         </header>
 

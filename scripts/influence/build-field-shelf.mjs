@@ -193,7 +193,7 @@ async function main() {
       }
     }
     const keys = authorKeys(work);
-    const citing = await getCiting(shortId(work.id));
+    const citing = await getCiting(shortId(work.id), doi);
     const kept = citing.filter((c) => !selfCiteReason(c, keys));
     const idx = papers.length;
     nonSelf.set(idx, kept);

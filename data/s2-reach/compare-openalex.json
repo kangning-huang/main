@@ -1,0 +1,1022 @@
+{
+ "openalexWorks": 3230,
+ "s2Works": 2982,
+ "matched": 2700,
+ "matchedBy": {
+  "doi": 2658,
+  "title": 42
+ },
+ "union": 3512,
+ "openalexOnly": {
+  "n": 545,
+  "withDoi": 542,
+  "types": [
+   [
+    "article",
+    242
+   ],
+   [
+    "preprint",
+    101
+   ],
+   [
+    "book-chapter",
+    78
+   ],
+   [
+    "peer-review",
+    68
+   ],
+   [
+    "conference-paper",
+    21
+   ],
+   [
+    "dissertation",
+    19
+   ],
+   [
+    "review",
+    8
+   ],
+   [
+    "report",
+    3
+   ]
+  ],
+  "byYear": [
+   [
+    2002,
+    1
+   ],
+   [
+    2009,
+    1
+   ],
+   [
+    2015,
+    2
+   ],
+   [
+    2018,
+    2
+   ],
+   [
+    2020,
+    12
+   ],
+   [
+    2021,
+    58
+   ],
+   [
+    2022,
+    108
+   ],
+   [
+    2023,
+    110
+   ],
+   [
+    2024,
+    99
+   ],
+   [
+    2025,
+    93
+   ],
+   [
+    2026,
+    59
+   ]
+  ],
+  "citedByZero": 234,
+  "citedBy10plus": 145
+ },
+ "s2Only": {
+  "n": 282,
+  "withDoi": 219,
+  "types": [
+   [
+    "JournalArticle",
+    173
+   ],
+   [
+    "(none)",
+    94
+   ],
+   [
+    "Review",
+    32
+   ],
+   [
+    "Conference",
+    4
+   ],
+   [
+    "Book",
+    3
+   ],
+   [
+    "Editorial",
+    1
+   ]
+  ],
+  "byYear": [
+   [
+    0,
+    31
+   ],
+   [
+    2012,
+    1
+   ],
+   [
+    2014,
+    1
+   ],
+   [
+    2015,
+    3
+   ],
+   [
+    2016,
+    3
+   ],
+   [
+    2017,
+    4
+   ],
+   [
+    2019,
+    2
+   ],
+   [
+    2020,
+    16
+   ],
+   [
+    2021,
+    23
+   ],
+   [
+    2022,
+    17
+   ],
+   [
+    2023,
+    18
+   ],
+   [
+    2024,
+    20
+   ],
+   [
+    2025,
+    45
+   ],
+   [
+    2026,
+    97
+   ],
+   [
+    2027,
+    1
+   ]
+  ],
+  "citedByZero": 115,
+  "citedBy10plus": 56
+ },
+ "s2OnlyInfluential": 24,
+ "perPaper": [
+  {
+   "doi": "10.1088/1748-9326/ab4b71",
+   "short": "ERL 2019 · urban expansion to 2050",
+   "lens": "lead",
+   "openalex": 392,
+   "s2": 358,
+   "both": 327,
+   "openalexOnly": 65,
+   "s2Only": 31
+  },
+  {
+   "doi": "10.1080/13658816.2012.730147",
+   "short": "IJGIS 2013 · land-use allocation",
+   "lens": "lead",
+   "openalex": 80,
+   "s2": 78,
+   "both": 77,
+   "openalexOnly": 3,
+   "s2Only": 1
+  },
+  {
+   "doi": "10.1029/2020jd033831",
+   "short": "JGR-A 2021 · nighttime heat stress",
+   "lens": "lead",
+   "openalex": 64,
+   "s2": 56,
+   "both": 46,
+   "openalexOnly": 18,
+   "s2Only": 10
+  },
+  {
+   "doi": "10.1016/j.uclim.2021.100806",
+   "short": "Urban Climate 2021 · urban climate forecasts",
+   "lens": "lead",
+   "openalex": 19,
+   "s2": 17,
+   "both": 17,
+   "openalexOnly": 2,
+   "s2Only": 0
+  },
+  {
+   "doi": "10.1038/s41558-022-01481-8",
+   "short": "Nat Clim Change 2022 · urban forests",
+   "lens": "lead",
+   "openalex": 14,
+   "s2": 15,
+   "both": 13,
+   "openalexOnly": 1,
+   "s2Only": 2
+  },
+  {
+   "doi": "10.1007/s44274-024-00148-9",
+   "short": "Discover Env 2024 · Belt and Road heat/flood",
+   "lens": "lead",
+   "openalex": 0,
+   "s2": 0,
+   "both": 0,
+   "openalexOnly": 0,
+   "s2Only": 0
+  },
+  {
+   "doi": "10.1038/s41598-025-96045-z",
+   "short": "Sci Rep 2025 · urban density & heat",
+   "lens": "lead",
+   "openalex": 9,
+   "s2": 16,
+   "both": 8,
+   "openalexOnly": 1,
+   "s2Only": 8
+  },
+  {
+   "doi": "10.3390/rs17101747",
+   "short": "Remote Sensing 2025 · inundation mapping",
+   "lens": "lead",
+   "openalex": 2,
+   "s2": 2,
+   "both": 2,
+   "openalexOnly": 0,
+   "s2Only": 0
+  },
+  {
+   "doi": "10.1038/s44432-026-00009-1",
+   "short": "npj ESS 2026 · demolition & cooling",
+   "lens": "lead",
+   "openalex": 0,
+   "s2": 0,
+   "both": 0,
+   "openalexOnly": 0,
+   "s2Only": 0
+  },
+  {
+   "doi": "10.1038/s41598-026-70981-w",
+   "short": "Sci Rep 2026 · height-aware flood risk",
+   "lens": "lead",
+   "openalex": 0,
+   "s2": 0,
+   "both": 0,
+   "openalexOnly": 0,
+   "s2Only": 0
+  },
+  {
+   "doi": "10.1080/01944363.2025.2523604",
+   "short": "JAPA 2026 · rhythmized urban parks",
+   "lens": "lead",
+   "openalex": 1,
+   "s2": 3,
+   "both": 1,
+   "openalexOnly": 0,
+   "s2Only": 2
+  },
+  {
+   "doi": "10.1038/s41467-020-14386-x",
+   "short": "Nat Commun 2020 · SSP urban land projections",
+   "lens": "lead",
+   "openalex": 801,
+   "s2": 739,
+   "both": 662,
+   "openalexOnly": 139,
+   "s2Only": 77
+  },
+  {
+   "doi": "10.1038/s41893-020-0521-x",
+   "short": "Nat Sustain 2020 · global urban change 1985–2015",
+   "lens": "coauthor",
+   "openalex": 775,
+   "s2": 705,
+   "both": 634,
+   "openalexOnly": 141,
+   "s2Only": 71
+  },
+  {
+   "doi": "10.1038/s41893-019-0436-6",
+   "short": "Nat Sustain 2020 · urban growth & biodiversity",
+   "lens": "coauthor",
+   "openalex": 569,
+   "s2": 503,
+   "both": 467,
+   "openalexOnly": 102,
+   "s2Only": 36
+  },
+  {
+   "doi": "10.1080/13658816.2011.635594",
+   "short": "IJGIS 2012 · MACO land-use allocation",
+   "lens": "coauthor",
+   "openalex": 132,
+   "s2": 134,
+   "both": 125,
+   "openalexOnly": 7,
+   "s2Only": 9
+  },
+  {
+   "doi": "10.1021/acs.est.9b00666",
+   "short": "ES&T 2019 · road dust PM2.5",
+   "lens": "coauthor",
+   "openalex": 131,
+   "s2": 115,
+   "both": 108,
+   "openalexOnly": 23,
+   "s2Only": 7
+  },
+  {
+   "doi": "10.1109/tgrs.2013.2242895",
+   "short": "IEEE TGRS 2013 · multisensor registration",
+   "lens": "coauthor",
+   "openalex": 94,
+   "s2": 95,
+   "both": 84,
+   "openalexOnly": 10,
+   "s2Only": 11
+  },
+  {
+   "doi": "10.1016/j.atmosenv.2018.07.043",
+   "short": "Atmos Environ 2018 · dust emissions",
+   "lens": "coauthor",
+   "openalex": 85,
+   "s2": 75,
+   "both": 71,
+   "openalexOnly": 14,
+   "s2Only": 4
+  },
+  {
+   "doi": "10.1016/j.rse.2014.10.016",
+   "short": "RSE 2015 · snow depth retrieval",
+   "lens": "coauthor",
+   "openalex": 49,
+   "s2": 43,
+   "both": 41,
+   "openalexOnly": 8,
+   "s2Only": 2
+  },
+  {
+   "doi": "10.1021/acs.est.4c14275",
+   "short": "ES&T 2025 · urban tree cooling",
+   "lens": "coauthor",
+   "openalex": 55,
+   "s2": 56,
+   "both": 51,
+   "openalexOnly": 4,
+   "s2Only": 5
+  },
+  {
+   "doi": "10.1038/s41558-025-02303-3",
+   "short": "Nat Clim Change 2025 · urban overheating mortality",
+   "lens": "coauthor",
+   "openalex": 68,
+   "s2": 79,
+   "both": 63,
+   "openalexOnly": 5,
+   "s2Only": 16
+  },
+  {
+   "doi": "10.1038/s44284-024-00184-9",
+   "short": "Nature Cities 2025 · urban browning heat stress",
+   "lens": "coauthor",
+   "openalex": 33,
+   "s2": 39,
+   "both": 30,
+   "openalexOnly": 3,
+   "s2Only": 9
+  },
+  {
+   "doi": "10.1021/acs.est.4c00424",
+   "short": "ES&T 2024 · AC usage & indoor–outdoor heat",
+   "lens": "coauthor",
+   "openalex": 8,
+   "s2": 8,
+   "both": 6,
+   "openalexOnly": 2,
+   "s2Only": 2
+  },
+  {
+   "doi": "10.3390/toxics13010045",
+   "short": "Toxics 2025 · air pollution & anxiety visits",
+   "lens": "coauthor",
+   "openalex": 3,
+   "s2": 3,
+   "both": 3,
+   "openalexOnly": 0,
+   "s2Only": 0
+  },
+  {
+   "doi": "10.1002/ldr.3429",
+   "short": "LDD 2019 · wetland degradation",
+   "lens": "lead",
+   "openalex": 55,
+   "s2": 46,
+   "both": 45,
+   "openalexOnly": 10,
+   "s2Only": 1
+  },
+  {
+   "doi": "10.1007/s11707-018-0717-9",
+   "short": "Frontiers Earth Sci 2018 · multi-sensor registration",
+   "lens": "lead",
+   "openalex": 21,
+   "s2": 21,
+   "both": 20,
+   "openalexOnly": 1,
+   "s2Only": 1
+  },
+  {
+   "doi": "10.1002/ldr.3980",
+   "short": "LDD 2021 · reclamation land development",
+   "lens": "lead",
+   "openalex": 12,
+   "s2": 11,
+   "both": 10,
+   "openalexOnly": 2,
+   "s2Only": 1
+  }
+ ],
+ "topS2Only": [
+  {
+   "title": "30 m annual land cover and its dynamics in China from 1990 to 2019",
+   "year": 2021,
+   "venue": null,
+   "citedBy": 324,
+   "doi": "10.5194/essd-2021-7",
+   "influential": false,
+   "cites": [
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "Surface warming in global cities is substantially more rapid than in rural background areas",
+   "year": 2022,
+   "venue": "Communications Earth & Environment",
+   "citedBy": 190,
+   "doi": "10.1038/s43247-022-00539-x",
+   "influential": false,
+   "cites": [
+    "ERL 2019 · urban expansion to 2050",
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "Unraveling the urban climate crisis: Exploring the nexus of urbanization, climate change, and their impacts on the environment and human well-being – A global perspective",
+   "year": 2024,
+   "venue": "AIMS Public Health",
+   "citedBy": 153,
+   "doi": "10.3934/publichealth.2024050",
+   "influential": false,
+   "cites": [
+    "Nat Sustain 2020 · urban growth & biodiversity"
+   ]
+  },
+  {
+   "title": "Drivers of global surface urban heat islands: Surface property, climate background, and 2D/3D urban morphologies",
+   "year": 2023,
+   "venue": "Building and Environment",
+   "citedBy": 151,
+   "doi": "10.1016/j.buildenv.2023.110581",
+   "influential": false,
+   "cites": [
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "Google Earth Engine for large-scale land use and land cover mapping: an object-based classification approach using spectral, textural and topographical factors",
+   "year": 2021,
+   "venue": "GIScience & Remote Sensing",
+   "citedBy": 148,
+   "doi": "10.1080/15481603.2021.1947623",
+   "influential": false,
+   "cites": [
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "Production of global daily seamless data cubes and quantification of global land cover change from 1985 to 2020 - iMap World 1.0",
+   "year": 2021,
+   "venue": "Remote Sensing of Environment",
+   "citedBy": 146,
+   "doi": "10.1016/j.rse.2021.112364",
+   "influential": false,
+   "cites": [
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "Green growth? On the relation between population density, land use and vegetation cover fractions in a city using a 30-years Landsat time series",
+   "year": 2020,
+   "venue": null,
+   "citedBy": 127,
+   "doi": "10.1016/j.landurbplan.2020.103857",
+   "influential": false,
+   "cites": [
+    "Nat Sustain 2020 · urban growth & biodiversity"
+   ]
+  },
+  {
+   "title": "Rising infrastructure inequalities accompany urbanization and economic development",
+   "year": 2025,
+   "venue": "Nature Communications",
+   "citedBy": 115,
+   "doi": "10.1038/s41467-025-56539-w",
+   "influential": false,
+   "cites": [
+    "ERL 2019 · urban expansion to 2050"
+   ]
+  },
+  {
+   "title": "Urbanization, Migration, and Adaptation to Climate Change",
+   "year": 2020,
+   "venue": null,
+   "citedBy": 87,
+   "doi": "10.1016/j.oneear.2020.09.016",
+   "influential": false,
+   "cites": [
+    "ERL 2019 · urban expansion to 2050"
+   ]
+  },
+  {
+   "title": "Up‐conversion and temperature sensing properties of Na\n 2\n GdMg\n 2\n (VO\n 4\n )\n 3\n :Yb\n 3+\n ,Er\n 3+\n phosphors",
+   "year": 2021,
+   "venue": "Journal of The American Ceramic Society",
+   "citedBy": 80,
+   "doi": "10.1111/jace.18070",
+   "influential": false,
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Cities and the Environment",
+   "year": 2012,
+   "venue": null,
+   "citedBy": 78,
+   "doi": "10.1002/9781118279519.ch20",
+   "influential": false,
+   "cites": [
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "Uncertainty quantification for probabilistic machine learning in earth observation using conformal prediction",
+   "year": 2024,
+   "venue": "Scientific Reports",
+   "citedBy": 68,
+   "doi": "10.1038/s41598-024-65954-w",
+   "influential": false,
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Scarcity and quality risks for future global urban water supply",
+   "year": 2024,
+   "venue": "Landscape Ecology",
+   "citedBy": 50,
+   "doi": "10.1007/s10980-024-01832-0",
+   "influential": false,
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Effects of atmospheric circulations on the interannual variation in PM2.5 concentrations over the Beijing–Tianjin–Hebei region in 2013–2018",
+   "year": 2020,
+   "venue": "Atmospheric Chemistry and Physics",
+   "citedBy": 50,
+   "doi": "10.5194/acp-2020-198",
+   "influential": false,
+   "cites": [
+    "ES&T 2019 · road dust PM2.5"
+   ]
+  },
+  {
+   "title": "Vertical Structures of Dust Aerosols over East Asia Based on CALIPSO Retrievals",
+   "year": 2019,
+   "venue": "Remote Sensing",
+   "citedBy": 49,
+   "doi": "10.3390/rs11060701",
+   "influential": false,
+   "cites": [
+    "Atmos Environ 2018 · dust emissions"
+   ]
+  },
+  {
+   "title": "Anthropogenic dust: sources, characteristics and emissions",
+   "year": 2023,
+   "venue": "Environmental Research Letters",
+   "citedBy": 46,
+   "doi": "10.1088/1748-9326/acf479",
+   "influential": false,
+   "cites": [
+    "Atmos Environ 2018 · dust emissions"
+   ]
+  },
+  {
+   "title": "Spatial scaling of land use/land cover and ecosystem services across urban hierarchical levels: patterns and relationships",
+   "year": 2021,
+   "venue": "Landscape Ecology",
+   "citedBy": 45,
+   "doi": "10.1007/s10980-021-01387-4",
+   "influential": false,
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Private trees contribute uniquely to urban forest diversity, structure and service-based traits",
+   "year": 2022,
+   "venue": "Urban Forestry &amp; Urban Greening",
+   "citedBy": 42,
+   "doi": "10.1016/j.ufug.2022.127760",
+   "influential": false,
+   "cites": [
+    "Nat Sustain 2020 · urban growth & biodiversity"
+   ]
+  },
+  {
+   "title": "Exploring habitat patch clusters based on network community detection to identify restored priority areas of ecological networks in urban areas",
+   "year": 2022,
+   "venue": "Urban Forestry &amp; Urban Greening",
+   "citedBy": 35,
+   "doi": "10.1016/j.ufug.2022.127771",
+   "influential": false,
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Developing a data-fusing method for mapping fine-scale urban three-dimensional building structure",
+   "year": 2022,
+   "venue": "Sustainable cities and society",
+   "citedBy": 29,
+   "doi": "10.1016/j.scs.2022.103716",
+   "influential": false,
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections",
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "A global assessment of research on urban ecology of reptiles: patterns, gaps and future directions",
+   "year": 2022,
+   "venue": "Animal Conservation",
+   "citedBy": 29,
+   "doi": "10.1111/acv.12799",
+   "influential": true,
+   "cites": [
+    "Nat Sustain 2020 · urban growth & biodiversity"
+   ]
+  },
+  {
+   "title": "Dominant synoptic patterns associated with the decay process of PM2.5 pollution episodes around Beijing",
+   "year": 2020,
+   "venue": "Atmospheric Chemistry and Physics",
+   "citedBy": 29,
+   "doi": "10.5194/acp-2020-912",
+   "influential": false,
+   "cites": [
+    "ES&T 2019 · road dust PM2.5"
+   ]
+  },
+  {
+   "title": "SGD-SM 2.0: an improved seamless global daily soil moisture long-term dataset from 2002 to 2022",
+   "year": 2022,
+   "venue": "Earth System Science Data",
+   "citedBy": 28,
+   "doi": "10.5194/essd-14-4473-2022",
+   "influential": false,
+   "cites": [
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "A synthesis of Global Streamflow Characteristics, Hydrometeorology, and Catchment Attributes (GSHA) for large sample river-centric studies",
+   "year": 2024,
+   "venue": "Earth System Science Data",
+   "citedBy": 25,
+   "doi": "10.5194/essd-16-1559-2024",
+   "influential": false,
+   "cites": [
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "Trends in socioeconomic disparities in urban heat exposure and adaptation options in mid-size U.S. cities",
+   "year": 2024,
+   "venue": "Remote Sensing Applications Society and Environment",
+   "citedBy": 24,
+   "doi": "10.1016/j.rsase.2024.101313",
+   "influential": false,
+   "cites": [
+    "ERL 2019 · urban expansion to 2050"
+   ]
+  }
+ ],
+ "topOpenalexOnly": [
+  {
+   "title": "Emissions Trends and Drivers",
+   "year": 2023,
+   "type": "book-chapter",
+   "citedBy": 293,
+   "doi": "10.1017/9781009157926.004",
+   "id": "W4385228868",
+   "cites": [
+    "ERL 2019 · urban expansion to 2050"
+   ]
+  },
+  {
+   "title": "Urban nature as a source of resilience during social distancing amidst the coronavirus pandemic",
+   "year": 2020,
+   "type": "preprint",
+   "citedBy": 292,
+   "doi": "10.31219/osf.io/3wx5a",
+   "id": "W3032488597",
+   "cites": [
+    "ERL 2019 · urban expansion to 2050"
+   ]
+  },
+  {
+   "title": "Land use/land cover prediction and analysis of the middle reaches of the Yangtze River under different scenarios",
+   "year": 2022,
+   "type": "article",
+   "citedBy": 196,
+   "doi": "10.1016/j.scitotenv.2022.155238",
+   "id": "W4223486066",
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Diffusive and Drift Halide Perovskite Memristive Barristors as Nociceptive and Synaptic Emulators for Neuromorphic Computing",
+   "year": 2021,
+   "type": "article",
+   "citedBy": 178,
+   "doi": "10.1002/adma.202007851",
+   "id": "W3136652851",
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Urban Systems and Other Settlements",
+   "year": 2023,
+   "type": "book-chapter",
+   "citedBy": 158,
+   "doi": "10.1017/9781009157926.010",
+   "id": "W4385168567",
+   "cites": [
+    "ERL 2019 · urban expansion to 2050",
+    "Nat Commun 2020 · SSP urban land projections",
+    "Nat Sustain 2020 · global urban change 1985–2015",
+    "Nat Sustain 2020 · urban growth & biodiversity"
+   ]
+  },
+  {
+   "title": "Building in or out? Examining urban expansion patterns and land use efficiency across the global sample of 466 cities with million+ inhabitants",
+   "year": 2022,
+   "type": "article",
+   "citedBy": 155,
+   "doi": "10.1016/j.habitatint.2021.102503",
+   "id": "W4206615095",
+   "cites": [
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "Training confounder-free deep learning models for medical applications",
+   "year": 2020,
+   "type": "article",
+   "citedBy": 149,
+   "doi": "10.1038/s41467-020-19784-9",
+   "id": "W3109762849",
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Increasing urban flood risk in China over recent 40 years induced by LUCC",
+   "year": 2021,
+   "type": "article",
+   "citedBy": 138,
+   "doi": "10.1016/j.landurbplan.2021.104317",
+   "id": "W3217339871",
+   "cites": [
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "Modelling and quantifying tomorrow's risks from natural hazards",
+   "year": 2021,
+   "type": "review",
+   "citedBy": 125,
+   "doi": "10.1016/j.scitotenv.2021.152552",
+   "id": "W4200121728",
+   "cites": [
+    "ERL 2019 · urban expansion to 2050"
+   ]
+  },
+  {
+   "title": "Assessing the role of SuDS in resilience enhancement of urban drainage system: A case study of Gurugram City, India",
+   "year": 2022,
+   "type": "article",
+   "citedBy": 116,
+   "doi": "10.1016/j.uclim.2021.101075",
+   "id": "W4205458872",
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Evaluating the impacts of land use change on ecosystem service values under multiple scenarios in the Hunshandake region of China",
+   "year": 2022,
+   "type": "article",
+   "citedBy": 106,
+   "doi": "10.1016/j.scitotenv.2022.158067",
+   "id": "W4291914218",
+   "cites": [
+    "Urban Climate 2021 · urban climate forecasts"
+   ]
+  },
+  {
+   "title": "A Review of the Synthesis, Properties, and Applications of Bulk and Two-Dimensional Tin (II) Sulfide (SnS)",
+   "year": 2021,
+   "type": "article",
+   "citedBy": 99,
+   "doi": "10.3390/app11052062",
+   "id": "W3131671484",
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Urban green space and happiness in developed countries",
+   "year": 2021,
+   "type": "article",
+   "citedBy": 92,
+   "doi": null,
+   "id": "W3166163209",
+   "cites": [
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "Urbanization in China drives farmland uphill under the constraint of the requisition–compensation balance",
+   "year": 2022,
+   "type": "article",
+   "citedBy": 89,
+   "doi": "10.1016/j.scitotenv.2022.154895",
+   "id": "W4220851101",
+   "cites": [
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "The role of satellite remote sensing in mitigating and adapting to global climate change",
+   "year": 2023,
+   "type": "review",
+   "citedBy": 87,
+   "doi": "10.1016/j.scitotenv.2023.166820",
+   "id": "W4386512074",
+   "cites": [
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "Driving forces of UHI changes in China's major cities from the perspective of land surface energy balance",
+   "year": 2022,
+   "type": "article",
+   "citedBy": 77,
+   "doi": "10.1016/j.scitotenv.2022.154710",
+   "id": "W4220930292",
+   "cites": [
+    "ERL 2019 · urban expansion to 2050"
+   ]
+  },
+  {
+   "title": "Impact of global urban expansion on the terrestrial vegetation carbon sequestration capacity",
+   "year": 2023,
+   "type": "article",
+   "citedBy": 77,
+   "doi": "10.1016/j.scitotenv.2023.163074",
+   "id": "W4360820508",
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Gamete binning: chromosome-level and haplotype-resolved genome assembly enabled by high-throughput single-cell sequencing of gamete genomes",
+   "year": 2020,
+   "type": "article",
+   "citedBy": 76,
+   "doi": "10.1186/s13059-020-02235-5",
+   "id": "W3116306815",
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Exploring future ecosystem service changes and key contributing factors from a “past-future-action” perspective: A case study of the Yellow River Basin",
+   "year": 2024,
+   "type": "article",
+   "citedBy": 76,
+   "doi": "10.1016/j.scitotenv.2024.171630",
+   "id": "W4392967372",
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Sustainable Land Management in a European Context",
+   "year": 2020,
+   "type": "book",
+   "citedBy": 73,
+   "doi": "10.1007/978-3-030-50841-8",
+   "id": "W3089335671",
+   "cites": [
+    "Nat Sustain 2020 · urban growth & biodiversity"
+   ]
+  },
+  {
+   "title": "Integrated drought vulnerability and risk assessment for future scenarios: An indicator based analysis",
+   "year": 2023,
+   "type": "article",
+   "citedBy": 71,
+   "doi": "10.1016/j.scitotenv.2023.165591",
+   "id": "W4384831294",
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Global assessment of urban trees’ cooling efficiency based on satellite observations",
+   "year": 2022,
+   "type": "article",
+   "citedBy": 71,
+   "doi": "10.1088/1748-9326/ac4c1c",
+   "id": "W4205931092",
+   "cites": [
+    "Nat Sustain 2020 · global urban change 1985–2015"
+   ]
+  },
+  {
+   "title": "Built environment influences on urban climate resilience: Evidence from extreme heat events in Macau",
+   "year": 2022,
+   "type": "article",
+   "citedBy": 69,
+   "doi": "10.1016/j.scitotenv.2022.160270",
+   "id": "W4309436808",
+   "cites": [
+    "ERL 2019 · urban expansion to 2050"
+   ]
+  },
+  {
+   "title": "The population genomics of adaptive loss of function",
+   "year": 2021,
+   "type": "article",
+   "citedBy": 67,
+   "doi": "10.1038/s41437-021-00403-2",
+   "id": "W3126420793",
+   "cites": [
+    "Nat Commun 2020 · SSP urban land projections"
+   ]
+  },
+  {
+   "title": "Effects of atmospheric circulations on the interannual variation in PM 2.5 concentrations over the Beijing–Tianjin–Hebei region in 2013–2018",
+   "year": 2020,
+   "type": "article",
+   "citedBy": 66,
+   "doi": "10.5194/acp-20-7667-2020",
+   "id": "W3011789068",
+   "cites": [
+    "ES&T 2019 · road dust PM2.5"
+   ]
+  }
+ ]
+}
