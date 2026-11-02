@@ -207,6 +207,48 @@
       "theme": "flood",
       "short": "LDD 2021 · reclamation land development",
       "note": "lead"
+    },
+    {
+      "doi": "10.1073/pnas.2617717123",
+      "theme": "cooling",
+      "short": "PNAS 2026 · Cooler Cities / UHS",
+      "note": "lead; early"
+    },
+    {
+      "doi": "10.1002/jcop.23177",
+      "theme": "expansion",
+      "short": "J Community Psych 2025 · lockdown mental health",
+      "note": "coauthor"
+    },
+    {
+      "doi": "10.1016/j.uclim.2022.101389",
+      "theme": "flood",
+      "short": "Urban Climate 2023 · mega-city extreme rainfall",
+      "note": "coauthor"
+    },
+    {
+      "doi": "10.3390/atmos11070771",
+      "theme": "heat-health",
+      "short": "Atmosphere 2020 · PRD urbanization climate",
+      "note": "coauthor"
+    },
+    {
+      "doi": "10.1029/2020EF001491",
+      "theme": "expansion",
+      "short": "Earth's Future 2020 · China SSP population grids",
+      "note": "coauthor"
+    },
+    {
+      "doi": "10.1038/s41893-024-01358-y",
+      "theme": "flood",
+      "short": "Nat Sustain 2024 · urban river GHG emissions",
+      "note": "coauthor"
+    },
+    {
+      "doi": "10.59717/j.xinn-geo.2024.100069",
+      "theme": "methods",
+      "short": "Innov Geosci 2024 · US building heights",
+      "note": "coauthor"
     }
   ],
   "rightDomains": [
