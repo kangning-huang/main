@@ -274,6 +274,69 @@
       "themeSource": "reach-agent",
       "lens": "lead",
       "doiSource": "OpenAlex; last author (6/6); pinned lead per Ken 2026-10-11 after authorship audit"
+    },
+    {
+      "doi": "10.1073/pnas.2617717123",
+      "short": "PNAS 2026 · Cooler Cities / UHS",
+      "year": 2026,
+      "theme": "heat",
+      "themeSource": "research-page",
+      "lens": "lead",
+      "doiSource": "src/lib/publications-part-a.ts"
+    },
+    {
+      "doi": "10.1002/jcop.23177",
+      "short": "J Community Psych 2025 · lockdown mental health",
+      "year": 2025,
+      "theme": "urban-futures",
+      "themeSource": "reach-agent",
+      "lens": "coauthor",
+      "doiSource": "src/lib/publications-part-a.ts"
+    },
+    {
+      "doi": "10.1016/j.uclim.2022.101389",
+      "short": "Urban Climate 2023 · mega-city extreme rainfall",
+      "year": 2023,
+      "theme": "flood-coasts",
+      "themeSource": "reach-agent",
+      "lens": "coauthor",
+      "doiSource": "src/lib/publications-part-a.ts"
+    },
+    {
+      "doi": "10.3390/atmos11070771",
+      "short": "Atmosphere 2020 · PRD urbanization climate",
+      "year": 2020,
+      "theme": "heat",
+      "themeSource": "reach-agent",
+      "lens": "coauthor",
+      "doiSource": "src/lib/publications-part-a.ts"
+    },
+    {
+      "doi": "10.1029/2020EF001491",
+      "short": "Earth's Future 2020 · China SSP population grids",
+      "year": 2020,
+      "theme": "urban-futures",
+      "themeSource": "reach-agent",
+      "lens": "coauthor",
+      "doiSource": "src/lib/publications-part-b.ts"
+    },
+    {
+      "doi": "10.1038/s41893-024-01358-y",
+      "short": "Nat Sustain 2024 · urban river GHG emissions",
+      "year": 2024,
+      "theme": "flood-coasts",
+      "themeSource": "reach-agent",
+      "lens": "coauthor",
+      "doiSource": "src/lib/publications-part-b.ts"
+    },
+    {
+      "doi": "10.59717/j.xinn-geo.2024.100069",
+      "short": "Innov Geosci 2024 · US building heights",
+      "year": 2024,
+      "theme": "scaling-form",
+      "themeSource": "reach-agent",
+      "lens": "coauthor",
+      "doiSource": "src/lib/publications-part-b.ts"
     }
   ]
 }

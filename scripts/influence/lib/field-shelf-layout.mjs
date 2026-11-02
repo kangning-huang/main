@@ -21,7 +21,7 @@ export const FIELD = {
 };
 
 export const SHELF = {
-  width: 700, // reference stage width
+  width: 840, // reference stage width (was 700; widened 2026-11-02 for 35 pinned papers)
   minWidth: 560, // narrowest stage the client draws (lg at 1024 px): text must fit at this scale
   margin: 4,
   itemGap: 3, // between spines of one theme
