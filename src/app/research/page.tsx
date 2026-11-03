@@ -134,7 +134,7 @@ const THEMES: Theme[] = [
         venue: "Nature Communications",
         year: "2026",
         href: pubHref("Infrastructure reach and capacity pressure in sub-Saharan Africa's future urban expansion"),
-        status: { en: "in revision", zh: "修订中" },
+        status: { en: "accepted in principle", zh: "原则上接收" },
       },
     ],
     apps: [
