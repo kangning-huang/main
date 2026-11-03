@@ -12,6 +12,12 @@ export interface NewsItem {
 export const NEWS: NewsItem[] = [
   {
     date: "2026-11",
+    en: "“Infrastructure reach and capacity pressure in sub-Saharan Africa’s future urban expansion” accepted in principle at Nature Communications.",
+    zh: "论文《撒哈拉以南非洲未来城市扩张中的基础设施可达性与容量压力》已获 Nature Communications 原则上接收。",
+    href: `/publications#${publicationSlug("Infrastructure reach and capacity pressure in sub-Saharan Africa's future urban expansion")}`,
+  },
+  {
+    date: "2026-11",
     en: "Confirmed participant, SSP Urbanisation Workshop (WorldPop / University of Bristol).",
     zh: "确认参加世界人口项目（WorldPop）与布里斯托大学合办的 SSP 城市化工作坊。",
     href: "/news#ssp-workshop-2026",
