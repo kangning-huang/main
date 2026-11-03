@@ -28,6 +28,43 @@ function newestFirst(pubs: Publication[]) {
   return [...pubs].sort((a, b) => b.year - a.year);
 }
 
+/** Collapsed-by-default section for non-published papers (in press / under review). */
+function CollapsiblePubs({
+  groupClass,
+  openRotateClass,
+  titleEn,
+  titleZh,
+  pubs,
+}: {
+  groupClass: string;
+  openRotateClass: string;
+  titleEn: string;
+  titleZh: string;
+  pubs: Publication[];
+}) {
+  return (
+    <section>
+      <details className={groupClass}>
+        <summary className="flex cursor-pointer list-none items-baseline gap-2 font-display text-2xl text-ink [&::-webkit-details-marker]:hidden">
+          <span
+            className={`inline-block text-sm text-ink-faint transition-transform duration-200 ${openRotateClass}`}
+            aria-hidden="true"
+          >
+            ▶
+          </span>
+          <T en={titleEn} zh={titleZh} />
+          <span className="font-sans text-sm text-ink-faint">({pubs.length})</span>
+        </summary>
+        <div className="mt-4 space-y-1">
+          {pubs.map((pub) => (
+            <PublicationCard key={pub.title} pub={pub} />
+          ))}
+        </div>
+      </details>
+    </section>
+  );
+}
+
 export default function PublicationList({
   published,
   inPress,
@@ -71,40 +108,23 @@ export default function PublicationList({
 
       <div className="mt-8 space-y-14">
         {shownInPress.length > 0 && (
-          <section>
-            <h2 className="font-display text-2xl text-ink">
-              <T en="In press" zh="待刊" />
-            </h2>
-            <div className="mt-4 space-y-1">
-              {shownInPress.map((pub) => (
-                <PublicationCard key={pub.title} pub={pub} />
-              ))}
-            </div>
-          </section>
+          <CollapsiblePubs
+            groupClass="group/press"
+            openRotateClass="group-open/press:rotate-90"
+            titleEn="In press"
+            titleZh="待刊"
+            pubs={shownInPress}
+          />
         )}
 
         {shownUnderReview.length > 0 && (
-          <section>
-            <details open className="group/review">
-              <summary className="flex cursor-pointer list-none items-baseline gap-2 font-display text-2xl text-ink [&::-webkit-details-marker]:hidden">
-                <span
-                  className="inline-block text-sm text-ink-faint transition-transform duration-200 group-open/review:rotate-90"
-                  aria-hidden="true"
-                >
-                  ▶
-                </span>
-                <T en="Under review" zh="审稿中" />
-                <span className="font-sans text-sm text-ink-faint">
-                  ({shownUnderReview.length})
-                </span>
-              </summary>
-              <div className="mt-4 space-y-1">
-                {shownUnderReview.map((pub) => (
-                  <PublicationCard key={pub.title} pub={pub} />
-                ))}
-              </div>
-            </details>
-          </section>
+          <CollapsiblePubs
+            groupClass="group/review"
+            openRotateClass="group-open/review:rotate-90"
+            titleEn="Under review"
+            titleZh="审稿中"
+            pubs={shownUnderReview}
+          />
         )}
 
         {shownPublished.length > 0 && (
