@@ -96,8 +96,8 @@ const THEMES: Theme[] = [
     },
     title: { en: "Scaling and form", zh: "标度与形态" },
     question: {
-      en: "How much material does a city need per person, and why do larger cities need less?",
-      zh: "一座城市平均每人需要多少建筑材料？为什么城市越大，人均用量越少？",
+      en: "How do city size and urban form shape materials use, heat and cooling, and flood risk?",
+      zh: "城市的规模与形态，怎样影响建材用量、高温与降温，以及洪水风险？",
     },
     findings: [
       {
