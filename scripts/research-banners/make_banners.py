@@ -272,7 +272,9 @@ def scaling_form():
 
     # each scale reaches further than the one below it, as in the original
     k = HEX_FADE
-    fo = dict(cx=440, cy=196)                                        # centred on the peak
+    from fetch_layers import FRAMES
+    ax, ay = FRAMES["scaling-form"]["anchor"]
+    fo = dict(cx=ax / S, cy=ay / S)                                  # centred on the peak
     m7 = nx_falloff(*C[7].T, rx=430 * k, ry=215 * k, soft=0.42 + 0.3 * (1 - k), **fo) ** (1 / k)
     m6 = nx_falloff(*C[6].T, rx=560 * k, ry=290 * k, soft=0.5 + 0.3 * (1 - k), **fo) ** (1 / k)
     floor5 = 0.35 * k ** 2                                           # original 0.35

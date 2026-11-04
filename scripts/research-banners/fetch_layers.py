@@ -47,10 +47,10 @@ FRAMES = {
     "urban-futures": dict(lon=3.50, lat=6.60, res=50, epsg=32631),
     "heat": dict(lon=121.40, lat=31.17, res=55, epsg=32651),
     "flood-coasts": dict(lon=106.38, lat=-6.03, res=22, epsg=32748),
-    # anchor: put (lon, lat) -- the densest level-7 cell, Midtown South -- at this @2x pixel,
-    # the focal point of the original nested-hex banner; 44 m/px makes an H3 level-7 cell
-    # the same size as that banner's fine hexagons (radius ~14 px at 1x)
-    "scaling-form": dict(lon=-73.98755, lat=40.74194, res=44, epsg=32618, anchor=(880, 392)),
+    # anchor: put (lon, lat) -- the densest level-7 cell, Midtown South -- at this @2x pixel:
+    # x as in the original nested-hex banner, y raised so lower Manhattan clears the page fade;
+    # 44 m/px makes an H3 level-7 cell the same size as that banner's fine hexagons (radius ~14 px at 1x)
+    "scaling-form": dict(lon=-73.98755, lat=40.74194, res=44, epsg=32618, anchor=(880, 250)),
 }
 
 
