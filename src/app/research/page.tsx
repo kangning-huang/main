@@ -43,7 +43,8 @@ interface Theme {
   papers: PaperLink[];
   apps: AppLink[];
   openQuestions: Bilingual[];
-  figure?: { src: string; alt: string; caption: Bilingual };
+  /** Image, or a video when `video` is set (then `src` is its poster). */
+  figure?: { src: string; video?: string; alt: string; caption: Bilingual };
   banner: Banner;
 }
 
@@ -398,10 +399,11 @@ const THEMES: Theme[] = [
     ],
     figure: {
       src: "/videos/nested-economies-demo-poster.jpg",
-      alt: "Still from the animated summary of “Nested economies of scale in global city mass”",
+      video: "/videos/nested-economies-demo.mp4",
+      alt: "Animated summary of “Nested economies of scale in global city mass”",
       caption: {
-        en: "From the animated summary of the Nature Cities paper.",
-        zh: "摘自 Nature Cities 论文的动画摘要。",
+        en: "Animated summary of the Nature Cities paper (73 s).",
+        zh: "Nature Cities 论文的动画摘要（73 秒）。",
       },
     },
   },
@@ -573,13 +575,25 @@ export default function ResearchPage() {
 
                     {theme.figure && (
                       <figure className="mt-6">
-                        {/* eslint-disable-next-line @next/next/no-img-element */}
-                        <img
-                          src={theme.figure.src}
-                          alt={theme.figure.alt}
-                          loading="lazy"
-                          className="w-full rounded-lg border border-rule"
-                        />
+                        {theme.figure.video ? (
+                          <video
+                            src={theme.figure.video}
+                            poster={theme.figure.src}
+                            controls
+                            playsInline
+                            preload="none"
+                            aria-label={theme.figure.alt}
+                            className="aspect-square w-full rounded-lg border border-rule bg-ink/5"
+                          />
+                        ) : (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={theme.figure.src}
+                            alt={theme.figure.alt}
+                            loading="lazy"
+                            className="w-full rounded-lg border border-rule"
+                          />
+                        )}
                         <figcaption className="mt-2 text-xs text-ink-faint">
                           <T en={theme.figure.caption.en} zh={theme.figure.caption.zh} />
                         </figcaption>
