@@ -5,7 +5,7 @@ import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcru
 import T from "@/components/T";
 
 const DESCRIPTION =
-  "Research themes of Kangning (Ken) Huang and the CLUEs Lab: urban futures, heat, flood and coasts, and the scaling and form of cities.";
+  "Research themes of Kangning (Ken) Huang and the CLUEs Lab: scaling and form, urban futures, heat, and flood and coasts.";
 
 /** On-site link to a publication entry (used for in-press / under-review papers without a DOI). */
 const pubHref = (title: string) => `/publications#${publicationSlug(title)}`;
@@ -75,6 +75,126 @@ const IN_PRESS: Bilingual = { en: "in press", zh: "待刊" };
 // Every finding below is taken from the linked paper's highlights in
 // publications-part-a.ts / publications-part-b.ts.
 const THEMES: Theme[] = [
+  {
+    id: "scaling-form",
+    banner: {
+      stem: "scaling-form",
+      alt: "Satellite view of New York from above in deep navy, overlaid with nested hexagon grids at three levels: small cells shaded purple to teal to soft gold by built mass, brightest along Manhattan; medium cyan hexagons and large white hexagons contain them, and amber outlines trace the densest cell and the two larger cells that contain it",
+      caption: {
+        en: "New York · built mass on nested H3 hexagons, levels 5 ⊃ 6 ⊃ 7 · Huang et al. 2026, Nature Cities",
+        zh: "纽约 · 嵌套 H3 六边形（5 ⊃ 6 ⊃ 7 级）上的建成质量 · Huang 等，2026，Nature Cities",
+      },
+      legend: [
+        {
+          kind: "ramp",
+          color: "linear-gradient(to right, #34185c, #40348c, #2c68aa, #22a0a8, #62c696, #eccc70)",
+          label: { en: "Built mass per level-7 cell: low → high", zh: "7 级六边形建成质量：低 → 高" },
+        },
+        { kind: "line", color: "#c4eef8", label: { en: "Level 5 ⊃ level 6 ⊃ level 7", zh: "5 级 ⊃ 6 级 ⊃ 7 级" } },
+        { kind: "line", color: "#ffc440", label: { en: "Densest cell and its parents", zh: "最密的格网及其上级格网" } },
+      ],
+    },
+    title: { en: "Scaling and form", zh: "标度与形态" },
+    question: {
+      en: "How much material does a city need per person, and why do larger cities need less?",
+      zh: "一座城市平均每人需要多少建筑材料？为什么城市越大，人均用量越少？",
+    },
+    findings: [
+      {
+        en: "At the neighborhood scale, doubling population density raises built mass by only about 68% — economies of scale intensify inside the city.",
+        zh: "在街区尺度上，人口密度翻倍，建成质量只增加约 68%；规模经济在城市内部更强。",
+        venue: "Nature Cities",
+        year: "2026",
+        href: "https://doi.org/10.1038/s44284-026-00532-x",
+      },
+      {
+        en: "Double a city's population and its built mass grows only about 87%; bigger cities need less material per person.",
+        zh: "城市人口翻倍，建成质量仅增长约87%；城市越大，人均所需的建筑材料越少。",
+        venue: "Nature Cities",
+        year: "2026",
+        href: "https://doi.org/10.1038/s44284-026-00532-x",
+      },
+
+      {
+        en: "A 100-metre increase in the scale of functionally homogeneous building clusters is associated with roughly 5% lower daytime urban heat island intensity.",
+        zh: "功能相同的建筑集群，尺度每增加100米，对应的白天城市热岛强度约低5%。",
+        venue: "PNAS",
+        year: "2026",
+        href: doiHref("10.1073/pnas.2617717123"),
+      },
+
+      {
+        en: "Counting building height and protection standards shifts global flood damage toward Southeast Asia: 42% of the total versus 15% under depth-only assessments.",
+        zh: "只看淹没深度，东南亚占全球估计洪灾损失的15%。把建筑高度和防洪标准也算进去，这一比例升至42%。",
+        venue: "Scientific Reports",
+        year: "2026",
+        href: doiHref("10.1038/s41598-026-70981-w"),
+      },
+
+      {
+        en: "In Chinese cities, protection systems can reduce potential flood damage by more than 90%.",
+        zh: "在中国城市，防洪体系可把潜在的洪灾损失减少90%以上。",
+        venue: "Scientific Reports",
+        year: "2026",
+        href: doiHref("10.1038/s41598-026-70981-w"),
+      }
+    ],
+    papers: [
+      {
+        title: "Nested economies of scale in global city mass",
+        venue: "Nature Cities",
+        year: "2026",
+        href: "https://doi.org/10.1038/s44284-026-00532-x",
+      },
+
+      {
+        title: "Toward Cooler Cities by Larger Homogeneous Functional Clusters",
+        venue: "PNAS",
+        year: "2026",
+        href: doiHref("10.1073/pnas.2617717123"),
+      },
+
+      {
+        title: "Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution",
+        venue: "Scientific Reports",
+        year: "2026",
+        href: doiHref("10.1038/s41598-026-70981-w"),
+      },
+
+      {
+        title: "Declining urban density attenuates rising population exposure to surface heat extremes",
+        venue: "Scientific Reports",
+        year: "2025",
+        href: doiHref("10.1038/s41598-025-96045-z"),
+      }
+    ],
+    apps: [
+      {
+        en: "City mass scaling explorer",
+        zh: "城市建成质量标度",
+        href: "https://city-mass.nested-complexity.net",
+      },
+    ],
+    openQuestions: [
+      {
+        en: "Which cities are over-built or under-built relative to their size, and why?",
+        zh: "与人口规模相比，哪些城市建得偏多，哪些建得不足？为什么？",
+      },
+      {
+        en: "How does building upward change the material and mobility costs of a growing city?",
+        zh: "城市不断长大，把楼建得更高，会怎样改变建材和出行的成本？",
+      },
+    ],
+    figure: {
+      src: "/videos/nested-economies-demo-poster.jpg",
+      video: "/videos/nested-economies-demo.mp4",
+      alt: "Animated summary of “Nested economies of scale in global city mass”",
+      caption: {
+        en: "Animated summary of the Nature Cities paper (73 s).",
+        zh: "Nature Cities 论文的动画摘要（73 秒）。",
+      },
+    },
+  },
   {
     id: "urban-futures",
     banner: {
@@ -174,8 +294,8 @@ const THEMES: Theme[] = [
           kind: "ramp",
           color: "linear-gradient(to right, #761a70, #c02a56, #ee602c, #fca034, #fed678)",
           label: { en: "Surface temperature: about 39 → 52 °C", zh: "地表温度：约 39 → 52 °C" },
-        },
-      ],
+        }
+    ],
     },
     title: { en: "Heat", zh: "高温" },
     question: {
@@ -196,14 +316,7 @@ const THEMES: Theme[] = [
         venue: "npj Environmental Social Sciences",
         year: "2026",
         href: doiHref("10.1038/s44432-026-00009-1"),
-      },
-      {
-        en: "A 100-metre increase in the scale of functionally homogeneous building clusters is associated with roughly 5% lower daytime urban heat island intensity.",
-        zh: "功能相同的建筑集群，尺度每增加100米，对应的白天城市热岛强度约低5%。",
-        venue: "PNAS",
-        year: "2026",
-        href: doiHref("10.1073/pnas.2617717123"),
-      },
+      }
     ],
     papers: [
       {
@@ -218,6 +331,7 @@ const THEMES: Theme[] = [
         year: "2021",
         href: doiHref("10.1029/2020JD033831"),
       },
+
       {
         title: "Declining urban density attenuates rising population exposure to surface heat extremes",
         venue: "Scientific Reports",
@@ -229,20 +343,14 @@ const THEMES: Theme[] = [
         venue: "npj Environmental Social Sciences",
         year: "2026",
         href: doiHref("10.1038/s44432-026-00009-1"),
-      },
-      {
-        title: "Toward Cooler Cities by Larger Homogeneous Functional Clusters",
-        venue: "PNAS",
-        year: "2026",
-        href: doiHref("10.1073/pnas.2617717123"),
-      },
+      }
     ],
     apps: [
       {
         en: "Urban renewal cooling explorer",
         zh: "城市更新降温效果",
         href: "https://cooling.kangning-huang.com/",
-      },
+      }
     ],
     openQuestions: [
       {
@@ -252,7 +360,7 @@ const THEMES: Theme[] = [
       {
         en: "When a neighborhood is rebuilt cooler, who ends up enjoying the benefit?",
         zh: "一个街区重建后更凉快了，最后是谁享受到了这份好处？",
-      },
+      }
     ],
   },
   {
@@ -266,8 +374,8 @@ const THEMES: Theme[] = [
       },
       legend: [
         { kind: "swatch", color: "#b2eafa", label: { en: "By 2050", zh: "2050 年" } },
-        { kind: "swatch", color: "#2f7fd0", label: { en: "By 2100", zh: "2100 年" } },
-      ],
+        { kind: "swatch", color: "#2f7fd0", label: { en: "By 2100", zh: "2100 年" } }
+    ],
     },
     title: { en: "Flood and coasts", zh: "洪水与海岸" },
     question: {
@@ -276,34 +384,14 @@ const THEMES: Theme[] = [
     },
     findings: [
       {
-        en: "Counting building height and protection standards shifts global flood damage toward Southeast Asia: 42% of the total versus 15% under depth-only assessments.",
-        zh: "只看淹没深度，东南亚占全球估计洪灾损失的15%。把建筑高度和防洪标准也算进去，这一比例升至42%。",
-        venue: "Scientific Reports",
-        year: "2026",
-        href: doiHref("10.1038/s41598-026-70981-w"),
-      },
-      {
-        en: "In Chinese cities, protection systems can reduce potential flood damage by more than 90%.",
-        zh: "在中国城市，防洪体系可把潜在的洪灾损失减少90%以上。",
-        venue: "Scientific Reports",
-        year: "2026",
-        href: doiHref("10.1038/s41598-026-70981-w"),
-      },
-      {
         en: "Pixel-level inundation probabilities from Sentinel-1 radar on Google Earth Engine enable rapid flood mapping with quantified uncertainty.",
         zh: "在 Google Earth Engine 上用 Sentinel-1 雷达数据估算每个像元被淹的概率，可以快速绘制洪水范围图，也能量化结果的不确定性。",
         venue: "Remote Sensing",
         year: "2025",
         href: doiHref("10.3390/rs17101747"),
-      },
+      }
     ],
     papers: [
-      {
-        title: "Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution",
-        venue: "Scientific Reports",
-        year: "2026",
-        href: doiHref("10.1038/s41598-026-70981-w"),
-      },
       {
         title: "Rapid Probabilistic Inundation Mapping Using Local Thresholds and Sentinel-1 SAR Data on Google Earth Engine",
         venue: "Remote Sensing",
@@ -316,97 +404,23 @@ const THEMES: Theme[] = [
         year: "2026",
         href: pubHref("Beyond land exposure: multidimensional assessment of future built-environment and material-stock impacts under coastal inundation"),
         status: { en: "submitted; ongoing co-authored work", zh: "已投稿；合作研究进行中" },
-      },
+      }
     ],
     apps: [
       {
         en: "3D urban flood risk explorer",
         zh: "三维城市洪水风险",
         href: "https://flood.kangning-huang.com/",
-      },
+      }
     ],
     openQuestions: [
       {
         en: "What is at stake in coastal cities beyond the area of land that floods?",
         zh: "沿海城市遭遇洪水时，除了有多少土地被淹，还有什么面临风险？",
-      },
+      }
     ],
-  },
-  {
-    id: "scaling-form",
-    banner: {
-      stem: "scaling-form",
-      alt: "Satellite view of New York from above in deep navy, overlaid with nested hexagon grids at three levels: small cells shaded purple to teal to soft gold by built mass, brightest along Manhattan; medium cyan hexagons and large white hexagons contain them, and amber outlines trace the densest cell and the two larger cells that contain it",
-      caption: {
-        en: "New York · built mass on nested H3 hexagons, levels 5 ⊃ 6 ⊃ 7 · Huang et al. 2026, Nature Cities",
-        zh: "纽约 · 嵌套 H3 六边形（5 ⊃ 6 ⊃ 7 级）上的建成质量 · Huang 等，2026，Nature Cities",
-      },
-      legend: [
-        {
-          kind: "ramp",
-          color: "linear-gradient(to right, #34185c, #40348c, #2c68aa, #22a0a8, #62c696, #eccc70)",
-          label: { en: "Built mass per level-7 cell: low → high", zh: "7 级六边形建成质量：低 → 高" },
-        },
-        { kind: "line", color: "#c4eef8", label: { en: "Level 5 ⊃ level 6 ⊃ level 7", zh: "5 级 ⊃ 6 级 ⊃ 7 级" } },
-        { kind: "line", color: "#ffc440", label: { en: "Densest cell and its parents", zh: "最密的格网及其上级格网" } },
-      ],
-    },
-    title: { en: "Scaling and form", zh: "标度与形态" },
-    question: {
-      en: "How much material does a city need per person, and why do larger cities need less?",
-      zh: "一座城市平均每人需要多少建筑材料？为什么城市越大，人均用量越少？",
-    },
-    findings: [
-      {
-        en: "At the neighborhood scale, doubling population density raises built mass by only about 68% — economies of scale intensify inside the city.",
-        zh: "在街区尺度上，人口密度翻倍，建成质量只增加约 68%；规模经济在城市内部更强。",
-        venue: "Nature Cities",
-        year: "2026",
-        href: "https://doi.org/10.1038/s44284-026-00532-x",
-      },
-      {
-        en: "Double a city's population and its built mass grows only about 87%; bigger cities need less material per person.",
-        zh: "城市人口翻倍，建成质量仅增长约87%；城市越大，人均所需的建筑材料越少。",
-        venue: "Nature Cities",
-        year: "2026",
-        href: "https://doi.org/10.1038/s44284-026-00532-x",
-      },
-    ],
-    papers: [
-      {
-        title: "Nested economies of scale in global city mass",
-        venue: "Nature Cities",
-        year: "2026",
-        href: "https://doi.org/10.1038/s44284-026-00532-x",
-      },
-    ],
-    apps: [
-      {
-        en: "City mass scaling explorer",
-        zh: "城市建成质量标度",
-        href: "https://city-mass.nested-complexity.net",
-      },
-    ],
-    openQuestions: [
-      {
-        en: "Which cities are over-built or under-built relative to their size, and why?",
-        zh: "与人口规模相比，哪些城市建得偏多，哪些建得不足？为什么？",
-      },
-      {
-        en: "How does building upward change the material and mobility costs of a growing city?",
-        zh: "城市不断长大，把楼建得更高，会怎样改变建材和出行的成本？",
-      },
-    ],
-    figure: {
-      src: "/videos/nested-economies-demo-poster.jpg",
-      video: "/videos/nested-economies-demo.mp4",
-      alt: "Animated summary of “Nested economies of scale in global city mass”",
-      caption: {
-        en: "Animated summary of the Nature Cities paper (73 s).",
-        zh: "Nature Cities 论文的动画摘要（73 秒）。",
-      },
-    },
-  },
+  }
+
 ];
 
 export const metadata: Metadata = {
@@ -461,7 +475,7 @@ export default function ResearchPage() {
           </h1>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
-              en="How the size and shape of cities decide their climate future. Four themes in the CLimate and Urban Environments (CLUEs) Lab: urban futures, heat, flood and coasts, and scaling and form."
+              en="How the size and shape of cities decide their climate future. Four themes in the CLimate and Urban Environments (CLUEs) Lab: scaling and form, urban futures, heat, and flood and coasts."
               zh="城市是一个复杂社会—生态系统，人的活动、建筑和自然环境在其中相互影响。CLimate and Urban Environments（CLUEs）实验室围绕四个相互关联的主题，研究城市规模与形态怎样影响气候风险和资源消耗。"
             />
           </p>
