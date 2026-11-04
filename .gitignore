@@ -53,3 +53,6 @@ data/scholar-reach/raw/
 
 # Semantic Scholar per-paper citation cache (rebuilt by scripts/semantic-scholar/fetch-s2-citations.mjs)
 data/s2-reach/cache/
+
+# research banners: fetched rasters (fetch_layers.py)
+scripts/research-banners/data/
