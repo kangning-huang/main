@@ -49,13 +49,15 @@ interface Theme {
 
 /**
  * Section banner, 1090 × 406, faded into the section title at the bottom.
- * Illustrations in the look of the Nature Cities nested-hex banner
- * (scaling-form); the other three come from scripts/research-banners/make_banners.py.
+ * Four cities, four lenses: each is one city seen from above with one real data
+ * layer, made by scripts/research-banners/ (fetch_layers.py, make_banners.py).
+ * Files: public/research/<stem>.{jpg,webp} and <stem>@2x.{jpg,webp}.
  */
 interface Banner {
-  src: string;
-  src2x?: string;
+  stem: string;
   alt: string;
+  /** Place, layer and source, shown over the banner's top-left corner. */
+  caption: Bilingual;
   /** Optional key, shown over the banner's top-right corner. */
   legend?: LegendItem[];
 }
@@ -75,17 +77,18 @@ const THEMES: Theme[] = [
   {
     id: "urban-futures",
     banner: {
-      src: "/research/urban-futures.jpg",
-      src2x: "/research/urban-futures@2x.jpg",
-      alt: "Manhattan aerial as a night map, overlaid with a raster grid: today's urban land in white, and surrounding cells shaded navy-grey to yellow by their probability of becoming urban by 2050",
+      stem: "urban-futures",
+      alt: "Satellite view of Lagos and its lagoon from above, with a grid of squares on the land around today's city; larger, yellower squares mark 5 km cells more likely to become urban by 2050",
+      caption: {
+        en: "Lagos · chance of becoming urban by 2050, SSP2 · Huang et al. 2019, ERL",
+        zh: "拉各斯 · 2050 年前成为城市用地的概率（SSP2）· Huang 等，2019，ERL",
+      },
       legend: [
-        { kind: "swatch", color: "#cee4f2", label: { en: "Urban land today", zh: "现有城市用地" } },
         {
           kind: "ramp",
           color: "linear-gradient(to right, #31446b, #666970, #958f78, #cbba69, #ffea46)",
-          label: { en: "Chance of becoming urban by 2050: low → high", zh: "2050 年前成为城市的概率：低 → 高" },
+          label: { en: "Chance per 5 km cell: low → high", zh: "每个 5 公里格网的概率：低 → 高" },
         },
-        { kind: "line", color: "#6edeec", label: { en: "Most likely expansion", zh: "最可能的扩张区" } },
       ],
     },
     title: { en: "Urban futures", zh: "城市未来" },
@@ -159,9 +162,19 @@ const THEMES: Theme[] = [
   {
     id: "heat",
     banner: {
-      src: "/research/heat.jpg",
-      src2x: "/research/heat@2x.jpg",
-      alt: "Manhattan aerial as a night map, overlaid with a heat field in plum, red, orange and yellow, ringed by isotherm contours around a yellow-white hot core",
+      stem: "heat",
+      alt: "Satellite view of Shanghai from above, with the Huangpu River and the Yangtze estuary; the hottest summer surfaces in the city glow orange and pale yellow, cooler suburbs and water are left clear",
+      caption: {
+        en: "Shanghai · summer land surface temperature · Landsat 8/9, 2020–2024",
+        zh: "上海 · 夏季地表温度 · Landsat 8/9，2020–2024",
+      },
+      legend: [
+        {
+          kind: "ramp",
+          color: "linear-gradient(to right, #761a70, #c02a56, #ee602c, #fca034, #fed678)",
+          label: { en: "Surface temperature: about 39 → 52 °C", zh: "地表温度：约 39 → 52 °C" },
+        },
+      ],
     },
     title: { en: "Heat", zh: "高温" },
     question: {
@@ -244,13 +257,15 @@ const THEMES: Theme[] = [
   {
     id: "flood-coasts",
     banner: {
-      src: "/research/flood-coasts.jpg",
-      src2x: "/research/flood-coasts@2x.jpg",
-      alt: "Manhattan aerial as a night map, with 10-, 100- and 500-year flood extents spreading inland from a river as stacked translucent blue sheets",
+      stem: "flood-coasts",
+      alt: "Satellite view of the coast west of Jakarta from above; a blue band follows the shoreline and reaches inland along creeks and fish ponds, marking land below the 100-year storm tide with sea-level rise by 2050 (pale) and 2100 (blue)",
+      caption: {
+        en: "Jakarta, Tangerang coast · below the 100-year storm tide plus sea-level rise, SSP5-8.5 · CoastalDEM, IPCC AR6",
+        zh: "雅加达唐格朗沿海 · 海平面上升叠加百年一遇风暴潮后低于潮位的土地（SSP5-8.5）· CoastalDEM，IPCC AR6",
+      },
       legend: [
-        { kind: "swatch", color: "#62c6e8", label: { en: "10-year flood", zh: "十年一遇洪水" } },
-        { kind: "swatch", color: "#2f7fd0", label: { en: "100-year flood", zh: "百年一遇洪水" } },
-        { kind: "swatch", color: "#1b3f8f", label: { en: "500-year flood", zh: "五百年一遇洪水" } },
+        { kind: "swatch", color: "#b2eafa", label: { en: "By 2050", zh: "2050 年" } },
+        { kind: "swatch", color: "#2f7fd0", label: { en: "By 2100", zh: "2100 年" } },
       ],
     },
     title: { en: "Flood and coasts", zh: "洪水与海岸" },
@@ -319,8 +334,21 @@ const THEMES: Theme[] = [
   {
     id: "scaling-form",
     banner: {
-      src: "/research/scaling-form.jpg",
-      alt: "Manhattan aerial as a night map, overlaid with nested hexagonal grids of neighbourhood density",
+      stem: "scaling-form",
+      alt: "Satellite view of New York from above in deep navy, overlaid with nested hexagon grids at three levels: small cells shaded purple to teal to soft gold by built mass, brightest along Manhattan; medium cyan hexagons and large white hexagons contain them, and amber outlines trace the densest cell and the two larger cells that contain it",
+      caption: {
+        en: "New York · built mass on nested H3 hexagons, levels 5 ⊃ 6 ⊃ 7 · Huang et al. 2026, Nature Cities",
+        zh: "纽约 · 嵌套 H3 六边形（5 ⊃ 6 ⊃ 7 级）上的建成质量 · Huang 等，2026，Nature Cities",
+      },
+      legend: [
+        {
+          kind: "ramp",
+          color: "linear-gradient(to right, #34185c, #40348c, #2c68aa, #22a0a8, #62c696, #eccc70)",
+          label: { en: "Built mass per level-7 cell: low → high", zh: "7 级六边形建成质量：低 → 高" },
+        },
+        { kind: "line", color: "#c4eef8", label: { en: "Level 5 ⊃ level 6 ⊃ level 7", zh: "5 级 ⊃ 6 级 ⊃ 7 级" } },
+        { kind: "line", color: "#ffc440", label: { en: "Densest cell and its parents", zh: "最密的格网及其上级格网" } },
+      ],
     },
     title: { en: "Scaling and form", zh: "标度与形态" },
     question: {
@@ -457,17 +485,26 @@ export default function ResearchPage() {
                 aria-labelledby={`${theme.id}-heading`}
               >
                 <header className="relative">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={theme.banner.src}
-                    srcSet={theme.banner.src2x ? `${theme.banner.src} 1x, ${theme.banner.src2x} 2x` : undefined}
-                    alt={theme.banner.alt}
-                    width={1090}
-                    height={406}
-                    loading={i === 0 ? "eager" : "lazy"}
-                    decoding="async"
-                    className="aspect-[1090/406] w-full rounded-t-xl object-cover [mask-image:linear-gradient(to_bottom,#000_0%,#000_44%,rgba(0,0,0,0.32)_66%,rgba(0,0,0,0.06)_82%,transparent_94%)]"
-                  />
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcSet={`/research/${theme.banner.stem}.webp 1x, /research/${theme.banner.stem}@2x.webp 2x`}
+                    />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`/research/${theme.banner.stem}.jpg`}
+                      srcSet={`/research/${theme.banner.stem}.jpg 1x, /research/${theme.banner.stem}@2x.jpg 2x`}
+                      alt={theme.banner.alt}
+                      width={1090}
+                      height={406}
+                      loading={i === 0 ? "eager" : "lazy"}
+                      decoding="async"
+                      className="aspect-[1090/406] w-full rounded-t-xl object-cover [mask-image:linear-gradient(to_bottom,#000_0%,#000_44%,rgba(0,0,0,0.32)_66%,rgba(0,0,0,0.06)_82%,transparent_94%)]"
+                    />
+                  </picture>
+                  <p className="absolute left-3 top-3 max-w-[58%] rounded-md bg-[rgba(11,16,42,0.62)] px-2 py-1 text-[10px] font-medium leading-snug text-white/90 backdrop-blur-sm sm:max-w-[48%] sm:text-[11px]">
+                    <T en={theme.banner.caption.en} zh={theme.banner.caption.zh} />
+                  </p>
                   {theme.banner.legend && (
                     <ul className="absolute right-3 top-3 hidden space-y-1.5 rounded-lg bg-[rgba(11,16,42,0.72)] px-3 py-2.5 text-xs font-medium text-white shadow-lg backdrop-blur-sm sm:block">
                       {theme.banner.legend.map((item) => (
