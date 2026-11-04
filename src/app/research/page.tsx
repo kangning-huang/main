@@ -316,7 +316,14 @@ const THEMES: Theme[] = [
         venue: "npj Environmental Social Sciences",
         year: "2026",
         href: doiHref("10.1038/s44432-026-00009-1"),
-      }
+      },
+      {
+        en: "A 100-metre increase in the scale of functionally homogeneous building clusters is associated with roughly 5% lower daytime urban heat island intensity.",
+        zh: "功能相同的建筑集群，尺度每增加100米，对应的白天城市热岛强度约低5%。",
+        venue: "PNAS",
+        year: "2026",
+        href: doiHref("10.1073/pnas.2617717123"),
+      },
     ],
     papers: [
       {
@@ -343,7 +350,13 @@ const THEMES: Theme[] = [
         venue: "npj Environmental Social Sciences",
         year: "2026",
         href: doiHref("10.1038/s44432-026-00009-1"),
-      }
+      },
+      {
+        title: "Toward Cooler Cities by Larger Homogeneous Functional Clusters",
+        venue: "PNAS",
+        year: "2026",
+        href: doiHref("10.1073/pnas.2617717123"),
+      },
     ],
     apps: [
       {
@@ -384,14 +397,34 @@ const THEMES: Theme[] = [
     },
     findings: [
       {
+        en: "Counting building height and protection standards shifts global flood damage toward Southeast Asia: 42% of the total versus 15% under depth-only assessments.",
+        zh: "只看淹没深度，东南亚占全球估计洪灾损失的15%。把建筑高度和防洪标准也算进去，这一比例升至42%。",
+        venue: "Scientific Reports",
+        year: "2026",
+        href: doiHref("10.1038/s41598-026-70981-w"),
+      },
+      {
+        en: "In Chinese cities, protection systems can reduce potential flood damage by more than 90%.",
+        zh: "在中国城市，防洪体系可把潜在的洪灾损失减少90%以上。",
+        venue: "Scientific Reports",
+        year: "2026",
+        href: doiHref("10.1038/s41598-026-70981-w"),
+      },
+      {
         en: "Pixel-level inundation probabilities from Sentinel-1 radar on Google Earth Engine enable rapid flood mapping with quantified uncertainty.",
         zh: "在 Google Earth Engine 上用 Sentinel-1 雷达数据估算每个像元被淹的概率，可以快速绘制洪水范围图，也能量化结果的不确定性。",
         venue: "Remote Sensing",
         year: "2025",
         href: doiHref("10.3390/rs17101747"),
-      }
+      },
     ],
     papers: [
+      {
+        title: "Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution",
+        venue: "Scientific Reports",
+        year: "2026",
+        href: doiHref("10.1038/s41598-026-70981-w"),
+      },
       {
         title: "Rapid Probabilistic Inundation Mapping Using Local Thresholds and Sentinel-1 SAR Data on Google Earth Engine",
         venue: "Remote Sensing",
