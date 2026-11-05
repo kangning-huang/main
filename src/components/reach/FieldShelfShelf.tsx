@@ -54,8 +54,8 @@ interface Props {
 
 /**
  * The shelf: Ken's papers as upright spines on a board, grouped by theme, then by year. Lead-author
- * spines are ink-edged; co-authored ones are hairline. Counts sit under the board ("0 yet" for a
- * paper nobody cites so far). Positions are percentages of the builder's reference width, so the
+ * spines are ink-edged; co-authored ones are hairline. Counts sit under the board (plain "0" when nobody cites
+ * the paper so far). Positions are percentages of the builder's reference width, so the
  * shelf needs no measuring and renders the same on the server.
  */
 export default function FieldShelfShelf({ view, active, pinned, cited, readout, onHover, onPin }: Props) {
@@ -141,7 +141,7 @@ export default function FieldShelfShelf({ view, active, pinned, cited, readout, 
             style={{ left: pc(x), top: m.countTop }}
             aria-hidden="true"
           >
-            {paper.citing === 0 ? (zh ? "暂为 0" : "0 yet") : fmt(paper.citing)}
+            {fmt(paper.citing)}
           </span>
         );
       })}

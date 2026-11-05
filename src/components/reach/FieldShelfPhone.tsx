@@ -114,9 +114,7 @@ export default function FieldShelfPhone({ view, lit, hits, pinPaper, onPinPaper,
                       <span className={`min-w-0 text-sm leading-snug ${open ? "font-medium text-ember-dark" : lead ? "text-ink" : "text-ink-muted"}`}>{paper.short}</span>
                       <span className="text-xs whitespace-nowrap tabular-nums text-ink-muted">
                         {paper.citing === 0
-                          ? zh
-                            ? `${paper.year} · 暂为 0`
-                            : `${paper.year} · 0 yet`
+                          ? `${paper.year} · ${fmt(paper.citing)}`
                           : zh
                             ? `${fmt(paper.citing)} · ${pctOf(paper.outside, paper.citing)}% 主题外`
                             : `${fmt(paper.citing)} · ${pctOf(paper.outside, paper.citing)}% out`}
