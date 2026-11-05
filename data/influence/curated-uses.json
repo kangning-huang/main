@@ -1,5 +1,5 @@
 {
-  "$comment": "Hand-curated non-journal uses. Only add an entry with a verification trail (where/when it was checked). No counts here — these are not OpenAlex data.",
+  "$comment": "Hand-curated non-journal uses. Only add an entry with a verification trail (where/when it was checked). No counts here — these are not OpenAlex data. Optional link_en/link_zh override the CTA; omit only if url is absent.",
   "uses": [
     {
       "id": "wri-resource-watch-cit005",
@@ -8,9 +8,67 @@
       "en": "World Resources Institute's Resource Watch hosts the urban-expansion probability projections as dataset “cit.005a Urban Expansion Probabilities”, citing the 2019 ERL paper.",
       "zh": "世界资源研究所（WRI）的 Resource Watch 平台收录了城市扩张概率预测数据集（“cit.005a Urban Expansion Probabilities”），并引用了 2019 年 ERL 论文。",
       "url": "https://resourcewatch.org/data/explore/cit005b-Urban-Expansion-Probabilities",
+      "link_en": "View on Resource Watch →",
+      "link_zh": "前往 Resource Watch 查看 →",
       "verified": {
         "on": "2026-10-09",
         "how": "Resource Watch API dataset bf14690e-a3d8-466b-b382-04876f27caf1 metadata citation field names Huang, Li, Liu & Seto (2019), ERL 14:114037, doi:10.1088/1748-9326/ab4b71; explore URL returned HTTP 200."
+      }
+    },
+    {
+      "id": "ipcc-ar6-wg3-ch8",
+      "builds_on_doi": "10.1088/1748-9326/ab4b71",
+      "builds_on_short": "ERL 2019 · urban expansion to 2050; Nat Commun 2020 · SSP urban land projections",
+      "en": "IPCC AR6 Working Group III Chapter 8 (Urban systems and other settlements, 2022) cites the 2019 ERL urban-expansion and heat-island projections in the text, Table 8.1, and Figure 8.10, and cites the 2020 Nature Communications SSP urban-land projections (Chen et al.).",
+      "zh": "IPCC 第六次评估报告第三工作组第 8 章《城市系统与其他住区》（2022）在正文、表 8.1 与图 8.10 中引用了 2019 年 ERL 城市扩张与热岛预测，并引用了 2020 年《自然·通讯》SSP 城市用地预测（Chen 等）。",
+      "url": "https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-8/",
+      "link_en": "View IPCC Chapter 8 →",
+      "link_zh": "查看 IPCC 第 8 章 →",
+      "verified": {
+        "on": "2026-11-05",
+        "how": "Downloaded IPCC_AR6_WGIII_Chapter08.pdf from ipcc.ch. In-text and Figure 8.10 caption name Huang et al. (2019); references list Huang, K., X. Li, X. Liu, and K.C. Seto, 2019, Environ. Res. Lett. 14(11), 114037, doi:10.1088/1748-9326/ab4b71. Same PDF references Chen, G. et al., 2020a, Nat. Commun. 11, 537, doi:10.1038/s41467-020-14386-x (Kangning Huang co-author)."
+      }
+    },
+    {
+      "id": "ipcc-ar6-wg3-ch2",
+      "builds_on_doi": "10.1088/1748-9326/ab4b71",
+      "builds_on_short": "ERL 2019 · urban expansion to 2050",
+      "en": "IPCC AR6 Working Group III Chapter 2 (Emissions Trends and Drivers, 2022) cites the 2019 ERL paper on ambient warming from urban land expansion as a driver of higher air-conditioning and cold-storage energy use.",
+      "zh": "IPCC 第六次评估报告第三工作组第 2 章《排放趋势与驱动因素》（2022）引用 2019 年 ERL 论文，说明城市用地扩张带来的升温会推高空调与冷藏能耗。",
+      "url": "https://www.ipcc.ch/report/ar6/wg3/chapter/chapter-2/",
+      "link_en": "View IPCC Chapter 2 →",
+      "link_zh": "查看 IPCC 第 2 章 →",
+      "verified": {
+        "on": "2026-11-05",
+        "how": "Downloaded IPCC_AR6_WGIII_Chapter02.pdf from ipcc.ch. In-text: ‘ambient air temperature caused by urban land expansion, which will likely drive a substantive increase in air conditioning use and cold storage for food (Huang et al. 2019).’ References: Huang, K., X. Li, X. Liu, and K.C. Seto, 2019, doi:10.1088/1748-9326/ab4b71."
+      }
+    },
+    {
+      "id": "wb-prwp-9618-city-form",
+      "builds_on_doi": "10.1088/1748-9326/ab4b71",
+      "builds_on_short": "ERL 2019 · urban expansion to 2050",
+      "en": "World Bank Policy Research Working Paper 9618, The Evolution of City Form: Evidence from Satellite Data (Lall, Lebrand & Soppelsa, April 2021), cites the 2019 ERL projection of 0.6–1.3 million km² of new urban land by 2050.",
+      "zh": "世界银行政策研究工作论文 9618《城市形态的演变：来自卫星数据的证据》（Lall、Lebrand 与 Soppelsa，2021 年 4 月）引用了 2019 年 ERL 关于 2050 年前新增 0.6–1.3 百万平方公里城市用地的预测。",
+      "url": "https://documents1.worldbank.org/curated/en/551511618021559759/pdf/The-Evolution-of-City-Form-Evidence-from-Satellite-Data.pdf",
+      "link_en": "View World Bank PDF →",
+      "link_zh": "查看世界银行 PDF →",
+      "verified": {
+        "on": "2026-11-05",
+        "how": "Downloaded PRWP 9618 PDF from documents1.worldbank.org. Body quotes Huang et al (2019) urban land expand by 0.6–1.3 million km² between 2015 and 2050; references list Huang, Kangning, Xia Li, Xiaoping Liu, and Karen Seto. 2019, doi:10.1088/1748-9326/ab4b71. Also at https://doi.org/10.1596/1813-9450-9618."
+      }
+    },
+    {
+      "id": "unhabitat-cities-nature-2022",
+      "builds_on_doi": "10.1088/1748-9326/ab4b71",
+      "builds_on_short": "ERL 2019 · urban expansion to 2050",
+      "en": "UN-Habitat white paper Cities and Nature: Planning for the Future (December 2022, CBD COP15 information document) cites the 2019 ERL finding that the urban footprint will increase by 78%–171% over 2015 by 2050.",
+      "zh": "联合国人居署白皮书《城市与自然：规划未来》（2022 年 12 月，CBD COP15 信息文件）引用 2019 年 ERL 结论：至 2050 年城市足迹将比 2015 年增加 78%–171%。",
+      "url": "https://unhabitat.org/sites/default/files/2022/12/white_paper_cities_and_nature_rev2.pdf",
+      "link_en": "View UN-Habitat PDF →",
+      "link_zh": "查看联合国人居署 PDF →",
+      "verified": {
+        "on": "2026-11-05",
+        "how": "Downloaded white_paper_cities_and_nature_rev2.pdf from unhabitat.org. Body: ‘the urban footprint will increase by 78%–171% over 2015 (Huang et al, 2019).’ References: Huang, Kangning et al (2019), Environ. Res. Lett. 14 (11): 114037, DOI 10.1088/1748-9326/ab4b71."
       }
     }
   ]
