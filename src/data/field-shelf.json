@@ -354,16 +354,10 @@
    "color": "#00909a"
   },
   {
-   "id": "heat-health",
-   "en": "Heat exposure & health",
-   "zh": "高温暴露与健康",
+   "id": "heat",
+   "en": "Heat",
+   "zh": "高温",
    "color": "#c74b16"
-  },
-  {
-   "id": "cooling",
-   "en": "Cooling & greening",
-   "zh": "降温与绿化",
-   "color": "#2a9d6e"
   },
   {
    "id": "air-dust",
@@ -429,7 +423,7 @@
    "label": "JGR-A 2021",
    "desc": "nighttime heat stress",
    "year": 2021,
-   "theme": "heat-health",
+   "theme": "heat",
    "lens": "lead",
    "title": "Persistent Increases in Nighttime Heat Stress From Urban Expansion Despite Heat Island Mitigation",
    "venue": "Journal of Geophysical Research Atmospheres",
@@ -448,7 +442,7 @@
    "label": "Urban Climate 2021",
    "desc": "urban climate forecasts",
    "year": 2021,
-   "theme": "heat-health",
+   "theme": "heat",
    "lens": "lead",
    "title": "Facilitating urban climate forecasts in rapidly urbanizing regions with land-use change modeling",
    "venue": "Urban Climate",
@@ -467,7 +461,7 @@
    "label": "Nat Clim Change 2022",
    "desc": "urban forests",
    "year": 2022,
-   "theme": "cooling",
+   "theme": "heat",
    "lens": "lead",
    "title": "Urban forests facing climate risks",
    "venue": "Nature Climate Change",
@@ -505,7 +499,7 @@
    "label": "Sci Rep 2025",
    "desc": "urban density & heat",
    "year": 2025,
-   "theme": "heat-health",
+   "theme": "heat",
    "lens": "lead",
    "title": "Declining urban density attenuates rising population exposure to surface heat extremes",
    "venue": "Scientific Reports",
@@ -543,7 +537,7 @@
    "label": "npj ESS 2026",
    "desc": "demolition & cooling",
    "year": 2026,
-   "theme": "cooling",
+   "theme": "heat",
    "lens": "lead",
    "title": "Unveiling the causal link between informal settlement demolition and urban cooling",
    "venue": "npj Environmental Social Sciences",
@@ -771,7 +765,7 @@
    "label": "ES&T 2025",
    "desc": "urban tree cooling",
    "year": 2025,
-   "theme": "cooling",
+   "theme": "heat",
    "lens": "coauthor",
    "title": "Enhancing Climate-Driven Urban Tree Cooling with Targeted Nonclimatic Interventions",
    "venue": "Environmental Science & Technology",
@@ -790,7 +784,7 @@
    "label": "Nat Clim Change 2025",
    "desc": "urban overheating mortality",
    "year": 2025,
-   "theme": "heat-health",
+   "theme": "heat",
    "lens": "coauthor",
    "title": "Dual impact of global urban overheating on mortality",
    "venue": "Nature Climate Change",
@@ -809,7 +803,7 @@
    "label": "Nature Cities 2025",
    "desc": "urban browning heat stress",
    "year": 2025,
-   "theme": "heat-health",
+   "theme": "heat",
    "lens": "coauthor",
    "title": "Exacerbated heat stress induced by urban browning in the Global South",
    "venue": "Nature Cities",
@@ -828,7 +822,7 @@
    "label": "ES&T 2024",
    "desc": "AC usage & indoor–outdoor heat",
    "year": 2024,
-   "theme": "cooling",
+   "theme": "heat",
    "lens": "coauthor",
    "title": "Moderating AC Usage Can Reduce Thermal Disparity between Indoor and Outdoor Environments",
    "venue": "Environmental Science & Technology",
@@ -923,7 +917,7 @@
    "label": "PNAS 2026",
    "desc": "Cooler Cities / UHS",
    "year": 2026,
-   "theme": "cooling",
+   "theme": "heat",
    "lens": "lead",
    "title": "Toward cooler cities by larger homogeneous functional clusters",
    "venue": "Proceedings of the National Academy of Sciences",
@@ -980,7 +974,7 @@
    "label": "Atmosphere 2020",
    "desc": "PRD urbanization climate",
    "year": 2020,
-   "theme": "heat-health",
+   "theme": "heat",
    "lens": "coauthor",
    "title": "Investigating Future Urbanization’s Impact on Local Climate under Different Climate Change Scenarios in MEGA-urban Regions: A Case Study of the Pearl River Delta, China",
    "venue": "Atmosphere",
@@ -1072,150 +1066,150 @@
     "items": [
      {
       "p": 1,
-      "x": 13.5
+      "x": 20.5
      },
      {
       "p": 0,
-      "x": 35.5
+      "x": 42.5
      },
      {
       "p": 12,
-      "x": 57.5
+      "x": 64.5
      },
      {
       "p": 13,
-      "x": 79.5
+      "x": 86.5
      },
      {
       "p": 14,
-      "x": 101.5
+      "x": 108.5
      },
      {
       "p": 32,
-      "x": 123.5
+      "x": 130.5
      },
      {
       "p": 31,
-      "x": 158.5
+      "x": 165.5
      },
      {
       "p": 2,
-      "x": 180.5
+      "x": 187.5
      },
      {
       "p": 3,
-      "x": 202.5
-     },
-     {
-      "p": 21,
-      "x": 224.5
-     },
-     {
-      "p": 22,
-      "x": 246.5
-     },
-     {
-      "p": 6,
-      "x": 268.5
+      "x": 209.5
      },
      {
       "p": 4,
-      "x": 303.5
+      "x": 231.5
      },
      {
       "p": 23,
-      "x": 325.5
+      "x": 253.5
+     },
+     {
+      "p": 21,
+      "x": 275.5
      },
      {
       "p": 20,
-      "x": 347.5
+      "x": 297.5
+     },
+     {
+      "p": 22,
+      "x": 319.5
+     },
+     {
+      "p": 6,
+      "x": 341.5
      },
      {
       "p": 8,
-      "x": 369.5
+      "x": 363.5
      },
      {
       "p": 28,
-      "x": 391.5
+      "x": 385.5
      },
      {
       "p": 18,
-      "x": 426.5
+      "x": 420.5
      },
      {
       "p": 16,
-      "x": 448.5
+      "x": 442.5
      },
      {
       "p": 24,
-      "x": 470.5
+      "x": 464.5
      },
      {
       "p": 29,
-      "x": 492.5
+      "x": 486.5
      },
      {
       "p": 15,
-      "x": 527.5
+      "x": 521.5
      },
      {
       "p": 17,
-      "x": 549.5
+      "x": 543.5
      },
      {
       "p": 26,
-      "x": 571.5
+      "x": 565.5
      },
      {
       "p": 34,
-      "x": 593.5
+      "x": 587.5
      },
      {
       "p": 10,
-      "x": 615.5
+      "x": 609.5
      },
      {
       "p": 11,
-      "x": 637.5
+      "x": 631.5
      },
      {
       "p": 19,
-      "x": 672.5
+      "x": 666.5
      },
      {
       "p": 25,
-      "x": 694.5
+      "x": 688.5
      },
      {
       "p": 27,
-      "x": 716.5
+      "x": 710.5
      },
      {
       "p": 30,
-      "x": 738.5
+      "x": 732.5
      },
      {
       "p": 33,
-      "x": 760.5
+      "x": 754.5
      },
      {
       "p": 5,
-      "x": 782.5
+      "x": 776.5
      },
      {
       "p": 7,
-      "x": 804.5
+      "x": 798.5
      },
      {
       "p": 9,
-      "x": 826.5
+      "x": 820.5
      }
     ],
     "groups": [
      {
       "theme": "expansion",
-      "x0": 4,
-      "x1": 133,
+      "x0": 11,
+      "x1": 140,
       "en": [
        "Urban expansion",
        "& futures"
@@ -1225,33 +1219,20 @@
       ]
      },
      {
-      "theme": "heat-health",
-      "x0": 149,
-      "x1": 278,
+      "theme": "heat",
+      "x0": 156,
+      "x1": 395,
       "en": [
-       "Heat exposure",
-       "& health"
+       "Heat"
       ],
       "zh": [
-       "高温暴露与健康"
-      ]
-     },
-     {
-      "theme": "cooling",
-      "x0": 294,
-      "x1": 401,
-      "en": [
-       "Cooling",
-       "& greening"
-      ],
-      "zh": [
-       "降温与绿化"
+       "高温"
       ]
      },
      {
       "theme": "air-dust",
-      "x0": 417,
-      "x1": 502,
+      "x0": 411,
+      "x1": 496,
       "en": [
        "Health"
       ],
@@ -1261,8 +1242,8 @@
      },
      {
       "theme": "methods",
-      "x0": 518,
-      "x1": 647,
+      "x0": 512,
+      "x1": 641,
       "en": [
        "Scaling, form",
        "& methods"
@@ -1273,8 +1254,8 @@
      },
      {
       "theme": "flood",
-      "x0": 663,
-      "x1": 836,
+      "x0": 657,
+      "x1": 830,
       "en": [
        "Flood & coasts"
       ],
@@ -4887,78 +4868,78 @@
     "items": [
      {
       "p": 1,
-      "x": 26.5
+      "x": 32.5
      },
      {
       "p": 0,
-      "x": 72.5
+      "x": 78.5
      },
      {
       "p": 12,
-      "x": 118.5
+      "x": 124.5
      },
      {
       "p": 2,
-      "x": 177.5
+      "x": 183.5
      },
      {
       "p": 3,
-      "x": 223.5
-     },
-     {
-      "p": 6,
-      "x": 269.5
+      "x": 229.5
      },
      {
       "p": 4,
-      "x": 328.5
+      "x": 275.5
+     },
+     {
+      "p": 6,
+      "x": 321.5
      },
      {
       "p": 8,
-      "x": 374.5
+      "x": 367.5
      },
      {
       "p": 28,
-      "x": 420.5
+      "x": 413.5
      },
      {
       "p": 26,
-      "x": 479.5
+      "x": 472.5
      },
      {
       "p": 10,
-      "x": 525.5
+      "x": 518.5
      },
      {
       "p": 11,
-      "x": 571.5
+      "x": 564.5
      },
      {
       "p": 25,
-      "x": 630.5
+      "x": 623.5
      },
      {
       "p": 27,
-      "x": 676.5
+      "x": 669.5
      },
      {
       "p": 5,
-      "x": 722.5
+      "x": 715.5
      },
      {
       "p": 7,
-      "x": 768.5
+      "x": 761.5
      },
      {
       "p": 9,
-      "x": 814.5
+      "x": 807.5
      }
     ],
     "groups": [
      {
       "theme": "expansion",
-      "x0": 5,
-      "x1": 140,
+      "x0": 11,
+      "x1": 146,
       "en": [
        "Urban expansion",
        "& futures"
@@ -4968,32 +4949,20 @@
       ]
      },
      {
-      "theme": "heat-health",
-      "x0": 156,
-      "x1": 291,
+      "theme": "heat",
+      "x0": 162,
+      "x1": 435,
       "en": [
-       "Heat exposure",
-       "& health"
+       "Heat"
       ],
       "zh": [
-       "高温暴露与健康"
-      ]
-     },
-     {
-      "theme": "cooling",
-      "x0": 307,
-      "x1": 442,
-      "en": [
-       "Cooling & greening"
-      ],
-      "zh": [
-       "降温与绿化"
+       "高温"
       ]
      },
      {
       "theme": "methods",
-      "x0": 458,
-      "x1": 593,
+      "x0": 451,
+      "x1": 586,
       "en": [
        "Scaling, form",
        "& methods"
@@ -5004,8 +4973,8 @@
      },
      {
       "theme": "flood",
-      "x0": 609,
-      "x1": 836,
+      "x0": 602,
+      "x1": 829,
       "en": [
        "Flood & coasts"
       ],

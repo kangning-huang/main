@@ -8,16 +8,10 @@
       "color": "#00909a"
     },
     {
-      "id": "heat-health",
-      "en": "Heat exposure & health",
-      "zh": "高温暴露与健康",
+      "id": "heat",
+      "en": "Heat",
+      "zh": "高温",
       "color": "#c74b16"
-    },
-    {
-      "id": "cooling",
-      "en": "Cooling & greening",
-      "zh": "降温与绿化",
-      "color": "#2a9d6e"
     },
     {
       "id": "air-dust",
@@ -78,55 +72,55 @@
     },
     {
       "doi": "10.1029/2020JD033831",
-      "theme": "heat-health",
+      "theme": "heat",
       "short": "JGR-A 2021 · nighttime heat stress",
       "note": "lead"
     },
     {
       "doi": "10.1016/j.uclim.2021.100806",
-      "theme": "heat-health",
+      "theme": "heat",
       "short": "Urban Climate 2021 · urban climate forecasts",
       "note": "lead"
     },
     {
       "doi": "10.1038/s41558-022-01481-8",
-      "theme": "cooling",
+      "theme": "heat",
       "short": "Nat Clim Change 2022 · urban forests",
       "note": "lead"
     },
     {
       "doi": "10.1038/s41598-025-96045-z",
-      "theme": "heat-health",
+      "theme": "heat",
       "short": "Sci Rep 2025 · urban density & heat",
       "note": "lead"
     },
     {
       "doi": "10.1038/s41558-025-02303-3",
-      "theme": "heat-health",
+      "theme": "heat",
       "short": "Nat Clim Change 2025 · urban overheating mortality",
       "note": "coauthor"
     },
     {
       "doi": "10.1038/s44284-024-00184-9",
-      "theme": "heat-health",
+      "theme": "heat",
       "short": "Nature Cities 2025 · urban browning heat stress",
       "note": "coauthor"
     },
     {
       "doi": "10.1021/acs.est.4c14275",
-      "theme": "cooling",
+      "theme": "heat",
       "short": "ES&T 2025 · urban tree cooling",
       "note": "coauthor"
     },
     {
       "doi": "10.1021/acs.est.4c00424",
-      "theme": "cooling",
+      "theme": "heat",
       "short": "ES&T 2024 · AC usage & indoor–outdoor heat",
       "note": "coauthor; DOI corrected from publications typo"
     },
     {
       "doi": "10.1038/s44432-026-00009-1",
-      "theme": "cooling",
+      "theme": "heat",
       "short": "npj ESS 2026 · demolition & cooling",
       "note": "lead; early"
     },
@@ -210,7 +204,7 @@
     },
     {
       "doi": "10.1073/pnas.2617717123",
-      "theme": "cooling",
+      "theme": "heat",
       "short": "PNAS 2026 · Cooler Cities / UHS",
       "note": "lead; early"
     },
@@ -228,7 +222,7 @@
     },
     {
       "doi": "10.3390/atmos11070771",
-      "theme": "heat-health",
+      "theme": "heat",
       "short": "Atmosphere 2020 · PRD urbanization climate",
       "note": "coauthor"
     },
