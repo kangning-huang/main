@@ -5,6 +5,11 @@ import curated from "../../../data/influence/curated-uses.json";
 import { influence } from "@/lib/influence";
 import { useReachLens } from "./ReachLens";
 
+type CuratedUse = (typeof curated.uses)[number] & {
+  link_en?: string;
+  link_zh?: string;
+};
+
 export default function StandingOnIt() {
   const { view, lens } = useReachLens();
   const { topCitingWorks } = view;
@@ -51,14 +56,16 @@ export default function StandingOnIt() {
           <T en="Beyond journals" zh="期刊之外" />
         </h3>
         <ul className="space-y-4">
-          {curated.uses.map((u) => (
+          {(curated.uses as CuratedUse[]).map((u) => (
             <li key={u.id} className="rounded-lg border border-rule bg-paper-warm/60 p-4">
               <p className="text-sm leading-relaxed text-ink">
                 <T en={u.en} zh={u.zh} />
               </p>
-              <a href={u.url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-xs text-teal hover:text-ember">
-                <T en="View on Resource Watch →" zh="前往 Resource Watch 查看 →" />
-              </a>
+              {u.url ? (
+                <a href={u.url} target="_blank" rel="noopener noreferrer" className="mt-2 inline-block text-xs text-teal hover:text-ember">
+                  <T en={u.link_en || "View source →"} zh={u.link_zh || "查看来源 →"} />
+                </a>
+              ) : null}
               <p className="mt-2 text-[11px] text-ink-faint">
                 <T en={`Hand-curated; verified ${u.verified.on}. Not counted in any OpenAlex figure.`} zh={`人工整理，于 ${u.verified.on} 核实，不计入本页任何 OpenAlex 统计。`} />
               </p>
