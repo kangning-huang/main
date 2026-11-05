@@ -4,7 +4,7 @@
     "asOf": "2026-11-02",
     "lens": "all",
     "weightingNote": "absolute = non-self citing works; citesPerYear = each citing work weighted by 1/yearsSince(cited paper), floor 1 year.",
-    "fineThemeNote": "Hand remap for preview: dust→air-dust; forests/tree/AC/demolition→cooling; expansion megahits stay expansion. Ken to confirm.",
+    "fineThemeNote": "Hand remap for preview: dust/air/lockdown→air-dust (Health); heat exposure + cooling/greening→heat; expansion megahits stay expansion.",
     "fieldNodesFoldedIntoOther": true,
     "fineThemesConfig": "data/influence/fine-themes.json",
     "defaultWeighting": "citesPerYear",
@@ -22,24 +22,14 @@
       "citesPerYear": 383.7
     },
     {
-      "id": "heat-health",
+      "id": "heat",
       "label": {
-        "en": "Heat exposure & health",
-        "zh": "高温暴露与健康"
+        "en": "Heat",
+        "zh": "高温"
       },
       "color": "#c74b16",
-      "absolute": 248,
-      "citesPerYear": 95.1
-    },
-    {
-      "id": "cooling",
-      "label": {
-        "en": "Cooling & greening",
-        "zh": "降温与绿化"
-      },
-      "color": "#2a9d6e",
-      "absolute": 83,
-      "citesPerYear": 38.2
+      "absolute": 331,
+      "citesPerYear": 133.3
     },
     {
       "id": "air-dust",
@@ -935,119 +925,119 @@
       ]
     },
     {
-      "left": "heat-health",
+      "left": "heat",
       "right": "subfields/2305",
-      "absolute": 82,
-      "citesPerYear": 30.3,
+      "absolute": 112,
+      "citesPerYear": 44.8,
       "keywords": [
         {
           "name": "urban heat island",
-          "count": 30
+          "count": 37
         },
         {
           "name": "urbanization",
           "count": 13
         },
         {
-          "name": "thermal comfort",
-          "count": 8
-        },
-        {
-          "name": "land surface temperature",
-          "count": 8
-        },
-        {
-          "name": "urban heat island mitigation",
-          "count": 7
-        }
-      ]
-    },
-    {
-      "left": "heat-health",
-      "right": "T10226",
-      "absolute": 98,
-      "citesPerYear": 39.5,
-      "keywords": [
-        {
-          "name": "urban heat island",
-          "count": 44
-        },
-        {
-          "name": "land surface temperature",
-          "count": 35
-        },
-        {
-          "name": "urbanization",
-          "count": 23
-        },
-        {
-          "name": "urban thermal environment",
+          "name": "urban heat",
           "count": 12
         },
         {
-          "name": "urban morphology",
-          "count": 10
+          "name": "land surface temperature",
+          "count": 12
+        },
+        {
+          "name": "urban green space",
+          "count": 11
         }
       ]
     },
     {
-      "left": "heat-health",
-      "right": "sf:Global and Planetary Change",
-      "absolute": 18,
-      "citesPerYear": 4.9,
+      "left": "heat",
+      "right": "T10226",
+      "absolute": 125,
+      "citesPerYear": 53,
       "keywords": [
         {
-          "name": "wet bulb globe temperature",
-          "count": 3
+          "name": "urban heat island",
+          "count": 53
         },
         {
-          "name": "heat waves",
-          "count": 3
+          "name": "land surface temperature",
+          "count": 45
         },
         {
           "name": "urbanization",
-          "count": 3
+          "count": 30
         },
         {
-          "name": "climate change adaptation",
-          "count": 3
+          "name": "urban thermal environment",
+          "count": 13
         },
         {
-          "name": "humid heat",
-          "count": 2
+          "name": "urban heat mitigation",
+          "count": 13
         }
       ]
     },
     {
-      "left": "heat-health",
-      "right": "subfields/2307",
-      "absolute": 20,
-      "citesPerYear": 9.4,
+      "left": "heat",
+      "right": "sf:Global and Planetary Change",
+      "absolute": 26,
+      "citesPerYear": 8.6,
       "keywords": [
-        {
-          "name": "heat stress",
-          "count": 5
-        },
         {
           "name": "heat waves",
           "count": 4
         },
         {
+          "name": "urbanization",
+          "count": 4
+        },
+        {
+          "name": "wet bulb globe temperature",
+          "count": 3
+        },
+        {
+          "name": "urban forests",
+          "count": 3
+        },
+        {
+          "name": "climate change adaptation",
+          "count": 3
+        }
+      ]
+    },
+    {
+      "left": "heat",
+      "right": "subfields/2307",
+      "absolute": 26,
+      "citesPerYear": 12.1,
+      "keywords": [
+        {
+          "name": "heat stress",
+          "count": 6
+        },
+        {
+          "name": "heat waves",
+          "count": 5
+        },
+        {
           "name": "older adults",
+          "count": 4
+        },
+        {
+          "name": "extreme heat",
           "count": 3
         },
         {
           "name": "temperature-related mortality",
           "count": 3
-        },
-        {
-          "name": "temperature",
-          "count": 2
         }
       ]
     },
     {
-      "left": "heat-health",
+      "left": "heat",
       "right": "subfields/2303",
       "absolute": 1,
       "citesPerYear": 0.2,
@@ -1075,35 +1065,7 @@
       ]
     },
     {
-      "left": "cooling",
-      "right": "subfields/2305",
-      "absolute": 30,
-      "citesPerYear": 14.5,
-      "keywords": [
-        {
-          "name": "urban cooling",
-          "count": 7
-        },
-        {
-          "name": "urban heat island",
-          "count": 7
-        },
-        {
-          "name": "urban microclimate",
-          "count": 5
-        },
-        {
-          "name": "Universal Thermal Climate Index",
-          "count": 5
-        },
-        {
-          "name": "urban heat",
-          "count": 5
-        }
-      ]
-    },
-    {
-      "left": "cooling",
+      "left": "heat",
       "right": "subfields/2308",
       "absolute": 7,
       "citesPerYear": 1.8,
@@ -1127,62 +1089,6 @@
         {
           "name": "tree crown detection",
           "count": 2
-        }
-      ]
-    },
-    {
-      "left": "cooling",
-      "right": "T10226",
-      "absolute": 27,
-      "citesPerYear": 13.5,
-      "keywords": [
-        {
-          "name": "land surface temperature",
-          "count": 10
-        },
-        {
-          "name": "urban heat island",
-          "count": 9
-        },
-        {
-          "name": "urbanization",
-          "count": 7
-        },
-        {
-          "name": "urban heat mitigation",
-          "count": 4
-        },
-        {
-          "name": "urban trees",
-          "count": 3
-        }
-      ]
-    },
-    {
-      "left": "cooling",
-      "right": "sf:Global and Planetary Change",
-      "absolute": 8,
-      "citesPerYear": 3.7,
-      "keywords": [
-        {
-          "name": "urban forests",
-          "count": 3
-        },
-        {
-          "name": "drought tolerance",
-          "count": 2
-        },
-        {
-          "name": "vapor pressure deficit",
-          "count": 1
-        },
-        {
-          "name": "water stress",
-          "count": 1
-        },
-        {
-          "name": "Cinnamomum camphora",
-          "count": 1
         }
       ]
     },
@@ -1586,35 +1492,7 @@
       ]
     },
     {
-      "left": "cooling",
-      "right": "subfields/2307",
-      "absolute": 6,
-      "citesPerYear": 2.7,
-      "keywords": [
-        {
-          "name": "vulnerable populations",
-          "count": 2
-        },
-        {
-          "name": "environmental justice",
-          "count": 1
-        },
-        {
-          "name": "park accessibility",
-          "count": 1
-        },
-        {
-          "name": "NDVI",
-          "count": 1
-        },
-        {
-          "name": "elderly residents",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "left": "heat-health",
+      "left": "heat",
       "right": "sf:Atmospheric Science",
       "absolute": 2,
       "citesPerYear": 0.7,
@@ -1922,10 +1800,10 @@
       ]
     },
     {
-      "left": "heat-health",
+      "left": "heat",
       "right": "dom:env-other",
-      "absolute": 2,
-      "citesPerYear": 0.3,
+      "absolute": 3,
+      "citesPerYear": 0.5,
       "keywords": [
         {
           "name": "rainfall-runoff",
@@ -1950,10 +1828,10 @@
       ]
     },
     {
-      "left": "heat-health",
+      "left": "heat",
       "right": "dom:eng",
-      "absolute": 13,
-      "citesPerYear": 5.6,
+      "absolute": 16,
+      "citesPerYear": 6.8,
       "keywords": [
         {
           "name": "urban heat island",
@@ -1978,7 +1856,7 @@
       ]
     },
     {
-      "left": "heat-health",
+      "left": "heat",
       "right": "dom:social",
       "absolute": 6,
       "citesPerYear": 2.5,
@@ -2006,11 +1884,15 @@
       ]
     },
     {
-      "left": "heat-health",
+      "left": "heat",
       "right": "dom:health",
-      "absolute": 2,
-      "citesPerYear": 0.7,
+      "absolute": 3,
+      "citesPerYear": 1.3,
       "keywords": [
+        {
+          "name": "arbovirus transmission",
+          "count": 2
+        },
         {
           "name": "heat stress",
           "count": 1
@@ -2026,15 +1908,11 @@
         {
           "name": "climate change impacts",
           "count": 1
-        },
-        {
-          "name": "match scheduling",
-          "count": 1
         }
       ]
     },
     {
-      "left": "heat-health",
+      "left": "heat",
       "right": "dom:cs",
       "absolute": 1,
       "citesPerYear": 0.2,
@@ -2057,34 +1935,6 @@
         },
         {
           "name": "metaheuristic algorithms",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "left": "cooling",
-      "right": "dom:env-other",
-      "absolute": 1,
-      "citesPerYear": 0.2,
-      "keywords": [
-        {
-          "name": "species richness",
-          "count": 1
-        },
-        {
-          "name": "vascular plants",
-          "count": 1
-        },
-        {
-          "name": "land snails",
-          "count": 1
-        },
-        {
-          "name": "Ellenberg indicator values",
-          "count": 1
-        },
-        {
-          "name": "microclimate",
           "count": 1
         }
       ]
@@ -2482,63 +2332,7 @@
       ]
     },
     {
-      "left": "cooling",
-      "right": "dom:health",
-      "absolute": 1,
-      "citesPerYear": 0.5,
-      "keywords": [
-        {
-          "name": "chikungunya virus",
-          "count": 1
-        },
-        {
-          "name": "pandemic preparedness",
-          "count": 1
-        },
-        {
-          "name": "climate change",
-          "count": 1
-        },
-        {
-          "name": "arbovirus transmission",
-          "count": 1
-        },
-        {
-          "name": "vaccine development",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "left": "cooling",
-      "right": "dom:eng",
-      "absolute": 3,
-      "citesPerYear": 1.3,
-      "keywords": [
-        {
-          "name": "urban expansion",
-          "count": 1
-        },
-        {
-          "name": "urban morphology",
-          "count": 1
-        },
-        {
-          "name": "impervious surface expansion",
-          "count": 1
-        },
-        {
-          "name": "urban regeneration",
-          "count": 1
-        },
-        {
-          "name": "XGBoost",
-          "count": 1
-        }
-      ]
-    },
-    {
-      "left": "heat-health",
+      "left": "heat",
       "right": "dom:agbio",
       "absolute": 3,
       "citesPerYear": 0.8,
@@ -2711,8 +2505,7 @@
       "leftTotal": 3841,
       "shares": {
         "expansion": 72.8,
-        "heat-health": 6.5,
-        "cooling": 2.2,
+        "heat": 8.6,
         "air-dust": 5.4,
         "methods": 7,
         "flood": 6.2
@@ -2722,8 +2515,7 @@
       "leftTotal": 624.5,
       "shares": {
         "expansion": 61.4,
-        "heat-health": 15.2,
-        "cooling": 6.1,
+        "heat": 21.4,
         "air-dust": 4.3,
         "methods": 4,
         "flood": 8.9

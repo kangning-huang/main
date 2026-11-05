@@ -302,7 +302,7 @@ async function main() {
       weightingNote:
         "absolute = non-self citing works; citesPerYear = each citing work weighted by 1/yearsSince(cited paper), floor 1 year.",
       fineThemeNote:
-        "Hand remap for preview: dust→air-dust; forests/tree/AC/demolition→cooling; expansion megahits stay expansion. Ken to confirm.",
+        "Hand remap for preview: dust/air/lockdown→air-dust (Health); heat exposure + cooling/greening→heat; expansion megahits stay expansion.",
       fieldNodesFoldedIntoOther: true,
       fineThemesConfig: "data/influence/fine-themes.json",
       defaultWeighting: "citesPerYear",
