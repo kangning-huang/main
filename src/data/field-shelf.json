@@ -367,8 +367,8 @@
   },
   {
    "id": "air-dust",
-   "en": "Air quality / dust",
-   "zh": "空气质量 / 扬尘",
+   "en": "Health",
+   "zh": "健康",
    "color": "#8b5a2b"
   },
   {
@@ -942,7 +942,7 @@
    "label": "J Community Psych 2025",
    "desc": "lockdown mental health",
    "year": 2025,
-   "theme": "expansion",
+   "theme": "air-dust",
    "lens": "coauthor",
    "title": "Unequal Effects of the Lockdown on Mental Health in Shanghai: The Moderating and Mediating Role of Neighborhood Environment and Online Social Connections",
    "venue": "Journal of Community Psychology",
@@ -1095,63 +1095,63 @@
       "x": 123.5
      },
      {
-      "p": 29,
-      "x": 145.5
-     },
-     {
       "p": 31,
-      "x": 180.5
+      "x": 158.5
      },
      {
       "p": 2,
-      "x": 202.5
+      "x": 180.5
      },
      {
       "p": 3,
-      "x": 224.5
+      "x": 202.5
      },
      {
       "p": 21,
-      "x": 246.5
+      "x": 224.5
      },
      {
       "p": 22,
-      "x": 268.5
+      "x": 246.5
      },
      {
       "p": 6,
-      "x": 290.5
+      "x": 268.5
      },
      {
       "p": 4,
-      "x": 325.5
+      "x": 303.5
      },
      {
       "p": 23,
-      "x": 347.5
+      "x": 325.5
      },
      {
       "p": 20,
-      "x": 369.5
+      "x": 347.5
      },
      {
       "p": 8,
-      "x": 391.5
+      "x": 369.5
      },
      {
       "p": 28,
-      "x": 413.5
+      "x": 391.5
      },
      {
       "p": 18,
-      "x": 448.5
+      "x": 426.5
      },
      {
       "p": 16,
-      "x": 470.5
+      "x": 448.5
      },
      {
       "p": 24,
+      "x": 470.5
+     },
+     {
+      "p": 29,
       "x": 492.5
      },
      {
@@ -1215,7 +1215,7 @@
      {
       "theme": "expansion",
       "x0": 4,
-      "x1": 155,
+      "x1": 133,
       "en": [
        "Urban expansion",
        "& futures"
@@ -1226,8 +1226,8 @@
      },
      {
       "theme": "heat-health",
-      "x0": 171,
-      "x1": 300,
+      "x0": 149,
+      "x1": 278,
       "en": [
        "Heat exposure",
        "& health"
@@ -1238,8 +1238,8 @@
      },
      {
       "theme": "cooling",
-      "x0": 316,
-      "x1": 423,
+      "x0": 294,
+      "x1": 401,
       "en": [
        "Cooling",
        "& greening"
@@ -1250,15 +1250,13 @@
      },
      {
       "theme": "air-dust",
-      "x0": 439,
+      "x0": 417,
       "x1": 502,
       "en": [
-       "Air quality /",
-       "dust"
+       "Health"
       ],
       "zh": [
-       "空气质量 /",
-       "扬尘"
+       "健康"
       ]
      },
      {

@@ -33,8 +33,6 @@ Every number below is recounted from the cached OpenAlex citing lists. This file
 - PASS most-cited square (citedBy 3912) near centre (dist 1.0px)
 - INFO lead papers with 0 non-self citing works (shown as "0 yet"): Discover Env 2024, npj ESS 2026, Sci Rep 2026, Nature Cities 2026, PNAS 2026
 - INFO constant density: Lead field 430×165px vs All 668×257px (linear ×0.64; √(573/3102) = 0.65)
-- WARN all: theme name "air-dust" (en) estimated 58px over 49px of room
-- WARN all: theme name "air-dust" (zh) estimated 51px over 49px of room
 
 ## Headlines
 
@@ -124,21 +122,21 @@ Co-author share: 2,039 of 3,531 All squares (57.7%) cite only co-authored papers
 | 4 | Nat Sustain 2020 · global urban change 1985–2015 | coauthor | expansion | 2020 | 777 | 296 (38%) | 481 / 268 / 28 |
 | 5 | Nat Sustain 2020 · urban growth & biodiversity | coauthor | expansion | 2020 (OpenAlex 2019) | 586 | 329 (56%) | 257 / 304 / 25 |
 | 6 | Earth's Future 2020 · China SSP population grids | coauthor | expansion | 2020 | 74 | 43 (58%) | 31 / 37 / 6 |
-| 7 | J Community Psych 2025 · lockdown mental health | coauthor | expansion | 2025 | 1 | 1 (100%) | 0 / 0 / 1 |
-| 8 | Atmosphere 2020 · PRD urbanization climate | coauthor | heat-health | 2020 | 18 | 4 (22%) | 14 / 4 / 0 |
-| 9 | JGR-A 2021 · nighttime heat stress | lead | heat-health | 2021 | 66 | 8 (12%) | 58 / 7 / 1 |
-| 10 | Urban Climate 2021 · urban climate forecasts | lead | heat-health | 2021 | 19 | 4 (21%) | 15 / 4 / 0 |
-| 11 | Nat Clim Change 2025 · urban overheating mortality | coauthor | heat-health | 2025 | 82 | 11 (13%) | 71 / 11 / 0 |
-| 12 | Nature Cities 2025 · urban browning heat stress | coauthor | heat-health | 2025 | 39 | 5 (13%) | 34 / 4 / 1 |
-| 13 | Sci Rep 2025 · urban density & heat | lead | heat-health | 2025 | 17 | 4 (24%) | 13 / 3 / 1 |
-| 14 | Nat Clim Change 2022 · urban forests | lead | cooling | 2022 | 14 | 5 (36%) | 9 / 5 / 0 |
-| 15 | ES&T 2024 · AC usage & indoor–outdoor heat | coauthor | cooling | 2024 | 11 | 2 (18%) | 9 / 2 / 0 |
-| 16 | ES&T 2025 · urban tree cooling | coauthor | cooling | 2025 | 58 | 10 (17%) | 48 / 9 / 1 |
-| 17 | npj ESS 2026 · demolition & cooling | lead | cooling | 2026 | 0 | 0 yet | 0 / 0 / 0 |
-| 18 | PNAS 2026 · Cooler Cities / UHS | lead | cooling | 2026 | 0 | 0 yet | 0 / 0 / 0 |
-| 19 | Atmos Environ 2018 · dust emissions | coauthor | air-dust | 2018 | 78 | 77 (99%) | 1 / 75 / 2 |
-| 20 | ES&T 2019 · road dust PM2.5 | coauthor | air-dust | 2019 | 126 | 126 (100%) | 0 / 123 / 3 |
-| 21 | Toxics 2025 · air pollution & anxiety visits | coauthor | air-dust | 2025 | 3 | 3 (100%) | 0 / 3 / 0 |
+| 7 | Atmosphere 2020 · PRD urbanization climate | coauthor | heat-health | 2020 | 18 | 4 (22%) | 14 / 4 / 0 |
+| 8 | JGR-A 2021 · nighttime heat stress | lead | heat-health | 2021 | 66 | 8 (12%) | 58 / 7 / 1 |
+| 9 | Urban Climate 2021 · urban climate forecasts | lead | heat-health | 2021 | 19 | 4 (21%) | 15 / 4 / 0 |
+| 10 | Nat Clim Change 2025 · urban overheating mortality | coauthor | heat-health | 2025 | 82 | 11 (13%) | 71 / 11 / 0 |
+| 11 | Nature Cities 2025 · urban browning heat stress | coauthor | heat-health | 2025 | 39 | 5 (13%) | 34 / 4 / 1 |
+| 12 | Sci Rep 2025 · urban density & heat | lead | heat-health | 2025 | 17 | 4 (24%) | 13 / 3 / 1 |
+| 13 | Nat Clim Change 2022 · urban forests | lead | cooling | 2022 | 14 | 5 (36%) | 9 / 5 / 0 |
+| 14 | ES&T 2024 · AC usage & indoor–outdoor heat | coauthor | cooling | 2024 | 11 | 2 (18%) | 9 / 2 / 0 |
+| 15 | ES&T 2025 · urban tree cooling | coauthor | cooling | 2025 | 58 | 10 (17%) | 48 / 9 / 1 |
+| 16 | npj ESS 2026 · demolition & cooling | lead | cooling | 2026 | 0 | 0 yet | 0 / 0 / 0 |
+| 17 | PNAS 2026 · Cooler Cities / UHS | lead | cooling | 2026 | 0 | 0 yet | 0 / 0 / 0 |
+| 18 | Atmos Environ 2018 · dust emissions | coauthor | air-dust | 2018 | 78 | 77 (99%) | 1 / 75 / 2 |
+| 19 | ES&T 2019 · road dust PM2.5 | coauthor | air-dust | 2019 | 126 | 126 (100%) | 0 / 123 / 3 |
+| 20 | Toxics 2025 · air pollution & anxiety visits | coauthor | air-dust | 2025 | 3 | 3 (100%) | 0 / 3 / 0 |
+| 21 | J Community Psych 2025 · lockdown mental health | coauthor | air-dust | 2025 | 1 | 1 (100%) | 0 / 0 / 1 |
 | 22 | IJGIS 2012 · MACO land-use allocation | coauthor | methods | 2012 | 136 | 52 (38%) | 84 / 47 / 5 |
 | 23 | IEEE TGRS 2013 · multisensor registration | coauthor | methods | 2013 | 100 | 19 (19%) | 81 / 18 / 1 |
 | 24 | Frontiers Earth Sci 2018 · multi-sensor registration | lead | methods | 2018 | 22 | 6 (27%) | 16 / 4 / 2 |
