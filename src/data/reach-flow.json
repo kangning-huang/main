@@ -18,8 +18,8 @@
         "zh": "城市扩张与未来"
       },
       "color": "#00909a",
-      "absolute": 2775,
-      "citesPerYear": 381.5
+      "absolute": 2795,
+      "citesPerYear": 383.7
     },
     {
       "id": "heat-health",
@@ -28,8 +28,8 @@
         "zh": "高温暴露与健康"
       },
       "color": "#c74b16",
-      "absolute": 241,
-      "citesPerYear": 92.5
+      "absolute": 248,
+      "citesPerYear": 95.1
     },
     {
       "id": "cooling",
@@ -39,17 +39,17 @@
       },
       "color": "#2a9d6e",
       "absolute": 83,
-      "citesPerYear": 38.4
+      "citesPerYear": 38.2
     },
     {
       "id": "air-dust",
       "label": {
-        "en": "Air quality / dust",
-        "zh": "空气质量 / 扬尘"
+        "en": "Health",
+        "zh": "健康"
       },
       "color": "#8b5a2b",
       "absolute": 207,
-      "citesPerYear": 26.6
+      "citesPerYear": 27
     },
     {
       "id": "methods",
@@ -58,8 +58,8 @@
         "zh": "标度、形态与方法"
       },
       "color": "#94700f",
-      "absolute": 269,
-      "citesPerYear": 23.3
+      "absolute": 270,
+      "citesPerYear": 25.1
     },
     {
       "id": "flood",
@@ -68,8 +68,8 @@
         "zh": "洪水与海岸"
       },
       "color": "#5b4b9a",
-      "absolute": 235,
-      "citesPerYear": 53.7
+      "absolute": 238,
+      "citesPerYear": 55.3
     }
   ],
   "right": [
@@ -82,8 +82,8 @@
         "Global and Planetary Change",
         "Land Use and Ecosystem Services"
       ],
-      "absolute": 1758,
-      "citesPerYear": 272.5,
+      "absolute": 1771,
+      "citesPerYear": 274.4,
       "members": []
     },
     {
@@ -94,8 +94,8 @@
         "Environmental Science",
         "Environmental Engineering"
       ],
-      "absolute": 298,
-      "citesPerYear": 70.6,
+      "absolute": 299,
+      "citesPerYear": 71.4,
       "members": []
     },
     {
@@ -106,8 +106,8 @@
         "Environmental Science",
         "Global and Planetary Change"
       ],
-      "absolute": 287,
-      "citesPerYear": 54.9,
+      "absolute": 289,
+      "citesPerYear": 55.1,
       "members": []
     },
     {
@@ -117,8 +117,8 @@
       "path": [
         "Engineering & built environment"
       ],
-      "absolute": 279,
-      "citesPerYear": 43.7,
+      "absolute": 278,
+      "citesPerYear": 44,
       "members": [
         {
           "name": "Building and Construction",
@@ -126,14 +126,14 @@
           "absolute": 64
         },
         {
-          "name": "Ocean Engineering",
-          "citesPerYear": 9.1,
-          "absolute": 66
+          "name": "Media Technology",
+          "citesPerYear": 9,
+          "absolute": 64
         },
         {
-          "name": "Media Technology",
-          "citesPerYear": 9.1,
-          "absolute": 65
+          "name": "Ocean Engineering",
+          "citesPerYear": 8.3,
+          "absolute": 63
         },
         {
           "name": "Civil and Structural Engineering",
@@ -151,14 +151,24 @@
           "absolute": 6
         },
         {
-          "name": "Aerospace Engineering",
+          "name": "Electrical and Electronic Engineering",
           "citesPerYear": 1.7,
-          "absolute": 15
+          "absolute": 9
         },
         {
-          "name": "Electrical and Electronic Engineering",
-          "citesPerYear": 1.2,
-          "absolute": 7
+          "name": "Aerospace Engineering",
+          "citesPerYear": 1.6,
+          "absolute": 14
+        },
+        {
+          "name": "Architecture",
+          "citesPerYear": 0.7,
+          "absolute": 4
+        },
+        {
+          "name": "Polymers and Plastics",
+          "citesPerYear": 0.7,
+          "absolute": 2
         },
         {
           "name": "Materials Chemistry",
@@ -169,11 +179,6 @@
           "name": "Renewable Energy, Sustainability and the Environment",
           "citesPerYear": 0.5,
           "absolute": 2
-        },
-        {
-          "name": "Architecture",
-          "citesPerYear": 0.4,
-          "absolute": 3
         },
         {
           "name": "Spectroscopy",
@@ -199,11 +204,6 @@
           "name": "Safety, Risk, Reliability and Quality",
           "citesPerYear": 0.2,
           "absolute": 2
-        },
-        {
-          "name": "Polymers and Plastics",
-          "citesPerYear": 0.1,
-          "absolute": 1
         },
         {
           "name": "Process Chemistry and Technology",
@@ -239,23 +239,23 @@
       "path": [
         "Social sciences & policy"
       ],
-      "absolute": 202,
-      "citesPerYear": 29.2,
+      "absolute": 209,
+      "citesPerYear": 31.2,
       "members": [
         {
           "name": "Economics and Econometrics",
-          "citesPerYear": 7.9,
-          "absolute": 58
+          "citesPerYear": 8.7,
+          "absolute": 62
         },
         {
           "name": "Sociology and Political Science",
-          "citesPerYear": 5.3,
-          "absolute": 35
+          "citesPerYear": 5.8,
+          "absolute": 36
         },
         {
           "name": "Urban Studies",
-          "citesPerYear": 3.5,
-          "absolute": 22
+          "citesPerYear": 3.6,
+          "absolute": 23
         },
         {
           "name": "Transportation",
@@ -278,11 +278,6 @@
           "absolute": 7
         },
         {
-          "name": "Social Psychology",
-          "citesPerYear": 0.6,
-          "absolute": 5
-        },
-        {
           "name": "Finance",
           "citesPerYear": 0.6,
           "absolute": 3
@@ -293,12 +288,22 @@
           "absolute": 1
         },
         {
+          "name": "Developmental and Educational Psychology",
+          "citesPerYear": 0.5,
+          "absolute": 1
+        },
+        {
           "name": "Clinical Psychology",
           "citesPerYear": 0.5,
           "absolute": 1
         },
         {
-          "name": "Archeology",
+          "name": "Archeology (arts and humanities)",
+          "citesPerYear": 0.5,
+          "absolute": 4
+        },
+        {
+          "name": "Social Psychology",
           "citesPerYear": 0.5,
           "absolute": 4
         },
@@ -323,17 +328,22 @@
           "absolute": 2
         },
         {
+          "name": "Experimental and Cognitive Psychology",
+          "citesPerYear": 0.3,
+          "absolute": 2
+        },
+        {
           "name": "Safety Research",
           "citesPerYear": 0.1,
           "absolute": 1
         },
         {
-          "name": "Communication",
+          "name": "Strategy and Management",
           "citesPerYear": 0.1,
           "absolute": 1
         },
         {
-          "name": "Strategy and Management",
+          "name": "Communication",
           "citesPerYear": 0.1,
           "absolute": 1
         },
@@ -351,11 +361,6 @@
           "name": "Philosophy",
           "citesPerYear": 0.1,
           "absolute": 1
-        },
-        {
-          "name": "Experimental and Cognitive Psychology",
-          "citesPerYear": 0.1,
-          "absolute": 1
         }
       ]
     },
@@ -367,8 +372,8 @@
         "Environmental Science",
         "Ecology"
       ],
-      "absolute": 156,
-      "citesPerYear": 22.4,
+      "absolute": 158,
+      "citesPerYear": 23.6,
       "members": []
     },
     {
@@ -379,7 +384,7 @@
         "Pollution, water & conservation"
       ],
       "absolute": 146,
-      "citesPerYear": 25.1,
+      "citesPerYear": 25.6,
       "members": [
         {
           "name": "Water Science and Technology",
@@ -388,8 +393,8 @@
         },
         {
           "name": "Environmental Chemistry",
-          "citesPerYear": 5.3,
-          "absolute": 20
+          "citesPerYear": 6,
+          "absolute": 22
         },
         {
           "name": "Pollution",
@@ -398,8 +403,8 @@
         },
         {
           "name": "Nature and Landscape Conservation",
-          "citesPerYear": 3.3,
-          "absolute": 24
+          "citesPerYear": 3,
+          "absolute": 22
         },
         {
           "name": "Ecological Modeling",
@@ -421,8 +426,8 @@
         "Environmental Science",
         "Health, Toxicology and Mutagenesis"
       ],
-      "absolute": 143,
-      "citesPerYear": 28.3,
+      "absolute": 142,
+      "citesPerYear": 28.9,
       "members": []
     },
     {
@@ -432,28 +437,28 @@
       "path": [
         "Agriculture & biology"
       ],
-      "absolute": 121,
-      "citesPerYear": 17.3,
+      "absolute": 127,
+      "citesPerYear": 18.1,
       "members": [
         {
           "name": "Ecology, Evolution, Behavior and Systematics",
-          "citesPerYear": 5.7,
-          "absolute": 42
+          "citesPerYear": 6,
+          "absolute": 44
         },
         {
           "name": "Plant Science",
-          "citesPerYear": 5.3,
-          "absolute": 40
+          "citesPerYear": 5.4,
+          "absolute": 41
         },
         {
           "name": "Soil Science",
-          "citesPerYear": 3.8,
-          "absolute": 24
+          "citesPerYear": 4,
+          "absolute": 26
         },
         {
           "name": "Insect Science",
-          "citesPerYear": 0.9,
-          "absolute": 7
+          "citesPerYear": 1.1,
+          "absolute": 8
         },
         {
           "name": "General Agricultural and Biological Sciences",
@@ -480,8 +485,8 @@
         "Earth and Planetary Sciences",
         "Atmospheric Science"
       ],
-      "absolute": 114,
-      "citesPerYear": 13.4,
+      "absolute": 113,
+      "citesPerYear": 13.3,
       "members": []
     },
     {
@@ -491,13 +496,13 @@
       "path": [
         "Computer science & remote sensing"
       ],
-      "absolute": 103,
-      "citesPerYear": 9.2,
+      "absolute": 101,
+      "citesPerYear": 9.1,
       "members": [
         {
           "name": "Computer Vision and Pattern Recognition",
-          "citesPerYear": 6.3,
-          "absolute": 71
+          "citesPerYear": 6.1,
+          "absolute": 69
         },
         {
           "name": "Artificial Intelligence",
@@ -549,8 +554,8 @@
         "Environmental Science",
         "Management, Monitoring, Policy and Law"
       ],
-      "absolute": 86,
-      "citesPerYear": 12,
+      "absolute": 91,
+      "citesPerYear": 12.6,
       "members": []
     },
     {
@@ -560,13 +565,13 @@
       "path": [
         "Health & medicine"
       ],
-      "absolute": 71,
-      "citesPerYear": 10.6,
+      "absolute": 70,
+      "citesPerYear": 10.5,
       "members": [
         {
           "name": "Genetics",
-          "citesPerYear": 5.4,
-          "absolute": 39
+          "citesPerYear": 5.2,
+          "absolute": 38
         },
         {
           "name": "Public Health, Environmental and Occupational Health",
@@ -579,7 +584,7 @@
           "absolute": 6
         },
         {
-          "name": "Physiology",
+          "name": "Physiology (medical)",
           "citesPerYear": 0.3,
           "absolute": 2
         },
@@ -656,12 +661,12 @@
           "absolute": 8
         },
         {
-          "name": "Atomic and Molecular Physics, and Optics",
+          "name": "Geophysics",
           "citesPerYear": 0.3,
           "absolute": 2
         },
         {
-          "name": "Geophysics",
+          "name": "Atomic and Molecular Physics, and Optics",
           "citesPerYear": 0.3,
           "absolute": 2
         },
@@ -699,8 +704,8 @@
       "path": [
         "Other"
       ],
-      "absolute": 1,
-      "citesPerYear": 0.1,
+      "absolute": 2,
+      "citesPerYear": 0.2,
       "members": []
     }
   ],
@@ -708,27 +713,27 @@
     {
       "left": "expansion",
       "right": "sf:Global and Planetary Change",
-      "absolute": 156,
-      "citesPerYear": 21.8,
+      "absolute": 159,
+      "citesPerYear": 22.2,
       "keywords": [
         {
           "name": "urbanization",
-          "count": 29
+          "count": 30
         },
         {
           "name": "Shared Socioeconomic Pathways",
-          "count": 13
+          "count": 14
         },
         {
           "name": "climate change impacts",
           "count": 10
         },
         {
-          "name": "artificial light at night",
+          "name": "climate change adaptation",
           "count": 9
         },
         {
-          "name": "nighttime lights",
+          "name": "artificial light at night",
           "count": 9
         }
       ]
@@ -736,8 +741,8 @@
     {
       "left": "expansion",
       "right": "subfields/2305",
-      "absolute": 168,
-      "citesPerYear": 22.8,
+      "absolute": 167,
+      "citesPerYear": 22.7,
       "keywords": [
         {
           "name": "urban heat island",
@@ -752,7 +757,7 @@
           "count": 17
         },
         {
-          "name": "urban green space",
+          "name": "urban morphology",
           "count": 10
         },
         {
@@ -764,16 +769,16 @@
     {
       "left": "expansion",
       "right": "T10226",
-      "absolute": 1500,
-      "citesPerYear": 207.1,
+      "absolute": 1513,
+      "citesPerYear": 209,
       "keywords": [
         {
           "name": "urbanization",
-          "count": 337
+          "count": 339
         },
         {
           "name": "urban expansion",
-          "count": 336
+          "count": 339
         },
         {
           "name": "land use change",
@@ -781,7 +786,7 @@
         },
         {
           "name": "land use and land cover change",
-          "count": 151
+          "count": 154
         },
         {
           "name": "urban heat island",
@@ -792,8 +797,8 @@
     {
       "left": "expansion",
       "right": "subfields/2308",
-      "absolute": 71,
-      "citesPerYear": 9.5,
+      "absolute": 76,
+      "citesPerYear": 10.1,
       "keywords": [
         {
           "name": "urban trees",
@@ -820,12 +825,12 @@
     {
       "left": "expansion",
       "right": "subfields/2307",
-      "absolute": 74,
-      "citesPerYear": 10,
+      "absolute": 72,
+      "citesPerYear": 9.7,
       "keywords": [
         {
           "name": "urban green space",
-          "count": 12
+          "count": 11
         },
         {
           "name": "heat exposure",
@@ -848,8 +853,8 @@
     {
       "left": "expansion",
       "right": "subfields/2303",
-      "absolute": 139,
-      "citesPerYear": 18.6,
+      "absolute": 140,
+      "citesPerYear": 18.8,
       "keywords": [
         {
           "name": "urbanization",
@@ -892,20 +897,48 @@
           "count": 2
         },
         {
-          "name": "satellite precipitation data",
+          "name": "anthropogenic heat",
           "count": 2
         },
         {
-          "name": "Austin, Texas",
+          "name": "Google Earth Engine",
           "count": 2
+        }
+      ]
+    },
+    {
+      "left": "expansion",
+      "right": "__other",
+      "absolute": 1,
+      "citesPerYear": 0.1,
+      "keywords": [
+        {
+          "name": "environmental protection",
+          "count": 1
+        },
+        {
+          "name": "environmental safety",
+          "count": 1
+        },
+        {
+          "name": "sustainable natural resource use",
+          "count": 1
+        },
+        {
+          "name": "ecological management",
+          "count": 1
+        },
+        {
+          "name": "medical ecology",
+          "count": 1
         }
       ]
     },
     {
       "left": "heat-health",
       "right": "subfields/2305",
-      "absolute": 81,
-      "citesPerYear": 29.8,
+      "absolute": 82,
+      "citesPerYear": 30.3,
       "keywords": [
         {
           "name": "urban heat island",
@@ -945,24 +978,28 @@
         },
         {
           "name": "urbanization",
-          "count": 22
+          "count": 23
         },
         {
           "name": "urban thermal environment",
           "count": 12
         },
         {
-          "name": "urban greening",
-          "count": 11
+          "name": "urban morphology",
+          "count": 10
         }
       ]
     },
     {
       "left": "heat-health",
       "right": "sf:Global and Planetary Change",
-      "absolute": 17,
-      "citesPerYear": 4.7,
+      "absolute": 18,
+      "citesPerYear": 4.9,
       "keywords": [
+        {
+          "name": "wet bulb globe temperature",
+          "count": 3
+        },
         {
           "name": "heat waves",
           "count": 3
@@ -972,15 +1009,11 @@
           "count": 3
         },
         {
-          "name": "wet bulb globe temperature",
-          "count": 3
-        },
-        {
           "name": "climate change adaptation",
           "count": 3
         },
         {
-          "name": "heatwave intensity",
+          "name": "humid heat",
           "count": 2
         }
       ]
@@ -988,8 +1021,8 @@
     {
       "left": "heat-health",
       "right": "subfields/2307",
-      "absolute": 19,
-      "citesPerYear": 8.9,
+      "absolute": 20,
+      "citesPerYear": 9.4,
       "keywords": [
         {
           "name": "heat stress",
@@ -1004,11 +1037,11 @@
           "count": 3
         },
         {
-          "name": "temperature",
-          "count": 2
+          "name": "temperature-related mortality",
+          "count": 3
         },
         {
-          "name": "extreme heat",
+          "name": "temperature",
           "count": 2
         }
       ]
@@ -1044,8 +1077,8 @@
     {
       "left": "cooling",
       "right": "subfields/2305",
-      "absolute": 29,
-      "citesPerYear": 14.2,
+      "absolute": 30,
+      "citesPerYear": 14.5,
       "keywords": [
         {
           "name": "urban cooling",
@@ -1064,8 +1097,8 @@
           "count": 5
         },
         {
-          "name": "land surface temperature",
-          "count": 4
+          "name": "urban heat",
+          "count": 5
         }
       ]
     },
@@ -1183,6 +1216,34 @@
     },
     {
       "left": "methods",
+      "right": "subfields/2307",
+      "absolute": 2,
+      "citesPerYear": 0.6,
+      "keywords": [
+        {
+          "name": "children's play spaces",
+          "count": 1
+        },
+        {
+          "name": "socioeconomic disparities",
+          "count": 1
+        },
+        {
+          "name": "snow removal",
+          "count": 1
+        },
+        {
+          "name": "children's free time",
+          "count": 1
+        },
+        {
+          "name": "Harbin",
+          "count": 1
+        }
+      ]
+    },
+    {
+      "left": "methods",
       "right": "sf:Global and Planetary Change",
       "absolute": 6,
       "citesPerYear": 1.5,
@@ -1206,6 +1267,34 @@
         {
           "name": "particle filter",
           "count": 2
+        }
+      ]
+    },
+    {
+      "left": "methods",
+      "right": "subfields/2303",
+      "absolute": 1,
+      "citesPerYear": 1,
+      "keywords": [
+        {
+          "name": "latitudinal diversity gradient",
+          "count": 1
+        },
+        {
+          "name": "urbanization",
+          "count": 1
+        },
+        {
+          "name": "birds",
+          "count": 1
+        },
+        {
+          "name": "native species richness",
+          "count": 1
+        },
+        {
+          "name": "introduced species",
+          "count": 1
         }
       ]
     },
@@ -1266,34 +1355,6 @@
       ]
     },
     {
-      "left": "methods",
-      "right": "subfields/2307",
-      "absolute": 1,
-      "citesPerYear": 0.1,
-      "keywords": [
-        {
-          "name": "local parks",
-          "count": 1
-        },
-        {
-          "name": "mixed integer programming",
-          "count": 1
-        },
-        {
-          "name": "minimax optimization",
-          "count": 1
-        },
-        {
-          "name": "historically marginalized groups",
-          "count": 1
-        },
-        {
-          "name": "recreational infrastructure",
-          "count": 1
-        }
-      ]
-    },
-    {
       "left": "air-dust",
       "right": "sf:Atmospheric Science",
       "absolute": 49,
@@ -1301,7 +1362,7 @@
       "keywords": [
         {
           "name": "PM2.5",
-          "count": 23
+          "count": 24
         },
         {
           "name": "PM10",
@@ -1312,11 +1373,11 @@
           "count": 8
         },
         {
-          "name": "particulate matter",
-          "count": 7
+          "name": "road dust",
+          "count": 6
         },
         {
-          "name": "road dust",
+          "name": "particulate matter",
           "count": 6
         }
       ]
@@ -1324,12 +1385,12 @@
     {
       "left": "air-dust",
       "right": "subfields/2307",
-      "absolute": 41,
-      "citesPerYear": 6,
+      "absolute": 40,
+      "citesPerYear": 5.8,
       "keywords": [
         {
           "name": "PM2.5",
-          "count": 18
+          "count": 17
         },
         {
           "name": "particulate matter",
@@ -1352,8 +1413,8 @@
     {
       "left": "air-dust",
       "right": "sf:Global and Planetary Change",
-      "absolute": 45,
-      "citesPerYear": 5.7,
+      "absolute": 44,
+      "citesPerYear": 5.6,
       "keywords": [
         {
           "name": "aerosol optical depth",
@@ -1443,15 +1504,15 @@
     {
       "left": "flood",
       "right": "sf:Atmospheric Science",
-      "absolute": 44,
-      "citesPerYear": 4,
+      "absolute": 43,
+      "citesPerYear": 3.9,
       "keywords": [
         {
-          "name": "snow depth",
-          "count": 13
+          "name": "passive microwave remote sensing",
+          "count": 11
         },
         {
-          "name": "passive microwave remote sensing",
+          "name": "snow depth",
           "count": 11
         },
         {
@@ -1459,11 +1520,11 @@
           "count": 10
         },
         {
-          "name": "Tibetan Plateau",
-          "count": 8
+          "name": "snow depth estimation",
+          "count": 9
         },
         {
-          "name": "snow water equivalent",
+          "name": "Tibetan Plateau",
           "count": 8
         }
       ]
@@ -1515,11 +1576,11 @@
           "count": 5
         },
         {
-          "name": "ecosystem services",
-          "count": 5
+          "name": "ecosystem service value",
+          "count": 4
         },
         {
-          "name": "ecosystem service value",
+          "name": "landscape pattern",
           "count": 4
         }
       ]
@@ -1611,8 +1672,8 @@
     {
       "left": "flood",
       "right": "sf:Global and Planetary Change",
-      "absolute": 55,
-      "citesPerYear": 17.5,
+      "absolute": 54,
+      "citesPerYear": 17.2,
       "keywords": [
         {
           "name": "urban rivers",
@@ -1695,27 +1756,27 @@
     {
       "left": "expansion",
       "right": "dom:social",
-      "absolute": 175,
+      "absolute": 178,
       "citesPerYear": 24.1,
       "keywords": [
         {
           "name": "urbanization",
-          "count": 23
+          "count": 26
         },
         {
           "name": "urban expansion",
-          "count": 14
+          "count": 13
         },
         {
           "name": "urban sprawl",
-          "count": 8
-        },
-        {
-          "name": "CO2 emissions",
           "count": 7
         },
         {
           "name": "Shared Socioeconomic Pathways",
+          "count": 7
+        },
+        {
+          "name": "urban resilience",
           "count": 7
         }
       ]
@@ -1723,8 +1784,8 @@
     {
       "left": "expansion",
       "right": "dom:eng",
-      "absolute": 170,
-      "citesPerYear": 23.3,
+      "absolute": 168,
+      "citesPerYear": 23,
       "keywords": [
         {
           "name": "urban expansion",
@@ -1735,15 +1796,15 @@
           "count": 8
         },
         {
-          "name": "Sentinel-2",
-          "count": 7
-        },
-        {
-          "name": "smart cities",
-          "count": 7
-        },
-        {
           "name": "urban sprawl",
+          "count": 6
+        },
+        {
+          "name": "Sentinel-2",
+          "count": 6
+        },
+        {
+          "name": "urbanization",
           "count": 6
         }
       ]
@@ -1751,12 +1812,12 @@
     {
       "left": "expansion",
       "right": "dom:agbio",
-      "absolute": 113,
-      "citesPerYear": 15.4,
+      "absolute": 115,
+      "citesPerYear": 15.7,
       "keywords": [
         {
           "name": "urbanization",
-          "count": 36
+          "count": 35
         },
         {
           "name": "urban-rural gradient",
@@ -1771,7 +1832,7 @@
           "count": 6
         },
         {
-          "name": "land use change",
+          "name": "urban forests",
           "count": 4
         }
       ]
@@ -1779,12 +1840,12 @@
     {
       "left": "expansion",
       "right": "dom:env-other",
-      "absolute": 95,
-      "citesPerYear": 13.2,
+      "absolute": 93,
+      "citesPerYear": 12.9,
       "keywords": [
         {
           "name": "urbanization",
-          "count": 14
+          "count": 13
         },
         {
           "name": "climate change impacts",
@@ -1799,7 +1860,7 @@
           "count": 6
         },
         {
-          "name": "urban biodiversity",
+          "name": "Shared Socioeconomic Pathways",
           "count": 6
         }
       ]
@@ -1807,28 +1868,28 @@
     {
       "left": "expansion",
       "right": "dom:health",
-      "absolute": 63,
-      "citesPerYear": 8.8,
+      "absolute": 62,
+      "citesPerYear": 8.6,
       "keywords": [
         {
           "name": "urbanization",
-          "count": 26
+          "count": 25
         },
         {
           "name": "gene flow",
           "count": 7
         },
         {
-          "name": "genetic diversity",
-          "count": 6
-        },
-        {
           "name": "habitat fragmentation",
           "count": 5
         },
         {
-          "name": "urban evolution",
+          "name": "genetic diversity",
           "count": 5
+        },
+        {
+          "name": "urban evolution",
+          "count": 4
         }
       ]
     },
@@ -1891,9 +1952,17 @@
     {
       "left": "heat-health",
       "right": "dom:eng",
-      "absolute": 12,
-      "citesPerYear": 5,
+      "absolute": 13,
+      "citesPerYear": 5.6,
       "keywords": [
+        {
+          "name": "urban heat island",
+          "count": 3
+        },
+        {
+          "name": "building energy consumption",
+          "count": 3
+        },
         {
           "name": "passive cooling",
           "count": 2
@@ -1903,15 +1972,7 @@
           "count": 2
         },
         {
-          "name": "urban heat island",
-          "count": 2
-        },
-        {
           "name": "extreme weather events",
-          "count": 2
-        },
-        {
-          "name": "building energy consumption",
           "count": 2
         }
       ]
@@ -1919,8 +1980,8 @@
     {
       "left": "heat-health",
       "right": "dom:social",
-      "absolute": 5,
-      "citesPerYear": 2,
+      "absolute": 6,
+      "citesPerYear": 2.5,
       "keywords": [
         {
           "name": "urban expansion",
@@ -2032,14 +2093,14 @@
       "left": "flood",
       "right": "dom:eng",
       "absolute": 29,
-      "citesPerYear": 7.5,
+      "citesPerYear": 7.7,
       "keywords": [
         {
-          "name": "wetland delineation",
+          "name": "artificial olfaction",
           "count": 2
         },
         {
-          "name": "random subspace",
+          "name": "wetland delineation",
           "count": 2
         },
         {
@@ -2051,8 +2112,36 @@
           "count": 2
         },
         {
-          "name": "artificial olfaction",
+          "name": "electronic nose",
           "count": 2
+        }
+      ]
+    },
+    {
+      "left": "flood",
+      "right": "dom:social",
+      "absolute": 6,
+      "citesPerYear": 1.9,
+      "keywords": [
+        {
+          "name": "environmental sustainability",
+          "count": 1
+        },
+        {
+          "name": "Belt and Road Initiative",
+          "count": 1
+        },
+        {
+          "name": "trade openness",
+          "count": 1
+        },
+        {
+          "name": "digitalization",
+          "count": 1
+        },
+        {
+          "name": "ICT use",
+          "count": 1
         }
       ]
     },
@@ -2143,8 +2232,8 @@
     {
       "left": "methods",
       "right": "dom:cs",
-      "absolute": 83,
-      "citesPerYear": 6.4,
+      "absolute": 81,
+      "citesPerYear": 6.3,
       "keywords": [
         {
           "name": "image registration",
@@ -2171,8 +2260,8 @@
     {
       "left": "methods",
       "right": "dom:eng",
-      "absolute": 56,
-      "citesPerYear": 5.1,
+      "absolute": 57,
+      "citesPerYear": 5.4,
       "keywords": [
         {
           "name": "image registration",
@@ -2227,8 +2316,8 @@
     {
       "left": "air-dust",
       "right": "dom:social",
-      "absolute": 3,
-      "citesPerYear": 0.4,
+      "absolute": 4,
+      "citesPerYear": 0.9,
       "keywords": [
         {
           "name": "PM2.5",
@@ -2365,6 +2454,34 @@
       ]
     },
     {
+      "left": "air-dust",
+      "right": "dom:agbio",
+      "absolute": 1,
+      "citesPerYear": 0.1,
+      "keywords": [
+        {
+          "name": "RUSLE model",
+          "count": 1
+        },
+        {
+          "name": "soil erosion",
+          "count": 1
+        },
+        {
+          "name": "synergistic effect",
+          "count": 1
+        },
+        {
+          "name": "radiative forcing",
+          "count": 1
+        },
+        {
+          "name": "anthropogenic land degradation",
+          "count": 1
+        }
+      ]
+    },
+    {
       "left": "cooling",
       "right": "dom:health",
       "absolute": 1,
@@ -2395,37 +2512,49 @@
     {
       "left": "cooling",
       "right": "dom:eng",
-      "absolute": 4,
-      "citesPerYear": 1.8,
+      "absolute": 3,
+      "citesPerYear": 1.3,
       "keywords": [
         {
           "name": "urban expansion",
-          "count": 2
+          "count": 1
         },
         {
           "name": "urban morphology",
-          "count": 2
+          "count": 1
         },
         {
           "name": "impervious surface expansion",
-          "count": 2
+          "count": 1
         },
         {
           "name": "urban regeneration",
-          "count": 2
+          "count": 1
         },
         {
           "name": "XGBoost",
-          "count": 2
+          "count": 1
         }
       ]
     },
     {
       "left": "heat-health",
       "right": "dom:agbio",
-      "absolute": 1,
-      "citesPerYear": 0.5,
+      "absolute": 3,
+      "citesPerYear": 0.8,
       "keywords": [
+        {
+          "name": "crop productivity",
+          "count": 2
+        },
+        {
+          "name": "food security",
+          "count": 2
+        },
+        {
+          "name": "climate-resilient agriculture",
+          "count": 2
+        },
         {
           "name": "heat stress",
           "count": 1
@@ -2433,26 +2562,14 @@
         {
           "name": "heat tolerance",
           "count": 1
-        },
-        {
-          "name": "CIITA",
-          "count": 1
-        },
-        {
-          "name": "cattle",
-          "count": 1
-        },
-        {
-          "name": "copy number variation",
-          "count": 1
         }
       ]
     },
     {
       "left": "flood",
       "right": "dom:agbio",
-      "absolute": 5,
-      "citesPerYear": 1.2,
+      "absolute": 6,
+      "citesPerYear": 1.3,
       "keywords": [
         {
           "name": "Artemisia selengensis",
@@ -2473,34 +2590,6 @@
         {
           "name": "drought tolerance",
           "count": 1
-        }
-      ]
-    },
-    {
-      "left": "flood",
-      "right": "dom:env-other",
-      "absolute": 25,
-      "citesPerYear": 8.5,
-      "keywords": [
-        {
-          "name": "nitrous oxide emissions",
-          "count": 5
-        },
-        {
-          "name": "urban rivers",
-          "count": 4
-        },
-        {
-          "name": "CO2 emissions",
-          "count": 4
-        },
-        {
-          "name": "methane emissions",
-          "count": 3
-        },
-        {
-          "name": "greenhouse gas emissions",
-          "count": 3
         }
       ]
     },
@@ -2534,29 +2623,29 @@
     },
     {
       "left": "flood",
-      "right": "dom:social",
-      "absolute": 4,
-      "citesPerYear": 1,
+      "right": "dom:env-other",
+      "absolute": 27,
+      "citesPerYear": 9.2,
       "keywords": [
         {
-          "name": "wetland management",
-          "count": 1
+          "name": "urban rivers",
+          "count": 5
         },
         {
-          "name": "community preferences",
-          "count": 1
+          "name": "nitrous oxide emissions",
+          "count": 5
         },
         {
-          "name": "co-management",
-          "count": 1
+          "name": "CO2 emissions",
+          "count": 4
         },
         {
-          "name": "willingness to pay",
-          "count": 1
+          "name": "methane emissions",
+          "count": 3
         },
         {
-          "name": "paddy farmers",
-          "count": 1
+          "name": "greenhouse gas emissions",
+          "count": 3
         }
       ]
     },
@@ -2619,25 +2708,25 @@
   ],
   "stats": {
     "absolute": {
-      "leftTotal": 3810,
+      "leftTotal": 3841,
       "shares": {
         "expansion": 72.8,
-        "heat-health": 6.3,
+        "heat-health": 6.5,
         "cooling": 2.2,
         "air-dust": 5.4,
-        "methods": 7.1,
+        "methods": 7,
         "flood": 6.2
       }
     },
     "citesPerYear": {
-      "leftTotal": 616,
+      "leftTotal": 624.5,
       "shares": {
-        "expansion": 61.9,
-        "heat-health": 15,
-        "cooling": 6.2,
+        "expansion": 61.4,
+        "heat-health": 15.2,
+        "cooling": 6.1,
         "air-dust": 4.3,
-        "methods": 3.8,
-        "flood": 8.7
+        "methods": 4,
+        "flood": 8.9
       }
     }
   }

@@ -21,8 +21,8 @@
     },
     {
       "id": "air-dust",
-      "en": "Air quality / dust",
-      "zh": "空气质量 / 扬尘",
+      "en": "Health",
+      "zh": "健康",
       "color": "#8b5a2b"
     },
     {
@@ -216,7 +216,7 @@
     },
     {
       "doi": "10.1002/jcop.23177",
-      "theme": "expansion",
+      "theme": "air-dust",
       "short": "J Community Psych 2025 · lockdown mental health",
       "note": "coauthor"
     },

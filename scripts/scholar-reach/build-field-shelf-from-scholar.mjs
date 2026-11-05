@@ -28,7 +28,7 @@ const THEMES = [
   { id: "expansion", en: "Urban expansion & futures", zh: "城市扩张与未来", color: "#00909a" },
   { id: "heat-health", en: "Heat exposure & health", zh: "高温暴露与健康", color: "#c74b16" },
   { id: "cooling", en: "Cooling & greening", zh: "降温与绿化", color: "#2a9d6e" },
-  { id: "air-dust", en: "Air quality / dust", zh: "空气质量 / 扬尘", color: "#8b5a2b" },
+  { id: "air-dust", en: "Health", zh: "健康", color: "#8b5a2b" },
   { id: "methods", en: "Scaling, form & methods", zh: "标度、形态与方法", color: "#94700f" },
   { id: "flood", en: "Flood & coasts", zh: "洪水与海岸", color: "#5b4b9a" },
 ];
