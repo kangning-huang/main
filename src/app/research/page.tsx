@@ -311,6 +311,13 @@ const THEMES: Theme[] = [
         href: doiHref("10.1029/2020JD033831"),
       },
       {
+        en: "Across the 1,000 largest cities, declining urban density attenuates rising population-weighted surface heat extremes by about 0.5 K per decade for each 1,000 persons/km²/year drop in density.",
+        zh: "在全球1000座最大城市中，人口密度每十年每平方公里下降1000人，人口加权地表热极端升温约减弱0.5 K。",
+        venue: "Scientific Reports",
+        year: "2025",
+        href: doiHref("10.1038/s41598-025-96045-z"),
+      },
+      {
         en: "Demolishing informal settlements produced a causal surface cooling of about 1.5 K, shaped by what was built afterward.",
         zh: "拆除非正规住区带来约1.5 K的因果性地表降温，降温幅度取决于拆除后的土地用途。",
         venue: "npj Environmental Social Sciences",
