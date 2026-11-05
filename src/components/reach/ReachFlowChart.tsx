@@ -121,7 +121,7 @@ export default function ReachFlowChart() {
   }
   const svgH = Math.max(H, right[right.length - 1].labelY + 12, left[left.length - 1].labelY + 12);
   const topShare = Object.entries(shares).sort((a, b) => b[1] - a[1])[0];
-  const heatish = Math.round(((shares["heat-health"] ?? 0) + (shares.cooling ?? 0)) * 10) / 10;
+  const heatShare = Math.round((shares.heat ?? 0) * 10) / 10;
 
   return (
     <div>
@@ -134,13 +134,13 @@ export default function ReachFlowChart() {
             <T
               en={
                 mode === "absolute"
-                  ? `OpenAlex citing works (self-cites removed) → adaptive subfields & topics. Expansion still leads (${topShare?.[1]}%); heat + cooling together are ${heatish}%.`
-                  : `Each citing work weighted by 1 / years since the cited paper (floor 1 yr). Expansion ${shares.expansion}%; heat + cooling rise to ${heatish}%.`
+                  ? `OpenAlex citing works (self-cites removed) → adaptive subfields & topics. Expansion still leads (${topShare?.[1]}%); Heat is ${heatShare}%.`
+                  : `Each citing work weighted by 1 / years since the cited paper (floor 1 yr). Expansion ${shares.expansion}%; Heat rises to ${heatShare}%.`
               }
               zh={
                 mode === "absolute"
-                  ? `OpenAlex 施引文献（已剔除自引）→ 自适应子领域与主题。扩张仍占比最高（${topShare?.[1]}%）；高温+降温合计 ${heatish}%。`
-                  : `每篇施引文献按 1/被引论文发表至今年数加权，年数至少按 1 年计。扩张占 ${shares.expansion}%；高温+降温升至 ${heatish}%。`
+                  ? `OpenAlex 施引文献（已剔除自引）→ 自适应子领域与主题。扩张仍占比最高（${topShare?.[1]}%）；高温占 ${heatShare}%。`
+                  : `每篇施引文献按 1/被引论文发表至今年数加权，年数至少按 1 年计。扩张占 ${shares.expansion}%；高温升至 ${heatShare}%。`
               }
             />
           </p>
