@@ -136,6 +136,14 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
               >
                 <T en="Full app →" zh="完整应用 →" />
               </a>
+              <a
+                href="https://nimblemap.com/data.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal hover:underline"
+              >
+                <T en="Open this layer locally →" zh="在本地打开图层 →" />
+              </a>
             </div>
           </>
         )}
@@ -683,7 +691,9 @@ function Not({ en, zh }: { en: string; zh: string }) {
   );
 }
 
-function Links({ doi, app, data }: { doi: string; app?: string; data?: string }) {
+const NIMBLEMAP_DATA = "https://nimblemap.com/data.html";
+
+function Links({ doi, app, data, local }: { doi: string; app?: string; data?: string; local?: boolean }) {
   return (
     <div className="mt-3 flex flex-wrap gap-3 text-sm">
       <a href={doi} target="_blank" rel="noopener noreferrer" className="text-ember hover:underline">
@@ -697,6 +707,11 @@ function Links({ doi, app, data }: { doi: string; app?: string; data?: string })
       {app && (
         <a href={app} target="_blank" rel="noopener noreferrer" className="text-teal hover:underline">
           <T en="Full app →" zh="完整应用 →" />
+        </a>
+      )}
+      {(local || app || data) && (
+        <a href={NIMBLEMAP_DATA} target="_blank" rel="noopener noreferrer" className="text-teal hover:underline">
+          <T en="Open this layer locally →" zh="在本地打开图层 →" />
         </a>
       )}
     </div>

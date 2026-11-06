@@ -63,6 +63,38 @@ export default function TeachingPage() {
               zh="我在上海纽约大学教三门环境研究课程。学生会通过辩论认识不同的环境思想，从系统科学入门，也会讨论城市面临的环境挑战与机遇。"
             />
           </p>
+          <p className="mt-4 max-w-3xl text-[15px] leading-[1.75] text-ink-muted animate-fade-up delay-1">
+            <T
+              en={
+                <>
+                  For classes that only need to see a file on a map, I point students to{" "}
+                  <a
+                    href="https://nimblemap.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-underline font-medium text-ember"
+                  >
+                    NimbleMap
+                  </a>{" "}
+                  so a full GIS install is not the first wall.
+                </>
+              }
+              zh={
+                <>
+                  如果课上只需要把文件打开成地图，我会让学生用{" "}
+                  <a
+                    href="https://nimblemap.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="link-underline font-medium text-ember"
+                  >
+                    凌波微图（NimbleMap）
+                  </a>
+                  ，不必先装一整套 GIS。
+                </>
+              }
+            />
+          </p>
 
           <AwardBlock />
 

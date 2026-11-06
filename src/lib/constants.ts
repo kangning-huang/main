@@ -63,6 +63,10 @@ export interface Project {
   category: "academic" | "side";
   internalPath?: string;
   imagePath?: string;
+  /** Primary CTA label when the card is not just “visit the site” */
+  linkLabel?: string;
+  secondaryUrl?: string;
+  secondaryLabel?: string;
 }
 
 export const PROJECTS: Project[] = [
@@ -76,15 +80,6 @@ export const PROJECTS: Project[] = [
     featured: true,
     category: "academic",
     // imagePath: "/projects/nested-scaling-city-mass.jpg", // Run `npm run screenshots` to generate
-  },
-  {
-    title: "NimbleMap",
-    description:
-      "Free desktop app that opens downloaded map data (Shapefile, GeoPackage, NetCDF, GeoTIFF, and more) as a map in seconds — no GIS training.",
-    url: "https://nimblemap.com/",
-    tags: ["Interactive Map", "Desktop App", "Open Data"],
-    featured: true,
-    category: "academic",
   },
   {
     title: "Urban Expansion 2050",
@@ -137,6 +132,19 @@ export const PROJECTS: Project[] = [
     category: "side",
     // imagePath: "/projects/robotaxi-safety-tracker.jpg", // Run `npm run screenshots` to generate
   },
+  {
+    title: "NimbleMap",
+    description:
+      "A local map viewer so students and readers can open Shapefiles, GeoTIFFs, NetCDFs, and lat-lon tables behind open data and papers — without a GIS course first. Files stay on their computer.",
+    url: "https://nimblemap.com/data.html",
+    linkLabel: "Open a sample dataset",
+    secondaryUrl: "https://nimblemap.com/",
+    secondaryLabel: "About the viewer",
+    tags: ["Maps", "Open Data", "Local files"],
+    // Side project — access tool on /tinkering, not a homepage product pitch
+    featured: false,
+    category: "side",
+  },
 ];
 
 export interface Publication {
@@ -153,6 +161,8 @@ export interface Publication {
   preprint?: string;
   /** Link to an interactive web app / visualization for this paper */
   webUrl?: string;
+  /** Peer link: open a related layer/sample locally in NimbleMap (scholar access, not a campaign CTA) */
+  localLayerUrl?: string;
   /** SEO/AEO: keyword-rich bullet points summarising key findings */
   highlights?: string[];
   /** Optional demo/highlight video (site-hosted path under public/), shown when expanded */

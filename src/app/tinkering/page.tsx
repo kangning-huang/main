@@ -4,13 +4,23 @@ import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcru
 import T from "@/components/T";
 
 const DESCRIPTION =
-  "Public-interest data tools Kangning (Ken) Huang builds to learn new methods, including the RoboTaxi Safety Tracker.";
+  "Public-interest data tools Kangning (Ken) Huang builds to learn new methods, including the RoboTaxi Safety Tracker and NimbleMap.";
 
-const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
+const PROJECTS_ZH: Record<
+  string,
+  { title: string; description: string; linkLabel?: string; secondaryLabel?: string }
+> = {
   "RoboTaxi Safety Tracker": {
     title: "自动驾驶出租车安全追踪",
     description:
       "这个仪表板用 NHTSA 碰撞数据，独立追踪特斯拉 Cybercab 的安全表现。你可以比较平均行驶多少里程发生一次事故等安全指标，并查看分析依据。",
+  },
+  NimbleMap: {
+    title: "凌波微图",
+    description:
+      "本地地图查看器：学生和读者可以把公开数据与论文背后的 Shapefile、GeoTIFF、NetCDF、经纬度表直接打开成地图，不必先学一整门 GIS。文件留在自己的电脑上。",
+    linkLabel: "打开示例数据",
+    secondaryLabel: "关于这个查看器",
   },
 };
 
@@ -86,25 +96,84 @@ export default function TinkeringPage() {
           <div className="mt-10 grid gap-5 md:grid-cols-2 animate-fade-up delay-2">
             {sideProjects.map((project) => {
               const zh = PROJECTS_ZH[project.title];
+              const primaryLabel = project.linkLabel ?? null;
+              const secondaryUrl = project.secondaryUrl;
+              const secondaryLabel = project.secondaryLabel;
+              const hasCtas = Boolean(primaryLabel || secondaryUrl);
+
+              if (!hasCtas) {
+                return (
+                  <a
+                    key={project.title}
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="card-hover group flex flex-col rounded-xl border border-rule bg-paper p-6"
+                  >
+                    <div className="flex items-start justify-between">
+                      <h2 className="font-display text-xl text-ink transition-colors group-hover:text-ember">
+                        <T en={project.title} zh={zh?.title ?? project.title} />
+                      </h2>
+                      <span className="ml-2 text-ink-faint transition-colors group-hover:text-ember">
+                        &#8599;
+                      </span>
+                    </div>
+                    <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-muted">
+                      <T en={project.description} zh={zh?.description ?? project.description} />
+                    </p>
+                    <div className="mt-4 flex flex-wrap gap-2">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full bg-paper-warm px-2.5 py-0.5 text-xs text-ink-faint"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </a>
+                );
+              }
+
               return (
-                <a
+                <div
                   key={project.title}
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="card-hover group flex flex-col rounded-xl border border-rule bg-paper p-6"
+                  className="card-hover flex flex-col rounded-xl border border-rule bg-paper p-6"
                 >
-                  <div className="flex items-start justify-between">
-                    <h2 className="font-display text-xl text-ink transition-colors group-hover:text-ember">
-                      <T en={project.title} zh={zh?.title ?? project.title} />
-                    </h2>
-                    <span className="ml-2 text-ink-faint transition-colors group-hover:text-ember">
-                      &#8599;
-                    </span>
-                  </div>
+                  <h2 className="font-display text-xl text-ink">
+                    <T en={project.title} zh={zh?.title ?? project.title} />
+                  </h2>
                   <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-muted">
                     <T en={project.description} zh={zh?.description ?? project.description} />
                   </p>
+                  <div className="mt-4 flex flex-wrap items-baseline gap-x-5 gap-y-2 text-sm">
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="link-underline font-medium text-ember"
+                    >
+                      <T
+                        en={primaryLabel ?? "Open"}
+                        zh={zh?.linkLabel ?? primaryLabel ?? "打开"}
+                      />{" "}
+                      &#8599;
+                    </a>
+                    {secondaryUrl && (
+                      <a
+                        href={secondaryUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link-underline text-ink-faint hover:text-ember"
+                      >
+                        <T
+                          en={secondaryLabel ?? "About"}
+                          zh={zh?.secondaryLabel ?? secondaryLabel ?? "简介"}
+                        />{" "}
+                        &#8599;
+                      </a>
+                    )}
+                  </div>
                   <div className="mt-4 flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
                       <span
@@ -115,7 +184,7 @@ export default function TinkeringPage() {
                       </span>
                     ))}
                   </div>
-                </a>
+                </div>
               );
             })}
           </div>
