@@ -271,7 +271,7 @@ export const MASS_PAPER = {
   doiUrl: "https://doi.org/10.1038/s44284-026-00532-x",
   publicationsHref: "/publications#nested-economies-of-scale-in-global-city-mass",
   appUrl: "https://city-mass.nested-complexity.net",
-  dataUrl: "https://doi.org/10.6084/m9.figshare.29482190",
+  dataUrl: "https://figshare.com/articles/dataset/_b_Nested_economies_of_scale_in_global_city_mass_b_/29482190",
 } as const;
 
 export const HEAT_PAPER = {

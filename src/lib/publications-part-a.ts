@@ -139,7 +139,7 @@ export const PUBLICATIONS_A = [
     doi: "10.1038/s44284-026-00532-x",
     isLeadAuthor: true,
     webUrl: "https://city-mass.nested-complexity.net",
-    dataUrl: "https://doi.org/10.6084/m9.figshare.29482190",
+    dataUrl: "https://figshare.com/articles/dataset/_b_Nested_economies_of_scale_in_global_city_mass_b_/29482190",
     localLayerUrl: "https://nimblemap.com/data.html",
     highlightVideo: "/videos/nested-economies-demo.mp4",
     highlightVideoPoster: "/videos/nested-economies-demo-poster.jpg",
