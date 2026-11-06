@@ -271,6 +271,7 @@ export const MASS_PAPER = {
   doiUrl: "https://doi.org/10.1038/s44284-026-00532-x",
   publicationsHref: "/publications#nested-economies-of-scale-in-global-city-mass",
   appUrl: "https://city-mass.nested-complexity.net",
+  dataUrl: "https://figshare.com/articles/dataset/_b_Nested_economies_of_scale_in_global_city_mass_b_/29482190",
 } as const;
 
 export const HEAT_PAPER = {
@@ -303,6 +304,7 @@ export const EXPANSION_PAPER = {
   year: 2019,
   doiUrl: "https://doi.org/10.1088/1748-9326/ab4b71",
   appUrl: "https://kangning-huang.com/urban-expansion",
+  dataUrl: "https://figshare.com/articles/dataset/Global_Urban_Land_Expansion_by_2050/7897010",
 } as const;
 
 export const JGR_PAPER = {

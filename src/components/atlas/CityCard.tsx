@@ -119,32 +119,7 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
               />
             </p>
 
-            <div className="mt-3 flex flex-wrap gap-3 text-sm">
-              <a
-                href={MASS_PAPER.doiUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-ember hover:underline"
-              >
-                <T en="Paper →" zh="论文 →" />
-              </a>
-              <a
-                href={MASS_PAPER.appUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal hover:underline"
-              >
-                <T en="Full app →" zh="完整应用 →" />
-              </a>
-              <a
-                href="https://nimblemap.com/data.html"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-teal hover:underline"
-              >
-                <T en="Open this layer locally →" zh="在本地打开图层 →" />
-              </a>
-            </div>
+            <Links doi={MASS_PAPER.doiUrl} app={MASS_PAPER.appUrl} data={MASS_PAPER.dataUrl} />
           </>
         )}
       </section>
@@ -334,7 +309,7 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
               en="What this number is not: not the city’s municipal area alone. It is urban land in the modelled urban cluster that contains this centre (clumps can span multiple GHSL centres). Heat-island intensification (0.5–0.7 °C average in the paper) is not shown as a per-city value here — see the paper / Earth Engine app."
               zh="这个数字表示模型中包含该城市中心的整个城市集群有多少城市用地，范围不限于这座城市的行政区，一个集群也可能包含多个 GHSL 城市中心。论文估计热岛平均增强 0.5–0.7 °C；这里没有列出各城市的具体数值，你可以查看论文或 Earth Engine 应用。"
             />
-            <Links doi={EXPANSION_PAPER.doiUrl} app={EXPANSION_PAPER.appUrl} />
+            <Links doi={EXPANSION_PAPER.doiUrl} app={EXPANSION_PAPER.appUrl} data={EXPANSION_PAPER.dataUrl} />
           </>
         )}
       </section>
@@ -709,7 +684,7 @@ function Links({ doi, app, data, local }: { doi: string; app?: string; data?: st
           <T en="Full app →" zh="完整应用 →" />
         </a>
       )}
-      {(local || app || data) && (
+      {(local || data) && (
         <a href={NIMBLEMAP_DATA} target="_blank" rel="noopener noreferrer" className="text-teal hover:underline">
           <T en="Open this layer locally →" zh="在本地打开图层 →" />
         </a>

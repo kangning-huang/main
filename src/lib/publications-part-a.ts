@@ -39,6 +39,7 @@ export const PUBLICATIONS_A = [
     doi: "10.1088/1748-9326/ab4b71",
     isLeadAuthor: true,
     webUrl: "https://kangning-huang.com/urban-expansion",
+    dataUrl: "https://figshare.com/articles/dataset/Global_Urban_Land_Expansion_by_2050/7897010",
     localLayerUrl: "https://nimblemap.com/data.html",
     highlights: [
       "Projects global urban land areas to expand by 0.6–1.3 million km² (78%–171%) between 2015 and 2050 under shared socioeconomic pathways (SSPs)",
@@ -138,6 +139,7 @@ export const PUBLICATIONS_A = [
     doi: "10.1038/s44284-026-00532-x",
     isLeadAuthor: true,
     webUrl: "https://city-mass.nested-complexity.net",
+    dataUrl: "https://figshare.com/articles/dataset/_b_Nested_economies_of_scale_in_global_city_mass_b_/29482190",
     localLayerUrl: "https://nimblemap.com/data.html",
     highlightVideo: "/videos/nested-economies-demo.mp4",
     highlightVideoPoster: "/videos/nested-economies-demo-poster.jpg",
@@ -177,7 +179,6 @@ export const PUBLICATIONS_A = [
     doi: "10.1038/s44432-026-00009-1",
     isLeadAuthor: true,
     webUrl: "https://cooling.kangning-huang.com/",
-    localLayerUrl: "https://nimblemap.com/data.html",
     highlights: [
       "Applies a difference-in-differences causal framework to 77 demolished informal settlements and 584 control sites across Beijing, Shanghai, and Guangzhou (2002–2022), establishing a clear causal cooling signal of approximately 1.5 K",
       "Shows that post-demolition cooling depends on subsequent land use, with greening standards and lower floor-area ratios reinforcing temperature reduction",
@@ -195,7 +196,6 @@ export const PUBLICATIONS_A = [
     doi: "10.1038/s41598-026-70981-w",
     isLeadAuthor: true,
     webUrl: "https://flood.kangning-huang.com/",
-    localLayerUrl: "https://nimblemap.com/data.html",
     highlights: [
       "Integrating building height and protection standards shifts the global flood damage distribution: Southeast Asia accounts for 42% of damages versus only 15% under conventional flood-depth-only assessments",
       "Sole reliance on flood depth overestimates risk in regions with resilient vertical urban forms and robust protection (e.g., Europe, East Asia) while underestimating it in areas with low-rise, unprotected development",
@@ -304,6 +304,8 @@ export const PUBLICATIONS_A = [
     citationCount: 0,
     doi: "10.1073/pnas.2617717123",
     isLeadAuthor: true,
+    dataUrl: "https://figshare.com/articles/dataset/UHS_for_all_101_cities/33027635",
+    localLayerUrl: "https://nimblemap.com/data.html",
     highlights: [
       "Introduces the Urban Homogeneous Scale (UHS) metric — the spatial scale of functionally homogeneous building clusters — as a novel urban morphology measure for understanding urban heat island effects",
       "Analyzes 232,874 observations across 101 global cities using machine learning (XGBoost) building classification and Double Machine Learning causal inference to establish UHS-heat relationships",
