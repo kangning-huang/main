@@ -66,11 +66,6 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
     description:
       "人口增加，建成质量会怎样变化？通过交互地图和数据浏览工具，查看全球 3000 多座城市的数据，了解城市与街区两级相互嵌套的规模经济。",
   },
-  "NimbleMap": {
-    title: "凌波微图",
-    description:
-      "免费桌面应用：把下载的地图数据（Shapefile、GeoPackage、NetCDF、GeoTIFF 等）几秒内打开成地图，无需 GIS 培训。",
-  },
   "Urban Expansion 2050": {
     title: "2050 年的城市扩张",
     description:
@@ -344,6 +339,26 @@ export default async function Home() {
               zh={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
                   我把城市当作复杂的社会-生态系统来研究——它产生于人与自然系统的相互作用。我的课题组——<a href="https://shanghai.nyu.edu/cn/academics/faculty/directory/kangning-ken-huang" target="_blank" rel="noopener noreferrer" className={extLink}>上海纽约大学</a>CLUEs（CLimate and Urban Environments）实验室——结合卫星数据、气候模型与因果推断，对全球数千座城市开展分析。我们关注的问题是：建成环境的总量、高度与布局，如何决定谁会遭受高温、谁会被洪水侵袭，以及一座城市要消耗多少材料。
+                </p>
+              }
+            />
+            <T
+              en={
+                <p className="text-[15px] leading-[1.75] text-ink-muted">
+                  I also keep a small{" "}
+                  <a href="https://nimblemap.com/" target="_blank" rel="noopener noreferrer" className={extLink}>
+                    offline map viewer
+                  </a>{" "}
+                  so anyone can drag open the same public datasets we use.
+                </p>
+              }
+              zh={
+                <p className="text-[15px] leading-[1.75] text-ink-muted">
+                  我也维护一个小型{" "}
+                  <a href="https://nimblemap.com/" target="_blank" rel="noopener noreferrer" className={extLink}>
+                    离线地图查看器
+                  </a>
+                  ，方便任何人把我们用的同一批公开数据拖进去打开。
                 </p>
               }
             />

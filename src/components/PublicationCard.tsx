@@ -154,6 +154,17 @@ export default function PublicationCard({ pub }: { pub: Publication }) {
               <T en="Web App" zh="网页应用" /> &#8599;
             </a>
           )}
+          {pub.localLayerUrl && (
+            <a
+              href={pub.localLayerUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-underline text-xs text-ink-faint hover:text-ember"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <T en="Open this layer locally" zh="在本地打开图层" /> &#8599;
+            </a>
+          )}
         </div>
         {pub.highlights && pub.highlights.length > 0 && (
           <p className="mt-2 text-sm leading-relaxed text-ink-muted">
