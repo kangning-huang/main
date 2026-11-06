@@ -161,7 +161,9 @@ export interface Publication {
   preprint?: string;
   /** Link to an interactive web app / visualization for this paper */
   webUrl?: string;
-  /** Peer link: open a related layer/sample locally in NimbleMap (scholar access, not a campaign CTA) */
+  /** Public downloadable dataset (Figshare, Zenodo, etc.). Gate for Dataset CTA and for localLayerUrl. */
+  dataUrl?: string;
+  /** Peer link: open a related layer/sample locally in NimbleMap — only when dataUrl exists */
   localLayerUrl?: string;
   /** SEO/AEO: keyword-rich bullet points summarising key findings */
   highlights?: string[];

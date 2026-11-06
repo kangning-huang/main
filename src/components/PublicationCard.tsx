@@ -154,6 +154,17 @@ export default function PublicationCard({ pub }: { pub: Publication }) {
               <T en="Web App" zh="网页应用" /> &#8599;
             </a>
           )}
+          {pub.dataUrl && (
+            <a
+              href={pub.dataUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link-underline text-xs text-ink-faint hover:text-ember"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <T en="Dataset" zh="数据集" /> &#8599;
+            </a>
+          )}
           {pub.localLayerUrl && (
             <a
               href={pub.localLayerUrl}
