@@ -474,7 +474,7 @@ export default async function Home() {
                 <T en="FAQ" zh="常见问题" />
               </h2>
             </summary>
-                    <dl className="mt-8 max-w-3xl space-y-6 animate-fade-up delay-1">
+          <dl className="mt-8 max-w-3xl space-y-6 animate-fade-up delay-1">
             <div>
               <dt className="font-display text-lg text-ink">
                 <T en="What does Kangning Huang research?" zh="黄康宁的研究方向是什么？" />
@@ -554,3 +554,173 @@ export default async function Home() {
               </dd>
             </div>
           </dl>
+          </details>
+        </div>
+      </section>
+
+      {/* ── Projects ── */}
+      <section className="py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <div className="flex items-center justify-between">
+            <h2 className="section-heading flex-1">
+              <T en="Projects" zh="研究项目" />
+            </h2>
+            <Link
+              href="/projects"
+              className="link-underline ml-4 shrink-0 text-sm font-medium text-ember"
+            >
+              <T en="View all →" zh="查看全部 →" />
+            </Link>
+          </div>
+
+          <div className="mt-8 grid gap-5 md:grid-cols-2">
+            {featuredProjects.map((project) => (
+              <ProjectCard key={project.title} project={project} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Blog ── */}
+      {featuredPosts.length > 0 ? (
+        <section className="border-t border-rule-faint bg-paper-warm py-16 md:py-20">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <div className="flex items-center justify-between">
+              <h2 className="section-heading flex-1">
+                <T en="Writing" zh="我的文章" />
+              </h2>
+              <Link
+                href="/blog"
+                className="link-underline ml-4 shrink-0 text-sm font-medium text-ember"
+              >
+                <T en="View all →" zh="查看全部 →" />
+              </Link>
+            </div>
+
+            {/* Lead post — compact card with cover image */}
+            <a
+              href={featuredPosts[0].url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-hover group mt-8 flex overflow-hidden rounded-xl border border-rule bg-paper"
+            >
+              {featuredPosts[0].coverImage && (
+                <div className="hidden shrink-0 overflow-hidden sm:block sm:w-44 md:w-52">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={featuredPosts[0].coverImage}
+                    alt={featuredPosts[0].title}
+                    width={832}
+                    height={454}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+                  />
+                </div>
+              )}
+              <div className="flex flex-1 flex-col p-5">
+                <p className="text-xs font-medium uppercase tracking-wider text-ink-faint">
+                  {featuredPosts[0].date}
+                  {featuredPosts[0].wordcount && (
+                    <span className="ml-3 text-ink-faint/60">
+                      {Math.ceil(featuredPosts[0].wordcount / 250)} <T en="min read" zh="分钟读完" />
+                    </span>
+                  )}
+                </p>
+                <h3 className="mt-2 font-display text-xl leading-snug text-ink transition-colors group-hover:text-ember">
+                  {featuredPosts[0].title}
+                </h3>
+                {featuredPosts[0].subtitle && (
+                  <p className="mt-1 text-sm italic text-ink-faint line-clamp-1">
+                    {featuredPosts[0].subtitle}
+                  </p>
+                )}
+                {featuredPosts[0].excerpt && (
+                  <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted line-clamp-2">
+                    {featuredPosts[0].excerpt}
+                  </p>
+                )}
+                <p className="mt-3 text-sm font-medium text-ember">
+                  <T en="Continue reading →" zh="继续阅读 →" />
+                </p>
+              </div>
+            </a>
+
+            {/* Remaining posts — compact list with just title + date */}
+            {featuredPosts.length > 1 && (
+              <div className="mt-4 divide-y divide-rule-faint">
+                {featuredPosts.slice(1).map((post, i) => (
+                  <a
+                    key={i}
+                    href={post.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group flex items-baseline justify-between gap-4 py-3"
+                  >
+                    <h3 className="font-display text-[15px] leading-snug text-ink transition-colors group-hover:text-ember">
+                      {post.title}
+                    </h3>
+                    <span className="shrink-0 text-xs text-ink-faint">
+                      {post.date}
+                    </span>
+                  </a>
+                ))}
+              </div>
+            )}
+
+            <HomeWritingSubscribe mode="with-posts" />
+          </div>
+        </section>
+      ) : (
+        <section className="border-t border-rule-faint bg-paper-warm py-16 md:py-20">
+          <div className="mx-auto max-w-6xl px-6 lg:px-8">
+            <h2 className="section-heading">
+              <T en="Writing" zh="我的文章" />
+            </h2>
+            <HomeWritingSubscribe mode="empty" />
+          </div>
+        </section>
+      )}
+
+      {/* ── Collaborators + Sponsors ── */}
+      <CollaboratorsSponsors />
+    </>
+  );
+}
+
+function ProjectCard({ project }: { project: (typeof PROJECTS)[number] }) {
+  const isInternal = !!project.internalPath;
+  const Wrapper = isInternal ? Link : "a";
+  const props = isInternal
+    ? { href: project.internalPath! }
+    : {
+        href: project.url,
+        target: "_blank" as const,
+        rel: "noopener noreferrer",
+      };
+  const zh = PROJECTS_ZH[project.title];
+
+  return (
+    <Wrapper
+      {...props}
+      className="card-hover group flex flex-col rounded-xl border border-rule bg-paper p-5"
+    >
+      <h3 className="font-display text-lg text-ink transition-colors group-hover:text-ember">
+        <T en={project.title} zh={zh?.title ?? project.title} />
+      </h3>
+      <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted">
+        <T en={project.description} zh={zh?.description ?? project.description} />
+      </p>
+      <div className="mt-4 flex flex-wrap gap-1.5">
+        {project.tags.map((tag) => (
+          <span
+            key={tag}
+            className="rounded-full bg-paper-warm px-2.5 py-0.5 text-xs text-ink-faint"
+          >
+            {tag}
+          </span>
+        ))}
+      </div>
+    </Wrapper>
+  );
+}
