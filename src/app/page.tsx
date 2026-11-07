@@ -474,7 +474,7 @@ export default async function Home() {
                 <T en="FAQ" zh="常见问题" />
               </h2>
             </summary>
-          <dl className="mt-8 max-w-3xl space-y-6 animate-fade-up delay-1">
+                    <dl className="mt-8 max-w-3xl space-y-6 animate-fade-up delay-1">
             <div>
               <dt className="font-display text-lg text-ink">
                 <T en="What does Kangning Huang research?" zh="黄康宁的研究方向是什么？" />
@@ -499,194 +499,58 @@ export default async function Home() {
             </div>
             <div>
               <dt className="font-display text-lg text-ink">
-                <T en="What is urban heat island research?" zh="什么是城市热岛研究？" />
+                <T
+                  en="How does urban form shape heat and material use?"
+                  zh="城市形态如何影响热环境与材料消耗？"
+                />
               </dt>
               <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
                 <T
-                  en="Urban heat islands occur when cities become significantly warmer than surrounding rural areas due to built surfaces absorbing and re-emitting heat. Kangning Huang's research shows that global urban expansion through 2050 could intensify urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally), with nighttime heat stress persisting even when mitigation measures reduce daytime heat islands."
-                  zh="城市热岛指建成地表吸热再放热，使城市显著暖于周边乡村。黄康宁的研究表明，到 2050 年全球城市扩张可能使热岛平均增强 0.5–0.7 °C（局地可达约 3 °C）；即便白天热岛被缓解，夜间热压力仍可能持续。"
+                  en="At the neighborhood scale, denser places need disproportionately less built mass — doubling population density raises built mass by only about 68% (Nature Cities, 2026). Larger homogeneous building clusters cool daytime heat islands (PNAS, 2026). Across the 1,000 largest cities, densifying places also see sharper rises in who is exposed to extreme surface heat than sprawling ones (Scientific Reports, 2025)."
+                  zh="在街区尺度上，更密的地方所需建成质量不成比例地更少——人口密度翻倍，建成质量只增加约 68%（Nature Cities，2026）。更大的均质建筑街区能降低白天热岛（PNAS，2026）。在全球 1000 座最大城市中，正在加密的城市，人口加权的极端地表热暴露上升得也比蔓延扩张的城市更明显（Scientific Reports，2025）。"
                 />
               </dd>
             </div>
             <div>
               <dt className="font-display text-lg text-ink">
-                <T en="How much will cities expand by 2050?" zh="到 2050 年城市会扩张多少？" />
+                <T
+                  en="What happens to heat exposure as cities densify?"
+                  zh="城市加密时，热暴露会发生什么变化？"
+                />
               </dt>
               <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
                 <T
-                  en="According to research published in Environmental Research Letters (2019), global urban land area is projected to increase by 78%–171% (0.6–1.3 million km²) between 2015 and 2050, intensifying urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally) and increasing extreme heat risk for about half of the future urban population."
-                  zh="据 2019 年发表于 Environmental Research Letters 的研究，2015–2050 年全球城市用地预计增加 78%–171%（60–130 万 km²），热岛平均增强 0.5–0.7 °C（局地约 3 °C），约半数未来城市人口的极端高温风险会上升。"
+                  en="Across the 1,000 largest cities, densifying places see sharper rises in who is exposed to extreme surface heat than sprawling ones (Scientific Reports, 2025). Declining urban density can attenuate rising population exposure to surface heat extremes — but where densification concentrates people onto hot surfaces, exposure can rise faster."
+                  zh="在全球 1000 座最大城市中，正在加密的城市，人口加权的极端地表热暴露上升得比蔓延扩张的城市更明显（Scientific Reports，2025）。城市密度下降可以减缓人口暴露于极端地表高温的上升；但若加密把人集中到更热的地表上，暴露上升会更快。"
+                />
+              </dd>
+            </div>
+            <div>
+              <dt className="font-display text-lg text-ink">
+                <T
+                  en="How does building height change flood damage?"
+                  zh="建筑高度如何改变洪灾损失？"
+                />
+              </dt>
+              <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
+                <T
+                  en="Counting building height and flood defenses shifts estimated global flood damage toward Southeast Asia — about 42% of the total versus 15% without those factors (Scientific Reports, 2026)."
+                  zh="把建筑高度和防洪标准算进去，东南亚在全球洪灾损失估算值中的占比会从 15% 升至约 42%（Scientific Reports，2026）。"
+                />
+              </dd>
+            </div>
+            <div>
+              <dt className="font-display text-lg text-ink">
+                <T
+                  en="What urban design choices cool cities?"
+                  zh="哪些城市设计选择能让城市更凉爽？"
+                />
+              </dt>
+              <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
+                <T
+                  en="Larger homogeneous functional building clusters cool daytime surface heat islands. Every extra 100 m of homogeneous building-block scale cuts them by about 0.16 °C (~5%) (PNAS, 2026)."
+                  zh="更大的均质功能建筑街区能降低白天地表热岛。功能均质建筑街区的尺度每增加 100 m，热岛强度约降低 0.16 °C（约 5%）（PNAS，2026）。"
                 />
               </dd>
             </div>
           </dl>
-          </details>
-        </div>
-      </section>
-
-      {/* ── Projects ── */}
-      <section className="py-16 md:py-20">
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <div className="flex items-center justify-between">
-            <h2 className="section-heading flex-1">
-              <T en="Projects" zh="研究项目" />
-            </h2>
-            <Link
-              href="/projects"
-              className="link-underline ml-4 shrink-0 text-sm font-medium text-ember"
-            >
-              <T en="View all →" zh="查看全部 →" />
-            </Link>
-          </div>
-
-          <div className="mt-8 grid gap-5 md:grid-cols-2">
-            {featuredProjects.map((project) => (
-              <ProjectCard key={project.title} project={project} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Blog ── */}
-      {featuredPosts.length > 0 ? (
-        <section className="border-t border-rule-faint bg-paper-warm py-16 md:py-20">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <div className="flex items-center justify-between">
-              <h2 className="section-heading flex-1">
-                <T en="Writing" zh="我的文章" />
-              </h2>
-              <Link
-                href="/blog"
-                className="link-underline ml-4 shrink-0 text-sm font-medium text-ember"
-              >
-                <T en="View all →" zh="查看全部 →" />
-              </Link>
-            </div>
-
-            {/* Lead post — compact card with cover image */}
-            <a
-              href={featuredPosts[0].url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="card-hover group mt-8 flex overflow-hidden rounded-xl border border-rule bg-paper"
-            >
-              {featuredPosts[0].coverImage && (
-                <div className="hidden shrink-0 overflow-hidden sm:block sm:w-44 md:w-52">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img
-                    src={featuredPosts[0].coverImage}
-                    alt={featuredPosts[0].title}
-                    width={832}
-                    height={454}
-                    loading="lazy"
-                    decoding="async"
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                  />
-                </div>
-              )}
-              <div className="flex flex-1 flex-col p-5">
-                <p className="text-xs font-medium uppercase tracking-wider text-ink-faint">
-                  {featuredPosts[0].date}
-                  {featuredPosts[0].wordcount && (
-                    <span className="ml-3 text-ink-faint/60">
-                      {Math.ceil(featuredPosts[0].wordcount / 250)} <T en="min read" zh="分钟读完" />
-                    </span>
-                  )}
-                </p>
-                <h3 className="mt-2 font-display text-xl leading-snug text-ink transition-colors group-hover:text-ember">
-                  {featuredPosts[0].title}
-                </h3>
-                {featuredPosts[0].subtitle && (
-                  <p className="mt-1 text-sm italic text-ink-faint line-clamp-1">
-                    {featuredPosts[0].subtitle}
-                  </p>
-                )}
-                {featuredPosts[0].excerpt && (
-                  <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted line-clamp-2">
-                    {featuredPosts[0].excerpt}
-                  </p>
-                )}
-                <p className="mt-3 text-sm font-medium text-ember">
-                  <T en="Continue reading →" zh="继续阅读 →" />
-                </p>
-              </div>
-            </a>
-
-            {/* Remaining posts — compact list with just title + date */}
-            {featuredPosts.length > 1 && (
-              <div className="mt-4 divide-y divide-rule-faint">
-                {featuredPosts.slice(1).map((post, i) => (
-                  <a
-                    key={i}
-                    href={post.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-baseline justify-between gap-4 py-3"
-                  >
-                    <h3 className="font-display text-[15px] leading-snug text-ink transition-colors group-hover:text-ember">
-                      {post.title}
-                    </h3>
-                    <span className="shrink-0 text-xs text-ink-faint">
-                      {post.date}
-                    </span>
-                  </a>
-                ))}
-              </div>
-            )}
-
-            <HomeWritingSubscribe mode="with-posts" />
-          </div>
-        </section>
-      ) : (
-        <section className="border-t border-rule-faint bg-paper-warm py-16 md:py-20">
-          <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <h2 className="section-heading">
-              <T en="Writing" zh="我的文章" />
-            </h2>
-            <HomeWritingSubscribe mode="empty" />
-          </div>
-        </section>
-      )}
-
-      {/* ── Collaborators + Sponsors ── */}
-      <CollaboratorsSponsors />
-    </>
-  );
-}
-
-function ProjectCard({ project }: { project: (typeof PROJECTS)[number] }) {
-  const isInternal = !!project.internalPath;
-  const Wrapper = isInternal ? Link : "a";
-  const props = isInternal
-    ? { href: project.internalPath! }
-    : {
-        href: project.url,
-        target: "_blank" as const,
-        rel: "noopener noreferrer",
-      };
-  const zh = PROJECTS_ZH[project.title];
-
-  return (
-    <Wrapper
-      {...props}
-      className="card-hover group flex flex-col rounded-xl border border-rule bg-paper p-5"
-    >
-      <h3 className="font-display text-lg text-ink transition-colors group-hover:text-ember">
-        <T en={project.title} zh={zh?.title ?? project.title} />
-      </h3>
-      <p className="mt-2 flex-1 text-sm leading-relaxed text-ink-muted">
-        <T en={project.description} zh={zh?.description ?? project.description} />
-      </p>
-      <div className="mt-4 flex flex-wrap gap-1.5">
-        {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="rounded-full bg-paper-warm px-2.5 py-0.5 text-xs text-ink-faint"
-          >
-            {tag}
-          </span>
-        ))}
-      </div>
-    </Wrapper>
-  );
-}
