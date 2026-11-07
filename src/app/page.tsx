@@ -462,9 +462,18 @@ export default async function Home() {
       {/* ── FAQ (visible copy matching FAQPage JSON-LD) ── */}
       <section className="border-t border-rule-faint py-16 md:py-20" aria-labelledby="faq-heading">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <h2 id="faq-heading" className="section-heading animate-fade-up">
-            <T en="FAQ" zh="常见问题" />
-          </h2>
+          <details className="group/faq animate-fade-up">
+            <summary className="flex cursor-pointer list-none items-baseline gap-2 [&::-webkit-details-marker]:hidden">
+              <span
+                className="inline-block text-sm text-ink-faint transition-transform duration-200 group-open/faq:rotate-90"
+                aria-hidden="true"
+              >
+                ▶
+              </span>
+              <h2 id="faq-heading" className="section-heading">
+                <T en="FAQ" zh="常见问题" />
+              </h2>
+            </summary>
           <dl className="mt-8 max-w-3xl space-y-6 animate-fade-up delay-1">
             <div>
               <dt className="font-display text-lg text-ink">
@@ -511,6 +520,7 @@ export default async function Home() {
               </dd>
             </div>
           </dl>
+          </details>
         </div>
       </section>
 
