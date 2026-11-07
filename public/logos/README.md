@@ -6,8 +6,11 @@ site — not for implying endorsement.
 
 Sources (approximate):
 - Wikimedia Commons: NASA, Google, Yale, Georgia Tech, NYU seal
-- Official site assets: TNC, NYU Shanghai, SYSU, NJU, CAS
+- Official site assets: TNC; NYU Shanghai lockup from
+  `shanghai.nyu.edu/themes/custom/shanghai/images/r2/logo.png`
+  (official white lockup inverted to black for light backgrounds)
+- Official site assets: SYSU, NJU, CAS
 - Site favicons (Google s2) where a clear press logo was unavailable: ECNU, HKU,
-  NCAR, Shanghai Municipal Government, UCAS
+  NCAR, Shanghai Municipal Government
 
 Do not invent logos. Replace favicon stand-ins with official SVGs when available.

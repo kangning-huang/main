@@ -10,6 +10,8 @@ export type PartnerPerson = {
   org: string;
   orgZh?: string;
   logo: string;
+  /** Wide lockup (e.g. NYU Shanghai) needs a wider chip. */
+  wideLogo?: boolean;
 };
 
 export type PartnerOrg = {
@@ -17,6 +19,7 @@ export type PartnerOrg = {
   nameZh?: string;
   href: string;
   logo: string;
+  wideLogo?: boolean;
 };
 
 /** Ordered by prominence (Ken-curated shortlist; Ciais out; Zhan in). */
@@ -24,7 +27,7 @@ export const COLLABORATORS: PartnerPerson[] = [
   {
     name: "Karen C. Seto",
     nameZh: "Karen C. Seto",
-    href: "https://environment.yale.edu/directory/faculty/karen-seto",
+    href: "https://urbanization.yale.edu/",
     org: "Yale",
     orgZh: "耶鲁大学",
     logo: "/logos/yale.svg",
@@ -32,7 +35,7 @@ export const COLLABORATORS: PartnerPerson[] = [
   {
     name: "Michelle L. Bell",
     nameZh: "Michelle L. Bell",
-    href: "https://ysph.yale.edu/profile/michelle-bell/",
+    href: "https://bell-lab.yale.edu/",
     org: "Yale School of Public Health",
     orgZh: "耶鲁大学公共卫生学院",
     logo: "/logos/yale.svg",
@@ -40,7 +43,7 @@ export const COLLABORATORS: PartnerPerson[] = [
   {
     name: "Xia Li",
     nameZh: "黎夏",
-    href: "https://pure.ecnu.edu.cn/zh/persons/xia-li-2/",
+    href: "https://www.geosimulation.cn/",
     org: "East China Normal University",
     orgZh: "华东师范大学",
     logo: "/logos/ecnu.png",
@@ -48,7 +51,7 @@ export const COLLABORATORS: PartnerPerson[] = [
   {
     name: "Xuhui Lee",
     nameZh: "李旭辉",
-    href: "https://environment.yale.edu/directory/faculty/xuhui-lee",
+    href: "https://lee-lab.yale.edu/",
     org: "Yale",
     orgZh: "耶鲁大学",
     logo: "/logos/yale.svg",
@@ -88,7 +91,7 @@ export const COLLABORATORS: PartnerPerson[] = [
   {
     name: "Brian Stone Jr.",
     nameZh: "Brian Stone Jr.",
-    href: "https://planning.gatech.edu/people/brian-stone",
+    href: "https://urbanclimate.gatech.edu/",
     org: "Georgia Tech",
     orgZh: "佐治亚理工学院",
     logo: "/logos/gatech.svg",
@@ -96,7 +99,7 @@ export const COLLABORATORS: PartnerPerson[] = [
   {
     name: "Chao Ren",
     nameZh: "任超",
-    href: "https://www.arch.hku.hk/staff/dla/ren-chao/",
+    href: "https://www.renchao.hku.hk/",
     org: "University of Hong Kong",
     orgZh: "香港大学",
     logo: "/logos/hku.png",
@@ -104,7 +107,7 @@ export const COLLABORATORS: PartnerPerson[] = [
   {
     name: "Wei-Qiang Chen",
     nameZh: "陈伟强",
-    href: "https://people.ucas.ac.cn/~wqchen?language=en",
+    href: "https://cn.wqchen.org/",
     org: "Chinese Academy of Sciences",
     orgZh: "中国科学院",
     logo: "/logos/cas.png",
@@ -112,10 +115,11 @@ export const COLLABORATORS: PartnerPerson[] = [
   {
     name: "ChengHe Guan",
     nameZh: "关成贺",
-    href: "https://shanghai.nyu.edu/academics/faculty/directory/chenghe-guan",
+    href: "https://urban.shanghai.nyu.edu/",
     org: "NYU Shanghai",
     orgZh: "上海纽约大学",
-    logo: "/logos/nyu-shanghai.svg",
+    logo: "/logos/nyu-shanghai.png",
+    wideLogo: true,
   },
   {
     name: "Mingzhen Lu",
@@ -128,15 +132,16 @@ export const COLLABORATORS: PartnerPerson[] = [
   {
     name: "Jiayong Liang",
     nameZh: "梁佳勇",
-    href: "https://shanghai.nyu.edu/academics/faculty/directory/jiayong-liang",
+    href: "https://wp.nyu.edu/jiayong_liang/",
     org: "NYU Shanghai",
     orgZh: "上海纽约大学",
-    logo: "/logos/nyu-shanghai.svg",
+    logo: "/logos/nyu-shanghai.png",
+    wideLogo: true,
   },
   {
     name: "Olga Wilhelmi",
     nameZh: "Olga Wilhelmi",
-    href: "https://gis.ucar.edu/directory/olga-wilhelmi",
+    href: "https://gis.ucar.edu/",
     org: "NCAR",
     orgZh: "美国国家大气研究中心",
     logo: "/logos/ncar.png",
