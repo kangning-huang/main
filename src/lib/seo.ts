@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import { LINKS, SITE, COAUTHOR_LINKS } from "@/lib/constants";
 import type { Publication } from "@/lib/constants";
 import {
-  getScholarCitationCount,
-  ERL_2019_TITLE,
   isInPress,
   isUnderReview,
 } from "@/lib/publications";
@@ -128,10 +126,6 @@ export function personSchema() {
 }
 
 export function faqSchema() {
-  const erlCitations = getScholarCitationCount(ERL_2019_TITLE);
-  const erlCitationsNote = erlCitations
-    ? `, cited ${erlCitations} times on Google Scholar`
-    : "";
   return {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -154,18 +148,34 @@ export function faqSchema() {
       },
       {
         "@type": "Question",
-        name: "What is urban heat island research?",
+        name: "How does urban form shape heat and material use?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Urban heat islands occur when cities become significantly warmer than surrounding rural areas due to built surfaces absorbing and re-emitting heat. Kangning Huang's research shows that global urban expansion through 2050 could intensify urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally), with nighttime heat stress persisting even when mitigation measures reduce daytime heat islands.",
+          text: "At the neighborhood scale, denser places need disproportionately less built mass — doubling population density raises built mass by only about 68% (Nature Cities, 2026). Larger homogeneous building clusters cool daytime heat islands (PNAS, 2026). Across the 1,000 largest cities, densifying places also see sharper rises in who is exposed to extreme surface heat than sprawling ones (Scientific Reports, 2025).",
         },
       },
       {
         "@type": "Question",
-        name: "How much will cities expand by 2050?",
+        name: "What happens to heat exposure as cities densify?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: `According to Kangning Huang's research published in Environmental Research Letters (2019${erlCitationsNote}), global urban land area is projected to increase by 78%–171% (0.6–1.3 million km²) between 2015 and 2050, intensifying urban heat islands by 0.5–0.7 °C on average (up to about 3 °C locally) and increasing extreme heat risk for about half of the future urban population.`,
+          text: "Across the 1,000 largest cities, densifying places see sharper rises in who is exposed to extreme surface heat than sprawling ones (Scientific Reports, 2025). Declining urban density can attenuate rising population exposure to surface heat extremes — but where densification concentrates people onto hot surfaces, exposure can rise faster.",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "How does building height change flood damage?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Counting building height and flood defenses shifts estimated global flood damage toward Southeast Asia — about 42% of the total versus 15% without those factors (Scientific Reports, 2026).",
+        },
+      },
+      {
+        "@type": "Question",
+        name: "What urban design choices cool cities?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Larger homogeneous functional building clusters cool daytime surface heat islands. Every extra 100 m of homogeneous building-block scale cuts them by about 0.16 °C (~5%) (PNAS, 2026).",
         },
       },
     ],
