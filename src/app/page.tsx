@@ -14,6 +14,7 @@ import T from "@/components/T";
 import PublicationCard from "@/components/PublicationCard";
 import HeroHeadshot from "@/components/HeroHeadshot";
 import HomeWritingSubscribe from "@/components/HomeWritingSubscribe";
+import CollaboratorsSponsors from "@/components/CollaboratorsSponsors";
 import { reachHeadline } from "@/lib/influence";
 
 const HOME_DESCRIPTION =
@@ -636,6 +637,9 @@ export default async function Home() {
           </div>
         </section>
       )}
+
+      {/* ── Collaborators + Sponsors ── */}
+      <CollaboratorsSponsors />
     </>
   );
 }
