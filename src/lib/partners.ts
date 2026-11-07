@@ -123,7 +123,7 @@ export const COLLABORATORS: PartnerPerson[] = [
   },
   {
     name: "Mingzhen Lu",
-    nameZh: "陆明臻",
+    nameZh: "卢明镇",
     href: "https://mingzhenlu-lab.com/",
     org: "New York University",
     orgZh: "纽约大学",
@@ -131,7 +131,7 @@ export const COLLABORATORS: PartnerPerson[] = [
   },
   {
     name: "Jiayong Liang",
-    nameZh: "梁佳勇",
+    nameZh: "梁嘉咏",
     href: "https://wp.nyu.edu/jiayong_liang/",
     org: "NYU Shanghai",
     orgZh: "上海纽约大学",
