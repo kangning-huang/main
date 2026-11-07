@@ -96,8 +96,8 @@ const THEMES: Theme[] = [
     },
     title: { en: "Scaling and form", zh: "标度与形态" },
     question: {
-      en: "How do city size and urban form shape materials use, heat and cooling, and flood risk?",
-      zh: "城市的规模与形态，怎样影响建材用量、高温与降温，以及洪水风险？",
+      en: "How do city size and urban form shape material use, heat exposure, and flood risk?",
+      zh: "城市规模与形态怎样影响建材用量、高温暴露和洪水风险？",
     },
     findings: [
       {
@@ -214,8 +214,8 @@ const THEMES: Theme[] = [
     },
     title: { en: "Urban futures", zh: "城市未来" },
     question: {
-      en: "How much will cities grow by mid-century, where, and what will that growth commit us to?",
-      zh: "到本世纪中叶，城市会扩大多少、向哪里扩张，又会留下哪些长期影响？",
+      en: "How much and where will cities grow in the coming decades, and what lasting impacts follow?",
+      zh: "未来几十年，城市会扩大多少、向哪里扩张，又会留下哪些长期影响？",
     },
     findings: [
       {
@@ -299,8 +299,8 @@ const THEMES: Theme[] = [
     },
     title: { en: "Heat", zh: "高温" },
     question: {
-      en: "How does the way we build cities change who overheats, by day and by night?",
-      zh: "城市怎么建，会让哪些人在白天和夜晚更容易受高温影响？",
+      en: "How does urban design reshape heat risk across different communities?",
+      zh: "城市设计怎样改变不同社区的高温风险？",
     },
     findings: [
       {
@@ -399,8 +399,8 @@ const THEMES: Theme[] = [
     },
     title: { en: "Flood and coasts", zh: "洪水与海岸" },
     question: {
-      en: "Where does flood damage really land once we count building height and flood defenses?",
-      zh: "把建筑高度和防洪设施算进去，洪灾损失究竟会落在哪里？",
+      en: "Where does flood damage fall if we account for building geometry and flood protections?",
+      zh: "若把建筑几何与防洪设施算进去，洪灾损失会落在哪里？",
     },
     findings: [
       {
