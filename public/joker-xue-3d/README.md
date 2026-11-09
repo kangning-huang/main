@@ -1,22 +1,9 @@
-# joker-xue-3d (static embed)
+# joker-xue-3d
 
-Vite+R3F build from `kangning-huang/concert_viewing` branch `source`.
+Restored interactive baseline (`concert_viewing` @ `b9a8fd9`):
 
-## Live
-- https://kangning-huang.com/joker-xue-3d/wuxi/
-- https://kangning-huang.com/joker-xue-3d/beijing/
+- Official Damai Wuxi seatmap bitmap + clickable hotspots
+- Meridian-style map→3D leave with Canvas underlay
+- Path `/wuxi/` and `/beijing/` select venue via URL
 
-## Rebuild
-On the iMac source tree:
-
-```bash
-cd ~/Documents/repos/concert_viewing
-git checkout source
-VITE_BASE=/joker-xue-3d/wuxi/ npm run build
-rsync -a --exclude='*.map' dist/ ~/Documents/repos/main/public/joker-xue-3d/wuxi/
-VITE_BASE=/joker-xue-3d/beijing/ npm run build
-rsync -a --exclude='*.map' dist/ ~/Documents/repos/main/public/joker-xue-3d/beijing/
-# then commit + push kangning-huang/main (triggers Pages deploy)
-```
-
-Venue defaults from the URL path (`/wuxi` → Wuxi, `/beijing` → Nest). HUD can still switch venues.
+Do not redeploy the pre-restore un-clickable Damai-poster-only build.
