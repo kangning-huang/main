@@ -1,9 +1,11 @@
 # joker-xue-3d
 
-Restored interactive baseline (`concert_viewing` @ `b9a8fd9`):
+Ken-approved build (2026-11-10): `concert_viewing` branch `restore-c941445` @ `ff98a22`.
 
-- Official Damai Wuxi seatmap bitmap + clickable hotspots
-- Meridian-style map→3D leave with Canvas underlay
-- Path `/wuxi/` and `/beijing/` select venue via URL
+- c941445 seat picking + camera pan (rebuilt from the shipped bundle)
+- Official Damai Wuxi seat map with per-section / price-band hotspots
+- Real Nest photos on LED + IMAG screens
+- Mascots above the stage arch, outside all seating (ray-checked)
+- `/wuxi/` and `/beijing/` select venue by path
 
-Do not redeploy the pre-restore un-clickable Damai-poster-only build.
+Do not redeploy ce0859c or other iMac `source` builds.
