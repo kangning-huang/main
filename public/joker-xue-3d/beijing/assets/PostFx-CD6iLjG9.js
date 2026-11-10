@@ -1,4 +1,4 @@
-import{M as A,O as F,B,F as P,S as f,U as x,V as h,W as g,H as v,N as U,C as D,R as N,a as y,b as z,L as O,c as I,d as L,A as Q,e as V,f as G,g as H,h as M,i as p,j as k,k as W,u as m,r as S,l as j}from"./index-pLF249-d.js";const T={name:"CopyShader",uniforms:{tDiffuse:{value:null},opacity:{value:1}},vertexShader:`
+import{M as A,O as F,B,F as P,S as f,U as x,V as h,W as g,H as v,N as U,C as D,R as N,a as y,b as z,L as O,c as I,d as L,A as Q,e as V,f as G,g as H,h as M,i as p,j as k,k as W,u as m,r as S,l as j}from"./index-Cr7MBLHn.js";const T={name:"CopyShader",uniforms:{tDiffuse:{value:null},opacity:{value:1}},vertexShader:`
 
 		varying vec2 vUv;
 
@@ -175,4 +175,4 @@ import{M as A,O as F,B,F as P,S as f,U as x,V as h,W as g,H as v,N as U,C as D,R
 						lerpBloomFactor(bloomFactors[3]) * vec4(bloomTintColors[3], 1.0) * texture2D(blurTexture4, vUv) +
 						lerpBloomFactor(bloomFactors[4]) * vec4(bloomTintColors[4], 1.0) * texture2D(blurTexture5, vUv) );
 				}`})}}c.BlurDirectionX=new h(1,0);c.BlurDirectionY=new h(0,1);function ie({msaa:n}){const e=m(o=>o.gl),s=m(o=>o.scene),i=m(o=>o.camera),r=m(o=>o.size),t=m(o=>o.viewport.dpr),a=S.useMemo(()=>{const o=new g(1,1,{type:v,samples:n}),l=new Z(e,o);return l.addPass(new ee(s,i)),l.addPass(new c(new h(256,256),.34,.55,.92)),l.addPass(new $),l},[e,s,i,n]);return S.useEffect(()=>{a.setPixelRatio(t),a.setSize(r.width,r.height)},[a,t,r]),S.useEffect(()=>()=>a.dispose(),[a]),j((o,l)=>a.render(l),1),null}export{ie as default};
-//# sourceMappingURL=PostFx-BOYxbmZ6.js.map
+//# sourceMappingURL=PostFx-CD6iLjG9.js.map
