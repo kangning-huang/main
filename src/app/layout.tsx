@@ -96,6 +96,11 @@ export default function RootLayout({
             gtag('config', '${GA_ID}');
           `}
         </Script>
+        <Script
+          src="https://stats.kangning-huang.com/script.js"
+          strategy="afterInteractive"
+          data-website-id="b7831292-9f7d-4586-b67c-60181fd5d962"
+        />
       </head>
       <body>
         <LanguageProvider>
