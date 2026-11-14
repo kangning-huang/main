@@ -239,10 +239,12 @@ export function webPageSchema({
   path,
   title,
   description,
+  inLanguage = "en-US",
 }: {
   path: string;
   title: string;
   description: string;
+  inLanguage?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -251,13 +253,69 @@ export function webPageSchema({
     url: canonicalUrl(path),
     name: title,
     description,
-    inLanguage: "en-US",
+    inLanguage,
     isPartOf: {
       "@id": `${canonicalUrl("/")}#website`,
     },
     about: {
       "@id": `${canonicalUrl("/")}#person`,
     },
+  };
+}
+
+/** Article JSON-LD for first-party blog posts. */
+export function articleSchema({
+  path,
+  headline,
+  description,
+  datePublished,
+  image,
+  inLanguage = "zh-Hans",
+}: {
+  path: string;
+  headline: string;
+  description?: string;
+  datePublished: string;
+  image?: string;
+  inLanguage?: string;
+}) {
+  const url = canonicalUrl(path);
+  const article: Record<string, unknown> = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline,
+    datePublished,
+    url,
+    mainEntityOfPage: url,
+    inLanguage,
+    author: {
+      "@type": "Person",
+      "@id": `${canonicalUrl("/")}#person`,
+      name: "Kangning (Ken) Huang",
+      alternateName: "黄康宁",
+      url: canonicalUrl("/"),
+    },
+    publisher: {
+      "@id": `${canonicalUrl("/")}#person`,
+    },
+  };
+  if (description) article.description = description;
+  if (image) article.image = absoluteUrl(image);
+  return article;
+}
+
+export function itemListSchema(
+  items: { name: string; path: string }[],
+) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      url: canonicalUrl(item.path),
+    })),
   };
 }
 

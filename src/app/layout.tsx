@@ -76,6 +76,12 @@ export default function RootLayout({
       <head>
         {/* llms.txt discovery for AI crawlers */}
         <link rel="alternate" type="text/plain" href={canonicalUrl("/llms.txt")} title="LLMs.txt" />
+        {/* Static export cannot set <html lang> per path. Set zh-Hans on /zh/* as early as possible. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var p=location.pathname;if(p==="/zh"||p.indexOf("/zh/")===0)document.documentElement.lang="zh-Hans";})();`,
+          }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdPerson) }}

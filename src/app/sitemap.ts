@@ -1,6 +1,7 @@
 import { execSync } from "node:child_process";
 import type { MetadataRoute } from "next";
 import { canonicalPageUrl } from "@/lib/seo";
+import { getZhBlogPosts, zhBlogPath } from "@/lib/zh-blog";
 
 export const dynamic = "force-static";
 
@@ -87,6 +88,12 @@ const ENTRIES: Entry[] = [
     sources: ["src/app/blog/page.tsx", "src/lib/blog.ts", "src/data/blog-posts.json"],
   },
   {
+    path: "/zh/blog",
+    changeFrequency: "weekly",
+    priority: 0.9,
+    sources: ["src/app/zh/blog/page.tsx", "src/lib/zh-blog.ts", "content/blog/zh"],
+  },
+  {
     path: "/urban-expansion",
     changeFrequency: "yearly",
     priority: 0.8,
@@ -114,7 +121,14 @@ function gitLastModified(sources: string[]): Date {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  return ENTRIES.map((entry) => ({
+  const zhPosts = getZhBlogPosts().map((post) => ({
+    path: zhBlogPath(post.slug),
+    changeFrequency: "yearly" as Freq,
+    priority: 0.8,
+    sources: [`content/blog/zh/${post.slug}.md`],
+  }));
+
+  return [...ENTRIES, ...zhPosts].map((entry) => ({
     url: canonicalPageUrl(entry.path),
     lastModified: gitLastModified(entry.sources),
     changeFrequency: entry.changeFrequency,

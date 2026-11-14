@@ -14,6 +14,7 @@ import T from "@/components/T";
 import PublicationCard from "@/components/PublicationCard";
 import HeroHeadshot from "@/components/HeroHeadshot";
 import HomeWritingSubscribe from "@/components/HomeWritingSubscribe";
+import LangHrefLink from "@/components/LangHrefLink";
 import CollaboratorsSponsors from "@/components/CollaboratorsSponsors";
 import { reachHeadline } from "@/lib/influence";
 
@@ -589,12 +590,13 @@ export default async function Home() {
               <h2 className="section-heading flex-1">
                 <T en="Writing" zh="我的文章" />
               </h2>
-              <Link
+              <LangHrefLink
                 href="/blog"
+                zhHref="/zh/blog"
                 className="link-underline ml-4 shrink-0 text-sm font-medium text-ember"
               >
                 <T en="View all →" zh="查看全部 →" />
-              </Link>
+              </LangHrefLink>
             </div>
 
             {/* Lead post — compact card with cover image */}
