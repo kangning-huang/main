@@ -28,7 +28,7 @@ export default function HomeWritingSubscribe({
             </p>
             <WeChatArticleList mode="featured" className="mt-4" />
             <Link
-              href="/blog#wechat"
+              href="/zh/blog#wechat"
               className="mt-4 inline-flex items-center text-sm font-medium text-ember transition-colors hover:text-ember-dark"
             >
               到博客页扫码关注 →
@@ -55,7 +55,7 @@ export default function HomeWritingSubscribe({
           </p>
           <WeChatArticleList mode="featured" className="mt-3" />
           <Link
-            href="/blog#wechat"
+            href="/zh/blog#wechat"
             className="mt-3 inline-flex text-sm font-medium text-ember transition-colors hover:text-ember-dark"
           >
             扫码关注公众号 →

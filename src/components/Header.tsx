@@ -5,8 +5,9 @@ import { useState } from "react";
 import { LINKS } from "@/lib/constants";
 import { useLanguage } from "@/lib/language-context";
 import LanguageToggle from "./LanguageToggle";
+import LangHrefLink from "./LangHrefLink";
 
-const NAV_ITEMS = [
+const NAV_ITEMS: { en: string; zh: string; href: string; zhHref?: string }[] = [
   { en: "Atlas", zh: "地图集", href: "/atlas" },
   { en: "Research", zh: "研究", href: "/research" },
   { en: "Publications", zh: "论文", href: "/publications" },
@@ -14,7 +15,7 @@ const NAV_ITEMS = [
   { en: "Lab", zh: "实验室", href: "/lab" },
   { en: "Teaching", zh: "教学", href: "/teaching" },
   { en: "News", zh: "动态", href: "/news" },
-  { en: "Blog", zh: "博客", href: "/blog" },
+  { en: "Blog", zh: "博客", href: "/blog", zhHref: "/zh/blog" },
 ];
 
 const EXTERNAL_LINKS = [
@@ -40,13 +41,14 @@ export default function Header() {
         {/* Desktop nav */}
         <nav className="hidden items-center gap-1 md:flex">
           {NAV_ITEMS.map((item) => (
-            <Link
+            <LangHrefLink
               key={item.href}
               href={item.href}
+              zhHref={item.zhHref}
               className="link-underline px-3 py-1.5 text-sm font-medium text-ink-muted hover:text-ink transition-colors"
             >
               {language === "zh" ? item.zh : item.en}
-            </Link>
+            </LangHrefLink>
           ))}
           <span className="mx-2 h-4 w-px bg-rule" />
           {EXTERNAL_LINKS.map((item) => (
@@ -95,14 +97,15 @@ export default function Header() {
         <nav className="px-6 py-4">
           <div className="flex flex-col gap-1">
             {NAV_ITEMS.map((item) => (
-              <Link
+              <LangHrefLink
                 key={item.href}
                 href={item.href}
+                zhHref={item.zhHref}
                 className="rounded-lg px-3 py-2.5 text-sm font-medium text-ink-muted hover:bg-paper-warm hover:text-ink transition-colors"
                 onClick={() => setMenuOpen(false)}
               >
                 {language === "zh" ? item.zh : item.en}
-              </Link>
+              </LangHrefLink>
             ))}
             <div className="my-2 h-px bg-rule-faint" />
             {EXTERNAL_LINKS.map((item) => (

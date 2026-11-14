@@ -2,8 +2,9 @@ import Link from "next/link";
 import { SITE, LINKS } from "@/lib/constants";
 import T from "./T";
 import FooterWeChatNote from "./FooterWeChatNote";
+import LangHrefLink from "./LangHrefLink";
 
-const SITE_LINKS = [
+const SITE_LINKS: { en: string; zh: string; href: string; zhHref?: string }[] = [
   { en: "Atlas", zh: "地图集", href: "/atlas" },
   { en: "Research", zh: "研究", href: "/research" },
   { en: "Publications", zh: "论文", href: "/publications" },
@@ -11,7 +12,7 @@ const SITE_LINKS = [
   { en: "Lab", zh: "实验室", href: "/lab" },
   { en: "Teaching", zh: "教学", href: "/teaching" },
   { en: "News", zh: "动态", href: "/news" },
-  { en: "Blog", zh: "博客", href: "/blog" },
+  { en: "Blog", zh: "博客", href: "/blog", zhHref: "/zh/blog" },
   { en: "Tinkering", zh: "小项目", href: "/tinkering" },
 ];
 
@@ -54,9 +55,14 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Site">
               {SITE_LINKS.map((link) => (
-                <Link key={link.href} href={link.href} className={linkClass}>
+                <LangHrefLink
+                  key={link.href}
+                  href={link.href}
+                  zhHref={link.zhHref}
+                  className={linkClass}
+                >
                   <T en={link.en} zh={link.zh} />
-                </Link>
+                </LangHrefLink>
               ))}
             </nav>
             <div className="flex flex-wrap gap-x-6 gap-y-2">

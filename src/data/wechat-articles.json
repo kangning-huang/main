@@ -2,20 +2,30 @@
   {
     "id": "flood-depth-vs-building-height",
     "title": "同样淹一米，为什么风险不一样？",
-    "url": "https://mp.weixin.qq.com/s/EynQ0mgMJ_z3pH1MdWPOZA",
-    "date": "2026-10",
+    "url": "/zh/blog/flood-depth-vs-building-height",
+    "wechatUrl": "https://mp.weixin.qq.com/s/EynQ0mgMJ_z3pH1MdWPOZA",
+    "date": "2026-09-29",
     "featured": true
   },
   {
     "id": "village-demolition-cooling-displace",
     "title": "城中村拆除降温 1.5 度，但原住民被迫搬到了城外",
-    "url": "https://mp.weixin.qq.com/s/aIr3Z5yfVYVa5GTP8ZqZMA",
-    "date": "2026-06"
+    "url": "/zh/blog/village-demolition-cooling-displace",
+    "wechatUrl": "https://mp.weixin.qq.com/s/aIr3Z5yfVYVa5GTP8ZqZMA",
+    "date": "2026-06-03"
+  },
+  {
+    "id": "ac-cooks-neighbors",
+    "title": "你家的空调正在炙烤你的邻居",
+    "url": "/zh/blog/ac-cooks-neighbors",
+    "wechatUrl": "https://mp.weixin.qq.com/s/H9mmIwc0LWDt7z6ZgsFULw",
+    "date": "2026-04-22"
   },
   {
     "id": "cooling-policy-may-harm",
     "title": "3000 个城市的数据告诉我们：降温政策可能正在害人",
-    "url": "https://mp.weixin.qq.com/s/2sCC3SHvAZOWxNA8o9xM5g",
-    "date": "2026-04"
+    "url": "/zh/blog/cooling-policy-may-harm",
+    "wechatUrl": "https://mp.weixin.qq.com/s/2sCC3SHvAZOWxNA8o9xM5g",
+    "date": "2026-04-14"
   }
 ]
