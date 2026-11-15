@@ -8,11 +8,45 @@
     "featured": true
   },
   {
+    "id": "garbage-sorting-should-not-stink",
+    "title": "真正能坚持的垃圾分类，应该是不脏不臭的",
+    "url": "/zh/blog/garbage-sorting-should-not-stink",
+    "date": "2026-08-26"
+  },
+  {
+    "id": "make-the-tree-trunk",
+    "title": "与其等行道树慢慢长大，不如我们来造树干",
+    "url": "/zh/blog/make-the-tree-trunk",
+    "date": "2026-06-18",
+    "wechatUrl": "https://mp.weixin.qq.com/s/Mn3HELPJj-RPhZRAsrv9Yg"
+  },
+  {
+    "id": "shanghai-huangpu-river",
+    "title": "上海治好黄浦江，为什么撒哈拉以南的人也该说声谢谢？",
+    "url": "/zh/blog/shanghai-huangpu-river",
+    "date": "2026-06-10",
+    "wechatUrl": "https://mp.weixin.qq.com/s/f9okFikfs-GYFQ9fUWuvog"
+  },
+  {
     "id": "village-demolition-cooling-displace",
     "title": "城中村拆除降温 1.5 度，但原住民被迫搬到了城外",
     "url": "/zh/blog/village-demolition-cooling-displace",
     "wechatUrl": "https://mp.weixin.qq.com/s/aIr3Z5yfVYVa5GTP8ZqZMA",
     "date": "2026-06-03"
+  },
+  {
+    "id": "detroit-decline-is-the-default",
+    "title": "底特律的衰落不是意外，它才是城市的本来面目",
+    "url": "/zh/blog/detroit-decline-is-the-default",
+    "date": "2026-04-26",
+    "wechatUrl": "https://mp.weixin.qq.com/s/vAtzYJorRxzr2lSbUG5Pmg"
+  },
+  {
+    "id": "rio-classroom-heat",
+    "title": "40度的教室，和一堂停在半路的课",
+    "url": "/zh/blog/rio-classroom-heat",
+    "date": "2026-04-23",
+    "wechatUrl": "https://mp.weixin.qq.com/s/qRGOHRqqxUNHR8HfOe2wBQ"
   },
   {
     "id": "ac-cooks-neighbors",
@@ -27,5 +61,110 @@
     "url": "/zh/blog/cooling-policy-may-harm",
     "wechatUrl": "https://mp.weixin.qq.com/s/2sCC3SHvAZOWxNA8o9xM5g",
     "date": "2026-04-14"
+  },
+  {
+    "id": "ai-makes-everyone-worse",
+    "title": "AI越好，所有人越惨？一个博弈论的证明",
+    "url": "/zh/blog/ai-makes-everyone-worse",
+    "date": "2026-04-13",
+    "wechatUrl": "https://mp.weixin.qq.com/s/toWRn5VqoQFQ0-mkB4UMcg"
+  },
+  {
+    "id": "why-plants-are-green",
+    "title": "三十亿年前的一次捡剩饭，决定了今天大自然的颜色",
+    "url": "/zh/blog/why-plants-are-green",
+    "date": "2026-04-11",
+    "wechatUrl": "https://mp.weixin.qq.com/s/Y4t79cSBhhu0uV3D4bD86A"
+  },
+  {
+    "id": "give-up-blue-sky",
+    "title": "为了让更多人活下去，你愿意舍弃蓝天吗？",
+    "url": "/zh/blog/give-up-blue-sky",
+    "date": "2026-04-10",
+    "wechatUrl": "https://mp.weixin.qq.com/s/35n5_5jTKD6iJrNDhhooAQ"
+  },
+  {
+    "id": "trees-may-not-last-to-2050",
+    "title": "你窗外那棵树，可能撑不到 2050 年",
+    "url": "/zh/blog/trees-may-not-last-to-2050",
+    "date": "2026-04-08",
+    "wechatUrl": "https://mp.weixin.qq.com/s/iwZ_m4I1LXiGwLC5W6v5yw"
+  },
+  {
+    "id": "big-cities-are-greener",
+    "title": "为什么说大城市其实更环保？",
+    "url": "/zh/blog/big-cities-are-greener",
+    "date": "2026-04-02",
+    "wechatUrl": "https://mp.weixin.qq.com/s/EpmVnpADyEimMN3Rs1cWSQ"
+  },
+  {
+    "id": "kelly-criterion-life-bets",
+    "title": "顺风局也会破产？凯利公式教你如何在人生的赌局中下注",
+    "url": "/zh/blog/kelly-criterion-life-bets",
+    "date": "2026-03-31",
+    "wechatUrl": "https://mp.weixin.qq.com/s/UZhWej2Kkc7LrmvuoEToSQ"
+  },
+  {
+    "id": "purple-is-an-illusion",
+    "title": "你看到的紫色，可能只是大脑的一个幻觉",
+    "url": "/zh/blog/purple-is-an-illusion",
+    "date": "2026-03-30",
+    "wechatUrl": "https://mp.weixin.qq.com/s/TWfXFovSCD--KRfQkaSTqA"
+  },
+  {
+    "id": "population-doubling-resources",
+    "title": "人口翻倍，为什么城市不需要翻倍的资源？",
+    "url": "/zh/blog/population-doubling-resources",
+    "date": "2026-03-27",
+    "wechatUrl": "https://mp.weixin.qq.com/s/aDqkE_HCzZ_kaZtIlw3ktg"
+  },
+  {
+    "id": "ai-strategic-commander",
+    "title": "还在手把手教AI干活？试试当个\"战略指挥官\"，让AI自己去探路",
+    "url": "/zh/blog/ai-strategic-commander",
+    "date": "2026-02-03",
+    "wechatUrl": "https://mp.weixin.qq.com/s/bH9O-Y7N2blskfxsVStTiQ"
+  },
+  {
+    "id": "robots-strike-in-heat",
+    "title": "\"让机器人替我们干活\"？高温下它们比你先罢工",
+    "url": "/zh/blog/robots-strike-in-heat",
+    "date": "2026-01-28",
+    "wechatUrl": "https://mp.weixin.qq.com/s/Ivu_q3V-d3kXe4L1QycYsA"
+  },
+  {
+    "id": "ev-price-crash-rich",
+    "title": "从98万到9万7，价格暴跌90%！电动车普及背后，竟藏着1%富人的\"秘密\"？",
+    "url": "/zh/blog/ev-price-crash-rich",
+    "date": "2026-01-21",
+    "wechatUrl": "https://mp.weixin.qq.com/s/wqU_Sc1yfG_MGKpQbjpIOA"
+  },
+  {
+    "id": "abt-palindrome",
+    "title": "ABT故事公式的后半段：好论文从头到尾是一首\"回文诗\"",
+    "url": "/zh/blog/abt-palindrome",
+    "date": "2026-01-20",
+    "wechatUrl": "https://mp.weixin.qq.com/s/4Ne0mwnJv-0HdVgp_Ou8Hg"
+  },
+  {
+    "id": "ralph-loop-human-efficiency",
+    "title": "除了增强AI，Ralph Loop也能用来提高人类的效率？用认知科学解读 AI 协作的最优模式",
+    "url": "/zh/blog/ralph-loop-human-efficiency",
+    "date": "2026-01-19",
+    "wechatUrl": "https://mp.weixin.qq.com/s/ELXgV3elD74M_BE4l-uv7Q"
+  },
+  {
+    "id": "ralph-loop-ai-nightmare",
+    "title": "睡觉的时候让AI不停地干活？把AI困在无限循环的牛马噩梦里",
+    "url": "/zh/blog/ralph-loop-ai-nightmare",
+    "date": "2026-01-18",
+    "wechatUrl": "https://mp.weixin.qq.com/s/UoivFqYis6gGsPQLyItN-g"
+  },
+  {
+    "id": "abt-story-formula",
+    "title": "一个简单的公式ABT：把枯燥的研究变成有趣的故事",
+    "url": "/zh/blog/abt-story-formula",
+    "date": "2026-01-14",
+    "wechatUrl": "https://mp.weixin.qq.com/s/N1EPbmECwZe0oOffoWvMwg"
   }
 ]
