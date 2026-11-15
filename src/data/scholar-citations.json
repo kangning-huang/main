@@ -1,5 +1,5 @@
 {
-  "totalCitations": 5119,
+  "totalCitations": 5144,
   "hIndex": 22,
   "i10Index": 28,
   "citedByYears": {
@@ -13,29 +13,29 @@
     "2021": 478,
     "2022": 650,
     "2023": 742,
-    "2024": 818,
-    "2025": 981,
-    "2026": 962
+    "2024": 821,
+    "2025": 984,
+    "2026": 977
   },
   "publications": [
     {
       "title": "Global projections of future urban land expansion under shared socioeconomic pathways",
-      "citationCount": 1145,
+      "citationCount": 1151,
       "year": 2020
     },
     {
       "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
-      "citationCount": 975,
+      "citationCount": 977,
       "year": 2020
     },
     {
       "title": "Research gaps in knowledge of the impact of urban growth on biodiversity",
-      "citationCount": 789,
+      "citationCount": 795,
       "year": 2020
     },
     {
       "title": "Projecting global urban land expansion and heat island intensification through 2050",
-      "citationCount": 553,
+      "citationCount": 555,
       "year": 2019
     },
     {
@@ -50,7 +50,7 @@
     },
     {
       "title": "Globally elevated greenhouse gas emissions from polluted urban rivers",
-      "citationCount": 121,
+      "citationCount": 122,
       "year": 2024
     },
     {
@@ -70,22 +70,22 @@
     },
     {
       "title": "Dual impact of global urban overheating on mortality",
-      "citationCount": 100,
+      "citationCount": 101,
       "year": 2025
     },
     {
       "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
-      "citationCount": 84,
+      "citationCount": 86,
       "year": 2021
     },
     {
       "title": "High‐resolution gridded population projections for China under the shared socioeconomic pathways",
-      "citationCount": 84,
+      "citationCount": 86,
       "year": 2020
     },
     {
       "title": "Evaluation of historical and future wetland degradation using remote sensing imagery and land use modeling",
-      "citationCount": 78,
+      "citationCount": 79,
       "year": 2019
     },
     {
@@ -100,7 +100,7 @@
     },
     {
       "title": "Exacerbated heat stress induced by urban browning in the Global South",
-      "citationCount": 53,
+      "citationCount": 54,
       "year": 2025
     },
     {
@@ -130,7 +130,7 @@
     },
     {
       "title": "Urban forests facing climate risks: ECOLOGY",
-      "citationCount": 19,
+      "citationCount": 20,
       "year": 2022
     },
     {
@@ -309,44 +309,44 @@
       "year": 2012
     }
   ],
-  "lastUpdated": "2026-11-08T04:57:48.447Z",
+  "lastUpdated": "2026-11-15T05:21:24.307Z",
   "reachScholarPrototype": {
     "$comment": "Scholar-backed Reach citing prototype embedded for GH Actions (workflow only commits this JSON). citedBy values are Google Scholar counts via SerpAPI — never invented. Deep grey-lit sweep via --prototype page budgets.",
-    "asOf": "2026-11-08",
+    "asOf": "2026-11-15",
     "source": "Google Scholar (SerpAPI)",
     "encoding": "citing-work-scholar-cited-by",
     "prototype": true,
     "meta": {
       "schema": "field-shelf/scholar-v0",
-      "asOf": "2026-11-08",
+      "asOf": "2026-11-15",
       "source": "Google Scholar (SerpAPI)",
       "encoding": "citing-work-scholar-cited-by",
       "prototype": true,
       "mode": "prototype-deep-grey-lit",
-      "squareCount": 733,
-      "greyLitSquares": 37,
+      "squareCount": 735,
+      "greyLitSquares": 36,
       "pagesByPaper": [
         {
           "short": "Nat Sustain 2020 · global urban change 1985–2015",
-          "scholarCitationCount": 975,
+          "scholarCitationCount": 977,
           "pagesFetched": 26,
           "maxPages": 30,
-          "citingFetched": 401,
+          "citingFetched": 403,
           "citingGreyLit": 21,
           "stoppedReason": "deep-complete"
         },
         {
           "short": "ERL 2019 · urban expansion to 2050",
-          "scholarCitationCount": 553,
+          "scholarCitationCount": 555,
           "pagesFetched": 22,
           "maxPages": 30,
           "citingFetched": 277,
-          "citingGreyLit": 14,
+          "citingGreyLit": 13,
           "stoppedReason": "deep-complete"
         },
         {
           "short": "JGR-A 2021 · nighttime heat stress",
-          "scholarCitationCount": 84,
+          "scholarCitationCount": 86,
           "pagesFetched": 12,
           "maxPages": 12,
           "citingFetched": 72,
@@ -355,19 +355,19 @@
         }
       ],
       "fetchStatus": "ok",
-      "startedAt": "2026-11-08T04:57:49.550Z",
-      "finishedAt": "2026-11-08T05:01:22.707Z",
+      "startedAt": "2026-11-15T05:21:26.889Z",
+      "finishedAt": "2026-11-15T05:24:52.887Z",
       "papers": 3,
       "fetchStats": [
         {
           "doi": "10.1038/s41893-020-0521-x",
           "short": "Nat Sustain 2020 · global urban change 1985–2015",
           "citesId": "5780519463719279942",
-          "scholarCitationCount": 975,
+          "scholarCitationCount": 977,
           "maxPages": 30,
           "pagesFetched": 26,
           "stoppedReason": "deep-complete",
-          "fetched": 401,
+          "fetched": 403,
           "greyLit": 21,
           "sliceLog": [
             {
@@ -420,49 +420,49 @@
             {
               "label": "grey:thesis OR dissertation:p1",
               "got": 20,
-              "added": 17,
+              "added": 16,
               "greyAdded": 0,
-              "total": 125
+              "total": 124
             },
             {
               "label": "grey:\"working paper\" OR \"technical report\" OR \"policy brief\":p0",
               "got": 20,
               "added": 15,
               "greyAdded": 0,
-              "total": 140
+              "total": 139
             },
             {
               "label": "grey:\"working paper\" OR \"technical report\" OR \"policy brief\":p1",
               "got": 20,
               "added": 15,
               "greyAdded": 1,
-              "total": 155
+              "total": 154
             },
             {
               "label": "grey:报告 OR 学位论文 OR 白皮书:p0",
               "got": 7,
               "added": 3,
               "greyAdded": 0,
-              "total": 158
+              "total": 157
             },
             {
               "label": "grey:CNKI OR SSRN:p0",
               "got": 20,
               "added": 15,
               "greyAdded": 4,
-              "total": 173
+              "total": 172
             },
             {
               "label": "grey:CNKI OR SSRN:p1",
               "got": 20,
               "added": 14,
               "greyAdded": 0,
-              "total": 187
+              "total": 186
             },
             {
               "label": "year:2020:p0",
               "got": 15,
-              "added": 10,
+              "added": 11,
               "greyAdded": 0,
               "total": 197
             },
@@ -552,10 +552,10 @@
             },
             {
               "label": "year:2027:p0",
-              "got": 3,
-              "added": 2,
+              "got": 5,
+              "added": 4,
               "greyAdded": 0,
-              "total": 401
+              "total": 403
             }
           ]
         },
@@ -563,12 +563,12 @@
           "doi": "10.1088/1748-9326/ab4b71",
           "short": "ERL 2019 · urban expansion to 2050",
           "citesId": "14363677741339472861",
-          "scholarCitationCount": 553,
+          "scholarCitationCount": 555,
           "maxPages": 30,
           "pagesFetched": 22,
           "stoppedReason": "deep-complete",
           "fetched": 277,
-          "greyLit": 14,
+          "greyLit": 13,
           "sliceLog": [
             {
               "label": "grey:IPCC:p0",
@@ -623,7 +623,7 @@
               "label": "grey:thesis OR dissertation:p1",
               "got": 20,
               "added": 19,
-              "greyAdded": 2,
+              "greyAdded": 1,
               "total": 126
             },
             {
@@ -730,7 +730,7 @@
           "doi": "10.1029/2020JD033831",
           "short": "JGR-A 2021 · nighttime heat stress",
           "citesId": "2649149592188866483",
-          "scholarCitationCount": 84,
+          "scholarCitationCount": 86,
           "maxPages": 12,
           "pagesFetched": 12,
           "stoppedReason": "max-pages",
@@ -840,8 +840,8 @@
         "title": "High-spatiotemporal-resolution mapping of global urban change from 1985 to 2015",
         "venue": "Nature Sustainability 3 (7), 564-570, 2020",
         "scholarCitesId": "5780519463719279942",
-        "scholarCitationCount": 975,
-        "citingFetched": 401,
+        "scholarCitationCount": 977,
+        "citingFetched": 403,
         "citingGreyLit": 21,
         "pagesFetched": 26,
         "maxPages": 30,
@@ -856,9 +856,9 @@
         "title": "Projecting global urban land expansion and heat island intensification through 2050",
         "venue": "Environmental Research Letters 14 (11), 114037, 2019",
         "scholarCitesId": "14363677741339472861",
-        "scholarCitationCount": 553,
+        "scholarCitationCount": 555,
         "citingFetched": 277,
-        "citingGreyLit": 14,
+        "citingGreyLit": 13,
         "pagesFetched": 22,
         "maxPages": 30,
         "stoppedReason": "deep-complete"
@@ -872,7 +872,7 @@
         "title": "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
         "venue": "Journal of Geophysical Research: Atmospheres 126 (4), e2020JD033831, 2021",
         "scholarCitesId": "2649149592188866483",
-        "scholarCitationCount": 84,
+        "scholarCitationCount": 86,
         "citingFetched": 72,
         "citingGreyLit": 2,
         "pagesFetched": 12,
@@ -987,7 +987,7 @@
         "year": 2021,
         "venue": "Nature",
         "summary": "B Tellman, JA Sullivan, C Kuhn, AJ Kettner, CS Doyle… - Nature, 2021 - nature.com",
-        "citedBy": 1894,
+        "citedBy": 1911,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1043,7 +1043,7 @@
         "year": 2024,
         "venue": "Nature Communications",
         "summary": "L Qiu, J He, C Yue, P Ciais, C Zheng - Nature Communications, 2024 - nature.com",
-        "citedBy": 85,
+        "citedBy": 86,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1101,7 +1101,7 @@
         "year": 2025,
         "venue": "Journal of Cleaner Production",
         "summary": "Y Wang, D Zhang, C He, T Qi, P Li - Journal of Cleaner Production, 2025 - Elsevier",
-        "citedBy": 12,
+        "citedBy": 13,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1144,7 +1144,7 @@
         "year": 2023,
         "venue": "Advances in Water Science",
         "summary": "C Liu, Y Sun, C Hu, C Zhao, Y XU, W LI - Advances in Water Science, 2023 - skxjz.nhri.cn",
-        "citedBy": 15,
+        "citedBy": 16,
         "detectedGreyLit": true,
         "greyLitReasons": [
           "CNKI"
@@ -1231,7 +1231,7 @@
         "year": 2023,
         "venue": "Frontiers in Marine Science",
         "summary": "R Liu, L Pu, S Huang - Frontiers in Marine Science, 2023 - frontiersin.org",
-        "citedBy": 20,
+        "citedBy": 19,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1350,7 +1350,7 @@
         "year": 2021,
         "venue": "Science China Earth Sciences",
         "summary": "X Huang, J Li, J Yang, Z Zhang, D Li, X Liu - Science China Earth Sciences, 2021 - Springer",
-        "citedBy": 203,
+        "citedBy": 204,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1448,7 +1448,7 @@
         "year": 2025,
         "venue": "One Earth",
         "summary": "R Ganzenmüller, WA Obermeier, S Bultan… - One Earth, 2025 - cell.com",
-        "citedBy": 14,
+        "citedBy": 15,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1477,7 +1477,7 @@
         "year": 2025,
         "venue": "Carbon Balance and Management",
         "summary": "Z Li, T Yan, Y Du - Carbon Balance and Management, 2025 - Springer",
-        "citedBy": 12,
+        "citedBy": 13,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1533,7 +1533,7 @@
         "year": 2025,
         "venue": "Sustainable Cities and …",
         "summary": "X Li, X Li, H Ma, J Zhou, F Ge, W Zhang, Y Yan… - Sustainable Cities and …, 2025 - Elsevier",
-        "citedBy": 13,
+        "citedBy": 14,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1547,7 +1547,7 @@
         "year": 2024,
         "venue": "Science",
         "summary": "Z Ao, X Hu, S Tao, X Hu, G Wang, M Li, F Wang, L Hu… - Science, 2024 - science.org",
-        "citedBy": 229,
+        "citedBy": 232,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1561,7 +1561,7 @@
         "year": 2021,
         "venue": "Environmental …",
         "summary": "H Haberl, D Wiedenhofer, F Schug… - Environmental …, 2021 - pmc.ncbi.nlm.nih.gov",
-        "citedBy": 172,
+        "citedBy": 174,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1715,7 +1715,7 @@
         "year": 2024,
         "venue": "Sustainable Cities and Society",
         "summary": "Y Zhang, S Song, X Li, S Gao, M Raubal - Sustainable Cities and Society, 2024 - Elsevier",
-        "citedBy": 38,
+        "citedBy": 39,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1743,7 +1743,7 @@
         "year": 2026,
         "venue": "Resources …",
         "summary": "H Chen, H Xia, G Ding, Y Tan, W Xiao… - Resources …, 2026 - Elsevier",
-        "citedBy": 9,
+        "citedBy": 10,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1757,7 +1757,7 @@
         "year": 2026,
         "venue": "International Journal of Applied …",
         "summary": "THK Chen, W Chen, EC Stokes, Y Zhou - International Journal of Applied …, 2026 - Elsevier",
-        "citedBy": 6,
+        "citedBy": 7,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1799,7 +1799,7 @@
         "year": 2023,
         "venue": "Nature",
         "summary": "J Rentschler, P Avner, M Marconcini, R Su, E Strano… - Nature, 2023 - nature.com",
-        "citedBy": 604,
+        "citedBy": 609,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1841,7 +1841,7 @@
         "year": 2025,
         "venue": "Scientific Data",
         "summary": "M Kummu, M Kosonen, S Masoumzadeh Sayyar - Scientific Data, 2025 - nature.com",
-        "citedBy": 209,
+        "citedBy": 214,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -1866,7 +1866,7 @@
         "paperIdxs": [
           0
         ],
-        "link": "https://books.google.com/books?hl=en&lr=&id=njCKEQAAQBAJ&oi=fnd&pg=PA99&dq=UNEP+OR+%22World+Bank%22+OR+FAO+OR+UNDP+OR+WMO&ots=hnJjFMPMIQ&sig=Y8_sBoO6b78LYOTAwQdFvQFuT3E"
+        "link": "https://books.google.com/books?hl=en&lr=&id=njCKEQAAQBAJ&oi=fnd&pg=PA99&dq=UNEP+OR+%22World+Bank%22+OR+FAO+OR+UNDP+OR+WMO&ots=hnJjLMVOJU&sig=as5c0QCWGEeH6lO8w7j8FUYN2fo"
       },
       {
         "id": "GS_3mhVii0AJIkJ",
@@ -1961,7 +1961,7 @@
         "year": 2022,
         "venue": "Science of the Total …",
         "summary": "S Huang, X Chen, C Chang, T Liu, Y Huang… - Science of the Total …, 2022 - Elsevier",
-        "citedBy": 66,
+        "citedBy": 67,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -2045,7 +2045,7 @@
         "year": 2024,
         "venue": "Science Advances",
         "summary": "Y Guo, J Wang, Y Ge, C Zhou - Science Advances, 2024 - science.org",
-        "citedBy": 135,
+        "citedBy": 137,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -2087,7 +2087,7 @@
         "year": 2021,
         "venue": "Earth System …",
         "summary": "J Han, Z Zhang, Y Luo, J Cao, L Zhang… - Earth System …, 2021 - essd.copernicus.org",
-        "citedBy": 2,
+        "citedBy": 3,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -2150,22 +2150,6 @@
           0
         ],
         "link": "https://www.nature.com/articles/s41597-024-04228-6"
-      },
-      {
-        "id": "GS_n2Sgsmj1AXoJ",
-        "title": "Bats in montane villages and beyond: Exploring how habitat structure and traits shape urban responses: A thesis submitted in partial fulfilment of the requirements for …",
-        "year": 2025,
-        "venue": null,
-        "summary": "Q O'Halloran - 2025 - researcharchive.lincoln.ac.nz",
-        "citedBy": 0,
-        "detectedGreyLit": true,
-        "greyLitReasons": [
-          "thesis"
-        ],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://researcharchive.lincoln.ac.nz/entities/publication/340f329d-7d4b-4ee9-9964-488fe4f61550"
       },
       {
         "id": "GS_uxLZ7w32OdIJ",
@@ -2236,6 +2220,22 @@
           0
         ],
         "link": "https://search.proquest.com/openview/669f2c4316eda595f80162e32d77c79f/1?pq-origsite=gscholar&cbl=2026366"
+      },
+      {
+        "id": "GS_n2Sgsmj1AXoJ",
+        "title": "Bats in montane villages and beyond: Exploring how habitat structure and traits shape urban responses: A thesis submitted in partial fulfilment of the …",
+        "year": 2025,
+        "venue": null,
+        "summary": "Q O'Halloran - 2025 - Lincoln University",
+        "citedBy": 0,
+        "detectedGreyLit": true,
+        "greyLitReasons": [
+          "thesis"
+        ],
+        "paperIdxs": [
+          0
+        ],
+        "link": null
       },
       {
         "id": "GS_LSaIgOvtfiMJ",
@@ -2485,14 +2485,14 @@
         "title": "Multi-modal deep learning with Sentinel-1 and Sentinel-2 data for urban mapping and change detection",
         "year": 2022,
         "venue": null,
-        "summary": "S Hafner - 2022 - KTH Royal Institute of Technology",
+        "summary": "S Hafner - 2022 - diva-portal.org",
         "citedBy": 7,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           0
         ],
-        "link": null
+        "link": "https://www.diva-portal.org/smash/record.jsf?pid=diva2:1661349"
       },
       {
         "id": "GS_Kvwnor3tgmwJ",
@@ -2542,7 +2542,7 @@
         "year": 2024,
         "venue": "… system science data",
         "summary": "Z Yin, P Lin, R Riggs, GH Allen, X Lei… - … system science data, 2024 - essd.copernicus.org",
-        "citedBy": 30,
+        "citedBy": 32,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -2649,20 +2649,6 @@
         "link": "https://search.proquest.com/openview/249f9ba9d7ec4252a9f45f79d7357525/1?pq-origsite=gscholar&cbl=18750&diss=y"
       },
       {
-        "id": "GS_N5hx05XYdBsJ",
-        "title": "Impact of land use and landscape on runoff and sediment in the sub-humid Ethiopian highlands: the Ene-chilala watershed",
-        "year": 2020,
-        "venue": null,
-        "summary": "N Hailu - 2020 - ir.bdu.edu.et",
-        "citedBy": 0,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "http://ir.bdu.edu.et/handle/123456789/10739"
-      },
-      {
         "id": "GS_c6Mgi75fV68J",
         "title": "Operational procedure for multi-temporal assessment of built-up surfaces and volumes in the Global Human Settlement Layer R2023A",
         "year": 2024,
@@ -2752,7 +2738,7 @@
         "year": 2024,
         "venue": "… Journal of Digital …",
         "summary": "M Pesaresi, M Schiavina, P Politis, S Freire… - … Journal of Digital …, 2024 - Taylor & Francis",
-        "citedBy": 443,
+        "citedBy": 449,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -2794,7 +2780,7 @@
         "year": 2023,
         "venue": "Remote Sensing",
         "summary": "F Marzialetti, P Gamba, A Sorriso, ML Carranza - Remote Sensing, 2023 - mdpi.com",
-        "citedBy": 27,
+        "citedBy": 28,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -2822,7 +2808,7 @@
         "year": 2024,
         "venue": "Nature Cities",
         "summary": "L Dong, F Duarte, G Duranton, P Santi, M Barthelemy… - Nature Cities, 2024 - nature.com",
-        "citedBy": 114,
+        "citedBy": 115,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -2892,7 +2878,7 @@
         "year": 2020,
         "venue": "Frontiers in Ecology and …",
         "summary": "CP Hansen, AW Parsons, R Kays… - Frontiers in Ecology and …, 2020 - frontiersin.org",
-        "citedBy": 108,
+        "citedBy": 109,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -2948,7 +2934,7 @@
         "year": 2025,
         "venue": "Scientific Data",
         "summary": "Y Zhang, H Zhao, Y Long - Scientific Data, 2025 - nature.com",
-        "citedBy": 143,
+        "citedBy": 147,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -3309,7 +3295,7 @@
         "title": "Construction and analysis of global world cultural heritage knowledge graph based on big earth data",
         "year": 2021,
         "venue": "National Remote Sensing …",
-        "summary": "Y Liang, Y Ruixia, X Yihan, W Pu, Y Anlin… - National Remote Sensing …, 2021 - ygxb.ac.cn",
+        "summary": "Y Liang, Y Ruixia, XIE Yihan, W Pu, Y Anlin… - National Remote Sensing …, 2021 - ygxb.ac.cn",
         "citedBy": 6,
         "detectedGreyLit": false,
         "greyLitReasons": [],
@@ -3521,7 +3507,7 @@
         "year": 2021,
         "venue": "Remote Sensing",
         "summary": "H Mu, X Li, X Du, J Huang, W Su, T Hu, Y Wen, P Yin… - Remote Sensing, 2021 - mdpi.com",
-        "citedBy": 88,
+        "citedBy": 89,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -3549,7 +3535,7 @@
         "year": 2020,
         "venue": "Science",
         "summary": "CJ Schell, K Dyson, TL Fuentes, S Des Roches… - Science, 2020 - science.org",
-        "citedBy": 918,
+        "citedBy": 920,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -3563,7 +3549,7 @@
         "year": 2020,
         "venue": "Journal of Open Source Software",
         "summary": "Q Wu - Journal of Open Source Software, 2020 - joss.theoj.org",
-        "citedBy": 362,
+        "citedBy": 364,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -3684,12 +3670,26 @@
         "link": "https://www.researchgate.net/profile/David-Fletcher-18/publication/351231464_REGREEN_Deliverable_N21_REPORT_ON_ASSESSMENT_OF_DRIVERS_AND_PRESSURES_EADING_TO_URBAN_CHALLENGES_ACROSS_THE_ULLS_INCLUDING_SPATIAL_AND_TEMPORAL_COMPONENTS/links/608c338192851c490fa9d80a/REGREEN-Deliverable-N21-REPORT-ON-ASSESSMENT-OF-DRIVERS-AND-PRESSURES-EADING-TO-URBAN-CHALLENGES-ACROSS-THE-ULLS-INCLUDING-SPATIAL-AND-TEMPORAL-COMPONENTS.pdf"
       },
       {
+        "id": "GS_N5hx05XYdBsJ",
+        "title": "Impact of land use and landscape on runoff and sediment in the sub-humid Ethiopian highlands: the Ene-chilala watershed",
+        "year": 2020,
+        "venue": null,
+        "summary": "N Hailu - 2020",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": null
+      },
+      {
         "id": "GS_AxjgP9guAAkJ",
         "title": "The 30 m annual land cover dataset and its dynamics in China from 1990 to 2019",
         "year": 2021,
         "venue": "Earth system science data",
         "summary": "J Yang, X Huang - Earth system science data, 2021 - essd.copernicus.org",
-        "citedBy": 5200,
+        "citedBy": 5241,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -3703,7 +3703,7 @@
         "year": 2021,
         "venue": "Trends in Ecology & …",
         "summary": "MR Lambert, KI Brans, S Des Roches… - Trends in Ecology & …, 2021 - cell.com",
-        "citedBy": 197,
+        "citedBy": 200,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -3760,7 +3760,7 @@
         "year": 2021,
         "venue": "GIScience & Remote …",
         "summary": "H Shafizadeh-Moghadam, M Khazaei… - GIScience & Remote …, 2021 - Taylor & Francis",
-        "citedBy": 204,
+        "citedBy": 205,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -3788,7 +3788,7 @@
         "year": 2021,
         "venue": "Journal of Environmental Management",
         "summary": "D Zhu, T Chen, Z Wang, R Niu - Journal of Environmental Management, 2021 - Elsevier",
-        "citedBy": 161,
+        "citedBy": 163,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -3816,7 +3816,7 @@
         "year": 2021,
         "venue": "Land",
         "summary": "JL Kouassi, A Gyau, L Diby, Y Bene, C Kouamé - Land, 2021 - mdpi.com",
-        "citedBy": 177,
+        "citedBy": 176,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -3844,7 +3844,7 @@
         "year": 2021,
         "venue": "EPJ data science",
         "summary": "OH Kwon, I Hong, J Yang, DY Wohn, WS Jung, M Cha - EPJ data science, 2021 - Springer",
-        "citedBy": 175,
+        "citedBy": 176,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -3901,7 +3901,7 @@
         "year": 2021,
         "venue": "Urban Forestry & Urban Greening",
         "summary": "KA Vega, C Küffer - Urban Forestry & Urban Greening, 2021 - Elsevier",
-        "citedBy": 136,
+        "citedBy": 138,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -3915,7 +3915,7 @@
         "year": 2021,
         "venue": "ISPRS journal of …",
         "summary": "X Jiang, S Liang, X He, AD Ziegler, P Lin, M Pan… - ISPRS journal of …, 2021 - Elsevier",
-        "citedBy": 130,
+        "citedBy": 132,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4125,7 +4125,7 @@
         "year": 2022,
         "venue": "Remote Sensing of Environment",
         "summary": "Z Zhu, S Qiu, S Ye - Remote Sensing of Environment, 2022 - Elsevier",
-        "citedBy": 349,
+        "citedBy": 350,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4139,7 +4139,7 @@
         "year": 2022,
         "venue": "Urban Climate",
         "summary": "A Aslam, IA Rana - Urban Climate, 2022 - Elsevier",
-        "citedBy": 204,
+        "citedBy": 205,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4153,7 +4153,7 @@
         "year": 2022,
         "venue": "Nature …",
         "summary": "Q Ren, C He, Q Huang, P Shi, D Zhang… - Nature …, 2022 - nature.com",
-        "citedBy": 379,
+        "citedBy": 382,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4181,7 +4181,7 @@
         "year": 2022,
         "venue": "Earth System Science …",
         "summary": "X Zhang, L Liu, T Zhao, Y Gao… - Earth System Science …, 2022 - essd.copernicus.org",
-        "citedBy": 269,
+        "citedBy": 270,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4195,7 +4195,7 @@
         "year": 2022,
         "venue": "PLOS Sustainability and …",
         "summary": "M Behnisch, T Krüger, JAG Jaeger - PLOS Sustainability and …, 2022 - journals.plos.org",
-        "citedBy": 166,
+        "citedBy": 167,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4223,7 +4223,7 @@
         "year": 2022,
         "venue": "Habitat International",
         "summary": "S Chakraborty, I Maity, H Dadashpoor, J Novotnẏ… - Habitat International, 2022 - Elsevier",
-        "citedBy": 181,
+        "citedBy": 183,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4237,7 +4237,7 @@
         "year": 2022,
         "venue": "Ecosystems",
         "summary": "C Senf - Ecosystems, 2022 - Springer",
-        "citedBy": 128,
+        "citedBy": 130,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4307,7 +4307,7 @@
         "year": 2022,
         "venue": "Environmental …",
         "summary": "KM Andreadis, OEJ Wing, E Colven… - Environmental …, 2022 - iopscience.iop.org",
-        "citedBy": 166,
+        "citedBy": 167,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4335,7 +4335,7 @@
         "year": 2022,
         "venue": "Landscape and Urban …",
         "summary": "Y Tian, NE Tsendbazar, E van Leeuwen… - Landscape and Urban …, 2022 - Elsevier",
-        "citedBy": 127,
+        "citedBy": 128,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4462,7 +4462,7 @@
         "year": 2022,
         "venue": "Remote Sensing of Environment",
         "summary": "C Zhang, J Dong, Q Ge - Remote Sensing of Environment, 2022 - Elsevier",
-        "citedBy": 80,
+        "citedBy": 81,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4560,7 +4560,7 @@
         "year": 2022,
         "venue": "Land Use Policy",
         "summary": "H Chen, F Meng, Z Yu, Y Tan - Land Use Policy, 2022 - Elsevier",
-        "citedBy": 69,
+        "citedBy": 71,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4616,7 +4616,7 @@
         "year": 2023,
         "venue": "Science of the Total …",
         "summary": "S Zhao, M Liu, M Tao, W Zhou, X Lu, Y Xiong… - Science of the Total …, 2023 - Elsevier",
-        "citedBy": 113,
+        "citedBy": 114,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4714,7 +4714,7 @@
         "year": 2023,
         "venue": "Remote Sensing of Environment",
         "summary": "H Liu, B He, S Gao, Q Zhan, C Yang - Remote Sensing of Environment, 2023 - Elsevier",
-        "citedBy": 124,
+        "citedBy": 126,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4742,7 +4742,7 @@
         "year": 2023,
         "venue": "Ecological Indicators",
         "summary": "X Deng, F Gao, S Liao, Y Liu, W Chen - Ecological Indicators, 2023 - Elsevier",
-        "citedBy": 130,
+        "citedBy": 133,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4756,7 +4756,7 @@
         "year": 2023,
         "venue": "Sustainable Cities and Society",
         "summary": "J Lin, W Zhang, Y Wen, S Qiu - Sustainable Cities and Society, 2023 - Elsevier",
-        "citedBy": 98,
+        "citedBy": 99,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4770,7 +4770,7 @@
         "year": 2023,
         "venue": "Scientific Data",
         "summary": "J Li, H He, Q Zeng, L Chen, R Sun - Scientific Data, 2023 - nature.com",
-        "citedBy": 102,
+        "citedBy": 104,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4784,7 +4784,7 @@
         "year": 2023,
         "venue": "Nature …",
         "summary": "M Ding, P Lin, S Gao, J Wang, Z Zeng, K Zheng… - Nature …, 2023 - nature.com",
-        "citedBy": 81,
+        "citedBy": 82,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4798,7 +4798,7 @@
         "year": 2023,
         "venue": "Science of the Total …",
         "summary": "F Zheng, X Guo, M Tang, D Zhu, H Wang… - Science of the Total …, 2023 - Elsevier",
-        "citedBy": 109,
+        "citedBy": 110,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4826,7 +4826,7 @@
         "year": 2023,
         "venue": "Global Change …",
         "summary": "J Zhao, X Zhao, D Wu, N Meili… - Global Change …, 2023 - Wiley Online Library",
-        "citedBy": 101,
+        "citedBy": 102,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4910,7 +4910,7 @@
         "year": 2023,
         "venue": "Environmental impact assessment …",
         "summary": "Z Zhang, W Zhao, Y Liu, P Pereira - Environmental impact assessment …, 2023 - Elsevier",
-        "citedBy": 66,
+        "citedBy": 67,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -4952,7 +4952,7 @@
         "year": 2023,
         "venue": "Ecological Indicators",
         "summary": "W Zeng, H Tang, X Liang, Z Hu, Z Yang, Q Guan - Ecological Indicators, 2023 - Elsevier",
-        "citedBy": 78,
+        "citedBy": 79,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5008,7 +5008,7 @@
         "year": 2023,
         "venue": "Remote Sensing of …",
         "summary": "L Li, W Zhan, W Ju, J Peñuelas, Z Zhu, S Peng… - Remote Sensing of …, 2023 - Elsevier",
-        "citedBy": 75,
+        "citedBy": 76,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5121,7 +5121,7 @@
         "year": 2024,
         "venue": "Science of Remote …",
         "summary": "S Liang, T He, J Huang, A Jia, Y Zhang, Y Cao… - Science of Remote …, 2024 - Elsevier",
-        "citedBy": 69,
+        "citedBy": 70,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5135,7 +5135,7 @@
         "year": 2024,
         "venue": "Nature Cities",
         "summary": "S Frolking, R Mahtta, T Milliman, T Esch, KC Seto - Nature Cities, 2024 - nature.com",
-        "citedBy": 173,
+        "citedBy": 176,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5192,7 +5192,7 @@
         "year": 2024,
         "venue": "Sustainable Cities and Society",
         "summary": "W Li, Z Cai, L Jin - Sustainable Cities and Society, 2024 - Elsevier",
-        "citedBy": 93,
+        "citedBy": 95,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5248,7 +5248,7 @@
         "year": 2024,
         "venue": "Ecological …",
         "summary": "H Yang, W Xu, Z Chen, X Xie, J Yu, X Lei, S Guo… - Ecological …, 2024 - Elsevier",
-        "citedBy": 72,
+        "citedBy": 73,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5262,7 +5262,7 @@
         "year": 2024,
         "venue": "Journal of Environmental …",
         "summary": "S Ma, G Deng, LJ Wang, H Hu, X Fang… - Journal of Environmental …, 2024 - Elsevier",
-        "citedBy": 57,
+        "citedBy": 58,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5276,7 +5276,7 @@
         "year": 2024,
         "venue": "Journal of …",
         "summary": "Z Jia, T Lin, X Guo, Y Zheng, H Geng, J Zhang… - Journal of …, 2024 - Elsevier",
-        "citedBy": 46,
+        "citedBy": 47,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5290,7 +5290,7 @@
         "year": 2024,
         "venue": "Chemosphere",
         "summary": "F Zheng, J Gao, M Tang, T Zhou, D Zhu, X Yang… - Chemosphere, 2024 - Elsevier",
-        "citedBy": 47,
+        "citedBy": 48,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5346,7 +5346,7 @@
         "year": 2024,
         "venue": "Scientific Reports",
         "summary": "D Wen, L Wang, Q Cao, M Hong, H Wang, G Bian - Scientific Reports, 2024 - nature.com",
-        "citedBy": 37,
+        "citedBy": 39,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5416,7 +5416,7 @@
         "year": 2024,
         "venue": "IEEE Transactions on …",
         "summary": "L Wang, S Dong, Y Chen, X Meng… - IEEE Transactions on …, 2024 - ieeexplore.ieee.org",
-        "citedBy": 47,
+        "citedBy": 48,
         "detectedGreyLit": true,
         "greyLitReasons": [
           "arXiv"
@@ -5432,7 +5432,7 @@
         "year": 2024,
         "venue": "… Earth & Environment",
         "summary": "RA McManamay, CR Vernon, M Chen… - … Earth & Environment, 2024 - nature.com",
-        "citedBy": 38,
+        "citedBy": 39,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5502,7 +5502,7 @@
         "year": 2024,
         "venue": "Remote Sensing of …",
         "summary": "S Wu, X Lin, Z Bian, M Lipson, R Lafortezza… - Remote Sensing of …, 2024 - Elsevier",
-        "citedBy": 38,
+        "citedBy": 39,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5516,7 +5516,7 @@
         "year": 2025,
         "venue": "Land",
         "summary": "M Li, Y Cao, J Dai, J Song, M Liang - Land, 2025 - mdpi.com",
-        "citedBy": 30,
+        "citedBy": 31,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5572,7 +5572,7 @@
         "year": 2025,
         "venue": "Sustainable Cities and Society",
         "summary": "X Zhao, Z Rao, J Lin, X Zhang - Sustainable Cities and Society, 2025 - Elsevier",
-        "citedBy": 48,
+        "citedBy": 49,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5586,7 +5586,7 @@
         "year": 2025,
         "venue": "Scientific Reports",
         "summary": "Z He, Q Guo, Z Yin, XP Luo, M Sun - Scientific Reports, 2025 - nature.com",
-        "citedBy": 36,
+        "citedBy": 37,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5600,7 +5600,7 @@
         "year": 2025,
         "venue": "Cities",
         "summary": "F Gao, Y Liu, S Liao, J Zhang, Z Jiao, X Hu, J Wu… - Cities, 2025 - Elsevier",
-        "citedBy": 24,
+        "citedBy": 25,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5628,7 +5628,7 @@
         "year": 2025,
         "venue": "Ecological Indicators",
         "summary": "Y Song, H Xu, T Liu, J Xu, X Song - Ecological Indicators, 2025 - Elsevier",
-        "citedBy": 46,
+        "citedBy": 47,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5670,7 +5670,7 @@
         "year": 2025,
         "venue": "Nature Cities",
         "summary": "X Zhang, M Brandt, X Tong, X Tong, W Zhang, F Reiner… - Nature Cities, 2025 - nature.com",
-        "citedBy": 35,
+        "citedBy": 36,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5698,7 +5698,7 @@
         "year": 2025,
         "venue": "ISPRS Journal of Photogrammetry and …",
         "summary": "H Ren, X Huang, J Yang, G Zhou - ISPRS Journal of Photogrammetry and …, 2025 - Elsevier",
-        "citedBy": 35,
+        "citedBy": 37,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5712,7 +5712,7 @@
         "year": 2025,
         "venue": "Nature cities",
         "summary": "JL Kephart, U Bilal, N Gouveia, OL Sarmiento… - Nature cities, 2025 - nature.com",
-        "citedBy": 38,
+        "citedBy": 39,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5754,7 +5754,7 @@
         "year": 2025,
         "venue": "International Journal …",
         "summary": "P Luo, C Chen, S Gao, X Zhang… - International Journal …, 2025 - Taylor & Francis",
-        "citedBy": 37,
+        "citedBy": 38,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5768,7 +5768,7 @@
         "year": 2025,
         "venue": "Sustainable Cities and …",
         "summary": "J Li, Z Liu, X Tang, Y Liu, C Qin, Y Wu… - Sustainable Cities and …, 2025 - Elsevier",
-        "citedBy": 27,
+        "citedBy": 28,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5796,7 +5796,7 @@
         "year": 2025,
         "venue": "Nature Sustainability",
         "summary": "MJ van Strien, A Grêt-Regamey - Nature Sustainability, 2025 - nature.com",
-        "citedBy": 17,
+        "citedBy": 18,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5810,7 +5810,7 @@
         "year": 2025,
         "venue": "Scientific Reports",
         "summary": "AL Acosta, MC Castro, GZ Laporta, JE Conn… - Scientific Reports, 2025 - nature.com",
-        "citedBy": 27,
+        "citedBy": 28,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5824,7 +5824,7 @@
         "year": 2025,
         "venue": "IEEE Journal of …",
         "summary": "Y Chen, X Yao, G Deng, W Huang… - IEEE Journal of …, 2025 - ieeexplore.ieee.org",
-        "citedBy": 21,
+        "citedBy": 22,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5894,7 +5894,7 @@
         "year": 2025,
         "venue": "Journal of …",
         "summary": "EK Siabi, AT Kabo-Bah, G Anornu, K Akpoti… - Journal of …, 2025 - Elsevier",
-        "citedBy": 20,
+        "citedBy": 21,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5964,7 +5964,7 @@
         "year": 2025,
         "venue": "IEEE Transactions on …",
         "summary": "S Hafner, H Fang, H Azizpour… - IEEE Transactions on …, 2025 - ieeexplore.ieee.org",
-        "citedBy": 33,
+        "citedBy": 35,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -5994,7 +5994,7 @@
         "year": 2025,
         "venue": "Ecological Processes",
         "summary": "S Liu, Y Xie, Y Lu, Y Liu, Z Tong, Y Liu - Ecological Processes, 2025 - Springer",
-        "citedBy": 15,
+        "citedBy": 17,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -6008,7 +6008,7 @@
         "year": 2026,
         "venue": "Physics Reports",
         "summary": "U Marquis, M Barthelemy - Physics Reports, 2026 - Elsevier",
-        "citedBy": 6,
+        "citedBy": 7,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -6036,7 +6036,7 @@
         "year": 2026,
         "venue": "Nature Communications",
         "summary": "Y Li, X Zhong, B Derudder, M Hu, X Liu - Nature Communications, 2026 - nature.com",
-        "citedBy": 14,
+        "citedBy": 16,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -6064,7 +6064,7 @@
         "year": 2026,
         "venue": "ISPRS Journal of …",
         "summary": "C Wang, K Li, W Zhan, L Li, C Wang, S Wang… - ISPRS Journal of …, 2026 - Elsevier",
-        "citedBy": 9,
+        "citedBy": 10,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -6085,6 +6085,20 @@
           0
         ],
         "link": "https://www.sciencedirect.com/science/article/pii/S0195925525004159"
+      },
+      {
+        "id": "GS_n_0dvSNOAksJ",
+        "title": "Temporary loss of social-ecological system resilience during rural to urban transition",
+        "year": 2026,
+        "venue": "Nature Cities",
+        "summary": "Y Yang, W Bao, Y Wei, M Yang, A de Sherbinin, Y Liu - Nature Cities, 2026 - nature.com",
+        "citedBy": 3,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.nature.com/articles/s44284-026-00493-1"
       },
       {
         "id": "GS_4wmszEhO8N8J",
@@ -6171,20 +6185,6 @@
         "link": "https://www.sciencedirect.com/science/article/pii/S2210670726000600"
       },
       {
-        "id": "GS_n_0dvSNOAksJ",
-        "title": "Temporary loss of social-ecological system resilience during rural to urban transition",
-        "year": 2026,
-        "venue": "Nature Cities",
-        "summary": "Y Yang, W Bao, Y Wei, M Yang, A de Sherbinin, Y Liu - Nature Cities, 2026 - nature.com",
-        "citedBy": 1,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://www.nature.com/articles/s44284-026-00493-1"
-      },
-      {
         "id": "GS_NEN13_d-CbsJ",
         "title": "Mapping urban built-up types from 2000 to 2022 at 10-m resolution using super-resolution of Landsat spectral-temporal metrics and center-patch classification",
         "year": 2026,
@@ -6232,7 +6232,7 @@
         "year": 2026,
         "venue": "Journal of …",
         "summary": "W Shi, J Tian, J Zhang, A Namaiti, W He… - Journal of …, 2026 - Elsevier",
-        "citedBy": 3,
+        "citedBy": 4,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -6459,20 +6459,6 @@
         "link": "https://www.sciencedirect.com/science/article/pii/S0360132326012734"
       },
       {
-        "id": "GS_vkbw6ZnduAoJ",
-        "title": "Spatiotemporal dynamics and drivers of surface urban heat island intensity in Dhaka, Bangladesh using geospatial remote sensing",
-        "year": 2026,
-        "venue": "Discover …",
-        "summary": "SC Saha, UA Satil, N Paul, DC Nath, FR Nepa… - Discover …, 2026 - Springer",
-        "citedBy": 1,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          0
-        ],
-        "link": "https://link.springer.com/article/10.1007/s44288-026-00767-0"
-      },
-      {
         "id": "GS_uTgKGcpgWG8J",
         "title": "Advancing global urban mapping with multimodal robustness and versatile applications",
         "year": 2026,
@@ -6529,6 +6515,48 @@
         "link": "https://www.sciencedirect.com/science/article/pii/S1618866726002608"
       },
       {
+        "id": "GS_vkbw6ZnduAoJ",
+        "title": "Spatiotemporal dynamics and drivers of surface urban heat island intensity in Dhaka, Bangladesh using geospatial remote sensing",
+        "year": 2026,
+        "venue": "Discover …",
+        "summary": "SC Saha, UA Satil, N Paul, DC Nath, FR Nepa… - Discover …, 2026 - Springer",
+        "citedBy": 1,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://link.springer.com/article/10.1007/s44288-026-00767-0"
+      },
+      {
+        "id": "GS_UQSofDd5lxYJ",
+        "title": "Towards inclusive urban planning: Fine-scale mapping of age and education demographic diversity in Guangzhou",
+        "year": 2027,
+        "venue": "Applied …",
+        "summary": "F Gao, Z Bai, Y Liu, Y Wang, Y Ni, S Liao, D Zhuang… - Applied …, 2027 - Elsevier",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0143622826003620"
+      },
+      {
+        "id": "GS_WYY-8XY29K4J",
+        "title": "A policy-driven physical boundary and intra-urban spatial disparities: Evidence from Shenzhen's second-line control",
+        "year": 2027,
+        "venue": "Habitat International",
+        "summary": "X Gou, Q Xi - Habitat International, 2027 - Elsevier",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          0
+        ],
+        "link": "https://www.sciencedirect.com/science/article/pii/S0197397526003139"
+      },
+      {
         "id": "GS_3RzNrxvVuSUJ",
         "title": "Strengthening positive effects of human activities on vegetation productivity in urban cores",
         "year": 2027,
@@ -6562,7 +6590,7 @@
         "year": 2022,
         "venue": "IPCC",
         "summary": "S Dhakal, JC Minx, F Toth, A Abdel-Aziz… - IPCC 2022: Climate …, 2023 - pure.iiasa.ac.at",
-        "citedBy": 459,
+        "citedBy": 460,
         "detectedGreyLit": true,
         "greyLitReasons": [
           "IPCC"
@@ -6732,7 +6760,7 @@
         "year": 2023,
         "venue": "Sustainable Cities and …",
         "summary": "L Quesada-Ganuza, L Garmendia, I Alvarez… - Sustainable Cities and …, 2023 - Elsevier",
-        "citedBy": 44,
+        "citedBy": 45,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -6760,7 +6788,7 @@
         "year": 2023,
         "venue": "Sustainability",
         "summary": "J Petzold, L Mose - Sustainability, 2023 - mdpi.com",
-        "citedBy": 20,
+        "citedBy": 21,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -6914,7 +6942,7 @@
         "year": 2023,
         "venue": "Nature …",
         "summary": "WTK Huang, P Masselot, E Bou-Zeid, S Fatichi… - Nature …, 2023 - nature.com",
-        "citedBy": 197,
+        "citedBy": 198,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -6956,7 +6984,7 @@
         "year": 2024,
         "venue": "Science of The Total Environment",
         "summary": "X Yang, X Xu, Y Wang, J Yang, X Wu - Science of The Total Environment, 2024 - Elsevier",
-        "citedBy": 87,
+        "citedBy": 89,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -7096,7 +7124,7 @@
         "year": 2023,
         "venue": null,
         "summary": "D Dodman, B Hayward, M Pelling, V Castán Broto… - 2023 - escholarship.org",
-        "citedBy": 840,
+        "citedBy": 849,
         "detectedGreyLit": true,
         "greyLitReasons": [
           "IPCC AR6 Ch.6"
@@ -7144,7 +7172,7 @@
         "year": 2022,
         "venue": "Climate …",
         "summary": "D Dodman, B Hayward, M Pelling, VC Broto… - Climate …, 2022 - ink.library.smu.edu.sg",
-        "citedBy": 49,
+        "citedBy": 50,
         "detectedGreyLit": true,
         "greyLitReasons": [
           "IPCC AR6 Ch.6"
@@ -7249,7 +7277,7 @@
         "year": 2026,
         "venue": "Journal of the …",
         "summary": "A Navas‐Acien, JD Kaufman… - Journal of the …, 2026 - ahajournals.org",
-        "citedBy": 5,
+        "citedBy": 6,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -7333,7 +7361,7 @@
         "year": 2024,
         "venue": "Environmental …",
         "summary": "H Achebak, G Rey, Z Chen, SJ Lloyd… - Environmental …, 2024 - pmc.ncbi.nlm.nih.gov",
-        "citedBy": 57,
+        "citedBy": 58,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -7347,7 +7375,7 @@
         "year": 2020,
         "venue": "Scientific reports",
         "summary": "B Pandey, M Reba, PK Joshi, KC Seto - Scientific reports, 2020 - nature.com",
-        "citedBy": 171,
+        "citedBy": 172,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -7477,7 +7505,7 @@
         "year": 2026,
         "venue": "Nature …",
         "summary": "RI McDonald, TC Chakraborty, TA Endreny… - Nature …, 2026 - nature.com",
-        "citedBy": 15,
+        "citedBy": 16,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -7505,7 +7533,7 @@
         "year": 2021,
         "venue": "Proceedings of the …",
         "summary": "H Shi, H Tian, S Lange, J Yang, S Pan, B Fu… - Proceedings of the …, 2021 - pnas.org",
-        "citedBy": 84,
+        "citedBy": 85,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -7519,7 +7547,7 @@
         "year": 2022,
         "venue": "Landscape and Urban …",
         "summary": "GA Carrillo-Niquete, JL Andrade… - Landscape and Urban …, 2022 - Elsevier",
-        "citedBy": 77,
+        "citedBy": 78,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -7603,7 +7631,7 @@
         "year": 2012,
         "venue": "Biogeochemistry",
         "summary": "JY King, LA Brandt, EC Adair - Biogeochemistry, 2012 - Springer",
-        "citedBy": 256,
+        "citedBy": 257,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -7658,14 +7686,14 @@
         "title": "Land Use and Vegetation Changes Impact on Thermal Comfort in Urban Open Spaces of Nairobi City, Kenya",
         "year": 2024,
         "venue": null,
-        "summary": "SA Onyango - 2024 - ir.jkuat.ac.ke",
+        "summary": "SA Onyango - 2024 - researchgate.net",
         "citedBy": 6,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
           1
         ],
-        "link": "http://ir.jkuat.ac.ke/handle/123456789/6354"
+        "link": "https://www.researchgate.net/profile/Sharon-Onyango-2/publication/384016439_Land_Use_and_Vegetation_Change_Impact_on_Thermal_Comfort_in_Urban_Open_Spaces_of_Nairobi_City_Kenya/links/66e48c6ffa5e11512cb88ab2/Land-Use-and-Vegetation-Change-Impact-on-Thermal-Comfort-in-Urban-Open-Spaces-of-Nairobi-City-Kenya.pdf"
       },
       {
         "id": "GS_vJxDFIxlCPYJ",
@@ -8043,7 +8071,7 @@
         "year": 2022,
         "venue": "Nature Climate …",
         "summary": "M Esperon-Rodriguez, MG Tjoelker, J Lenoir… - Nature Climate …, 2022 - nature.com",
-        "citedBy": 393,
+        "citedBy": 396,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -8138,6 +8166,20 @@
         "link": "https://orbi.uliege.be/handle/2268/343961"
       },
       {
+        "id": "GS_CgL_4t6eUkYJ",
+        "title": "The Impact of Selective Mammalian Predator Control on Target and Non-Target Predators in an Urban Habitat",
+        "year": 2025,
+        "venue": null,
+        "summary": "AM Knight - 2025 - ourarchive.otago.ac.nz",
+        "citedBy": 0,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://ourarchive.otago.ac.nz/esploro/fulltext/graduate/The-Impact-of-Selective-Mammalian-Predator/9926757636301891?repId=12438376730001891&mId=13438376720001891&institution=64OTAGO_INST"
+      },
+      {
         "id": "GS_NhIiJlLed6wJ",
         "title": "Ecological and Evolutionary Responses to Environmental Change in Two Large North American Mammals",
         "year": 2026,
@@ -8222,22 +8264,6 @@
         "link": "https://iris.univpm.it/handle/11566/342673"
       },
       {
-        "id": "GS_ltl1GAgzqxcJ",
-        "title": "Is it possible to reduce wastewater to obtain sustainable cities? Some urban experiences",
-        "year": null,
-        "venue": "thesis.unipd.it",
-        "summary": "IA DE CESARE - thesis.unipd.it",
-        "citedBy": 0,
-        "detectedGreyLit": true,
-        "greyLitReasons": [
-          "thesis"
-        ],
-        "paperIdxs": [
-          1
-        ],
-        "link": "https://thesis.unipd.it/handle/20.500.12608/42003"
-      },
-      {
         "id": "GS_2RfQG0QdNvMJ",
         "title": "Urban costs around the world",
         "year": 2024,
@@ -8257,7 +8283,7 @@
         "year": 2023,
         "venue": null,
         "summary": "L Teron - 2023 - heathealth.info",
-        "citedBy": 4,
+        "citedBy": 5,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -8313,7 +8339,7 @@
         "year": 2022,
         "venue": "Land",
         "summary": "R Muhammad, W Zhang, Z Abbas, F Guo… - Land, 2022 - mdpi.com",
-        "citedBy": 349,
+        "citedBy": 352,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -8511,7 +8537,7 @@
         "year": 2023,
         "venue": "… Research: Infrastructure and …",
         "summary": "X Wang, A Hsu, TC Chakraborty - … Research: Infrastructure and …, 2023 - iopscience.iop.org",
-        "citedBy": 24,
+        "citedBy": 25,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -8526,7 +8552,7 @@
         "year": 2021,
         "venue": "Ambio",
         "summary": "C Folke, S Polasky, J Rockström, V Galaz, F Westley… - Ambio, 2021 - Springer",
-        "citedBy": 1155,
+        "citedBy": 1164,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -8598,7 +8624,7 @@
         "year": 2025,
         "venue": "Forests",
         "summary": "F Lian, W Yi, G Ji, J Xia, H Wang - Forests, 2025 - mdpi.com",
-        "citedBy": 7,
+        "citedBy": 8,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -8794,7 +8820,7 @@
         "year": 2020,
         "venue": "Land",
         "summary": "Y Kim, G Newman, B Güneralp - Land, 2020 - mdpi.com",
-        "citedBy": 113,
+        "citedBy": 114,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -8808,7 +8834,7 @@
         "year": 2020,
         "venue": null,
         "summary": "K Samuelsson, S Barthel, J Colding, G Macassa… - 2020 - osf.io",
-        "citedBy": 424,
+        "citedBy": 423,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -8822,7 +8848,7 @@
         "year": 2020,
         "venue": "Sustainable Cities and …",
         "summary": "A Guo, J Yang, W Sun, X Xiao, JX Cecilia, C Jin… - Sustainable Cities and …, 2020 - Elsevier",
-        "citedBy": 298,
+        "citedBy": 299,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9018,7 +9044,7 @@
         "year": 2021,
         "venue": "Geoscience …",
         "summary": "ARMT Islam, S Talukdar, S Mahato, S Kundu… - Geoscience …, 2021 - Elsevier",
-        "citedBy": 645,
+        "citedBy": 647,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9032,7 +9058,7 @@
         "year": 2021,
         "venue": "Sustainable Cities and Society",
         "summary": "Y Zhou, M Chen, Z Tang, Z Mei - Sustainable Cities and Society, 2021 - Elsevier",
-        "citedBy": 502,
+        "citedBy": 504,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9046,7 +9072,7 @@
         "year": 2021,
         "venue": "CivilEng",
         "summary": "S Vujovic, B Haddad, H Karaky, N Sebaibi, M Boutouil - CivilEng, 2021 - mdpi.com",
-        "citedBy": 382,
+        "citedBy": 385,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9060,7 +9086,7 @@
         "year": 2021,
         "venue": "Science Advances",
         "summary": "ZS Venter, T Chakraborty, X Lee - Science Advances, 2021 - science.org",
-        "citedBy": 377,
+        "citedBy": 378,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9187,7 +9213,7 @@
         "year": 2022,
         "venue": "Climate Risk …",
         "summary": "E Calliari, S Castellari, MK Davis… - Climate Risk …, 2022 - Elsevier",
-        "citedBy": 188,
+        "citedBy": 189,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9201,7 +9227,7 @@
         "year": 2022,
         "venue": "Science of The Total Environment",
         "summary": "G Cremen, C Galasso, J McCloskey - Science of The Total Environment, 2022 - Elsevier",
-        "citedBy": 151,
+        "citedBy": 153,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9215,7 +9241,7 @@
         "year": 2022,
         "venue": "Proceedings of the National …",
         "summary": "RD Simkin, KC Seto, RI McDonald, W Jetz - Proceedings of the National …, 2022 - pnas.org",
-        "citedBy": 864,
+        "citedBy": 866,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9229,7 +9255,7 @@
         "year": 2022,
         "venue": "Proceedings of the …",
         "summary": "P Meyfroidt, A De Bremond, CM Ryan, E Archer… - Proceedings of the …, 2022 - pnas.org",
-        "citedBy": 634,
+        "citedBy": 637,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9243,7 +9269,7 @@
         "year": 2022,
         "venue": "Proceedings of the National Academy of …",
         "summary": "B Pandey, C Brelsford, KC Seto - Proceedings of the National Academy of …, 2022 - pnas.org",
-        "citedBy": 298,
+        "citedBy": 301,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9257,7 +9283,7 @@
         "year": 2022,
         "venue": "Earth's Future",
         "summary": "D Zhou, J Xiao, S Frolking, L Zhang, G Zhou - Earth's Future, 2022 - Wiley Online Library",
-        "citedBy": 177,
+        "citedBy": 179,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9272,7 +9298,7 @@
         "year": 2022,
         "venue": "Journal of Cleaner …",
         "summary": "H Jiang, H Guo, Z Sun, Q Xing, H Zhang, Y Ma… - Journal of Cleaner …, 2022 - Elsevier",
-        "citedBy": 111,
+        "citedBy": 112,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9328,7 +9354,7 @@
         "year": 2022,
         "venue": "Urban Forestry & Urban …",
         "summary": "M Elbakidze, L Dawson, P Milberg, G Mikusiński… - Urban Forestry & Urban …, 2022 - Elsevier",
-        "citedBy": 75,
+        "citedBy": 76,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9342,7 +9368,7 @@
         "year": 2022,
         "venue": "Environmental Research …",
         "summary": "N Meili, A Paschalis, G Manoli… - Environmental Research …, 2022 - iopscience.iop.org",
-        "citedBy": 79,
+        "citedBy": 81,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9384,7 +9410,7 @@
         "year": 2022,
         "venue": "Frontiers in Plant …",
         "summary": "OS Olanrewaju, O Oyatomi, OO Babalola… - Frontiers in Plant …, 2022 - frontiersin.org",
-        "citedBy": 73,
+        "citedBy": 75,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9398,7 +9424,7 @@
         "year": 2023,
         "venue": "Reviews of …",
         "summary": "D Barriopedro, R García‐Herrera… - Reviews of …, 2023 - Wiley Online Library",
-        "citedBy": 531,
+        "citedBy": 536,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9412,7 +9438,7 @@
         "year": 2023,
         "venue": "ISPRS Journal of …",
         "summary": "Q Zheng, KC Seto, Y Zhou, S You, Q Weng - ISPRS Journal of …, 2023 - Elsevier",
-        "citedBy": 369,
+        "citedBy": 372,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9426,7 +9452,7 @@
         "year": 2023,
         "venue": "The Lancet",
         "summary": "T Iungman, M Cirach, F Marando, EP Barboza… - The Lancet, 2023 - thelancet.com",
-        "citedBy": 748,
+        "citedBy": 750,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9440,7 +9466,7 @@
         "year": 2023,
         "venue": "Ecology Letters",
         "summary": "H Liang, YD He, P Theodorou, CF Yang - Ecology Letters, 2023 - Wiley Online Library",
-        "citedBy": 235,
+        "citedBy": 238,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9454,7 +9480,7 @@
         "year": 2023,
         "venue": "Environment …",
         "summary": "SE Cleland, W Steinhardt, LM Neas, JJ West… - Environment …, 2023 - Elsevier",
-        "citedBy": 172,
+        "citedBy": 173,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9566,7 +9592,7 @@
         "year": 2023,
         "venue": "The Lancet Regional …",
         "summary": "H Achebak, J Garcia-Aymerich, G Rey… - The Lancet Regional …, 2023 - thelancet.com",
-        "citedBy": 53,
+        "citedBy": 55,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9594,7 +9620,7 @@
         "year": 2024,
         "venue": "Climate Risk …",
         "summary": "S Cheval, VA Amihăesei, Z Chitu, A Dumitrescu… - Climate Risk …, 2024 - Elsevier",
-        "citedBy": 191,
+        "citedBy": 194,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9608,7 +9634,7 @@
         "year": 2024,
         "venue": "Land",
         "summary": "C Liu, S Lu, J Tian, L Yin, L Wang, W Zheng - Land, 2024 - mdpi.com",
-        "citedBy": 84,
+        "citedBy": 86,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9622,7 +9648,7 @@
         "year": 2024,
         "venue": "npj Climate and …",
         "summary": "S Gao, Y Chen, D Chen, B He, A Gong, P Hou… - npj Climate and …, 2024 - nature.com",
-        "citedBy": 149,
+        "citedBy": 150,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9664,7 +9690,7 @@
         "year": 2024,
         "venue": "Ecosystems and …",
         "summary": "M Egerer, P Annighöfer, S Arzberger… - Ecosystems and …, 2024 - Taylor & Francis",
-        "citedBy": 109,
+        "citedBy": 111,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9832,7 +9858,7 @@
         "year": 2025,
         "venue": "Building and Environment",
         "summary": "X Liu, T Wu, Q Jiang, X Ao, L Zhu, R Qiao - Building and Environment, 2025 - Elsevier",
-        "citedBy": 43,
+        "citedBy": 44,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9846,7 +9872,7 @@
         "year": 2025,
         "venue": "Urban Science",
         "summary": "Y Kara, V Yavuz - Urban Science, 2025 - mdpi.com",
-        "citedBy": 42,
+        "citedBy": 43,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9860,7 +9886,7 @@
         "year": 2025,
         "venue": "Sustainable Cities and …",
         "summary": "Y Sang, X Qin, H Yan, R Wu, F Yang, A Middel… - Sustainable Cities and …, 2025 - Elsevier",
-        "citedBy": 18,
+        "citedBy": 20,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -9874,7 +9900,7 @@
         "year": 2025,
         "venue": "Water",
         "summary": "MO Khan, S D. Keesstra, E Słowik-Opoka… - Water, 2025 - mdpi.com",
-        "citedBy": 16,
+        "citedBy": 17,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -10042,7 +10068,7 @@
         "year": 2026,
         "venue": "Environmental …",
         "summary": "B Zhou, J Radosavljevic, CT Parsons… - Environmental …, 2026 - cdnsciencepub.com",
-        "citedBy": 9,
+        "citedBy": 11,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -10163,8 +10189,22 @@
         "link": "https://www.sciencedirect.com/science/article/pii/S2212094726000058"
       },
       {
+        "id": "GS_PqjNZSgp7LcJ",
+        "title": "Explaining and Reducing Urban Heat Islands Through Machine Learning: Evidence from New York City",
+        "year": 2026,
+        "venue": "Buildings",
+        "summary": "S Liao, Z Liu - Buildings, 2026 - mdpi.com",
+        "citedBy": 9,
+        "detectedGreyLit": false,
+        "greyLitReasons": [],
+        "paperIdxs": [
+          1
+        ],
+        "link": "https://www.mdpi.com/2075-5309/16/1/186"
+      },
+      {
         "id": "GS_H3pYI1fSCNoJ",
-        "title": "Multi-Model Methodology for Urban Development Scenarios and Evaluation of Future City-Scale Building Energy Efficiency",
+        "title": "Multi-model methodology for urban development scenarios and evaluation of future city-scale building energy efficiency",
         "year": 2026,
         "venue": "Energy and …",
         "summary": "MR Allen-Dumas, B Pandey, H Li, VK Singh… - Energy and …, 2026 - Elsevier",
@@ -10175,20 +10215,6 @@
           1
         ],
         "link": "https://www.sciencedirect.com/science/article/pii/S0378778826014325"
-      },
-      {
-        "id": "GS_PqjNZSgp7LcJ",
-        "title": "Explaining and Reducing Urban Heat Islands Through Machine Learning: Evidence from New York City",
-        "year": 2026,
-        "venue": "Buildings",
-        "summary": "S Liao, Z Liu - Buildings, 2026 - mdpi.com",
-        "citedBy": 8,
-        "detectedGreyLit": false,
-        "greyLitReasons": [],
-        "paperIdxs": [
-          1
-        ],
-        "link": "https://www.mdpi.com/2075-5309/16/1/186"
       },
       {
         "id": "GS_gvT4gX1WC_oJ",
@@ -10210,7 +10236,7 @@
         "year": 2026,
         "venue": "Journal of Cleaner …",
         "summary": "M Yu, T Zhou, J Yi, W Wang, M Zhou, J Tao… - Journal of Cleaner …, 2026 - Elsevier",
-        "citedBy": 1,
+        "citedBy": 2,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -10436,7 +10462,7 @@
         "year": 2023,
         "venue": "Computational Urban …",
         "summary": "A Khan, L Carlosena, S Khorat, R Khatun… - Computational Urban …, 2023 - Springer",
-        "citedBy": 40,
+        "citedBy": 41,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -10492,7 +10518,7 @@
         "year": 2025,
         "venue": "Atmospheric Research",
         "summary": "C Xia, C Chang, Z Yu, JJ Huang, Q Wang - Atmospheric Research, 2025 - Elsevier",
-        "citedBy": 2,
+        "citedBy": 3,
         "detectedGreyLit": true,
         "greyLitReasons": [
           "SSRN"
@@ -10550,7 +10576,7 @@
         "year": 2025,
         "venue": "Communications Earth & …",
         "summary": "Z Chen, J Ye, Y Liu, T Hu, J Dong - Communications Earth & …, 2025 - nature.com",
-        "citedBy": 25,
+        "citedBy": 27,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -10564,7 +10590,7 @@
         "year": 2023,
         "venue": "Environmental Research Letters",
         "summary": "E Igun, X Xu, Z Shi, G Jia - Environmental Research Letters, 2023 - iopscience.iop.org",
-        "citedBy": 26,
+        "citedBy": 25,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -10668,7 +10694,7 @@
         "paperIdxs": [
           2
         ],
-        "link": "https://www.osti.gov/pages/biblio/17426813"
+        "link": "https://www.osti.gov/biblio/17426813"
       },
       {
         "id": "GS_DorzwrKRYIoJ",
@@ -10704,7 +10730,7 @@
         "year": 2023,
         "venue": "One Earth",
         "summary": "TC Chakraborty, AJ Newman, Y Qian, A Hsu, G Sheriff - One Earth, 2023 - cell.com",
-        "citedBy": 113,
+        "citedBy": 114,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -10956,7 +10982,7 @@
         "year": 2024,
         "venue": "Journal of Hydrology",
         "summary": "T Li, T Lan, H Zhang, J Sun, CY Xu, YD Chen - Journal of Hydrology, 2024 - Elsevier",
-        "citedBy": 30,
+        "citedBy": 31,
         "detectedGreyLit": false,
         "greyLitReasons": [],
         "paperIdxs": [
@@ -11265,7 +11291,7 @@
         "title": "Study on flood forecasting model of watershed-urban complex system considering the spatial distribution of runoff generation pattern",
         "year": 2023,
         "venue": "Advances in Water Science",
-        "citedBy": 15,
+        "citedBy": 16,
         "greyLitReasons": [
           "CNKI"
         ],
@@ -11332,7 +11358,7 @@
         "paperIdxs": [
           0
         ],
-        "link": "https://books.google.com/books?hl=en&lr=&id=njCKEQAAQBAJ&oi=fnd&pg=PA99&dq=UNEP+OR+%22World+Bank%22+OR+FAO+OR+UNDP+OR+WMO&ots=hnJjFMPMIQ&sig=Y8_sBoO6b78LYOTAwQdFvQFuT3E"
+        "link": "https://books.google.com/books?hl=en&lr=&id=njCKEQAAQBAJ&oi=fnd&pg=PA99&dq=UNEP+OR+%22World+Bank%22+OR+FAO+OR+UNDP+OR+WMO&ots=hnJjLMVOJU&sig=as5c0QCWGEeH6lO8w7j8FUYN2fo"
       },
       {
         "id": "GS__8qQ2LvyGJQJ",
@@ -11350,7 +11376,7 @@
       },
       {
         "id": "GS_n2Sgsmj1AXoJ",
-        "title": "Bats in montane villages and beyond: Exploring how habitat structure and traits shape urban responses: A thesis submitted in partial fulfilment of the requirements for …",
+        "title": "Bats in montane villages and beyond: Exploring how habitat structure and traits shape urban responses: A thesis submitted in partial fulfilment of the …",
         "year": 2025,
         "venue": null,
         "citedBy": 0,
@@ -11360,7 +11386,7 @@
         "paperIdxs": [
           0
         ],
-        "link": "https://researcharchive.lincoln.ac.nz/entities/publication/340f329d-7d4b-4ee9-9964-488fe4f61550"
+        "link": null
       },
       {
         "id": "GS_gbIbTO-i2YUJ",
@@ -11466,7 +11492,7 @@
         "title": "Metasegnet: Metadata-collaborative vision-language representation learning for semantic segmentation of remote sensing images",
         "year": 2024,
         "venue": "IEEE Transactions on …",
-        "citedBy": 47,
+        "citedBy": 48,
         "greyLitReasons": [
           "arXiv"
         ],
@@ -11550,7 +11576,7 @@
         "title": "Emissions trends and drivers (chapter 2)",
         "year": 2022,
         "venue": "IPCC",
-        "citedBy": 459,
+        "citedBy": 460,
         "greyLitReasons": [
           "IPCC"
         ],
@@ -11564,7 +11590,7 @@
         "title": "Cities, settlements and key infrastructure",
         "year": 2023,
         "venue": null,
-        "citedBy": 840,
+        "citedBy": 849,
         "greyLitReasons": [
           "IPCC AR6 Ch.6"
         ],
@@ -11594,7 +11620,7 @@
         "title": "Cities, settlements and key infrastructure.(2022)",
         "year": 2022,
         "venue": "Climate …",
-        "citedBy": 49,
+        "citedBy": 50,
         "greyLitReasons": [
           "IPCC AR6 Ch.6"
         ],
@@ -11705,20 +11731,6 @@
         "link": "https://ynu.repo.nii.ac.jp/record/12629/files/iwachido_yuki-review.pdf"
       },
       {
-        "id": "GS_ltl1GAgzqxcJ",
-        "title": "Is it possible to reduce wastewater to obtain sustainable cities? Some urban experiences",
-        "year": null,
-        "venue": "thesis.unipd.it",
-        "citedBy": 0,
-        "greyLitReasons": [
-          "thesis"
-        ],
-        "paperIdxs": [
-          1
-        ],
-        "link": "https://thesis.unipd.it/handle/20.500.12608/42003"
-      },
-      {
         "id": "GS_I2ahLbm4D8gJ",
         "title": "Heatwave Adaptation Strategies for Low-Income Urban Households in Dhaka: Economic Impacts and Community Resilience",
         "year": 2024,
@@ -11765,7 +11777,7 @@
         "title": "The role of air conditioning waste heat in shaping short-duration intense rainfall: Insights from coastal twin cities",
         "year": 2025,
         "venue": "Atmospheric Research",
-        "citedBy": 2,
+        "citedBy": 3,
         "greyLitReasons": [
           "SSRN"
         ],
