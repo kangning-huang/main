@@ -1,7 +1,7 @@
 ---
 title: "同样淹一米，为什么风险不一样？"
 date: 2026-09-29
-description: "想象一下，一条街上有两栋房子。一栋是只有一层的平房，三米高；另一栋是十层的楼房，三十米高。"
+description: "同样一米深的洪水，对平房和高楼的影响不同，但全球评估常忽略楼高。我们在Scientific Reports的研究把水深相对楼高纳入评估，比较全球665个百万人口城市；124个国家中近一半的风险分组因此上升或下降。"
 slug: "flood-depth-vs-building-height"
 cover: "/blog/flood-depth-vs-building-height/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/EynQ0mgMJ_z3pH1MdWPOZA"

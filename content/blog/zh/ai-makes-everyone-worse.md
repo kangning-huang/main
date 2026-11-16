@@ -1,7 +1,7 @@
 ---
 title: "AI越好，所有人越惨？一个博弈论的证明"
 date: 2026-04-13
-description: "2026年2月，推特的创始人Jack Dorsey，砍掉了自己另一家公司将近一半的员工。"
+description: "Falk与Tsoukalas的博弈论论文《The AI Layoff Trap》表明：每家公司用AI裁员在各自看来都是理性选择，但员工也是别人的客户。所有公司一起裁，市场购买力下降，利润反而比都不裁时更低。"
 slug: "ai-makes-everyone-worse"
 cover: "/blog/ai-makes-everyone-worse/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/toWRn5VqoQFQ0-mkB4UMcg"

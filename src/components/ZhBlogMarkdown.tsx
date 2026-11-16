@@ -48,20 +48,33 @@ function splitContent(content: string): Segment[] {
   return segments;
 }
 
+const headingClass: Record<"h2" | "h3" | "h4" | "h5" | "h6", string> = {
+  h2: "mt-10 mb-4 font-display text-2xl leading-snug text-ink",
+  h3: "mt-8 mb-3 font-display text-xl leading-snug text-ink",
+  h4: "mt-6 mb-2 font-display text-lg leading-snug text-ink",
+  h5: "mt-5 mb-2 font-display text-base font-medium leading-snug text-ink",
+  h6: "mt-4 mb-2 font-display text-base font-medium leading-snug text-ink",
+};
+
+/** Body `#` headings would otherwise render as <h1> and compete with the page title. */
+function demoteHeading(tag: "h1" | "h2" | "h3" | "h4" | "h5" | "h6") {
+  const level = Math.min(Number(tag.slice(1)) + 1, 6) as 2 | 3 | 4 | 5 | 6;
+  const Tag = (`h${level}`) as "h2" | "h3" | "h4" | "h5" | "h6";
+  return ({ children }: { children?: ReactNode }) => (
+    <Tag className={headingClass[Tag]}>{children}</Tag>
+  );
+}
+
 const markdownComponents: Components = {
   p: ({ children }) => (
     <p className="mb-5 text-[17px] leading-[1.85] text-ink">{children}</p>
   ),
-  h2: ({ children }) => (
-    <h2 className="mt-10 mb-4 font-display text-2xl leading-snug text-ink">
-      {children}
-    </h2>
-  ),
-  h3: ({ children }) => (
-    <h3 className="mt-8 mb-3 font-display text-xl leading-snug text-ink">
-      {children}
-    </h3>
-  ),
+  h1: demoteHeading("h1"),
+  h2: demoteHeading("h2"),
+  h3: demoteHeading("h3"),
+  h4: demoteHeading("h4"),
+  h5: demoteHeading("h5"),
+  h6: demoteHeading("h6"),
   a: ({ href, children }) => (
     <a
       href={href}

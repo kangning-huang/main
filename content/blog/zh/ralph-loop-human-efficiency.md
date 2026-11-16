@@ -1,7 +1,7 @@
 ---
 title: "除了增强AI，Ralph Loop也能用来提高人类的效率？用认知科学解读 AI 协作的最优模式"
 date: 2026-01-19
-description: "还记得上篇文章里那个\"牛马的噩梦，老板的美梦\"的比喻吗？我们聊了怎么用 Ralph Loop (拉尔夫循环) 把 AI 困在循环里不停干活，而你可以安心睡觉。"
+description: "同步盯着AI工作时，人会在待命和被打断之间切换，很难进入深度思考。Ralph Loop把规划与执行错开，让AI按待办循环过夜，人在节点上做决策。文章从认知科学说明，这种节奏更符合大脑的工作方式。"
 slug: "ralph-loop-human-efficiency"
 cover: "/blog/ralph-loop-human-efficiency/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/ELXgV3elD74M_BE4l-uv7Q"

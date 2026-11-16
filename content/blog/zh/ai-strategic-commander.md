@@ -1,7 +1,7 @@
 ---
 title: "还在手把手教AI干活？试试当个\"战略指挥官\"，让AI自己去探路"
 date: 2026-02-03
-description: "你玩过动作游戏吗？就是那种你控制一个英雄，一个怪一个怪地打的那种。"
+description: "和AI合作不应像动作游戏那样盯着每一个任务。更合适的方式像战略游戏：派出多个侦察兵分头探路，再根据汇报做决策。把规划与执行分开后，Claude Code内置的Tasks机制即可实现，不必自己写脚本。"
 slug: "ai-strategic-commander"
 cover: "/blog/ai-strategic-commander/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/bH9O-Y7N2blskfxsVStTiQ"

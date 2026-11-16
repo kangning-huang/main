@@ -1,7 +1,7 @@
 ---
 title: "城中村拆除降温 1.5 度，但原住民被迫搬到了城外"
 date: 2026-06-03
-description: "13亿美元。这是美国一个叫 DARE 的反毒教育项目，巅峰时期每年烧掉的钱。"
+description: "用双重差分和二十年卫星热红外影像，追踪北京、上海、广州77个被拆城中村，对照584个未拆样本后发现：拆迁平均使地块降温约1.5度。但这份凉主要留给新住户；许多原住民已迁到更远的地方。"
 slug: "village-demolition-cooling-displace"
 cover: "/blog/village-demolition-cooling-displace/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/aIr3Z5yfVYVa5GTP8ZqZMA"

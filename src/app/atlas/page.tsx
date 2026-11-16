@@ -11,7 +11,7 @@ import AtlasExplorer from "@/components/atlas/AtlasExplorer";
 import Link from "next/link";
 
 const DESCRIPTION =
-  "Interactive world map of cities from Kangning Huang's research: built mass, heat islands, flood risk, informal-settlement cooling, urban expansion to 2050, and cooler-city UHS (PNAS).";
+  "Interactive map of cities in Kangning Huang's research: built mass, heat islands, flood risk, informal-settlement cooling, 2050 expansion, and cooler-city UHS.";
 
 export const metadata: Metadata = {
   title: "Atlas of Urban Futures",

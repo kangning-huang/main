@@ -1,7 +1,7 @@
 ---
 title: "3000 个城市的数据告诉我们：降温政策可能正在害人"
 date: 2026-04-14
-description: "4 倍。这是一个让我们所有合作者都惊讶了好一会儿的数字。"
+description: "对全球三千多个城市死亡数据的分析显示，城市热岛使热天死亡率平均增加11.7%，却使冷天死亡率平均减少51.5%。冬天因此救下的人，是夏天夺走的4.4倍。一味消除热岛，可能伤害更怕冷的人群。"
 slug: "cooling-policy-may-harm"
 cover: "/blog/cooling-policy-may-harm/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/2sCC3SHvAZOWxNA8o9xM5g"

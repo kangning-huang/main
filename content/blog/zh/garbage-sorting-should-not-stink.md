@@ -1,7 +1,7 @@
 ---
 title: "真正能坚持的垃圾分类，应该是不脏不臭的"
 date: 2026-08-26
-description: "在上海，如果你住在垃圾分类很严苛的小区，鱼骨、菜叶、蛋壳等湿垃圾，是绝对不可以跟包装袋、纸巾等干垃圾混在一起的。于是你得另外准备一个垃圾桶存放湿垃圾。"
+description: "上海严苛的干湿分类有利于焚烧和沼气处理，但湿垃圾在家里容易发臭滴水。一个能坚持的办法是把食物残渣冻在冰柜里，装满再下楼扔掉。真正长期有效的环保，往往是让人不必忍受脏臭的方案。"
 slug: "garbage-sorting-should-not-stink"
 cover: "/blog/garbage-sorting-should-not-stink/cover.jpg"
 ---

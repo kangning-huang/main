@@ -1,7 +1,7 @@
 ---
 title: "你窗外那棵树，可能撑不到 2050 年"
 date: 2026-04-08
-description: "过去十年，全世界各国政府几乎在每件事上都吵不出共识，除了一件事：种树。碳税有人反，核电有人反，少吃肉也有人反，只有\"种树\"是气候政策里几乎唯一不会被否决的提案。"
+description: "西悉尼大学团队对照164个城市、4734种行道树的气候耐受范围后发现：全球已有过半城市树种活在物种史上未经历过的气温里，到2050年将接近三分之二。中国有数据的城市里，悬铃木当前年均温已全部超过安全阈值。"
 slug: "trees-may-not-last-to-2050"
 cover: "/blog/trees-may-not-last-to-2050/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/iwZ_m4I1LXiGwLC5W6v5yw"

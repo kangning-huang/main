@@ -1,7 +1,7 @@
 ---
 title: "与其等行道树慢慢长大，不如我们来造树干"
 date: 2026-06-18
-description: "树长得慢，不是因为长叶子慢，是因为它大半辈子都在长那你可能并不需要的树干。一棵行道树，要二三十年才能给你撑起一片像样的阴凉。"
+description: "行道树要十年到几十年才能撑起阴凉，因为大量营养先长在不遮阴的树干上。与其再等一棵树长大，不如人造树干，让藤蔓一个夏天长出树冠。这一想法已被ATBC 2026年会接收，作者将在西双版纳报告。"
 slug: "make-the-tree-trunk"
 cover: "/blog/make-the-tree-trunk/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/Mn3HELPJj-RPhZRAsrv9Yg"

@@ -590,13 +590,21 @@ export default async function Home() {
               <h2 className="section-heading flex-1">
                 <T en="Writing" zh="我的文章" />
               </h2>
-              <LangHrefLink
-                href="/blog"
-                zhHref="/zh/blog"
-                className="link-underline ml-4 shrink-0 text-sm font-medium text-ember"
-              >
-                <T en="View all →" zh="查看全部 →" />
-              </LangHrefLink>
+              <div className="ml-4 flex shrink-0 items-center gap-4">
+                <Link
+                  href="/zh/blog"
+                  className="link-underline text-sm font-medium text-ember"
+                >
+                  中文博客
+                </Link>
+                <LangHrefLink
+                  href="/blog"
+                  zhHref="/zh/blog"
+                  className="link-underline text-sm font-medium text-ember"
+                >
+                  <T en="View all →" zh="查看全部 →" />
+                </LangHrefLink>
+              </div>
             </div>
 
             {/* Lead post — compact card with cover image */}
@@ -676,9 +684,17 @@ export default async function Home() {
       ) : (
         <section className="border-t border-rule-faint bg-paper-warm py-16 md:py-20">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <h2 className="section-heading">
-              <T en="Writing" zh="我的文章" />
-            </h2>
+            <div className="flex items-center justify-between">
+              <h2 className="section-heading flex-1">
+                <T en="Writing" zh="我的文章" />
+              </h2>
+              <Link
+                href="/zh/blog"
+                className="link-underline ml-4 shrink-0 text-sm font-medium text-ember"
+              >
+                中文博客
+              </Link>
+            </div>
             <HomeWritingSubscribe mode="empty" />
           </div>
         </section>

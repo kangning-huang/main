@@ -1,7 +1,7 @@
 ---
 title: "一个简单的公式ABT：把枯燥的研究变成有趣的故事"
 date: 2026-01-14
-description: "这个春季学期，我要带学生完成他们的毕业论文。为了提高他们的成功率，我决定在每周的研讨会中训练他们在撰写论文的过程中使用And-But-Therefore（ABT）这个简单而有效的公式。"
+description: "Randy Olson在《Houston, we have a narrative》中提出And-But-Therefore（ABT）公式，可理解为铺垫、转折、行动。铺垫要筛选事实，故事质量取决于转折，再由此引出应对。作者用它训练学生撰写毕业论文。"
 slug: "abt-story-formula"
 cover: "/blog/abt-story-formula/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/N1EPbmECwZe0oOffoWvMwg"

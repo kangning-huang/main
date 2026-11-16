@@ -1,7 +1,7 @@
 ---
 title: "40度的教室，和一堂停在半路的课"
 date: 2026-04-23
-description: "三位里约的老师，没有商量过，在同一个下午做了同一个动作。她们打开备课本，把最后两个例子、最后二十分钟、最后一轮讨论，轻轻地划掉。"
+description: "学生Gabriel Ferreira问卷调查了里约等地81位公立学校老师：教室热的时候，课往往上不完。有的教室测到40°C，87.7%的老师承认因为热调整过课程，常见做法是划掉备课本里最后的例子、练习或讨论。"
 slug: "rio-classroom-heat"
 cover: "/blog/rio-classroom-heat/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/qRGOHRqqxUNHR8HfOe2wBQ"

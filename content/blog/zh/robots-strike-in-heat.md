@@ -1,7 +1,7 @@
 ---
 title: "\"让机器人替我们干活\"？高温下它们比你先罢工"
 date: 2026-01-28
-description: "2025年4月，北京，21台人形机器人站上马拉松起跑线。只有6台撑到了终点。"
+description: "2025年4月北京的一场马拉松上，21台人形机器人只有6台跑完全程，关节锁死、电池过热。极端高温下人类需要替身，但机器人散热同样困难。文章讨论人类热耐受的新研究，以及用城市设计来应对这一矛盾。"
 slug: "robots-strike-in-heat"
 cover: "/blog/robots-strike-in-heat/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/Ivu_q3V-d3kXe4L1QycYsA"

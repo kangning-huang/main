@@ -1,7 +1,7 @@
 ---
 title: "为了让更多人活下去，你愿意舍弃蓝天吗？"
 date: 2026-04-10
-description: "全球变暖会带来海平面上升，带来更频繁、更剧烈的热浪、洪水、风暴，在未来可能会让很多人流离失所，甚至在灾害中丧生。那么，为了避免这些越来越严重的灾害，让更多人活下去，你愿意放弃头顶上的蓝天吗？"
+description: "为减缓全球变暖，有人认真考虑向大气喷洒微粒来反射阳光。Elizabeth Kolbert在《Under a White Sky》中追踪过这类方案：它可能把蓝色的天空变成白色。文章从温室气体如何为地球保暖说起，讨论这一代价。"
 slug: "give-up-blue-sky"
 cover: "/blog/give-up-blue-sky/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/35n5_5jTKD6iJrNDhhooAQ"
