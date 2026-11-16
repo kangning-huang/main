@@ -9,7 +9,7 @@ import AwardBlock from "@/components/teaching/AwardBlock";
 import StatementDraft from "@/components/teaching/StatementDraft";
 
 const DESCRIPTION =
-  "Teaching by Kangning (Ken) Huang at NYU Shanghai: Environment and Society, Environmental System Science, and Cities at a Crossroads. Recipient of the 2025–2026 NYU Shanghai Teaching Excellence Award.";
+  "Kangning (Ken) Huang, NYU Shanghai: Environment and Society, Environmental System Science, and Cities at a Crossroads. 2025–2026 Teaching Excellence Award.";
 
 export const metadata: Metadata = {
   title: "Teaching",

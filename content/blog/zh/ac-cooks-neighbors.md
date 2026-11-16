@@ -1,7 +1,7 @@
 ---
 title: "你家的空调正在炙烤你的邻居"
 date: 2026-04-22
-description: "你家空调吹出来的冷风，是谁在替你承担那份热？你卧室从 38°C 压到 24°C 的那 14°C 温差，没有消失。"
+description: "空调把室内的热搬到街上。我们把城市气候模型和建筑能耗模型连起来，模拟2022年重庆热浪期间的空调排热，发现夜间街道平均升温2到2.5°C，高密度街区局部可超过5°C；这份热往往落在没有空调的人身上。"
 slug: "ac-cooks-neighbors"
 cover: "/blog/ac-cooks-neighbors/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/H9mmIwc0LWDt7z6ZgsFULw"

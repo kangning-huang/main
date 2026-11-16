@@ -1,7 +1,7 @@
 ---
 title: "顺风局也会破产？凯利公式教你如何在人生的赌局中下注"
 date: 2026-03-31
-description: "我们都听过“逆风翻盘”的故事。"
+description: "在一个对你有利的骰子赌局里，连续三次梭哈有87.5%的概率输光。凯利公式给出每次该下多少注：这个例子里是约三分之一，最差仍不会破产。投资、创业和跳槽，同样需要按可承受的比例分配本金，而不是all in。"
 slug: "kelly-criterion-life-bets"
 cover: "/blog/kelly-criterion-life-bets/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/UZhWej2Kkc7LrmvuoEToSQ"

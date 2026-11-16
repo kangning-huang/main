@@ -1,7 +1,7 @@
 ---
 title: "ABT故事公式的后半段：好论文从头到尾是一首\"回文诗\""
 date: 2026-01-20
-description: "上一篇文章我们聊了ABT这个从好莱坞学来的讲故事公式。套用这个公式来写论文，确实方便有效。"
+description: "ABT公式写完引言和方法后，后半段应按相反顺序展开：结果回应引言里的问题，讨论回到开头的世界。文章用克鲁格曼的诺奖论文说明，沙漏形状加上这种前后呼应，才构成论文的回文结构。"
 slug: "abt-palindrome"
 cover: "/blog/abt-palindrome/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/4Ne0mwnJv-0HdVgp_Ou8Hg"

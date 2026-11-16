@@ -1,7 +1,7 @@
 ---
 title: "上海治好黄浦江，为什么撒哈拉以南的人也该说声谢谢？"
 date: 2026-06-10
-description: "答案似乎很清楚：本地居民。水变清了，鱼回来了，原来掩着鼻子绕路的河岸，修成了滨江绿地、亲水步道。"
+description: "治理黄浦江等城市河流，受益的不只是沿岸居民。受污染的河流会排放甲烷和氧化亚氮；城市河流单位面积温室气体排放大约是较清洁城郊河流的两倍。治河减少了这类排放，也成为一份全球公共品。"
 slug: "shanghai-huangpu-river"
 cover: "/blog/shanghai-huangpu-river/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/f9okFikfs-GYFQ9fUWuvog"

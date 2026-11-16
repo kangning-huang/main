@@ -1,7 +1,7 @@
 ---
 title: "你看到的紫色，可能只是大脑的一个幻觉"
 date: 2026-03-30
-description: "你有没有想过一件奇怪的事：红色加蓝色，我们看到了紫色。但是，紫色光的波长，比红色和蓝色都要短。"
+description: "英语里violet是彩虹边缘、有对应波长的紫光；purple则是红光和蓝光同时进入眼睛时，大脑合成出来的颜色，并不对应红蓝之间的波长。手机屏幕只有红绿蓝像素，因此屏上看到的紫色通常是这种合成。"
 slug: "purple-is-an-illusion"
 cover: "/blog/purple-is-an-illusion/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/TWfXFovSCD--KRfQkaSTqA"

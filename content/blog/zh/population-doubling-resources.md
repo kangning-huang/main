@@ -1,7 +1,7 @@
 ---
 title: "人口翻倍，为什么城市不需要翻倍的资源？"
 date: 2026-03-27
-description: "如果一个城市的人口翻倍，这个城市需要的一切——楼房、马路、水管——也会翻倍吗？我和合作者分析了全球 3,000 多个城市的数据后发现：不会。"
+description: "如果城市人口翻倍，楼房、马路和水管不会同样翻倍。对全球三千多个城市的分析显示，建筑材料总量只增加86%，经济产出却增加124%。节省的资源和多出的产出，来自城市的共享与创造。"
 slug: "population-doubling-resources"
 cover: "/blog/population-doubling-resources/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/aDqkE_HCzZ_kaZtIlw3ktg"

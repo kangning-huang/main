@@ -1,7 +1,7 @@
 ---
 title: "三十亿年前的一次捡剩饭，决定了今天大自然的颜色"
 date: 2026-04-11
-description: "你有没有想过一个问题：为什么植物是绿色的？这个问题听起来太简单了，简单到好像不该问出来。"
+description: "叶绿素不吸收能量最高的绿光，而是吸收红光和蓝光。约三十亿年前，更早的微生物用视黄醛占据了绿光；后来的植物只能吸收剩下的波段，绿色因此是被反射掉的光。这是进化的路径依赖，不是效率最高的选择。"
 slug: "why-plants-are-green"
 cover: "/blog/why-plants-are-green/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/Y4t79cSBhhu0uV3D4bD86A"

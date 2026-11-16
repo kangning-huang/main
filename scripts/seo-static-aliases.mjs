@@ -6,7 +6,7 @@
  *
  * Real HTTP 301s still need Cloudflare Redirect Rules (docs/ops/cloudflare-seo.md).
  */
-import { mkdirSync, writeFileSync, existsSync, readdirSync, statSync } from "node:fs";
+import { mkdirSync, writeFileSync, readFileSync, existsSync, readdirSync, statSync } from "node:fs";
 import { join } from "node:path";
 
 const OUT = new URL("../out/", import.meta.url).pathname;
@@ -53,6 +53,41 @@ function collectHtmlRoutes(dir, base = "") {
   return routes;
 }
 
+
+function setHtmlLang(html, lang) {
+  return html.replace(/<html\b([^>]*)>/i, (match, attrs) => {
+    if (/\slang\s*=/i.test(attrs)) {
+      return `<html${attrs.replace(/\slang=(["'])[^"']*\1/i, ` lang="${lang}"`)}>`;
+    }
+    return `<html lang="${lang}"${attrs}>`;
+  });
+}
+
+function rewriteZhDocumentLang(dir, base = "") {
+  let n = 0;
+  if (!existsSync(dir)) return n;
+  for (const name of readdirSync(dir)) {
+    const full = join(dir, name);
+    const st = statSync(full);
+    if (st.isDirectory()) {
+      if (name === "_next") continue;
+      n += rewriteZhDocumentLang(full, `${base}/${name}`);
+      continue;
+    }
+    if (!name.endsWith(".html")) continue;
+    const route =
+      name === "index.html" ? base || "/" : `${base}/${name.slice(0, -".html".length)}`;
+    if (route !== "/zh" && !route.startsWith("/zh/")) continue;
+    const html = readFileSync(full, "utf8");
+    const updated = setHtmlLang(html, "zh-Hans");
+    if (updated !== html) {
+      writeFileSync(full, updated);
+      n++;
+    }
+  }
+  return n;
+}
+
 if (!existsSync(OUT)) {
   console.error("out/ missing — run next build first");
   process.exit(1);
@@ -73,3 +108,16 @@ for (const route of routes) {
   n++;
 }
 console.log(`seo-static-aliases: wrote ${n} trailing-slash stubs`);
+
+const zhHtml = join(OUT, "zh.html");
+let langN = 0;
+if (existsSync(zhHtml)) {
+  const html = readFileSync(zhHtml, "utf8");
+  const updated = setHtmlLang(html, "zh-Hans");
+  if (updated !== html) {
+    writeFileSync(zhHtml, updated);
+    langN++;
+  }
+}
+langN += rewriteZhDocumentLang(join(OUT, "zh"), "/zh");
+console.log(`seo-static-aliases: set lang=zh-Hans on ${langN} /zh HTML files`);

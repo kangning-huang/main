@@ -88,7 +88,7 @@ export default function ZhBlogIndexPage() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={post.cover}
-                      alt=""
+                      alt={post.title}
                       className="h-44 w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                   </div>

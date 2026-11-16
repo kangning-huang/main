@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { LINKS } from "@/lib/constants";
 import { fetchBlogPosts } from "@/lib/blog";
 import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcrumbSchema } from "@/lib/seo";
@@ -61,6 +62,14 @@ export default async function BlogPage() {
               en="Writing on cities, climate, autonomous vehicles, and more."
               zh="城市、气候等话题——英文在 Substack，中文在公众号「反直觉手记」。"
             />
+          </p>
+          <p className="mt-3">
+            <Link
+              href="/zh/blog"
+              className="link-underline text-sm font-medium text-ember"
+            >
+              中文博客
+            </Link>
           </p>
         </div>
         <BlogSubscribe />

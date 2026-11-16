@@ -5,15 +5,48 @@
 ## Site Structure
 
 - [Home](https://kangning-huang.com/): Overview, key findings, bio, selected publications, featured projects, and latest writing
+- [Atlas](https://kangning-huang.com/atlas) (地图集): Interactive map of cities from the research: built mass, heat islands, flood risk, informal-settlement cooling, 2050 expansion, and cooler-city UHS
 - [Research](https://kangning-huang.com/research): Four research themes (urban futures; heat; flood and coasts; scaling and form) with key findings, papers, and interactive apps
 - [Publications](https://kangning-huang.com/publications): Full list of peer-reviewed publications with citation metrics
+- [Reach](https://kangning-huang.com/reach): Research citing Kangning Huang's papers (OpenAlex, self-citations removed)
 - [Lab](https://kangning-huang.com/lab): CLUEs (CLimate and Urban Environments) Lab — current members, alumni outcomes, and how to join
+- [Teaching](https://kangning-huang.com/teaching): NYU Shanghai courses — Environment and Society, Environmental System Science, and Cities at a Crossroads
 - [News](https://kangning-huang.com/news): Dated log of papers accepted, in press, and published
 - [Projects](https://kangning-huang.com/projects): Interactive research tools accompanying papers
-- [Blog](https://kangning-huang.com/blog): Listing of writing on cities, climate, and more (full posts on Substack)
+- [Blog](https://kangning-huang.com/blog): English writing on cities, climate, and more; full English posts remain on Substack
+- [中文博客](https://kangning-huang.com/zh/blog): First-party Chinese essays on cities, climate, and more; full texts are on this site at /zh/blog and /zh/blog/<slug>
 - [Advisees](https://kangning-huang.com/advisees): Full list of mentored students, their projects, and placements
 - [Tinkering](https://kangning-huang.com/tinkering): Public-interest data tools (e.g. RoboTaxi Safety Tracker)
 - [Urban Expansion 2050](https://kangning-huang.com/urban-expansion): Interactive visualization of projected global urban land expansion
+
+## Chinese writing (中文博客)
+
+Full texts of the Chinese essays live first-party at [https://kangning-huang.com/zh/blog](https://kangning-huang.com/zh/blog). English Blog posts remain on Substack.
+
+- [同样淹一米，为什么风险不一样？](https://kangning-huang.com/zh/blog/flood-depth-vs-building-height) (2026-09-29)
+- [真正能坚持的垃圾分类，应该是不脏不臭的](https://kangning-huang.com/zh/blog/garbage-sorting-should-not-stink) (2026-08-26)
+- [与其等行道树慢慢长大，不如我们来造树干](https://kangning-huang.com/zh/blog/make-the-tree-trunk) (2026-06-18)
+- [上海治好黄浦江，为什么撒哈拉以南的人也该说声谢谢？](https://kangning-huang.com/zh/blog/shanghai-huangpu-river) (2026-06-10)
+- [城中村拆除降温 1.5 度，但原住民被迫搬到了城外](https://kangning-huang.com/zh/blog/village-demolition-cooling-displace) (2026-06-03)
+- [底特律的衰落不是意外，它才是城市的本来面目](https://kangning-huang.com/zh/blog/detroit-decline-is-the-default) (2026-04-26)
+- [40度的教室，和一堂停在半路的课](https://kangning-huang.com/zh/blog/rio-classroom-heat) (2026-04-23)
+- [你家的空调正在炙烤你的邻居](https://kangning-huang.com/zh/blog/ac-cooks-neighbors) (2026-04-22)
+- [3000 个城市的数据告诉我们：降温政策可能正在害人](https://kangning-huang.com/zh/blog/cooling-policy-may-harm) (2026-04-14)
+- [AI越好，所有人越惨？一个博弈论的证明](https://kangning-huang.com/zh/blog/ai-makes-everyone-worse) (2026-04-13)
+- [三十亿年前的一次捡剩饭，决定了今天大自然的颜色](https://kangning-huang.com/zh/blog/why-plants-are-green) (2026-04-11)
+- [为了让更多人活下去，你愿意舍弃蓝天吗？](https://kangning-huang.com/zh/blog/give-up-blue-sky) (2026-04-10)
+- [你窗外那棵树，可能撑不到 2050 年](https://kangning-huang.com/zh/blog/trees-may-not-last-to-2050) (2026-04-08)
+- [为什么说大城市其实更环保？](https://kangning-huang.com/zh/blog/big-cities-are-greener) (2026-04-02)
+- [顺风局也会破产？凯利公式教你如何在人生的赌局中下注](https://kangning-huang.com/zh/blog/kelly-criterion-life-bets) (2026-03-31)
+- [你看到的紫色，可能只是大脑的一个幻觉](https://kangning-huang.com/zh/blog/purple-is-an-illusion) (2026-03-30)
+- [人口翻倍，为什么城市不需要翻倍的资源？](https://kangning-huang.com/zh/blog/population-doubling-resources) (2026-03-27)
+- [还在手把手教AI干活？试试当个"战略指挥官"，让AI自己去探路](https://kangning-huang.com/zh/blog/ai-strategic-commander) (2026-02-03)
+- ["让机器人替我们干活"？高温下它们比你先罢工](https://kangning-huang.com/zh/blog/robots-strike-in-heat) (2026-01-28)
+- [从98万到9万7，价格暴跌90%！电动车普及背后，竟藏着1%富人的"秘密"？](https://kangning-huang.com/zh/blog/ev-price-crash-rich) (2026-01-21)
+- [ABT故事公式的后半段：好论文从头到尾是一首"回文诗"](https://kangning-huang.com/zh/blog/abt-palindrome) (2026-01-20)
+- [除了增强AI，Ralph Loop也能用来提高人类的效率？用认知科学解读 AI 协作的最优模式](https://kangning-huang.com/zh/blog/ralph-loop-human-efficiency) (2026-01-19)
+- [睡觉的时候让AI不停地干活？把AI困在无限循环的牛马噩梦里](https://kangning-huang.com/zh/blog/ralph-loop-ai-nightmare) (2026-01-18)
+- [一个简单的公式ABT：把枯燥的研究变成有趣的故事](https://kangning-huang.com/zh/blog/abt-story-formula) (2026-01-14)
 
 ## About Kangning (Ken) Huang
 

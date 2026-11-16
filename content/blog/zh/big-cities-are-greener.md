@@ -1,7 +1,7 @@
 ---
 title: "为什么说大城市其实更环保？"
 date: 2026-04-02
-description: "纽约，全世界最喧嚣的城市之一。摩天大楼密密麻麻，地铁24小时轰鸣，800多万人挤在几百平方公里里。"
+description: "纽约人均温室气体排放约7吨，不到美国人均的三分之一，人均交通碳排放也远低于全国平均。原因不是特别的环保意识，而是密度带来的共享：公交、集中供暖和公寓保温，让节能在足够密的城市里自动发生。"
 slug: "big-cities-are-greener"
 cover: "/blog/big-cities-are-greener/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/EpmVnpADyEimMN3Rs1cWSQ"

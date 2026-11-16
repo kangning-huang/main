@@ -1,7 +1,7 @@
 ---
 title: "从98万到9万7，价格暴跌90%！电动车普及背后，竟藏着1%富人的\"秘密\"？"
 date: 2026-01-21
-description: "今天聊一个有点扎心的话题——为什么某种程度的收入不平等，反而是技术普及的必经之路。这不是为贫富差距唱赞歌，而是想带你看看技术进步背后那个不太舒服的数学真相。"
+description: "特斯拉Roadster曾标价约9.9万美元，18年后比亚迪海鸥约9700美元，价格跌了约90%。莱特定律表明，产量翻倍会压低成本，但循环要先有人买下最贵的早期产品。某种程度的收入不平等，成了技术普及的启动条件。"
 slug: "ev-price-crash-rich"
 cover: "/blog/ev-price-crash-rich/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/wqU_Sc1yfG_MGKpQbjpIOA"

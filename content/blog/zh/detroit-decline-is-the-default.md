@@ -1,7 +1,7 @@
 ---
 title: "底特律的衰落不是意外，它才是城市的本来面目"
 date: 2026-04-26
-description: "1950 年，底特律是美国第五大城市，185 万人。到 2020 年人口普查时，它只剩下 64 万人。"
+description: "底特律70年间人口从185万降至64万，并没有一场单一灾难。Nature上的城市增长方程指出，日常迁徙之外还有罕见但巨大的冲击；一次冲击可以抹掉十年的温和积累。城市位次的剧变，往往由这些冲击决定。"
 slug: "detroit-decline-is-the-default"
 cover: "/blog/detroit-decline-is-the-default/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/vAtzYJorRxzr2lSbUG5Pmg"

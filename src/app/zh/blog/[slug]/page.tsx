@@ -110,7 +110,7 @@ export default async function ZhBlogArticlePage({
         {post.cover && (
           <div className="mt-8 overflow-hidden rounded-xl">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={post.cover} alt="" className="w-full" />
+            <img src={post.cover} alt={post.title} className="w-full" />
           </div>
         )}
         <div className="mt-10">

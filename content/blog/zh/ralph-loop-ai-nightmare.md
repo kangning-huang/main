@@ -1,7 +1,7 @@
 ---
 title: "睡觉的时候让AI不停地干活？把AI困在无限循环的牛马噩梦里"
 date: 2026-01-18
-description: "最近在AI编程圈，有个叫做“Ralph Wiggum循环”的方法非常火。这个英文名是来自动画《辛普森一家》里的一个角色。"
+description: "Ralph Wiggum循环用命令行的while循环不断重启AI：每次清空短期记忆，只从待办清单取一件事，并对照项目记录继续工作，以免上下文窗口装满后质量下降。人可以在循环过夜后查看进度。"
 slug: "ralph-loop-ai-nightmare"
 cover: "/blog/ralph-loop-ai-nightmare/cover.jpg"
 wechatUrl: "https://mp.weixin.qq.com/s/UoivFqYis6gGsPQLyItN-g"
