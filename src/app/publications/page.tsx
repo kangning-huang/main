@@ -100,6 +100,10 @@ export default async function PublicationsPage() {
         </a>
       </div>
 
+      <p className="mt-5 max-w-3xl text-[15px] leading-[1.75] text-ink-muted">
+        Kangning (Ken) Huang is an Assistant Professor of Environmental Studies at NYU Shanghai. He studies how the size and shape of cities shape heat, flood risk, and material use. In Huang and Lu, <a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">Nested economies of scale in global city mass</a> (Nature Cities, 2026), doubling a city’s population is associated with only about 87% more built mass, and doubling neighborhood density raises built mass by only about 68%.
+      </p>
+
       {/* Citation metrics chart */}
       <div className="mt-8">
         <CitationChart
