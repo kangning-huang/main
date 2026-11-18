@@ -90,6 +90,9 @@ export default function LabPage() {
               zh="城市是一个复杂社会—生态系统，人与自然在其中相互影响。上海纽约大学 CLimate and Urban Environments（CLUEs）实验室研究这些联系。建筑和基础设施建了多少、楼房有多高、怎样布局，会影响谁承受高温、谁遭遇洪水，也会影响城市消耗多少材料。我们结合卫星数据、气候模型与因果推断，分析全球数千座城市，想把这些关系弄清楚。"
             />
           </p>
+          <p className="mt-4 max-w-3xl text-[15px] leading-[1.75] text-ink-muted animate-fade-up delay-2">
+            Recent findings include nested economies of scale in global city mass (<a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">Nature Cities, 2026</a>) and a link between larger homogeneous functional clusters and lower daytime urban heat island intensity (<a href="https://doi.org/10.1073/pnas.2617717123" className="link-underline font-medium text-ember">PNAS, 2026</a>).
+          </p>
 
           {/* ── Current members ── */}
           <h2 id="members" className="mt-14 scroll-mt-24 font-display text-2xl text-ink">
