@@ -144,6 +144,7 @@ export const PUBLICATIONS_A = [
     highlightVideo: "/videos/nested-economies-demo.mp4",
     highlightVideoPoster: "/videos/nested-economies-demo-poster.jpg",
     highlightVideoCaption: "Animation: nested economies of scale in global city mass",
+    highlightVideoCaptionZh: "动画：Nested economies of scale in global city mass",
     highlightVideoUploadDate: "2026-10-02",
     highlightVideoDuration: "PT1M13S",
     highlights: [

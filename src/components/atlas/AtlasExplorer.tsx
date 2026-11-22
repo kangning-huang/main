@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 import CitySearch from "./CitySearch";
 import CityCard from "./CityCard";
 import T from "@/components/T";
+import { useLanguage } from "@/lib/language-context";
 import {
   fetchAtlasPoints,
   parsePoints,
@@ -135,6 +136,7 @@ const LAYER_LEGENDS: Record<LayerKey, LegendSpec> = {
 const SUGGESTED = ["lagos", "shanghai", "new-york", "jakarta", "nairobi"];
 
 export default function AtlasExplorer() {
+  const { language } = useLanguage();
   const [points, setPoints] = useState<AtlasPoint[]>([]);
   const [meta, setMeta] = useState<AtlasPointsFile | null>(null);
   const [selectedId, setSelectedId] = useState<number | null>(null);
@@ -223,14 +225,14 @@ export default function AtlasExplorer() {
 
       {error && (
         <p role="alert" className="rounded border border-ember bg-ember-light px-3 py-2 text-sm text-ember-dark">
-          {error}
+          {error === "Load error" ? <T en="Load error" zh="地图加载失败" /> : error}
         </p>
       )}
 
       <div>
         <div
           role="radiogroup"
-          aria-label="Filter by study"
+          aria-label={language === "zh" ? "按研究筛选" : "Filter by study"}
           className="mb-3 flex flex-wrap gap-2 text-sm"
         >
           {FILTERS.map((f) => (

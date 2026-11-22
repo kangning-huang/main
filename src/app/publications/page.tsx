@@ -101,7 +101,26 @@ export default async function PublicationsPage() {
       </div>
 
       <p className="mt-5 max-w-3xl text-[15px] leading-[1.75] text-ink-muted">
-        Kangning (Ken) Huang is an Assistant Professor of Environmental Studies at NYU Shanghai. He studies how the size and shape of cities shape heat, flood risk, and material use. In Huang and Lu, <a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">Nested economies of scale in global city mass</a> (Nature Cities, 2026), doubling a city’s population is associated with only about 87% more built mass, and doubling neighborhood density raises built mass by only about 68%.
+        <T
+          en={
+            <>
+              Kangning (Ken) Huang is an Assistant Professor of Environmental Studies at NYU Shanghai. He studies how the size and shape of cities shape heat, flood risk, and material use. In Huang and Lu,{" "}
+              <a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">
+                Nested economies of scale in global city mass
+              </a>{" "}
+              (Nature Cities, 2026), doubling a city’s population is associated with only about 87% more built mass, and doubling neighborhood density raises built mass by only about 68%.
+            </>
+          }
+          zh={
+            <>
+              黄康宁（Ken）是上海纽约大学环境研究助理教授。他研究城市的规模与形态如何影响高温、洪水风险和材料使用。在 Huang 与 Lu 的{" "}
+              <a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">
+                Nested economies of scale in global city mass
+              </a>
+              （Nature Cities, 2026）中，城市人口翻倍，建成物质大约只增加 87%；街区密度翻倍，建成物质大约只增加 68%。
+            </>
+          }
+        />
       </p>
 
       {/* Citation metrics chart */}

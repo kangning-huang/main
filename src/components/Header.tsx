@@ -73,7 +73,7 @@ export default function Header() {
           <button
             className="relative flex h-8 w-8 flex-col items-center justify-center gap-[5px]"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label="Toggle menu"
+            aria-label={language === "zh" ? "打开或关闭菜单" : "Toggle menu"}
           >
             <span
               className={`h-[1.5px] w-5 bg-ink transition-all duration-300 ${menuOpen ? "translate-y-[6.5px] rotate-45" : ""}`}

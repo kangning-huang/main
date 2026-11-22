@@ -173,6 +173,8 @@ export interface Publication {
   highlightVideoPoster?: string;
   /** Short accessible caption for the highlight video (used for aria-label + visible caption) */
   highlightVideoCaption?: string;
+  /** Chinese caption; the English paper title inside it stays in English */
+  highlightVideoCaptionZh?: string;
   /** Upload date of the highlight video (YYYY-MM-DD), used in VideoObject JSON-LD */
   highlightVideoUploadDate?: string;
   /** ISO 8601 duration of the highlight video (e.g. "PT1M13S"), used in VideoObject JSON-LD */
@@ -188,6 +190,28 @@ export function publicationSlug(title: string): string {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-+|-+$/g, "");
 }
+
+/** Topic chips on project cards. Journal names and tool names stay in English. */
+export const PROJECT_TAG_ZH: Record<string, string> = {
+  "Urban Scaling": "城市标度",
+  "Interactive Visualization": "交互可视化",
+  "Nature Cities": "Nature Cities",
+  "Urban Modeling": "城市模拟",
+  "Remote Sensing": "遥感",
+  "Flood Risk": "洪水风险",
+  "3D Visualization": "三维可视化",
+  Interactive: "交互",
+  "Urban Cooling": "城市降温",
+  "Causal Inference": "因果推断",
+  "Open Source": "开源",
+  Python: "Python",
+  "Data Visualization": "数据可视化",
+  "Autonomous Vehicles": "自动驾驶",
+  "Safety Analytics": "安全分析",
+  Maps: "地图",
+  "Open Data": "开放数据",
+  "Local files": "本地文件",
+};
 
 export const CURATED_PUBLICATIONS: Publication[] = [
   ...PUBLICATIONS_A,

@@ -2,9 +2,12 @@
 
 import T from "@/components/T";
 import { fieldZh } from "@/lib/influence";
+import { useLanguage } from "@/lib/language-context";
 import { useReachLens } from "./ReachLens";
 
 export default function AdaptiveTopics() {
+  const { language } = useLanguage();
+  const zh = language === "zh";
   const { view } = useReachLens();
   const { adaptive, totals } = view;
   const outside = totals.citingWorksOutsideOwnTopics;
@@ -55,7 +58,7 @@ export default function AdaptiveTopics() {
                     <span
                       key={k.name}
                       className="rounded-full bg-paper-warm px-2 py-0.5 text-[11px] text-ink-muted"
-                      title={`${k.count} citing works mention this keyword (OpenAlex)`}
+                      title={zh ? `${k.count} 篇引用文献提到这个关键词（OpenAlex）` : `${k.count} citing works mention this keyword (OpenAlex)`}
                     >
                       {k.name}
                     </span>

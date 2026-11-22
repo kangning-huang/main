@@ -3,6 +3,7 @@
 import T from "@/components/T";
 import worldMap from "@/data/world-map.json";
 import { influence, countryName } from "@/lib/influence";
+import { useLanguage } from "@/lib/language-context";
 import { useReachLens } from "./ReachLens";
 
 const MIN_WORKS = 5; // below this the ratio is too noisy to colour
@@ -17,6 +18,8 @@ const BINS: { min: number; color: string; en: string; zh: string }[] = [
 const binFor = (ratio: number) => BINS.find((b) => ratio >= b.min) ?? BINS[BINS.length - 1];
 
 export default function WhereMap() {
+  const { language } = useLanguage();
+  const zh = language === "zh";
   const { view } = useReachLens();
   const { countries, totals } = view;
   const { meta } = influence;
@@ -47,7 +50,7 @@ export default function WhereMap() {
       </p>
 
       <figure className="mt-6">
-        <svg viewBox={`0 0 ${worldMap.width} ${worldMap.height}`} className="h-auto w-full" role="img" aria-label="World map of citing countries, normalized by each country's output in the citing fields (OpenAlex)">
+        <svg viewBox={`0 0 ${worldMap.width} ${worldMap.height}`} className="h-auto w-full" role="img" aria-label={zh ? "引用文献来源国家地图，按该国在施引文献所属领域中的产出做了标准化（OpenAlex）" : "World map of citing countries, normalized by each country's output in the citing fields (OpenAlex)"}>
           <defs>
             <pattern id="reach-hatch" width="4" height="4" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
               <rect width="4" height="4" fill="#efe9df" />
@@ -56,14 +59,20 @@ export default function WhereMap() {
           </defs>
           {worldMap.countries.map((c, i) => {
             const d = c.iso2 ? byCode.get(c.iso2) : undefined;
+            const place = c.iso2 ? countryName(c.iso2) : { en: c.name, zh: c.name };
+            const name = zh ? place.zh : place.en;
             let fill = "#f1ece3";
-            let title = `${c.name}: no citing works`;
+            let title = zh ? `${name}：没有引用文献` : `${name}: no citing works`;
             if (d && d.citingWorks < MIN_WORKS) {
               fill = "url(#reach-hatch)";
-              title = `${c.name}: ${d.citingWorks} citing work${d.citingWorks === 1 ? "" : "s"} — too few to normalize`;
+              title = zh
+                ? `${name}：${d.citingWorks} 篇引用文献，数量太少，未做标准化`
+                : `${name}: ${d.citingWorks} citing work${d.citingWorks === 1 ? "" : "s"} — too few to normalize`;
             } else if (d && d.ratio != null) {
               fill = binFor(d.ratio).color;
-              title = `${c.name}: ${d.citingWorks} citing works vs ${d.expected} expected → ${d.ratio}× (OpenAlex)`;
+              title = zh
+                ? `${name}：${d.citingWorks} 篇引用文献，预期 ${d.expected} 篇 → ${d.ratio}×（OpenAlex）`
+                : `${name}: ${d.citingWorks} citing works vs ${d.expected} expected → ${d.ratio}× (OpenAlex)`;
             }
             return (
               <path key={c.iso2 ?? `x${i}`} d={c.d} fill={fill} stroke="#fffcf7" strokeWidth={0.5} className="hover:stroke-ink hover:[stroke-width:1]">

@@ -82,7 +82,10 @@ export default function LabPage() {
             <T en="CLUEs Lab" zh="CLimate and Urban Environments（CLUEs）实验室" />
           </h1>
           <p className="mt-2 text-sm text-ink-faint animate-fade-up delay-1">
-            CLimate and Urban Environments · NYU Shanghai
+            <T
+              en="CLimate and Urban Environments · NYU Shanghai"
+              zh="CLimate and Urban Environments · 上海纽约大学"
+            />
           </p>
           <p className="mt-5 max-w-3xl text-[15px] leading-[1.75] text-ink-muted animate-fade-up delay-1">
             <T
@@ -91,7 +94,18 @@ export default function LabPage() {
             />
           </p>
           <p className="mt-4 max-w-3xl text-[15px] leading-[1.75] text-ink-muted animate-fade-up delay-2">
-            Recent findings include nested economies of scale in global city mass (<a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">Nature Cities, 2026</a>) and a link between larger homogeneous functional clusters and lower daytime urban heat island intensity (<a href="https://doi.org/10.1073/pnas.2617717123" className="link-underline font-medium text-ember">PNAS, 2026</a>).
+            <T
+              en={
+                <>
+                  Recent findings include nested economies of scale in global city mass (<a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">Nature Cities, 2026</a>) and a link between larger homogeneous functional clusters and lower daytime urban heat island intensity (<a href="https://doi.org/10.1073/pnas.2617717123" className="link-underline font-medium text-ember">PNAS, 2026</a>).
+                </>
+              }
+              zh={
+                <>
+                  近期结果包括：全球城市建成物质的嵌套规模经济（<a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">Nature Cities, 2026</a>），以及更大的均质功能簇与更低的白天城市热岛强度有关（<a href="https://doi.org/10.1073/pnas.2617717123" className="link-underline font-medium text-ember">PNAS, 2026</a>）。
+                </>
+              }
+            />
           </p>
 
           {/* ── Current members ── */}
