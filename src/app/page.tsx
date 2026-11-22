@@ -170,25 +170,33 @@ export default async function Home() {
       />
       {/* ── Hero ── */}
       <section className="relative overflow-hidden">
-        {/* Background image — LCP candidate: high fetch priority + modern formats */}
+        {/* Background image — LCP candidate: high fetch priority + modern formats.
+            object-position: center 40% keeps the mullions centered and lifts the
+            wide crop off the foreground roof. Below xl the hero is still tall
+            enough that cover includes that roof, so a top-anchored scale pushes
+            the HVAC units and railing into the paper fade. */}
         <picture className="absolute inset-0 block h-full w-full">
-          <source type="image/avif" srcSet="/hero-nyu-shanghai.avif" />
+          <source
+            type="image/avif"
+            srcSet="/hero-nyc-window-640.avif 640w, /hero-nyc-window-1024.avif 1024w, /hero-nyc-window-1920.avif 1920w"
+            sizes="100vw"
+          />
           <source
             type="image/webp"
-            srcSet="/hero-nyu-shanghai-640.webp 640w, /hero-nyu-shanghai-1024.webp 1024w"
+            srcSet="/hero-nyc-window-640.webp 640w, /hero-nyc-window-1024.webp 1024w, /hero-nyc-window-1920.webp 1920w"
             sizes="100vw"
           />
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/hero-nyu-shanghai.jpg"
-            srcSet="/hero-nyu-shanghai-640.jpg 640w, /hero-nyu-shanghai-1024.jpg 1024w"
+            src="/hero-nyc-window-1920.jpg"
+            srcSet="/hero-nyc-window-640.jpg 640w, /hero-nyc-window-1024.jpg 1024w, /hero-nyc-window-1920.jpg 1920w"
             sizes="100vw"
-            width={1024}
-            height={768}
-            alt="NYU Shanghai campus in Pudong, Shanghai"
+            width={1920}
+            height={1440}
+            alt="New York City skyline seen through a high-rise window"
             fetchPriority="high"
             decoding="async"
-            className="h-full w-full object-cover"
+            className="h-full w-full origin-top object-cover object-[center_40%] max-xl:scale-[1.28]"
           />
         </picture>
         {/* Dark overlay for text legibility */}
