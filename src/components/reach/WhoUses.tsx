@@ -2,9 +2,12 @@
 
 import T from "@/components/T";
 import { INSTITUTION_TYPE_LABELS, countryName } from "@/lib/influence";
+import { useLanguage } from "@/lib/language-context";
 import { useReachLens } from "./ReachLens";
 
 export default function WhoUses() {
+  const { language } = useLanguage();
+  const zh = language === "zh";
   const { view } = useReachLens();
   const { institutionTypes, topNonAcademicInstitutions, totals } = view;
   const rows = institutionTypes.filter((t) => t.citingWorks > 0);
@@ -25,7 +28,7 @@ export default function WhoUses() {
             const l = label(r.type);
             const policy = r.type === "government" || r.type === "nonprofit";
             return (
-              <li key={r.type} className="group grid grid-cols-[10.5rem_1fr] items-center gap-3 text-sm" title={`${l.en}: ${r.citingWorks} citing works, ${r.institutions} distinct institutions (OpenAlex)`}>
+              <li key={r.type} className="group grid grid-cols-[10.5rem_1fr] items-center gap-3 text-sm" title={zh ? `${l.zh}：${r.citingWorks} 篇引用文献，${r.institutions} 家机构（OpenAlex）` : `${l.en}: ${r.citingWorks} citing works, ${r.institutions} distinct institutions (OpenAlex)`}>
                 <span className={policy ? "font-medium text-ink" : "text-ink-muted"}>
                   <T en={l.en} zh={l.zh} />
                 </span>

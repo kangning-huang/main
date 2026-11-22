@@ -20,6 +20,7 @@ import {
   DIV_HEAT,
 } from "@/lib/atlas-colors";
 import T from "@/components/T";
+import { useLanguage } from "@/lib/language-context";
 
 // Re-export palette for any legacy imports; preferred path is @/lib/atlas-colors.
 export { PAPER_COUNT_COLORS, colorForCount };
@@ -110,6 +111,8 @@ export default function MapCanvas({
   onClearSelection,
   filter = null,
 }: Props) {
+  const { language } = useLanguage();
+  const zh = language === "zh";
   const wrapRef = useRef<HTMLDivElement>(null);
   const mapElRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -588,7 +591,11 @@ export default function MapCanvas({
     <div
       ref={wrapRef}
       role="img"
-      aria-label="World map of cities colored by paper coverage or by each study's city-level result"
+      aria-label={
+        zh
+          ? "世界地图：城市按论文覆盖着色，或按各项研究的城市结果着色"
+          : "World map of cities colored by paper coverage or by each study's city-level result"
+      }
       className="relative isolate z-0 h-[min(42vw,460px)] min-h-[300px] w-full overflow-hidden rounded-lg border border-rule bg-paper-warm [&_.maplibregl-ctrl-attrib]:text-[10px] [&_.maplibregl-ctrl-attrib]:leading-tight"
     >
       {/* z-0 + isolate: contain WebGL compositing so the overlay can sit above */}
@@ -616,8 +623,8 @@ export default function MapCanvas({
             ? "absolute left-3 top-3 z-[3] rounded-md border border-ember bg-paper px-2.5 py-1.5 text-xs font-medium text-ember-dark shadow-sm hover:bg-ember-light focus:outline-none focus-visible:ring-2 focus-visible:ring-ember"
             : "absolute left-3 top-3 z-[3] rounded-md border border-rule bg-paper/95 px-2.5 py-1.5 text-xs font-medium text-ink-muted shadow-sm hover:border-ember hover:text-ember focus:outline-none focus-visible:ring-2 focus-visible:ring-ember"
         }
-        aria-label="Zoom out to world view"
-        title="Zoom out to world view"
+        aria-label={zh ? "缩小到全球视图" : "Zoom out to world view"}
+        title={zh ? "缩小到全球视图" : "Zoom out to world view"}
       >
         <T en="World view" zh="全球视图" />
       </button>

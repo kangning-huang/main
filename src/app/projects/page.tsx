@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PROJECTS } from "@/lib/constants";
+import { PROJECTS, PROJECT_TAG_ZH } from "@/lib/constants";
 import type { Metadata } from "next";
 import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 import T from "@/components/T";
@@ -194,7 +194,7 @@ function CardContent({
             key={tag}
             className="rounded-full border border-ember/20 bg-ember-light px-3 py-0.5 text-xs font-medium text-ember-dark"
           >
-            {tag}
+            <T en={tag} zh={PROJECT_TAG_ZH[tag] ?? tag} />
           </span>
         ))}
       </div>

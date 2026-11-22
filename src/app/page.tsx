@@ -4,6 +4,7 @@ import {
   SITE,
   LINKS,
   PROJECTS,
+  PROJECT_TAG_ZH,
   publicationSlug,
 } from "@/lib/constants";
 import { fetchPublications } from "@/lib/publications";
@@ -743,7 +744,7 @@ function ProjectCard({ project }: { project: (typeof PROJECTS)[number] }) {
             key={tag}
             className="rounded-full bg-paper-warm px-2.5 py-0.5 text-xs text-ink-faint"
           >
-            {tag}
+            <T en={tag} zh={PROJECT_TAG_ZH[tag] ?? tag} />
           </span>
         ))}
       </div>

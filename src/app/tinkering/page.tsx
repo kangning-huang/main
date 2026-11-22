@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { PROJECTS } from "@/lib/constants";
+import { PROJECTS, PROJECT_TAG_ZH } from "@/lib/constants";
 import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcrumbSchema } from "@/lib/seo";
 import T from "@/components/T";
 
@@ -127,7 +127,7 @@ export default function TinkeringPage() {
                           key={tag}
                           className="rounded-full bg-paper-warm px-2.5 py-0.5 text-xs text-ink-faint"
                         >
-                          {tag}
+                          <T en={tag} zh={PROJECT_TAG_ZH[tag] ?? tag} />
                         </span>
                       ))}
                     </div>
@@ -180,7 +180,7 @@ export default function TinkeringPage() {
                         key={tag}
                         className="rounded-full bg-paper-warm px-2.5 py-0.5 text-xs text-ink-faint"
                       >
-                        {tag}
+                        <T en={tag} zh={PROJECT_TAG_ZH[tag] ?? tag} />
                       </span>
                     ))}
                   </div>

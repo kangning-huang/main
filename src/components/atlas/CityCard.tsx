@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { CityDetail, LayerKey } from "@/lib/atlas";
 import { MASS_PAPER, HEAT_PAPER, COOLING_PAPER, FLOOD_PAPER, EXPANSION_PAPER, JGR_PAPER, UHS_PAPER, formatPop, formatMassT } from "@/lib/atlas";
 import T from "@/components/T";
+import { useLanguage } from "@/lib/language-context";
 import type { ReactNode } from "react";
 
 type Props = {
@@ -15,6 +16,7 @@ type Props = {
 };
 
 export default function CityCard({ city, loading, filter = null, onClose }: Props) {
+  const { language } = useLanguage();
   if (loading) {
     return (
       <aside className="rounded-lg border border-rule bg-paper p-4 shadow-sm">
@@ -146,15 +148,15 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
               </p>
             )}
             <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
-              <Stat en="Day · where people live" zh="白天 · 人口加权" value={fmtTrend(heat.dayP)} big />
-              <Stat en="Day · area average" zh="白天 · 面积平均" value={fmtTrend(heat.dayA)} big />
-              <Stat en="Night · where people live" zh="夜间 · 人口加权" value={fmtTrend(heat.nightP)} />
-              <Stat en="Night · area average" zh="夜间 · 面积平均" value={fmtTrend(heat.nightA)} />
+              <Stat en="Day · where people live" zh="白天 · 人口加权" value={fmtTrend(heat.dayP)} valueZh={fmtTrend(heat.dayP, "zh")} big />
+              <Stat en="Day · area average" zh="白天 · 面积平均" value={fmtTrend(heat.dayA)} valueZh={fmtTrend(heat.dayA, "zh")} big />
+              <Stat en="Night · where people live" zh="夜间 · 人口加权" value={fmtTrend(heat.nightP)} valueZh={fmtTrend(heat.nightP, "zh")} />
+              <Stat en="Night · area average" zh="夜间 · 面积平均" value={fmtTrend(heat.nightA)} valueZh={fmtTrend(heat.nightA, "zh")} />
             </dl>
             <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
               <T
                 en={`From 2003 to 2020, the daytime heat-island extreme where residents live ${trendWord(heat.dayP, "en")} (area average: ${fmtTrend(heat.dayA)}).`}
-                zh={`从 2003 到 2020 年，居民所在地白天热岛极端值${trendWord(heat.dayP, "zh")}（面积平均：${fmtTrend(heat.dayA)}）。`}
+                zh={`从 2003 到 2020 年，居民所在地白天热岛极端值${trendWord(heat.dayP, "zh")}（面积平均：${fmtTrend(heat.dayA, "zh")}）。`}
               />
             </p>
             <Not
@@ -181,7 +183,12 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
           <>
             <dl className="mt-3 grid grid-cols-2 gap-3 text-sm">
               <Stat en="Surface cooling (DID)" zh="地表降温（DID）" value={`${cooling.effectK.toFixed(2)} K`} big />
-              <Stat en="95% interval" zh="95% 区间" value={`${cooling.ciLo.toFixed(2)} to ${cooling.ciHi.toFixed(2)} K`} />
+              <Stat
+                en="95% interval"
+                zh="95% 区间"
+                value={`${cooling.ciLo.toFixed(2)} to ${cooling.ciHi.toFixed(2)} K`}
+                valueZh={`${cooling.ciLo.toFixed(2)} 至 ${cooling.ciHi.toFixed(2)} K`}
+              />
             </dl>
             <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
               <T
@@ -246,6 +253,7 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
                   en="Protection standard"
                   zh="防洪标准"
                   value={`~${flood.protYears}-year`}
+                  valueZh={`约 ${flood.protYears} 年一遇`}
                 />
               )}
               {flood.heightM != null && (
@@ -439,7 +447,7 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
   return (
     <aside
       className="rounded-lg border border-rule bg-paper p-4 shadow-sm"
-      aria-label={`${city.name} city card`}
+      aria-label={language === "zh" ? `${city.name} 城市卡片` : `${city.name} city card`}
     >
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div className="min-w-0 flex-1">
@@ -477,7 +485,7 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
           type="button"
           onClick={onClose}
           className="rounded px-2 py-1 text-xs text-ink-faint hover:bg-paper-warm hover:text-ink"
-          aria-label="Close"
+          aria-label={language === "zh" ? "关闭" : "Close"}
         >
           ✕
         </button>
@@ -559,6 +567,7 @@ function UhsRangeBar({
   p75: number;
   p90: number;
 }) {
+  const { language } = useLanguage();
   const lo = 0;
   const hi = Math.max(p90 * 1.05, p50 * 1.5, 50);
   const pct = (v: number) => `${(Math.min(Math.max(v, lo), hi) / hi) * 100}%`;
@@ -576,7 +585,7 @@ function UhsRangeBar({
         <div
           className="absolute top-0 h-3 w-0.5 bg-ink"
           style={{ left: pct(p50) }}
-          title={`median ${Math.round(p50)} m`}
+          title={language === "zh" ? `中位数 ${Math.round(p50)} m` : `median ${Math.round(p50)} m`}
         />
       </div>
       <div className="mt-1 flex justify-between text-[10px] text-ink-faint">
@@ -616,8 +625,9 @@ function ComingRow({
   );
 }
 
-function fmtTrend(v: number): string {
-  return `${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v).toFixed(2)} °C/decade`;
+function fmtTrend(v: number, lang: "en" | "zh" = "en"): string {
+  const n = `${v > 0 ? "+" : v < 0 ? "−" : ""}${Math.abs(v).toFixed(2)}`;
+  return lang === "zh" ? `${n} °C/十年` : `${n} °C/decade`;
 }
 
 function trendWord(v: number, lang: "en" | "zh"): string {
@@ -647,13 +657,27 @@ function NotCovered({ en, zh }: { en: string; zh: string }) {
   );
 }
 
-function Stat({ en, zh, value, big }: { en: string; zh: string; value: string; big?: boolean }) {
+function Stat({
+  en,
+  zh,
+  value,
+  valueZh,
+  big,
+}: {
+  en: string;
+  zh: string;
+  value: string;
+  valueZh?: string;
+  big?: boolean;
+}) {
   return (
     <div>
       <dt className="text-xs text-ink-faint">
         <T en={en} zh={zh} />
       </dt>
-      <dd className={`mt-0.5 font-medium text-ink ${big ? "text-lg" : ""}`}>{value}</dd>
+      <dd className={`mt-0.5 font-medium text-ink ${big ? "text-lg" : ""}`}>
+        <T en={value} zh={valueZh ?? value} />
+      </dd>
     </div>
   );
 }

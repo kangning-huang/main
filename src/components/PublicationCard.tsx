@@ -4,10 +4,12 @@ import { useState, useRef, useEffect } from "react";
 import type { Publication } from "@/lib/constants";
 import { COAUTHOR_LINKS, publicationSlug } from "@/lib/constants";
 import T from "@/components/T";
+import { useLanguage } from "@/lib/language-context";
 
 const SELF_NAMES = new Set(["Kangning Huang", "K. Huang", "K Huang"]);
 
 export default function PublicationCard({ pub }: { pub: Publication }) {
+  const { language } = useLanguage();
   const hasExtra =
     (pub.highlights && pub.highlights.length > 0) ||
     (pub.keywords && pub.keywords.length > 0) ||
@@ -215,13 +217,20 @@ export default function PublicationCard({ pub }: { pub: Publication }) {
                     playsInline
                     src={pub.highlightVideo}
                     poster={pub.highlightVideoPoster}
-                    aria-label={pub.highlightVideoCaption ?? `Video: ${pub.title}`}
+                    aria-label={
+                      language === "zh"
+                        ? (pub.highlightVideoCaptionZh ?? pub.highlightVideoCaption ?? `视频：${pub.title}`)
+                        : (pub.highlightVideoCaption ?? `Video: ${pub.title}`)
+                    }
                     onLoadedMetadata={remeasure}
                     onLoadedData={remeasure}
                   />
                   {pub.highlightVideoCaption && (
                     <figcaption className="px-3 py-2 text-xs text-ink-faint">
-                      {pub.highlightVideoCaption}
+                      <T
+                        en={pub.highlightVideoCaption}
+                        zh={pub.highlightVideoCaptionZh ?? pub.highlightVideoCaption}
+                      />
                     </figcaption>
                   )}
                 </figure>

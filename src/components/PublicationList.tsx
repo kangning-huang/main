@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { Publication } from "@/lib/constants";
 import PublicationCard from "@/components/PublicationCard";
 import T from "@/components/T";
+import { useLanguage } from "@/lib/language-context";
 
 type Filter = "all" | "lead";
 
@@ -74,6 +75,7 @@ export default function PublicationList({
   inPress: Publication[];
   underReview: Publication[];
 }) {
+  const { language } = useLanguage();
   const [filter, setFilter] = useState<Filter>("all");
   const apply = (pubs: Publication[]) =>
     filter === "lead" ? pubs.filter((p) => p.isLeadAuthor === true) : pubs;
@@ -85,7 +87,7 @@ export default function PublicationList({
 
   return (
     <>
-      <div className="mt-10 flex flex-wrap gap-2" role="group" aria-label="Filter publications">
+      <div className="mt-10 flex flex-wrap gap-2" role="group" aria-label={language === "zh" ? "筛选论文" : "Filter publications"}>
         {FILTERS.map((f) => {
           const active = filter === f.key;
           return (
