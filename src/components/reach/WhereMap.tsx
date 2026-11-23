@@ -34,16 +34,12 @@ export default function WhereMap() {
         <T
           en={
             <>
-              Authors in <strong className="text-ink">{totals.countriesCount}</strong> countries and territories have
-              built on these papers. A raw count would mostly map where science happens, so each country is
-              shaded by <em>observed ÷ expected</em>: expected is what that country would contribute if it cited
-              in proportion to its total OpenAlex output in each citing work&rsquo;s field.
+              Authors in <strong className="text-ink">{totals.countriesCount}</strong> countries and territories have cited these papers. Raw citation counts partly reflect differences in research output across countries. To account for this, the map shows <em>observed ÷ expected</em> citing works. The expected count is based on each country&apos;s share of total OpenAlex publications in the research fields of the citing works.
             </>
           }
           zh={
             <>
-              来自 <strong className="text-ink">{totals.countriesCount}</strong> 个国家和地区的作者引用了这些论文。原始计数主要反映科研产出的分布，
-              因此地图按“实际 ÷ 预期”着色：预期值为该国按其在各施引文献所属领域的 OpenAlex 总产出比例应贡献的施引文献数。
+              来自 <strong className="text-ink">{totals.countriesCount}</strong> 个国家和地区的作者引用了这些论文。原始施引文献数也反映了各国科研产出规模的差异。因此，地图显示实际值与预期值的比值（实际 ÷ 预期）。预期值根据各国在施引文献所属研究领域中的 OpenAlex 论文产出比例计算。
             </>
           }
         />
@@ -94,8 +90,8 @@ export default function WhereMap() {
           </span>
           <span className="w-full text-ink-faint">
             <T
-              en={`Source: OpenAlex, author affiliations of citing works (self-citations removed), as of ${meta.asOf}. Basemap: Natural Earth 1:110m (public domain), Equal Earth projection.`}
-              zh={`地图中的国家和地区，按引用我研究的文献里作者所属机构确定。数据来自 OpenAlex，已剔除自引，截至 ${meta.asOf}。底图采用 Natural Earth 1:110m（公有领域），使用 Equal Earth 投影。`}
+              en={`Source: OpenAlex, using author affiliations of citing works and excluding self-citations, as of ${meta.asOf}. Basemap: Natural Earth 1:110m (public domain). Projection: Equal Earth.`}
+              zh={`数据来自 OpenAlex，根据施引文献作者的机构所属国家和地区统计，已剔除自引，截至 ${meta.asOf}。底图使用 Natural Earth 1:110m（公有领域），采用 Equal Earth 投影。`}
             />
           </span>
         </figcaption>

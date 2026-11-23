@@ -121,18 +121,16 @@ export default function FieldsFlow() {
         <T
           en={
             <>
-              Secondary view: theme → OpenAlex <em>field</em> flow.{" "}
-              <strong className="text-ink">{totals.citingWorksOutsideOwnField}</strong> of{" "}
-              {totals.uniqueCitingWorks.toLocaleString()} citing works ({pctOutside}%) sit in a different field
-              from the paper they cite. Prefer the adaptive cards above for subfields and topics — raw
-              Environmental Science is intentionally not the main story.
+              Secondary view: research theme → OpenAlex <em>field</em>. Of{" "}
+              {totals.uniqueCitingWorks.toLocaleString()} citing works,{" "}
+              <strong className="text-ink">{totals.citingWorksOutsideOwnField}</strong>{" "}
+              ({pctOutside}%) belong to a different field from the paper they cite. The cards above provide more detail on subfields and topics. Environmental Science is not emphasized because it is a broad category.
             </>
           }
           zh={
             <>
-              次要视图：主题 → OpenAlex <em>领域</em>流向。在 {totals.uniqueCitingWorks.toLocaleString()} 篇施引中，有{" "}
-              <strong className="text-ink">{totals.citingWorksOutsideOwnField}</strong> 篇（{pctOutside}%）与被引论文分属不同领域。
-              子领域与主题请以上方自适应卡片为主——“环境科学”大类不再作为主叙事。
+              辅助视图：研究主题 → OpenAlex <em>学科领域</em>。在 {totals.uniqueCitingWorks.toLocaleString()} 篇施引文献中，有{" "}
+              <strong className="text-ink">{totals.citingWorksOutsideOwnField}</strong> 篇（{pctOutside}%）与被引论文分属不同领域。上方卡片提供更细的子领域和主题信息。“环境科学”是一个较宽泛的分类，因此不作为主要展示内容。
             </>
           }
         />
@@ -178,8 +176,8 @@ export default function FieldsFlow() {
         </svg>
         <figcaption className="mt-2 text-xs text-ink-faint">
           <T
-            en="Ribbon width = citing works (self-citations removed). A work citing two themes counts once per theme."
-            zh="条带宽度表示引用我研究的文献数，已剔除自引。一篇文献如果引用了两个主题下的论文，就在每个主题下各计一次。"
+            en="Ribbon width represents the number of citing works, excluding self-citations. A work citing papers in two themes is counted once in each theme."
+            zh="条带宽度表示施引文献数，已剔除自引。如果一篇文献引用了两个研究主题下的论文，就在每个主题下各计一次。"
           />
         </figcaption>
       </figure>

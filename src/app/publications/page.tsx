@@ -104,20 +104,16 @@ export default async function PublicationsPage() {
         <T
           en={
             <>
-              Kangning (Ken) Huang is an Assistant Professor of Environmental Studies at NYU Shanghai. He studies how the size and shape of cities shape heat, flood risk, and material use. In Huang and Lu,{" "}
-              <a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">
-                Nested economies of scale in global city mass
-              </a>{" "}
-              (Nature Cities, 2026), doubling a city’s population is associated with only about 87% more built mass, and doubling neighborhood density raises built mass by only about 68%.
+              Kangning (Ken) Huang is an Assistant Professor of Environmental Studies at NYU Shanghai. He studies how urban size and form affect heat, flood risk, and material use. In{" "}
+              <a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">Nested economies of scale in global city mass</a>{" "}
+              (Huang and Lu, Nature Cities, 2026), doubling a city&apos;s population is associated with only about 87% more built mass. At the neighborhood scale, doubling population density increases built mass by only about 68%.
             </>
           }
           zh={
             <>
-              黄康宁（Ken）是上海纽约大学环境研究助理教授。他研究城市的规模与形态如何影响高温、洪水风险和材料使用。在 Huang 与 Lu 的{" "}
-              <a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">
-                Nested economies of scale in global city mass
-              </a>
-              （Nature Cities, 2026）中，城市人口翻倍，建成物质大约只增加 87%；街区密度翻倍，建成物质大约只增加 68%。
+              黄康宁（Ken）是上海纽约大学环境研究助理教授。他研究城市规模与形态如何影响高温、洪水风险和材料消耗。在 Huang 与 Lu 发表于 Nature Cities（2026）的论文{" "}
+              <a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">Nested economies of scale in global city mass</a>{" "}
+              中，城市人口翻倍，建成质量仅增加约 87%；在街区尺度上，人口密度翻倍，建成质量仅增加约 68%。
             </>
           }
         />

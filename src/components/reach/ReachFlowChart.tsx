@@ -128,7 +128,7 @@ export default function ReachFlowChart() {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <div>
           <h2 className="font-display text-3xl text-ink md:text-4xl">
-            <T en="Where citing work sits" zh="引用来自哪些领域" />
+            <T en="Research fields of citing works" zh="施引文献的研究领域" />
           </h2>
           <p className="mt-2 max-w-2xl text-[15px] text-ink-muted">
             <T
@@ -211,8 +211,8 @@ export default function ReachFlowChart() {
         </svg>
         <figcaption className="mt-2 text-xs text-ink-faint">
           <T
-            en={`OpenAlex ${flowData.meta.asOf} · cites per year since publication (toggle Absolute) · self-citations removed · right side = named subfields/topics plus field-domain groups (hover for members) · keywords on hover. Theme map: data/influence/fine-themes.json.`}
-            zh={`数据来自 OpenAlex，截至 ${flowData.meta.asOf}。默认按发表至今的年均被引次数统计，也可切换为被引总次数。自引已剔除。右侧列出子领域、主题及其领域分组，悬停可查看组内成员和关键词。主题对应关系见 data/influence/fine-themes.json。`}
+            en={`Source: OpenAlex, as of ${flowData.meta.asOf}. The default view shows citations per year since publication; select Absolute for total citations. Self-citations are removed. The right side shows named subfields, topics, and field groups. Hover to see group members and keywords. Theme mapping: data/influence/fine-themes.json.`}
+            zh={`数据来自 OpenAlex，截至 ${flowData.meta.asOf}。默认显示论文发表以来的年均被引次数，也可切换到被引总次数。统计已剔除自引。右侧显示子领域、主题及领域分组。鼠标悬停可查看分组成员和关键词。主题分类对应关系见 data/influence/fine-themes.json。`}
           />
         </figcaption>
       </figure>

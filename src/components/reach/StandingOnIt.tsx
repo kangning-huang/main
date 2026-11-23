@@ -19,8 +19,8 @@ export default function StandingOnIt() {
       <div>
         <p className="mb-4 text-sm text-ink-muted">
           <T
-            en={`The ten most-cited works (by their own OpenAlex citation count) that cite at least one paper in the ${lens === "lead" ? "first / last / corresponding" : "All"} view, self-citations removed.`}
-            zh="哪些文献引用了这些论文，又被更多人引用？这里从引用了当前视角下至少一篇论文的文献中，剔除自引文献，再选出自身在 OpenAlex 中被引最多的十篇。"
+            en={`The ten works with the highest OpenAlex citation counts that cite at least one paper in the ${lens === "lead" ? "first / last / corresponding" : "All"} view. Self-citations are excluded.`}
+            zh="在当前视角下，选出至少引用一篇所选论文的文献，剔除自引，再按这些文献自身在 OpenAlex 中的被引次数排序，显示前十篇。"
           />
         </p>
         <ol className="space-y-4">
@@ -35,10 +35,10 @@ export default function StandingOnIt() {
                   </a>
                   <div className="mt-1 text-xs text-ink-muted">
                     {w.venue ? <em>{w.venue}</em> : <T en="(no venue in OpenAlex)" zh="（OpenAlex 未记录发表来源）" />} · {w.year} ·{" "}
-                    <T en={`cited ${w.openalexCitedByCount.toLocaleString()}× (OpenAlex)`} zh={`被引 ${w.openalexCitedByCount.toLocaleString()} 次（OpenAlex）`} />
+                    <T en={`cited ${w.openalexCitedByCount.toLocaleString()} times (OpenAlex)`} zh={`被引 ${w.openalexCitedByCount.toLocaleString()} 次（OpenAlex）`} />
                   </div>
                   <div className="mt-0.5 text-xs text-ink-faint">
-                    <T en="builds on: " zh="基于以下研究" />
+                    <T en="cites: " zh="引用了以下论文：" />
                     {w.builds_on.join("; ")}
                   </div>
                 </div>
@@ -67,7 +67,7 @@ export default function StandingOnIt() {
                 </a>
               ) : null}
               <p className="mt-2 text-[11px] text-ink-faint">
-                <T en={`Hand-curated; verified ${u.verified.on}. Not counted in any OpenAlex figure.`} zh={`人工整理，于 ${u.verified.on} 核实，不计入本页任何 OpenAlex 统计。`} />
+                <T en={`Hand-curated and verified on ${u.verified.on}. Excluded from all OpenAlex figures on this page.`} zh={`人工整理，于 ${u.verified.on} 核实。不计入本页任何 OpenAlex 统计。`} />
               </p>
             </li>
           ))}

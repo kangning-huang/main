@@ -156,7 +156,7 @@ export default function AtlasExplorer() {
         setMeta(ptsFile);
         setPoints(parsePoints(ptsFile));
       } catch (e) {
-        if (!cancelled) setError(e instanceof Error ? e.message : "Load error");
+        if (!cancelled) setError(e instanceof Error ? e.message : "Map failed to load");
       }
     })();
     return () => {
@@ -225,7 +225,7 @@ export default function AtlasExplorer() {
 
       {error && (
         <p role="alert" className="rounded border border-ember bg-ember-light px-3 py-2 text-sm text-ember-dark">
-          {error === "Load error" ? <T en="Load error" zh="地图加载失败" /> : error}
+          {error === "Map failed to load" ? <T en="Map failed to load" zh="地图加载失败" /> : error}
         </p>
       )}
 
@@ -276,7 +276,7 @@ export default function AtlasExplorer() {
           ) : (
             <>
               <span className="text-ink-faint">
-                <T en="Papers covering city:" zh="覆盖这座城市的论文" />
+                <T en="Papers covering this city:" zh="覆盖这座城市的论文" />
               </span>
               <Swatch color={PAPER_COUNT_COLORS[1]} en="1" zh="1" />
               <Swatch color={PAPER_COUNT_COLORS[2]} en="2" zh="2" />
@@ -296,8 +296,8 @@ export default function AtlasExplorer() {
                 />
               ) : (
                 <T
-                  en={`${meta.counts.mapped.toLocaleString()} cities · ${multiCount.toLocaleString()} with 2+ papers`}
-                  zh={`${meta.counts.mapped.toLocaleString()} 座城市 · ${multiCount.toLocaleString()} 座有至少 2 篇论文覆盖`}
+                  en={`${meta.counts.mapped.toLocaleString()} cities · ${multiCount.toLocaleString()} covered by 2+ papers`}
+                  zh={`${meta.counts.mapped.toLocaleString()} 座城市 · ${multiCount.toLocaleString()} 座被至少 2 篇论文覆盖`}
                 />
               )}
             </span>

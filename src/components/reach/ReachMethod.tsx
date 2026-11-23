@@ -21,32 +21,32 @@ export default function ReachMethod() {
         <ul className="mt-4 max-w-3xl list-disc space-y-2 pl-5">
           <li>
             <T
-              en="Papers: a pinned DOI list synced from the Publications pages. No author-name search (OpenAlex disambiguation splits and merges profiles). In-press papers without a resolving DOI are omitted until the DOI resolves (OpenAlex may lag Crossref)."
-              zh="这里收录的论文，以“学术论文”页同步的固定 DOI 清单为准。OpenAlex 的作者档案有时会被拆分或合并，因此用 DOI 确认论文，不按姓名检索。尚无可解析 DOI 的待刊论文暂不纳入（OpenAlex 入库可能晚于 Crossref）。"
+              en="Papers are selected from a fixed DOI list synchronized with the Publications page. I do not search by author name because OpenAlex may split or merge author profiles. In-press papers without a resolving DOI are excluded until their DOI resolves. OpenAlex records may lag behind Crossref."
+              zh="论文清单与 Publications 页面同步，以固定的 DOI 为准。不按作者姓名检索，因为 OpenAlex 可能将同一作者拆分为多个档案，或把不同作者合并。尚无可解析 DOI 的待刊论文暂不纳入。OpenAlex 的记录可能晚于 Crossref。"
             />
           </li>
           <li>
             <T
-              en="Filter: All includes every pinned DOI. “First / last / corresponding author” is hand-pinned (lens: lead) — OpenAlex is_corresponding is never trusted alone. Corresponding-only flags still need Ken's review where unknown."
-              zh="“全部论文”包含清单上的所有 DOI。“第一/末位/通讯作者”视角按人工标注筛选（lens: lead），不单凭 OpenAlex 的 is_corresponding 字段判断。尚未确认的“仅通讯作者”标注，仍需我核实。"
+              en="The All filter includes every DOI on the fixed list. The “First / last / corresponding author” filter uses manually assigned labels (lens: lead). I do not rely on OpenAlex is_corresponding alone. Corresponding-only authorship remains subject to my review where the status is uncertain."
+              zh="“全部论文”包含固定清单中的所有 DOI。“第一 / 末位 / 通讯作者”视角使用人工标注（lens: lead），不单凭 OpenAlex 的 is_corresponding 字段判断。尚未确认的仅通讯作者身份仍需人工核实。"
             />
           </li>
           <li>
             <T
-              en={`Self-citations (strict, per cited paper): ${meta.selfCitationRule} Removed in this view: ${totals.selfCitationsRemoved} of ${totals.citingLinksFetched} citation links.`}
-              zh={`自引按每篇被引用的论文分别判断。只要一篇论文和引用它的文献有任何一位共同作者，就剔除这条引用。当前视角共获取 ${totals.citingLinksFetched} 条引用记录，其中 ${totals.selfCitationsRemoved} 条作为自引剔除。`}
+              en={`Self-citations are identified separately for each cited paper. Rule: ${meta.selfCitationRule} In this view, ${totals.selfCitationsRemoved} of ${totals.citingLinksFetched} citation links were removed as self-citations.`}
+              zh={`自引按每篇被引论文分别判断。如果施引文献与被引论文有任何一位共同作者，就剔除该引用。当前视角共获取 ${totals.citingLinksFetched} 条引用记录，其中 ${totals.selfCitationsRemoved} 条因自引被剔除。`}
             />
           </li>
           <li>
             <T
-              en="Field & Shelf (section 01): one square per non-self citing OpenAlex work. Colour and centre position encode that citing work's own OpenAlex cited_by_count on a log-ish ember–ink ramp (0 · 1–9 · 10–99 · 100–999 · ≥1,000); nearer the centre means more cited. Direction means nothing. Hover a shelf paper to light its citers and draw a thin link from each; hover a square to show up to four lines back to the papers it cites."
-              zh="在“领域与书架”（第 01 节）中，一个方块代表一篇 OpenAlex 收录的、引用我研究的文献，已剔除自引。方块的颜色和离中心的距离，表示这篇文献自身在 OpenAlex 中的被引次数（cited_by_count）。颜色从余烬色到墨色，近似按对数分档（0 · 1–9 · 10–99 · 100–999 · ≥1,000）；越靠近中心，被引次数越多，所在方向没有含义。把鼠标移到书架上的论文，引用它的文献就会亮起，并与它逐一连线；移到方块上，则最多显示 4 条连线，指向它引用的论文。"
+              en="In Field & Shelf (section 01), each square represents one citing work recorded in OpenAlex, excluding self-citations. Its color and distance from the center show its own OpenAlex citation count (cited_by_count). The ember–ink color scale uses approximate logarithmic groups: 0 · 1–9 · 10–99 · 100–999 · ≥1,000. More highly cited works are closer to the center. Direction has no meaning. Hover over a paper on the shelf to highlight its citing works and draw links to them. Hover over a square to show up to four links to the papers it cites."
+              zh="在“领域与书架”（第 01 节）中，每个方块代表一篇 OpenAlex 收录的施引文献，已剔除自引。方块的颜色和到中心的距离表示该文献自身的被引次数（cited_by_count）。颜色从余烬色到墨色，近似按对数分组：0 · 1–9 · 10–99 · 100–999 · ≥1,000。被引次数越多，方块越靠近中心。方块所在方向没有含义。 鼠标悬停在书架中的论文上，可以突出显示引用它的文献，并绘制连线。悬停在方块上，最多显示 4 条连线，连接到它引用的论文。"
             />
           </li>
           <li>
             <T
-              en="Field colour is each citing work's own OpenAlex cited_by_count (same across All / Lead). Where is the observed÷expected country map; Topic cards / Who below use the adaptive OpenAlex taxonomy; any outside-home % elsewhere on the page is labelled with its topic rule."
-              zh="领域中的颜色表示引用我研究的文献自身在 OpenAlex 中的被引次数（cited_by_count）。所以，同一篇文献在“全部论文”和“第一/末位/通讯作者”视角下，颜色相同。“在哪里”地图显示各国实际引用文献数与预期文献数的比值。下方的主题卡片和“谁在用”按 OpenAlex 分类自动调整分组；页面其他位置若显示“主题外”占比，会注明所用的主题规则。"
+              en="Field colors represent each citing work's own OpenAlex citation count (cited_by_count), and remain the same in All and Lead views. The Where map shows the ratio of observed to expected citing works by country. The topic cards and Who section use an adaptive OpenAlex taxonomy. Any percentage of citing works outside my research topics elsewhere on the page states the topic rule used."
+              zh="领域图中的颜色表示施引文献自身在 OpenAlex 中的被引次数（cited_by_count）。同一篇文献在“全部论文”和“第一 / 末位 / 通讯作者”视角下颜色相同。“在哪里”地图显示各国实际施引文献数与预期值的比值。主题卡片和“谁在用”部分使用 OpenAlex 的自适应分类。页面其他位置若显示研究主题之外的文献比例，会注明所用的分类规则。"
             />
           </li>
           <li>
@@ -58,45 +58,37 @@ export default function ReachMethod() {
           <li>
             <T
               en={`Country normalization: ${meta.countryBaseline}`}
-              zh="各国的预期文献数，按 2012–2026 年的数据估算。先算出该国文献占 OpenAlex 某个领域文献总数的比例，再乘以该领域引用我研究的文献数。把各领域的结果相加，就得到该国的预期值。"
+              zh="各国的预期施引文献数根据 2012–2026 年的数据计算。首先，计算该国在各个 OpenAlex 领域中的文献产出比例。然后，将这个比例乘以该领域引用我研究的文献数。最后，将各领域的预期值相加，得到该国的总预期值。"
             />
           </li>
           <li>
             <T
-              en="OpenAlex under-counts Chinese-language venues (e.g. CNKI). Treat China coverage as a lower bound."
-              zh="OpenAlex 对知网等中文文献来源的收录还不完整，因此这里的中国相关统计应看作下限。"
+              en="OpenAlex does not fully cover Chinese-language publications, including those indexed by CNKI. Treat the China counts as a lower bound."
+              zh="OpenAlex 对中文文献的收录并不完整，包括知网（CNKI）中的部分文献。因此，中国相关的统计结果应视为下限。"
             />
           </li>
           <li>
             <T
               en={
                 <>
-                  Citing works are OpenAlex citation links plus works that Semantic Scholar lists as citing a pinned paper but
-                  OpenAlex has not linked (looked up in OpenAlex by DOI). Every work&apos;s metadata — topic, institutions,
-                  countries, its own citation count — is from OpenAlex, and every work passes the same self-citation rule.
-                  OpenAlex open-discussion replies (record type peer-review) are excluded. Google Scholar counts are higher
-                  and are shown only on the{" "}
-                  <Link href="/publications" className="text-teal hover:text-ember">
-                    Publications
-                  </Link>{" "}
-                  page; the two are never combined.
+                  Citing works come from OpenAlex citation links and from Semantic Scholar records that cite papers on the fixed list but are not yet linked in OpenAlex. These additional works are located in OpenAlex by DOI. All metadata, including topics, institutions, countries, and each work&apos;s own citation count, come from OpenAlex. The same self-citation rule applies to all works. Open-discussion replies classified as peer-review in OpenAlex are excluded. Google Scholar counts are higher and are shown only on the{" "}
+                  <Link href="/publications" className="text-teal hover:text-ember">Publications</Link>{" "}
+                  page. They are never combined with these counts.
                 </>
               }
               zh={
                 <>
-                  施引文献包括 OpenAlex 的引用记录，以及 Semantic Scholar 显示引用了清单论文、但 OpenAlex 尚未关联的文献（按 DOI 在 OpenAlex 中查到）。每篇文献的主题、机构、国家和自身被引次数都取自 OpenAlex，并按同一规则剔除自引。OpenAlex 中的公开讨论回复（类型为 peer-review）不计入。谷歌学术统计通常更高，仅在
-                  <Link href="/publications" className="text-teal hover:text-ember">
-                    学术论文
-                  </Link>
-                  页面展示，两者从不混用。
+                  施引文献包括 OpenAlex 的引用记录，以及 Semantic Scholar 已记录、但 OpenAlex 尚未建立引用关联的文献。后者通过 DOI 在 OpenAlex 中查找。所有文献的主题、机构、国家和自身被引次数均来自 OpenAlex。全部文献采用相同的自引剔除规则。OpenAlex 中归类为 peer-review 的公开讨论回复不纳入统计。Google Scholar 的被引统计通常更高，只在
+                  <Link href="/publications" className="text-teal hover:text-ember">Publications</Link>
+                  页面展示，不与本页数据合并。
                 </>
               }
             />
           </li>
           <li>
             <T
-              en="Refreshed monthly by a GitHub Action; each run is kept as a dated snapshot."
-              zh="数据通过 GitHub Action 每月更新，每次都会保存一份注明日期的数据快照。"
+              en="A GitHub Action updates the data monthly. Each update is saved as a dated snapshot."
+              zh="数据通过 GitHub Action 每月更新，每次更新都会保存一份带日期的快照。"
             />
           </li>
         </ul>

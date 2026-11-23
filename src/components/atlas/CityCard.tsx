@@ -58,8 +58,8 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
         {!mass ? (
           <p className="mt-3 text-sm text-ink-muted">
             <T
-              en="Not covered in the city-mass dataset for this GHSL urban centre."
-              zh="建成质量数据集未覆盖这个 GHSL 城市中心。"
+              en="This GHSL urban centre is not covered by the built-mass dataset."
+              zh="建成质量数据集未覆盖这一 GHSL 城市中心。"
             />
           </p>
         ) : (
@@ -67,8 +67,8 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
             {mass.quality === "flagged" && (
               <p className="mt-2 rounded bg-ember-light px-2 py-1 text-xs text-ember-dark">
                 <T
-                  en={`Match flagged: ${mass.match.reason ?? "name or location uncertain"}. Values shown for the matched record (${mass.match.sourceName}).`}
-                  zh={`这座城市的匹配结果存疑，原因是${mass.match.reason ?? "名称或位置不确定"}。下方数值来自匹配到的记录（${mass.match.sourceName}）。`}
+                  en={`City match uncertain: ${mass.match.reason ?? "name or location uncertain"}. Values are from the matched record (${mass.match.sourceName}).`}
+                  zh={`城市匹配结果不确定：${mass.match.reason ?? "名称或位置不确定"}。显示的数值来自匹配记录（${mass.match.sourceName}）。`}
                 />
               </p>
             )}
@@ -82,7 +82,7 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
               </p>
               <p className="mt-1 text-xs text-ink-faint">
                 <T
-                  en={`Total ${formatMassT(mass.massT)} · dataset pop ${formatPop(mass.pop)}`}
+                  en={`Total ${formatMassT(mass.massT)} · dataset population ${formatPop(mass.pop)}`}
                   zh={`总量 ${formatMassT(mass.massT)} · 数据集人口 ${formatPop(mass.pop)}`}
                 />
               </p>
@@ -90,7 +90,7 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
             <dl className="mt-3 text-sm">
               <div>
                 <dt className="text-xs text-ink-faint">
-                  <T en="vs. scaling line" zh="与标度线相比" />
+                  <T en="Relative to scaling line" zh="与标度线相比" />
                 </dt>
                 <dd className="mt-0.5 text-lg font-medium text-ink">
                   {mass.vsScaling >= 1 ? "+" : ""}
@@ -116,8 +116,8 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
 
             <p className="mt-2 border-l-2 border-rule pl-2 text-xs italic text-ink-faint">
               <T
-                en="What this number is not: it is not a judgment that the city is over- or under-built in a planning sense — only its position relative to the empirical scaling relationship across ~3,600 cities."
-                zh="把约 3,600 座城市放在一起比较，可以得到建成质量与人口之间的经验标度关系。这个数值告诉你，这座城市相对标度线处在什么位置，不能据此判断城市规划上“建多了”还是“建少了”。"
+                en="This value shows how a city's built mass differs from the empirical scaling relationship across ~3,600 cities. It does not show whether the city is overbuilt or underbuilt from an urban planning perspective."
+                zh="这个数值表示一座城市的建成质量相对于约 3,600 座城市经验标度关系的偏差。它不能直接说明这座城市在规划意义上建得过多或过少。"
               />
             </p>
 
@@ -142,8 +142,8 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
             {(heat.quality === "flagged" || heat.fua.name !== city.name) && (
               <p className="mt-2 rounded bg-ember-light px-2 py-1 text-xs text-ember-dark">
                 <T
-                  en={`Values are for the whole functional urban area “${heat.fua.name}”${heat.quality === "flagged" ? " (name shared by more than one area; largest one used)" : ""}.`}
-                  zh={`这里的数值对应整个功能城市区“${heat.fua.name}”${heat.quality === "flagged" ? "（多个区域同名，选取人口最多者）" : ""}。`}
+                  en={`Values cover the entire functional urban area “${heat.fua.name}”${heat.quality === "flagged" ? " (name shared by more than one area; largest one used)" : ""}.`}
+                  zh={`数值对应整个功能城市区“${heat.fua.name}”${heat.quality === "flagged" ? "（多个区域同名，选取人口最多者）" : ""}。`}
                 />
               </p>
             )}
@@ -155,8 +155,8 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
             </dl>
             <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
               <T
-                en={`From 2003 to 2020, the daytime heat-island extreme where residents live ${trendWord(heat.dayP, "en")} (area average: ${fmtTrend(heat.dayA)}).`}
-                zh={`从 2003 到 2020 年，居民所在地白天热岛极端值${trendWord(heat.dayP, "zh")}（面积平均：${fmtTrend(heat.dayA, "zh")}）。`}
+                en={`From 2003 to 2020, the daytime heat-island extreme experienced where residents live ${trendWord(heat.dayP, "en")} (area average: ${fmtTrend(heat.dayA)}).`}
+                zh={`2003 至 2020 年，居民所在地的白天地表热岛极端值${trendWord(heat.dayP, "zh")}（面积平均：${fmtTrend(heat.dayA, "zh")}）。`}
               />
             </p>
             <Not
@@ -192,8 +192,8 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
             </dl>
             <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
               <T
-                en={`Demolished informal-settlement sites here cooled by about ${Math.abs(cooling.effectK).toFixed(1)} K in land-surface temperature relative to comparable sites that were not demolished (all three cities pooled: ${Math.abs(cooling.pooledK).toFixed(1)} K).`}
-                zh={`与条件相近、但未拆除的地块相比，这座城市的城中村地块拆除后，地表温度约下降 ${Math.abs(cooling.effectK).toFixed(1)} K（三座城市合并估计为 ${Math.abs(cooling.pooledK).toFixed(1)} K）。`}
+                en={`After informal settlements were demolished in this city, land-surface temperatures fell by about ${Math.abs(cooling.effectK).toFixed(1)} K relative to comparable sites that were not demolished. The pooled estimate across all three cities is ${Math.abs(cooling.pooledK).toFixed(1)} K.`}
+                zh={`与条件相近但未拆除的地块相比，这座城市的非正规住区拆除后，地表温度降低约 ${Math.abs(cooling.effectK).toFixed(1)} K。三座城市合并估计的降温幅度为 ${Math.abs(cooling.pooledK).toFixed(1)} K。`}
               />
             </p>
             <Not
@@ -228,8 +228,8 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
             {(flood.quality === "flagged" || flood.fua.name !== city.name) && (
               <p className="mt-2 rounded bg-ember-light px-2 py-1 text-xs text-ember-dark">
                 <T
-                  en={`Values are for the functional urban area “${flood.fua.name}”${flood.quality === "flagged" ? " (this urban centre sits in more than one overlapping area; largest one used)" : ""}.`}
-                  zh={`这里的数值对应功能城市区“${flood.fua.name}”${flood.quality === "flagged" ? "（该城市中心位于多个重叠区域，选取人口最多者）" : ""}。`}
+                  en={`Values cover the functional urban area “${flood.fua.name}”${flood.quality === "flagged" ? " (this urban centre sits in more than one overlapping area; largest one used)" : ""}.`}
+                  zh={`数值对应功能城市区“${flood.fua.name}”${flood.quality === "flagged" ? "（该城市中心位于多个重叠区域，选取人口最多者）" : ""}。`}
                 />
               </p>
             )}
@@ -298,8 +298,8 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
             {expansion.quality === "flagged" && (
               <p className="mt-2 rounded bg-ember-light px-2 py-1 text-xs text-ember-dark">
                 <T
-                  en="Match flagged: centroid fell outside the preferred cluster polygon or was reassigned to a same-country neighbor. Values are for the matched Huang_2019 urban cluster."
-                  zh="这座城市的匹配结果存疑。城市中心的质心落在优先匹配的集群边界外，或被重新分配到了同一国家的邻近集群。这里显示的是匹配到的 Huang_2019 城市集群数值。"
+                  en="City match uncertain. The urban-centre centroid fell outside the preferred cluster polygon or was reassigned to a neighboring cluster in the same country. Values come from the matched Huang_2019 urban cluster."
+                  zh="城市匹配结果不确定。城市中心的质心位于优先匹配的集群边界之外，或被重新分配到同一国家的邻近集群。显示的数值来自匹配到的 Huang_2019 城市集群。"
                 />
               </p>
             )}
@@ -309,8 +309,8 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
             </dl>
             <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
               <T
-                en={`Under Huang_2019 URBANMOD projections, this urban cluster’s urban land area by 2050 ranges from ${expansion.loKm2.toLocaleString()} to ${expansion.hiKm2.toLocaleString()} km² across SSP1, SSP3 and SSP5. Scenario range, not a forecast.`}
-                zh={`按 Huang_2019 URBANMOD 模型估算，到 2050 年，这个城市集群在 SSP1/SSP3/SSP5 情景下的城市用地为 ${expansion.loKm2.toLocaleString()}–${expansion.hiKm2.toLocaleString()} km²。这个范围来自不同情景，不能当作对未来的预测。`}
+                en={`Under Huang_2019 URBANMOD projections, this urban cluster's urban land area in 2050 ranges from ${expansion.loKm2.toLocaleString()} to ${expansion.hiKm2.toLocaleString()} km² across SSP1, SSP3 and SSP5. These are scenario results, not a forecast.`}
+                zh={`根据 Huang_2019 URBANMOD 模型，在 SSP1、SSP3 和 SSP5 情景下，这个城市集群到 2050 年的城市用地面积为 ${expansion.loKm2.toLocaleString()}–${expansion.hiKm2.toLocaleString()} km²。这是不同情景下的模拟范围，不是单一的未来预测。`}
               />
             </p>
             <Not
@@ -384,8 +384,8 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
             />
             <p className="mt-3 text-[13px] leading-relaxed text-ink-muted">
               <T
-                en="Zhang et al. show that larger homogeneous functional clusters (Urban Homogeneous Scale, UHS — block scale) are linked to cooler surface temperatures across 101 cities."
-                zh="Zhang 等人基于全球 101 座城市发现：更大的均质功能集群（城市均质尺度 UHS，即同质功能区尺度）与更低的地表温度相关。"
+                en="Across 101 cities, Zhang et al. found that larger homogeneous functional clusters (Urban Homogeneous Scale, UHS — block scale) are associated with lower surface temperatures."
+                zh="Zhang 等人研究了全球 101 座城市，发现更大的均质功能集群（城市均质尺度 UHS，即同质功能区尺度）与更低的地表温度相关。"
               />
             </p>
             <Links doi={UHS_PAPER.doiUrl} data={UHS_PAPER.dataUrl} />
@@ -395,8 +395,8 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
             {(uhs.quality === "flagged" || uhs.quality === "review") && (
               <p className="mt-2 rounded bg-ember-light px-2 py-1 text-xs text-ember-dark">
                 <T
-                  en={`Match flagged (${uhs.match?.method ?? "join"}): raster “${uhs.tifName ?? uhs.match?.sourceName ?? "UHS"}” ↔ ${city.name}.`}
-                  zh={`匹配存疑（${uhs.match?.method ?? "join"}）：栅格 “${uhs.tifName ?? uhs.match?.sourceName ?? "UHS"}” ↔ ${city.name}。`}
+                  en={`Match uncertain (${uhs.match?.method ?? "join"}): raster “${uhs.tifName ?? uhs.match?.sourceName ?? "UHS"}” ↔ ${city.name}.`}
+                  zh={`匹配不确定（${uhs.match?.method ?? "join"}）：栅格“${uhs.tifName ?? uhs.match?.sourceName ?? "UHS"}” ↔ ${city.name}。`}
                 />
               </p>
             )}
@@ -428,8 +428,8 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
             {uhs.coverage != null && (
               <p className="mt-2 text-xs text-ink-faint">
                 <T
-                  en={`UHS covers about ${(uhs.coverage * 100).toFixed(0)}% of this urban extent (GHSL UCDB 2015). Stats use 500 m means of the 10 m UHS surface, matching the paper’s analysis grid.`}
-                  zh={`UHS 有效像元约占该城市范围（GHSL UCDB 2015）的 ${(uhs.coverage * 100).toFixed(0)}%。统计基于 10 m UHS 在 500 m 网格上的均值，与论文分析单元一致。`}
+                  en={`Valid UHS pixels cover about ${(uhs.coverage * 100).toFixed(0)}% of this urban extent (GHSL UCDB 2015). Statistics use mean UHS values on a 500 m grid, aggregated from the 10 m UHS surface. This matches the analysis grid in the paper.`}
+                  zh={`UHS 有效像元覆盖该城市范围（GHSL UCDB 2015）的约 ${(uhs.coverage * 100).toFixed(0)}%。统计使用 10 m UHS 数据在 500 m 网格上的平均值，与论文的分析网格一致。`}
                 />
               </p>
             )}

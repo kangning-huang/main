@@ -21,8 +21,8 @@ export default function AdaptiveTopics() {
     <div>
       <p className="max-w-3xl text-sm text-ink-muted">
         <T
-          en={<>{pctOutside}% of citing works ({outside.toLocaleString()} / {totals.uniqueCitingWorks.toLocaleString()}) sit outside Ken&apos;s own OpenAlex topics. Cards expand the flow chart above.</>}
-          zh={<>{pctOutside}% 的施引文献（{outside.toLocaleString()} / {totals.uniqueCitingWorks.toLocaleString()}）落在本人主题之外。卡片展开上方流向图。</>}
+          en={<>{pctOutside}% of citing works ({outside.toLocaleString()} / {totals.uniqueCitingWorks.toLocaleString()}) fall outside my OpenAlex research topics. The cards below provide details of the flow chart above.</>}
+          zh={<>有 {pctOutside}% 的施引文献（{outside.toLocaleString()} / {totals.uniqueCitingWorks.toLocaleString()}）属于我在 OpenAlex 研究主题之外的领域。下方卡片进一步展示上方流向图的结果。</>}
         />
       </p>
 
@@ -90,16 +90,16 @@ export default function AdaptiveTopics() {
       {other && (
         <p className="mt-4 text-sm text-ink-faint">
           <T
-            en={`Plus a long tail of smaller research areas: ${other.citingWorks} citing works (${other.share}%). Named domains for that tail are in the flow chart above.`}
-            zh={`其余规模较小的领域，共有 ${other.citingWorks} 篇文献引用了我的研究，占 ${other.share}%。具体分组见上方流向图。`}
+            en={`Other smaller research areas account for ${other.citingWorks} citing works (${other.share}%). Their names are shown in the flow chart above.`}
+            zh={`其他规模较小的研究领域共有 ${other.citingWorks} 篇施引文献，占 ${other.share}%。具体领域见上方流向图。`}
           />
         </p>
       )}
 
       <p className="mt-4 text-xs text-ink-faint">
         <T
-          en="Keyword chips come from citing works (OpenAlex), not from Ken's own papers. Topic labels are automatic and can be noisy — treat single-digit cards as indicative."
-          zh="关键词取自 OpenAlex 中引用我研究的文献，不取自我的论文。主题标签自动生成，可能不准确；文献数只有个位数的卡片，仅供参考。"
+          en="Keywords come from citing works in OpenAlex, not from my own papers. Topic labels are assigned automatically and may contain errors. Treat cards with fewer than 10 citing works as indicative."
+          zh="关键词来自 OpenAlex 收录的施引文献，而不是我自己的论文。主题标签由系统自动生成，可能存在误差。施引文献少于 10 篇的卡片仅供参考。"
         />
       </p>
     </div>

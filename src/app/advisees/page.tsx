@@ -55,8 +55,8 @@ export default function AdviseesPage() {
           </h1>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
-              en="I supervise NYU Shanghai undergraduates on capstones, research projects, and fellowships. The work is research design, methods, revision, and how to present results."
-              zh="我指导上海纽约大学本科生完成毕业论文、研究项目和学术资助项目。我们会反复讨论研究怎么设计、方法怎么用，以及怎样把研究过程和发现讲清楚。"
+              en="I supervise NYU Shanghai undergraduates on capstones, research projects, and fellowships. We work on research design, methods, revision, and presenting results."
+              zh="我指导上海纽约大学本科生开展毕业论文、研究项目和学术资助项目。我们一起讨论研究设计、方法选择和结果呈现，并在研究过程中不断修改和完善。"
             />
           </p>
           <p className="mt-3 max-w-3xl text-sm text-ink-muted animate-fade-up delay-1">
@@ -64,19 +64,13 @@ export default function AdviseesPage() {
               en={
                 <>
                   Interested in working with the lab? See{" "}
-                  <Link href="/lab#join" className="link-underline text-ember hover:text-ember-dark transition-colors">
-                    how to join
-                  </Link>
-                  .
+                  <Link href="/lab#join" className="link-underline text-ember hover:text-ember-dark transition-colors">how to join</Link>.
                 </>
               }
               zh={
                 <>
                   有意加入实验室？请查看
-                  <Link href="/lab#join" className="link-underline text-ember hover:text-ember-dark transition-colors">
-                    加入方式
-                  </Link>
-                  。
+                  <Link href="/lab#join" className="link-underline text-ember hover:text-ember-dark transition-colors">加入方式</Link>。
                 </>
               }
             />

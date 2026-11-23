@@ -59,8 +59,8 @@ export default async function BlogPage() {
           </h1>
           <p className="mt-2 text-ink-muted">
             <T
-              en="Writing on cities, climate, autonomous vehicles, and more."
-              zh="城市、气候等话题——英文在 Substack，中文在公众号「反直觉手记」。"
+              en="I write about cities, climate, autonomous vehicles, and other topics."
+              zh="我写城市、气候等话题。英文文章发表在 Substack，中文文章发表在微信公众号「反直觉手记」。"
             />
           </p>
           <p className="mt-3">
@@ -180,8 +180,8 @@ export default async function BlogPage() {
         <div className="mt-10 rounded-xl border border-rule p-8 text-center">
           <p className="text-ink-muted">
             <T
-              en="Posts are loading from Substack. Visit the newsletter directly:"
-              zh="文章加载中。也可扫码关注公众号「反直觉手记」，或前往 Substack 阅读。"
+              en="Posts are loading from Substack. You can also read them directly on Substack:"
+              zh="正在加载文章。你也可以扫码关注微信公众号「反直觉手记」，或直接前往 Substack 阅读。"
             />
           </p>
           <a

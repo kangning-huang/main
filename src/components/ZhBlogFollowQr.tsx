@@ -11,9 +11,9 @@ export default function ZhBlogFollowQr({ className = "" }: { className?: string 
       className={`mt-14 rounded-xl border border-rule bg-paper-warm px-6 py-8 ${className}`}
     >
       <p className="text-center text-sm text-ink-muted">
-        不是每天都有空刷网站。扫码关注公众号
+        扫码关注微信公众号
         <span className="font-medium text-ink">「反直觉手记」</span>
-        ，即可收到新文章更新。
+        ，获取新文章更新。
       </p>
       <WeChatOfficialQr
         size="md"
