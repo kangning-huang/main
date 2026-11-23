@@ -35,16 +35,12 @@ export default function AwardBlock() {
         <T
           en={
             <>
-              Recognized in the {TEA_AWARD.cycle} cycle. The classroom observation was of{" "}
-              <em>Cities at a Crossroads</em> (SOCS-SHU 208), which NYU Shanghai also notes was named a
-              Shanghai City-Level Undergraduate Key Course in 2025.
+              Recognized in the {TEA_AWARD.cycle} cycle. The classroom observation took place in <em>Cities at a Crossroads</em> (SOCS-SHU 208). According to NYU Shanghai, the course was also named a Shanghai City-Level Undergraduate Key Course in 2025.
             </>
           }
           zh={
             <>
-              {TEA_AWARD.cycle}{" "}
-              年度获奖。课堂观摩课程为《城市十字路口：城市的环境挑战与机遇》（SOCS-SHU 208）；据上海纽约大学介绍，该课程于
-              2025 年入选上海高校市级重点课程。
+              在 {TEA_AWARD.cycle} 年度获奖。课堂观摩课程为《城市十字路口：城市的环境挑战与机遇》（SOCS-SHU 208）。据上海纽约大学介绍，该课程于 2025 年入选上海高校市级重点课程。
             </>
           }
         />

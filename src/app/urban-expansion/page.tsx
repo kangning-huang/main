@@ -18,28 +18,18 @@ const EXPLAINER_SECTIONS: {
     headingZh: "预测结果",
     en: [
       <>
-        Across the five Shared Socioeconomic Pathways (SSPs), global urban land
-        is projected to grow by 0.6&ndash;1.3 million km&sup2; between 2015 and
-        2050, an increase of 78%&ndash;171% over the 2015 urban footprint. More
-        than two-thirds of this new urban land is expected in Asia
-        (46%&ndash;49%) and Africa (16%&ndash;25%), and more than 70% of it
-        falls in the humid temperate and tropical climate zones.
+        Across the five Shared Socioeconomic Pathways (SSPs), global urban land is projected to increase by 0.6–1.3 million km² between 2015 and 2050. This represents 78%–171% growth relative to the 2015 urban footprint. More than two-thirds of the new urban land is expected in Asia (46%–49%) and Africa (16%–25%). More than 70% is expected in humid temperate and tropical climate zones.
       </>,
       <>
-        This expansion intensifies urban heat islands. It raises average summer
-        daytime and nighttime air temperatures by 0.5&ndash;0.7&nbsp;&deg;C, and
-        by up to about 3&nbsp;&deg;C in some locations. On average, this
-        expansion-induced warming is about half as strong as the warming
-        projected from greenhouse gas emissions under RCP&nbsp;4.5, and in some
-        places up to twice as strong.
+        Urban expansion is projected to intensify urban heat islands. It increases average summer daytime and nighttime air temperatures by 0.5–0.7 °C, and by up to about 3 °C in some locations. On average, warming caused by urban expansion is about half the warming projected from greenhouse gas emissions under RCP 4.5. In some locations, it is up to twice as strong.
       </>,
     ],
     zh: [
       <>
-        在五种共享社会经济路径（SSP）情景下，2015至2050年间全球城市用地预计将增加60万至130万平方公里，比2015年的城市范围增长78%&ndash;171%。超过三分之二的新增城市用地预计位于亚洲（46%&ndash;49%）和非洲（16%&ndash;25%），其中70%以上位于较湿润的温带和热带气候区。
+        在五种共享社会经济路径（SSP）情景下，2015 至 2050 年间，全球城市用地预计增加 60 万至 130 万平方公里，相当于 2015 年城市用地面积的 78%–171%。新增城市用地中，超过三分之二位于亚洲（46%–49%）和非洲（16%–25%），超过 70% 位于湿润温带和热带气候区。
       </>,
       <>
-        城市扩张将加剧城市热岛效应，使夏季白天和夜间的平均气温升高0.5&ndash;0.7&nbsp;&deg;C，部分地区最高可达约3&nbsp;&deg;C。平均而言，这一由城市扩张引起的增温约为RCP&nbsp;4.5情景下温室气体排放所致增温的一半，在某些地方可达其两倍。
+        城市扩张预计将加剧城市热岛效应，使夏季白天和夜间的平均气温升高 0.5–0.7 °C，部分地区最高升温约 3 °C。平均而言，城市扩张带来的增温约为 RCP 4.5 情景下温室气体排放所致增温的一半。在部分地区，这一增温可达到温室气体增温的两倍。
       </>,
     ],
   },
@@ -49,26 +39,18 @@ const EXPLAINER_SECTIONS: {
     headingZh: "研究方法",
     en: [
       <>
-        The land projections come from URBANMOD-ZIPF, a global urban land change
-        model that preserves Zipf&rsquo;s law of urban cluster sizes. The model
-        first relates urban land per capita to GDP per capita to estimate how
-        much urban land each region needs under each SSP, then allocates new
-        urban land at 5&nbsp;km resolution using slope, distance to roads,
-        population density, and land cover.
+        The urban land projections come from URBANMOD-ZIPF, a global urban land change model that preserves Zipf’s law of urban cluster sizes. The model first uses the relationship between urban land per capita and GDP per capita to estimate total urban land demand in each region under each SSP. It then allocates new urban land at 5 km resolution using slope, distance to roads, population density, and land cover.
       </>,
       <>
-        Heat island intensification is estimated with sigmoid models that link
-        urban cluster size to satellite (MODIS) land surface temperature. These
-        models are fitted separately for arid, tropical, temperate, and cold
-        climates and then translated into changes in air temperature.
+        We estimate heat island intensification using sigmoid models that relate urban cluster size to land surface temperature measured by MODIS satellites. The models are fitted separately for arid, tropical, temperate, and cold climates. The estimated changes in land surface temperature are then translated into changes in air temperature.
       </>,
     ],
     zh: [
       <>
-        城市用地预测来自URBANMOD-ZIPF模型，这是一个保持城市规模齐普夫定律的全球城市用地变化模型。模型首先建立人均城市用地与人均GDP之间的关系，估算各区域在不同SSP情景下所需的城市用地总量，然后依据坡度、到道路的距离、人口密度和土地覆盖，以5公里分辨率对新增城市用地进行空间分配。
+        城市用地预测来自 URBANMOD-ZIPF。这是一个全球城市用地变化模型，保持城市集群规模分布符合齐普夫定律。模型首先根据人均城市用地与人均 GDP 的关系，估算各地区在不同 SSP 情景下的城市用地需求。随后，根据坡度、到道路的距离、人口密度和土地覆盖，以 5 公里分辨率分配新增城市用地。
       </>,
       <>
-        城市热岛增强则通过S型（sigmoid）模型估算，该模型将城市集群规模与卫星（MODIS）地表温度联系起来，并针对干旱、热带、温带和寒冷气候区分别拟合，再转换为气温变化。
+        我们使用 S 型（sigmoid）模型估算城市热岛增强。模型将城市集群规模与 MODIS 卫星观测的地表温度联系起来，并分别在干旱、热带、温带和寒冷气候区拟合。随后，将估算的地表温度变化转换为气温变化。
       </>,
     ],
   },
@@ -78,21 +60,12 @@ const EXPLAINER_SECTIONS: {
     headingZh: "研究意义",
     en: [
       <>
-        This additional warming increases extreme heat risk for about half of
-        the future urban population, primarily in the tropical Global South,
-        where existing forecasts already indicate stronger greenhouse
-        gas&ndash;driven warming and adaptive capacity is limited. Medium-sized
-        urban clusters (roughly 100&ndash;5,000&nbsp;km&sup2;) experience the
-        strongest warming. Because both expansion and expansion-induced warming
-        remain substantial even under the sustainability pathway (SSP1), the
-        study concludes that policies to restrict or redistribute urban
-        expansion, together with planning strategies that mitigate urban heat,
-        are needed in the most vulnerable urban areas.
+        This additional warming increases extreme heat risk for about half of the future urban population, mainly in the tropical Global South. These regions already face stronger greenhouse gas–driven warming in existing projections and have limited adaptive capacity. Medium-sized urban clusters (roughly 100–5,000 km²) experience the strongest warming. Urban expansion and the warming it causes remain substantial even under the sustainability pathway (SSP1). The study therefore concludes that the most vulnerable urban areas need policies that restrict or redistribute urban expansion, together with planning strategies that reduce urban heat.
       </>,
     ],
     zh: [
       <>
-        这一额外增温将使约一半的未来城市人口面临更高的极端高温风险，主要集中在热带全球南方地区；现有预测已表明这些地区的温室气体增温更强，而适应能力有限。中等规模的城市集群（约100&ndash;5,000平方公里）增温最为显著。由于即使在可持续发展路径（SSP1）下，城市扩张及其引起的增温依然显著，研究认为最脆弱的城市地区需要采取限制或重新分配城市扩张的政策，并结合缓解城市高温的规划策略。
+        城市扩张带来的额外增温，将使约一半的未来城市人口面临更高的极端高温风险，主要集中在热带全球南方地区。这些地区在现有预测中面临更强的温室气体增温，同时适应能力有限。其中，中等规模城市集群（约 100–5,000 平方公里）的增温最显著。 即使在可持续发展路径（SSP1）下，城市扩张及其带来的增温仍然显著。因此，研究认为，最脆弱的城市地区需要通过政策限制或重新分配城市扩张，并结合城市规划措施缓解高温。
       </>,
     ],
   },
@@ -102,33 +75,19 @@ const EXPLAINER_SECTIONS: {
     headingZh: "数据与相关研究",
     en: [
       <>
-        The Earth Engine app above lets you explore the projected urban land
-        expansion, and the underlying data are openly available on{" "}
-        <a href="https://resourcewatch.org" target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>
-          WRI Resource Watch
-        </a>
-        . A follow-up study,{" "}
-        <a href="https://doi.org/10.1029/2020JD033831" target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>
-          &ldquo;Persistent increases in nighttime heat stress from urban
-          expansion despite heat island mitigation&rdquo;
-        </a>{" "}
-        (Journal of Geophysical Research: Atmospheres, 2021), uses regional
-        climate simulations to show that about half of the nighttime heat
-        stress increase from urban expansion persists even after large-scale
-        deployment of cool roofs.
+        The Earth Engine app above displays the projected expansion of urban land. The underlying data are openly available on{" "}
+        <a href="https://resourcewatch.org" target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>WRI Resource Watch</a>. A follow-up study,{" "}
+        <a href="https://doi.org/10.1029/2020JD033831" target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>“Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation”</a>{" "}
+        (Journal of Geophysical Research: Atmospheres, 2021), uses regional climate simulations to examine nighttime heat stress. It shows that about half of the increase caused by urban expansion remains even after large-scale deployment of cool roofs.
       </>,
     ],
     zh: [
       <>
-        上方的Earth Engine应用可用于浏览城市用地扩张预测，基础数据可在{" "}
-        <a href="https://resourcewatch.org" target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>
-          WRI Resource Watch
-        </a>
-        {" "}上公开获取。后续研究
-        <a href="https://doi.org/10.1029/2020JD033831" target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>
-          《Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation》
-        </a>
-        （Journal of Geophysical Research: Atmospheres，2021）利用区域气候模拟表明，即使大规模推广冷屋顶，城市扩张导致的夜间热应激增加仍有约一半会持续存在。
+        上方的 Earth Engine 应用展示全球城市用地扩张的预测结果。基础数据可在{" "}
+        <a href="https://resourcewatch.org" target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>WRI Resource Watch</a>{" "}
+        公开获取。后续研究
+        <a href="https://doi.org/10.1029/2020JD033831" target="_blank" rel="noopener noreferrer" className={LINK_CLASS}>《Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation》</a>
+        （Journal of Geophysical Research: Atmospheres，2021）利用区域气候模拟，分析城市扩张导致的夜间热应激。结果表明，即使大规模采用冷屋顶，新增夜间热应激仍有约一半无法消除。
       </>,
     ],
   },
@@ -196,16 +155,12 @@ export default function UrbanExpansionPage() {
         <T
           en={
             <p>
-              This project visualizes projected global urban land expansion through
-              2050. Urban populations are expected to increase by 2&ndash;3 billion
-              by mid-century, requiring massive expansion of built-up areas.
-              Understanding where and how this growth will occur is critical for
-              planning climate adaptation strategies.
+              This project maps projected global urban land expansion through 2050. Urban populations are expected to grow by 2–3 billion by mid-century, requiring large increases in built-up land. Understanding where and how cities expand can help inform climate adaptation planning.
             </p>
           }
           zh={
             <p>
-              本项目可视化展示到2050年的全球城市用地扩张预测。预计到本世纪中叶，城市人口将增加20至30亿，需要大规模扩展建成区。了解这种增长将在何处、以何种方式发生，对于规划气候适应策略至关重要。
+              这个项目展示到 2050 年全球城市用地扩张的预测结果。预计到本世纪中叶，全球城市人口将增加 20 至 30 亿，建成区也需要大幅扩张。了解城市未来会在哪里扩张、如何扩张，有助于制定气候适应规划。
             </p>
           }
         />
@@ -227,16 +182,13 @@ export default function UrbanExpansionPage() {
         <T
           en={
             <p>
-              The underlying data is available as an open database on{" "}
+              The underlying data are openly available on{" "}
               <a
                 href="https://resourcewatch.org"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-ember hover:underline"
-              >
-                WRI Resource Watch
-              </a>
-              .
+              >WRI Resource Watch</a>.
             </p>
           }
           zh={
@@ -247,10 +199,8 @@ export default function UrbanExpansionPage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-ember hover:underline"
-              >
-                WRI Resource Watch
-              </a>
-              {" "}上作为开放数据库获取。
+              >WRI Resource Watch</a>{" "}
+              公开获取。
             </p>
           }
         />

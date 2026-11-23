@@ -601,7 +601,7 @@ export default function FieldShelf({ vizToggle }: { vizToggle?: ReactNode } = {}
               {callouts.length > 0 && (
                 <div>
                   <h3 className="text-xs font-medium uppercase tracking-[0.14em] text-ink-faint">
-                    <T en="Worth a look" zh="值得一看" />
+                    <T en="Selected papers" zh="部分论文" />
                   </h3>
                   <ol className="mt-2 space-y-3">
                     {callouts.map((c, i) => (

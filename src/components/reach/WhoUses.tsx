@@ -19,8 +19,8 @@ export default function WhoUses() {
       <figure>
         <figcaption className="mb-3 text-sm text-ink-muted">
           <T
-            en={`Citing works with at least one author at each type of institution (of ${totals.uniqueCitingWorks.toLocaleString()}; a work can count in several rows)`}
-            zh={`这里按机构类型统计引用我研究的文献。只要有一位作者来自某类机构，这篇文献就计入该行。共 ${totals.uniqueCitingWorks.toLocaleString()} 篇文献，同一篇可计入多行。`}
+            en={`Citing works grouped by the types of institutions their authors belong to. Of ${totals.uniqueCitingWorks.toLocaleString()} citing works, each is counted in every institution type represented by at least one author. A work may appear in several rows.`}
+            zh={`按施引文献作者所属机构的类型统计。共 ${totals.uniqueCitingWorks.toLocaleString()} 篇施引文献。如果一篇文献的作者来自不同类型的机构，该文献会分别计入对应类别，因此可能出现在多行。`}
           />
         </figcaption>
         <ul className="space-y-2">
@@ -47,7 +47,7 @@ export default function WhoUses() {
           })}
         </ul>
         <p className="mt-3 text-xs text-ink-faint">
-          <T en="Government and nonprofit rows (ember) are a policy-relevance signal." zh="政府和非营利机构所在行以余烬色标出，可作为研究与政策相关的线索。" />
+          <T en="Government and nonprofit institutions are shown in ember. Their citations may indicate policy relevance." zh="政府和非营利机构用余烬色标出。来自这些机构的引用可作为研究与政策相关的线索。" />
         </p>
       </figure>
 

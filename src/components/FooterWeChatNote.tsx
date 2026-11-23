@@ -10,7 +10,7 @@ export default function FooterWeChatNote() {
 
   return (
     <p className="mt-3 text-xs text-ink-faint">
-      公众号「反直觉手记」·{" "}
+      公众号「反直觉手记」·
       <Link
         href="/zh/blog#wechat"
         className="link-underline transition-colors hover:text-ember"

@@ -25,36 +25,36 @@ const HOME_DESCRIPTION =
 // Each finding is taken from the linked paper's highlights in publications-part-a.ts.
 const FINDINGS = [
   {
-    en: "At the neighborhood scale, doubling population density raises built mass by only about 68% — economies of scale intensify inside the city.",
-    zh: "在街区尺度上，人口密度翻倍，建成质量只增加约 68%；规模经济在城市内部更强。",
+    en: "At the neighborhood scale, doubling population density increases built mass by only about 68%. Economies of scale are stronger within cities.",
+    zh: "在街区尺度上，人口密度翻倍，建成质量只增加约 68%。这说明城市内部的规模经济更强。",
     venue: "Nature Cities",
     year: "2026",
     href: "https://doi.org/10.1038/s44284-026-00532-x",
   },
   {
-    en: "Every extra 100 m of homogeneous building-block scale cuts daytime surface heat islands by about 0.16 °C (~5%).",
-    zh: "功能均质建筑街区的尺度每增加 100 m，白天地表热岛强度约降低 0.16 °C（约 5%）。",
+    en: "For every 100 m increase in homogeneous building-block scale, daytime surface heat island intensity decreases by about 0.16 °C (~5%).",
+    zh: "功能均质建筑街区的范围每增加 100 m，白天地表热岛强度降低约 0.16 °C（～5%）。",
     venue: "PNAS",
     year: "2026",
     href: "https://doi.org/10.1073/pnas.2617717123",
   },
   {
-    en: "Across the 1,000 largest cities, densifying places see sharper rises in who is exposed to extreme surface heat than sprawling ones.",
-    zh: "在全球 1000 座最大城市中，正在加密的城市，人口加权的极端地表热暴露上升得比蔓延扩张的城市更明显。",
+    en: "Across the 1,000 largest cities, population exposure to extreme surface heat rises faster in densifying cities than in sprawling cities.",
+    zh: "在全球 1000 座最大城市中，人口密度增加的城市，人口热暴露上升得比蔓延扩张的城市更快。",
     venue: "Scientific Reports",
     year: "2025",
     href: "https://doi.org/10.1038/s41598-025-96045-z",
   },
   {
-    en: "Counting building height and flood defenses shifts global flood damage toward Southeast Asia, 42% of the total versus 15%.",
-    zh: "把建筑高度和防洪标准算进去，东南亚在全球洪灾损失估算值中的占比会从 15% 升至 42%。",
+    en: "Accounting for building height and flood defenses increases Southeast Asia's estimated share of global flood damage from 15% to 42%.",
+    zh: "考虑建筑高度和防洪标准后，东南亚在全球洪灾损失估算值中的占比从 15% 升至 42%。",
     venue: "Scientific Reports",
     year: "2026",
     href: "https://doi.org/10.1038/s41598-026-70981-w",
   },
   {
-    en: "Replacing informal settlements cooled surfaces by about 1.5 K, and how much depended on what was built next.",
-    zh: "拆除非正规住区使地表降温约 1.5 K，降温幅度取决于拆除后建了什么。",
+    en: "Demolishing informal settlements reduced surface temperatures by about 1.5 K. The cooling effect depended on what was built afterward.",
+    zh: "拆除非正规住区使地表温度降低约 1.5 K。降温幅度取决于拆除后的重建方式。",
     venue: "npj Environmental Social Sciences",
     year: "2026",
     href: "https://doi.org/10.1038/s44432-026-00009-1",
@@ -67,22 +67,22 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
   "Nested Scaling of City Mass": {
     title: "全球城市建成质量的嵌套标度规律",
     description:
-      "人口增加，建成质量会怎样变化？通过交互地图和数据浏览工具，查看全球 3000 多座城市的数据，了解城市与街区两级相互嵌套的规模经济。",
+      "城市人口增加时，建成质量如何变化？通过交互地图和数据浏览工具，可以查看全球 3000 多座城市在城市和街区两个尺度上的规模经济。",
   },
   "Urban Expansion 2050": {
     title: "2050 年的城市扩张",
     description:
-      "到 2050 年，全球城市用地可能扩张到哪里？这里的预测基于 2019 年发表于 Environmental Research Letters 的研究，数据可在 WRI Resource Watch 获取。",
+      "到 2050 年，全球城市用地可能扩张到哪里？这些预测来自 2019 年发表于 Environmental Research Letters 的研究。数据也可在 WRI Resource Watch 获取。",
   },
   "3D Urban Flood Risk": {
     title: "三维城市洪水风险",
     description:
-      "把建筑高度和防洪标准算进去，看看全球城市的三维洪水暴露如何变化。",
+      "考虑建筑高度和防洪标准，评估全球城市的三维洪水暴露。",
   },
   "Urban Renewal Cooling DID": {
     title: "城市更新能降温多少（双重差分）",
     description:
-      "用双重差分（DID）分析非正规住区拆除带来的地表降温，看看重建方式如何影响降温幅度。",
+      "通过双重差分（DID）分析非正规住区拆除后的地表降温，以及不同重建方式对降温幅度的影响。",
   },
   "URBANMOD-ZIPF": {
     title: "URBANMOD-ZIPF",
@@ -213,8 +213,8 @@ export default async function Home() {
               </h1>
               <p className="animate-fade-up delay-1 mt-5 max-w-3xl font-display text-2xl italic leading-snug text-paper/85 md:text-[30px]">
                 <T
-                  en="How the size and shape of cities decide their climate future."
-                  zh="城市是复杂社会—生态系统。它长多大、建成什么样，会怎样影响未来的气候？"
+                  en="How the size and shape of cities affect their climate future."
+                  zh="城市是复杂的社会—生态系统。城市的规模与形态，如何影响未来的气候？"
                 />
               </p>
               <p className="animate-fade-up delay-2 mt-4 text-sm text-paper/60">
@@ -227,13 +227,13 @@ export default async function Home() {
                 <p className="animate-fade-up delay-2 mt-2 text-sm text-paper/60">
                   <Link href="/reach" className="transition-colors hover:text-ember">
                     <T
-                      en={`Cited in ${reach.countries} countries — from ${reach.from} to ${reach.to}`}
+                      en={`Cited by research from ${reach.countries} countries — from ${reach.from} to ${reach.to}`}
                       zh={`从「${reach.from}」到「${reach.to}」，来自 ${reach.countries} 个国家和地区的研究引用了我的工作。`}
                     />
                     <span className="ml-1.5 text-xs text-paper/40">
                       <T
-                        en={`(OpenAlex, all papers with DOI, self-citations removed, ${reach.asOf}) →`}
-                        zh={`（OpenAlex，统计全部有 DOI 的论文，剔除自引，截至 ${reach.asOf}）→`}
+                        en={`(OpenAlex; all papers with DOI; excluding self-citations; as of ${reach.asOf}) →`}
+                        zh={`（OpenAlex；统计全部有 DOI 的论文；剔除自引；截至 ${reach.asOf}）→`}
                       />
                     </span>
                   </Link>
@@ -344,44 +344,38 @@ export default async function Home() {
             <T
               en={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
-                  I study cities as complex socio-ecological systems, the outcome of interactions between human and natural systems. At <a href={LINKS.nyuFaculty} target="_blank" rel="noopener noreferrer" className={extLink}>New York University Shanghai</a> I lead the CLimate and Urban Environments (CLUEs) Lab. We combine satellite data, climate models, and causal inference across thousands of cities, and ask how the amount, height, and arrangement of what we build shapes who overheats, who floods, and how much material a city consumes.
+                  I study cities as complex socio-ecological systems shaped by interactions between human and natural systems. I lead the CLimate and Urban Environments (CLUEs) Lab at <a href={LINKS.nyuFaculty} target="_blank" rel="noopener noreferrer" className={extLink}>New York University Shanghai</a>. We combine satellite data, climate models, and causal inference to study thousands of cities. We ask how the amount, height, and arrangement of the built environment affect heat exposure, flood risk, and material consumption.
                 </p>
               }
               zh={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
-                  我把城市当作复杂的社会-生态系统来研究——它产生于人与自然系统的相互作用。我的课题组——<a href="https://shanghai.nyu.edu/cn/academics/faculty/directory/kangning-ken-huang" target="_blank" rel="noopener noreferrer" className={extLink}>上海纽约大学</a>CLUEs（CLimate and Urban Environments）实验室——结合卫星数据、气候模型与因果推断，对全球数千座城市开展分析。我们关注的问题是：建成环境的总量、高度与布局，如何决定谁会遭受高温、谁会被洪水侵袭，以及一座城市要消耗多少材料。
+                  我研究城市这一复杂的社会-生态系统，以及人与自然系统之间的相互作用。我在<a href="https://shanghai.nyu.edu/cn/academics/faculty/directory/kangning-ken-huang" target="_blank" rel="noopener noreferrer" className={extLink}>上海纽约大学</a>主持 CLUEs（CLimate and Urban Environments）实验室。我们结合卫星数据、气候模型和因果推断，研究全球数千座城市。我们关注建成环境的总量、高度和空间布局如何影响人口热暴露、洪水风险和材料消耗。
                 </p>
               }
             />
             <T
               en={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
-                  I also keep a small{" "}
-                  <a href="https://nimblemap.com/" target="_blank" rel="noopener noreferrer" className={extLink}>
-                    offline map viewer
-                  </a>{" "}
-                  so anyone can drag open the same public datasets we use.
+                  I also maintain a small{" "}
+                  <a href="https://nimblemap.com/" target="_blank" rel="noopener noreferrer" className={extLink}>offline map viewer</a>. Anyone can use it to open the same public datasets we use by dragging them into the viewer.
                 </p>
               }
               zh={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
-                  我也维护一个小型{" "}
-                  <a href="https://nimblemap.com/" target="_blank" rel="noopener noreferrer" className={extLink}>
-                    离线地图查看器
-                  </a>
-                  ，方便任何人把我们用的同一批公开数据拖进去打开。
+                  我还维护一个轻量型{" "}
+                  <a href="https://nimblemap.com/" target="_blank" rel="noopener noreferrer" className={extLink}>离线地图软件</a>。用户可以直接拖入文件，查看我们研究使用的公开数据。
                 </p>
               }
             />
             <T
               en={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
-                  We have shown that denser neighborhoods need disproportionately less built mass (<i>Nature Cities</i>, 2026), that larger homogeneous building clusters cool daytime heat islands (<i>PNAS</i>, 2026), and that taller, better-protected cities change where flood damage lands (<i>Scientific Reports</i>, 2026).
+                  Our research shows that denser neighborhoods require disproportionately less built mass (<i>Nature Cities</i>, 2026). Larger homogeneous building clusters reduce daytime heat island intensity (<i>PNAS</i>, 2026). Building height and flood defenses change the spatial distribution of flood damage (<i>Scientific Reports</i>, 2026).
                 </p>
               }
               zh={
                 <p className="text-[15px] leading-[1.75] text-ink-muted">
-                  我们的研究表明：更密的街区所需建成质量不成比例地更少（<i>Nature Cities</i>，2026）；更大的均质功能建筑街区能降低白天热岛（<i>PNAS</i>，2026）；更高、防护更完善的城市会改变洪灾损失的空间分布（<i>Scientific Reports</i>，2026）。
+                  我们的研究发现，人口密度更高的街区所需的建成质量相对更少（<i>Nature Cities</i>，2026）。更大的均质功能建筑街区可以降低白天的热岛强度（<i>PNAS</i>，2026）。建筑高度和防洪标准则会改变洪灾损失的空间分布（<i>Scientific Reports</i>，2026）。
                 </p>
               }
             />
@@ -491,8 +485,8 @@ export default async function Home() {
               </dt>
               <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
                 <T
-                  en="Kangning (Ken) Huang researches how urbanization and climate change together affect vulnerability to environmental hazards. His work spans urban expansion modeling, urban heat island dynamics, climate adaptation trade-offs, and urban scaling laws. He develops global-scale urbanization scenarios to explore possible urban climate futures."
-                  zh="黄康宁研究城市化与气候变化如何共同影响人对环境灾害的脆弱性。工作涵盖城市扩张模拟、城市热岛、气候适应权衡与城市标度律，并用全球城市化情景探讨可能的城市气候未来。"
+                  en="Kangning (Ken) Huang studies how urbanization and climate change together affect vulnerability to environmental hazards. His research covers urban expansion modeling, urban heat islands, climate adaptation trade-offs, and urban scaling laws. He develops global urbanization scenarios to explore possible urban climate futures."
+                  zh="黄康宁研究城市化与气候变化如何共同影响人们面对环境灾害时的脆弱性。他的研究包括城市扩张模拟、城市热岛、气候适应的权衡以及城市标度律。他还通过全球城市化情景，研究未来可能出现的城市气候变化。"
                 />
               </dd>
             </div>
@@ -502,8 +496,8 @@ export default async function Home() {
               </dt>
               <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
                 <T
-                  en="Kangning Huang is an Assistant Professor of Environmental Studies at NYU Shanghai, where he leads the CLUEs (CLimate and Urban Environments) Lab. He received his PhD from Yale University's School of the Environment and was a postdoctoral fellow at the National Center for Atmospheric Research (NCAR)."
-                  zh="黄康宁是上海纽约大学环境学助理教授，主持 CLUEs（CLimate and Urban Environments）实验室。他在耶鲁大学环境学院获博士学位，并曾在美国国家大气研究中心（NCAR）做博士后。"
+                  en="Kangning Huang is an Assistant Professor of Environmental Studies at NYU Shanghai. He leads the CLUEs (CLimate and Urban Environments) Lab. He received his PhD from Yale University's School of the Environment and was a postdoctoral fellow at the National Center for Atmospheric Research (NCAR)."
+                  zh="黄康宁是上海纽约大学环境学助理教授，主持 CLUEs（CLimate and Urban Environments）实验室。他在耶鲁大学环境学院获得博士学位，曾在美国国家大气研究中心（NCAR）从事博士后研究。"
                 />
               </dd>
             </div>
@@ -516,8 +510,8 @@ export default async function Home() {
               </dt>
               <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
                 <T
-                  en="At the neighborhood scale, denser places need disproportionately less built mass — doubling population density raises built mass by only about 68% (Nature Cities, 2026). Larger homogeneous building clusters cool daytime heat islands (PNAS, 2026). Across the 1,000 largest cities, densifying places also see sharper rises in who is exposed to extreme surface heat than sprawling ones (Scientific Reports, 2025)."
-                  zh="在街区尺度上，更密的地方所需建成质量不成比例地更少——人口密度翻倍，建成质量只增加约 68%（Nature Cities，2026）。更大的均质建筑街区能降低白天热岛（PNAS，2026）。在全球 1000 座最大城市中，正在加密的城市，人口加权的极端地表热暴露上升得也比蔓延扩张的城市更明显（Scientific Reports，2025）。"
+                  en="At the neighborhood scale, doubling population density increases built mass by only about 68% (Nature Cities, 2026). Larger homogeneous building clusters reduce daytime heat island intensity (PNAS, 2026). Across the 1,000 largest cities, population exposure to extreme surface heat rises faster in densifying cities than in sprawling cities (Scientific Reports, 2025)."
+                  zh="在街区尺度上，人口密度翻倍，建成质量只增加约 68%（Nature Cities，2026）。更大的均质建筑街区可以降低白天的热岛强度（PNAS，2026）。在全球 1000 座最大城市中，人口加密的城市，极端地表高温的人口加权暴露上升得比蔓延扩张的城市更快（Scientific Reports，2025）。"
                 />
               </dd>
             </div>
@@ -530,8 +524,8 @@ export default async function Home() {
               </dt>
               <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
                 <T
-                  en="Across the 1,000 largest cities, densifying places see sharper rises in who is exposed to extreme surface heat than sprawling ones (Scientific Reports, 2025). Declining urban density can attenuate rising population exposure to surface heat extremes — but where densification concentrates people onto hot surfaces, exposure can rise faster."
-                  zh="在全球 1000 座最大城市中，正在加密的城市，人口加权的极端地表热暴露上升得比蔓延扩张的城市更明显（Scientific Reports，2025）。城市密度下降可以减缓人口暴露于极端地表高温的上升；但若加密把人集中到更热的地表上，暴露上升会更快。"
+                  en="Across the 1,000 largest cities, population exposure to extreme surface heat rises faster in densifying cities than in sprawling cities (Scientific Reports, 2025). Declining urban density can slow the rise in population exposure to surface heat extremes. But when densification concentrates people on hotter surfaces, exposure can rise faster."
+                  zh="在全球 1000 座最大城市中，人口加密的城市，极端地表高温的人口加权暴露上升得比蔓延扩张的城市更快（Scientific Reports，2025）。城市密度下降可以减缓人口极端地表高温暴露的增长。但如果人口加密使更多人集中在高温地表，热暴露就可能增长得更快。"
                 />
               </dd>
             </div>
@@ -544,8 +538,8 @@ export default async function Home() {
               </dt>
               <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
                 <T
-                  en="Counting building height and flood defenses shifts estimated global flood damage toward Southeast Asia — about 42% of the total versus 15% without those factors (Scientific Reports, 2026)."
-                  zh="把建筑高度和防洪标准算进去，东南亚在全球洪灾损失估算值中的占比会从 15% 升至约 42%（Scientific Reports，2026）。"
+                  en="When building height and flood defenses are included, Southeast Asia's estimated share of global flood damage rises from 15% to about 42% (Scientific Reports, 2026)."
+                  zh="考虑建筑高度和防洪标准后，东南亚在全球洪灾损失估算值中的占比从 15% 升至约 42%（Scientific Reports，2026）。"
                 />
               </dd>
             </div>
@@ -558,8 +552,8 @@ export default async function Home() {
               </dt>
               <dd className="mt-2 text-[15px] leading-relaxed text-ink-muted">
                 <T
-                  en="Larger homogeneous functional building clusters cool daytime surface heat islands. Every extra 100 m of homogeneous building-block scale cuts them by about 0.16 °C (~5%) (PNAS, 2026)."
-                  zh="更大的均质功能建筑街区能降低白天地表热岛。功能均质建筑街区的尺度每增加 100 m，热岛强度约降低 0.16 °C（约 5%）（PNAS，2026）。"
+                  en="Larger homogeneous functional building clusters reduce daytime surface heat island intensity. For every 100 m increase in homogeneous building-block scale, the intensity decreases by about 0.16 °C (~5%) (PNAS, 2026)."
+                  zh="更大的均质功能建筑街区可以降低白天地表热岛强度。街区尺度每增加 100 m，热岛强度降低约 0.16 °C（约 5%）（PNAS，2026）。"
                 />
               </dd>
             </div>

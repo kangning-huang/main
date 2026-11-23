@@ -89,20 +89,20 @@ export default function LabPage() {
           </p>
           <p className="mt-5 max-w-3xl text-[15px] leading-[1.75] text-ink-muted animate-fade-up delay-1">
             <T
-              en="The CLUEs (CLimate and Urban Environments) Lab at NYU Shanghai studies cities as complex socio-ecological systems, the outcome of interactions between human and natural systems. We combine satellite data, climate models and causal inference across thousands of cities to ask how the amount, height and arrangement of what we build shapes who overheats, who floods, and how much material a city consumes."
-              zh="城市是一个复杂社会—生态系统，人与自然在其中相互影响。上海纽约大学 CLimate and Urban Environments（CLUEs）实验室研究这些联系。建筑和基础设施建了多少、楼房有多高、怎样布局，会影响谁承受高温、谁遭遇洪水，也会影响城市消耗多少材料。我们结合卫星数据、气候模型与因果推断，分析全球数千座城市，想把这些关系弄清楚。"
+              en="The CLUEs (CLimate and Urban Environments) Lab at NYU Shanghai studies cities as complex socio-ecological systems shaped by interactions between human and natural systems. We combine satellite data, climate models, and causal inference to study thousands of cities. We ask how the amount, height, and spatial arrangement of the built environment affect heat exposure, flood risk, and material consumption."
+              zh="城市是复杂的社会—生态系统，受到人类活动与自然环境相互作用的影响。上海纽约大学 CLimate and Urban Environments（CLUEs）实验室研究这些相互作用。我们结合卫星数据、气候模型和因果推断，分析全球数千座城市，研究建成环境的总量、高度与空间布局如何影响人口热暴露、洪水风险和材料消耗。"
             />
           </p>
           <p className="mt-4 max-w-3xl text-[15px] leading-[1.75] text-ink-muted animate-fade-up delay-2">
             <T
               en={
                 <>
-                  Recent findings include nested economies of scale in global city mass (<a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">Nature Cities, 2026</a>) and a link between larger homogeneous functional clusters and lower daytime urban heat island intensity (<a href="https://doi.org/10.1073/pnas.2617717123" className="link-underline font-medium text-ember">PNAS, 2026</a>).
+                  Recent findings include nested economies of scale in global city mass (<a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">Nature Cities, 2026</a>) and an association between larger homogeneous functional building clusters and lower daytime urban heat island intensity (<a href="https://doi.org/10.1073/pnas.2617717123" className="link-underline font-medium text-ember">PNAS, 2026</a>).
                 </>
               }
               zh={
                 <>
-                  近期结果包括：全球城市建成物质的嵌套规模经济（<a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">Nature Cities, 2026</a>），以及更大的均质功能簇与更低的白天城市热岛强度有关（<a href="https://doi.org/10.1073/pnas.2617717123" className="link-underline font-medium text-ember">PNAS, 2026</a>）。
+                  近期研究发现，全球城市建成质量存在嵌套规模经济（<a href="https://doi.org/10.1038/s44284-026-00532-x" className="link-underline font-medium text-ember">Nature Cities, 2026</a>）。更大的均质功能建筑集群与更低的白天城市热岛强度相关（<a href="https://doi.org/10.1073/pnas.2617717123" className="link-underline font-medium text-ember">PNAS, 2026</a>）。
                 </>
               }
             />
@@ -210,7 +210,7 @@ export default function LabPage() {
           </ul>
           <p className="mt-4 text-sm">
             <Link href="/advisees" className="link-underline font-medium text-ember">
-              <T en="Full advisee list with projects and placements →" zh="查看全部指导学生、项目与去向 →" />
+              <T en="View all advisees, projects, and placements →" zh="查看全部指导学生、项目与去向 →" />
             </Link>
           </p>
 
@@ -227,21 +227,21 @@ export default function LabPage() {
             <div className="mt-6 grid gap-8 md:grid-cols-2">
               <div>
                 <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
-                  <T en="Who we look for" zh="我们在找谁" />
+                  <T en="Who we are looking for" zh="我们希望招募的学生" />
                 </h3>
                 <ul className="mt-4 space-y-2 text-sm leading-relaxed text-ink-muted">
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
                     <T
-                      en="You want to measure how cities grow, heat, flood, or consume materials, not only to describe them."
-                      zh="你想用数据量化城市增长、升温、洪涝或材料消耗，不只描述现象。"
+                      en="You want to measure urban growth, heat, flooding, or material consumption, rather than only describe them."
+                      zh="你希望用数据量化城市增长、高温、洪水或材料消耗，而不只是描述这些现象。"
                     />
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
                     <T
-                      en="You already use Google Earth Engine, Python, or causal inference, or you are ready to learn them on a real project."
-                      zh="你已经会用 Google Earth Engine、Python 或因果推断方法，或者愿意在实际项目中边做边学。"
+                      en="You have experience with Google Earth Engine, Python, or causal inference, or are willing to learn through a research project."
+                      zh="你已经掌握 Google Earth Engine、Python 或因果推断方法，或者愿意在实际研究项目中学习。"
                     />
                   </li>
                 </ul>
@@ -256,19 +256,14 @@ export default function LabPage() {
                     en={
                       <>
                         Email{" "}
-                        <a href={mailto} className="link-underline font-medium text-ember">
-                          {SITE.email}
-                        </a>{" "}
-                        with <code className="rounded bg-paper px-1 py-0.5 text-xs text-ink">{APPLY_SUBJECT}</code> in the subject line. Attach your CV, a short note on the research questions you want to work on, and one sample of your work (code, writing, or a map).
+                        <a href={mailto} className="link-underline font-medium text-ember">{SITE.email}</a>{" "}
+                        with <code className="rounded bg-paper px-1 py-0.5 text-xs text-ink">{APPLY_SUBJECT}</code> in the subject line. Include the following materials:
                       </>
                     }
                     zh={
                       <>
                         请发送邮件至{" "}
-                        <a href={mailto} className="link-underline font-medium text-ember">
-                          {SITE.email}
-                        </a>
-                        ，邮件标题中注明 <code className="rounded bg-paper px-1 py-0.5 text-xs text-ink">{APPLY_SUBJECT}</code>，并附上：
+                        <a href={mailto} className="link-underline font-medium text-ember">{SITE.email}</a>，并在邮件标题中注明 <code className="rounded bg-paper px-1 py-0.5 text-xs text-ink">{APPLY_SUBJECT}</code>。请附上以下材料：
                       </>
                     }
                   />
@@ -280,13 +275,13 @@ export default function LabPage() {
                   <li>
                     <T
                       en="A short note on the research questions you want to work on."
-                      zh="用几句话说说你想研究的问题。"
+                      zh="简要说明你希望研究的问题。"
                     />
                   </li>
                   <li>
                     <T
                       en="One sample of your work (code, writing, or a map)."
-                      zh="一份你的作品，代码、文章或地图都可以。"
+                      zh="一份作品样本，可以是代码、文章或地图。"
                     />
                   </li>
                 </ol>
@@ -295,8 +290,8 @@ export default function LabPage() {
 
             <p className="mt-6 text-sm text-ink-faint">
               <T
-                en="Funded openings are not listed on this page. Email to ask what is open now."
-                zh="这里不列出有资助的职位。想了解目前有哪些名额，请给我们发邮件。"
+                en="Funded openings are not listed here. Email to ask about current availability."
+                zh="本页不列出有资助的职位。如需了解当前是否有名额，请发邮件咨询。"
               />
             </p>
           </section>

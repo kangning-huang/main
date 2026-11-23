@@ -13,12 +13,12 @@ const PROJECTS_ZH: Record<
   "RoboTaxi Safety Tracker": {
     title: "自动驾驶出租车安全追踪",
     description:
-      "这个仪表板用 NHTSA 碰撞数据，独立追踪特斯拉 Cybercab 的安全表现。你可以比较平均行驶多少里程发生一次事故等安全指标，并查看分析依据。",
+      "基于 NHTSA Standing General Order 碰撞数据，追踪特斯拉 Cybercab 的安全表现。这个仪表板比较平均每起事故对应的行驶里程等指标，并提供独立核查公开数据的依据。",
   },
   NimbleMap: {
     title: "凌波微图",
     description:
-      "本地地图查看器：学生和读者可以把公开数据与论文背后的 Shapefile、GeoTIFF、NetCDF、经纬度表直接打开成地图，不必先学一整门 GIS。文件留在自己的电脑上。",
+      "NimbleMap 是一个本地地图查看器。学生和读者可以直接打开公开数据和研究论文中的 Shapefile、GeoTIFF、NetCDF 和经纬度表，在地图上查看这些数据，不必先学习 GIS。文件保存在用户自己的电脑上。",
     linkLabel: "打开示例数据",
     secondaryLabel: "关于这个查看器",
   },
@@ -75,20 +75,20 @@ export default function TinkeringPage() {
           <div className="mt-4 max-w-3xl space-y-3 text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <p>
               <T
-                en="Public-interest data tools I build to learn new methods. They sit outside the CLUEs Lab papers, but they use the same habits: open data, a clear question, and a check anyone can re-run."
-                zh="这些是我为学习新方法而做的公益数据工具。它们不在 CLUEs 实验室论文主线上，但习惯一样：公开数据、问题说清楚、别人也能复核。"
+                en="I build these public-interest data tools to learn new methods. They are separate from the CLUEs Lab papers, but follow the same approach: use open data, ask a clear question, and make the results reproducible."
+                zh="我做这些公益数据工具，主要是为了学习新方法。它们不属于 CLUEs 实验室的论文研究，但遵循相同的原则：使用开放数据，提出明确的问题，并让别人能够复核结果。"
               />
             </p>
             <p>
               <T
-                en="The first tool here is the RoboTaxi Safety Tracker. It reads NHTSA Standing General Order crash data for Tesla Cybercab / robotaxi reports and shows miles-per-incident style comparisons so the published safety claims have an independent public check. Numbers update when NHTSA releases new filings; methodology notes live on the tracker site."
-                zh="目前第一个工具是自动驾驶出租车安全追踪（RoboTaxi Safety Tracker）。它读取 NHTSA Standing General Order 中与特斯拉 Cybercab／robotaxi 相关的碰撞数据，用「平均多少英里发生一次事故」一类指标做对照，让公开安全声明有一份可独立查看的核对。NHTSA 有新申报时数字会更新；方法说明在追踪站点上。"
+                en="The first tool is the RoboTaxi Safety Tracker. It uses NHTSA Standing General Order crash data for Tesla Cybercab / robotaxi reports. It compares safety measures such as miles per incident to provide an independent public check on published safety claims. The numbers update when NHTSA releases new filings. The tracker site also explains the methods."
+                zh="第一个工具是自动驾驶出租车安全追踪（RoboTaxi Safety Tracker）。它使用 NHTSA Standing General Order 中特斯拉 Cybercab／robotaxi 相关的碰撞数据，比较平均每起事故对应的行驶里程等安全指标，独立核查已公布的安全声明。NHTSA 发布新的申报数据后，指标会随之更新。具体分析方法见工具网站。"
               />
             </p>
             <p>
               <T
-                en="I keep this page short on purpose: each card links out to the live tool. If you have a dataset that should be watched the same way, tell me what breaks."
-                zh="这个页面刻意写短：每张卡片链到线上工具。如果你有同样值得盯着的数据，告诉我哪里会坏。"
+                en="Each project links to a working tool. If you know of another public dataset worth monitoring, or find a problem with these tools, let me know."
+                zh="每个项目都链接到可以直接使用的工具。如果你知道其他值得持续追踪的公开数据，或者发现这些工具有问题，欢迎告诉我。"
               />
             </p>
           </div>

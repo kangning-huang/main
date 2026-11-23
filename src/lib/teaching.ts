@@ -45,12 +45,12 @@ export const COURSES: Course[] = [
     terms: { en: "Fall 2026", zh: "2026年秋季" },
     tag: { en: "CORE STS gateway", zh: "CORE STS 入门课" },
     summary: {
-      en: "Introduces environmental thought through six structured debate cycles on contested motions: nature, movements, population, the commons, values, and technological futures.",
-      zh: "课程用六轮结构化辩论带学生认识环境思想。辩题围绕自然、环保运动、人口、公地、价值观与技术未来展开，每个议题都有值得讨论的分歧。",
+      en: "Students explore environmental thought through six structured debate cycles. The debates cover nature, environmental movements, population, the commons, values, and technological futures.",
+      zh: "学生通过六轮结构化辩论学习不同的环境思想。辩题涉及自然、环保运动、人口、公地、价值观和技术未来，重点是理解不同立场及其依据。",
     },
     highlights: [
       {
-        en: "Six two-week debate cycles with randomly assigned For/Against sides",
+        en: "Six two-week debate cycles with randomly assigned For/Against teams",
         zh: "六轮辩论，每轮两周，随机分配正反方",
       },
       {
@@ -58,8 +58,8 @@ export const COURSES: Course[] = [
         zh: "IPAT 定量实验课与课堂公共物品博弈",
       },
       {
-        en: "Final project applying course ideas to one real-world environmental issue",
-        zh: "期末项目，用课程所学分析一个现实环境问题",
+        en: "Final project applying course concepts to a real-world environmental issue",
+        zh: "期末项目：运用课程所学分析一个现实环境问题",
       },
     ],
   },
@@ -69,17 +69,17 @@ export const COURSES: Course[] = [
     terms: { en: "2022–2025 · Fall 2026", zh: "2022至2025年 · 2026年秋季" },
     tag: { en: "Environmental Studies gateway", zh: "环境研究方向入门课" },
     summary: {
-      en: "A systems-science survey of energy and material flows, dynamics, footprints, and environmental change: one of the two gateway courses in the Environmental Studies track.",
-      zh: "这门课从系统科学出发，介绍能量与物质流动、系统动力学、生态足迹和环境变化，是社会科学环境研究方向的两门入门课之一。",
+      en: "This course introduces environmental systems through energy and material flows, system dynamics, ecological footprints, and environmental change. It is one of two gateway courses in the Environmental Studies track.",
+      zh: "这门课从系统科学出发，介绍能量与物质流动、系统动力学、生态足迹和环境变化。它是社会科学环境研究方向的两门入门课之一。",
     },
     highlights: [
       {
-        en: "Six problem sets: population, prey–predator, S-curve growth, IPAT, personal energy footprint, resource-constrained growth",
-        zh: "六次习题，涵盖人口、捕食者与猎物、S 型增长、IPAT、个人能源足迹和资源约束下的增长",
+        en: "Six problem sets: population, predator–prey dynamics, S-curve growth, IPAT, personal energy footprint, and resource-constrained growth",
+        zh: "六次习题：人口、捕食者与猎物、S 型增长、IPAT、个人能源足迹，以及资源约束下的增长",
       },
       {
-        en: "Mid-term presentation on the climate, biome, and environmental change of a student's hometown",
-        zh: "期中展示，介绍家乡的气候、生物群系和环境变化",
+        en: "Mid-term presentation on the climate, biome, and environmental changes of a student's hometown",
+        zh: "期中展示：分析家乡的气候、生物群系和环境变化",
       },
       {
         en: "Final presentation and report on a contemporary environmental challenge",
@@ -96,8 +96,8 @@ export const COURSES: Course[] = [
     titleZh: "城市十字路口（城市的环境挑战与机遇）",
     terms: { en: "2022–2025 · Spring 2026", zh: "2022至2025年 · 2026年春季" },
     summary: {
-      en: "Urban environmental challenges and opportunities across energy, heat, water, food, materials, and land, with spatial data skills and city-focused policy projects.",
-      zh: "城市在能源、高温、水、食物、材料与土地上面临哪些环境挑战，又有哪些机遇？课程围绕这些问题展开，带学生练习处理空间数据，并完成以城市为对象的政策项目。",
+      en: "Students examine urban environmental challenges and opportunities involving energy, heat, water, food, materials, and land. They learn to analyze spatial data and develop policy projects focused on cities.",
+      zh: "这门课研究城市在能源、高温、水、食物、材料和土地方面的环境挑战与机遇。学生学习分析空间数据，并完成以城市为对象的政策项目。",
     },
     highlights: [
       { en: "Weekly analytical reports", zh: "每周分析报告" },
@@ -132,16 +132,16 @@ export const SIGNATURE_METHODS: SignatureMethod[] = [
     title: { en: "Assigned-side debates", zh: "指定立场辩论" },
     courses: { en: "SOCS-SHU 135", zh: "SOCS-SHU 135" },
     body: {
-      en: "Six debate cycles. Each cycle the class is randomly split into For and Against teams, and every member speaks. Defending a position you didn't choose is the fastest way to understand it.",
-      zh: "全学期共六轮辩论，每轮随机分为正反两队，每个人都要发言。试着为自己未必认同的立场辩护，是理解这一立场最快的方式。",
+      en: "The course has six debate cycles. In each cycle, students are randomly assigned to For and Against teams, and everyone must speak. Defending a position they did not choose helps students understand the arguments behind it.",
+      zh: "全学期有六轮辩论。每轮随机分配正反方，每位学生都必须发言。为自己未必认同的立场辩护，可以帮助学生理解这一立场背后的论据。",
     },
   },
   {
     title: { en: "Device-free floor", zh: "无设备辩论现场" },
     courses: { en: "SOCS-SHU 135", zh: "SOCS-SHU 135" },
     body: {
-      en: "Evidence decks freeze 24 hours before each debate, and the floor is device-free. Preparation may use any tool, including AI; performance is live and unassisted.",
-      zh: "证据幻灯片在每场辩论前 24 小时定稿，此后不再修改。准备时可以使用任何工具，包括 AI；辩论现场不使用电子设备，发言与应辩须独立完成。",
+      en: "Evidence slides must be finalized 24 hours before each debate. Students may use any tools, including AI, during preparation. During the debate, they speak and respond without electronic devices or outside assistance.",
+      zh: "每场辩论前 24 小时，证据幻灯片必须定稿。准备阶段可以使用任何工具，包括 AI。辩论现场不使用电子设备，学生须独立发言和应辩。",
     },
   },
   {
@@ -159,24 +159,24 @@ export const SIGNATURE_METHODS: SignatureMethod[] = [
     title: { en: "Scaffolded analytical reports", zh: "递进分析报告" },
     courses: { en: "SOCS-SHU 208", zh: "SOCS-SHU 208" },
     body: {
-      en: "Weekly reports follow the course modules—energy, heat, water, land, waste—and rehearse the same skills each time: frame the problem, weigh evidence, name tradeoffs, and say what you would do. Complexity rises; the competencies stay fixed.",
-      zh: "每周报告随课程模块推进——能源、高温、水、土地、废弃物——反复练习同一套能力：界定问题、权衡证据、写明取舍、说出你会怎么做。难度上升，能力要求保持不变。",
+      en: "Students write weekly reports on energy, heat, water, land, and waste. Each report requires them to define a problem, evaluate evidence, identify trade-offs, and recommend an action. The problems become more complex, but the core skills remain the same.",
+      zh: "学生每周围绕能源、高温、水、土地和废弃物撰写分析报告。每份报告都要求他们界定问题、评估证据、分析取舍，并提出行动建议。随着课程推进，问题的复杂度增加，但训练的核心能力保持不变。",
     },
   },
   {
-    title: { en: "Field observation vs. AI claims", zh: "实地观察核对 AI 说法" },
+    title: { en: "Checking AI claims against field observations", zh: "用实地观察核查 AI 的说法" },
     courses: { en: "SOCS-SHU 208", zh: "SOCS-SHU 208" },
     body: {
-      en: "Teams combine satellite footprints with floor counts they collect on the street, then check fluent AI descriptions of density and street life against what people actually do. AI can help with calculation; judgment about a place still needs observation.",
-      zh: "小组把卫星建筑足迹与实地楼层计数合在一起，再用街上人们实际怎么走、怎么用公共空间，去核对 AI 对密度与街景的流畅描述。计算可以借助 AI；对具体地点的判断仍须靠观察。",
+      en: "Students combine building footprints from satellite data with floor counts collected in the field. They then compare AI descriptions of urban density and street life with what they observe, including how people move and use public spaces. AI can assist with calculations, but evaluating a place still requires direct observation.",
+      zh: "学生将卫星数据中的建筑轮廓与实地调查的楼层数结合，分析城市密度。他们再把 AI 对密度和街道活动的描述，与现场观察进行比较，包括人们如何出行和使用公共空间。AI 可以辅助计算，但判断一个地方的实际情况仍需要实地观察。",
     },
   },
   {
     title: { en: "Systems-dynamics problem sets", zh: "系统动力学习题" },
     courses: { en: "SOCS-SHU 204", zh: "SOCS-SHU 204" },
     body: {
-      en: "Six problem sets move from exponential growth to resource-constrained feedbacks. Students build and run simple models, then carry that systems habit into mid-term and final analyses of real environmental change.",
-      zh: "六次习题从指数增长走到资源约束下的反馈。学生搭建并运行简单模型，再把这种系统习惯带进期中与期末对现实环境变化的分析。",
+      en: "Six problem sets progress from exponential growth to feedback under resource constraints. Students build and run simple models, then apply the same systems approach to their mid-term and final analyses of environmental change.",
+      zh: "六次习题从指数增长逐步过渡到资源约束下的系统反馈。学生搭建并运行简单模型，再将相同的系统分析方法用于期中和期末的环境变化研究。",
     },
   },
   {

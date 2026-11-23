@@ -81,8 +81,8 @@ const THEMES: Theme[] = [
       stem: "scaling-form",
       alt: "Satellite view of New York from above in deep navy, overlaid with nested hexagon grids at three levels: small cells shaded purple to teal to soft gold by built mass, brightest along Manhattan; medium cyan hexagons and large white hexagons contain them, and amber outlines trace the densest cell and the two larger cells that contain it",
       caption: {
-        en: "New York · built mass on nested H3 hexagons, levels 5 ⊃ 6 ⊃ 7 · Huang et al. 2026, Nature Cities",
-        zh: "纽约 · 嵌套 H3 六边形（5 ⊃ 6 ⊃ 7 级）上的建成质量 · Huang 等，2026，Nature Cities",
+        en: "New York · built mass across nested H3 hexagons, levels 5 ⊃ 6 ⊃ 7 · Huang et al. 2026, Nature Cities",
+        zh: "纽约 · H3 嵌套六边形（5 ⊃ 6 ⊃ 7 级）中的建成质量 · Huang 等，2026，Nature Cities",
       },
       legend: [
         {
@@ -101,39 +101,39 @@ const THEMES: Theme[] = [
     },
     findings: [
       {
-        en: "At the neighborhood scale, doubling population density raises built mass by only about 68% — economies of scale intensify inside the city.",
-        zh: "在街区尺度上，人口密度翻倍，建成质量只增加约 68%；规模经济在城市内部更强。",
+        en: "At the neighborhood scale, doubling population density increases built mass by only about 68%. Economies of scale are stronger within cities.",
+        zh: "在街区尺度上，人口密度翻倍，建成质量只增加约 68%。这说明城市内部的规模经济更强。",
         venue: "Nature Cities",
         year: "2026",
         href: "https://doi.org/10.1038/s44284-026-00532-x",
       },
       {
-        en: "Double a city's population and its built mass grows only about 87%; bigger cities need less material per person.",
-        zh: "城市人口翻倍，建成质量仅增长约87%；城市越大，人均所需的建筑材料越少。",
+        en: "Doubling a city's population increases its built mass by only about 87%. Larger cities use less built material per person.",
+        zh: "城市人口翻倍，建成质量只增加约 87%。城市规模越大，人均建成质量越低。",
         venue: "Nature Cities",
         year: "2026",
         href: "https://doi.org/10.1038/s44284-026-00532-x",
       },
 
       {
-        en: "A 100-metre increase in the scale of functionally homogeneous building clusters is associated with roughly 5% lower daytime urban heat island intensity.",
-        zh: "功能相同的建筑集群，尺度每增加100米，对应的白天城市热岛强度约低5%。",
+        en: "A 100-metre increase in the scale of functionally homogeneous building clusters is associated with about 5% lower daytime urban heat island intensity.",
+        zh: "功能均质建筑集群的尺度每增加 100 米，白天城市热岛强度约降低 5%。",
         venue: "PNAS",
         year: "2026",
         href: doiHref("10.1073/pnas.2617717123"),
       },
 
       {
-        en: "Counting building height and protection standards shifts global flood damage toward Southeast Asia: 42% of the total versus 15% under depth-only assessments.",
-        zh: "只看淹没深度，东南亚占全球估计洪灾损失的15%。把建筑高度和防洪标准也算进去，这一比例升至42%。",
+        en: "Accounting for building height and protection standards increases Southeast Asia's estimated share of global flood damage from 15% under depth-only assessments to 42%.",
+        zh: "仅考虑淹没深度时，东南亚占全球估计洪灾损失的 15%。加入建筑高度和防洪标准后，这一比例升至 42%。",
         venue: "Scientific Reports",
         year: "2026",
         href: doiHref("10.1038/s41598-026-70981-w"),
       },
 
       {
-        en: "In Chinese cities, protection systems can reduce potential flood damage by more than 90%.",
-        zh: "在中国城市，防洪体系可把潜在的洪灾损失减少90%以上。",
+        en: "Flood protection systems can reduce potential flood damage in Chinese cities by more than 90%.",
+        zh: "在中国城市，防洪体系可使潜在洪灾损失减少 90% 以上。",
         venue: "Scientific Reports",
         year: "2026",
         href: doiHref("10.1038/s41598-026-70981-w"),
@@ -177,12 +177,12 @@ const THEMES: Theme[] = [
     ],
     openQuestions: [
       {
-        en: "Which cities are over-built or under-built relative to their size, and why?",
-        zh: "与人口规模相比，哪些城市建得偏多，哪些建得不足？为什么？",
+        en: "Which cities have more or less built mass than expected for their population, and why?",
+        zh: "相对于人口规模，哪些城市的建成质量偏高，哪些偏低？为什么？",
       },
       {
-        en: "How does building upward change the material and mobility costs of a growing city?",
-        zh: "城市不断长大，把楼建得更高，会怎样改变建材和出行的成本？",
+        en: "How does building taller change material use and mobility costs as cities grow?",
+        zh: "随着城市扩张，增加建筑高度会怎样影响材料消耗和出行成本？",
       },
     ],
     figure: {
@@ -201,8 +201,8 @@ const THEMES: Theme[] = [
       stem: "urban-futures",
       alt: "Satellite view of Lagos and its lagoon from above, with a grid of squares on the land around today's city; larger, yellower squares mark 5 km cells more likely to become urban by 2050",
       caption: {
-        en: "Lagos · chance of becoming urban by 2050, SSP2 · Huang et al. 2019, ERL",
-        zh: "拉各斯 · 2050 年前成为城市用地的概率（SSP2）· Huang 等，2019，ERL",
+        en: "Lagos · probability of becoming urban land by 2050, SSP2 · Huang et al. 2019, ERL",
+        zh: "拉各斯 · 2050 年前转为城市用地的概率（SSP2）· Huang 等，2019，ERL",
       },
       legend: [
         {
@@ -219,22 +219,22 @@ const THEMES: Theme[] = [
     },
     findings: [
       {
-        en: "Global urban land could expand by 0.6–1.3 million km² (78%–171%) between 2015 and 2050 across shared socioeconomic pathways.",
-        zh: "在不同的共享社会经济路径情景下，2015至2050年间，全球城市用地可能新增60万至130万平方公里，比2015年扩大78%至171%。",
+        en: "Across shared socioeconomic pathways, global urban land could expand by 0.6–1.3 million km² (78%–171%) between 2015 and 2050.",
+        zh: "在不同共享社会经济路径情景下，2015 至 2050 年间，全球城市用地可能增加 60 万至 130 万平方公里，比 2015 年扩大 78% 至 171%。",
         venue: "Environmental Research Letters",
         year: "2019",
         href: doiHref("10.1088/1748-9326/ab4b71"),
       },
       {
-        en: "Tropical regions in the Southern Hemisphere face disproportionately high extreme-heat risk from compounding urbanization and climate warming.",
-        zh: "城市化与气候变暖的影响叠加，使南半球热带地区面临格外高的极端高温风险。",
+        en: "Urbanization and climate warming together create disproportionately high extreme-heat risk in tropical regions of the Southern Hemisphere.",
+        zh: "城市化与气候变暖的叠加，使南半球热带地区面临更高的极端高温风险。",
         venue: "Environmental Research Letters",
         year: "2019",
         href: doiHref("10.1088/1748-9326/ab4b71"),
       },
       {
-        en: "Roughly 50–63% of newly expanded urban land worldwide is projected to replace existing cropland.",
-        zh: "全球城市向外扩张，新增的土地从哪里来？预计其中约50%至63%来自现有耕地。",
+        en: "About 50–63% of newly expanded urban land worldwide is projected to replace existing cropland.",
+        zh: "预计全球新增城市用地的约 50% 至 63% 将占用现有耕地。",
         venue: "Nature Communications",
         year: "2020",
         href: doiHref("10.1038/s41467-020-14386-x"),
@@ -262,7 +262,7 @@ const THEMES: Theme[] = [
       },
     ],
     apps: [
-      { en: "Urban Expansion 2050 map", zh: "2050年城市扩张地图", href: "/urban-expansion" },
+      { en: "Urban Expansion 2050 map", zh: "2050 年城市扩张地图", href: "/urban-expansion" },
       {
         en: "URBANMOD-ZIPF model (GitHub)",
         zh: "URBANMOD-ZIPF 模型（GitHub）",
@@ -271,12 +271,12 @@ const THEMES: Theme[] = [
     ],
     openQuestions: [
       {
-        en: "Will infrastructure reach the places where the next wave of urban residents will live?",
-        zh: "下一轮城市人口增长到来时，基础设施能跟上，覆盖新增居民将要生活的地方吗？",
+        en: "Will infrastructure reach the areas where future urban residents will live?",
+        zh: "未来城市人口增长的地区，基础设施能否及时覆盖？",
       },
       {
-        en: "Which expansion pathways keep the cities of 2050 cooler and less exposed?",
-        zh: "怎样扩张，才能让2050年的城市更凉爽，减少高温暴露？",
+        en: "Which urban expansion pathways reduce heat and population exposure in 2050?",
+        zh: "哪些城市扩张路径能降低 2050 年的城市高温和人口热暴露？",
       },
     ],
   },
@@ -304,29 +304,29 @@ const THEMES: Theme[] = [
     },
     findings: [
       {
-        en: "About half of the added nighttime outdoor heat stress from urban expansion persists even after large-scale cool-roof deployment.",
-        zh: "即使大规模采用冷屋顶，城市扩张新增的夜间室外热应力仍会残留约一半。",
+        en: "Even with large-scale cool-roof deployment, about half of the added nighttime outdoor heat stress from urban expansion remains.",
+        zh: "即使大规模采用冷屋顶，城市扩张所增加的夜间室外热应力仍有约一半无法消除。",
         venue: "JGR: Atmospheres",
         year: "2021",
         href: doiHref("10.1029/2020JD033831"),
       },
       {
-        en: "Across the 1,000 largest cities, declining urban density attenuates rising population-weighted surface heat extremes by about 0.5 K per decade for each 1,000 persons/km²/year drop in density.",
-        zh: "在全球1000座最大城市中，人口密度每十年每平方公里下降1000人，人口加权地表热极端升温约减弱0.5 K。",
+        en: "Across the 1,000 largest cities, a density decline of 1,000 persons/km²/year is associated with about 0.5 K per decade less warming in population-weighted surface heat extremes.",
+        zh: "在全球 1000 座最大城市中，人口密度每年每平方公里下降 1000 人，人口加权地表极端高温的升温趋势每十年减弱约 0.5 K。",
         venue: "Scientific Reports",
         year: "2025",
         href: doiHref("10.1038/s41598-025-96045-z"),
       },
       {
-        en: "Demolishing informal settlements produced a causal surface cooling of about 1.5 K, shaped by what was built afterward.",
-        zh: "拆除非正规住区带来约1.5 K的因果性地表降温，降温幅度取决于拆除后的土地用途。",
+        en: "Demolishing informal settlements caused about 1.5 K of surface cooling. The effect depended on subsequent land use.",
+        zh: "拆除非正规住区使地表温度降低约 1.5 K。降温幅度取决于拆除后的土地用途。",
         venue: "npj Environmental Social Sciences",
         year: "2026",
         href: doiHref("10.1038/s44432-026-00009-1"),
       },
       {
-        en: "A 100-metre increase in the scale of functionally homogeneous building clusters is associated with roughly 5% lower daytime urban heat island intensity.",
-        zh: "功能相同的建筑集群，尺度每增加100米，对应的白天城市热岛强度约低5%。",
+        en: "A 100-metre increase in the scale of functionally homogeneous building clusters is associated with about 5% lower daytime urban heat island intensity.",
+        zh: "功能均质建筑集群的尺度每增加 100 米，白天城市热岛强度约降低 5%。",
         venue: "PNAS",
         year: "2026",
         href: doiHref("10.1073/pnas.2617717123"),
@@ -374,12 +374,12 @@ const THEMES: Theme[] = [
     ],
     openQuestions: [
       {
-        en: "Why does nighttime heat resist the fixes that work during the day?",
-        zh: "白天管用的降温办法，为什么到了夜里就难以奏效？",
+        en: "Why are daytime cooling strategies less effective at night?",
+        zh: "为什么白天有效的降温措施，到了夜间效果会减弱？",
       },
       {
-        en: "When a neighborhood is rebuilt cooler, who ends up enjoying the benefit?",
-        zh: "一个街区重建后更凉快了，最后是谁享受到了这份好处？",
+        en: "Who benefits when urban renewal reduces neighborhood temperatures?",
+        zh: "城市更新降低街区温度后，哪些人真正受益？",
       }
     ],
   },
@@ -389,8 +389,8 @@ const THEMES: Theme[] = [
       stem: "flood-coasts",
       alt: "Satellite view of the coast west of Jakarta from above; a blue band follows the shoreline and reaches inland along creeks and fish ponds, marking land below the 100-year storm tide with sea-level rise by 2050 (pale) and 2100 (blue)",
       caption: {
-        en: "Jakarta, Tangerang coast · below the 100-year storm tide plus sea-level rise, SSP5-8.5 · CoastalDEM, IPCC AR6",
-        zh: "雅加达唐格朗沿海 · 海平面上升叠加百年一遇风暴潮后低于潮位的土地（SSP5-8.5）· CoastalDEM，IPCC AR6",
+        en: "Jakarta, Tangerang coast · land below the 100-year storm tide plus sea-level rise, SSP5-8.5 · CoastalDEM, IPCC AR6",
+        zh: "雅加达唐格朗沿海 · 百年一遇风暴潮叠加海平面上升后的潮位以下土地（SSP5-8.5）· CoastalDEM，IPCC AR6",
       },
       legend: [
         { kind: "swatch", color: "#b2eafa", label: { en: "By 2050", zh: "2050 年" } },
@@ -404,22 +404,22 @@ const THEMES: Theme[] = [
     },
     findings: [
       {
-        en: "Counting building height and protection standards shifts global flood damage toward Southeast Asia: 42% of the total versus 15% under depth-only assessments.",
-        zh: "只看淹没深度，东南亚占全球估计洪灾损失的15%。把建筑高度和防洪标准也算进去，这一比例升至42%。",
+        en: "Accounting for building height and protection standards increases Southeast Asia's estimated share of global flood damage from 15% under depth-only assessments to 42%.",
+        zh: "仅考虑淹没深度时，东南亚占全球估计洪灾损失的 15%。加入建筑高度和防洪标准后，这一比例升至 42%。",
         venue: "Scientific Reports",
         year: "2026",
         href: doiHref("10.1038/s41598-026-70981-w"),
       },
       {
-        en: "In Chinese cities, protection systems can reduce potential flood damage by more than 90%.",
-        zh: "在中国城市，防洪体系可把潜在的洪灾损失减少90%以上。",
+        en: "Flood protection systems can reduce potential flood damage in Chinese cities by more than 90%.",
+        zh: "在中国城市，防洪体系可使潜在洪灾损失减少 90% 以上。",
         venue: "Scientific Reports",
         year: "2026",
         href: doiHref("10.1038/s41598-026-70981-w"),
       },
       {
-        en: "Pixel-level inundation probabilities from Sentinel-1 radar on Google Earth Engine enable rapid flood mapping with quantified uncertainty.",
-        zh: "在 Google Earth Engine 上用 Sentinel-1 雷达数据估算每个像元被淹的概率，可以快速绘制洪水范围图，也能量化结果的不确定性。",
+        en: "Sentinel-1 radar data on Google Earth Engine can estimate inundation probabilities for individual pixels. These estimates allow rapid flood mapping with quantified uncertainty.",
+        zh: "利用 Google Earth Engine 上的 Sentinel-1 雷达数据，可以估算每个像元的淹没概率。这些概率可用于快速绘制洪水范围图，并量化结果的不确定性。",
         venue: "Remote Sensing",
         year: "2025",
         href: doiHref("10.3390/rs17101747"),
@@ -455,8 +455,8 @@ const THEMES: Theme[] = [
     ],
     openQuestions: [
       {
-        en: "What is at stake in coastal cities beyond the area of land that floods?",
-        zh: "沿海城市遭遇洪水时，除了有多少土地被淹，还有什么面临风险？",
+        en: "Beyond flooded land area, what else is at risk in coastal cities?",
+        zh: "除了被淹没的土地面积，沿海城市还有哪些资产和人口面临洪水风险？",
       }
     ],
   }
@@ -515,8 +515,8 @@ export default function ResearchPage() {
           </h1>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
             <T
-              en="How the size and shape of cities decide their climate future. Four themes in the CLimate and Urban Environments (CLUEs) Lab: scaling and form, urban futures, heat, and flood and coasts."
-              zh="城市是一个复杂社会—生态系统，人的活动、建筑和自然环境在其中相互影响。CLimate and Urban Environments（CLUEs）实验室围绕四个相互关联的主题，研究城市规模与形态怎样影响气候风险和资源消耗。"
+              en="I study how the size and form of cities affect climate risks and resource use. The CLimate and Urban Environments (CLUEs) Lab works across four connected themes: scaling and form, urban futures, heat, and flood and coasts."
+              zh="城市是复杂的社会—生态系统。人的活动、建筑和自然环境相互影响。在 CLimate and Urban Environments（CLUEs）实验室，我们围绕四个相互关联的研究主题，研究城市规模与形态如何影响气候风险和资源消耗。"
             />
           </p>
 
@@ -720,7 +720,7 @@ export default function ResearchPage() {
 
                     <div>
                       <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
-                        <T en="Open questions" zh="还没回答的问题" />
+                        <T en="Open questions" zh="尚未回答的问题" />
                       </h3>
                       <ul className="mt-4 space-y-2">
                         {theme.openQuestions.map((q) => (
@@ -742,28 +742,18 @@ export default function ResearchPage() {
               <T
                 en={
                   <>
-                    These questions are open.{" "}
-                    <Link href="/lab#join" className="link-underline font-medium text-ember">
-                      Join the lab
-                    </Link>
-                    , or{" "}
-                    <Link href="/publications" className="link-underline font-medium text-ember">
-                      read the papers
-                    </Link>
-                    .
+                    These questions remain open.{" "}
+                    <Link href="/lab#join" className="link-underline font-medium text-ember">Join the lab</Link>{" "}
+                    or{" "}
+                    <Link href="/publications" className="link-underline font-medium text-ember">read the papers</Link>.
                   </>
                 }
                 zh={
                   <>
-                    想参与这些问题的研究？欢迎
-                    <Link href="/lab#join" className="link-underline font-medium text-ember">
-                      加入实验室
-                    </Link>
-                    ，或浏览
-                    <Link href="/publications" className="link-underline font-medium text-ember">
-                      全部论文
-                    </Link>
-                    。
+                    这些问题仍有待研究。欢迎
+                    <Link href="/lab#join" className="link-underline font-medium text-ember">加入实验室</Link>
+                    ，或阅读
+                    <Link href="/publications" className="link-underline font-medium text-ember">相关论文</Link>。
                   </>
                 }
               />

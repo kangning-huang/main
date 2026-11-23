@@ -74,7 +74,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Nested Scaling of City Mass",
     description:
-      "Map and explorer for nested economies of scale in city built mass across 3,000+ cities: how built mass scales with population at city and neighborhood levels.",
+      "An interactive map and data explorer showing how built mass scales with population across 3,000+ cities, at both city and neighborhood scales.",
     url: "https://city-mass.nested-complexity.net",
     tags: ["Urban Scaling", "Interactive Visualization", "Nature Cities"],
     featured: true,
@@ -84,7 +84,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Urban Expansion 2050",
     description:
-      "Global urban land expansion through 2050, from the Environmental Research Letters (2019) projections; data also on WRI Resource Watch.",
+      "Projections of global urban land expansion through 2050, published in Environmental Research Letters (2019). Data are also available on WRI Resource Watch.",
     url: "/urban-expansion",
     tags: ["Urban Modeling", "Remote Sensing"],
     featured: true,
@@ -94,7 +94,7 @@ export const PROJECTS: Project[] = [
   {
     title: "3D Urban Flood Risk",
     description:
-      "3D flood exposure when building height and protection standards enter the assessment, across cities worldwide.",
+      "An assessment of 3D flood exposure across cities worldwide that accounts for building height and flood protection standards.",
     url: "https://flood.kangning-huang.com/",
     tags: ["Flood Risk", "3D Visualization", "Interactive"],
     featured: true,
@@ -104,7 +104,7 @@ export const PROJECTS: Project[] = [
   {
     title: "Urban Renewal Cooling DID",
     description:
-      "Difference-in-differences results on informal-settlement demolition and surface cooling: how much cooled, and what rebuilding did to the signal.",
+      "A difference-in-differences analysis of surface cooling after informal-settlement demolition, including how subsequent redevelopment affects the cooling.",
     url: "https://cooling.kangning-huang.com/",
     tags: ["Urban Cooling", "Causal Inference", "Interactive Visualization"],
     featured: true,
@@ -114,7 +114,7 @@ export const PROJECTS: Project[] = [
   {
     title: "URBANMOD-ZIPF",
     description:
-      "Open-source global urban land-expansion model that preserves Zipf's law of city sizes across scenarios.",
+      "An open-source model of global urban land expansion that preserves Zipf's law of city sizes across scenarios.",
     url: "https://github.com/kangning-huang/URBANMOD-ZIPF",
     tags: ["Urban Modeling", "Open Source", "Python"],
     featured: false,
@@ -124,7 +124,7 @@ export const PROJECTS: Project[] = [
   {
     title: "RoboTaxi Safety Tracker",
     description:
-      "Dashboard of Tesla Cybercab safety from NHTSA Standing General Order crash data, including miles-per-incident comparisons. Built as an independent public check on the published numbers.",
+      "A dashboard tracking Tesla Cybercab safety using NHTSA Standing General Order crash data. It compares measures such as miles per incident and provides an independent public check on published safety figures.",
     url: "https://robotaxi-safety-tracker.com",
     tags: ["Data Visualization", "Autonomous Vehicles", "Safety Analytics"],
     // Side project — belongs on /tinkering, not the homepage
@@ -135,7 +135,7 @@ export const PROJECTS: Project[] = [
   {
     title: "NimbleMap",
     description:
-      "A local map viewer so students and readers can open Shapefiles, GeoTIFFs, NetCDFs, and lat-lon tables behind open data and papers — without a GIS course first. Files stay on their computer.",
+      "A local map viewer for opening Shapefiles, GeoTIFFs, NetCDFs, and lat-lon tables from public datasets and research papers. Students and readers can view these data on a map without first learning GIS. Files stay on their computer.",
     url: "https://nimblemap.com/data.html",
     linkLabel: "Open a sample dataset",
     secondaryUrl: "https://nimblemap.com/",

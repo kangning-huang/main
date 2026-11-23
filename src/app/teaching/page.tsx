@@ -59,38 +59,33 @@ export default function TeachingPage() {
           </h1>
           <p className="mt-5 max-w-3xl text-[15px] leading-[1.75] text-ink-muted animate-fade-up delay-1">
             <T
-              en="I teach environmental studies at NYU Shanghai in three courses: a debate-driven introduction to environmental thought, a systems-science gateway, and a course on the environmental challenges and opportunities of cities."
-              zh="我在上海纽约大学教三门环境研究课程。学生会通过辩论认识不同的环境思想，从系统科学入门，也会讨论城市面临的环境挑战与机遇。"
+              en="I teach three environmental studies courses at NYU Shanghai. They introduce environmental thought through debate, environmental systems through scientific models, and the environmental challenges and opportunities of cities."
+              zh="我在上海纽约大学教授三门环境研究课程，分别从环境思想、系统科学和城市环境问题三个角度展开。学生通过辩论理解不同的环境观点，学习系统科学方法，并分析城市面临的环境挑战与机遇。"
             />
           </p>
           <p className="mt-4 max-w-3xl text-[15px] leading-[1.75] text-ink-muted animate-fade-up delay-1">
             <T
               en={
                 <>
-                  For classes that only need to see a file on a map, I point students to{" "}
+                  When students only need to open a dataset on a map, I use{" "}
                   <a
                     href="https://nimblemap.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="link-underline font-medium text-ember"
-                  >
-                    NimbleMap
-                  </a>{" "}
-                  so a full GIS install is not the first wall.
+                  >NimbleMap</a>{" "}
+                  so they do not need to install a full GIS.
                 </>
               }
               zh={
                 <>
-                  如果课上只需要把文件打开成地图，我会让学生用{" "}
+                  如果学生只需要把数据文件显示在地图上，我会推荐{" "}
                   <a
                     href="https://nimblemap.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="link-underline font-medium text-ember"
-                  >
-                    凌波微图（NimbleMap）
-                  </a>
-                  ，不必先装一整套 GIS。
+                  >凌波微图（NimbleMap）</a>，不必先安装完整的 GIS 软件。
                 </>
               }
             />
@@ -116,7 +111,7 @@ export default function TeachingPage() {
 
           {/* ── Signature methods ── */}
           <h2 id="methods" className="mt-16 scroll-mt-24 font-display text-2xl text-ink">
-            <T en="Signature methods" zh="教学方法" />
+            <T en="Teaching methods" zh="教学方法" />
           </h2>
           <SignatureMethods />
 
@@ -126,8 +121,8 @@ export default function TeachingPage() {
           </h2>
           <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted">
             <T
-              en="Outside class I supervise undergraduate capstones and research through the CLUEs Lab. Projects, placements, and honors are on the lab and advisee pages."
-              zh="课外，我在 CLimate and Urban Environments（CLUEs）实验室指导本科毕业论文与研究项目。学生做过哪些项目、后来去了哪里、获得哪些荣誉，可以在实验室和指导学生页面查看。"
+              en="Outside class, I supervise undergraduate capstones and research projects through the CLUEs Lab. The lab and advisee pages list student projects, placements, and honors."
+              zh="课外，我通过 CLimate and Urban Environments（CLUEs）实验室指导本科毕业论文和研究项目。学生的研究项目、毕业去向和所获荣誉可在实验室及指导学生页面查看。"
             />
           </p>
           <p className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm">

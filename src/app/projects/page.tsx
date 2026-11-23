@@ -9,27 +9,27 @@ const PROJECTS_ZH: Record<string, { title: string; description: string }> = {
   "Nested Scaling of City Mass": {
     title: "全球城市建成质量的嵌套标度规律",
     description:
-      "城市人口增加时，建成质量怎样变化？这个工具展示3000多个城市的人口与建成质量之间的非线性标度关系，以及其中的嵌套规模经济。",
+      "城市人口增加时，建成质量如何变化？这个工具展示全球 3000 多座城市在城市和街区两个尺度上的人口与建成质量标度关系，以及两级尺度之间的嵌套规模经济。",
   },
   "Urban Expansion 2050": {
     title: "2050年全球城市扩张",
     description:
-      "到2050年，全球城市用地会扩张到哪里？这个工具展示的预测来自2019年发表于 Environmental Research Letters 的研究，数据也可在 WRI Resource Watch 获取。",
+      "到 2050 年，全球城市用地可能扩张到哪里？这些预测来自 2019 年发表于 Environmental Research Letters 的研究。数据也可在 WRI Resource Watch 获取。",
   },
   "3D Urban Flood Risk": {
     title: "三维城市洪水风险",
     description:
-      "这个工具把建筑高度和防洪标准纳入评估，展示全球城市在三维空间中的洪水暴露情况。",
+      "这个工具将建筑高度和防洪标准纳入评估，展示全球城市的三维洪水暴露情况。",
   },
   "Urban Renewal Cooling DID": {
     title: "城市更新降温的双重差分因果分析",
     description:
-      "拆除非正规住区，会让城市变凉吗？这个工具展示双重差分分析的关键结果，用来评估城市更新对降温的因果影响。",
+      "拆除非正规住区能降低地表温度吗？这个工具展示双重差分分析的结果，评估城市更新的因果降温效应，以及重建方式对降温幅度的影响。",
   },
   "URBANMOD-ZIPF": {
     title: "URBANMOD-ZIPF",
     description:
-      "这个开源模型模拟不同情景下全球城市用地的扩张。模拟结果符合齐普夫定律，呈现贴近现实的城市增长模式。",
+      "URBANMOD-ZIPF 是一个全球城市用地扩张的开源模型。它模拟不同情景下的城市扩张，并保持城市规模分布符合齐普夫定律。",
   },
 };
 
@@ -83,8 +83,8 @@ export default function ProjectsPage() {
         </h1>
         <p className="mt-2 text-ink-muted">
           <T
-            en="Tools and maps from the papers."
-            zh="我把论文里的研究结果做成地图和工具，方便你自己探索。"
+            en="Maps and tools based on my research."
+            zh="我把研究结果做成地图和交互工具，方便读者查看和分析。"
           />
         </p>
 
@@ -93,8 +93,8 @@ export default function ProjectsPage() {
         </h2>
         <p className="mt-1 text-sm text-ink-muted">
           <T
-            en="Maps and explorers tied to specific results."
-            zh="通过这些地图和交互工具，你可以进一步查看论文中的研究结果。"
+            en="Interactive maps and tools for examining specific research findings."
+            zh="这些地图和交互工具展示论文中的具体研究结果。"
           />
         </p>
         <ProjectGrid projects={PROJECTS.filter((p) => p.category === "academic")} />
@@ -103,19 +103,14 @@ export default function ProjectsPage() {
           <T
             en={
               <>
-                Looking for side projects such as the RoboTaxi Safety Tracker? See{" "}
-                <Link href="/tinkering" className="link-underline font-medium text-ember">
-                  Tinkering
-                </Link>
-                .
+                For side projects such as the RoboTaxi Safety Tracker, see{" "}
+                <Link href="/tinkering" className="link-underline font-medium text-ember">Tinkering</Link>.
               </>
             }
             zh={
               <>
-                自动驾驶出租车安全追踪等个人项目请见
-                <Link href="/tinkering" className="link-underline font-medium text-ember">
-                  业余项目
-                </Link>
+                RoboTaxi Safety Tracker 等个人项目，请见
+                <Link href="/tinkering" className="link-underline font-medium text-ember">业余项目</Link>
                 页面。
               </>
             }

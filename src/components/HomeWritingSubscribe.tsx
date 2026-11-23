@@ -24,7 +24,7 @@ export default function HomeWritingSubscribe({
         <div className="mt-6 flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-8">
           <div className="min-w-0 flex-1">
             <p className="text-ink-muted">
-              我在微信公众号「反直觉手记」写城市与气候，把研究中的问题和发现讲清楚。Substack 上也有我的文章。
+              我在微信公众号「反直觉手记」分享城市与气候研究中的问题和发现，也在 Substack 上发表文章。
             </p>
             <WeChatArticleList mode="featured" className="mt-4" />
             <Link
@@ -39,7 +39,7 @@ export default function HomeWritingSubscribe({
               rel="noopener noreferrer"
               className="mt-3 block text-xs text-ink-faint transition-colors hover:text-ember"
             >
-              英文读者也可订阅 Substack ↗
+              也可在 Substack 订阅英文文章 ↗
             </a>
           </div>
           <WeChatOfficialQr size="md" className="shrink-0 self-start" />
@@ -51,7 +51,7 @@ export default function HomeWritingSubscribe({
       <div className="mt-8 flex flex-col gap-5 rounded-xl border border-rule bg-paper p-5 sm:flex-row sm:items-start sm:justify-between sm:gap-6">
         <div className="min-w-0 flex-1">
           <p className="text-sm text-ink-muted">
-            我也在公众号「反直觉手记」写给大众读者。
+            我也在微信公众号「反直觉手记」写城市与气候。
           </p>
           <WeChatArticleList mode="featured" className="mt-3" />
           <Link

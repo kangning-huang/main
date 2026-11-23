@@ -17,9 +17,9 @@ export const ADVISEES: Advisee[] = [
     name: "John Nabors",
     classYear: 2025,
     project:
-      "Capstone replicating and extending the \"Nested economies of scale in global city mass\" analysis across four Chinese mega-cities.",
+      "Capstone replicating and extending the analysis in \"Nested economies of scale in global city mass\" across four Chinese mega-cities.",
     projectZh:
-      "毕业论文复现并拓展《全球城市建成质量的嵌套规模经济》分析，应用于中国四座超大城市。",
+      "毕业论文复现并拓展《全球城市建成质量的嵌套规模经济》中的分析，研究中国四座超大城市。",
     achievements: [],
     achievementsZh: [],
     linkedin: "https://www.linkedin.com/in/john-nabors",
@@ -28,14 +28,14 @@ export const ADVISEES: Advisee[] = [
     name: "Zijie Huanglin",
     classYear: 2023,
     project:
-      "Honors capstone on urban heat risks in Chongqing using remote sensing and spatial analysis.",
+      "Honors capstone examining urban heat risks in Chongqing using remote sensing and spatial analysis.",
     projectZh:
-      "荣誉毕业论文利用遥感和空间分析，研究重庆的城市高温风险。",
+      "荣誉毕业论文利用遥感和空间分析方法，研究重庆的城市高温风险。",
     achievements: [
       <>Admitted to <a href="https://shanghai.nyu.edu/news/nyu-shanghai-senior-wins-erasmus-mundus-scholarship" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Erasmus Mundus International Master in Urban Studies</a> (University of Glasgow, Universitat Autònoma de Barcelona, Kyoto University)</>,
     ],
     achievementsZh: [
-      <>被<a href="https://shanghai.nyu.edu/news/nyu-shanghai-senior-wins-erasmus-mundus-scholarship" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Erasmus Mundus国际城市研究硕士项目</a>录取（格拉斯哥大学、巴塞罗那自治大学、京都大学）</>,
+      <>获 <a href="https://shanghai.nyu.edu/news/nyu-shanghai-senior-wins-erasmus-mundus-scholarship" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Erasmus Mundus 国际城市研究硕士项目</a>录取（格拉斯哥大学、巴塞罗那自治大学、京都大学）</>,
     ],
     linkedin: "https://www.linkedin.com/in/jacky-hwang/",
   },
@@ -43,9 +43,9 @@ export const ADVISEES: Advisee[] = [
     name: "Connie Hu",
     classYear: 2025,
     project:
-      "Capstone extending urban scaling analysis with machine learning to identify factors explaining deviations from urban scaling patterns.",
+      "Capstone using machine learning to extend urban scaling analysis and identify factors associated with deviations from scaling patterns.",
     projectZh:
-      "毕业论文用机器学习拓展城市标度分析，研究哪些因素与城市偏离标度规律有关。",
+      "毕业论文利用机器学习拓展城市标度分析，识别与城市标度规律偏差相关的因素。",
     achievements: [],
     achievementsZh: [],
     linkedin: "https://www.linkedin.com/in/conniehu25",
@@ -73,9 +73,9 @@ export const ADVISEES: Advisee[] = [
     name: "Zihan Xu",
     classYear: 2025,
     project:
-      "Capstone on pocket park accessibility and equitable green space distribution in Shanghai.",
+      "Capstone examining pocket park accessibility and equity in green space distribution in Shanghai.",
     projectZh:
-      "毕业论文研究上海的口袋公园是否方便到达，以及绿地分配是否公平。",
+      "毕业论文研究上海口袋公园的可达性，以及城市绿地分配的公平性。",
     achievements: [
       <>Admitted to <a href="https://www.design.upenn.edu/city-regional-planning/graduate/graduate-city-and-regional-planning-programs" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">University of Pennsylvania (Master of City Planning)</a></>,
     ],
@@ -88,9 +88,9 @@ export const ADVISEES: Advisee[] = [
     name: "Lihan Feng",
     classYear: 2025,
     project:
-      "Developed rapid flood monitoring algorithm using Sentinel-1 SAR data on Google Earth Engine.",
+      "Developed a rapid flood monitoring algorithm using Sentinel-1 SAR data on Google Earth Engine.",
     projectZh:
-      "在 Google Earth Engine 上，利用 Sentinel-1 合成孔径雷达（SAR）数据开发快速洪水监测算法。",
+      "利用 Google Earth Engine 上的 Sentinel-1 合成孔径雷达（SAR）数据，开发快速洪水监测算法。",
     achievements: [
       'Co-authored published paper in Remote Sensing: "Rapid Probabilistic Inundation Mapping Using Local Thresholds and Sentinel-1 SAR Data on Google Earth Engine"',
       <>Admitted to <a href="https://www.cs.cmu.edu/academics/masters/programs" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Carnegie Mellon University School of Computer Science</a> (M.S.)</>,
@@ -105,21 +105,21 @@ export const ADVISEES: Advisee[] = [
     name: "Mingya Zhang",
     classYear: 2027,
     project:
-      "Research on low-carbon transport time penalties in Shanghai.",
+      "Research on the additional travel time required for low-carbon transport in Shanghai.",
     projectZh:
-      "研究在上海选择低碳出行需要付出多少时间。",
+      "研究在上海选择低碳交通方式需要增加多少出行时间。",
     achievements: [
       <>Selected as <a href="https://www.clintonfoundation.org/programs/leadership-public-service/clinton-global-initiative-university/" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Clinton Global Initiative University (CGI U)</a> Fellow</>,
     ],
     achievementsZh: [
-      <>入选<a href="https://www.clintonfoundation.org/programs/leadership-public-service/clinton-global-initiative-university/" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">克林顿全球倡议大学项目（CGI U）</a> 研究员</>,
+      <>入选<a href="https://www.clintonfoundation.org/programs/leadership-public-service/clinton-global-initiative-university/" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">克林顿全球倡议大学项目（CGI U）</a>研究员</>,
     ],
   },
   {
     name: "Gabriel Fernandes",
     classYear: 2028,
     project:
-      "Research on urban slum heat mitigation in Rio de Janeiro.",
+      "Research on reducing urban slum heat in Rio de Janeiro.",
     projectZh:
       "研究如何缓解里约热内卢贫民区的高温。",
     achievements: [
@@ -165,11 +165,11 @@ export const POSTDOCS: LabPostdoc[] = [
   {
     name: "Aiyu Zheng",
     roleEn: "Postdoc · Co-advised with Mingzhen Lu",
-    roleZh: "博士后 · 由我与 Mingzhen Lu 联合指导",
+    roleZh: "博士后 · 与 Mingzhen Lu 联合指导",
     project:
-      "Research on urban vine canopies as a heat-adaptation solution (global meta-analysis of cooling performance).",
+      "Research on urban vine canopies for heat adaptation, using a global meta-analysis of cooling performance.",
     projectZh:
-      "研究城市藤本植物冠层作为高温适应方案（冷却效果的全球荟萃分析）。",
+      "研究城市藤本植物冠层在高温适应中的作用，并通过全球荟萃分析评估其降温效果。",
   },
 ];
 

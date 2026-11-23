@@ -50,7 +50,7 @@ export default function ReachPage() {
         <section className="pt-10 pb-6 md:pt-14">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
             <h1 className="font-display text-4xl text-ink md:text-5xl">
-              <T en="Who have cited my works" zh="谁引用了我的研究成果" />
+              <T en="Who cites my research" zh="谁在引用我的研究" />
             </h1>
             <ReachLensChip />
           </div>

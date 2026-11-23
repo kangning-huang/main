@@ -22,8 +22,8 @@ export default function Growth() {
     <div>
       <p className="max-w-3xl text-[15px] leading-relaxed text-ink-muted">
         <T
-          en={`Citing works per year, by theme, self-citations removed (OpenAlex). All panels share one scale. ${asOfYear} is a partial year (to ${meta.asOf}). Papers published from ${meta.earlyFromYear} on are listed as “early” instead of drawn as bars.`}
-          zh={`每年有多少篇文献引用这些论文？这里按主题统计 OpenAlex 的记录，并剔除自引。各图的纵轴刻度相同，方便比较。${asOfYear} 年的数据仅截至 ${meta.asOf}。${meta.earlyFromYear} 年及以后发表的论文标为“早期”，不绘制柱状图。`}
+          en={`Annual citing works by research theme, excluding self-citations (OpenAlex). All panels use the same vertical scale. Data for ${asOfYear} are incomplete and cover the period through ${meta.asOf}. Papers published in ${meta.earlyFromYear} or later are labeled “early” and are not shown as bars.`}
+          zh={`按研究主题统计每年的施引文献数，数据来自 OpenAlex，已剔除自引。所有图表使用相同的纵轴刻度。${asOfYear} 年的数据仅统计至 ${meta.asOf}。${meta.earlyFromYear} 年及以后发表的论文标为“早期”，不绘制柱状图。`}
         />
       </p>
 
@@ -85,7 +85,7 @@ export default function Growth() {
                   {p.short}
                 </a>
                 {" · "}
-                <T en={`${p.citingNonSelf} non-self citing works`} zh={`被 ${p.citingNonSelf} 篇文献引用（不含自引）`} />
+                <T en={`${p.citingNonSelf} citing works (excluding self-citations)`} zh={`被 ${p.citingNonSelf} 篇文献引用（不含自引）`} />
               </li>
             ))}
           </ul>
@@ -94,8 +94,8 @@ export default function Growth() {
       {view.growthDatesDropped > 0 && (
         <p className="mt-3 text-xs text-ink-faint">
           <T
-            en={`Growth drops ${view.growthDatesDropped} citing work(s) whose OpenAlex date is earlier than the paper it cites.`}
-            zh={`有 ${view.growthDatesDropped} 篇引用这些论文的文献，在 OpenAlex 中记录的发表日期早于被引用的论文，因此未计入增长图。`}
+            en={`Excluded ${view.growthDatesDropped} citing work(s) from the growth chart because their OpenAlex publication dates precede the papers they cite.`}
+            zh={`有 ${view.growthDatesDropped} 篇施引文献在 OpenAlex 中的发表日期早于被引论文，因此未计入增长图。`}
           />
         </p>
       )}

@@ -11,7 +11,7 @@ const NAV_ITEMS: { en: string; zh: string; href: string; zhHref?: string }[] = [
   { en: "Atlas", zh: "地图集", href: "/atlas" },
   { en: "Research", zh: "研究", href: "/research" },
   { en: "Publications", zh: "论文", href: "/publications" },
-  { en: "Reach", zh: "影响", href: "/reach" },
+  { en: "Reach", zh: "学术影响", href: "/reach" },
   { en: "Lab", zh: "实验室", href: "/lab" },
   { en: "Teaching", zh: "教学", href: "/teaching" },
   { en: "News", zh: "动态", href: "/news" },
@@ -73,7 +73,7 @@ export default function Header() {
           <button
             className="relative flex h-8 w-8 flex-col items-center justify-center gap-[5px]"
             onClick={() => setMenuOpen(!menuOpen)}
-            aria-label={language === "zh" ? "打开或关闭菜单" : "Toggle menu"}
+            aria-label={language === "zh" ? "展开或收起菜单" : "Toggle menu"}
           >
             <span
               className={`h-[1.5px] w-5 bg-ink transition-all duration-300 ${menuOpen ? "translate-y-[6.5px] rotate-45" : ""}`}

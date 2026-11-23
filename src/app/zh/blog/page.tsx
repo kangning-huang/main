@@ -13,7 +13,7 @@ import { formatZhDate, getZhBlogPosts, zhBlogPath } from "@/lib/zh-blog";
 
 const TITLE = "博客";
 const DESCRIPTION =
-  "城市与气候研究中的问题和发现，写给大众读者。文章大多首次发表于公众号「反直觉手记」。";
+  "我在这里分享城市与气候研究中的问题和发现。大部分文章最初发表于微信公众号「反直觉手记」。";
 
 export const metadata: Metadata = {
   title: TITLE,
