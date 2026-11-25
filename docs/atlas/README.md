@@ -9,7 +9,7 @@ Static city map for [kangning-huang.com/atlas](https://kangning-huang.com/atlas)
 - Search + click → city card with real values from `public/atlas/city/<id>.json`.
 - Paper link goes to the **publications** anchor (no Nature Cities DOI until it resolves).
 - City-card panel + map filter for **PNAS Cooler Cities / UHS** (Zhang et al. 2026): per-city median and range of 500 m mean UHS inside GHSL UCDB 2015; IQR heat illustration from the paper’s pooled slope (−0.156 °C / +100 m daytime). DOI + Figshare links. Credit Zhang et al.
-- Greyed placeholder for SSA infrastructure (Nat Comms, in revision).
+- Greyed placeholder for SSA infrastructure (Nat Comms, accepted).
 
 ## What v1 deliberately skips
 

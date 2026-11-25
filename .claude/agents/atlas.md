@@ -43,7 +43,7 @@ From the Oct 2026 site plan — Signature feature 1:
 7. **Crosswalk** to one city key (GHSL Urban Centre Database is the candidate). Keep a **match-quality flag**. Show **"not covered"** when unmatched — never force a bad match.
 8. **Guard notes:** each panel needs a one-line "what this number is not" note; scenario values labelled as **scenario ranges, not forecasts**.
 9. **Wire nav/footer** "Explore the Atlas" / hero "Explore the Atlas" button once a usable preview exists (hero currently may say Explore the research — update when Atlas is ready).
-10. **Greyed "coming" placeholder** only for the SSA infrastructure layer (Nature Communications, in revision). Do **not** invent that data.
+10. **Greyed "coming" placeholder** only for the SSA infrastructure layer (Nature Communications, accepted). Do **not** invent that data.
 
 ### Explicitly out of v1 (follow-up PRs)
 
@@ -70,7 +70,7 @@ Adapt names to match existing conventions (`src/lib/`, `public/`, etc.).
 | --- | --- | --- |
 | Built mass / scaling | Nature Cities 2026 | city-mass.nested-complexity.net; publications entry |
 | Urban expansion to 2050 | ERL 2019 (`10.1088/1748-9326/ab4b71`) | `/urban-expansion` |
-| SSA infrastructure | Nature Communications (in revision) | greyed "coming" only |
+| SSA infrastructure | Nature Communications (accepted) | greyed "coming" only |
 
 Look in `src/lib/publications*.ts`, `public/`, `docs/`, and linked apps for reusable figures/numbers. If a dataset is not in-repo, document the gap in `docs/atlas/README.md` and ship a minimal honest preview (e.g. expansion-only) rather than fabricating points.
 

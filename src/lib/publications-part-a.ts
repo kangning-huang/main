@@ -360,7 +360,7 @@ export const PUBLICATIONS_A = [
 {
     title: "Infrastructure reach and capacity pressure in sub-Saharan Africa's future urban expansion",
     authors: "Yimin Chen, Ming Luo, Xiaoping Liu, Weilin Liao, Kwame Oppong Hackman, Mohau Mateyisi, Kangning Huang",
-    venue: "Nature Communications (accepted in principle)",
+    venue: "Nature Communications (accepted)",
     year: 2026,
     citationCount: 0,
     isLeadAuthor: true,

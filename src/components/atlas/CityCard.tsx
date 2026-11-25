@@ -510,8 +510,8 @@ export default function CityCard({ city, loading, filter = null, onClose }: Prop
           <ComingRow
             en="SSA infrastructure"
             zh="撒哈拉以南非洲基础设施"
-            noteEn="Coming — Nature Communications (accepted in principle)."
-            noteZh="即将上线 — Nature Communications 原则上接收。"
+            noteEn="Coming — Nature Communications (accepted)."
+            noteZh="即将上线 — Nature Communications 已接收。"
           />
         </div>
       )}

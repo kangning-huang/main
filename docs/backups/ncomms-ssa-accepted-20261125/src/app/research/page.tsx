@@ -1,0 +1,766 @@
+import Link from "next/link";
+import type { Metadata } from "next";
+import { publicationSlug } from "@/lib/constants";
+import { canonicalUrl, withOpenGraphDefaults, pageTitle, webPageSchema, breadcrumbSchema } from "@/lib/seo";
+import T from "@/components/T";
+
+const DESCRIPTION =
+  "Research themes of Kangning (Ken) Huang and the CLUEs Lab: scaling and form, urban futures, heat, and flood and coasts.";
+
+/** On-site link to a publication entry (used for in-press / under-review papers without a DOI). */
+const pubHref = (title: string) => `/publications#${publicationSlug(title)}`;
+const doiHref = (doi: string) => `https://doi.org/${doi}`;
+
+interface Bilingual {
+  en: string;
+  zh: string;
+}
+
+interface Finding extends Bilingual {
+  venue: string;
+  year: string;
+  href: string;
+}
+
+interface PaperLink {
+  title: string;
+  venue: string;
+  year: string;
+  href: string;
+  /** Short status label shown after the venue (e.g. in press) */
+  status?: Bilingual;
+}
+
+interface AppLink extends Bilingual {
+  href: string;
+}
+
+interface Theme {
+  id: string;
+  title: Bilingual;
+  question: Bilingual;
+  findings: Finding[];
+  papers: PaperLink[];
+  apps: AppLink[];
+  openQuestions: Bilingual[];
+  /** Image, or a video when `video` is set (then `src` is its poster). */
+  figure?: { src: string; video?: string; alt: string; caption: Bilingual };
+  banner: Banner;
+}
+
+/**
+ * Section banner, 1090 × 406, faded into the section title at the bottom.
+ * Four cities, four lenses: each is one city seen from above with one real data
+ * layer, made by scripts/research-banners/ (fetch_layers.py, make_banners.py).
+ * Files: public/research/<stem>.{jpg,webp} and <stem>@2x.{jpg,webp}.
+ */
+interface Banner {
+  stem: string;
+  alt: string;
+  /** Place, layer and source, shown over the banner's top-left corner. */
+  caption: Bilingual;
+  /** Optional key, shown over the banner's top-right corner. */
+  legend?: LegendItem[];
+}
+
+interface LegendItem {
+  /** "swatch" = solid square, "ramp" = low-to-high gradient bar, "line" = outline stroke. */
+  kind: "swatch" | "ramp" | "line";
+  color: string;
+  label: Bilingual;
+}
+
+const IN_PRESS: Bilingual = { en: "in press", zh: "待刊" };
+
+// Every finding below is taken from the linked paper's highlights in
+// publications-part-a.ts / publications-part-b.ts.
+const THEMES: Theme[] = [
+  {
+    id: "scaling-form",
+    banner: {
+      stem: "scaling-form",
+      alt: "Satellite view of New York from above in deep navy, overlaid with nested hexagon grids at three levels: small cells shaded purple to teal to soft gold by built mass, brightest along Manhattan; medium cyan hexagons and large white hexagons contain them, and amber outlines trace the densest cell and the two larger cells that contain it",
+      caption: {
+        en: "New York · built mass across nested H3 hexagons, levels 5 ⊃ 6 ⊃ 7 · Huang et al. 2026, Nature Cities",
+        zh: "纽约 · H3 嵌套六边形（5 ⊃ 6 ⊃ 7 级）中的建成质量 · Huang 等，2026，Nature Cities",
+      },
+      legend: [
+        {
+          kind: "ramp",
+          color: "linear-gradient(to right, #34185c, #40348c, #2c68aa, #22a0a8, #62c696, #eccc70)",
+          label: { en: "Built mass per level-7 cell: low → high", zh: "7 级六边形建成质量：低 → 高" },
+        },
+        { kind: "line", color: "#c4eef8", label: { en: "Level 5 ⊃ level 6 ⊃ level 7", zh: "5 级 ⊃ 6 级 ⊃ 7 级" } },
+        { kind: "line", color: "#ffc440", label: { en: "Densest cell and its parents", zh: "最密的格网及其上级格网" } },
+      ],
+    },
+    title: { en: "Scaling and form", zh: "标度与形态" },
+    question: {
+      en: "How do city size and urban form shape material use, heat exposure, and flood risk?",
+      zh: "城市规模与形态怎样影响建材用量、高温暴露和洪水风险？",
+    },
+    findings: [
+      {
+        en: "At the neighborhood scale, doubling population density increases built mass by only about 68%. Economies of scale are stronger within cities.",
+        zh: "在街区尺度上，人口密度翻倍，建成质量只增加约 68%。这说明城市内部的规模经济更强。",
+        venue: "Nature Cities",
+        year: "2026",
+        href: "https://doi.org/10.1038/s44284-026-00532-x",
+      },
+      {
+        en: "Doubling a city's population increases its built mass by only about 87%. Larger cities use less built material per person.",
+        zh: "城市人口翻倍，建成质量只增加约 87%。城市规模越大，人均建成质量越低。",
+        venue: "Nature Cities",
+        year: "2026",
+        href: "https://doi.org/10.1038/s44284-026-00532-x",
+      },
+
+      {
+        en: "A 100-metre increase in the scale of functionally homogeneous building clusters is associated with about 5% lower daytime urban heat island intensity.",
+        zh: "功能均质建筑集群的尺度每增加 100 米，白天城市热岛强度约降低 5%。",
+        venue: "PNAS",
+        year: "2026",
+        href: doiHref("10.1073/pnas.2617717123"),
+      },
+
+      {
+        en: "Accounting for building height and protection standards increases Southeast Asia's estimated share of global flood damage from 15% under depth-only assessments to 42%.",
+        zh: "仅考虑淹没深度时，东南亚占全球估计洪灾损失的 15%。加入建筑高度和防洪标准后，这一比例升至 42%。",
+        venue: "Scientific Reports",
+        year: "2026",
+        href: doiHref("10.1038/s41598-026-70981-w"),
+      },
+
+      {
+        en: "Flood protection systems can reduce potential flood damage in Chinese cities by more than 90%.",
+        zh: "在中国城市，防洪体系可使潜在洪灾损失减少 90% 以上。",
+        venue: "Scientific Reports",
+        year: "2026",
+        href: doiHref("10.1038/s41598-026-70981-w"),
+      }
+    ],
+    papers: [
+      {
+        title: "Nested economies of scale in global city mass",
+        venue: "Nature Cities",
+        year: "2026",
+        href: "https://doi.org/10.1038/s44284-026-00532-x",
+      },
+
+      {
+        title: "Toward Cooler Cities by Larger Homogeneous Functional Clusters",
+        venue: "PNAS",
+        year: "2026",
+        href: doiHref("10.1073/pnas.2617717123"),
+      },
+
+      {
+        title: "Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution",
+        venue: "Scientific Reports",
+        year: "2026",
+        href: doiHref("10.1038/s41598-026-70981-w"),
+      },
+
+      {
+        title: "Declining urban density attenuates rising population exposure to surface heat extremes",
+        venue: "Scientific Reports",
+        year: "2025",
+        href: doiHref("10.1038/s41598-025-96045-z"),
+      }
+    ],
+    apps: [
+      {
+        en: "City mass scaling explorer",
+        zh: "城市建成质量标度",
+        href: "https://city-mass.nested-complexity.net",
+      },
+    ],
+    openQuestions: [
+      {
+        en: "Which cities have more or less built mass than expected for their population, and why?",
+        zh: "相对于人口规模，哪些城市的建成质量偏高，哪些偏低？为什么？",
+      },
+      {
+        en: "How does building taller change material use and mobility costs as cities grow?",
+        zh: "随着城市扩张，增加建筑高度会怎样影响材料消耗和出行成本？",
+      },
+    ],
+    figure: {
+      src: "/videos/nested-economies-demo-poster.jpg",
+      video: "/videos/nested-economies-demo.mp4",
+      alt: "Animated summary of “Nested economies of scale in global city mass”",
+      caption: {
+        en: "Animated summary of the Nature Cities paper (73 s).",
+        zh: "Nature Cities 论文的动画摘要（73 秒）。",
+      },
+    },
+  },
+  {
+    id: "urban-futures",
+    banner: {
+      stem: "urban-futures",
+      alt: "Satellite view of Lagos and its lagoon from above, with a grid of squares on the land around today's city; larger, yellower squares mark 5 km cells more likely to become urban by 2050",
+      caption: {
+        en: "Lagos · probability of becoming urban land by 2050, SSP2 · Huang et al. 2019, ERL",
+        zh: "拉各斯 · 2050 年前转为城市用地的概率（SSP2）· Huang 等，2019，ERL",
+      },
+      legend: [
+        {
+          kind: "ramp",
+          color: "linear-gradient(to right, #31446b, #666970, #958f78, #cbba69, #ffea46)",
+          label: { en: "Chance per 5 km cell: low → high", zh: "每个 5 公里格网的概率：低 → 高" },
+        },
+      ],
+    },
+    title: { en: "Urban futures", zh: "城市未来" },
+    question: {
+      en: "How much and where will cities grow in the coming decades, and what lasting impacts follow?",
+      zh: "未来几十年，城市会扩大多少、向哪里扩张，又会留下哪些长期影响？",
+    },
+    findings: [
+      {
+        en: "Across shared socioeconomic pathways, global urban land could expand by 0.6–1.3 million km² (78%–171%) between 2015 and 2050.",
+        zh: "在不同共享社会经济路径情景下，2015 至 2050 年间，全球城市用地可能增加 60 万至 130 万平方公里，比 2015 年扩大 78% 至 171%。",
+        venue: "Environmental Research Letters",
+        year: "2019",
+        href: doiHref("10.1088/1748-9326/ab4b71"),
+      },
+      {
+        en: "Urbanization and climate warming together create disproportionately high extreme-heat risk in tropical regions of the Southern Hemisphere.",
+        zh: "城市化与气候变暖的叠加，使南半球热带地区面临更高的极端高温风险。",
+        venue: "Environmental Research Letters",
+        year: "2019",
+        href: doiHref("10.1088/1748-9326/ab4b71"),
+      },
+      {
+        en: "About 50–63% of newly expanded urban land worldwide is projected to replace existing cropland.",
+        zh: "预计全球新增城市用地的约 50% 至 63% 将占用现有耕地。",
+        venue: "Nature Communications",
+        year: "2020",
+        href: doiHref("10.1038/s41467-020-14386-x"),
+      },
+    ],
+    papers: [
+      {
+        title: "Projecting global urban land expansion and heat island intensification through 2050",
+        venue: "Environmental Research Letters",
+        year: "2019",
+        href: doiHref("10.1088/1748-9326/ab4b71"),
+      },
+      {
+        title: "Global projections of future urban land expansion under shared socioeconomic pathways",
+        venue: "Nature Communications",
+        year: "2020",
+        href: doiHref("10.1038/s41467-020-14386-x"),
+      },
+      {
+        title: "Infrastructure reach and capacity pressure in sub-Saharan Africa's future urban expansion",
+        venue: "Nature Communications",
+        year: "2026",
+        href: pubHref("Infrastructure reach and capacity pressure in sub-Saharan Africa's future urban expansion"),
+        status: { en: "accepted in principle", zh: "原则上接收" },
+      },
+    ],
+    apps: [
+      { en: "Urban Expansion 2050 map", zh: "2050 年城市扩张地图", href: "/urban-expansion" },
+      {
+        en: "URBANMOD-ZIPF model (GitHub)",
+        zh: "URBANMOD-ZIPF 模型（GitHub）",
+        href: "https://github.com/kangning-huang/URBANMOD-ZIPF",
+      },
+    ],
+    openQuestions: [
+      {
+        en: "Will infrastructure reach the areas where future urban residents will live?",
+        zh: "未来城市人口增长的地区，基础设施能否及时覆盖？",
+      },
+      {
+        en: "Which urban expansion pathways reduce heat and population exposure in 2050?",
+        zh: "哪些城市扩张路径能降低 2050 年的城市高温和人口热暴露？",
+      },
+    ],
+  },
+  {
+    id: "heat",
+    banner: {
+      stem: "heat",
+      alt: "Satellite view of Shanghai from above, with the Huangpu River and the Yangtze estuary; the hottest summer surfaces in the city glow orange and pale yellow, cooler suburbs and water are left clear",
+      caption: {
+        en: "Shanghai · summer land surface temperature · Landsat 8/9, 2020–2024",
+        zh: "上海 · 夏季地表温度 · Landsat 8/9，2020–2024",
+      },
+      legend: [
+        {
+          kind: "ramp",
+          color: "linear-gradient(to right, #761a70, #c02a56, #ee602c, #fca034, #fed678)",
+          label: { en: "Surface temperature: about 39 → 52 °C", zh: "地表温度：约 39 → 52 °C" },
+        }
+    ],
+    },
+    title: { en: "Heat", zh: "高温" },
+    question: {
+      en: "How does urban design reshape heat risk across different communities?",
+      zh: "城市设计怎样改变不同社区的高温风险？",
+    },
+    findings: [
+      {
+        en: "Even with large-scale cool-roof deployment, about half of the added nighttime outdoor heat stress from urban expansion remains.",
+        zh: "即使大规模采用冷屋顶，城市扩张所增加的夜间室外热应力仍有约一半无法消除。",
+        venue: "JGR: Atmospheres",
+        year: "2021",
+        href: doiHref("10.1029/2020JD033831"),
+      },
+      {
+        en: "Across the 1,000 largest cities, a density decline of 1,000 persons/km²/year is associated with about 0.5 K per decade less warming in population-weighted surface heat extremes.",
+        zh: "在全球 1000 座最大城市中，人口密度每年每平方公里下降 1000 人，人口加权地表极端高温的升温趋势每十年减弱约 0.5 K。",
+        venue: "Scientific Reports",
+        year: "2025",
+        href: doiHref("10.1038/s41598-025-96045-z"),
+      },
+      {
+        en: "Demolishing informal settlements caused about 1.5 K of surface cooling. The effect depended on subsequent land use.",
+        zh: "拆除非正规住区使地表温度降低约 1.5 K。降温幅度取决于拆除后的土地用途。",
+        venue: "npj Environmental Social Sciences",
+        year: "2026",
+        href: doiHref("10.1038/s44432-026-00009-1"),
+      },
+      {
+        en: "A 100-metre increase in the scale of functionally homogeneous building clusters is associated with about 5% lower daytime urban heat island intensity.",
+        zh: "功能均质建筑集群的尺度每增加 100 米，白天城市热岛强度约降低 5%。",
+        venue: "PNAS",
+        year: "2026",
+        href: doiHref("10.1073/pnas.2617717123"),
+      },
+    ],
+    papers: [
+      {
+        title: "Projecting global urban land expansion and heat island intensification through 2050",
+        venue: "Environmental Research Letters",
+        year: "2019",
+        href: doiHref("10.1088/1748-9326/ab4b71"),
+      },
+      {
+        title: "Persistent increases in nighttime heat stress from urban expansion despite heat island mitigation",
+        venue: "Journal of Geophysical Research: Atmospheres",
+        year: "2021",
+        href: doiHref("10.1029/2020JD033831"),
+      },
+
+      {
+        title: "Declining urban density attenuates rising population exposure to surface heat extremes",
+        venue: "Scientific Reports",
+        year: "2025",
+        href: doiHref("10.1038/s41598-025-96045-z"),
+      },
+      {
+        title: "Unveiling the causal link between informal settlement demolition and urban cooling",
+        venue: "npj Environmental Social Sciences",
+        year: "2026",
+        href: doiHref("10.1038/s44432-026-00009-1"),
+      },
+      {
+        title: "Toward Cooler Cities by Larger Homogeneous Functional Clusters",
+        venue: "PNAS",
+        year: "2026",
+        href: doiHref("10.1073/pnas.2617717123"),
+      },
+    ],
+    apps: [
+      {
+        en: "Urban renewal cooling explorer",
+        zh: "城市更新降温效果",
+        href: "https://cooling.kangning-huang.com/",
+      }
+    ],
+    openQuestions: [
+      {
+        en: "Why are daytime cooling strategies less effective at night?",
+        zh: "为什么白天有效的降温措施，到了夜间效果会减弱？",
+      },
+      {
+        en: "Who benefits when urban renewal reduces neighborhood temperatures?",
+        zh: "城市更新降低街区温度后，哪些人真正受益？",
+      }
+    ],
+  },
+  {
+    id: "flood-coasts",
+    banner: {
+      stem: "flood-coasts",
+      alt: "Satellite view of the coast west of Jakarta from above; a blue band follows the shoreline and reaches inland along creeks and fish ponds, marking land below the 100-year storm tide with sea-level rise by 2050 (pale) and 2100 (blue)",
+      caption: {
+        en: "Jakarta, Tangerang coast · land below the 100-year storm tide plus sea-level rise, SSP5-8.5 · CoastalDEM, IPCC AR6",
+        zh: "雅加达唐格朗沿海 · 百年一遇风暴潮叠加海平面上升后的潮位以下土地（SSP5-8.5）· CoastalDEM，IPCC AR6",
+      },
+      legend: [
+        { kind: "swatch", color: "#b2eafa", label: { en: "By 2050", zh: "2050 年" } },
+        { kind: "swatch", color: "#2f7fd0", label: { en: "By 2100", zh: "2100 年" } }
+    ],
+    },
+    title: { en: "Flood and coasts", zh: "洪水与海岸" },
+    question: {
+      en: "Where does flood damage fall if we account for building geometry and flood protections?",
+      zh: "若把建筑几何与防洪设施算进去，洪灾损失会落在哪里？",
+    },
+    findings: [
+      {
+        en: "Accounting for building height and protection standards increases Southeast Asia's estimated share of global flood damage from 15% under depth-only assessments to 42%.",
+        zh: "仅考虑淹没深度时，东南亚占全球估计洪灾损失的 15%。加入建筑高度和防洪标准后，这一比例升至 42%。",
+        venue: "Scientific Reports",
+        year: "2026",
+        href: doiHref("10.1038/s41598-026-70981-w"),
+      },
+      {
+        en: "Flood protection systems can reduce potential flood damage in Chinese cities by more than 90%.",
+        zh: "在中国城市，防洪体系可使潜在洪灾损失减少 90% 以上。",
+        venue: "Scientific Reports",
+        year: "2026",
+        href: doiHref("10.1038/s41598-026-70981-w"),
+      },
+      {
+        en: "Sentinel-1 radar data on Google Earth Engine can estimate inundation probabilities for individual pixels. These estimates allow rapid flood mapping with quantified uncertainty.",
+        zh: "利用 Google Earth Engine 上的 Sentinel-1 雷达数据，可以估算每个像元的淹没概率。这些概率可用于快速绘制洪水范围图，并量化结果的不确定性。",
+        venue: "Remote Sensing",
+        year: "2025",
+        href: doiHref("10.3390/rs17101747"),
+      },
+    ],
+    papers: [
+      {
+        title: "Height-Aware and Protection-Informed Flood Assessment Shifts Global Urban Risk Distribution",
+        venue: "Scientific Reports",
+        year: "2026",
+        href: doiHref("10.1038/s41598-026-70981-w"),
+      },
+      {
+        title: "Rapid Probabilistic Inundation Mapping Using Local Thresholds and Sentinel-1 SAR Data on Google Earth Engine",
+        venue: "Remote Sensing",
+        year: "2025",
+        href: doiHref("10.3390/rs17101747"),
+      },
+      {
+        title: "Beyond land exposure: multidimensional assessment of future built-environment and material-stock impacts under coastal inundation",
+        venue: "Ecological Indicators",
+        year: "2026",
+        href: pubHref("Beyond land exposure: multidimensional assessment of future built-environment and material-stock impacts under coastal inundation"),
+        status: { en: "submitted; ongoing co-authored work", zh: "已投稿；合作研究进行中" },
+      }
+    ],
+    apps: [
+      {
+        en: "3D urban flood risk explorer",
+        zh: "三维城市洪水风险",
+        href: "https://flood.kangning-huang.com/",
+      }
+    ],
+    openQuestions: [
+      {
+        en: "Beyond flooded land area, what else is at risk in coastal cities?",
+        zh: "除了被淹没的土地面积，沿海城市还有哪些资产和人口面临洪水风险？",
+      }
+    ],
+  }
+
+];
+
+export const metadata: Metadata = {
+  title: "Research",
+  description: DESCRIPTION,
+  alternates: {
+    canonical: canonicalUrl("/research"),
+  },
+  openGraph: withOpenGraphDefaults({
+    type: "website",
+    title: pageTitle("Research"),
+    description: DESCRIPTION,
+    url: canonicalUrl("/research"),
+    images: [
+      {
+        url: "/og-default.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Kangning (Ken) Huang — NYU Shanghai",
+      },
+    ],
+  }),
+};
+
+const isExternal = (href: string) => href.startsWith("http");
+const externalProps = (href: string) =>
+  isExternal(href) ? { target: "_blank", rel: "noopener noreferrer" } : {};
+
+export default function ResearchPage() {
+  const pageSchema = webPageSchema({
+    path: "/research",
+    title: "Research",
+    description: DESCRIPTION,
+  });
+
+  const breadcrumbs = breadcrumbSchema([{ name: "Research", path: "/research" }]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <section className="py-16 md:py-20">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
+          <h1 className="section-heading animate-fade-up">
+            <T en="Research" zh="研究" />
+          </h1>
+          <p className="mt-4 max-w-3xl text-[15px] leading-relaxed text-ink-muted animate-fade-up delay-1">
+            <T
+              en="I study how the size and form of cities affect climate risks and resource use. The CLimate and Urban Environments (CLUEs) Lab works across four connected themes: scaling and form, urban futures, heat, and flood and coasts."
+              zh="城市是复杂的社会—生态系统。人的活动、建筑和自然环境相互影响。在 CLimate and Urban Environments（CLUEs）实验室，我们围绕四个相互关联的研究主题，研究城市规模与形态如何影响气候风险和资源消耗。"
+            />
+          </p>
+
+          <nav aria-label="Research themes" className="mt-6 flex flex-wrap gap-2 animate-fade-up delay-2">
+            {THEMES.map((theme) => (
+              <a
+                key={theme.id}
+                href={`#${theme.id}`}
+                className="rounded-full border border-rule px-4 py-1.5 text-sm text-ink-muted transition-colors hover:border-ember hover:text-ember"
+              >
+                <T en={theme.title.en} zh={theme.title.zh} />
+              </a>
+            ))}
+          </nav>
+
+          <div className="mt-14 space-y-16">
+            {THEMES.map((theme, i) => (
+              <article
+                key={theme.id}
+                id={theme.id}
+                className="scroll-mt-24 border-t border-rule-faint pt-10"
+                aria-labelledby={`${theme.id}-heading`}
+              >
+                <header className="relative">
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcSet={`/research/${theme.banner.stem}.webp 1x, /research/${theme.banner.stem}@2x.webp 2x`}
+                    />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img
+                      src={`/research/${theme.banner.stem}.jpg`}
+                      srcSet={`/research/${theme.banner.stem}.jpg 1x, /research/${theme.banner.stem}@2x.jpg 2x`}
+                      alt={theme.banner.alt}
+                      width={1090}
+                      height={406}
+                      loading={i === 0 ? "eager" : "lazy"}
+                      decoding="async"
+                      className="aspect-[1090/406] w-full rounded-t-xl object-cover [mask-image:linear-gradient(to_bottom,#000_0%,#000_44%,rgba(0,0,0,0.32)_66%,rgba(0,0,0,0.06)_82%,transparent_94%)]"
+                    />
+                  </picture>
+                  <p className="absolute left-3 top-3 max-w-[58%] rounded-md bg-[rgba(11,16,42,0.62)] px-2 py-1 text-[10px] font-medium leading-snug text-white/90 backdrop-blur-sm sm:max-w-[48%] sm:text-[11px]">
+                    <T en={theme.banner.caption.en} zh={theme.banner.caption.zh} />
+                  </p>
+                  {theme.banner.legend && (
+                    <ul className="absolute right-3 top-3 hidden space-y-1.5 rounded-lg bg-[rgba(11,16,42,0.72)] px-3 py-2.5 text-xs font-medium text-white shadow-lg backdrop-blur-sm sm:block">
+                      {theme.banner.legend.map((item) => (
+                        <li key={item.label.en} className="flex items-center gap-2">
+                          <span
+                            aria-hidden="true"
+                            className={
+                              item.kind === "ramp"
+                                ? "h-2.5 w-8 shrink-0 rounded-sm"
+                                : item.kind === "line"
+                                  ? "h-3 w-3 shrink-0 rounded-[2px] border-2"
+                                  : "h-3 w-3 shrink-0 rounded-[2px]"
+                            }
+                            style={
+                              item.kind === "ramp"
+                                ? { backgroundImage: item.color }
+                                : item.kind === "line"
+                                  ? { borderColor: item.color }
+                                  : { backgroundColor: item.color }
+                            }
+                          />
+                          <T en={item.label.en} zh={item.label.zh} />
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                  <div className="relative -mt-[12%] px-1 sm:-mt-[10%] sm:px-2">
+                    <h2 id={`${theme.id}-heading`} className="flex items-baseline gap-3 font-display text-4xl font-semibold text-ink sm:text-5xl">
+                      <span className="font-sans text-base font-bold tracking-[0.15em] text-ember sm:text-lg">
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                      <T en={theme.title.en} zh={theme.title.zh} />
+                    </h2>
+                    <p className="mt-3 max-w-3xl font-display text-xl font-medium italic leading-snug text-ink sm:text-2xl">
+                      <T en={theme.question.en} zh={theme.question.zh} />
+                    </p>
+                  </div>
+                </header>
+
+                <div className="mt-8 grid gap-10 lg:grid-cols-[3fr_2fr]">
+                  <div>
+                    <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
+                      <T en="Findings" zh="研究发现" />
+                    </h3>
+                    <ul className="mt-4 space-y-3">
+                      {theme.findings.map((f) => (
+                        <li key={f.en}>
+                          <a
+                            href={f.href}
+                            {...externalProps(f.href)}
+                            className="card-hover group block rounded-lg border border-rule bg-paper p-4"
+                          >
+                            <p className="text-sm leading-relaxed text-ink transition-colors group-hover:text-ember">
+                              <T en={f.en} zh={f.zh} />
+                            </p>
+                            <p className="mt-2 text-xs text-ink-faint">
+                              <span className="italic">{f.venue}</span>, {f.year}
+                              {isExternal(f.href) && (
+                                <span className="ml-1 text-[10px] opacity-60">&#8599;</span>
+                              )}
+                            </p>
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+
+                    {theme.figure && (
+                      <figure className="mt-6">
+                        {theme.figure.video ? (
+                          <video
+                            src={theme.figure.video}
+                            poster={theme.figure.src}
+                            controls
+                            playsInline
+                            preload="none"
+                            aria-label={theme.figure.alt}
+                            className="aspect-square w-full rounded-lg border border-rule bg-ink/5"
+                          />
+                        ) : (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={theme.figure.src}
+                            alt={theme.figure.alt}
+                            loading="lazy"
+                            className="w-full rounded-lg border border-rule"
+                          />
+                        )}
+                        <figcaption className="mt-2 text-xs text-ink-faint">
+                          <T en={theme.figure.caption.en} zh={theme.figure.caption.zh} />
+                        </figcaption>
+                      </figure>
+                    )}
+                  </div>
+
+                  <div className="space-y-8">
+                    <div>
+                      <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
+                        <T en="Papers" zh="论文" />
+                      </h3>
+                      <ul className="mt-4 space-y-3">
+                        {theme.papers.map((p) => (
+                          <li key={p.title} className="text-sm leading-snug">
+                            <a
+                              href={p.href}
+                              {...externalProps(p.href)}
+                              className="text-ink transition-colors hover:text-ember"
+                            >
+                              {p.title}
+                            </a>
+                            <span className="block text-xs text-ink-faint">
+                              <span className="italic">{p.venue}</span>, {p.year}
+                              {p.status && (
+                                <>
+                                  {" · "}
+                                  <T en={p.status.en} zh={p.status.zh} />
+                                </>
+                              )}
+                            </span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {theme.apps.length > 0 && (
+                      <div>
+                        <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
+                          <T en="Explore" zh="探索" />
+                        </h3>
+                        <ul className="mt-4 flex flex-wrap gap-2">
+                          {theme.apps.map((app) =>
+                            isExternal(app.href) ? (
+                              <li key={app.href}>
+                                <a
+                                  href={app.href}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-block rounded-full border border-teal/30 bg-teal-light px-3 py-1 text-xs font-medium text-teal transition-colors hover:border-teal"
+                                >
+                                  <T en={app.en} zh={app.zh} />
+                                  <span className="ml-1 text-[10px] opacity-60">&#8599;</span>
+                                </a>
+                              </li>
+                            ) : (
+                              <li key={app.href}>
+                                <Link
+                                  href={app.href}
+                                  className="inline-block rounded-full border border-teal/30 bg-teal-light px-3 py-1 text-xs font-medium text-teal transition-colors hover:border-teal"
+                                >
+                                  <T en={app.en} zh={app.zh} />
+                                </Link>
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      </div>
+                    )}
+
+                    <div>
+                      <h3 className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-faint">
+                        <T en="Open questions" zh="尚未回答的问题" />
+                      </h3>
+                      <ul className="mt-4 space-y-2">
+                        {theme.openQuestions.map((q) => (
+                          <li key={q.en} className="flex items-start gap-2 text-sm text-ink-muted">
+                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-ember" />
+                            <T en={q.en} zh={q.zh} />
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-16 rounded-xl border border-rule bg-paper-warm p-6">
+            <p className="text-[15px] leading-relaxed text-ink-muted">
+              <T
+                en={
+                  <>
+                    These questions remain open.{" "}
+                    <Link href="/lab#join" className="link-underline font-medium text-ember">Join the lab</Link>{" "}
+                    or{" "}
+                    <Link href="/publications" className="link-underline font-medium text-ember">read the papers</Link>.
+                  </>
+                }
+                zh={
+                  <>
+                    这些问题仍有待研究。欢迎
+                    <Link href="/lab#join" className="link-underline font-medium text-ember">加入实验室</Link>
+                    ，或阅读
+                    <Link href="/publications" className="link-underline font-medium text-ember">相关论文</Link>。
+                  </>
+                }
+              />
+            </p>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
