@@ -18,7 +18,7 @@ City key for the Atlas: **GHSL UCDB 2015 R2019A `ID_HDC_G0`**.
 | --- | --- | --- | --- |
 | Projecting global urban land expansion… through 2050 (ERL 2019) | published | `URBANMOD-ZIPF/results/urban_land.csv` — **country/region** SSP totals, not per-city | No per-city expansion numbers in that repo; city-level GEE outputs not on Drive in a joinable table. Marked **coming**. |
 | Persistent increases in nighttime heat stress (JGR 2021) | published | No per-city CSV found on Drive in this pass | WRF mega-region results; needs Ken pointer. |
-| Infrastructure reach… SSA (Nat Comms, in revision) | under review | — | **coming** (do not publish unpublished). |
+| Infrastructure reach… SSA (Nat Comms, accepted) | accepted | — | **coming** (do not publish unpublished). |
 | Global multi-city heat perception (Nat Comms AIP) | under review | — | **coming**. |
 | Beyond land exposure… coastal inundation (Ecological Indicators, submitted) | submitted | — | skip. |
 
