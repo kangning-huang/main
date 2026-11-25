@@ -102,6 +102,16 @@ export const ADVISEES: Advisee[] = [
     linkedin: "https://www.linkedin.com/in/lihan-feng-a04b46223/",
   },
   {
+    name: "Beichen Li",
+    classYear: 2027,
+    project:
+      "Research with Professors Liang and Guan on how three-dimensional urban form reshapes flood risk in cities, including a method that relates building age and building codes to flood vulnerability.",
+    projectZh:
+      "与 Liang 教授和 Guan 教授合作，研究三维城市形态如何改变城市洪水风险，包括把建筑年代和建筑规范与洪水脆弱性联系起来的方法。",
+    achievements: [],
+    achievementsZh: [],
+  },
+  {
     name: "Mingya Zhang",
     classYear: 2027,
     project:
@@ -114,6 +124,16 @@ export const ADVISEES: Advisee[] = [
     achievementsZh: [
       <>入选<a href="https://www.clintonfoundation.org/programs/leadership-public-service/clinton-global-initiative-university/" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">克林顿全球倡议大学项目（CGI U）</a>研究员</>,
     ],
+  },
+  {
+    name: "Zhuoer Zhou",
+    classYear: 2027,
+    project:
+      "Dean's Undergraduate Research Fund project comparing public perception of sea-level rise risk with modeled coastal flood exposure in China's coastal regions.",
+    projectZh:
+      "院长本科生研究基金项目，比较中国沿海地区公众对海平面上升风险的认知与模拟的沿海洪水暴露。",
+    achievements: [],
+    achievementsZh: [],
   },
   {
     name: "Gabriel Fernandes",
@@ -136,9 +156,9 @@ export const ADVISEES: Advisee[] = [
     name: "Bingxin Xi",
     classYear: 2028,
     project:
-      "Dean's Undergraduate Research Fund project.",
+      "Dean's Undergraduate Research Fund project on wind corridors in cities and low-wind, high-heat compound extremes.",
     projectZh:
-      "院长本科生研究基金项目",
+      "院长本科生研究基金项目，研究城市通风廊道以及低风与高温复合极端。",
     achievements: [
       <>Selected as <a href="https://shanghai.nyu.edu/news/students-make-change-millennium-fellowship" target="_blank" rel="noopener noreferrer" className="link-underline text-ember hover:text-ember-dark transition-colors">Millennium Fellow</a></>,
     ],
