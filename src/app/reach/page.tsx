@@ -10,6 +10,7 @@ import WhereMap from "@/components/reach/WhereMap";
 import StandingOnIt from "@/components/reach/StandingOnIt";
 import Growth from "@/components/reach/Growth";
 import ReachMethod from "@/components/reach/ReachMethod";
+import WebsiteReadership from "@/components/reach/WebsiteReadership";
 
 const DESCRIPTION =
   "Research citing Kangning Huang's papers (OpenAlex, self-citations removed): one square per citing work, more-cited work toward the centre.";
@@ -75,6 +76,7 @@ export default function ReachPage() {
 
         <ReachMethod />
       </ReachLensProvider>
+      <WebsiteReadership />
     </>
   );
 }
